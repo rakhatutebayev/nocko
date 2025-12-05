@@ -22,8 +22,8 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = 'IT Support & Infrastructure Services in UAE | Dubai, Abu Dhabi',
-  subtitle,
+  title = 'Leading IT Company in Dubai | IT Support & Solutions UAE',
+  subtitle = 'Professional IT company in Dubai providing network infrastructure, cloud solutions, cybersecurity, and 24/7 IT support for businesses across UAE.',
   description,
   ctaPrimary = {
     text: 'Get IT Support in UAE',

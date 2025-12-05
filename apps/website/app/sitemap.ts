@@ -36,6 +36,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/locations/dubai`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9, // Высокий приоритет для ключевого слова
+    },
   ];
 
   // Dynamic pages from Strapi

@@ -9,26 +9,28 @@ import Industries from '@/components/sections/Industries';
 import LayoutScripts from '@/app/layout-scripts';
 
 export const metadata: Metadata = {
-  title: 'IT Support UAE | Network & Cloud Solutions Dubai | NOCKO',
+  title: 'IT Company in Dubai | IT Support & Solutions UAE | NOCKO',
   description:
-    'IT support and infrastructure services in UAE. Network setup, cloud solutions, cybersecurity, and 24/7 support for businesses in Dubai, Abu Dhabi, Sharjah. Expert team with 10+ years individual experience serving healthcare, finance, retail, education.',
+    'Leading IT company in Dubai providing IT support, network infrastructure, cloud solutions, and cybersecurity services. Expert IT company in Dubai serving businesses across UAE with 24/7 support.',
   keywords: [
-    'IT support UAE',
+    'it company in dubai',
+    'IT company Dubai',
+    'IT support Dubai',
+    'IT services Dubai',
+    'IT company in UAE',
     'network infrastructure Dubai',
+    'cloud solutions Dubai',
+    'cybersecurity Dubai',
+    'IT consulting Dubai',
+    'managed IT services Dubai',
     'corporate IT Abu Dhabi',
     'healthcare IT UAE',
-    'retail technology',
-    'education technology',
-    'financial services IT',
-    'logistics IT',
-    'cloud solutions',
-    'cybersecurity UAE',
     'technical support Dubai',
   ],
   openGraph: {
-    title: 'IT Support UAE | Network & Cloud Solutions Dubai | NOCKO',
+    title: 'IT Company in Dubai | IT Support & Solutions UAE | NOCKO',
     description:
-      'IT support and infrastructure services in UAE. Network setup, cloud solutions, cybersecurity, and 24/7 support.',
+      'Leading IT company in Dubai providing IT support, network infrastructure, cloud solutions, and cybersecurity services for businesses across UAE.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',

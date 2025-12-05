@@ -19,7 +19,7 @@ export default function Footer() {
               />
             </Link>
             <p className="footer__tagline" itemProp="description">
-              Expert IT Solutions & Consulting for Businesses in UAE
+              Leading IT Company in Dubai | Expert IT Solutions & Consulting for Businesses in UAE
             </p>
             <div className="footer__contact" itemScope itemType="https://schema.org/PostalAddress">
               <p className="footer__address">
@@ -47,6 +47,9 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#services">IT Services</Link>
+              </li>
+              <li>
+                <Link href="/locations/dubai">IT Company in Dubai</Link>
               </li>
               <li>
                 <Link href="#clients">Our Clients</Link>

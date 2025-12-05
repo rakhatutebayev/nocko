@@ -17,12 +17,11 @@
   &__item {
     display: flex;
     align-items: center;
-    
-    &:not(:last-child)::after {
-      content: '/';
-      margin: 0 $spacing-xs;
-      color: $color-gray;
-    }
+  }
+  
+  &__separator {
+    margin: 0 $spacing-xs;
+    color: $color-gray;
   }
   
   &__link {
