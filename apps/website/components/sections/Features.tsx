@@ -65,6 +65,10 @@ export default function Features({
       <div className="container">
         <h2 className="features__title">{title}</h2>
         {intro && <p className="features__intro">{intro}</p>}
+        <p className="features__location-link" style={{ marginTop: '1rem', marginBottom: '2rem', fontSize: '14px', textAlign: 'center' }}>
+          As a leading <Link href="/locations/dubai" style={{ color: '#3474ff', textDecoration: 'underline' }}>IT company in Dubai</Link>, 
+          we serve businesses across all Emirates with expert IT solutions.
+        </p>
         <div className="features__grid">
           {features.map((feature, index) => (
             <article key={index} className="feature-card">

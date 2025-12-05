@@ -7,6 +7,8 @@ import ServiceFeatures from '@/components/services/ServiceFeatures';
 import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
+import ServiceFAQ from '@/components/services/ServiceFAQ';
+import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'IT Support & Helpdesk Services in Dubai, UAE | NOCKO',
@@ -175,6 +177,36 @@ const itSupportContent = {
       description: 'Cloud migration and data management services.',
     },
   ],
+  faq: {
+    title: 'Frequently Asked Questions About IT Support Services',
+    items: [
+      {
+        question: 'What IT support services does your IT company in Dubai provide?',
+        answer:
+          'As an IT company in Dubai, we provide comprehensive IT support services including 24/7 helpdesk, remote support, on-site visits, proactive monitoring, system optimization, and maintenance. Our IT company in Dubai serves businesses across all Emirates with fast response times.',
+      },
+      {
+        question: 'How quickly can the IT company in Dubai respond to IT issues?',
+        answer:
+          'Our IT company in Dubai provides fast response times with average 2 hours in Dubai and 4 hours across all Emirates. Remote support is available immediately, and on-site engineers are available 24/7 when needed.',
+      },
+      {
+        question: 'Does the IT company in Dubai offer 24/7 IT support?',
+        answer:
+          'Yes, as a leading IT company in Dubai, NOCKO provides 24/7 IT support for businesses across UAE. Our IT company in Dubai has dedicated support teams available around the clock to resolve issues quickly.',
+      },
+      {
+        question: 'What industries does the IT company in Dubai serve?',
+        answer:
+          'Our IT company in Dubai serves multiple industries including healthcare, finance, retail, education, logistics, manufacturing, real estate, and corporate/enterprise businesses. As an IT company in Dubai, we have experience across 8+ industries.',
+      },
+      {
+        question: 'Why choose NOCKO as your IT company in Dubai?',
+        answer:
+          'NOCKO is a trusted IT company in Dubai with local expertise, 24/7 support, expert team with 10+ years experience, proven track record serving 50+ clients, comprehensive solutions, and cost-effective pricing. Our IT company in Dubai provides reliable IT support across all Emirates.',
+      },
+    ],
+  },
 };
 
 export default function ITSupportPage() {
@@ -182,6 +214,13 @@ export default function ITSupportPage() {
     <>
       <HeaderWrapper />
       <main className="main" role="main">
+        <Breadcrumbs
+          hidden={true}
+          items={[
+            { name: 'Services', url: '/services' },
+            { name: 'IT Support & Helpdesk' },
+          ]}
+        />
         <Hero
           variant="service-enhanced"
           title={itSupportContent.hero.title}
@@ -193,6 +232,11 @@ export default function ITSupportPage() {
         <ServiceFeatures features={itSupportContent.features} />
         <ServiceContentEnhanced modifier="second" blocks={itSupportContent.secondSection} />
         <ServiceBenefits benefits={itSupportContent.benefits} />
+        <ServiceFAQ
+          title={itSupportContent.faq.title}
+          items={itSupportContent.faq.items}
+          includeDubaiKeyword={true}
+        />
         <ServiceCTA
           title={itSupportContent.cta.title}
           text={itSupportContent.cta.text}

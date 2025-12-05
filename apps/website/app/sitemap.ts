@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getServices, getCaseStudies, getPages } from '@/lib/api/strapi';
+import { getServices, getCaseStudies, getPages, getArticles } from '@/lib/api/strapi';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
@@ -77,7 +77,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }));
 
-    dynamicPages = [...servicePages, ...caseStudyPages, ...pagePages];
+    // Articles
+    const articles = await getArticles(100); // Получаем все статьи
+    const articlePages: MetadataRoute.Sitemap = articles.map((article) => ({
+      url: `${baseUrl}/articles/${article.attributes.slug}`,
+      lastModified: article.attributes.updatedAt ? new Date(article.attributes.updatedAt) : new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }));
+
+    dynamicPages = [...servicePages, ...caseStudyPages, ...pagePages, ...articlePages];
   } catch (error) {
     console.error('Error generating sitemap:', error);
   }

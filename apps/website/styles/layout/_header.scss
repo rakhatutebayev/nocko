@@ -468,6 +468,42 @@
     color: #3474ff;
   }
   
+  // Когда модальное окно открыто - стили для hover
+  &--modal-open &__menu-cta {
+    &:hover {
+      color: $color-white !important;
+      border-color: $color-white !important;
+      background-color: transparent !important;
+    }
+    
+    &:focus {
+      color: $color-white !important;
+      border-color: $color-white !important;
+      background-color: transparent !important;
+    }
+    
+    &:focus-visible {
+      color: $color-white !important;
+      border-color: $color-white !important;
+      background-color: transparent !important;
+    }
+  }
+  
+  // Комбинация: модальное окно открыто И скролл
+  &--modal-open.scrolled &__menu-cta {
+    &:hover {
+      color: $color-white !important;
+      border-color: $color-white !important;
+      background-color: transparent !important;
+    }
+    
+    &:focus {
+      color: $color-white !important;
+      border-color: $color-white !important;
+      background-color: transparent !important;
+    }
+  }
+  
   &.scrolled &__menu-item a {
     color: #293443;
     

@@ -78,6 +78,10 @@ export default function Services({
         <div className="services__header">
           <h2 className="services__title">{title}</h2>
           {subtitle && <p className="services__subtitle">{subtitle}</p>}
+          <p className="services__location-link" style={{ marginTop: '1rem', fontSize: '14px' }}>
+            Looking for an <Link href="/locations/dubai" style={{ color: '#3474ff', textDecoration: 'underline' }}>IT company in Dubai</Link>? 
+            We provide comprehensive IT services across all Emirates.
+          </p>
         </div>
 
         <div className="services__grid" itemScope itemType="https://schema.org/ItemList">

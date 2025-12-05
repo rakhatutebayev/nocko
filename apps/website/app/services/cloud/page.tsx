@@ -7,6 +7,8 @@ import ServiceFeatures from '@/components/services/ServiceFeatures';
 import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
+import ServiceFAQ from '@/components/services/ServiceFAQ';
+import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Cloud & Data Services in Dubai, UAE | Cloud Migration & Data Management | NOCKO',
@@ -175,6 +177,31 @@ const cloudContent = {
       description: '24/7 IT support and helpdesk services.',
     },
   ],
+  faq: {
+    title: 'Frequently Asked Questions About Cloud Services',
+    items: [
+      {
+        question: 'What cloud services does your IT company in Dubai provide?',
+        answer:
+          'As an IT company in Dubai, we provide comprehensive cloud services including cloud migration, cloud infrastructure setup, data management, backup solutions, multi-cloud and hybrid cloud solutions. Our IT company in Dubai helps businesses move to the cloud safely and efficiently.',
+      },
+      {
+        question: 'How long does cloud migration take with an IT company in Dubai?',
+        answer:
+          'Cloud migration timelines vary based on your infrastructure size and complexity. As an IT company in Dubai, we typically complete migrations in 2-8 weeks, depending on your requirements. Our IT company in Dubai ensures minimal downtime during migration.',
+      },
+      {
+        question: 'Does the IT company in Dubai offer cloud cost optimization?',
+        answer:
+          'Yes, our IT company in Dubai provides cloud cost optimization services including right-sizing resources, identifying unused services, and implementing cost-saving strategies. We help businesses reduce cloud expenses while maintaining performance.',
+      },
+      {
+        question: 'What cloud platforms does the IT company in Dubai support?',
+        answer:
+          'Our IT company in Dubai supports all major cloud platforms including AWS, Microsoft Azure, Google Cloud Platform, and private cloud solutions. As an IT company in Dubai, we help you choose the best platform for your business needs.',
+      },
+    ],
+  },
 };
 
 export default function CloudPage() {
@@ -182,6 +209,13 @@ export default function CloudPage() {
     <>
       <HeaderWrapper />
       <main className="main" role="main">
+        <Breadcrumbs
+          hidden={true}
+          items={[
+            { name: 'Services', url: '/services' },
+            { name: 'Cloud & Data Services' },
+          ]}
+        />
         <Hero
           variant="service-enhanced"
           title={cloudContent.hero.title}
@@ -193,6 +227,11 @@ export default function CloudPage() {
         <ServiceFeatures features={cloudContent.features} />
         <ServiceContentEnhanced modifier="second" blocks={cloudContent.secondSection} />
         <ServiceBenefits benefits={cloudContent.benefits} />
+        <ServiceFAQ
+          title={cloudContent.faq.title}
+          items={cloudContent.faq.items}
+          includeDubaiKeyword={true}
+        />
         <ServiceCTA
           title={cloudContent.cta.title}
           text={cloudContent.cta.text}

@@ -144,9 +144,9 @@ export default function Header({ menu }: HeaderProps) {
   }, []);
 
   return (
-    <header 
-      ref={headerRef} 
-      className="header"
+    <header
+      ref={headerRef}
+      className={`header ${isContactModalOpen ? 'header--modal-open' : ''}`}
       role="banner"
       suppressHydrationWarning={true}
     >
