@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_service_content_blocks",
+  "info": {
+    "displayName": "Service Content Block",
+    "description": "Content block with title, text, link and optional image",
+    "singularName": "service-content-block",
+    "pluralName": "service-content-blocks"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    },
+    "linkText": {
+      "type": "string",
+      "default": "Learn more"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "imageAlt": {
+      "type": "string"
+    }
+  }
+}
+

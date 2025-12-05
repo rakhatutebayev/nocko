@@ -1,0 +1,354 @@
+// Animation tuning variables for tabs/accordion (top-level to avoid scope issues in mixins)
+$tabs-easing: cubic-bezier(0.4, 0, 0.2, 1);
+$tabs-open-duration: 0.45s;
+$tabs-close-duration: 0.75s; // used via JS overrides
+
+.industries-tabs {
+  padding: 20px 0;
+
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__intro {
+    max-width: 800px;
+    margin: $spacing-md auto 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $color-gray;
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: block;
+  }
+
+  // Accordion container
+  &__accordion {
+    @media (min-width: 769px) {
+      // Flex: left content area + right tabs list
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    @include mobile {
+      display: block;
+    }
+  }
+
+  // Desktop dedicated wrappers injected via JS
+  &__content-area {
+    @media (min-width: 769px) {
+      flex: 1;
+      position: relative;
+      // Content area holds moving panels; sizing comes from inner .tab-content
+    }
+  }
+
+  &__tabs {
+    @media (min-width: 769px) {
+      display: flex;
+      flex-direction: column;
+      width: 28%;
+    }
+  }
+
+  &__tab-clone {
+    @media (min-width: 769px) {
+      // style cloned buttons same as original
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 12px 20px;
+      background: transparent; // desktop: only active tab gets gray background
+      border: none;
+      border-left: 1px solid #e0e7ef;
+      border-bottom: none; // remove white separator on desktop
+      font-family: 'Proxima Nova', sans-serif;
+      font-weight: 300;
+      color: #293443;
+      cursor: pointer;
+      min-height: 56px;
+      transition: all .3s ease;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      &:focus-visible {
+        outline: 2px solid #3474ff;
+        outline-offset: -2px;
+      }
+    }
+    &.active {
+      @media (min-width: 769px) {
+        background-color: #e0e7ef; // desktop active tab highlighted
+        border-left: 3px solid #3474ff;
+      }
+    }
+  }
+}
+
+// Accordion Item
+.accordion-item {
+  // Mobile: full width with borders
+  @include mobile {
+    // Переносим разделитель на сам заголовок, у item убираем
+    border-bottom: none;
+  }
+
+  // Desktop: original headers hidden; content shown only for active
+  @media (min-width: 769px) {
+    .accordion-item__header { display: none !important; }
+  }
+
+  &__header {
+    width: 100%;
+    
+    // Mobile: show as accordion button
+    @include mobile {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #e0e7ef; // единый фон для всех табов
+      border-bottom: 1px solid #ffffff; // белый разделитель между табами
+      
+      // Chevron arrow (outlined) — down when closed
+      &:after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid #293443;
+        border-bottom: 2px solid #293443;
+        transform: rotate(45deg); // looks like a small V/chevron
+        transition: transform 0.3s $tabs-easing;
+        flex-shrink: 0;
+      }
+    }
+
+    // Desktop: headers appear in the right column, stacked
+    @media (min-width: 769px) {
+      grid-column: 2;
+      grid-row: auto;
+      display: flex;
+      margin: 0; // ensure headers touch each other without gaps
+    }
+  }
+
+  &.active {
+    @include mobile {
+      .accordion-item__header:after {
+        transform: rotate(-135deg); // rotate to point up
+      }
+    }
+  }
+
+  &__content {
+    // Mobile: collapsible accordion content
+    @include mobile {
+      height: 0;
+      overflow: hidden;
+      padding: 0; // start collapsed without padding
+      transition: height $tabs-open-duration $tabs-easing, padding $tabs-open-duration $tabs-easing;
+      will-change: height, padding;
+
+      &.active {
+        height: auto; // JS animates to explicit px, then we leave it auto after open
+        padding: 16px 0;
+      }
+    }
+
+    // Desktop: hidden by default, shown for active item inside content area
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+}
+
+// Tab Content Styles
+.tab-content {
+  display: flex;
+  gap: 24px;
+
+  @media (min-width: 769px) {
+    min-height: 350px; // keeps area stable while switching tabs
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__image {
+    flex: 0 0 45%;
+    
+    @include mobile {
+      flex: 0 0 auto;
+      display: none; // hide images on mobile per requirement
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      box-shadow: none;
+      object-fit: cover;
+      max-height: 400px;
+    }
+  }
+
+  &__text {
+    flex: 1;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      color: var(--color-primary);
+
+      @include mobile {
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 12px;
+        font-size: 15px;
+        color: #666;
+
+        &:before {
+          content: '✓';
+          position: absolute;
+          left: 0;
+          color: var(--color-accent);
+          font-weight: bold;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+// Reduced motion: disable transitions for users preferring less animation
+@media (prefers-reduced-motion: reduce) {
+  .accordion-item__content {
+    transition: none !important;
+  }
+  .accordion-item__header:after,
+  .industries-tabs__tab-clone,
+  .tab-button {
+    transition: none !important;
+  }
+}
+
+// Desktop visibility: show active content inside content-area
+@media (min-width: 769px) {
+  /* Hide all tab contents by default on desktop (override base .tab-content display:flex) */
+  .accordion-item__content.tab-content { display: none; }
+  .accordion-item.active > .accordion-item__content.tab-content { display: flex; }
+}
+
+// Tab Button Styles
+.tab-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 8px 20px;
+  background-color: transparent; // desktop default transparent
+  border: none;
+  border-left: 1px solid #e0e7ef;
+  border-bottom: none; // desktop no white separator
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 300;
+  color: #293443;
+  min-height: 56px;
+  width: 100%;
+  margin: 0; // remove any default gap between buttons
+
+  &:focus-visible {
+    outline: 2px solid #3474ff;
+    outline-offset: -2px;
+  }
+
+  &:hover {
+    background-color: transparent; // keep transparent until active
+  }
+
+  &.active {
+    background-color: #e0e7ef; // desktop active highlighted
+    border-left: 3px solid #3474ff;
+    color: #293443;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: inherit;
+    transition: font-weight 0.3s ease;
+
+    @include mobile {
+      font-size: 15px;
+    }
+  }
+}
+
+// Mobile: apply same active visual style to original accordion headers
+@include mobile {
+  .accordion-item.active .accordion-item__header.tab-button {
+    // фон не меняется, остаётся тем же
+    border-left: 3px solid #3474ff;
+  }
+  // Mobile uniform background + white divider for all headers
+  .tab-button,
+  .industries-tabs__tab-clone,
+  .accordion-item__header.tab-button {
+    background-color: #e0e7ef;
+    border-bottom: 1px solid #ffffff;
+  }
+}
+
+// Animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

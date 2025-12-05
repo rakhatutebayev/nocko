@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_service_heros",
+  "info": {
+    "displayName": "Service Hero Section",
+    "description": "Hero section with title and subtitle for service pages",
+    "icon": "heading"
+  },
+  "options": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "required": false
+    }
+  }
+}
+

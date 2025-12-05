@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_related_services",
+  "info": {
+    "displayName": "Related Service",
+    "description": "Related service card with title, description and link"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "service": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::service.service"
+    }
+  }
+}
+
+
+

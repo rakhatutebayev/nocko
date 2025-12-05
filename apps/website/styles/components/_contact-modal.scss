@@ -1,0 +1,124 @@
+.contact-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+  
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  &__content {
+    position: relative;
+    background: $color-white;
+    border-radius: 4px;
+    padding: $spacing-xl;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+    
+    @media (max-width: $bp-mobile) {
+      padding: $spacing-lg;
+      max-height: 95vh;
+    }
+  }
+  
+  &__close {
+    position: absolute;
+    top: $spacing-md;
+    right: $spacing-md;
+    width: 40px;
+    height: 40px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid $color-border;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all $transition-base;
+    padding: 0;
+    color: $color-gray;
+    
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    
+    &:hover,
+    &:focus {
+      border-color: #11c979;
+      color: #11c979;
+      transform: translateY(-2px);
+    }
+    
+    &:focus-visible {
+      outline: 2px solid #11c979;
+      outline-offset: 2px;
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-dark;
+    margin-bottom: $spacing-sm;
+    text-align: center;
+    
+    @media (max-width: $bp-mobile) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 1rem;
+    color: $color-gray;
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    line-height: 1.6;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

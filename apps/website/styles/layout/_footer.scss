@@ -1,0 +1,198 @@
+@use 'sass:color';
+
+.footer {
+  background-color: $color-dark;
+  color: $color-white;
+  padding: $spacing-xl 0 $spacing-lg;
+  
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-lg;
+    
+    @media (min-width: 768px) {
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: $spacing-xl;
+    }
+  }
+  
+  &__brand {
+    p {
+      color: $color-white;
+      margin-bottom: $spacing-md;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  }
+  
+  &__tagline {
+    color: $color-white;
+    margin-bottom: $spacing-md;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  &__logo {
+    display: inline-block;
+    margin-bottom: $spacing-md;
+    
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+  
+  &__contact {
+    margin-top: $spacing-md;
+    font-size: 0.875rem;
+    line-height: 1.8;
+    
+    p {
+      margin: 0 0 $spacing-xs;
+      color: $color-white;
+    }
+  }
+  
+  &__address {
+    color: $color-white;
+  }
+  
+  &__phone {
+    a {
+      color: $color-white;
+      text-decoration: none;
+      transition: color $transition-base;
+      
+      &:hover,
+      &:focus {
+        color: $color-primary;
+      }
+      
+      &:focus-visible {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+      }
+    }
+  }
+  
+  &__email {
+    a {
+      color: $color-white;
+      text-decoration: none;
+      transition: color $transition-base;
+      
+      &:hover,
+      &:focus {
+        color: $color-primary;
+      }
+      
+      &:focus-visible {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+      }
+    }
+  }
+  
+  &__nav {
+    margin-bottom: $spacing-md;
+    
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__nav-title {
+    margin-bottom: $spacing-md;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $color-white;
+  }
+  
+  &__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    
+    li {
+      margin: 0;
+    }
+    
+    a {
+      color: $color-white;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color $transition-base;
+      
+      &:hover,
+      &:focus {
+        color: $color-primary;
+      }
+      
+      &:focus-visible {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+      }
+    }
+  }
+  
+  &__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: $spacing-lg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-sm;
+    text-align: center;
+    color: $color-white;
+    font-size: 0.875rem;
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+  
+  &__copyright {
+    margin: 0;
+    color: $color-white;
+  }
+  
+  &__legal {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+  
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+    transition: color $transition-base;
+    line-height: 1.5;
+    
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+    
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+  }
+  
+  &__separator {
+    color: color.adjust($color-gray, $lightness: 10%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-size: 0.875rem;
+    height: 1em;
+    vertical-align: baseline;
+  }
+}

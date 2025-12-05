@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_service_article_card_3_cards_sections",
+  "info": {
+    "displayName": "Service Article Card (3 cards section)",
+    "description": "Article card for 3 cards section with article relation, color and SVG icon",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "cardArticle": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "cardColor": {
+      "type": "enumeration",
+      "enum": [
+        "Синий (#3474ff)",
+        "Голубой (#00aeff)",
+        "Фиолетовый (#583bec)",
+        "Зеленый (#11c979)",
+        "Желтый (#ffcc2a)",
+        "Красный (#ec5050)"
+      ],
+      "default": "Синий (#3474ff)",
+      "required": true
+    },
+    "cardIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "files"]
+    }
+  }
+}
+

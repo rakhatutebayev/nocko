@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_service_benefits",
+  "info": {
+    "displayName": "Service Benefit",
+    "description": "Benefit item with icon and text"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
+
+
+

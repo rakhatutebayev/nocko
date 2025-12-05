@@ -1,0 +1,6 @@
+<svg width="640" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="400" fill="#f0f0f0"/>
+  <rect x="0" y="0" width="640" height="400" fill="#e8e8e8" stroke="#d0d0d0" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="320" y="180" font-family="Arial, sans-serif" font-size="18" fill="#999" text-anchor="middle">Image Placeholder</text>
+  <text x="320" y="210" font-family="Arial, sans-serif" font-size="14" fill="#bbb" text-anchor="middle">640 × 400</text>
+</svg>

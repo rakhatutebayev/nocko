@@ -1,0 +1,264 @@
+// Service Values Section
+.service-values {
+  position: relative;
+  padding: 20px 0 0 0;
+  background-image: url('/images/services/our-value-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  // WebP support
+  .webp & {
+    background-image: url('/images/services/our-value-bg.webp');
+  }
+  
+  // Ограничиваем высоту только для части с табами
+  & > .container {
+    max-height: 451px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  &__title {
+    text-align: center;
+    font-size: 30px !important;
+    line-height: 40px !important;
+    color: white !important;
+    margin-bottom: 20px;
+    font-weight: 400;
+    
+    @include mobile {
+      font-size: 24px !important;
+      line-height: 32px !important;
+    }
+  }
+  
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    @include mobile {
+      gap: 16px;
+    }
+    
+    // Скрываем scrollbar, но оставляем возможность прокрутки
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  &__tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-height: 138px;
+    width: 180px;
+    
+    @include mobile {
+      min-height: 100px;
+      width: 120px;
+    }
+  }
+  
+  &__icon-img {
+    width: 138px;
+    height: 138px;
+    object-fit: contain;
+    object-position: center;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    
+    @include mobile {
+      width: 100px;
+      height: 100px;
+    }
+    
+    &--default {
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    &--active {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  &__tab--active &__icon-img {
+    &--default {
+      opacity: 0;
+    }
+    
+    &--active {
+      opacity: 1;
+    }
+  }
+  
+  &__label {
+    padding: 15px 10px;
+    margin-top: 158px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border-top: 1px solid rgba(224, 231, 239, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    
+    @include mobile {
+      font-size: 14px;
+      line-height: 22px;
+      padding: 12px 8px;
+      margin-top: 120px;
+      white-space: normal;
+    }
+    
+    // Псевдоэлемент угольник справа (незалитый, только контур)
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 0.5em;
+      height: 0.5em;
+      margin-left: 8px;
+      vertical-align: middle;
+      border-left: 2px solid currentColor;
+      border-top: 2px solid currentColor;
+      border-right: none;
+      border-bottom: none;
+      transform: rotate(135deg);
+      background: transparent;
+    }
+  }
+  
+  &__tab--active &__label {
+    background-color: #3474ff;
+    color: white;
+  }
+  
+  &__content-wrapper {
+    background-color: #3474ff;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    
+    .container {
+      padding-top: 0;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  
+  &__content {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  
+  &__content-wrapper .container {
+    position: relative;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  
+  &__panel {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin: 0;
+    padding: 0;
+    
+    &--active {
+      display: block;
+      opacity: 1;
+      animation: fadeIn 0.3s ease;
+      padding: 15px 0 30px 0;
+      margin: 0;
+    }
+  }
+  
+  &__panel-title {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color: white;
+    margin: 0 0 $spacing-sm 0;
+    text-align: left;
+    
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+    color: white;
+    margin: 0 0 0 0;
+    text-align: left;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    @include mobile {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

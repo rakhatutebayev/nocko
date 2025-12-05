@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: $font-size-base;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #293443;
+  background-color: $color-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  font-size: 14px;
+  line-height: 24px;
+  color: inherit;
+  text-decoration: none;
+  transition: color $transition-base;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+  
+  li {
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 300;
+    color: #293443;
+  }
+}
+
+// SEO-friendly hidden text - минимально видимый, но в потоке документа (безопасно для Google)
+.visually-hidden {
+  font-size: 0.01px;
+  line-height: 0.01;
+  color: transparent;
+  display: inline;
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  white-space: nowrap;
+  opacity: 0.01;
+  // НЕ используем text-indent: -9999px - это может быть расценено как скрытый текст
+}

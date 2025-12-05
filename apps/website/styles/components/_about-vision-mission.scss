@@ -1,0 +1,113 @@
+// About Vision & Mission Section
+.about-vision-mission {
+  background-image: url('/images/about/mission-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding: $spacing-xxl 0;
+  min-height: 500px;
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  @include mobile {
+    padding: $spacing-xl 0;
+    min-height: 400px;
+  }
+}
+
+.about-vision-mission__content {
+  max-width: 800px;
+  text-align: left;
+}
+
+.about-vision-mission__title {
+  color: #293443;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 400;
+  margin-bottom: $spacing-lg;
+  
+  @include mobile {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: $spacing-md;
+  }
+}
+
+.about-vision-mission__quote-block {
+  background-color: #e0e7ef;
+  padding: $spacing-lg;
+  border-radius: 8px;
+  margin-bottom: $spacing-lg;
+  
+  @include mobile {
+    padding: $spacing-md;
+  }
+}
+
+.about-vision-mission__quote-icon {
+  margin-bottom: $spacing-md;
+  
+  img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  @include mobile {
+    margin-bottom: $spacing-sm;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.about-vision-mission__quote-content {
+  width: 100%;
+}
+
+.about-vision-mission__quote-text {
+  font-size: 22px;
+  line-height: 32px;
+  margin: 0 0 $spacing-sm 0;
+  color: #293443;
+  font-weight: 400;
+  
+  @include mobile {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.about-vision-mission__quote-description {
+  font-size: 16px;
+  line-height: 26px;
+  margin: $spacing-md 0 0 0;
+  color: #293443;
+  
+  @include mobile {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.about-vision-mission__subtitle {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  margin: 0;
+  color: #293443;
+  
+  @include mobile {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+

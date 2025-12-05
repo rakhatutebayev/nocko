@@ -1,0 +1,109 @@
+h1, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #293443;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 36px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 36px;
+  color: #293443;
+  font-weight: 400;
+  margin: 0 0 20px;
+  
+  @media (max-width: 767px) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+}
+
+.section__title {
+  font-size: 26px;
+  line-height: 36px;
+  color: #293443;
+  font-weight: 400;
+  margin: 0 0 20px;
+  
+  @media (max-width: 767px) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+}
+
+h3 {
+  margin: 10px 0;
+}
+
+h3, h3 a {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+h4 {
+  margin: 10px 0;
+}
+
+h4, h4 a {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.section-subtitle {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #293443;
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 10px 0;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+a {
+  font-size: 14px;
+  line-height: 24px;
+  color: #3474ff;
+  cursor: pointer;
+  
+  // Убираем outline только для :focus (не accessibility friendly)
+  // Но оставляем для :focus-visible (клавиатурная навигация)
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+a:hover, 
+a:focus,
+a:active {
+  text-decoration: none;
+  color: #00aeff;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 300;
+  color: #293443;
+  margin: 10px auto;
+}

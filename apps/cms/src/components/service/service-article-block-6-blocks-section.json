@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_service_article_block_6_blocks_sections",
+  "info": {
+    "displayName": "Service Article Block (6 blocks section)",
+    "description": "Article block for 6 blocks section with article relation and border color",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "blockArticle": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article",
+      "required": true
+    },
+    "blockBorderColor": {
+      "type": "enumeration",
+      "enum": [
+        "Синий (#3474ff)",
+        "Голубой (#00aeff)",
+        "Фиолетовый (#583bec)",
+        "Зеленый (#11c979)",
+        "Желтый (#ffcc2a)",
+        "Красный (#ec5050)"
+      ],
+      "default": "Синий (#3474ff)",
+      "required": true
+    }
+  }
+}
+

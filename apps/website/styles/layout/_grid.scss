@@ -1,0 +1,64 @@
+.container {
+  width: 100%;
+  max-width: 1210px; // 1170px + 20px*2 = 1210px (чистая ширина контента 1170px)
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  gap: $spacing-lg;
+  
+  &--2 {
+    grid-template-columns: 1fr;
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  &--3 {
+    grid-template-columns: 1fr;
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &--4 {
+    grid-template-columns: 1fr;
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.section {
+  padding: 20px 0;
+  
+  &__title {
+    text-align: center;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__subtitle {
+    text-align: center;
+    color: $color-gray;
+    margin-bottom: $spacing-lg;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

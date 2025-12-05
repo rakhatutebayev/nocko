@@ -1,0 +1,388 @@
+// Article Page Styles
+
+// Hide breadcrumbs on article pages (for GEO - remains in HTML for search engines)
+// Breadcrumbs come before hero, so we target main that contains hero--service-enhanced
+main:has(.hero--service-enhanced) > .breadcrumbs {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.article {
+  padding: $spacing-lg 0;
+  
+  &__header {
+    margin-bottom: $spacing-lg;
+    text-align: center;
+    
+    @include mobile {
+      margin-bottom: $spacing-md;
+    }
+  }
+  
+  &__category {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: $spacing-sm;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3474ff;
+    background-color: rgba(52, 116, 255, 0.1);
+    border-radius: 4px;
+  }
+  
+  &__title {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 700;
+    color: $color-text;
+    margin-bottom: $spacing-md;
+    
+    @include mobile {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-text-secondary;
+    margin-bottom: $spacing-md;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include mobile {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  
+  &__meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-md;
+    font-size: 14px;
+    color: $color-text-secondary;
+    margin-top: $spacing-md;
+    
+    @include mobile {
+      flex-direction: column;
+      gap: $spacing-xs;
+    }
+  }
+  
+  &__date {
+    &::before {
+      content: '📅';
+      margin-right: 4px;
+    }
+  }
+  
+  &__author {
+    &::before {
+      content: '👤';
+      margin-right: 4px;
+    }
+  }
+  
+  &__featured {
+    margin-bottom: $spacing-xl;
+    
+    @include mobile {
+      margin-bottom: $spacing-lg;
+    }
+  }
+  
+  &__figure {
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  &__caption {
+    margin-top: $spacing-sm;
+    font-size: 14px;
+    color: $color-text-secondary;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  &__intro {
+    margin-bottom: $spacing-xl;
+    padding: $spacing-lg;
+    background-color: rgba(52, 116, 255, 0.05);
+    border-left: 4px solid #3474ff;
+    border-radius: 4px;
+    
+    @include mobile {
+      padding: $spacing-md;
+      margin-bottom: $spacing-lg;
+    }
+  }
+  
+  &__intro-text {
+    font-size: 18px;
+    line-height: 28px;
+    color: $color-text;
+    margin: 0;
+    
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  
+  &__block {
+    margin-bottom: $spacing-xl;
+    
+    @include mobile {
+      margin-bottom: $spacing-lg;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__block-title {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 600;
+    color: $color-text;
+    margin-bottom: $spacing-md;
+    
+    @include mobile {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  
+  &__block-text {
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-text;
+    margin-bottom: $spacing-md;
+    
+    @include mobile {
+      font-size: 15px;
+      line-height: 24px;
+    }
+    
+    p {
+      margin-bottom: $spacing-md;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  &__block-figure {
+    margin: $spacing-lg 0;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    @include mobile {
+      margin: $spacing-md 0;
+    }
+  }
+  
+  &__block-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  &__block-caption {
+    margin-top: $spacing-sm;
+    font-size: 14px;
+    color: $color-text-secondary;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  &__list {
+    margin: $spacing-md 0;
+    padding-left: $spacing-lg;
+    list-style: none;
+    
+    @include mobile {
+      padding-left: $spacing-md;
+    }
+  }
+  
+  &__list-item {
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-text;
+    margin-bottom: $spacing-sm;
+    position: relative;
+    padding-left: $spacing-md;
+    
+    @include mobile {
+      font-size: 15px;
+      line-height: 24px;
+    }
+    
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #11c979;
+      font-weight: bold;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__cta {
+    margin-top: $spacing-xl;
+    padding: $spacing-xl;
+    background: linear-gradient(135deg, rgba(88, 59, 236, 1) 0%, rgba(52, 116, 255, 1) 100%);
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    
+    @include mobile {
+      padding: $spacing-lg;
+      margin-top: $spacing-lg;
+    }
+  }
+  
+  &__cta-title {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: $spacing-md;
+    
+    @include mobile {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  
+  &__cta-text {
+    font-size: 18px;
+    line-height: 28px;
+    color: white;
+    margin-bottom: $spacing-lg;
+    
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  
+  &__related {
+    margin-top: $spacing-xl;
+    padding-top: $spacing-xl;
+    border-top: 1px solid rgba(224, 231, 239, 0.5);
+    
+    @include mobile {
+      margin-top: $spacing-lg;
+      padding-top: $spacing-lg;
+    }
+  }
+  
+  &__related-title {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 600;
+    color: $color-text;
+    margin-bottom: $spacing-lg;
+    
+    @include mobile {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: $spacing-md;
+    }
+  }
+  
+  &__related-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-lg;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+    }
+  }
+  
+  &__related-item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  &__related-link {
+    display: block;
+    padding: $spacing-lg;
+    text-decoration: none;
+    color: inherit;
+    
+    @include mobile {
+      padding: $spacing-md;
+    }
+  }
+  
+  &__related-item-title {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: $color-text;
+    margin-bottom: $spacing-sm;
+    
+    @include mobile {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  
+  &__related-item-description {
+    font-size: 14px;
+    line-height: 22px;
+    color: $color-text-secondary;
+    margin: 0;
+  }
+}
+
+
+
+

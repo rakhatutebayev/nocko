@@ -1,0 +1,522 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 80px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all $transition-base;
+  display: flex;
+  align-items: center;
+  
+  // Мобильная версия: всегда белый фон и высота 54px
+  @include laptop {
+    height: 54px;
+    background-color: $color-white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  &.scrolled {
+    background-color: $color-white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid transparent;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    
+    @include laptop {
+      // Мобильная версия: бургер, логотип, кнопка
+      justify-content: flex-start;
+      gap: 10px;
+    }
+  }
+  
+  .burger {
+    position: absolute;
+    left: 20px;
+    z-index: 10;
+    
+    @include laptop {
+      position: static;
+      order: 1;
+    }
+  }
+  
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex: 1;
+    justify-content: flex-start;
+    
+    @include laptop {
+      display: flex;
+      order: 2;
+      gap: 10px;
+      flex: 0;
+      justify-content: flex-start;
+    }
+  }
+  
+  &__right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; // Выравнивание справа на десктопе
+    
+    @include laptop {
+      display: flex;
+      order: 3;
+      margin-left: auto;
+    }
+  }
+  
+  &__logo {
+    display: flex;
+    align-items: center;
+    
+    img {
+      height: 40px;
+      width: auto;
+      
+      @include laptop {
+        height: 30px;
+      }
+      
+      &.logo-white {
+        display: block;
+      }
+      
+      &.logo-black {
+        display: none;
+      }
+    }
+  }
+  
+  // Мобильная версия: всегда показываем черный логотип
+  @include laptop {
+    &__logo {
+      display: flex;
+      
+      img {
+        &.logo-white {
+          display: none;
+        }
+        
+        &.logo-black {
+          display: block;
+        }
+      }
+    }
+  }
+  
+  &.scrolled &__logo {
+    img {
+      &.logo-white {
+        display: none;
+      }
+      
+      &.logo-black {
+        display: block;
+      }
+    }
+  }
+  
+  &__nav {
+    display: flex;
+    align-items: center;
+    
+    @include laptop {
+      // On mobile/tablet the panel behaves like a block to avoid any flex side gaps
+      display: block;
+      position: fixed;
+      top: 54px; // высота мобильного хедера
+      left: 0;
+      right: auto; // anchor to the left edge for a capped width panel
+      width: 100%;
+      max-width: 348px; // limit menu panel width on mobile/tablet
+      background-color: $color-white;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      max-height: 0;
+      overflow: hidden;
+      padding: 0; // remove default container padding so panel aligns to the left edge
+      box-sizing: border-box;
+      transition: max-height 0.3s ease;
+      z-index: 999;
+      
+      &.is-open {
+        max-height: calc(100vh - 54px); // Full viewport height minus header
+        overflow-y: auto;
+        // Webkit scrollbar styling
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+        &::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 3px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+      }
+    }
+  }
+  
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    @include laptop {
+      flex-direction: column;
+      align-items: stretch;
+      // Remove extra UL padding; spacing will be controlled by link paddings (15px)
+      padding: 0;
+      width: 100%;
+      box-sizing: border-box;
+      gap: 0;
+    }
+  }
+  
+  &__menu-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    height: 100%;
+    
+    @include laptop {
+      // stack main item and its dropdown in one column
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%; // stretch each item to full panel width
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      // Allow text to wrap so long labels don't push layout and create visual right gaps
+      white-space: normal;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      line-height: 1;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      color: $color-white;
+      text-transform: uppercase;
+      transition: color $transition-base, background-color $transition-base;
+      white-space: nowrap;
+      height: 100%;
+      
+      @include laptop {
+        color: $color-dark;
+        // Main menu (top-level) typography on mobile/tablet
+        font-size: 15px;
+        font-family: 'Proxima Nova', sans-serif;
+        // Make the whole item full-width and exactly 50px tall
+        display: flex;
+        align-items: center;
+        // Padding on all sides per requirement
+        padding: 15px;
+        // Ensure padding is included in the fixed height
+        box-sizing: border-box;
+        width: 100%;
+        
+        &:hover,
+        &:focus {
+          color: $color-primary;
+        }
+      }
+      
+      &:focus-visible {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+      }
+    }
+    
+    // Active state для всех пунктов меню (не только dropdown)
+    @include laptop {
+      &.is-active {
+        > a {
+          background-color: #3474ff;
+          color: $color-white !important;
+        }
+      }
+    }
+    
+    // Dropdown стили
+    &--dropdown {
+      > a {
+        position: relative;
+        padding-right: 15px;
+        
+        &::after {
+          top: 50%;
+          width: 6px;
+          height: 6px;
+          right: 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+          border-left: 1px solid rgba(255, 255, 255, 0.8);
+          position: absolute;
+          content: "";
+          transform: translateY(-50%) rotate(-45deg);
+          -moz-transform: translateY(-50%) rotate(-45deg);
+          -webkit-transform: translateY(-50%) rotate(-45deg);
+          transition: transform $transition-base, border-color $transition-base, border-width $transition-base;
+          
+          @include laptop {
+            border-bottom-color: #3474ff;
+            border-left-color: #3474ff;
+            border-width: 2px;
+            // Arrow should be 15px from the right edge on mobile
+            right: 15px;
+          }
+        }
+        
+        // Increase right padding on mobile to prevent arrow overlap with text
+        @include laptop {
+          // Keep right padding in mobile so overall padding is 15px on all sides
+          padding-right: 15px;
+        }
+      }
+      
+      &:hover > a::after {
+        transform: translateY(-50%) rotate(135deg);
+        -moz-transform: translateY(-50%) rotate(135deg);
+        -webkit-transform: translateY(-50%) rotate(135deg);
+      }
+      
+      &:hover .header__dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        
+        // On mobile/tablet, disable hover-to-open to avoid conflicts with tap toggle
+        @include laptop {
+          max-height: 0;
+          opacity: 0;
+          pointer-events: none;
+          // no transform jump on mobile
+          transform: none;
+        }
+      }
+
+      // Mobile accordion: open state via class instead of hover
+      @include laptop {
+        // Disable hover-based arrow rotation on mobile to avoid sticky hover after tap
+        &:hover > a::after {
+          transform: translateY(-50%) rotate(-45deg);
+          -moz-transform: translateY(-50%) rotate(-45deg);
+          -webkit-transform: translateY(-50%) rotate(-45deg);
+        }
+
+        &.is-active {
+          > a::after {
+            transform: translateY(-50%) rotate(135deg);
+            -moz-transform: translateY(-50%) rotate(135deg);
+            -webkit-transform: translateY(-50%) rotate(135deg);
+            border-bottom-color: $color-white;
+            border-left-color: $color-white;
+            border-width: 2px;
+          }
+          
+          > .header__dropdown {
+            max-height: 400px;
+            opacity: 1;
+            pointer-events: auto;
+            // Добавляем вертикальные внешние отступы только в раскрытом состоянии
+            margin: 15px 0;
+          }
+        }
+      }
+    }
+  }
+  
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 5px); // Подняли еще на 5px (было 10px, стало 5px)
+    left: 0;
+    min-width: 220px;
+    background-color: $color-white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all $transition-base;
+    z-index: 100;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: -8px; // Спустили еще на 2px (было -10px, стало -8px)
+      left: 19px;
+      background-color: #ffffff;
+      transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      
+      @include laptop {
+        display: none; // Скрываем стрелку на мобильной версии
+      }
+    }
+    
+    @include laptop {
+      position: static;
+      box-shadow: none;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      background-color: rgba(0, 0, 0, 0.02);
+      width: 100%; // make submenu full-width under parent
+      opacity: 0;
+      pointer-events: none;
+      // Отступы по требованию: горизонтальные паддинги 14px; вертикальные margin только в раскрытом состоянии
+      margin: 0; // скрываем внешний отступ в свернутом состоянии, чтобы «не выглядывал»
+      padding: 0 14px; // top/bottom = 0, left/right = 14px
+    }
+    
+    li {
+      border-bottom: none;
+
+      // Mobile/tablet: each submenu item row height and left padding on LI
+      @include laptop {
+        height: 30px;
+        display: block;
+        background-color: $color-white;
+      }
+      
+      a {
+        display: block;
+        padding: 10px 20px;
+        font-size: 14px;
+        line-height: 14px;
+  font-family: 'Proxima Nova', sans-serif;
+        font-weight: 300;
+        color: #293443;
+        text-transform: none;
+        transition: all $transition-base;
+        width: 100%; // ensure full clickable width
+        
+        @include laptop {
+          // Submenu typography and spacing on mobile/tablet
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 30px;
+          color: #293443;
+          // Apply padding only on the left side per requirement; zero on other sides
+          padding-top: 0;
+          padding-right: 0;
+          padding-bottom: 0;
+          padding-left: 30px;
+          // Prevent hover from shifting text horizontally on mobile
+          &:hover,
+          &:focus {
+            padding-left: 30px;
+          }
+          
+          &:focus-visible {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+          }
+        }
+        
+        &:focus-visible {
+          outline: 2px solid $color-primary;
+          outline-offset: 2px;
+        }
+      }
+    }
+  }
+  
+  &__menu-cta {
+    // Используем общую систему кнопок .btn btn--secondary btn--sm
+    // Переопределяем только специфичные для header стили
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+    
+    // На мобильных: стиль как при скролинге (синий вместо белого)
+    @include laptop {
+      border-color: $color-primary;
+      color: $color-primary;
+      font-size: 11px;
+    }
+  }
+  
+  &.scrolled &__menu-cta {
+    // При скролле на десктопе: меняем на синий
+    border-color: #3474ff;
+    color: #3474ff;
+  }
+  
+  &.scrolled &__menu-item a {
+    color: #293443;
+    
+    @include mobile {
+      color: #293443;
+    }
+  }
+  
+  &.scrolled &__menu-item--dropdown > a::after {
+    border-bottom-color: rgba(41, 52, 67, 0.5);
+    border-left-color: rgba(41, 52, 67, 0.5);
+  }
+}
+
+// No offset for fixed header since hero is full screen
+main {
+  padding-top: 0;
+}
+
+// Mobile-specific override to ensure only left padding on submenu links and no hover shift
+@include laptop {
+  .header__dropdown .header__dropdown-link {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 30px;
+  }
+
+  .header__dropdown .header__dropdown-link:hover,
+  .header__dropdown .header__dropdown-link:focus {
+    padding-left: 30px;
+  }
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu-cta {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.header__menu-cta-icon {
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px !important;
+}

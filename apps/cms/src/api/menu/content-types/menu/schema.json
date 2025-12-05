@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "menus",
+  "info": {
+    "singularName": "menu",
+    "pluralName": "menus",
+    "displayName": "Main Menu",
+    "description": "Main navigation menu for the website. Maximum 2 levels (menu items and submenu items)."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "menu.menu-item",
+      "max": 50
+    },
+    "ctaText": {
+      "type": "string",
+      "default": "Contact",
+      "maxLength": 50
+    },
+    "ctaUrl": {
+      "type": "string",
+      "default": "#contact",
+      "maxLength": 500
+    }
+  }
+}

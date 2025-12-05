@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_service_resources",
+  "info": {
+    "displayName": "Service Resource",
+    "description": "Resource card with type, title, description, image and link"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string",
+      "required": true,
+      "default": "ARTICLE"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "ctaText": {
+      "type": "string",
+      "default": "Learn more"
+    }
+  }
+}
+
+
+

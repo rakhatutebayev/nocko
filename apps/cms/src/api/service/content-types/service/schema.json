@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": "IT services offered by NOCKO"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "service.service-hero-section"
+    },
+    "articleBlocks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "service.service-article-block-6-blocks-section",
+      "max": 6
+    },
+    "articleCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "service.service-article-card-3-cards-section",
+      "max": 3
+    }
+  }
+}
+

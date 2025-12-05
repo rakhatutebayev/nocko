@@ -1,0 +1,120 @@
+services:
+  # PostgreSQL Database for Strapi
+  postgres:
+    image: postgres:15-alpine
+    container_name: nocko-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nocko_cms
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - nocko-network
+
+  # Redis for caching (optional)
+  redis:
+    image: redis:7-alpine
+    container_name: nocko-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - nocko-network
+
+  # Strapi CMS
+  cms:
+    build:
+      context: ./apps/cms
+      dockerfile: Dockerfile.dev
+    container_name: nocko-cms
+    restart: unless-stopped
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_NAME: nocko_cms
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: postgres
+      DATABASE_SSL: "false"
+      HOST: 0.0.0.0
+      PORT: 1337
+      NODE_ENV: development
+      APP_KEYS: ${STRAPI_APP_KEYS:-toBeModified1,toBeModified2,toBeModified3,toBeModified4}
+      JWT_SECRET: ${STRAPI_JWT_SECRET:-toBeModified}
+      ADMIN_JWT_SECRET: ${STRAPI_ADMIN_JWT_SECRET:-toBeModified}
+      API_TOKEN_SALT: ${STRAPI_API_TOKEN_SALT:-toBeModified}
+      TRANSFER_TOKEN_SALT: ${STRAPI_TRANSFER_TOKEN_SALT:-toBeModified}
+      FRONTEND_URL: http://localhost:3000
+      # SMTP Configuration
+      SMTP_HOST: ${SMTP_HOST:-smtp.gmail.com}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-Nocko.it@gmail.com}
+      SMTP_PASS: ${SMTP_PASS:-vpuwzxeupxijxsss}
+      SMTP_FROM: ${SMTP_FROM:-Nocko.it@gmail.com}
+      SMTP_REPLY_TO: ${SMTP_REPLY_TO:-Nocko.it@gmail.com}
+      CONTACT_EMAIL: ${CONTACT_EMAIL:-Nocko.it@gmail.com}
+    ports:
+      - "1337:1337"
+    volumes:
+      - ./apps/cms:/opt/app
+      - /opt/app/node_modules
+      - /opt/app/.cache
+      - cms_uploads:/opt/app/public/uploads
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - nocko-network
+    command: npm run develop
+
+  # Next.js Website
+  website:
+    build:
+      context: ./apps/website
+      dockerfile: Dockerfile.dev
+    container_name: nocko-website
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+      NEXT_PUBLIC_STRAPI_URL: http://localhost:1337
+      STRAPI_INTERNAL_URL: http://cms:1337
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./apps/website:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      - cms
+    networks:
+      - nocko-network
+    command: npm run dev
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  cms_uploads:
+    driver: local
+
+networks:
+  nocko-network:
+    driver: bridge

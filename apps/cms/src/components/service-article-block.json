@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_service_article_blocks",
+  "info": {
+    "displayName": "Service Article Block (6 blocks section)",
+    "description": "Article block for 6 blocks section with title, excerpt, link and border color"
+  },
+  "options": {},
+  "attributes": {
+    "blockTitle": {
+      "type": "string",
+      "required": true
+    },
+    "blockExcerpt": {
+      "type": "text",
+      "required": true
+    },
+    "blockUrl": {
+      "type": "string",
+      "required": true
+    },
+    "blockBorderColor": {
+      "type": "enumeration",
+      "enum": [
+        "#3474ff",
+        "#00aeff",
+        "#583bec",
+        "#11c979",
+        "#ffcc2a",
+        "#ec5050"
+      ],
+      "default": "#3474ff",
+      "required": true
+    }
+  }
+}
+

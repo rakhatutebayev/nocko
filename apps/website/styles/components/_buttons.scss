@@ -1,0 +1,275 @@
+@use 'sass:color';
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  min-height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: all $transition-base;
+  cursor: pointer;
+  font-family: inherit;
+  background: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  // Варианты цветов
+  &--primary {
+    background-color: #11c979;
+    color: $color-white;
+    border-color: #11c979;
+    
+    &:hover {
+      background-color: color.adjust(#11c979, $lightness: -10%);
+      border-color: color.adjust(#11c979, $lightness: -10%);
+      color: $color-white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(17, 201, 121, 0.3);
+    }
+    
+    &:focus {
+      background-color: color.adjust(#11c979, $lightness: -10%);
+      border-color: color.adjust(#11c979, $lightness: -10%);
+      color: $color-white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(17, 201, 121, 0.3);
+    }
+    
+    &:focus-visible {
+      outline: 2px solid #11c979;
+      outline-offset: 2px;
+    }
+    
+    &:active {
+      background-color: color.adjust(#11c979, $lightness: -15%);
+      border-color: color.adjust(#11c979, $lightness: -15%);
+      transform: translateY(0);
+      color: $color-white;
+      box-shadow: 0 2px 6px rgba(17, 201, 121, 0.2);
+    }
+    
+    &:disabled,
+    &.btn--disabled {
+      background-color: #11c979;
+      border-color: #11c979;
+      color: $color-white;
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+  
+  &--secondary {
+    background-color: transparent;
+    color: $color-white;
+    border-color: $color-white;
+    
+    &:hover {
+      background-color: #3474ff;
+      border-color: #3474ff;
+      color: $color-white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(52, 116, 255, 0.3);
+    }
+    
+    &:focus {
+      background-color: #3474ff;
+      border-color: #3474ff;
+      color: $color-white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(52, 116, 255, 0.3);
+    }
+    
+    &:focus-visible {
+      outline: 2px solid #3474ff;
+      outline-offset: 2px;
+    }
+    
+    &:active {
+      background-color: color.adjust(#3474ff, $lightness: -10%);
+      border-color: color.adjust(#3474ff, $lightness: -10%);
+      transform: translateY(0);
+      color: $color-white;
+      box-shadow: 0 2px 6px rgba(52, 116, 255, 0.2);
+    }
+    
+    &:disabled,
+    &.btn--disabled {
+      background-color: transparent;
+      border-color: $color-white;
+      color: $color-white;
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+  
+  &--outline {
+    background-color: transparent;
+    color: $color-dark;
+    border-color: $color-gray;
+    
+    &:hover {
+      border-color: $color-primary;
+      color: $color-primary;
+      background-color: rgba($color-primary, 0.05);
+    }
+    
+    &:focus {
+      border-color: $color-primary;
+      color: $color-primary;
+      background-color: rgba($color-primary, 0.05);
+    }
+    
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+    
+    &:active {
+      border-color: color.adjust($color-primary, $lightness: -10%);
+      color: color.adjust($color-primary, $lightness: -10%);
+      background-color: rgba($color-primary, 0.1);
+    }
+    
+    &:disabled,
+    &.btn--disabled {
+      background-color: transparent;
+      border-color: $color-gray;
+      color: $color-dark;
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+  
+  &--white {
+    background-color: $color-white;
+    color: $color-primary;
+    border-color: $color-white;
+    
+    &:hover {
+      background-color: transparent;
+      color: $color-white;
+      border-color: $color-white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    }
+    
+    &:focus {
+      background-color: transparent;
+      color: $color-white;
+      border-color: $color-white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    }
+    
+    &:focus-visible {
+      outline: 2px solid $color-white;
+      outline-offset: 2px;
+    }
+    
+    &:active {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $color-white;
+      border-color: $color-white;
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+    }
+    
+    &:disabled,
+    &.btn--disabled {
+      background-color: $color-white;
+      border-color: $color-white;
+      color: $color-primary;
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+  
+  // Размеры
+  &--sm {
+    padding: 8px 24px;
+    min-height: 36px;
+    font-size: 14px;
+  }
+  
+  &--md {
+    padding: 12px 32px;
+    min-height: 44px;
+    font-size: 16px;
+  }
+  
+  &--lg {
+    padding: 10px 12px;
+    min-height: 54px;
+    font-size: 18px;
+  }
+  
+  &--xl {
+    padding: 20px 56px;
+    min-height: 64px;
+    font-size: 20px;
+  }
+  
+  // Специальный размер для hero секции
+  &--hero {
+    font-size: 13px;
+    padding: 8px 20px;
+    min-height: 36px;
+    white-space: nowrap;
+    
+    @include desktop {
+      font-size: 14px;
+      padding: 10px 24px;
+      min-height: 40px;
+    }
+  }
+  
+  // Состояния
+  &--block {
+    display: block;
+    width: 100%;
+  }
+  
+  &--disabled,
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  // Базовый focus-visible для всех кнопок (переопределяется в модификаторах)
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+  
+  // Адаптив для мобильных
+  @media (max-width: 767px) {
+    &--lg {
+      padding: 14px 40px;
+      min-height: 48px;
+      font-size: 16px;
+    }
+    
+    &--xl {
+      padding: 16px 48px;
+      min-height: 56px;
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_service_features",
+  "info": {
+    "displayName": "Service Feature",
+    "description": "Service feature item with icon and title"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": true,
+      "default": "icon1"
+    }
+  }
+}

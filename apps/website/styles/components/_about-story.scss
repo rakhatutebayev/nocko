@@ -1,0 +1,101 @@
+// About Story Section
+.about-story {
+  padding: $spacing-xxl 0;
+  background-color: #fff;
+  
+  @include mobile {
+    padding: $spacing-xl 0;
+  }
+}
+
+.about-story__header {
+  text-align: center;
+  margin-bottom: $spacing-xxl;
+  
+  @include mobile {
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.about-story__title {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #293443;
+  margin-bottom: $spacing-md;
+  
+  @include mobile {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: $spacing-sm;
+  }
+}
+
+.about-story__subtitle {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #293443;
+  margin: 0;
+  
+  @include mobile {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.about-story__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xxl;
+  align-items: center;
+  
+  @include tablet {
+    gap: $spacing-xl;
+  }
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.about-story__content {
+  @include mobile {
+    order: 2;
+  }
+}
+
+.about-story__text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #293443;
+  
+  p {
+    margin: 0 0 $spacing-md 0;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  @include mobile {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.about-story__image {
+  @include mobile {
+    order: 1;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+

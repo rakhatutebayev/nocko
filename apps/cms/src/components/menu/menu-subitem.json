@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_menu_menu_subitems",
+  "info": {
+    "displayName": "Menu Subitem",
+    "description": "Submenu item (dropdown item) - second level only",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "url": {
+      "type": "string",
+      "required": false,
+      "maxLength": 500
+    },
+    "linkType": {
+      "type": "enumeration",
+      "enum": ["custom", "page", "service", "case-study", "article", "industry"],
+      "default": "custom"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    }
+  }
+}

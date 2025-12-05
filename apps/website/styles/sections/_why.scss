@@ -1,0 +1,12 @@
+.why {
+  background-color: $color-light;
+  
+  &__list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  &__item {
+    font-size: 1.125rem;
+  }
+}

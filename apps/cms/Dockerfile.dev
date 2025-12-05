@@ -1,0 +1,21 @@
+FROM node:20-alpine
+
+WORKDIR /opt/app
+
+# Install dependencies first (for better caching)
+COPY package*.json ./
+RUN npm ci || npm install
+
+# Copy application files
+COPY . .
+
+# Create uploads directory
+RUN mkdir -p public/uploads
+
+# Expose port
+EXPOSE 1337
+
+# Start Strapi in development mode
+CMD ["npm", "run", "develop"]
+
+

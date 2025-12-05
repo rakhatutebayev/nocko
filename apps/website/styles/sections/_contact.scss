@@ -1,0 +1,10 @@
+.contact-form {
+  .container {
+    max-width: 600px;
+  }
+  
+  &__title {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+  }
+}

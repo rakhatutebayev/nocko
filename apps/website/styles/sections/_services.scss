@@ -1,0 +1,49 @@
+.services {
+  background-color: $color-light;
+  padding: 20px 0;
+  
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+  }
+  
+  &__title {
+    @extend .section__title;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__subtitle {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $color-gray;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__cta {
+    text-align: center;
+    margin-top: $spacing-lg;
+    padding-top: $spacing-lg;
+    border-top: 1px solid $color-border;
+  }
+  
+  &__cta-text {
+    font-size: 1rem;
+    margin-bottom: $spacing-md;
+    color: $color-gray;
+  }
+}

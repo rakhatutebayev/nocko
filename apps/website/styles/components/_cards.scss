@@ -1,0 +1,12 @@
+.why__item {
+  padding: $spacing-md;
+  margin-bottom: $spacing-sm;
+  background-color: $color-light;
+  border-left: 4px solid $color-primary;
+  transition: all $transition-base;
+  
+  &:hover {
+    background-color: darken($color-light, 3%);
+    border-left-color: $color-secondary;
+  }
+}

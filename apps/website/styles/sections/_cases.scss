@@ -1,0 +1,12 @@
+.cases {
+  background-color: $color-light;
+  
+  .container {
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  &__intro {
+    margin-bottom: $spacing-lg;
+  }
+}
