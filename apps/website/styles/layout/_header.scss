@@ -11,22 +11,18 @@
   display: flex;
   align-items: center;
   
-  // Мобильная версия: прозрачный фон по умолчанию, высота 54px
+  // Мобильная версия (≤992px): всегда белый фон и тень, как при скроллинге
   @include laptop {
     height: 54px;
-    background-color: transparent;
+    background-color: $color-white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid transparent;
   }
   
   &.scrolled {
     background-color: $color-white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid transparent;
-    
-    // На мобильной версии тоже белый фон при скролле
-    @include laptop {
-      background-color: $color-white;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
   }
   
   .container {
