@@ -47,6 +47,17 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['@nocko/ui', '@nocko/shared'],
   },
   
+  // Optimize CSS loading - Next.js automatically minifies and optimizes CSS
+  // To reduce render blocking, we rely on automatic CSS optimization
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
+  
+  // Optimize production builds
+  swcMinify: true,
+  
   // Headers for caching and security
   async headers() {
     return [
@@ -94,6 +105,19 @@ const nextConfig: NextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/css/:path*.css',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+          {
+            key: 'Link',
+            value: '</_next/static/css/:path*.css>; rel=preload; as=style',
           },
         ],
       },
