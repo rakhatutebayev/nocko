@@ -17,7 +17,7 @@ interface HeroProps {
     number: string;
     label: string;
   }>;
-  variant?: 'default' | 'service' | 'service-enhanced' | 'about';
+  variant?: 'default' | 'service' | 'service-enhanced' | 'about' | 'article';
   className?: string;
 }
 
