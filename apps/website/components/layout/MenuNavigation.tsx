@@ -29,7 +29,7 @@ interface MenuNavigationProps {
   onItemClick?: () => void;
   isMenuOpen: boolean;
   isMobile: boolean;
-  navRef?: React.RefObject<HTMLElement>;
+  navRef?: React.RefObject<HTMLElement | null>;
 }
 
 export default function MenuNavigation({ items, onItemClick, isMenuOpen, isMobile, navRef }: MenuNavigationProps) {
