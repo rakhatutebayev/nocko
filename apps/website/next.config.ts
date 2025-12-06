@@ -55,9 +55,6 @@ const nextConfig: NextConfig = {
     } : false,
   },
   
-  // Optimize production builds
-  swcMinify: true,
-  
   // Headers for caching and security
   async headers() {
     return [
