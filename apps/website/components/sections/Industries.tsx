@@ -145,8 +145,8 @@ export default function Industries({
 
     const updateActiveState = (idx: number) => {
       items.forEach((it, i) => {
-        const header = it.querySelector('.accordion-item__header');
-        const content = it.querySelector('.accordion-item__content');
+        const header = it.querySelector('.accordion-item__header') as HTMLElement | null;
+        const content = it.querySelector('.accordion-item__content') as HTMLElement | null;
         const isActive = i === idx && idx >= 0;
         const wasActive = it.classList.contains('active');
         
