@@ -333,7 +333,7 @@ export default function Industries({
       });
 
       // Keyboard navigation
-      const getClones = () => Array.from(tabsList.querySelectorAll('.industries-tabs__tab-clone'));
+      const getClones = () => Array.from(tabsList.querySelectorAll('.industries-tabs__tab-clone')) as HTMLElement[];
       const moveFocus = (newIndex: number) => {
         const clones = getClones();
         if (!clones.length) return;
