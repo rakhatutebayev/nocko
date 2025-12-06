@@ -108,19 +108,6 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-      {
-        source: '/_next/static/css/:path*.css',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-          {
-            key: 'Link',
-            value: '</_next/static/css/:path*.css>; rel=preload; as=style',
-          },
-        ],
-      },
     ];
   },
   
