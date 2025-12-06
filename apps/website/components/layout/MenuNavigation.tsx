@@ -145,7 +145,7 @@ export default function MenuNavigation({ items, onItemClick, isMenuOpen, isMobil
                       const subitemUrl = getItemUrl(subitem);
                       
                       return (
-                        <li key={subitem.id} className="header__dropdown-item">
+                        <li key={subitem.id} className="header__dropdown-item" role="none">
                           <Link
                             className="header__dropdown-link"
                             href={subitemUrl}
