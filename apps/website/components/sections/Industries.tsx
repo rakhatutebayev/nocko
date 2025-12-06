@@ -239,7 +239,7 @@ export default function Industries({
       }
 
       if (tabsListRef.current) {
-        const clones = Array.from(tabsListRef.current.querySelectorAll('.industries-tabs__tab-clone'));
+        const clones = Array.from(tabsListRef.current.querySelectorAll('.industries-tabs__tab-clone')) as HTMLElement[];
         clones.forEach((btn, i) => {
           const isActive = i === idx;
           btn.classList.toggle('active', isActive);
