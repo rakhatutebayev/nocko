@@ -211,7 +211,6 @@ export default function Header({ menu }: HeaderProps) {
             <button
               onClick={() => setIsContactModalOpen(true)}
               className="btn btn--secondary btn--sm header__menu-cta" 
-              role="menuitem" 
               tabIndex={0}
               aria-label={`Open contact form: ${menu.attributes.ctaText}`}
             >
