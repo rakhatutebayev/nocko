@@ -667,12 +667,10 @@
 }
 
 // No offset for fixed header since hero is full screen
+// Убрали padding-top у main, чтобы hero начинался с начала страницы
+// Header накладывается поверх hero с position: fixed
 main {
-  padding-top: 80px; // Отступ для fixed header на десктопе
-  
-  @include laptop {
-    padding-top: 54px; // Отступ для fixed header на мобильных
-  }
+  padding-top: 0;
 }
 
 // Mobile-specific override to ensure only left padding on submenu links and no hover shift
