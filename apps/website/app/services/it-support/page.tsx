@@ -235,7 +235,6 @@ export default function ITSupportPage() {
         <ServiceFAQ
           title={itSupportContent.faq.title}
           items={itSupportContent.faq.items}
-          includeDubaiKeyword={true}
         />
         <ServiceCTA
           title={itSupportContent.cta.title}

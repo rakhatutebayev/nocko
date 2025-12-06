@@ -3,6 +3,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { submitContact } from '@/lib/api/strapi';
+import RecaptchaScript from './RecaptchaScript';
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -71,6 +81,16 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     const email = (formData.get('email') as string)?.trim();
     const phone = (formData.get('phone') as string)?.trim();
     const message = (formData.get('message') as string)?.trim();
+    const website = (formData.get('website') as string)?.trim(); // Honeypot поле
+    
+    // Проверка honeypot - если поле заполнено, это бот
+    if (website) {
+      console.warn('Spam detected: honeypot field filled');
+      setSubmitStatus('error');
+      setErrorMessage('Spam detected. Please try again.');
+      setIsSubmitting(false);
+      return;
+    }
     
     // Валидация на клиенте
     if (!name || !email || !message) {
@@ -89,12 +109,72 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       return;
     }
     
+    // Получаем токен reCAPTCHA, если настроен
+    let recaptchaToken: string | undefined;
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    
+    if (siteKey && typeof window !== 'undefined' && window.grecaptcha) {
+      try {
+        // Ждем готовности reCAPTCHA и получаем токен
+        recaptchaToken = await new Promise<string>((resolve, reject) => {
+          window.grecaptcha.ready(async () => {
+            try {
+              const token = await window.grecaptcha.execute(siteKey, {
+                action: 'contact_form_submit',
+              });
+              resolve(token);
+            } catch (error) {
+              reject(error);
+            }
+          });
+        });
+      } catch (recaptchaError) {
+        console.warn('reCAPTCHA error:', recaptchaError);
+        // Продолжаем без reCAPTCHA, если произошла ошибка
+        // Форма все равно будет защищена honeypot и rate limiting
+      }
+    } else if (siteKey && typeof window !== 'undefined' && !window.grecaptcha) {
+      // Если siteKey настроен, но grecaptcha еще не загружен, ждем немного
+      console.warn('reCAPTCHA script not loaded yet, waiting...');
+      try {
+        await new Promise<void>((resolve) => {
+          let attempts = 0;
+          const maxAttempts = 10;
+          const checkInterval = setInterval(() => {
+            attempts++;
+            if (window.grecaptcha || attempts >= maxAttempts) {
+              clearInterval(checkInterval);
+              resolve();
+            }
+          }, 100);
+        });
+        
+        if (window.grecaptcha) {
+          recaptchaToken = await new Promise<string>((resolve, reject) => {
+            window.grecaptcha.ready(async () => {
+              try {
+                const token = await window.grecaptcha.execute(siteKey, {
+                  action: 'contact_form_submit',
+                });
+                resolve(token);
+              } catch (error) {
+                reject(error);
+              }
+            });
+          });
+        }
+      } catch (recaptchaError) {
+        console.warn('reCAPTCHA timeout or error:', recaptchaError);
+      }
+    }
+    
     try {
       const result = await submitContact({
         name,
         email,
         phone: phone || undefined,
         message,
+        recaptchaToken,
       });
       
       if (result.success) {
@@ -137,6 +217,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       aria-labelledby="contact-modal-title"
       onClick={handleOverlayClick}
     >
+      <RecaptchaScript />
       <div className="contact-modal__overlay"></div>
       <div 
         className="contact-modal__content" 
@@ -234,6 +315,18 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <span className="form__error" role="alert"></span>
           </div>
           
+          {/* Honeypot field - скрытое поле для защиты от спама */}
+          <div style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }} aria-hidden="true">
+            <label htmlFor="website-url">Website URL (leave blank)</label>
+            <input
+              type="text"
+              id="website-url"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </div>
+          
           {submitStatus === 'success' && (
             <div className="form__success" role="alert">
               <p>Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
@@ -253,6 +346,21 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           >
             {isSubmitting ? 'Sending...' : submitStatus === 'success' ? 'Sent!' : 'Send Message'}
           </button>
+          
+          {/* Информация о защите формы (опционально, можно скрыть) */}
+          {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
+            <p className="form__privacy" style={{ fontSize: '0.75rem', color: '#666', marginTop: '0.5rem', textAlign: 'center' }}>
+              This form is protected by reCAPTCHA and the Google{' '}
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                Privacy Policy
+              </a>
+              {' '}and{' '}
+              <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                Terms of Service
+              </a>
+              {' '}apply.
+            </p>
+          )}
         </form>
       </div>
     </div>

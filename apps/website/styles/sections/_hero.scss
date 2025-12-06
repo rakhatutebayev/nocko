@@ -17,6 +17,33 @@
     background-image: url('/images/hero-bg.webp');
   }
   
+  // Мобильная версия (≤992px) - используем оптимизированное изображение
+  @media (max-width: 992px) {
+    background-image: url('/images/hero-bg-mobile.jpg');
+    
+    .webp & {
+      background-image: url('/images/hero-bg-mobile.webp');
+    }
+  }
+  
+  // Маленькие экраны (≤768px) - используем самое маленькое изображение
+  @media (max-width: 768px) {
+    background-image: url('/images/hero-bg-small.jpg');
+    
+    .webp & {
+      background-image: url('/images/hero-bg-small.webp');
+    }
+  }
+  
+  // Очень маленькие экраны (≤480px) - используем самое компактное изображение
+  @media (max-width: 480px) {
+    background-image: url('/images/hero-bg-xs.jpg');
+    
+    .webp & {
+      background-image: url('/images/hero-bg-xs.webp');
+    }
+  }
+  
   @include desktop {
     padding: 40px 0;
   }
@@ -71,6 +98,17 @@
     
     @include desktop {
       font-size: 0.95rem;
+    }
+  }
+  
+  &__description {
+    color: $color-white;
+    margin-bottom: $spacing-sm;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    
+    @include desktop {
+      font-size: 1rem;
     }
   }
   

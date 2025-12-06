@@ -35,7 +35,7 @@
   
   &__logo {
     display: inline-block;
-    margin-bottom: $spacing-md;
+    margin-bottom: 2px;
     
     img {
       height: 40px;
@@ -47,11 +47,47 @@
     margin-top: $spacing-md;
     font-size: 0.875rem;
     line-height: 1.8;
+    background-color: #333;
+    padding: 16px 16px 0 16px;
     
     p {
       margin: 0 0 $spacing-xs;
       color: $color-white;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
     }
+  }
+  
+  &__contact-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    opacity: 0.9;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    
+    svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+  }
+  
+  &__phone &__contact-icon {
+    margin-top: 0 !important;
+  }
+  
+  &__address {
+    flex-wrap: wrap;
+  }
+  
+  &__address-text {
+    flex: 1;
+    min-width: 0;
   }
   
   &__address {
@@ -59,10 +95,20 @@
   }
   
   &__phone {
+    height: 39px !important;
+    min-height: 39px;
+    max-height: 39px;
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 0 $spacing-xs !important;
+    
     a {
       color: $color-white;
       text-decoration: none;
       transition: color $transition-base;
+      line-height: 1;
+      display: flex;
+      align-items: center;
       
       &:hover,
       &:focus {
@@ -77,6 +123,8 @@
   }
   
   &__email {
+    margin-top: calc(-0.5rem - 11px);
+    
     a {
       color: $color-white;
       text-decoration: none;

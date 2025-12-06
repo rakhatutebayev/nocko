@@ -230,7 +230,6 @@ export default function CloudPage() {
         <ServiceFAQ
           title={cloudContent.faq.title}
           items={cloudContent.faq.items}
-          includeDubaiKeyword={true}
         />
         <ServiceCTA
           title={cloudContent.cta.title}

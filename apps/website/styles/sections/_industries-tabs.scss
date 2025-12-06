@@ -26,36 +26,60 @@ $tabs-close-duration: 0.75s; // used via JS overrides
 
   // Accordion container
   &__accordion {
-    @media (min-width: 769px) {
-      // Flex: left content area + right tabs list
+    @media (min-width: 992px) {
+      // Flex: left image + middle text + right tabs list
       display: flex;
       align-items: flex-start;
-      gap: 40px;
+      gap: 0; // Remove gap to use all available space
+      width: 100%;
     }
-    @include mobile {
+    @media (max-width: 991px) {
       display: block;
     }
   }
 
   // Desktop dedicated wrappers injected via JS
   &__content-area {
-    @media (min-width: 769px) {
-      flex: 1;
+    @media (min-width: 992px) {
+      flex: 1 1 auto;
+      display: flex;
+      gap: 40px;
       position: relative;
-      // Content area holds moving panels; sizing comes from inner .tab-content
+      min-width: 0; // Allow flex items to shrink
+      width: 100%;
+    }
+  }
+
+  &__image-area {
+    @media (min-width: 992px) {
+      flex: 1 1 50%;
+      min-width: 0; // Allow flex item to shrink
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  &__text-area {
+    @media (min-width: 992px) {
+      flex: 1 1 50%;
+      min-width: 0; // Allow flex item to shrink
+      position: relative;
+      width: 100%;
     }
   }
 
   &__tabs {
-    @media (min-width: 769px) {
+    @media (min-width: 992px) {
       display: flex;
       flex-direction: column;
       width: 28%;
+      flex-shrink: 0; // Prevent tabs from shrinking
+      margin-left: 40px; // Add margin instead of gap to separate from content
     }
   }
 
   &__tab-clone {
-    @media (min-width: 769px) {
+    @media (min-width: 992px) {
       // style cloned buttons same as original
       display: flex;
       align-items: center;
@@ -81,7 +105,7 @@ $tabs-close-duration: 0.75s; // used via JS overrides
       }
     }
     &.active {
-      @media (min-width: 769px) {
+      @media (min-width: 992px) {
         background-color: #e0e7ef; // desktop active tab highlighted
         border-left: 3px solid #3474ff;
       }
@@ -98,7 +122,7 @@ $tabs-close-duration: 0.75s; // used via JS overrides
   }
 
   // Desktop: original headers hidden; content shown only for active
-  @media (min-width: 769px) {
+  @media (min-width: 992px) {
     .accordion-item__header { display: none !important; }
   }
 
@@ -106,12 +130,14 @@ $tabs-close-duration: 0.75s; // used via JS overrides
     width: 100%;
     
     // Mobile: show as accordion button
-    @include mobile {
+    @media (max-width: 991px) {
       display: flex !important;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       background-color: #e0e7ef; // единый фон для всех табов
       border-bottom: 1px solid #ffffff; // белый разделитель между табами
+      flex-direction: row; // иконка слева, текст после иконки, стрелка справа
+      gap: 12px; // отступ между иконкой и текстом
       
       // Chevron arrow (outlined) — down when closed
       &:after {
@@ -123,11 +149,30 @@ $tabs-close-duration: 0.75s; // used via JS overrides
         transform: rotate(45deg); // looks like a small V/chevron
         transition: transform 0.3s $tabs-easing;
         flex-shrink: 0;
+        order: 3; // стрелка после иконки
+      }
+      
+      .tab-button__icon {
+        order: 1; // иконка первой
+        margin: 0; // убираем все margins
+        flex-shrink: 0; // не сжимается
+      }
+      
+      .tab-button__text {
+        order: 2; // текст после иконки
+        flex: 0 1 auto; // не растягивается, но может сжиматься
+        min-width: 0; // позволяет сжиматься
+      }
+      
+      // Стрелка справа
+      &:after {
+        order: 3;
+        margin-left: auto; // прижимает стрелку вправо
       }
     }
 
     // Desktop: headers appear in the right column, stacked
-    @media (min-width: 769px) {
+    @media (min-width: 992px) {
       grid-column: 2;
       grid-row: auto;
       display: flex;
@@ -136,7 +181,7 @@ $tabs-close-duration: 0.75s; // used via JS overrides
   }
 
   &.active {
-    @include mobile {
+    @media (max-width: 991px) {
       .accordion-item__header:after {
         transform: rotate(-135deg); // rotate to point up
       }
@@ -145,7 +190,7 @@ $tabs-close-duration: 0.75s; // used via JS overrides
 
   &__content {
     // Mobile: collapsible accordion content
-    @include mobile {
+    @media (max-width: 991px) {
       height: 0;
       overflow: hidden;
       padding: 0; // start collapsed without padding
@@ -159,7 +204,7 @@ $tabs-close-duration: 0.75s; // used via JS overrides
     }
 
     // Desktop: hidden by default, shown for active item inside content area
-    @media (min-width: 769px) {
+    @media (min-width: 992px) {
       display: none;
     }
   }
@@ -167,24 +212,24 @@ $tabs-close-duration: 0.75s; // used via JS overrides
 
 // Tab Content Styles
 .tab-content {
-  display: flex;
-  gap: 24px;
-
-  @media (min-width: 769px) {
-    min-height: 350px; // keeps area stable while switching tabs
-  }
-
   @include mobile {
+    display: flex;
     flex-direction: column;
     gap: 16px;
   }
 
+  @media (min-width: 769px) {
+    display: contents; // Use CSS Grid/Flex parent layout
+  }
+
   &__image {
-    flex: 0 0 45%;
-    
-    @include mobile {
-      flex: 0 0 auto;
+    @media (max-width: 991px) {
       display: none; // hide images on mobile per requirement
+    }
+
+    @media (min-width: 992px) {
+      // Image will be moved to __image-area by JS
+      display: block;
     }
 
     img {
@@ -198,7 +243,14 @@ $tabs-close-duration: 0.75s; // used via JS overrides
   }
 
   &__text {
-    flex: 1;
+    @media (max-width: 991px) {
+      flex: 1;
+    }
+
+    @media (min-width: 992px) {
+      // Text will be moved to __text-area by JS
+      display: block;
+    }
 
     h3 {
       font-size: 24px;
@@ -206,7 +258,7 @@ $tabs-close-duration: 0.75s; // used via JS overrides
       margin-bottom: 16px;
       color: var(--color-primary);
 
-      @include mobile {
+      @media (max-width: 991px) {
         font-size: 22px;
         margin-bottom: 12px;
       }
@@ -257,10 +309,45 @@ $tabs-close-duration: 0.75s; // used via JS overrides
 }
 
 // Desktop visibility: show active content inside content-area
-@media (min-width: 769px) {
-  /* Hide all tab contents by default on desktop (override base .tab-content display:flex) */
+@media (min-width: 992px) {
+  /* Hide all tab contents by default on desktop */
   .accordion-item__content.tab-content { display: none; }
-  .accordion-item.active > .accordion-item__content.tab-content { display: flex; }
+  
+  /* Images and texts are moved to separate areas by JS */
+  .industries-tabs__image-area {
+    .tab-content__image {
+      display: none;
+      
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        box-shadow: none;
+        object-fit: cover;
+        max-height: 500px;
+      }
+    }
+  }
+  
+  .industries-tabs__text-area {
+    .tab-content__text {
+      display: none;
+      
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 16px;
+        color: var(--color-primary);
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.5;
+        color: #555;
+        margin-bottom: 16px;
+      }
+    }
+  }
 }
 
 // Tab Button Styles
@@ -320,7 +407,7 @@ $tabs-close-duration: 0.75s; // used via JS overrides
     font-weight: inherit;
     transition: font-weight 0.3s ease;
 
-    @include mobile {
+    @media (max-width: 991px) {
       font-size: 15px;
     }
   }

@@ -62,3 +62,4 @@ export default function AboutStats({ stats = defaultStats }: AboutStatsProps) {
 
 
 
+

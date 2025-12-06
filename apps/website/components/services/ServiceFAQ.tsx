@@ -10,13 +10,11 @@ interface FAQItem {
 interface ServiceFAQProps {
   title?: string;
   items: FAQItem[];
-  includeDubaiKeyword?: boolean;
 }
 
 export default function ServiceFAQ({ 
   title = 'Frequently Asked Questions',
   items,
-  includeDubaiKeyword = true,
 }: ServiceFAQProps) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
 
@@ -85,12 +83,6 @@ export default function ServiceFAQ({
                 </div>
               ))}
             </div>
-            {includeDubaiKeyword && (
-              <p style={{ marginTop: '2rem', fontSize: '14px', textAlign: 'center', color: '#666' }}>
-                Looking for an <a href="/locations/dubai" style={{ color: '#3474ff', textDecoration: 'underline' }}>IT company in Dubai</a>? 
-                Contact us for expert IT solutions across UAE.
-              </p>
-            )}
           </div>
         </div>
       </section>

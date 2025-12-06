@@ -41,7 +41,7 @@ const dubaiContent = {
     title: 'IT Company in Dubai | Expert IT Support & Solutions',
     subtitle: 'Leading IT Company in Dubai Serving Businesses Across UAE',
     description:
-      'NOCKO is a trusted IT company in Dubai providing comprehensive IT support, network infrastructure, cloud solutions, cybersecurity, and managed IT services. As a leading IT company in Dubai, we serve businesses across all Emirates with 24/7 support and expert solutions.',
+      'NOCKO is a trusted IT company in Dubai providing comprehensive IT support, network infrastructure, cloud solutions, cybersecurity, and managed IT services.',
   },
   intro: {
     title: 'Why Choose NOCKO as Your IT Company in Dubai?',
@@ -54,37 +54,37 @@ const dubaiContent = {
       {
         title: 'IT Support & Helpdesk',
         description:
-          '24/7 IT support services from your trusted IT company in Dubai. Fast response times, remote support, and on-site visits when needed.',
+          'Round-the-clock technical assistance for Dubai businesses. Our local IT support team ensures minimal downtime with rapid response and expert troubleshooting for all your IT needs.',
         link: '/services/it-support',
       },
       {
         title: 'Network Infrastructure',
         description:
-          'Professional network setup and maintenance from Dubai-based IT company. Structured cabling, wireless networks, and connectivity solutions.',
+          'Enterprise-grade network solutions designed for Dubai\'s business environment. We deliver robust connectivity, scalable architecture, and reliable performance for your growing operations.',
         link: '/services/structured-cabling',
       },
       {
         title: 'Cloud Solutions',
         description:
-          'Cloud migration and management services from IT company in Dubai. Hybrid cloud, multi-cloud, and cloud security solutions.',
+          'Transform your business with cloud technologies tailored for Dubai enterprises. We help you migrate, optimize, and secure your cloud infrastructure for maximum efficiency and cost savings.',
         link: '/services/cloud',
       },
       {
         title: 'Cybersecurity',
         description:
-          'Enterprise cybersecurity solutions from leading IT company in Dubai. Firewall configuration, data protection, and compliance.',
+          'Protect your Dubai business with advanced security measures. Our cybersecurity services include threat detection, vulnerability assessments, and compliance solutions to safeguard your digital assets.',
         link: '/services/cybersecurity',
       },
       {
         title: 'Managed IT Services',
         description:
-          'Complete managed IT services from IT company in Dubai. Proactive monitoring, maintenance, and optimization for your IT infrastructure.',
+          'Outsource your IT operations to Dubai\'s trusted managed services provider. We handle day-to-day IT management, allowing you to focus on core business activities while we ensure optimal performance.',
         link: '/services/managed-it',
       },
       {
         title: 'IT Consulting',
         description:
-          'Strategic IT consulting from experienced IT company in Dubai. Digital transformation, infrastructure design, and technology roadmaps.',
+          'Strategic technology guidance for Dubai businesses. Our consultants help you make informed IT decisions, plan digital initiatives, and align technology investments with your business objectives.',
         link: '/services/it-consulting',
       },
     ],
@@ -128,36 +128,6 @@ const dubaiContent = {
     title: 'IT Company in Dubai Serving All Emirates',
     text: 'Our IT company in Dubai provides services across all Emirates including Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain. While based in Dubai, our IT company serves businesses throughout UAE with the same level of expertise and support.',
   },
-  faq: {
-    title: 'Frequently Asked Questions About IT Company in Dubai',
-    items: [
-      {
-        question: 'What services does an IT company in Dubai provide?',
-        answer:
-          'An IT company in Dubai typically provides IT support, network infrastructure, cloud solutions, cybersecurity, managed IT services, and IT consulting. NOCKO, as a leading IT company in Dubai, offers all these services with 24/7 support and expert solutions.',
-      },
-      {
-        question: 'Why choose NOCKO as your IT company in Dubai?',
-        answer:
-          'NOCKO is a trusted IT company in Dubai with local expertise, 24/7 support, expert team, proven track record, comprehensive solutions, and cost-effective pricing. Our IT company in Dubai serves businesses across all Emirates.',
-      },
-      {
-        question: 'Does the IT company in Dubai offer 24/7 support?',
-        answer:
-          'Yes, NOCKO as an IT company in Dubai provides 24/7 IT support with fast response times. Average 2 hours in Dubai and 4 hours across all Emirates. On-site engineers available 24/7.',
-      },
-      {
-        question: 'What industries does the IT company in Dubai serve?',
-        answer:
-          'Our IT company in Dubai serves multiple industries including healthcare, finance, retail, education, logistics, manufacturing, real estate, and corporate/enterprise businesses across Dubai and all Emirates.',
-      },
-      {
-        question: 'How quickly can the IT company in Dubai respond to IT issues?',
-        answer:
-          'As an IT company in Dubai, NOCKO provides fast response times with average 2 hours in Dubai and 4 hours across all Emirates. Remote support available immediately, on-site visits scheduled based on urgency.',
-      },
-    ],
-  },
 };
 
 export default function DubaiPage() {
@@ -174,10 +144,10 @@ export default function DubaiPage() {
     email: 'info@nocko.ae',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Office R20-42, Wavez Residence, Wadi Al Safa 2',
       addressLocality: 'Dubai',
       addressRegion: 'Dubai',
       addressCountry: 'AE',
-      streetAddress: 'Dubai, United Arab Emirates',
     },
     geo: {
       '@type': 'GeoCoordinates',
@@ -203,19 +173,6 @@ export default function DubaiPage() {
     ],
   };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: dubaiContent.faq.items.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
-  };
-
   return (
     <>
       <StructuredData type="LocalBusiness" data={structuredData} />
@@ -226,10 +183,6 @@ export default function DubaiPage() {
           { '@type': 'ListItem', position: 3, name: 'Dubai', item: `${baseUrl}/locations/dubai` },
         ],
       }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Breadcrumbs
@@ -296,26 +249,6 @@ export default function DubaiPage() {
             <div className="section__content">
               <h2 className="section__title">{dubaiContent.localBenefits.title}</h2>
               <p className="section__text">{dubaiContent.localBenefits.text}</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section section--light">
-          <div className="container">
-            <div className="section__content">
-              <h2 className="section__title">{dubaiContent.faq.title}</h2>
-              <div className="faq-list" style={{ marginTop: '2rem' }}>
-                {dubaiContent.faq.items.map((item, index) => (
-                  <div key={index} className="faq-item" style={{ marginBottom: '1.5rem', paddingBottom: '1.5rem', borderBottom: '1px solid #e0e0e0' }}>
-                    <h3 className="faq-question" style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.5rem' }}>
-                      {item.question}
-                    </h3>
-                    <p className="faq-answer" style={{ color: '#666', lineHeight: '1.6' }}>
-                      {item.answer}
-                    </p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </section>

@@ -58,11 +58,11 @@ const defaultServices: Service[] = [
     color: 'lightblue',
   },
   {
-    title: 'Hardware & Software Supply',
+    title: 'IT Support & Helpdesk',
     description:
-      'Enterprise-grade IT equipment and licensed software for businesses across UAE. End-to-end sourcing, configuration, and support. Delivered and ready for deployment.',
-    href: '#hardware',
-    serviceType: 'IT Equipment',
+      '24/7 IT support services from your trusted IT company in Dubai. Fast response times, remote support, and on-site visits when needed.',
+    href: '/services/it-support',
+    serviceType: 'IT Support',
     color: 'red',
   },
 ];
@@ -73,15 +73,11 @@ export default function Services({
   services = defaultServices,
 }: ServicesProps) {
   return (
-    <section className="services" id="services" itemScope itemType="https://schema.org/Service">
+    <section className="services" id="services" itemScope itemType="https://schema.org/Service" suppressHydrationWarning>
       <div className="container">
         <div className="services__header">
           <h2 className="services__title">{title}</h2>
           {subtitle && <p className="services__subtitle">{subtitle}</p>}
-          <p className="services__location-link" style={{ marginTop: '1rem', fontSize: '14px' }}>
-            Looking for an <Link href="/locations/dubai" style={{ color: '#3474ff', textDecoration: 'underline' }}>IT company in Dubai</Link>? 
-            We provide comprehensive IT services across all Emirates.
-          </p>
         </div>
 
         <div className="services__grid" itemScope itemType="https://schema.org/ItemList">

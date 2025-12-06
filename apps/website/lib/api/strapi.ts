@@ -141,9 +141,17 @@ export interface Menu {
 }
 
 // Use internal Docker URL for server-side, public URL for client-side
-const STRAPI_URL = typeof window === 'undefined' 
-  ? (process.env.STRAPI_INTERNAL_URL || 'http://cms:1337')
-  : (process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337');
+// Fallback to localhost if internal URL doesn't work (for local development)
+const getStrapiUrl = () => {
+  if (typeof window !== 'undefined') {
+    // Client-side: use public URL
+    return process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+  }
+  // Server-side: try internal URL first, fallback to localhost
+  return process.env.STRAPI_INTERNAL_URL || process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+};
+
+const STRAPI_URL = getStrapiUrl();
 const API_TOKEN = process.env.STRAPI_API_TOKEN;
 
 // Cache TTLs (in milliseconds)
@@ -202,12 +210,27 @@ async function fetchAPIInternal<T>(
     headers['Authorization'] = `Bearer ${API_TOKEN}`;
   }
 
+  // Create abort controller for timeout (server-side only)
+  let abortController: AbortController | undefined;
+  let timeoutId: NodeJS.Timeout | undefined;
+  
+  if (typeof window === 'undefined') {
+    abortController = new AbortController();
+    timeoutId = setTimeout(() => abortController!.abort(), 10000); // 10 second timeout
+  }
+  
   try {
     const res = await fetch(url, {
       ...options,
       headers,
       next: { revalidate: revalidateTime }, // ISR: revalidate based on content type
+      signal: abortController?.signal,
     });
+    
+    // Clear timeout if request succeeded
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
 
     if (!res.ok) {
       // If 404, return empty data structure instead of throwing
@@ -220,8 +243,35 @@ async function fetchAPIInternal<T>(
 
     return res.json();
   } catch (error) {
+    // Clear timeout on error
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    
     // Handle network errors (connection refused, timeout, etc.)
     if (error instanceof TypeError && error.message.includes('fetch failed')) {
+      // Try fallback to localhost if using internal Docker URL
+      if (typeof window === 'undefined' && STRAPI_URL.includes('cms:1337')) {
+        const fallbackUrl = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+        const fallbackFullUrl = `${fallbackUrl}/api${endpoint}`;
+        
+        console.warn(`Failed to connect to ${STRAPI_URL}, trying fallback: ${fallbackUrl}`);
+        
+        try {
+          const res = await fetch(fallbackFullUrl, {
+            ...options,
+            headers,
+            next: { revalidate: revalidateTime },
+          });
+          
+          if (res.ok) {
+            return res.json();
+          }
+        } catch (fallbackError) {
+          console.error(`Fallback also failed: ${fallbackError}`);
+        }
+      }
+      
       console.error(`Network error connecting to Strapi at ${STRAPI_URL}. Is Strapi running?`);
       console.error(`Endpoint: ${endpoint}`);
       // Return empty data structure instead of crashing
@@ -567,10 +617,12 @@ export async function submitContact(data: {
   email: string;
   phone?: string;
   message: string;
+  recaptchaToken?: string;
 }): Promise<{ success: boolean; message?: string }> {
   try {
+    // Use the same logic as fetchAPI
     const STRAPI_URL = typeof window === 'undefined' 
-      ? (process.env.STRAPI_INTERNAL_URL || 'http://cms:1337')
+      ? (process.env.STRAPI_INTERNAL_URL || process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337')
       : (process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337');
     
     const url = `${STRAPI_URL}/api/contacts`;

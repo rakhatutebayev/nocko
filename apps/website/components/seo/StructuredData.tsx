@@ -1,25 +1,28 @@
-'use client';
-
 interface StructuredDataProps {
-  type: 'Organization' | 'Service' | 'Article' | 'LocalBusiness' | 'BreadcrumbList';
+  type: 'Organization' | 'Service' | 'Article' | 'LocalBusiness' | 'BreadcrumbList' | 'FAQPage';
   data: Record<string, any>;
 }
 
 export default function StructuredData({ type, data }: StructuredDataProps) {
   const getSchema = () => {
-    const baseSchema = {
+    const baseSchema: Record<string, any> = {
       '@context': 'https://schema.org',
       '@type': type,
-      ...data,
     };
+
+    // Добавляем данные из props, но с приоритетом для дефолтных значений
+    Object.assign(baseSchema, data);
 
     switch (type) {
       case 'Organization':
         return {
-          ...baseSchema,
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
           name: data.name || 'NOCKO Information Technology',
           url: data.url || 'https://nocko.com',
           logo: data.logo || 'https://nocko.com/images/logo-white.svg',
+          telephone: data.telephone || '+971-XX-XXX-XXXX',
+          description: data.description || '',
           contactPoint: {
             '@type': 'ContactPoint',
             telephone: data.telephone || '+971-XX-XXX-XXXX',
@@ -29,19 +32,26 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           },
           address: {
             '@type': 'PostalAddress',
-            addressLocality: 'Dubai',
-            addressCountry: 'AE',
+            addressLocality: data.addressLocality || 'Dubai',
+            addressCountry: data.addressCountry || 'AE',
+            ...(data.streetAddress && { streetAddress: data.streetAddress }),
           },
           sameAs: data.sameAs || [],
         };
 
       case 'LocalBusiness':
         return {
-          ...baseSchema,
+          '@context': 'https://schema.org',
+          '@type': 'LocalBusiness',
           name: data.name || 'NOCKO Information Technology',
           image: data.image || 'https://nocko.com/images/og-image.jpg',
+          description: data.description || '',
+          url: data.url || 'https://nocko.com',
+          telephone: data.telephone || '+971-XX-XXX-XXXX',
+          email: data.email || '',
           address: {
             '@type': 'PostalAddress',
+            streetAddress: data.streetAddress || '',
             addressLocality: data.addressLocality || 'Dubai',
             addressRegion: data.addressRegion || 'Dubai',
             addressCountry: data.addressCountry || 'AE',
@@ -51,9 +61,8 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             latitude: data.latitude || '25.2048',
             longitude: data.longitude || '55.2708',
           },
-          telephone: data.telephone || '+971-XX-XXX-XXXX',
-          priceRange: '$$',
-          openingHoursSpecification: [
+          priceRange: data.priceRange || '$$',
+          openingHoursSpecification: data.openingHoursSpecification || [
             {
               '@type': 'OpeningHoursSpecification',
               dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
@@ -61,12 +70,17 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
               closes: '18:00',
             },
           ],
+          ...(data.areaServed && { areaServed: data.areaServed }),
+          ...(data.serviceArea && { serviceArea: data.serviceArea }),
         };
 
       case 'Service':
         return {
-          ...baseSchema,
+          '@context': 'https://schema.org',
+          '@type': 'Service',
           serviceType: data.serviceType || 'IT Support',
+          name: data.name || '',
+          description: data.description || '',
           areaServed: {
             '@type': 'Country',
             name: 'United Arab Emirates',
@@ -79,10 +93,11 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
 
       case 'Article':
         return {
-          ...baseSchema,
-          headline: data.headline,
-          datePublished: data.datePublished,
-          dateModified: data.dateModified || data.datePublished,
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: data.headline || '',
+          datePublished: data.datePublished || '',
+          dateModified: data.dateModified || data.datePublished || '',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',
@@ -99,19 +114,36 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
 
       case 'BreadcrumbList':
         return {
-          ...baseSchema,
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
           itemListElement: data.itemListElement || [],
         };
 
+      case 'FAQPage':
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: data.mainEntity || [],
+        };
+
       default:
-        return baseSchema;
+        return {
+          '@context': 'https://schema.org',
+          '@type': type,
+          ...data,
+        };
     }
   };
+
+  const schema = getSchema();
+  // Используем JSON.stringify без форматирования для консистентности
+  const jsonString = JSON.stringify(schema);
 
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(getSchema(), null, 2) }}
+      dangerouslySetInnerHTML={{ __html: jsonString }}
+      suppressHydrationWarning
     />
   );
 }

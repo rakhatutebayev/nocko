@@ -1,5 +1,3 @@
-'use client';
-
 import StructuredData from '@/components/seo/StructuredData';
 
 export default function LayoutScripts() {
@@ -20,6 +18,7 @@ export default function LayoutScripts() {
         type="LocalBusiness"
         data={{
           name: 'NOCKO Information Technology - IT Company in Dubai',
+          streetAddress: 'Office R20-42, Wavez Residence, Wadi Al Safa 2',
           addressLocality: 'Dubai',
           addressRegion: 'Dubai',
           addressCountry: 'AE',

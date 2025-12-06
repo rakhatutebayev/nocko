@@ -81,28 +81,38 @@ export default function Header({ menu }: HeaderProps) {
         !burgerRef.current.contains(e.target as Node) &&
         isMenuOpen
       ) {
-        setIsMenuOpen(false);
-        setActiveDropdown(null);
+        // Use setTimeout to avoid immediate closure when opening
+        setTimeout(() => {
+          setIsMenuOpen(false);
+          setActiveDropdown(null);
+        }, 0);
       }
     };
 
     document.addEventListener('keydown', handleEscape);
-    document.addEventListener('click', handleClickOutside);
+    // Use mousedown instead of click to avoid conflicts
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
       window.removeEventListener('resize', checkMobile);
       document.removeEventListener('keydown', handleEscape);
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isMenuOpen]);
 
   // Убрали обработку скролла, чтобы className не менялся до/во время гидратации
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    if (isMenuOpen) {
-      setActiveDropdown(null);
+  const toggleMenu = (e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
     }
+    setIsMenuOpen((prev) => {
+      if (prev) {
+        setActiveDropdown(null);
+      }
+      return !prev;
+    });
   };
 
   const closeMenu = () => {
@@ -174,6 +184,7 @@ export default function Header({ menu }: HeaderProps) {
               height={40}
               className="logo-white"
               priority
+              unoptimized
             />
             <Image
               src="/images/logo-black.svg"
@@ -182,6 +193,7 @@ export default function Header({ menu }: HeaderProps) {
               height={40}
               className="logo-black"
               priority
+              unoptimized
             />
           </Link>
 
@@ -190,6 +202,7 @@ export default function Header({ menu }: HeaderProps) {
             onItemClick={closeMenu}
             isMenuOpen={isMenuOpen}
             isMobile={isMobile}
+            navRef={navRef}
           />
         </div>
 
