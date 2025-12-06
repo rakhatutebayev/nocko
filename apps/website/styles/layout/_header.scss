@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1001; // Выше чем меню (999)
   height: 80px;
   background-color: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -224,7 +224,7 @@
       padding: 0; // remove default container padding so panel aligns to the left edge
       box-sizing: border-box;
       transition: max-height 0.3s ease;
-      z-index: 999;
+      z-index: 998; // Ниже header (1001)
       
       &.is-open {
         max-height: calc(100vh - 54px); // Full viewport height minus header
