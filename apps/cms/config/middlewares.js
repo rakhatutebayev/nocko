@@ -35,6 +35,8 @@ module.exports = [
         'http://localhost:3000',
         'http://localhost:3001',
         'https://nocko.com',
+        'https://www.nocko.com',
+        'https://cms.nocko.com',
         process.env.FRONTEND_URL || 'http://localhost:3000',
       ],
     },
