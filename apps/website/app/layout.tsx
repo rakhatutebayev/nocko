@@ -47,6 +47,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
+    // После получения кода верификации от GSC, добавьте его в .env:
+    // NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=ваш-код-верификации
+  },
   viewport: {
     width: 'device-width',
     initialScale: 1,
