@@ -141,7 +141,7 @@ export default function DubaiPage() {
     description: 'Leading IT company in Dubai providing IT support and solutions',
     url: `${baseUrl}/locations/dubai`,
     telephone: '+971542448888',
-    email: 'info@nocko.ae',
+    email: 'info@nocko.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Office R20-42, Wavez Residence, Wadi Al Safa 2',
