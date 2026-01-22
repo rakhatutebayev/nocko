@@ -43,7 +43,7 @@ const itSupportContent = {
       text: "IT problems don't wait for business hours. When something breaks, you need help immediately. Our 24/7 IT support team is always available to help resolve issues quickly. Fast response times with average 2 hours in Dubai and 4 hours across all Emirates. On-site engineers available 24/7.",
       link: '/articles/it-support-24-7',
       linkText: 'Learn more',
-      image: '/images/services/placeholder.svg',
+      image: '/images/services/it-support-24-7.png',
       imageAlt: '24/7 IT support services in UAE',
     },
     {
@@ -87,7 +87,7 @@ const itSupportContent = {
       text: 'We monitor your IT systems 24/7 to catch problems before they affect your business. Proactive maintenance keeps your systems running smoothly, prevents downtime, and ensures optimal performance. Regular updates, patches, and optimization keep everything working at peak efficiency.',
       link: '/articles/it-support-monitoring',
       linkText: 'Learn more',
-      image: '/images/services/placeholder.svg',
+      image: '/images/services/it-support-monitoring.png',
       imageAlt: 'Proactive IT monitoring and maintenance',
     },
     {
