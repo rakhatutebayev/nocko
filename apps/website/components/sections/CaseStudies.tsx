@@ -48,7 +48,7 @@ const defaultCaseStudies: CaseStudy[] = [
   },
   {
     id: 'projection',
-    title: 'How Projection Reduced IT Costs with Annual Maintenance Contract',
+    title: 'How Projection Improved IT Reliability with Annual Maintenance Contract',
     type: 'IT AMC',
     image: '/images/cases/amc.svg',
     alt: 'IT AMC case study',
@@ -123,6 +123,8 @@ export default function CaseStudies({
     </section>
   );
 }
+
+
 
 
 
