@@ -129,6 +129,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
+  // Static industry pages
+  const staticIndustryPages: MetadataRoute.Sitemap = [
+    'finance-banking',
+    'real-estate',
+    'healthcare',
+    'education',
+    'retail-hospitality',
+    'government',
+  ].map((slug) => ({
+    url: `${baseUrl}/industries/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
   // Dynamic pages from Strapi (fallback to static if Strapi unavailable)
   let dynamicPages: MetadataRoute.Sitemap = [];
 
@@ -152,6 +167,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...staticServicePages,
     ...staticCaseStudyPages,
     ...staticArticlePages,
+    ...staticIndustryPages,
     ...dynamicPages,
   ];
 }
