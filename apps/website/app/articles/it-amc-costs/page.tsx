@@ -3,6 +3,8 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import StructuredData from '@/components/seo/StructuredData';
+import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Predictable IT Costs with Annual Maintenance Contract | IT AMC Benefits UAE | NOCKO',
@@ -95,8 +97,31 @@ const articleData = {
 };
 
 export default function ITAMCCostsPage() {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
+
   return (
     <>
+      <StructuredData
+        type="Article"
+        data={{
+          headline: articleData.hero.title || 'Predictable IT Costs with Annual Maintenance Contract | IT AMC Benefits UAE | NOCKO',
+          description: 'Learn how IT Annual Maintenance Contract (AMC) provides fixed annual costs for IT maintenance and support. Predictable budgeting, no surprise expenses',
+          datePublished: '2026-01-20',
+          dateModified: '2026-01-23',
+          author: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${baseUrl}/images/logo-white.svg`,
+            },
+          },
+        }}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -111,6 +136,8 @@ export default function ITAMCCostsPage() {
     </>
   );
 }
+
+
 
 
 

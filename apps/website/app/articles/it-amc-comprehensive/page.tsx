@@ -3,6 +3,8 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import StructuredData from '@/components/seo/StructuredData';
+import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Comprehensive IT Maintenance and Support Services | IT AMC Coverage UAE | NOCKO',
@@ -96,8 +98,31 @@ const articleData = {
 };
 
 export default function ITAMCComprehensivePage() {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
+
   return (
     <>
+      <StructuredData
+        type="Article"
+        data={{
+          headline: articleData.hero.title || 'Comprehensive IT Maintenance and Support Services | IT AMC Coverage UAE | NOCKO',
+          description: 'Complete IT maintenance and support services covered under IT Annual Maintenance Contract. Regular system checks, software updates, hardware maintenan',
+          datePublished: '2026-01-20',
+          dateModified: '2026-01-23',
+          author: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${baseUrl}/images/logo-white.svg`,
+            },
+          },
+        }}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -112,6 +137,8 @@ export default function ITAMCComprehensivePage() {
     </>
   );
 }
+
+
 
 
 

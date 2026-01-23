@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.scss";
 
@@ -52,12 +52,6 @@ export const metadata: Metadata = {
     // После получения кода верификации от GSC, добавьте его в .env:
     // NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=ваш-код-верификации
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-    viewportFit: 'cover', // Support for iPhone X+ safe areas
-  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
@@ -77,6 +71,13 @@ export const metadata: Metadata = {
       { url: "/favicon-96x96.png", sizes: "96x96" },
     ],
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: 'cover',
 };
 
 export default function RootLayout({

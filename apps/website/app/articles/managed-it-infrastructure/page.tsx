@@ -3,6 +3,8 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import StructuredData from '@/components/seo/StructuredData';
+import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Complete IT Infrastructure Management Services | Full IT Management UAE | NOCKO',
@@ -74,17 +76,46 @@ const articleData = {
 };
 
 export default function ManagedITInfrastructurePage() {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
+
   return (
     <>
+      <StructuredData
+        type="Article"
+        data={{
+          headline: articleData.hero.title || 'Complete IT Infrastructure Management Services | Full IT Management UAE | NOCKO',
+          description: 'Complete IT infrastructure management services for businesses in UAE. Full responsibility for network monitoring, system maintenance, security updates',
+          datePublished: '2026-01-20',
+          dateModified: '2026-01-23',
+          author: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${baseUrl}/images/logo-white.svg`,
+            },
+          },
+        }}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
           variant="article"
           title={articleData.hero.title}
           subtitle={articleData.hero.subtitle}
-          description={articleData.hero.description}
-        />
+          description={articleData.hero.description}        />
         <div className="container">
+          <Breadcrumbs
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Articles', href: '/articles' },
+              { label: 'Complete IT Infrastructure Management Services ' },
+            ]}
+          />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
@@ -94,6 +125,8 @@ export default function ManagedITInfrastructurePage() {
     </>
   );
 }
+
+
 
 
 

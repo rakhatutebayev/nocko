@@ -3,6 +3,8 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import StructuredData from '@/components/seo/StructuredData';
+import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Remote Support for Instant Problem Solving | IT Support UAE | NOCKO',
@@ -96,8 +98,31 @@ const articleData = {
 };
 
 export default function ITSupportRemotePage() {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
+
   return (
     <>
+      <StructuredData
+        type="Article"
+        data={{
+          headline: articleData.hero.title || 'Remote Support for Instant Problem Solving | IT Support UAE | NOCKO',
+          description: 'Remote IT support services for businesses in UAE. Secure remote access, fast problem resolution, and convenient support without on-site visits. Expert',
+          datePublished: '2026-01-20',
+          dateModified: '2026-01-23',
+          author: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${baseUrl}/images/logo-white.svg`,
+            },
+          },
+        }}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -112,6 +137,8 @@ export default function ITSupportRemotePage() {
     </>
   );
 }
+
+
 
 
 

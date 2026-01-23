@@ -3,6 +3,8 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import StructuredData from '@/components/seo/StructuredData';
+import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Hardware Maintenance and Repairs | IT AMC Services UAE | NOCKO',
@@ -96,8 +98,31 @@ const articleData = {
 };
 
 export default function ITAMCHardwarePage() {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
+
   return (
     <>
+      <StructuredData
+        type="Article"
+        data={{
+          headline: articleData.hero.title || 'Hardware Maintenance and Repairs | IT AMC Services UAE | NOCKO',
+          description: 'Hardware maintenance and repairs included in IT AMC. Equipment cleaning, part replacement, repairs, and lifecycle management to keep hardware reliable',
+          datePublished: '2026-01-20',
+          dateModified: '2026-01-23',
+          author: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${baseUrl}/images/logo-white.svg`,
+            },
+          },
+        }}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -112,6 +137,8 @@ export default function ITAMCHardwarePage() {
     </>
   );
 }
+
+
 
 
 

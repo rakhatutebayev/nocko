@@ -3,6 +3,8 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import StructuredData from '@/components/seo/StructuredData';
+import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Data Protection and Encryption | Data Security Services UAE | NOCKO',
@@ -72,17 +74,46 @@ const articleData = {
 };
 
 export default function CybersecurityDataProtectionPage() {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
+
   return (
     <>
+      <StructuredData
+        type="Article"
+        data={{
+          headline: articleData.hero.title || 'Data Protection and Encryption | Data Security Services UAE | NOCKO',
+          description: 'Advanced data protection and encryption services for businesses in UAE. Encrypt data at rest and in transit, implement access controls, and ensure dat',
+          datePublished: '2026-01-20',
+          dateModified: '2026-01-23',
+          author: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${baseUrl}/images/logo-white.svg`,
+            },
+          },
+        }}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
           variant="article"
           title={articleData.hero.title}
           subtitle={articleData.hero.subtitle}
-          description={articleData.hero.description}
-        />
+          description={articleData.hero.description}        />
         <div className="container">
+          <Breadcrumbs
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Articles', href: '/articles' },
+              { label: 'Data Protection and Encryption ' },
+            ]}
+          />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
