@@ -61,12 +61,12 @@ const staticMenu: Menu = {
         isDropdown: true,
         order: 2,
         submenu: [
-          { id: 8, label: 'Finance & Banking', url: '#', order: 1 },
-          { id: 9, label: 'Real Estate', url: '#', order: 2 },
-          { id: 10, label: 'Healthcare', url: '#', order: 3 },
-          { id: 11, label: 'Education', url: '#', order: 4 },
-          { id: 12, label: 'Retail & Hospitality', url: '#', order: 5 },
-          { id: 13, label: 'Government', url: '#', order: 6 },
+          { id: 8, label: 'Finance & Banking', url: '/industries/finance-banking', order: 1 },
+          { id: 9, label: 'Real Estate', url: '/industries/real-estate', order: 2 },
+          { id: 10, label: 'Healthcare', url: '/industries/healthcare', order: 3 },
+          { id: 11, label: 'Education', url: '/industries/education', order: 4 },
+          { id: 12, label: 'Retail & Hospitality', url: '/industries/retail-hospitality', order: 5 },
+          { id: 13, label: 'Government', url: '/industries/government', order: 6 },
         ],
       },
       {
