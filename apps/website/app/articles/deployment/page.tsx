@@ -77,7 +77,7 @@ export default function DeploymentArticlePage() {
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
-          variant="article"
+          variant="service-enhanced"
           title={articleData.hero.title}
           subtitle={articleData.hero.subtitle}
           description={articleData.hero.description}
