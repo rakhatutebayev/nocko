@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getServices, getCaseStudies, getPages, getArticles } from '@/lib/api/strapi';
+import { getPages } from '@/lib/api/strapi';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
@@ -46,35 +46,94 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${baseUrl}/locations/dubai`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.9, // Высокий приоритет для ключевого слова
+      priority: 0.9,
     },
   ];
 
-  // Dynamic pages from Strapi
+  // Static service pages
+  const staticServicePages: MetadataRoute.Sitemap = [
+    'cloud',
+    'cybersecurity',
+    'it-amc',
+    'it-consulting',
+    'it-support',
+    'managed-it',
+    'structured-cabling',
+  ].map((slug) => ({
+    url: `${baseUrl}/services/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  // Static case study pages
+  const staticCaseStudyPages: MetadataRoute.Sitemap = [
+    'projection',
+    'solus',
+    'fh',
+    'scalini',
+    'gss',
+    'technohub',
+  ].map((slug) => ({
+    url: `${baseUrl}/case-studies/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  // Static article pages
+  const staticArticlePages: MetadataRoute.Sitemap = [
+    'cloud-cost-optimization',
+    'cloud-data-management',
+    'cloud-infrastructure',
+    'cloud-migration',
+    'cloud-multi-hybrid',
+    'cloud-security-compliance',
+    'cybersecurity-compliance',
+    'cybersecurity-data-protection',
+    'cybersecurity-firewall',
+    'cybersecurity-incident-response',
+    'cybersecurity-monitoring',
+    'cybersecurity-protection',
+    'deployment',
+    'it-amc-comprehensive',
+    'it-amc-costs',
+    'it-amc-hardware',
+    'it-amc-maintenance-visits',
+    'it-amc-priority',
+    'it-amc-updates',
+    'it-consulting-assessment',
+    'it-consulting-digital-transformation',
+    'it-consulting-infrastructure-design',
+    'it-consulting-roadmap',
+    'it-consulting-roi',
+    'it-consulting-strategy',
+    'it-support-24-7',
+    'it-support-helpdesk',
+    'it-support-monitoring',
+    'it-support-onsite',
+    'it-support-optimization',
+    'it-support-remote',
+    'lifecycle',
+    'managed-it-backup',
+    'managed-it-cost',
+    'managed-it-infrastructure',
+    'managed-it-monitoring',
+    'managed-it-scalable',
+    'managed-it-security',
+    'performance',
+  ].map((slug) => ({
+    url: `${baseUrl}/articles/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  // Dynamic pages from Strapi (fallback to static if Strapi unavailable)
   let dynamicPages: MetadataRoute.Sitemap = [];
 
   try {
-    // Services
-    const services = await getServices();
-    const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
-      url: `${baseUrl}/services/${service.attributes.slug}`,
-      lastModified: service.attributes.updatedAt ? new Date(service.attributes.updatedAt) : new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    }));
-
-    // Case Studies
-    const caseStudies = await getCaseStudies();
-    const caseStudyPages: MetadataRoute.Sitemap = caseStudies.map((caseStudy) => ({
-      url: `${baseUrl}/case-studies/${caseStudy.attributes.slug}`,
-      lastModified: caseStudy.attributes.updatedAt
-        ? new Date(caseStudy.attributes.updatedAt)
-        : new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    }));
-
-    // Pages
+    // Pages (only dynamic pages, not services/case-studies/articles)
     const pages = await getPages();
     const pagePages: MetadataRoute.Sitemap = pages.map((page) => ({
       url: `${baseUrl}/${page.attributes.slug}`,
@@ -83,21 +142,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }));
 
-    // Articles
-    const articles = await getArticles(100); // Получаем все статьи
-    const articlePages: MetadataRoute.Sitemap = articles.map((article) => ({
-      url: `${baseUrl}/articles/${article.attributes.slug}`,
-      lastModified: article.attributes.updatedAt ? new Date(article.attributes.updatedAt) : new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    }));
-
-    dynamicPages = [...servicePages, ...caseStudyPages, ...pagePages, ...articlePages];
+    dynamicPages = [...pagePages];
   } catch (error) {
-    console.error('Error generating sitemap:', error);
+    console.error('Error generating sitemap from Strapi:', error);
   }
 
-  return [...staticPages, ...dynamicPages];
+  return [
+    ...staticPages,
+    ...staticServicePages,
+    ...staticCaseStudyPages,
+    ...staticArticlePages,
+    ...dynamicPages,
+  ];
 }
 
 

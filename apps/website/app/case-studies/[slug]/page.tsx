@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
+import StructuredData from '@/components/seo/StructuredData';
 import { getCaseStudy, getCaseStudies } from '@/lib/api/strapi';
 
 export const revalidate = 3600; // ISR: revalidate every hour
@@ -289,8 +290,31 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
     notFound();
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
+
   return (
     <>
+      <StructuredData
+        type="Article"
+        data={{
+          headline: caseStudy.attributes.title,
+          description: caseStudy.attributes.testimonial || caseStudy.attributes.challenge?.substring(0, 150),
+          datePublished: caseStudy.attributes.createdAt || new Date().toISOString(),
+          dateModified: caseStudy.attributes.updatedAt || caseStudy.attributes.createdAt || new Date().toISOString(),
+          author: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'NOCKO Information Technology',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${baseUrl}/images/logo-white.svg`,
+            },
+          },
+        }}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
