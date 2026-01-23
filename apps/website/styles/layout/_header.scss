@@ -388,6 +388,7 @@
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+        pointer-events: auto; // Enable clicks on dropdown items
         
         // On mobile/tablet, disable hover-to-open to avoid conflicts with tap toggle
         @include laptop {
