@@ -154,6 +154,28 @@ const getStrapiUrl = () => {
 const STRAPI_URL = getStrapiUrl();
 const API_TOKEN = process.env.STRAPI_API_TOKEN;
 
+// Avoid spamming logs when Strapi is intentionally unavailable (e.g. local dev without CMS,
+// or production build where CMS isn't reachable). We keep logs minimal and non-blocking.
+const strapiNetworkLogOnceKeys = new Set<string>();
+
+function logStrapiNetworkIssueOnce(endpoint: string) {
+  const key = `${STRAPI_URL}|${endpoint}`;
+  if (strapiNetworkLogOnceKeys.has(key)) return;
+  strapiNetworkLogOnceKeys.add(key);
+
+  const message = `Strapi is unreachable at ${STRAPI_URL}. Returning empty response for endpoint: ${endpoint}`;
+
+  // In development, show a warning once to help debugging.
+  // In production, stay silent unless explicitly enabled.
+  const allowProdLog = process.env.LOG_STRAPI_ERRORS === 'true' || process.env.NEXT_PUBLIC_LOG_STRAPI_ERRORS === 'true';
+  if (process.env.NODE_ENV === 'production') {
+    if (allowProdLog) console.warn(message);
+    return;
+  }
+
+  console.warn(message);
+}
+
 // Cache TTLs (in milliseconds)
 const CACHE_TTL = {
   SERVICES: 60 * 60 * 1000, // 1 hour
@@ -268,12 +290,14 @@ async function fetchAPIInternal<T>(
             return res.json();
           }
         } catch (fallbackError) {
-          console.error(`Fallback also failed: ${fallbackError}`);
+          // Don't spam console errors; fallback failure is expected when Strapi isn't running.
+          if (process.env.NODE_ENV !== 'production') {
+            console.warn(`Strapi fallback request also failed: ${fallbackError}`);
+          }
         }
       }
       
-      console.error(`Network error connecting to Strapi at ${STRAPI_URL}. Is Strapi running?`);
-      console.error(`Endpoint: ${endpoint}`);
+      logStrapiNetworkIssueOnce(endpoint);
       // Return empty data structure instead of crashing
       return { data: null, meta: {} } as StrapiResponse<T>;
     }
