@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useLayoutEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 interface Industry {
@@ -108,15 +108,25 @@ export default function Industries({
   industries = defaultIndustries,
 }: IndustriesProps) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const accordionRef = useRef<HTMLDivElement>(null);
-  const contentAreaRef = useRef<HTMLDivElement | null>(null);
-  const tabsListRef = useRef<HTMLDivElement | null>(null);
-  const desktopAppliedRef = useRef(false);
+  const [isMobileView, setIsMobileView] = useState<boolean>(false);
 
-  const isMobile = () => typeof window !== 'undefined' && window.innerWidth < 992;
+  if (!industries.length) return null;
+
+  // Track viewport mode so we can avoid rendering heavy images on mobile (<992px)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // IMPORTANT: must match CSS breakpoint in `_industries-tabs.scss` (desktop starts at 992px)
+    const mq = window.matchMedia('(max-width: 991px)');
+    const update = () => setIsMobileView(mq.matches);
+    update();
+
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
 
   const handleMobileToggle = (index: number, e: React.MouseEvent<HTMLButtonElement>) => {
-    if (!isMobile()) return;
+    if (!isMobileView) return;
     e.preventDefault();
     e.stopPropagation();
 
@@ -129,321 +139,13 @@ export default function Industries({
     }
   };
 
-  // Update active state when activeIndex changes
   useEffect(() => {
-    if (typeof window === 'undefined' || !accordionRef.current) return;
+    // Keep desktop always having a selected tab
+    if (!isMobileView && activeIndex < 0) setActiveIndex(0);
+  }, [activeIndex, isMobileView]);
 
-    const accordionRoot = accordionRef.current;
-    const items = Array.from(accordionRoot.querySelectorAll('.accordion-item'));
-    if (!items.length) return;
-
-    const PREFERS_REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const EASING = 'cubic-bezier(0.4, 0, 0.2, 1)';
-    const OPEN_DUR = 0.45;
-    const CLOSE_DUR = 0.75;
-    const dur = (type: 'open' | 'close') => (PREFERS_REDUCED_MOTION.matches ? 0 : (type === 'open' ? OPEN_DUR : CLOSE_DUR));
-
-    const updateActiveState = (idx: number) => {
-      items.forEach((it, i) => {
-        const header = it.querySelector('.accordion-item__header') as HTMLElement | null;
-        const content = it.querySelector('.accordion-item__content') as HTMLElement | null;
-        const isActive = i === idx && idx >= 0;
-        const wasActive = it.classList.contains('active');
-        
-        it.classList.toggle('active', isActive);
-        if (header) {
-          header.classList.toggle('active', isActive);
-          header.setAttribute('aria-expanded', String(isActive));
-        }
-        if (content) {
-          content.classList.toggle('active', isActive);
-          content.setAttribute('aria-hidden', String(!isActive));
-          
-          // Mobile animation
-          if (isMobile()) {
-            // Ensure initial state for closed items
-            if (!isActive && !wasActive) {
-              content.style.height = '0px';
-              content.style.paddingTop = '0';
-              content.style.paddingBottom = '0';
-              content.style.overflow = 'hidden';
-            }
-            
-            if (isActive && !wasActive) {
-              // Opening animation (exactly like static version)
-              content.style.transition = `height ${dur('open')}s ${EASING}, padding ${dur('open')}s ${EASING}`;
-              content.style.height = '0px';
-              content.style.paddingTop = '20px';
-              content.style.paddingBottom = '20px';
-              void content.offsetHeight; // reflow
-              content.style.height = content.scrollHeight + 'px';
-              const openEnd = (e: TransitionEvent) => {
-                if (e.propertyName === 'height') {
-                  // Clean up inline height so responsive changes work
-                  content.style.removeProperty('height');
-                  content.style.removeProperty('transition');
-                  content.removeEventListener('transitionend', openEnd as EventListener);
-                }
-              };
-              content.addEventListener('transitionend', openEnd as EventListener);
-            } else if (!isActive && wasActive) {
-              // Closing animation (exactly like static version)
-              const currentHeight = content.scrollHeight;
-              content.style.transition = `height ${dur('close')}s ${EASING}, padding ${dur('close')}s ${EASING}`;
-              content.style.height = currentHeight + 'px';
-              void content.offsetHeight; // reflow
-              content.style.height = '0px';
-              content.style.paddingTop = '0';
-              content.style.paddingBottom = '0';
-              const closeEnd = (e: TransitionEvent) => {
-                if (e.propertyName === 'height') {
-                  content.classList.remove('active');
-                  content.removeEventListener('transitionend', closeEnd as EventListener);
-                  content.style.removeProperty('height');
-                  content.style.removeProperty('padding-top');
-                  content.style.removeProperty('padding-bottom');
-                  content.style.removeProperty('transition');
-                }
-              };
-              content.addEventListener('transitionend', closeEnd as EventListener);
-            } else if (isActive && wasActive) {
-              // Already open, ensure it's visible
-              content.style.height = 'auto';
-              content.style.overflow = 'visible';
-              content.style.paddingTop = '16px';
-              content.style.paddingBottom = '16px';
-              content.style.display = 'block';
-            }
-          }
-        }
-      });
-
-      // Update desktop image and text areas (only if desktop setup is done)
-      if (desktopAppliedRef.current && contentAreaRef.current && !isMobile()) {
-        const imageArea = contentAreaRef.current.querySelector('.industries-tabs__image-area');
-        const textArea = contentAreaRef.current.querySelector('.industries-tabs__text-area');
-        
-        if (imageArea) {
-          const images = Array.from(imageArea.querySelectorAll('.tab-content__image'));
-          images.forEach((img, i) => {
-            (img as HTMLElement).style.display = i === idx ? 'block' : 'none';
-          });
-        }
-        
-        if (textArea) {
-          const texts = Array.from(textArea.querySelectorAll('.tab-content__text'));
-          texts.forEach((text, i) => {
-            (text as HTMLElement).style.display = i === idx ? 'block' : 'none';
-          });
-        }
-      }
-
-      if (tabsListRef.current) {
-        const clones = Array.from(tabsListRef.current.querySelectorAll('.industries-tabs__tab-clone')) as HTMLElement[];
-        clones.forEach((btn, i) => {
-          const isActive = i === idx;
-          btn.classList.toggle('active', isActive);
-          btn.setAttribute('aria-selected', String(isActive));
-          btn.tabIndex = isActive ? 0 : -1;
-        });
-      }
-    };
-
-    // Use setTimeout to ensure DOM is ready
-    setTimeout(() => {
-      updateActiveState(activeIndex);
-    }, 0);
-  }, [activeIndex]);
-
-  // Desktop setup logic (точно как в статической версии)
-  // Use useLayoutEffect to ensure DOM is ready before setup
-  useLayoutEffect(() => {
-    if (typeof window === 'undefined' || !accordionRef.current) return;
-
-    const accordionRoot = accordionRef.current;
-    const items = Array.from(accordionRoot.querySelectorAll('.accordion-item'));
-    if (!items.length) return;
-
-    const DESKTOP_MQ = window.matchMedia('(min-width: 769px)');
-    const PREFERS_REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-    const EASING = 'cubic-bezier(0.4, 0, 0.2, 1)';
-    const OPEN_DUR = 0.45;
-    const CLOSE_DUR = 0.75;
-    const dur = (type: 'open' | 'close') => (PREFERS_REDUCED_MOTION.matches ? 0 : (type === 'open' ? OPEN_DUR : CLOSE_DUR));
-
-    const setupDesktop = () => {
-      if (desktopAppliedRef.current) return;
-      desktopAppliedRef.current = true;
-
-      // Create containers: image area, text area, and tabs
-      const contentArea = document.createElement('div');
-      contentArea.className = 'industries-tabs__content-area';
-      contentAreaRef.current = contentArea;
-
-      const imageArea = document.createElement('div');
-      imageArea.className = 'industries-tabs__image-area';
-
-      const textArea = document.createElement('div');
-      textArea.className = 'industries-tabs__text-area';
-
-      const tabsList = document.createElement('div');
-      tabsList.className = 'industries-tabs__tabs';
-      tabsList.setAttribute('role', 'tablist');
-      tabsList.setAttribute('aria-orientation', 'vertical');
-      tabsListRef.current = tabsList;
-
-      // Insert containers
-      contentArea.appendChild(imageArea);
-      contentArea.appendChild(textArea);
-      accordionRoot.prepend(contentArea);
-      accordionRoot.appendChild(tabsList);
-
-      // Move images and texts into separate areas
-      items.forEach((it, i) => {
-        const imageDiv = it.querySelector('.tab-content__image');
-        const textDiv = it.querySelector('.tab-content__text');
-        if (imageDiv) {
-          (imageDiv as HTMLElement).style.display = i === activeIndex ? 'block' : 'none';
-          imageArea.appendChild(imageDiv);
-        }
-        if (textDiv) {
-          (textDiv as HTMLElement).style.display = i === activeIndex ? 'block' : 'none';
-          textArea.appendChild(textDiv);
-        }
-      });
-
-      // Build tabs list on the right
-      items.forEach((it, i) => {
-        const header = it.querySelector('.accordion-item__header');
-        const panel = it.querySelector('.accordion-item__content');
-        const clone = document.createElement('button');
-        clone.type = 'button';
-        clone.className = 'industries-tabs__tab-clone tab-button';
-        clone.innerHTML = header ? header.innerHTML : `Tab ${i + 1}`;
-        if (i === activeIndex) clone.classList.add('active');
-        clone.setAttribute('role', 'tab');
-        clone.setAttribute('aria-selected', i === activeIndex ? 'true' : 'false');
-        if (panel && panel.id) clone.setAttribute('aria-controls', panel.id);
-        clone.tabIndex = i === activeIndex ? 0 : -1;
-        clone.addEventListener('click', () => {
-          setActiveIndex(i);
-        });
-        tabsList.appendChild(clone);
-      });
-
-      // Keyboard navigation
-      const getClones = () => Array.from(tabsList.querySelectorAll('.industries-tabs__tab-clone')) as HTMLElement[];
-      const moveFocus = (newIndex: number) => {
-        const clones = getClones();
-        if (!clones.length) return;
-        const max = clones.length - 1;
-        const target = Math.min(Math.max(newIndex, 0), max);
-        clones.forEach((b, idx) => {
-          b.tabIndex = idx === target ? 0 : -1;
-        });
-        clones[target].focus();
-      };
-      tabsList.addEventListener('keydown', (e) => {
-        const clones = getClones();
-        if (!clones.length) return;
-        const current = clones.findIndex((b) => b === document.activeElement);
-        let handled = false;
-        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-          moveFocus((current + 1) % clones.length);
-          handled = true;
-        } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-          moveFocus((current - 1 + clones.length) % clones.length);
-          handled = true;
-        } else if (e.key === 'Home') {
-          moveFocus(0);
-          handled = true;
-        } else if (e.key === 'End') {
-          moveFocus(clones.length - 1);
-          handled = true;
-        } else if (e.key === 'Enter' || e.key === ' ') {
-          const idx = clones.findIndex((b) => b === document.activeElement);
-          if (idx >= 0) {
-            setActiveIndex(idx);
-          }
-          handled = true;
-        }
-        if (handled) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
-      });
-
-      // Update active state immediately after setup
-      // Use the already created imageArea and textArea variables
-      const images = Array.from(imageArea.querySelectorAll('.tab-content__image'));
-      images.forEach((img, i) => {
-        (img as HTMLElement).style.display = i === activeIndex ? 'block' : 'none';
-      });
-      
-      const texts = Array.from(textArea.querySelectorAll('.tab-content__text'));
-      texts.forEach((text, i) => {
-        (text as HTMLElement).style.display = i === activeIndex ? 'block' : 'none';
-      });
-    };
-
-    const teardownDesktop = () => {
-      if (!desktopAppliedRef.current) return;
-      desktopAppliedRef.current = false;
-
-      // Move images and texts back to their original items
-      if (contentAreaRef.current) {
-        const imageArea = contentAreaRef.current.querySelector('.industries-tabs__image-area');
-        const textArea = contentAreaRef.current.querySelector('.industries-tabs__text-area');
-        
-        if (imageArea && textArea) {
-          const images = Array.from(imageArea.querySelectorAll('.tab-content__image'));
-          const texts = Array.from(textArea.querySelectorAll('.tab-content__text'));
-          
-          items.forEach((it, i) => {
-            const content = it.querySelector('.accordion-item__content');
-            if (content && images[i]) {
-              content.insertBefore(images[i], content.firstChild);
-            }
-            if (content && texts[i]) {
-              content.appendChild(texts[i]);
-            }
-          });
-        }
-      }
-
-      // Remove helper containers
-      if (tabsListRef.current && tabsListRef.current.parentNode) {
-        tabsListRef.current.parentNode.removeChild(tabsListRef.current);
-      }
-      if (contentAreaRef.current && contentAreaRef.current.parentNode) {
-        contentAreaRef.current.parentNode.removeChild(contentAreaRef.current);
-      }
-
-      contentAreaRef.current = null;
-      tabsListRef.current = null;
-    };
-
-    // Mobile behavior will be handled by React onClick handlers
-    // No need to setup event listeners here
-
-    const handleResize = () => {
-      if (DESKTOP_MQ.matches) {
-        setupDesktop();
-      } else {
-        teardownDesktop();
-      }
-    };
-
-    // Initial setup
-    handleResize();
-    DESKTOP_MQ.addEventListener('change', handleResize);
-
-    return () => {
-      DESKTOP_MQ.removeEventListener('change', handleResize);
-      teardownDesktop();
-    };
-  }, [industries, activeIndex]);
+  const safeActiveIndex = Math.max(0, Math.min(activeIndex, industries.length - 1));
+  const activeIndustry = industries[safeActiveIndex];
 
   return (
     <section className="industries-tabs section" id="industries">
@@ -454,75 +156,133 @@ export default function Industries({
         </div>
 
         <div className="industries-tabs__wrapper">
-          <div className="industries-tabs__accordion" ref={accordionRef}>
-            {industries.map((industry, index) => {
-              const isExpanded = index === activeIndex;
-              const panelId = `industry-panel-${industry.id}`;
-              const buttonId = `industry-tab-${industry.id}`;
-
-              return (
+          <div className="industries-tabs__accordion">
+            {!isMobileView ? (
+              <>
                 <div
-                  key={industry.id}
-                  className={`accordion-item ${isExpanded ? 'active' : ''}`}
-                  data-tab={industry.id}
-                  itemScope
-                  itemType="https://schema.org/Service"
+                  className="industries-tabs__content-area"
+                  id="industry-panel-desktop"
+                  role="region"
+                  aria-live="polite"
                 >
-                  <button
-                    className={`accordion-item__header tab-button ${isExpanded ? 'active' : ''}`}
-                    id={buttonId}
-                    aria-controls={panelId}
-                    aria-expanded={isExpanded}
-                    onClick={(e) => handleMobileToggle(index, e)}
-                  >
-                    <span className="tab-button__text">
-                      {industry.name}
-                      <span className="visually-hidden"> IT in UAE</span>
-                    </span>
-                    <span className="tab-button__icon" aria-hidden="true">
-                      <Image
-                        src={industry.icon}
-                        alt={`${industry.name} IT Solutions Icon`}
-                        width={24}
-                        height={24}
-                      />
-                    </span>
-                  </button>
-                  <div
-                    className={`accordion-item__content tab-content ${isExpanded ? 'active' : ''}`}
-                    id={panelId}
-                    role="region"
-                    aria-labelledby={buttonId}
-                  >
+                  <div className="industries-tabs__image-area">
                     <div className="tab-content__image">
                       <Image
-                        src={industry.image}
-                        alt={`${industry.name} IT Solutions in Dubai, UAE - NOCKO`}
+                        src={activeIndustry.image}
+                        alt={`${activeIndustry.name} IT Solutions in Dubai, UAE - NOCKO`}
                         width={600}
                         height={400}
                         loading="lazy"
-                        itemProp="image"
-                      />
-                    </div>
-                    <div className="tab-content__text">
-                      <h3 itemProp="name">
-                        {industry.name}
-                        <span className="visually-hidden"> IT</span> Solutions
-                        <span className="visually-hidden"> in UAE</span>
-                      </h3>
-                      <p itemProp="description">{industry.description}</p>
-                      <p>{industry.fullDescription}</p>
-                      <meta itemProp="serviceType" content={industry.serviceType} />
-                      <meta itemProp="areaServed" content="United Arab Emirates" />
-                      <meta
-                        itemProp="provider"
-                        content="NOCKO Information Technology"
                       />
                     </div>
                   </div>
+
+                  <div className="industries-tabs__text-area">
+                    <div className="tab-content__text" itemScope itemType="https://schema.org/Service">
+                      <h3 itemProp="name">
+                        {activeIndustry.name}
+                        <span className="visually-hidden"> IT</span> Solutions
+                        <span className="visually-hidden"> in UAE</span>
+                      </h3>
+                      <p itemProp="description">{activeIndustry.description}</p>
+                      <p>{activeIndustry.fullDescription}</p>
+                      <meta itemProp="serviceType" content={activeIndustry.serviceType} />
+                      <meta itemProp="areaServed" content="United Arab Emirates" />
+                      <meta itemProp="provider" content="NOCKO Information Technology" />
+                    </div>
+                  </div>
                 </div>
-              );
-            })}
+
+                <div className="industries-tabs__tabs" role="tablist" aria-orientation="vertical">
+                  {industries.map((industry, index) => {
+                    const isActive = index === safeActiveIndex;
+                    return (
+                      <button
+                        key={industry.id}
+                        type="button"
+                        className={`industries-tabs__tab-clone tab-button ${isActive ? 'active' : ''}`}
+                        aria-selected={isActive}
+                        aria-controls="industry-panel-desktop"
+                        onClick={() => setActiveIndex(index)}
+                      >
+                        <span className="tab-button__text">
+                          {industry.name}
+                          <span className="visually-hidden"> IT in UAE</span>
+                        </span>
+                        <span className="tab-button__icon" aria-hidden="true">
+                          <Image
+                            src={industry.icon}
+                            alt={`${industry.name} IT Solutions Icon`}
+                            width={24}
+                            height={24}
+                          />
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </>
+            ) : (
+              <>
+                {industries.map((industry, index) => {
+                  const isExpanded = index === activeIndex;
+                  const panelId = `industry-panel-${industry.id}`;
+                  const buttonId = `industry-tab-${industry.id}`;
+
+                  return (
+                    <div
+                      key={industry.id}
+                      className={`accordion-item ${isExpanded ? 'active' : ''}`}
+                      data-tab={industry.id}
+                      itemScope
+                      itemType="https://schema.org/Service"
+                    >
+                      <button
+                        className={`accordion-item__header tab-button ${isExpanded ? 'active' : ''}`}
+                        id={buttonId}
+                        aria-controls={panelId}
+                        aria-expanded={isExpanded}
+                        onClick={(e) => handleMobileToggle(index, e)}
+                      >
+                        <span className="tab-button__text">
+                          {industry.name}
+                          <span className="visually-hidden"> IT in UAE</span>
+                        </span>
+                        <span className="tab-button__icon" aria-hidden="true">
+                          <Image
+                            src={industry.icon}
+                            alt={`${industry.name} IT Solutions Icon`}
+                            width={24}
+                            height={24}
+                          />
+                        </span>
+                      </button>
+
+                      <div
+                        className={`accordion-item__content tab-content ${isExpanded ? 'active' : ''}`}
+                        id={panelId}
+                        role="region"
+                        aria-labelledby={buttonId}
+                        aria-hidden={!isExpanded}
+                      >
+                        <div className="tab-content__text">
+                          <h3 itemProp="name">
+                            {industry.name}
+                            <span className="visually-hidden"> IT</span> Solutions
+                            <span className="visually-hidden"> in UAE</span>
+                          </h3>
+                          <p itemProp="description">{industry.description}</p>
+                          <p>{industry.fullDescription}</p>
+                          <meta itemProp="serviceType" content={industry.serviceType} />
+                          <meta itemProp="areaServed" content="United Arab Emirates" />
+                          <meta itemProp="provider" content="NOCKO Information Technology" />
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </>
+            )}
           </div>
         </div>
       </div>

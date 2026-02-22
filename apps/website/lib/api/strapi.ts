@@ -644,29 +644,18 @@ export async function submitContact(data: {
   recaptchaToken?: string;
 }): Promise<{ success: boolean; message?: string }> {
   try {
-    // Use the same logic as fetchAPI
-    const STRAPI_URL = typeof window === 'undefined' 
-      ? (process.env.STRAPI_INTERNAL_URL || process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337')
-      : (process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337');
-    
-    const url = `${STRAPI_URL}/api/contacts`;
-    
-    // Логирование для отладки
-    if (typeof window !== 'undefined') {
-      console.log('Submitting contact form:', data);
-    }
-    
-    const response = await fetch(url, {
+    const response = await fetch('/api/contact', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ data }),
     });
 
+    const responseData = await response.json().catch(() => ({}));
+
     if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      throw new Error(errorData.error?.message || `Failed to submit contact form: ${response.status}`);
+      throw new Error(
+        responseData.message || `Failed to submit: ${response.status}`
+      );
     }
 
     return { success: true };

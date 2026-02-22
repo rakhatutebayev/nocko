@@ -26,19 +26,22 @@ export default function ContactForm({
     setSubmitStatus('idle');
 
     try {
-      // TODO: Implement API call to submit form
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData),
-      // });
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data: formData }),
+      });
 
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Failed to send message');
+      }
 
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
+      console.error('Contact form error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -148,6 +151,8 @@ export default function ContactForm({
     </section>
   );
 }
+
+
 
 
 
