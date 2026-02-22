@@ -22,15 +22,23 @@ export default function ServiceCTA({
           <h2 className="service-cta__title">{title}</h2>
           <p className="service-cta__text">{text}</p>
           <div className="service-cta__buttons">
-            <Link href={ctaUrl} className="btn btn--primary btn--lg">
-              {ctaText}
-            </Link>
+            {ctaUrl.startsWith('#') ? (
+              <a href={ctaUrl} className="btn btn--primary btn--lg">
+                {ctaText}
+              </a>
+            ) : (
+              <Link href={ctaUrl} className="btn btn--primary btn--lg">
+                {ctaText}
+              </Link>
+            )}
           </div>
         </div>
       </div>
     </section>
   );
 }
+
+
 
 
 

@@ -141,22 +141,42 @@ export default function Hero({
             {(ctaPrimary || ctaSecondary) && (
               <div className="hero__cta-wrapper">
                 {ctaPrimary && (
-                  <Link
-                    href={ctaPrimary.href}
-                    className="btn btn--primary btn--hero"
-                    aria-label={ctaPrimary.text}
-                  >
-                    {ctaPrimary.text}
-                  </Link>
+                  ctaPrimary.href.startsWith('#') ? (
+                    <a
+                      href={ctaPrimary.href}
+                      className="btn btn--primary btn--hero"
+                      aria-label={ctaPrimary.text}
+                    >
+                      {ctaPrimary.text}
+                    </a>
+                  ) : (
+                    <Link
+                      href={ctaPrimary.href}
+                      className="btn btn--primary btn--hero"
+                      aria-label={ctaPrimary.text}
+                    >
+                      {ctaPrimary.text}
+                    </Link>
+                  )
                 )}
                 {ctaSecondary && (
-                  <Link
-                    href={ctaSecondary.href}
-                    className="btn btn--secondary btn--hero"
-                    aria-label={ctaSecondary.text}
-                  >
-                    {ctaSecondary.text}
-                  </Link>
+                  ctaSecondary.href.startsWith('#') ? (
+                    <a
+                      href={ctaSecondary.href}
+                      className="btn btn--secondary btn--hero"
+                      aria-label={ctaSecondary.text}
+                    >
+                      {ctaSecondary.text}
+                    </a>
+                  ) : (
+                    <Link
+                      href={ctaSecondary.href}
+                      className="btn btn--secondary btn--hero"
+                      aria-label={ctaSecondary.text}
+                    >
+                      {ctaSecondary.text}
+                    </Link>
+                  )
                 )}
               </div>
             )}

@@ -66,19 +66,19 @@ export default function Footer() {
             <h4 className="footer__nav-title">Quick Links</h4>
             <ul className="footer__menu">
               <li>
-                <Link href="#features">Why Choose Us</Link>
+                <a href="#features">Why Choose Us</a>
               </li>
               <li>
-                <Link href="#services">IT Services</Link>
+                <a href="#services">IT Services</a>
               </li>
               <li>
                 <Link href="/locations/dubai">IT Company in Dubai</Link>
               </li>
               <li>
-                <Link href="#clients">Our Clients</Link>
+                <a href="#clients">Our Clients</a>
               </li>
               <li>
-                <Link href="#contact">Contact Us</Link>
+                <a href="#contact">Contact Us</a>
               </li>
             </ul>
           </div>

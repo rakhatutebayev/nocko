@@ -81,7 +81,7 @@ export default function Clients({
               itemScope
               itemType="https://schema.org/Organization"
             >
-              <Link
+              <a
                 href="#clients"
                 className="client-logo__link"
                 aria-label={client.ariaLabel}
@@ -95,22 +95,30 @@ export default function Clients({
                   loading="lazy"
                 />
                 <meta itemProp="name" content={client.name} />
-              </Link>
+              </a>
             </div>
           ))}
         </div>
 
         {ctaText && (
           <div className="clients__cta">
-            <Link href={ctaHref} className="btn btn--primary">
-              {ctaText}
-            </Link>
+            {ctaHref.startsWith('#') ? (
+              <a href={ctaHref} className="btn btn--primary">
+                {ctaText}
+              </a>
+            ) : (
+              <Link href={ctaHref} className="btn btn--primary">
+                {ctaText}
+              </Link>
+            )}
           </div>
         )}
       </div>
     </section>
   );
 }
+
+
 
 
 
