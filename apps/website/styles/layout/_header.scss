@@ -565,6 +565,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    // Always use the "scrolled" CTA look (blue outline)
+    border-color: #3474ff;
+    color: #3474ff;
+    background-color: transparent;
     
     // На мобильных: стиль как при скролинге (синий вместо белого)
     @include laptop {
@@ -580,30 +584,14 @@
       visibility: visible;
       opacity: 1;
     }
-  }
-  
-  &.scrolled &__menu-cta {
-    border-color: #3474ff;
-    color: #3474ff;
-    
-    // На мобильных стиль уже установлен, не переопределяем
-    @include laptop {
-      border-color: #3474ff;
-      color: #3474ff;
-    }
-    
-    &:hover {
-      color: $color-white;
-      border-color: #3474ff;
-      background-color: #3474ff;
-    }
-    
+
+    &:hover,
     &:focus {
       color: $color-white;
       border-color: #3474ff;
       background-color: #3474ff;
     }
-    
+
     &:focus-visible {
       color: $color-white;
       border-color: #3474ff;
@@ -612,40 +600,44 @@
       outline-offset: 2px;
     }
   }
+
+  // IMPORTANT:
+  // `layout/_header.scss` is imported BEFORE `components/_buttons.scss` (see `app/globals.scss`),
+  // so generic `.btn--secondary` rules can override `.header__menu-cta`.
+  // This selector increases specificity to guarantee mobile "before scroll" colors.
+  @include laptop {
+    &:not(.scrolled) .header__menu-cta {
+      border-color: #3474ff;
+      color: #3474ff;
+    }
+  }
+  
+  // Keep this selector for compatibility, but CTA style is now the same always.
+  &.scrolled &__menu-cta {
+    border-color: #3474ff;
+    color: #3474ff;
+    background-color: transparent;
+  }
   
   // Когда модальное окно открыто - стили для hover
   &--modal-open &__menu-cta {
-    &:hover {
-      color: $color-white;
-      border-color: $color-white;
-      background-color: transparent;
-    }
-    
-    &:focus {
-      color: $color-white;
-      border-color: $color-white;
-      background-color: transparent;
-    }
-    
+    // Keep CTA look consistent even when modal is open
+    &:hover,
+    &:focus,
     &:focus-visible {
       color: $color-white;
-      border-color: $color-white;
-      background-color: transparent;
+      border-color: #3474ff;
+      background-color: #3474ff;
     }
   }
   
   // Комбинация: модальное окно открыто И скролл
   &--modal-open.scrolled &__menu-cta {
-    &:hover {
-      color: $color-white;
-      border-color: $color-white;
-      background-color: transparent;
-    }
-    
+    &:hover,
     &:focus {
       color: $color-white;
-      border-color: $color-white;
-      background-color: transparent;
+      border-color: #3474ff;
+      background-color: #3474ff;
     }
   }
   
