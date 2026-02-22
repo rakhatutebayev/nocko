@@ -338,15 +338,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               <p>{errorMessage || 'An error occurred. Please try again.'}</p>
             </div>
           )}
-          
-          <button
-            type="submit"
-            className="form__submit btn btn--primary"
-            disabled={isSubmitting || submitStatus === 'success'}
-          >
-            {isSubmitting ? 'Sending...' : submitStatus === 'success' ? 'Sent!' : 'Send Message'}
-          </button>
-          
+
           {/* Информация о защите формы (опционально, можно скрыть) */}
           {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
             <p className="form__privacy" style={{ fontSize: '0.75rem', color: '#666', marginTop: '0.5rem', textAlign: 'center' }}>
@@ -361,6 +353,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               {' '}apply.
             </p>
           )}
+
+          <button
+            type="submit"
+            className="form__submit btn btn--primary"
+            disabled={isSubmitting || submitStatus === 'success'}
+          >
+            {isSubmitting ? 'Sending...' : submitStatus === 'success' ? 'Sent!' : 'Send Message'}
+          </button>
         </form>
       </div>
     </div>

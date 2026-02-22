@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: clamp(12px, 2.5vw, 20px);
   animation: fadeIn 0.3s ease;
   
   &__overlay {
@@ -26,18 +26,24 @@
     position: relative;
     background: $color-white;
     border-radius: 4px;
-    padding: $spacing-xl;
+    padding: clamp($spacing-lg, 3vw, $spacing-xl);
     max-width: 600px;
     width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
+    max-height: min(720px, calc(100dvh - 24px));
+    overflow: hidden;
     z-index: 1;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     animation: slideUp 0.3s ease;
+    display: flex;
+    flex-direction: column;
     
     @media (max-width: $bp-mobile) {
-      padding: $spacing-lg;
-      max-height: 95vh;
+      padding: clamp($spacing-md, 4vw, $spacing-lg);
+      max-height: calc(100dvh - 16px);
+    }
+
+    @supports not (height: 100dvh) {
+      max-height: min(720px, calc(100vh - 24px));
     }
   }
   
@@ -82,7 +88,7 @@
   }
   
   &__title {
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 3.2vw, 2rem);
     font-weight: 700;
     color: $color-dark;
     margin-bottom: $spacing-sm;
@@ -99,6 +105,42 @@
     text-align: center;
     margin-bottom: $spacing-lg;
     line-height: 1.6;
+  }
+}
+
+// Make the form fit any viewport height:
+// - keep header visible
+// - scroll only the form body if needed
+// - keep submit button always visible (sticky)
+.contact-modal__content {
+  .form {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding-bottom: 16px;
+  }
+
+  .form__textarea {
+    // Shrink on small screens so the submit button stays visible
+    height: clamp(90px, 16vh, 160px);
+    min-height: 90px;
+    max-height: 240px;
+    resize: none;
+  }
+
+  .form__privacy {
+    margin-bottom: 10px;
+  }
+
+  .form__submit {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+  }
+}
+
+@media (max-height: 700px) {
+  .contact-modal__subtitle {
+    display: none;
   }
 }
 
