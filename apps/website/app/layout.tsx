@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.scss";
+import WhatsAppFloatingButton from "@/components/common/WhatsAppFloatingButton";
+import CookieConsent from "@/components/common/CookieConsent";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -96,6 +98,8 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <div id="root">
           {children}
+          <WhatsAppFloatingButton phoneE164Digits="971542448888" />
+          <CookieConsent />
         </div>
       </body>
     </html>
