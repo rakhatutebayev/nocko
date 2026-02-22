@@ -23,7 +23,16 @@ export default function ServiceCTA({
           <p className="service-cta__text">{text}</p>
           <div className="service-cta__buttons">
             {ctaUrl.startsWith('#') ? (
-              <a href={ctaUrl} className="btn btn--primary btn--lg">
+              <a
+                href={ctaUrl}
+                className="btn btn--primary btn--lg"
+                onClick={(e) => {
+                  if (ctaUrl === '#contact' && typeof window !== 'undefined') {
+                    e.preventDefault();
+                    window.dispatchEvent(new Event('nocko:open-contact'));
+                  }
+                }}
+              >
                 {ctaText}
               </a>
             ) : (

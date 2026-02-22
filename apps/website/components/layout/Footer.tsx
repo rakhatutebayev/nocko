@@ -78,7 +78,17 @@ export default function Footer() {
                 <a href="#clients">Our Clients</a>
               </li>
               <li>
-                <a href="#contact">Contact Us</a>
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    if (typeof window !== 'undefined') {
+                      e.preventDefault();
+                      window.dispatchEvent(new Event('nocko:open-contact'));
+                    }
+                  }}
+                >
+                  Contact Us
+                </a>
               </li>
             </ul>
           </div>

@@ -146,6 +146,12 @@ export default function Hero({
                       href={ctaPrimary.href}
                       className="btn btn--primary btn--hero"
                       aria-label={ctaPrimary.text}
+                      onClick={(e) => {
+                        if (ctaPrimary.href === '#contact' && typeof window !== 'undefined') {
+                          e.preventDefault();
+                          window.dispatchEvent(new Event('nocko:open-contact'));
+                        }
+                      }}
                     >
                       {ctaPrimary.text}
                     </a>
@@ -165,6 +171,12 @@ export default function Hero({
                       href={ctaSecondary.href}
                       className="btn btn--secondary btn--hero"
                       aria-label={ctaSecondary.text}
+                      onClick={(e) => {
+                        if (ctaSecondary.href === '#contact' && typeof window !== 'undefined') {
+                          e.preventDefault();
+                          window.dispatchEvent(new Event('nocko:open-contact'));
+                        }
+                      }}
                     >
                       {ctaSecondary.text}
                     </a>

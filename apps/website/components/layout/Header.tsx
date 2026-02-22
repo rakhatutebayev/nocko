@@ -52,6 +52,77 @@ export default function Header({ menu }: HeaderProps) {
   const burgerRef = useRef<HTMLButtonElement>(null);
   const headerRef = useRef<HTMLElement>(null);
 
+  // Make all "#contact" links work across the site:
+  // - If a real section with id="contact" exists on the page -> smooth scroll to it
+  // - Otherwise -> open the contact modal (used on most pages)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const openContact = () => {
+      const contactEl = document.getElementById('contact');
+      if (contactEl) {
+        contactEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        setIsContactModalOpen(true);
+      }
+    };
+
+    const handleContactAction = () => {
+      if (window.location.hash !== '#contact') return;
+
+      openContact();
+
+      // Remove hash to avoid re-triggering and to allow clicking the same link again
+      try {
+        window.history.replaceState(null, '', window.location.pathname + window.location.search);
+      } catch {
+        // ignore
+      }
+    };
+
+    const onHashChange = () => handleContactAction();
+    const onOpenContactEvent = () => openContact();
+
+    const onDocClickCapture = (e: MouseEvent) => {
+      const target = e.target as Element | null;
+      const anchor = target?.closest?.('a') as HTMLAnchorElement | null;
+      if (!anchor) return;
+
+      const rawHref = anchor.getAttribute('href') || '';
+      if (!rawHref) return;
+
+      let hash = '';
+      try {
+        hash = new URL(rawHref, window.location.href).hash;
+      } catch {
+        // Best effort for malformed href
+        if (rawHref.startsWith('#')) hash = rawHref;
+      }
+
+      if (hash !== '#contact') return;
+
+      const contactEl = document.getElementById('contact');
+
+      // If we don't have an actual contact section, prevent navigation and open modal.
+      if (!contactEl) {
+        e.preventDefault();
+        setIsContactModalOpen(true);
+      }
+    };
+
+    // Handle direct loads like "/#contact"
+    handleContactAction();
+
+    window.addEventListener('hashchange', onHashChange);
+    window.addEventListener('nocko:open-contact', onOpenContactEvent as EventListener);
+    document.addEventListener('click', onDocClickCapture, true);
+    return () => {
+      window.removeEventListener('hashchange', onHashChange);
+      window.removeEventListener('nocko:open-contact', onOpenContactEvent as EventListener);
+      document.removeEventListener('click', onDocClickCapture, true);
+    };
+  }, []);
+
   useEffect(() => {
     // Check if we're on client side
     if (typeof window === 'undefined') return;

@@ -103,7 +103,16 @@ export default function Clients({
         {ctaText && (
           <div className="clients__cta">
             {ctaHref.startsWith('#') ? (
-              <a href={ctaHref} className="btn btn--primary">
+              <a
+                href={ctaHref}
+                className="btn btn--primary"
+                onClick={(e) => {
+                  if (ctaHref === '#contact' && typeof window !== 'undefined') {
+                    e.preventDefault();
+                    window.dispatchEvent(new Event('nocko:open-contact'));
+                  }
+                }}
+              >
                 {ctaText}
               </a>
             ) : (
