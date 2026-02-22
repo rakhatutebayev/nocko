@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import ContactCtaLink from '@/components/common/ContactCtaLink';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -78,17 +79,7 @@ export default function Footer() {
                 <a href="#clients">Our Clients</a>
               </li>
               <li>
-                <a
-                  href="#contact"
-                  onClick={(e) => {
-                    if (typeof window !== 'undefined') {
-                      e.preventDefault();
-                      window.dispatchEvent(new Event('nocko:open-contact'));
-                    }
-                  }}
-                >
-                  Contact Us
-                </a>
+                <ContactCtaLink href="#contact">Contact Us</ContactCtaLink>
               </li>
             </ul>
           </div>

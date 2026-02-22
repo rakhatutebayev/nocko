@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import ContactCtaLink from '@/components/common/ContactCtaLink';
 
 interface HeroProps {
   title?: string;
@@ -142,19 +143,23 @@ export default function Hero({
               <div className="hero__cta-wrapper">
                 {ctaPrimary && (
                   ctaPrimary.href.startsWith('#') ? (
-                    <a
-                      href={ctaPrimary.href}
-                      className="btn btn--primary btn--hero"
-                      aria-label={ctaPrimary.text}
-                      onClick={(e) => {
-                        if (ctaPrimary.href === '#contact' && typeof window !== 'undefined') {
-                          e.preventDefault();
-                          window.dispatchEvent(new Event('nocko:open-contact'));
-                        }
-                      }}
-                    >
-                      {ctaPrimary.text}
-                    </a>
+                    ctaPrimary.href === '#contact' ? (
+                      <ContactCtaLink
+                        href={ctaPrimary.href}
+                        className="btn btn--primary btn--hero"
+                        ariaLabel={ctaPrimary.text}
+                      >
+                        {ctaPrimary.text}
+                      </ContactCtaLink>
+                    ) : (
+                      <a
+                        href={ctaPrimary.href}
+                        className="btn btn--primary btn--hero"
+                        aria-label={ctaPrimary.text}
+                      >
+                        {ctaPrimary.text}
+                      </a>
+                    )
                   ) : (
                     <Link
                       href={ctaPrimary.href}
@@ -167,19 +172,23 @@ export default function Hero({
                 )}
                 {ctaSecondary && (
                   ctaSecondary.href.startsWith('#') ? (
-                    <a
-                      href={ctaSecondary.href}
-                      className="btn btn--secondary btn--hero"
-                      aria-label={ctaSecondary.text}
-                      onClick={(e) => {
-                        if (ctaSecondary.href === '#contact' && typeof window !== 'undefined') {
-                          e.preventDefault();
-                          window.dispatchEvent(new Event('nocko:open-contact'));
-                        }
-                      }}
-                    >
-                      {ctaSecondary.text}
-                    </a>
+                    ctaSecondary.href === '#contact' ? (
+                      <ContactCtaLink
+                        href={ctaSecondary.href}
+                        className="btn btn--secondary btn--hero"
+                        ariaLabel={ctaSecondary.text}
+                      >
+                        {ctaSecondary.text}
+                      </ContactCtaLink>
+                    ) : (
+                      <a
+                        href={ctaSecondary.href}
+                        className="btn btn--secondary btn--hero"
+                        aria-label={ctaSecondary.text}
+                      >
+                        {ctaSecondary.text}
+                      </a>
+                    )
                   ) : (
                     <Link
                       href={ctaSecondary.href}
