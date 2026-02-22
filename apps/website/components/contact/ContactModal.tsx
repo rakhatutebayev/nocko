@@ -253,114 +253,139 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         </p>
         
         <form ref={formRef} className="form" onSubmit={handleSubmit} noValidate>
-          <div className="form__group">
-            <label htmlFor="modal-name" className="form__label">
-              Name *
-            </label>
-            <input
-              ref={firstInputRef}
-              type="text"
-              id="modal-name"
-              name="name"
-              className="form__input"
-              required
-              aria-required="true"
-              autoComplete="name"
-            />
-            <span className="form__error" role="alert"></span>
-          </div>
-          
-          <div className="form__group">
-            <label htmlFor="modal-email" className="form__label">
-              Email *
-            </label>
-            <input
-              type="email"
-              id="modal-email"
-              name="email"
-              className="form__input"
-              required
-              aria-required="true"
-              autoComplete="email"
-            />
-            <span className="form__error" role="alert"></span>
-          </div>
-          
-          <div className="form__group">
-            <label htmlFor="modal-phone" className="form__label">
-              Phone
-            </label>
-            <input
-              type="tel"
-              id="modal-phone"
-              name="phone"
-              className="form__input"
-              autoComplete="tel"
-            />
-            <span className="form__error" role="alert"></span>
-          </div>
-          
-          <div className="form__group">
-            <label htmlFor="modal-message" className="form__label">
-              Message *
-            </label>
-            <textarea
-              id="modal-message"
-              name="message"
-              className="form__textarea"
-              rows={5}
-              required
-              aria-required="true"
-            ></textarea>
-            <span className="form__error" role="alert"></span>
-          </div>
-          
-          {/* Honeypot field - скрытое поле для защиты от спама */}
-          <div style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }} aria-hidden="true">
-            <label htmlFor="website-url">Website URL (leave blank)</label>
-            <input
-              type="text"
-              id="website-url"
-              name="website"
-              tabIndex={-1}
-              autoComplete="off"
-            />
-          </div>
-          
-          {submitStatus === 'success' && (
-            <div className="form__success" role="alert">
-              <p>Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+          <div className="contact-modal__body">
+            <div className="form__group">
+              <label htmlFor="modal-name" className="form__label">
+                Name *
+              </label>
+              <input
+                ref={firstInputRef}
+                type="text"
+                id="modal-name"
+                name="name"
+                className="form__input"
+                required
+                aria-required="true"
+                autoComplete="name"
+              />
+              <span className="form__error" role="alert"></span>
             </div>
-          )}
-          
-          {submitStatus === 'error' && (
-            <div className="form__error-message" role="alert">
-              <p>{errorMessage || 'An error occurred. Please try again.'}</p>
+
+            <div className="form__group">
+              <label htmlFor="modal-email" className="form__label">
+                Email *
+              </label>
+              <input
+                type="email"
+                id="modal-email"
+                name="email"
+                className="form__input"
+                required
+                aria-required="true"
+                autoComplete="email"
+              />
+              <span className="form__error" role="alert"></span>
             </div>
-          )}
 
-          {/* Информация о защите формы (опционально, можно скрыть) */}
-          {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
-            <p className="form__privacy" style={{ fontSize: '0.75rem', color: '#666', marginTop: '0.5rem', textAlign: 'center' }}>
-              This form is protected by reCAPTCHA and the Google{' '}
-              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
-                Privacy Policy
-              </a>
-              {' '}and{' '}
-              <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
-                Terms of Service
-              </a>
-              {' '}apply.
-            </p>
-          )}
+            <div className="form__group">
+              <label htmlFor="modal-phone" className="form__label">
+                Phone
+              </label>
+              <input
+                type="tel"
+                id="modal-phone"
+                name="phone"
+                className="form__input"
+                autoComplete="tel"
+              />
+              <span className="form__error" role="alert"></span>
+            </div>
 
-          <button
-            type="submit"
-            className="form__submit btn btn--primary"
-            disabled={isSubmitting || submitStatus === 'success'}
-          >
-            {isSubmitting ? 'Sending...' : submitStatus === 'success' ? 'Sent!' : 'Send Message'}
-          </button>
+            <div className="form__group">
+              <label htmlFor="modal-message" className="form__label">
+                Message *
+              </label>
+              <textarea
+                id="modal-message"
+                name="message"
+                className="form__textarea"
+                rows={5}
+                required
+                aria-required="true"
+              ></textarea>
+              <span className="form__error" role="alert"></span>
+            </div>
+
+            {/* Honeypot field - скрытое поле для защиты от спама */}
+            <div
+              style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}
+              aria-hidden="true"
+            >
+              <label htmlFor="website-url">Website URL (leave blank)</label>
+              <input
+                type="text"
+                id="website-url"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+          </div>
+
+          <div className="contact-modal__footer">
+            {submitStatus === 'success' && (
+              <div className="form__success" role="alert">
+                <p>Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="form__error-message" role="alert">
+                <p>{errorMessage || 'An error occurred. Please try again.'}</p>
+              </div>
+            )}
+
+            {/* Информация о защите формы (опционально, можно скрыть) */}
+            {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
+              <p
+                className="form__privacy"
+                style={{
+                  fontSize: '0.75rem',
+                  color: '#666',
+                  marginTop: '0.5rem',
+                  textAlign: 'center',
+                }}
+              >
+                This form is protected by reCAPTCHA and the Google{' '}
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: 'inherit' }}
+                >
+                  Privacy Policy
+                </a>
+                {' '}and{' '}
+                <a
+                  href="https://policies.google.com/terms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: 'inherit' }}
+                >
+                  Terms of Service
+                </a>
+                {' '}apply.
+              </p>
+            )}
+
+            <button
+              type="submit"
+              className="form__submit btn btn--primary"
+              disabled={isSubmitting || submitStatus === 'success'}
+            >
+              {isSubmitting ? 'Sending...' : submitStatus === 'success' ? 'Sent!' : 'Send Message'}
+            </button>
+          </div>
         </form>
       </div>
     </div>

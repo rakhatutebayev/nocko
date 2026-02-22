@@ -115,8 +115,23 @@
 .contact-modal__content {
   .form {
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0; // allow children to shrink for overflow
+  }
+
+  .contact-modal__body {
+    flex: 1 1 auto;
     overflow-y: auto;
-    padding-bottom: 16px;
+    min-height: 0;
+    padding-right: 2px; // avoids scrollbar overlay on some browsers
+  }
+
+  .contact-modal__footer {
+    flex: 0 0 auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    background: $color-white;
   }
 
   .form__textarea {
@@ -132,9 +147,7 @@
   }
 
   .form__submit {
-    position: sticky;
-    bottom: 0;
-    z-index: 2;
+    width: 100%;
   }
 }
 
