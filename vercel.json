@@ -3,7 +3,7 @@
   "outputDirectory": "apps/website/.next",
   "installCommand": "npm install --prefer-offline --no-audit",
   "framework": "nextjs",
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- apps/website/ .vercelignore vercel.json",
+  "ignoreCommand": "git rev-parse HEAD^ >/dev/null 2>&1 && git diff --quiet HEAD^ HEAD -- apps/website/ .vercelignore vercel.json || exit 1",
   "rewrites": [
     {
       "source": "/sitemap.xml",
