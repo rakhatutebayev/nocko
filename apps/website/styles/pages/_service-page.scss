@@ -239,8 +239,8 @@
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  max-height: 323px; // Увеличено с 308px на 15px
-  min-height: 323px; // Увеличено с 308px на 15px
+  max-height: 345px;
+  min-height: 300px;
   padding: $spacing-xxl 0;
   padding-top: 120px; // Отступ для фиксированного header
   position: relative;
@@ -294,7 +294,8 @@
   }
   
   @include desktop {
-    padding-top: 140px; // Отступ для десктопного header (80px + отступ)
+    padding-top: 160px; // min-width: 1200px — отступ для фиксированного header
+    padding-bottom: 23px;
   }
   
   .hero__content {

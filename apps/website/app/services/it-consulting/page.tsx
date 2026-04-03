@@ -7,17 +7,18 @@ import ServiceFeatures from '@/components/services/ServiceFeatures';
 import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
+import ServiceGeo from '@/components/services/ServiceGeo';
 
 export const metadata: Metadata = {
-  title: 'IT Consulting Services in Dubai, UAE | IT Strategy & Planning | NOCKO',
+  title: 'IT Consulting Services in Dubai | #1 Technology Strategy UAE | NOCKO',
   description:
-    'IT consulting and strategy services for businesses across UAE. IT infrastructure planning, technology assessment, digital transformation, and IT strategy development. Expert IT consulting for business growth.',
+    'Strategic IT consulting services in Dubai and UAE. Technology assessment, digital transformation, and infrastructure planning for businesses. Expert IT advisors for DIFC, JLT and Business Bay.',
   keywords:
-    'IT consulting Dubai, IT strategy UAE, technology consulting, IT planning Dubai, digital transformation UAE, IT assessment',
+    'IT consulting Dubai, IT strategy UAE, technology consulting Dubai, IT planning UAE, digital transformation Dubai, IT assessment UAE, best IT consulting Dubai',
   openGraph: {
-    title: 'IT Consulting Services in Dubai, UAE | IT Strategy & Planning | NOCKO',
+    title: 'IT Consulting Services in Dubai | #1 Technology Strategy UAE | NOCKO',
     description:
-      'IT consulting and strategy services for businesses across UAE. IT infrastructure planning, technology assessment, digital transformation, and IT strategy development.',
+      'Expert IT strategy and technology consulting for businesses in Dubai and across the UAE. Drive growth through digital transformation.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
@@ -29,10 +30,10 @@ export const metadata: Metadata = {
 
 const itConsultingContent = {
   hero: {
-    title: 'IT Consulting Services',
-    subtitle: 'IT Strategy and Technology Consulting for Businesses in UAE',
+    title: 'IT Consulting Dubai | #1 Technology Strategy UAE',
+    subtitle: 'Expert IT Strategy & Digital Transformation for Businesses across UAE',
     description:
-      'IT consulting and strategy services for businesses across UAE. Expert IT infrastructure planning, technology assessment, digital transformation, and IT strategy development. Make informed technology decisions with expert guidance.',
+      'Make informed technology decisions with expert IT consulting. We provide strategic planning, technology assessments, and digital transformation for businesses in Dubai, Abu Dhabi, and across the UAE including DIFC and Business Bay.',
     serviceType: 'IT Consulting',
   },
   firstSection: [
@@ -123,6 +124,18 @@ const itConsultingContent = {
       text: 'Clear and transparent <br> communication',
     },
   ],
+  geoContent: {
+    emirates: [
+      { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'JLT', 'Silicon Oasis', 'Media City'] },
+      { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
+      { name: 'Sharjah', hubs: ['SAIF Zone'] },
+      { name: 'Ajman', hubs: [] },
+      { name: 'Fujairah', hubs: [] },
+      { name: 'Ras Al Khaimah', hubs: [] },
+      { name: 'Umm Al Quwain', hubs: [] }
+    ],
+    terms: ['IT Consulting Dubai', 'Technology Strategy UAE', 'IT Assessment Dubai', 'Digital Transformation'],
+  },
   resources: [
     {
       type: 'CASE STUDY',
@@ -193,6 +206,15 @@ export default function ITConsultingPage() {
         <ServiceFeatures features={itConsultingContent.features} />
         <ServiceContentEnhanced modifier="second" blocks={itConsultingContent.secondSection} />
         <ServiceBenefits benefits={itConsultingContent.benefits} />
+        
+        <ServiceGeo 
+          title="Strategic IT Guidance Across the Emirates"
+          description="From DIFC-based financial strategies to retail-focused digital transformations in Business Bay, NOCKO is the trusted IT advisor for UAE businesses."
+          emirates={itConsultingContent.geoContent.emirates}
+          terms={itConsultingContent.geoContent.terms}
+          footerNote="Expert Strategic Advice"
+        />
+
         <ServiceCTA
           title={itConsultingContent.cta.title}
           text={itConsultingContent.cta.text}

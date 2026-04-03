@@ -7,19 +7,20 @@ import ServiceFeatures from '@/components/services/ServiceFeatures';
 import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
+import ServiceGeo from '@/components/services/ServiceGeo';
 import ServiceFAQ from '@/components/services/ServiceFAQ';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Cloud & Data Services in Dubai, UAE | Cloud Migration & Data Management | NOCKO',
+  title: 'Cloud Services in Dubai | #1 Cloud Migration & Management UAE | NOCKO',
   description:
-    'Cloud migration and data management services for businesses across UAE. Cloud infrastructure setup, data migration, backup solutions, and cloud management. Secure and scalable cloud solutions.',
+    'Expert cloud services in Dubai and UAE. Cloud migration, infrastructure setup, data management, and secure backup solutions for businesses. Specialized in AWS, Azure, and private cloud for DIFC and Business Bay.',
   keywords:
-    'cloud services Dubai, cloud migration UAE, data management Dubai, cloud infrastructure UAE, cloud backup, cloud solutions',
+    'cloud services Dubai, cloud migration UAE, cloud hosting Dubai, data management UAE, cloud backup Dubai, managed cloud services Dubai, cloud infrastructure UAE',
   openGraph: {
-    title: 'Cloud & Data Services in Dubai, UAE | Cloud Migration & Data Management | NOCKO',
+    title: 'Cloud Services in Dubai | #1 Cloud Migration & Management UAE | NOCKO',
     description:
-      'Cloud migration and data management services for businesses across UAE. Cloud infrastructure setup, data migration, backup solutions, and cloud management.',
+      'Secure and scalable cloud solutions for businesses in Dubai and across the UAE. Expert cloud migration and infrastructure management.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
@@ -31,10 +32,10 @@ export const metadata: Metadata = {
 
 const cloudContent = {
   hero: {
-    title: 'Cloud & Data Services',
-    subtitle: 'Cloud Migration and Data Management Solutions for Businesses in UAE',
+    title: 'Cloud Services Dubai | #1 Cloud Migration UAE',
+    subtitle: 'Secure, Scalable Cloud Solutions for Modern Businesses across UAE',
     description:
-      'Cloud migration and data management services for businesses across UAE. Secure and scalable cloud infrastructure setup, data migration, backup solutions, and cloud management. Move to the cloud with confidence and manage your data effectively.',
+      'Migrate to the cloud with confidence. We provide expert cloud infrastructure, data management, and backup solutions for businesses in Dubai, Abu Dhabi, and across the UAE including DIFC and Business Bay.',
     serviceType: 'Cloud & Data Services',
   },
   firstSection: [
@@ -125,6 +126,18 @@ const cloudContent = {
       text: 'Clear and transparent <br> communication',
     },
   ],
+  geoContent: {
+    emirates: [
+      { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'JLT', 'Silicon Oasis', 'Media City'] },
+      { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
+      { name: 'Sharjah', hubs: ['SAIF Zone'] },
+      { name: 'Ajman', hubs: [] },
+      { name: 'Fujairah', hubs: [] },
+      { name: 'Ras Al Khaimah', hubs: [] },
+      { name: 'Umm Al Quwain', hubs: [] }
+    ],
+    terms: ['Cloud Services Dubai', 'Cloud Migration UAE', 'Data Management Dubai', 'Managed Cloud Solutions'],
+  },
   resources: [
     {
       type: 'CASE STUDY',
@@ -227,6 +240,15 @@ export default function CloudPage() {
         <ServiceFeatures features={cloudContent.features} />
         <ServiceContentEnhanced modifier="second" blocks={cloudContent.secondSection} />
         <ServiceBenefits benefits={cloudContent.benefits} />
+        
+        <ServiceGeo 
+          title="Cloud Infrastructure for UAE Business Hubs"
+          description="From cloud migration in DIFC to hybrid solutions in Abu Dhabi, NOCKO powers the digital transformation of Emirates-based businesses."
+          emirates={cloudContent.geoContent.emirates}
+          terms={cloudContent.geoContent.terms}
+          footerNote="Scale with NOCKO"
+        />
+
         <ServiceFAQ
           title={cloudContent.faq.title}
           items={cloudContent.faq.items}

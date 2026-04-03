@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+
 import Link from 'next/link';
-import Image from 'next/image';
 import ContactCtaLink from '@/components/common/ContactCtaLink';
 
 export default function Footer() {
@@ -11,12 +12,13 @@ export default function Footer() {
         <div className="footer__content">
           <div className="footer__brand">
             <Link href="/" className="footer__logo" itemProp="url">
-              <Image
+              <img
                 src="/images/logo-white.svg"
                 alt="NOCKO Information Technology - IT Support & Solutions in UAE"
                 width={120}
                 height={40}
                 itemProp="logo"
+                decoding="async"
               />
             </Link>
             <p className="footer__tagline" itemProp="description">

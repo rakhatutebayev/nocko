@@ -7,17 +7,18 @@ import ServiceFeatures from '@/components/services/ServiceFeatures';
 import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
+import ServiceGeo from '@/components/services/ServiceGeo';
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity Services in Dubai, UAE | Data Protection & Security | NOCKO',
+  title: 'Cybersecurity Services in Dubai | #1 Data Protection UAE | NOCKO',
   description:
-    'Enterprise cybersecurity and data protection services for businesses across UAE. Comprehensive security solutions including firewall management, threat detection, data encryption, and security compliance.',
+    'Advanced cybersecurity services in Dubai and UAE. Firewall management, threat detection, data encryption, and security compliance for businesses. Expert security solutions for DIFC, JLT and Business Bay.',
   keywords:
-    'cybersecurity Dubai, data protection UAE, IT security services, network security Dubai, security compliance UAE, threat detection',
+    'cybersecurity Dubai, data protection UAE, IT security services Dubai, network security UAE, security compliance Dubai, threat detection UAE, cybersecurity company Dubai',
   openGraph: {
-    title: 'Cybersecurity Services in Dubai, UAE | Data Protection & Security | NOCKO',
+    title: 'Cybersecurity Services in Dubai | #1 Data Protection UAE | NOCKO',
     description:
-      'Enterprise cybersecurity and data protection services for businesses across UAE. Comprehensive security solutions including firewall management, threat detection, and data encryption.',
+      'Enterprise cybersecurity and data protection for businesses in Dubai and across the UAE. Advanced threat detection and security compliance.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
@@ -29,10 +30,10 @@ export const metadata: Metadata = {
 
 const cybersecurityContent = {
   hero: {
-    title: 'Cybersecurity Services',
-    subtitle: 'Enterprise Data Protection and Security Solutions for Businesses in UAE',
+    title: 'Cybersecurity Dubai | #1 Data Protection UAE',
+    subtitle: 'Enterprise Security Solutions & Threat Detection for Businesses across UAE',
     description:
-      'Comprehensive cybersecurity and data protection services for businesses across UAE. Protect your business from cyber threats with advanced security solutions including firewall management, threat detection, data encryption, security monitoring, and compliance management.',
+      'Protect your business from cyber threats with advanced firewall management, threat detection, and data encryption. We provide comprehensive security compliance for businesses in Dubai, Abu Dhabi, and the UAE including DIFC and Business Bay.',
     serviceType: 'Cybersecurity',
   },
   firstSection: [
@@ -123,6 +124,18 @@ const cybersecurityContent = {
       text: 'Clear and transparent <br> communication',
     },
   ],
+  geoContent: {
+    emirates: [
+      { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'JLT', 'Silicon Oasis', 'Media City'] },
+      { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
+      { name: 'Sharjah', hubs: ['SAIF Zone'] },
+      { name: 'Ajman', hubs: [] },
+      { name: 'Fujairah', hubs: [] },
+      { name: 'Ras Al Khaimah', hubs: [] },
+      { name: 'Umm Al Quwain', hubs: [] }
+    ],
+    terms: ['Cybersecurity Dubai', 'Data Protection UAE', 'Network Security Dubai', 'Security Compliance'],
+  },
   resources: [
     {
       type: 'CASE STUDY',
@@ -193,6 +206,15 @@ export default function CybersecurityPage() {
         <ServiceFeatures features={cybersecurityContent.features} />
         <ServiceContentEnhanced modifier="second" blocks={cybersecurityContent.secondSection} />
         <ServiceBenefits benefits={cybersecurityContent.benefits} />
+        
+        <ServiceGeo 
+          title="Securing Businesses Throughout the Emirates"
+          description="From high-stakes finance in DIFC to multi-national HQs in Business Bay, NOCKO protects the digital assets of UAE enterprise."
+          emirates={cybersecurityContent.geoContent.emirates}
+          terms={cybersecurityContent.geoContent.terms}
+          footerNote="Enterprise Grade Security"
+        />
+
         <ServiceCTA
           title={cybersecurityContent.cta.title}
           text={cybersecurityContent.cta.text}

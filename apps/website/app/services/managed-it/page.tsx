@@ -7,17 +7,18 @@ import ServiceFeatures from '@/components/services/ServiceFeatures';
 import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
+import ServiceGeo from '@/components/services/ServiceGeo';
 
 export const metadata: Metadata = {
-  title: 'Managed IT Services in Dubai, UAE | Complete IT Management | NOCKO',
+  title: 'Managed IT Services in Dubai | #1 Complete IT Management UAE | NOCKO',
   description:
-    'Comprehensive managed IT services for businesses across UAE. Complete IT infrastructure management, monitoring, maintenance, and support. Proactive IT management to keep your business running smoothly.',
+    'Comprehensive managed IT services in Dubai and UAE. Complete IT infrastructure management, 24/7 monitoring, and proactive maintenance for businesses. Expert IT outsourcing for DIFC, JLT and Business Bay.',
   keywords:
-    'managed IT services Dubai, IT management UAE, managed IT infrastructure, IT outsourcing Dubai, complete IT management UAE',
+    'managed IT services Dubai, IT management UAE, managed IT infrastructure Dubai, IT outsourcing UAE, complete IT management Dubai, best managed IT UAE',
   openGraph: {
-    title: 'Managed IT Services in Dubai, UAE | Complete IT Management | NOCKO',
+    title: 'Managed IT Services in Dubai | #1 Complete IT Management UAE | NOCKO',
     description:
-      'Comprehensive managed IT services for businesses across UAE. Complete IT infrastructure management, monitoring, maintenance, and support.',
+      'Professional managed IT services and infrastructure management for businesses in Dubai and across the UAE. Proactive IT support and monitoring.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
@@ -29,10 +30,10 @@ export const metadata: Metadata = {
 
 const managedItContent = {
   hero: {
-    title: 'Managed IT Services',
-    subtitle: 'Complete IT Infrastructure Management for Businesses in UAE',
+    title: 'Managed IT Dubai | #1 Complete IT Management UAE',
+    subtitle: 'Proactive IT Infrastructure Management for Scaling Businesses across UAE',
     description:
-      'Comprehensive managed IT services for businesses across UAE. We handle all aspects of your IT infrastructure—monitoring, maintenance, support, and optimization—so you can focus on your business. Proactive management keeps your systems running smoothly and securely.',
+      'Get comprehensive managed IT solutions for your business in Dubai and across the UAE. We handle monitoring, maintenance, and expert support in DIFC, JLT, and Business Bay, so you can focus on what matters.',
     serviceType: 'Managed IT Services',
   },
   firstSection: [
@@ -123,6 +124,18 @@ const managedItContent = {
       text: 'Clear and transparent <br> communication',
     },
   ],
+  geoContent: {
+    emirates: [
+      { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'JLT', 'Silicon Oasis', 'Media City'] },
+      { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
+      { name: 'Sharjah', hubs: ['SAIF Zone'] },
+      { name: 'Ajman', hubs: [] },
+      { name: 'Fujairah', hubs: [] },
+      { name: 'Ras Al Khaimah', hubs: [] },
+      { name: 'Umm Al Quwain', hubs: [] }
+    ],
+    terms: ['Managed IT Services Dubai', 'IT Outsourcing UAE', 'Managed Infrastructure Dubai', '24/7 IT Management'],
+  },
   resources: [
     {
       type: 'CASE STUDY',
@@ -193,6 +206,15 @@ export default function ManagedITPage() {
         <ServiceFeatures features={managedItContent.features} />
         <ServiceContentEnhanced modifier="second" blocks={managedItContent.secondSection} />
         <ServiceBenefits benefits={managedItContent.benefits} />
+        
+        <ServiceGeo 
+          title="Serving Businesses Throughout the UAE"
+          description="NOCKO provides end-to-end managed IT services for corporate offices and enterprises in Dubai, Abu Dhabi, and the Northern Emirates."
+          emirates={managedItContent.geoContent.emirates}
+          terms={managedItContent.geoContent.terms}
+          footerNote="Scale with NOCKO"
+        />
+
         <ServiceCTA
           title={managedItContent.cta.title}
           text={managedItContent.cta.text}

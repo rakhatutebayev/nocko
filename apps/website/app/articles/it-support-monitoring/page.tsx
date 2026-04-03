@@ -32,7 +32,7 @@ const articleData = {
     description: '',
   },
   intro:
-    'We monitor your IT systems 24/7 to catch problems before they affect your business. Proactive maintenance keeps your systems running smoothly, prevents downtime, and ensures optimal performance. Regular updates, patches, and optimization keep everything working at peak efficiency.',
+    'We monitor your IT systems 24/7 to catch problems before they affect your business. Our <a href="/services/it-support" style="color: var(--color-primary); font-weight: 600;">IT support Dubai</a> team provides proactive maintenance that keeps your systems running smoothly, prevents downtime, and ensures optimal performance. By implementing <a href="/services/it-support" style="color: var(--color-primary); font-weight: 600;">managed IT solutions</a>, regular updates, patches, and optimization keep everything working at peak efficiency in Dubai and across the UAE.',
   blocks: [
     {
       title: 'Why Proactive Monitoring Matters',

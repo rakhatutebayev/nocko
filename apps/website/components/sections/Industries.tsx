@@ -1,7 +1,8 @@
 'use client';
 
+/* eslint-disable @next/next/no-img-element -- local /public assets; avoids next/image hydration mismatch in this section */
+
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 
 interface Industry {
   id: string;
@@ -108,41 +109,33 @@ export default function Industries({
   industries = defaultIndustries,
 }: IndustriesProps) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [isMobileView, setIsMobileView] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Keep desktop always having a selected tab.
+    // Mobile branch may temporarily set -1 to collapse all items.
+    if (activeIndex < 0) {
+      const onResize = () => {
+        if (window.innerWidth >= 992) setActiveIndex(0);
+      };
+
+      onResize();
+      window.addEventListener('resize', onResize);
+      return () => window.removeEventListener('resize', onResize);
+    }
+  }, [activeIndex]);
 
   if (!industries.length) return null;
 
-  // Track viewport mode so we can avoid rendering heavy images on mobile (<992px)
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    // IMPORTANT: must match CSS breakpoint in `_industries-tabs.scss` (desktop starts at 992px)
-    const mq = window.matchMedia('(max-width: 991px)');
-    const update = () => setIsMobileView(mq.matches);
-    update();
-
-    mq.addEventListener('change', update);
-    return () => mq.removeEventListener('change', update);
-  }, []);
-
   const handleMobileToggle = (index: number, e: React.MouseEvent<HTMLButtonElement>) => {
-    if (!isMobileView) return;
     e.preventDefault();
     e.stopPropagation();
 
     if (activeIndex === index) {
-      // Close
       setActiveIndex(-1);
     } else {
-      // Open
       setActiveIndex(index);
     }
   };
-
-  useEffect(() => {
-    // Keep desktop always having a selected tab
-    if (!isMobileView && activeIndex < 0) setActiveIndex(0);
-  }, [activeIndex, isMobileView]);
 
   const safeActiveIndex = Math.max(0, Math.min(activeIndex, industries.length - 1));
   const activeIndustry = industries[safeActiveIndex];
@@ -157,72 +150,80 @@ export default function Industries({
 
         <div className="industries-tabs__wrapper">
           <div className="industries-tabs__accordion">
-            {!isMobileView ? (
-              <>
-                <div
-                  className="industries-tabs__content-area"
-                  id="industry-panel-desktop"
-                  role="region"
-                  aria-live="polite"
-                >
-                  <div className="industries-tabs__image-area">
-                    <div className="tab-content__image">
-                      <Image
-                        src={activeIndustry.image}
-                        alt={`${activeIndustry.name} IT Solutions in Dubai, UAE - NOCKO`}
-                        width={600}
-                        height={400}
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="industries-tabs__text-area">
-                    <div className="tab-content__text" itemScope itemType="https://schema.org/Service">
-                      <h3 itemProp="name">
-                        {activeIndustry.name}
-                        <span className="visually-hidden"> IT</span> Solutions
-                        <span className="visually-hidden"> in UAE</span>
-                      </h3>
-                      <p itemProp="description">{activeIndustry.description}</p>
-                      <p>{activeIndustry.fullDescription}</p>
-                      <meta itemProp="serviceType" content={activeIndustry.serviceType} />
-                      <meta itemProp="areaServed" content="United Arab Emirates" />
-                      <meta itemProp="provider" content="NOCKO Information Technology" />
-                    </div>
+            <div className="industries-tabs__desktop">
+              <div
+                className="industries-tabs__content-area"
+                id="industry-panel-desktop"
+                role="region"
+                aria-live="polite"
+              >
+                <div className="industries-tabs__image-area">
+                  <div className="tab-content__image">
+                    <img
+                      src={activeIndustry.image}
+                      alt={`${activeIndustry.name} IT Solutions in Dubai, UAE - NOCKO`}
+                      width={600}
+                      height={400}
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                 </div>
 
-                <div className="industries-tabs__tabs" role="tablist" aria-orientation="vertical">
-                  {industries.map((industry, index) => {
-                    const isActive = index === safeActiveIndex;
-                    return (
-                      <button
-                        key={industry.id}
-                        type="button"
-                        className={`industries-tabs__tab-clone tab-button ${isActive ? 'active' : ''}`}
-                        aria-selected={isActive}
-                        aria-controls="industry-panel-desktop"
-                        onClick={() => setActiveIndex(index)}
-                      >
-                        <span className="tab-button__text">
-                          {industry.name}
-                          <span className="visually-hidden"> IT in UAE</span>
-                        </span>
-                        <span className="tab-button__icon" aria-hidden="true">
-                          <Image
-                            src={industry.icon}
-                            alt={`${industry.name} IT Solutions Icon`}
-                            width={24}
-                            height={24}
-                          />
-                        </span>
-                      </button>
-                    );
-                  })}
+                <div className="industries-tabs__text-area">
+                  <div className="tab-content__text" itemScope itemType="https://schema.org/Service">
+                    <h3 itemProp="name">
+                      {activeIndustry.name}
+                      <span className="visually-hidden"> IT</span> Solutions
+                      <span className="visually-hidden"> in UAE</span>
+                    </h3>
+                    <p itemProp="description">{activeIndustry.description}</p>
+                    <p>{activeIndustry.fullDescription}</p>
+                    <span itemProp="serviceType" className="visually-hidden">
+                      {activeIndustry.serviceType}
+                    </span>
+                    <span itemProp="areaServed" className="visually-hidden">
+                      United Arab Emirates
+                    </span>
+                    <span itemProp="provider" className="visually-hidden">
+                      NOCKO Information Technology
+                    </span>
+                  </div>
                 </div>
-              </>
-            ) : (
+              </div>
+
+              <div className="industries-tabs__tabs" role="tablist" aria-orientation="vertical">
+                {industries.map((industry, index) => {
+                  const isActive = index === safeActiveIndex;
+                  return (
+                    <button
+                      key={industry.id}
+                      type="button"
+                      className={`industries-tabs__tab-clone tab-button ${isActive ? 'active' : ''}`}
+                      aria-selected={isActive}
+                      aria-controls="industry-panel-desktop"
+                      onClick={() => setActiveIndex(index)}
+                    >
+                      <span className="tab-button__text">
+                        {industry.name}
+                        <span className="visually-hidden"> IT in UAE</span>
+                      </span>
+                      <span className="tab-button__icon" aria-hidden="true">
+                        <img
+                          src={industry.icon}
+                          alt=""
+                          width={24}
+                          height={24}
+                          decoding="async"
+                        />
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="industries-tabs__mobile">
               <>
                 {industries.map((industry, index) => {
                   const isExpanded = index === activeIndex;
@@ -238,6 +239,7 @@ export default function Industries({
                       itemType="https://schema.org/Service"
                     >
                       <button
+                        type="button"
                         className={`accordion-item__header tab-button ${isExpanded ? 'active' : ''}`}
                         id={buttonId}
                         aria-controls={panelId}
@@ -249,11 +251,12 @@ export default function Industries({
                           <span className="visually-hidden"> IT in UAE</span>
                         </span>
                         <span className="tab-button__icon" aria-hidden="true">
-                          <Image
+                          <img
                             src={industry.icon}
-                            alt={`${industry.name} IT Solutions Icon`}
+                            alt=""
                             width={24}
                             height={24}
+                            decoding="async"
                           />
                         </span>
                       </button>
@@ -273,16 +276,22 @@ export default function Industries({
                           </h3>
                           <p itemProp="description">{industry.description}</p>
                           <p>{industry.fullDescription}</p>
-                          <meta itemProp="serviceType" content={industry.serviceType} />
-                          <meta itemProp="areaServed" content="United Arab Emirates" />
-                          <meta itemProp="provider" content="NOCKO Information Technology" />
+                          <span itemProp="serviceType" className="visually-hidden">
+                            {industry.serviceType}
+                          </span>
+                          <span itemProp="areaServed" className="visually-hidden">
+                            United Arab Emirates
+                          </span>
+                          <span itemProp="provider" className="visually-hidden">
+                            NOCKO Information Technology
+                          </span>
                         </div>
                       </div>
                     </div>
                   );
                 })}
               </>
-            )}
+            </div>
           </div>
         </div>
       </div>

@@ -54,6 +54,7 @@ export default function FAQAccordion({
                     className={`faq-accordion__item ${isOpen ? 'faq-accordion__item--open' : ''}`}
                   >
                     <button
+                      type="button"
                       className="faq-accordion__button"
                       onClick={() => toggleItem(index)}
                       aria-expanded={isOpen}

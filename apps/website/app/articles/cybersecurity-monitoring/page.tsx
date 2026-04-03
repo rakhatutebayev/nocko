@@ -32,7 +32,7 @@ const articleData = {
     description: '',
   },
   intro:
-    'Cyber threats can occur at any time, day or night. Without continuous monitoring, threats can go undetected until they cause significant damage. 24/7 security monitoring and threat detection means we watch your systems continuously, identify potential attacks early, and respond immediately to neutralize threats before they impact your business.',
+    'Cyber threats can occur at any time, day or night. Without continuous monitoring, threats can go undetected until they cause significant damage. Our <a href="/services/cybersecurity" style="color: var(--color-primary); font-weight: 600;">cybersecurity services Dubai</a> provide 24/7 monitoring and <a href="/services/cybersecurity" style="color: var(--color-primary); font-weight: 600;">threat detection UAE</a>, meaning we watch your systems continuously, identify potential attacks early, and respond immediately to neutralize threats before they impact your business.',
   blocks: [
     {
       title: 'How 24/7 Security Monitoring Works',

@@ -8,18 +8,19 @@ import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
 import ServiceFAQ from '@/components/services/ServiceFAQ';
+import ServiceGeo from '@/components/services/ServiceGeo';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Support & Helpdesk Services in Dubai, UAE | NOCKO',
+  title: '#1 IT Support Company in Dubai | 24/7 Managed IT Services UAE',
   description:
-    '24/7 IT support and helpdesk services for businesses across UAE. Fast response times, remote support, on-site visits, proactive monitoring, and maintenance. Expert IT professionals available 24/7.',
+    'Leading IT support company in Dubai providing 24/7 helpdesk, proactive maintenance, and managed IT services across UAE. Expert IT professionals available for on-site and remote support in DIFC, Business Bay, and JLT.',
   keywords:
-    'IT support Dubai, helpdesk services UAE, 24/7 IT support, remote IT support, IT maintenance UAE, technical support Dubai',
+    'IT support Dubai, IT support company Dubai, managed IT services UAE, 24/7 IT support, IT maintenance Dubai, technical support UAE, IT helpdesk Dubai',
   openGraph: {
-    title: 'IT Support & Helpdesk Services in Dubai, UAE | NOCKO',
+    title: '#1 IT Support Company in Dubai | 24/7 Managed IT Services UAE',
     description:
-      '24/7 IT support and helpdesk services for businesses across UAE. Fast response times, remote support, on-site visits.',
+      'Professional IT support and managed services for businesses in Dubai and across the UAE. 24/7 helpdesk and expert technical maintenance.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
@@ -31,10 +32,10 @@ export const metadata: Metadata = {
 
 const itSupportContent = {
   hero: {
-    title: 'IT Support & Helpdesk Services',
-    subtitle: '24/7 Technical Support and Maintenance for Businesses in UAE',
+    title: '#1 IT Support Company in Dubai | 24/7 Managed IT Services',
+    subtitle: 'Expert Technical Support & Maintenance for Businesses across UAE',
     description:
-      'Comprehensive IT support and helpdesk services for businesses across UAE. 24/7 monitoring, optimization, and proactive maintenance to keep your IT systems running smoothly. Includes helpdesk, remote support, and on-site visits.',
+      'Get professional IT support and helpdesk services for your business in Dubai, Abu Dhabi, and across the UAE. We provide 24/7 monitoring, remote assistance, and on-site visits to ensure your IT infrastructure stays reliable and secure in DIFC, Business Bay, and JLT.',
     serviceType: 'IT Support & Helpdesk',
   },
   firstSection: [
@@ -125,6 +126,18 @@ const itSupportContent = {
       text: 'Clear and transparent <br> communication',
     },
   ],
+  geoContent: {
+    emirates: [
+      { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'JLT', 'Silicon Oasis', 'Media City'] },
+      { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
+      { name: 'Sharjah', hubs: ['SAIF Zone', 'Al Majaz'] },
+      { name: 'Ajman', hubs: [] },
+      { name: 'Fujairah', hubs: [] },
+      { name: 'Ras Al Khaimah', hubs: [] },
+      { name: 'Umm Al Quwain', hubs: [] }
+    ],
+    terms: ['IT Support Dubai', 'AMC Dubai', 'Managed IT Services UAE', '24/7 Helpdesk Dubai'],
+  },
   resources: [
     {
       type: 'CASE STUDY',
@@ -232,6 +245,15 @@ export default function ITSupportPage() {
         <ServiceFeatures features={itSupportContent.features} />
         <ServiceContentEnhanced modifier="second" blocks={itSupportContent.secondSection} />
         <ServiceBenefits benefits={itSupportContent.benefits} />
+        
+        <ServiceGeo 
+          title="Serving Businesses Across the UAE"
+          description="From high-frequency financial hubs like DIFC to industrial zones, NOCKO provides managed IT support tailored to your location in Dubai, Abu Dhabi and all Emirates."
+          emirates={itSupportContent.geoContent.emirates}
+          terms={itSupportContent.geoContent.terms}
+          footerNote="Expert IT Solutions"
+        />
+
         <ServiceFAQ
           title={itSupportContent.faq.title}
           items={itSupportContent.faq.items}
@@ -248,4 +270,3 @@ export default function ITSupportPage() {
     </>
   );
 }
-

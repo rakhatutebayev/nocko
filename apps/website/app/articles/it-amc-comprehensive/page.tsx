@@ -32,7 +32,7 @@ const articleData = {
     description: '',
   },
   intro:
-    'Your IT infrastructure needs regular maintenance to stay reliable, secure, and efficient. Without proper maintenance, systems slow down, security vulnerabilities appear, hardware fails, and downtime increases. IT AMC provides comprehensive maintenance and support services that keep your IT infrastructure running smoothly all year long.',
+    'Your IT infrastructure needs regular maintenance to stay reliable, secure, and efficient. Without proper maintenance, systems slow down, security vulnerabilities appear, hardware fails, and downtime increases. Our <a href="/services/it-amc" style="color: var(--color-primary); font-weight: 600;">IT AMC Dubai</a> services provide comprehensive maintenance and support that keep your IT infrastructure running smoothly all year long. An Annual Maintenance Contract ensures your business stays productive without technical interruptions.',
   blocks: [
     {
       title: 'Why Comprehensive IT Maintenance Matters',

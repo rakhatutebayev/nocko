@@ -1,7 +1,7 @@
 // Animation tuning variables for tabs/accordion (top-level to avoid scope issues in mixins)
 $tabs-easing: cubic-bezier(0.4, 0, 0.2, 1);
 $tabs-open-duration: 0.45s;
-$tabs-close-duration: 0.75s; // used via JS overrides
+$tabs-close-duration: 0.75s;
 
 .industries-tabs {
   padding: 20px 0;
@@ -24,13 +24,35 @@ $tabs-close-duration: 0.75s; // used via JS overrides
     display: block;
   }
 
+  &__desktop {
+    display: none;
+
+    @media (min-width: 992px) {
+      display: grid;
+      grid-column: 1 / -1;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      align-items: flex-start;
+      column-gap: 40px;
+      width: 100%;
+    }
+  }
+
+  &__mobile {
+    display: block;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+
   // Accordion container
   &__accordion {
     @media (min-width: 992px) {
-      // Flex: left image + middle text + right tabs list
-      display: flex;
+      // Stable desktop layout: main content on the left, tabs on the right
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
       align-items: flex-start;
-      gap: 0; // Remove gap to use all available space
+      column-gap: 40px;
       width: 100%;
     }
     @media (max-width: 991px) {
@@ -41,8 +63,8 @@ $tabs-close-duration: 0.75s; // used via JS overrides
   // Desktop dedicated wrappers injected via JS
   &__content-area {
     @media (min-width: 992px) {
-      flex: 1 1 auto;
-      display: flex;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 40px;
       position: relative;
       min-width: 0; // Allow flex items to shrink
@@ -72,9 +94,9 @@ $tabs-close-duration: 0.75s; // used via JS overrides
     @media (min-width: 992px) {
       display: flex;
       flex-direction: column;
-      width: 28%;
-      flex-shrink: 0; // Prevent tabs from shrinking
-      margin-left: 40px; // Add margin instead of gap to separate from content
+      width: 100%;
+      min-width: 0;
+      margin-left: 0;
     }
   }
 
@@ -115,8 +137,8 @@ $tabs-close-duration: 0.75s; // used via JS overrides
 
 // Accordion Item
 .accordion-item {
-  // Mobile: full width with borders
-  @include mobile {
+  // Mobile/tablet accordion up to desktop breakpoint
+  @media (max-width: 991px) {
     // Переносим разделитель на сам заголовок, у item убираем
     border-bottom: none;
   }
@@ -189,21 +211,8 @@ $tabs-close-duration: 0.75s; // used via JS overrides
   }
 
   &__content {
-    // Mobile: collapsible accordion content
-    @media (max-width: 991px) {
-      height: 0;
-      overflow: hidden;
-      padding: 0; // start collapsed without padding
-      transition: height $tabs-open-duration $tabs-easing, padding $tabs-open-duration $tabs-easing;
-      will-change: height, padding;
+    // Mobile accordion animation lives on `.accordion-item__content.tab-content` (grid 0fr → 1fr).
 
-      &.active {
-        height: auto; // JS animates to explicit px, then we leave it auto after open
-        padding: 16px 0;
-      }
-    }
-
-    // Desktop: hidden by default, shown for active item inside content area
     @media (min-width: 992px) {
       display: none;
     }
@@ -296,8 +305,40 @@ $tabs-close-duration: 0.75s; // used via JS overrides
   }
 }
 
+// Mobile/tablet accordion: `height: 0` → `auto` cannot animate in CSS; use grid rows 0fr → 1fr.
+// (Overrides `.tab-content { display: contents }` from 769px so the panel keeps a real box.)
+@media (max-width: 991px) {
+  .accordion-item__content.tab-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows $tabs-open-duration $tabs-easing;
+    will-change: grid-template-rows;
+
+    &.active {
+      grid-template-rows: 1fr;
+    }
+
+    > .tab-content__text {
+      min-height: 0;
+      overflow: hidden;
+      flex: none;
+      padding-block: 0;
+      transition: padding-block $tabs-open-duration $tabs-easing;
+    }
+
+    &.active > .tab-content__text {
+      padding-block: 16px;
+    }
+  }
+}
+
 // Reduced motion: disable transitions for users preferring less animation
 @media (prefers-reduced-motion: reduce) {
+  .accordion-item__content.tab-content > .tab-content__text {
+    transition: none !important;
+  }
+
   .accordion-item__content {
     transition: none !important;
   }
@@ -312,42 +353,6 @@ $tabs-close-duration: 0.75s; // used via JS overrides
 @media (min-width: 992px) {
   /* Hide all tab contents by default on desktop */
   .accordion-item__content.tab-content { display: none; }
-  
-  /* Images and texts are moved to separate areas by JS */
-  .industries-tabs__image-area {
-    .tab-content__image {
-      display: none;
-      
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 0;
-        box-shadow: none;
-        object-fit: cover;
-        max-height: 500px;
-      }
-    }
-  }
-  
-  .industries-tabs__text-area {
-    .tab-content__text {
-      display: none;
-      
-      h3 {
-        font-size: 24px;
-        font-weight: 500;
-        margin-bottom: 16px;
-        color: var(--color-primary);
-      }
-
-      p {
-        font-size: 15px;
-        line-height: 1.5;
-        color: #555;
-        margin-bottom: 16px;
-      }
-    }
-  }
 }
 
 // Tab Button Styles
@@ -414,7 +419,7 @@ $tabs-close-duration: 0.75s; // used via JS overrides
 }
 
 // Mobile: apply same active visual style to original accordion headers
-@include mobile {
+@media (max-width: 991px) {
   .accordion-item.active .accordion-item__header.tab-button {
     // фон не меняется, остаётся тем же
     border-left: 3px solid #3474ff;

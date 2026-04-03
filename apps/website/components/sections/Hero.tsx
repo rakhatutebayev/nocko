@@ -70,7 +70,7 @@ export default function Hero({
           </div>
         </div>
         {/* Schema.org meta tags for Service */}
-        <meta itemProp="serviceType" content="Structured Cabling" />
+        <meta itemProp="serviceType" content={title || 'IT Service'} />
         <meta itemProp="areaServed" content="United Arab Emirates" />
         <meta itemProp="provider" content="NOCKO Information Technology" />
       </section>

@@ -7,17 +7,18 @@ import ServiceFeatures from '@/components/services/ServiceFeatures';
 import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
+import ServiceGeo from '@/components/services/ServiceGeo';
 
 export const metadata: Metadata = {
-  title: 'IT AMC Services in Dubai, UAE | Annual Maintenance Contract | NOCKO',
+  title: 'IT AMC Services in Dubai | #1 Annual Maintenance Contract UAE | NOCKO',
   description:
-    'IT Annual Maintenance Contract (AMC) services for businesses across UAE. Comprehensive IT maintenance, support, and management with fixed annual costs. Predictable IT expenses and reliable maintenance.',
+    'Reliable IT Annual Maintenance Contract (AMC) services in Dubai and across UAE. Fixed annual costs for IT maintenance, server management, and 24/7 support. Expert IT AMC provider for businesses in DIFC, JLT and Business Bay.',
   keywords:
-    'IT AMC Dubai, annual maintenance contract UAE, IT maintenance contract, AMC services Dubai, IT support contract UAE',
+    'IT AMC Dubai, annual maintenance contract UAE, IT maintenance contract Dubai, AMC services UAE, IT support contract Dubai, best IT AMC Dubai',
   openGraph: {
-    title: 'IT AMC Services in Dubai, UAE | Annual Maintenance Contract | NOCKO',
+    title: 'IT AMC Services in Dubai | #1 Annual Maintenance Contract UAE | NOCKO',
     description:
-      'IT Annual Maintenance Contract (AMC) services for businesses across UAE. Comprehensive IT maintenance, support, and management with fixed annual costs.',
+      'Predictable IT maintenance with Annual Maintenance Contract (AMC) in Dubai and UAE. Complete IT support and management with fixed annual costs.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
@@ -29,10 +30,10 @@ export const metadata: Metadata = {
 
 const itAmcContent = {
   hero: {
-    title: 'IT AMC Services',
-    subtitle: 'Annual Maintenance Contract for Complete IT Support in UAE',
+    title: 'IT AMC Services in Dubai | #1 Annual Maintenance Contract UAE',
+    subtitle: 'Complete IT Maintenance & Support with Fixed Annual Costs',
     description:
-      'IT Annual Maintenance Contract (AMC) services for businesses across UAE. Comprehensive IT maintenance, support, and management with fixed annual costs. Predictable IT expenses, reliable maintenance, and peace of mind knowing your IT infrastructure is professionally managed.',
+      'Get predictable IT maintenance with our Annual Maintenance Contract (AMC) for businesses in Dubai and across the UAE. We manage your servers, networks, and security so you can focus on growth in DIFC, Business Bay, and JLT.',
     serviceType: 'IT AMC',
   },
   firstSection: [
@@ -123,6 +124,18 @@ const itAmcContent = {
       text: 'Clear and transparent <br> communication',
     },
   ],
+  geoContent: {
+    emirates: [
+      { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'JLT', 'Silicon Oasis', 'Media City'] },
+      { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
+      { name: 'Sharjah', hubs: ['SAIF Zone', 'Al Khan'] },
+      { name: 'Ajman', hubs: [] },
+      { name: 'Fujairah', hubs: [] },
+      { name: 'Ras Al Khaimah', hubs: [] },
+      { name: 'Umm Al Quwain', hubs: [] }
+    ],
+    terms: ['IT AMC Dubai', 'Annual Maintenance Contract UAE', 'IT Maintenance Dubai', 'Managed IT Support'],
+  },
   resources: [
     {
       type: 'CASE STUDY',
@@ -194,6 +207,15 @@ export default function ITAMCPage() {
         <ServiceFeatures features={itAmcContent.features} />
         <ServiceContentEnhanced modifier="second" blocks={itAmcContent.secondSection} />
         <ServiceBenefits benefits={itAmcContent.benefits} />
+        
+        <ServiceGeo 
+          title="Leading IT AMC Provider in UAE"
+          description="From DIFC financial offices to Business Bay enterprises, our IT Annual Maintenance Contracts provide reliable support across Dubai, Abu Dhabi and the Northern Emirates."
+          emirates={itAmcContent.geoContent.emirates}
+          terms={itAmcContent.geoContent.terms}
+          footerNote="Corporate IT Excellence"
+        />
+
         <ServiceCTA
           title={itAmcContent.cta.title}
           text={itAmcContent.cta.text}
@@ -206,4 +228,3 @@ export default function ITAMCPage() {
     </>
   );
 }
-

@@ -7,17 +7,18 @@ import ServiceFeatures from '@/components/services/ServiceFeatures';
 import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
+import ServiceGeo from '@/components/services/ServiceGeo';
 
 export const metadata: Metadata = {
-  title: 'Structured Cabling Services in Dubai, UAE | NOCKO',
+  title: 'Structured Cabling Services in Dubai | #1 Network Infrastructure UAE | NOCKO',
   description:
-    'Professional structured cabling services in Dubai, UAE. Cat6/Cat6A and fiber optic installation, testing, and certification. Expert network infrastructure solutions for businesses.',
+    'Professional structured cabling services in Dubai, UAE. Expert Cat6, Cat6A and fiber optic installation, testing, and certification. Reliable network infrastructure for businesses in DIFC, JLT and Business Bay.',
   keywords:
-    'structured cabling Dubai, network cabling UAE, Cat6 installation, fiber optic cabling, network infrastructure Dubai',
+    'structured cabling Dubai, network cabling UAE, Cat6 installation Dubai, fiber optic cabling UAE, network infrastructure Dubai, data cabling Dubai',
   openGraph: {
-    title: 'Structured Cabling Services in Dubai, UAE | NOCKO',
+    title: 'Structured Cabling Services in Dubai | #1 Network Infrastructure UAE | NOCKO',
     description:
-      'Professional structured cabling services in Dubai, UAE. Cat6/Cat6A and fiber optic installation, testing, and certification.',
+      'Professional structured cabling and network infrastructure solutions in Dubai and UAE. Cat6/Cat6A and fiber optic certification.',
     type: 'website',
   },
   alternates: {
@@ -169,6 +170,19 @@ const relatedServices = [
   },
 ];
 
+const geoContent = {
+  emirates: [
+    { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'JLT', 'Silicon Oasis', 'Media City'] },
+    { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
+    { name: 'Sharjah', hubs: ['SAIF Zone', 'Hamriyah'] },
+    { name: 'Ajman', hubs: [] },
+    { name: 'Fujairah', hubs: [] },
+    { name: 'Ras Al Khaimah', hubs: [] },
+    { name: 'Umm Al Quwain', hubs: [] }
+  ],
+  terms: ['Structured Cabling Dubai', 'Network Cabling UAE', 'Fiber Optic Dubai', 'Data Center Cabling'],
+};
+
 export default function StructuredCablingPage() {
   return (
     <>
@@ -176,15 +190,24 @@ export default function StructuredCablingPage() {
       <main className="main" role="main">
         <Hero
           variant="service-enhanced"
-          title="Structured Cabling Services"
-          subtitle="Professional Network Infrastructure Solutions for Businesses in UAE"
-          description="Professional structured cabling services for businesses across UAE. Simplify network infrastructure deployment with reliable solutions that maximize performance, scalability, and compliance."
+          title="Structured Cabling Dubai | #1 Network Infrastructure UAE"
+          subtitle="Professional Cat6, Cat6A & Fiber Optic Installation for Businesses"
+          description="Get reliable structured cabling and network infrastructure solutions for your office in Dubai and across the UAE. We provide certified installation, testing, and lifecycle management in DIFC, JLT, and Business Bay."
         />
 
         <ServiceContentEnhanced blocks={firstSection} />
         <ServiceFeatures features={features} />
         <ServiceContentEnhanced modifier="second" blocks={secondSection} />
         <ServiceBenefits benefits={benefits} />
+        
+        <ServiceGeo 
+          title="Professional Network Cabling Across UAE"
+          description="NOCKO provides certified structured cabling services for corporate offices and data centers in Dubai, Abu Dhabi, Sharjah, and all Emirates."
+          emirates={geoContent.emirates}
+          terms={geoContent.terms}
+          footerNote="Certified Infrastructure"
+        />
+
         <ServiceCTA
           title="Ready to Upgrade Your Network Infrastructure?"
           text="Contact us for a free consultation and let's discuss your structured cabling needs."

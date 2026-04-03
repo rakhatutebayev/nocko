@@ -1,0 +1,162 @@
+// Service Geo-Locations Section Styles
+.service-geo {
+  background-color: #f8fbff;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: $spacing-xxl 0;
+
+  @include mobile {
+    padding: $spacing-xl 0;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: $spacing-sm;
+    color: $color-dark;
+  }
+
+  &__description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto $spacing-xl;
+    color: $color-gray;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-md;
+    margin-bottom: $spacing-xl;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__terms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $spacing-sm;
+    margin-top: $spacing-lg;
+    padding-top: $spacing-lg;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    color: $color-gray;
+    font-size: 0.9rem;
+    font-weight: 500;
+    
+    span {
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+      
+      &:hover {
+        opacity: 1;
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.geo-card {
+  background: $color-white;
+  border-radius: 12px;
+  padding: $spacing-md;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  // Accent line
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $color-primary;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  &__header {
+    margin-bottom: $spacing-sm;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__icon {
+    display: block;
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px;
+    min-height: 24px;
+    color: $color-primary;
+    flex-shrink: 0;
+  }
+
+  &__name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+    color: $color-dark;
+  }
+
+  &__hubs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-top: auto;
+    padding-top: $spacing-sm;
+  }
+
+  &__hub-tag {
+    display: inline-block !important;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    background: rgba($color-primary, 0.08);
+    color: $color-primary;
+    border-radius: 20px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $color-primary;
+      color: $color-white;
+    }
+  }
+
+  // Color variations
+  &:nth-child(2n) {
+    &::before { background: #583bec; }
+    .geo-card__hub-tag { background: rgba(#583bec, 0.06); color: #583bec; }
+    .geo-card__hub-tag:hover { background: #583bec; color: $color-white; }
+  }
+  
+  &:nth-child(3n) {
+    &::before { background: #11c979; }
+    .geo-card__hub-tag { background: rgba(#11c979, 0.06); color: #11c979; }
+    .geo-card__hub-tag:hover { background: #11c979; color: $color-white; }
+  }
+}

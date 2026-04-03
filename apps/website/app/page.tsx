@@ -5,13 +5,13 @@ import Hero from '@/components/sections/Hero';
 import Features from '@/components/sections/Features';
 import Services from '@/components/sections/Services';
 import Clients from '@/components/sections/Clients';
-import Industries from '@/components/sections/Industries';
+import IndustriesDynamic from '@/components/sections/IndustriesDynamic';
 import LayoutScripts from '@/app/layout-scripts';
 
 export const metadata: Metadata = {
-  title: 'IT Company in Dubai | IT Support & Solutions UAE | NOCKO',
+  title: '#1 IT Company in Dubai | Top IT Support & Solutions UAE | NOCKO',
   description:
-    'Leading IT company in Dubai providing IT support, network infrastructure, cloud solutions, and cybersecurity services. Expert IT company in Dubai serving businesses across UAE with 24/7 support.',
+    'Looking for the best IT company in Dubai? NOCKO provides top-rated IT support, network infrastructure, cloud solutions, and 24/7 technical services for businesses across the UAE including Abu Dhabi and Sharjah.',
   keywords: [
     'it company in dubai',
     'IT company Dubai',
@@ -50,7 +50,7 @@ export default function HomePage() {
         <Features />
         <Services />
         <Clients />
-        <Industries />
+        <IndustriesDynamic />
       </main>
       <Footer />
     </>
