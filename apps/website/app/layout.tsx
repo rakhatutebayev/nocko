@@ -73,12 +73,6 @@ export const metadata: Metadata = {
       { url: "/favicon-96x96.png", sizes: "96x96" },
     ],
   },
-  alternates: {
-    languages: {
-      'en-AE': '/',
-      'ru-RU': '/services/it-support-ru',
-    },
-  },
 };
 
 export const viewport: Viewport = {
