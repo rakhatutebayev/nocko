@@ -107,8 +107,8 @@ export default function ITAMCComprehensivePage() {
         data={{
           headline: articleData.hero.title || 'Comprehensive IT Maintenance and Support Services | IT AMC Coverage UAE | NOCKO',
           description: 'Complete IT maintenance and support services covered under IT Annual Maintenance Contract. Regular system checks, software updates, hardware maintenan',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-08-31',
+          dateModified: '2025-08-31',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

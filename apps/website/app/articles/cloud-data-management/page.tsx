@@ -83,8 +83,8 @@ export default function CloudDataManagementPage() {
         data={{
           headline: articleData.hero.title || 'Data Management and Backup Solutions | Cloud Data Management UAE | NOCKO',
           description: 'Comprehensive data management and backup solutions for businesses in UAE. Automated backups, data archiving, disaster recovery, and data governance. P',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-06-08',
+          dateModified: '2025-06-08',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

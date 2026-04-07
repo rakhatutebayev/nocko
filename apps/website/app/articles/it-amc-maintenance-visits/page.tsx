@@ -107,8 +107,8 @@ export default function ITAMCMaintenanceVisitsPage() {
         data={{
           headline: articleData.hero.title || 'Regular IT Maintenance Visits and System Checks | IT AMC Services UAE | NOCKO',
           description: 'Regular maintenance visits and proactive system checks as part of IT AMC. Prevent problems before they occur, keep IT infrastructure reliable, and ens',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-09-21',
+          dateModified: '2025-09-21',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

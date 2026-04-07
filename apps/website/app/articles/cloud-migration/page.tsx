@@ -83,8 +83,8 @@ export default function CloudMigrationPage() {
         data={{
           headline: articleData.hero.title || 'Cloud Migration Services | Safe Cloud Migration UAE | NOCKO',
           description: 'Safe and efficient cloud migration services for businesses in UAE. Move to AWS, Azure, Google Cloud, or private cloud with zero downtime and zero data',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-06-22',
+          dateModified: '2025-06-22',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

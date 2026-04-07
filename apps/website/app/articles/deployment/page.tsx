@@ -83,8 +83,8 @@ export default function DeploymentArticlePage() {
         data={{
           headline: articleData.hero.title,
           description: metadata.description,
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-08-24',
+          dateModified: '2025-08-24',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

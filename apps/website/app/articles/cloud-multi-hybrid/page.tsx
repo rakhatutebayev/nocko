@@ -83,8 +83,8 @@ export default function CloudMultiHybridPage() {
         data={{
           headline: articleData.hero.title || 'Multi-Cloud and Hybrid Cloud Solutions | Multi-Cloud Architecture UAE | NOCKO',
           description: 'Multi-cloud and hybrid cloud solutions for businesses in UAE. Use multiple cloud providers or combine cloud with on-premises infrastructure for maximu',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-06-29',
+          dateModified: '2025-06-29',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

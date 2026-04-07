@@ -83,8 +83,8 @@ export default function ITConsultingDigitalTransformationPage() {
         data={{
           headline: articleData.hero.title || 'Digital Transformation Consulting | Digital Transformation UAE | NOCKO',
           description: 'Digital transformation consulting services for businesses in UAE. Navigate digital transformation with expert guidance. Modernize IT infrastructure, a',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-10-19',
+          dateModified: '2025-10-19',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

@@ -85,8 +85,8 @@ export default function ManagedITCostPage() {
         data={{
           headline: articleData.hero.title || 'Cost-Effective IT Management | Predictable IT Costs UAE | NOCKO',
           description: 'Cost-effective IT management services in UAE. Predictable costs, better value than in-house teams, enterprise-level IT management without overhead. Fi',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2026-01-18',
+          dateModified: '2026-01-18',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

@@ -83,8 +83,8 @@ export default function CloudInfrastructurePage() {
         data={{
           headline: articleData.hero.title || 'Cloud Infrastructure Setup and Management | Cloud Infrastructure UAE | NOCKO',
           description: 'Cloud infrastructure setup and management services in UAE. Design and deploy secure, scalable, and cost-effective cloud environments. Optimized cloud ',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-06-15',
+          dateModified: '2025-06-15',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

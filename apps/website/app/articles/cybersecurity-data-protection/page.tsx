@@ -83,8 +83,8 @@ export default function CybersecurityDataProtectionPage() {
         data={{
           headline: articleData.hero.title || 'Data Protection and Encryption | Data Security Services UAE | NOCKO',
           description: 'Advanced data protection and encryption services for businesses in UAE. Encrypt data at rest and in transit, implement access controls, and ensure dat',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-07-20',
+          dateModified: '2025-07-20',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

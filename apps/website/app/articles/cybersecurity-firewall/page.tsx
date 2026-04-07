@@ -83,8 +83,8 @@ export default function CybersecurityFirewallPage() {
         data={{
           headline: articleData.hero.title || 'Firewall Management and Network Security | Network Security Services UAE | NOCKO',
           description: 'Firewall management and network security services in UAE. Proper firewall configuration, network segmentation, and access controls protect your networ',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-07-27',
+          dateModified: '2025-07-27',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

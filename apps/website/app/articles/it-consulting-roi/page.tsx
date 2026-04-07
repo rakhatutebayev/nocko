@@ -83,8 +83,8 @@ export default function ITConsultingROIPage() {
         data={{
           headline: articleData.hero.title || 'Cost-Benefit Analysis and ROI Evaluation | IT ROI Analysis UAE | NOCKO',
           description: 'Cost-benefit analysis and ROI evaluation services for businesses in UAE. Evaluate technology investments with detailed analysis. Understand financial ',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-11-09',
+          dateModified: '2025-11-09',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

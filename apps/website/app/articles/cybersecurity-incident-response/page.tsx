@@ -83,8 +83,8 @@ export default function CybersecurityIncidentResponsePage() {
         data={{
           headline: articleData.hero.title || 'Incident Response and Security Recovery | Security Incident Response UAE | NOCKO',
           description: 'Incident response and security recovery services in UAE. Rapid response to contain threats and restore systems. Proven procedures to minimize damage, ',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-08-03',
+          dateModified: '2025-08-03',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

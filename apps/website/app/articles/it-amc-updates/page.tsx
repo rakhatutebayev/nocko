@@ -107,8 +107,8 @@ export default function ITAMCUpdatesPage() {
         data={{
           headline: articleData.hero.title || 'Software Updates and Security Patches | IT AMC Services UAE | NOCKO',
           description: 'Automatic software updates and security patches as part of IT AMC. Keep systems current, secure, and protected without managing updates yourself in Du',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-10-05',
+          dateModified: '2025-10-05',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

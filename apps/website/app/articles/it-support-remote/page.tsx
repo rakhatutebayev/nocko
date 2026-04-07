@@ -107,8 +107,8 @@ export default function ITSupportRemotePage() {
         data={{
           headline: articleData.hero.title || 'Remote Support for Instant Problem Solving | IT Support UAE | NOCKO',
           description: 'Remote IT support services for businesses in UAE. Secure remote access, fast problem resolution, and convenient support without on-site visits. Expert',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-12-28',
+          dateModified: '2025-12-28',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

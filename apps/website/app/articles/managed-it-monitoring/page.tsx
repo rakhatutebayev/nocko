@@ -85,8 +85,8 @@ export default function ManagedITMonitoringPage() {
         data={{
           headline: articleData.hero.title || 'Proactive IT Management and Monitoring | Continuous IT Monitoring UAE | NOCKO',
           description: 'Proactive IT management and continuous monitoring services in UAE. Catch issues before they become problems, fix things before they break, and optimiz',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2026-02-01',
+          dateModified: '2026-02-01',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

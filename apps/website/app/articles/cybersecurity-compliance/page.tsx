@@ -83,8 +83,8 @@ export default function CybersecurityCompliancePage() {
         data={{
           headline: articleData.hero.title || 'Security Compliance and Audit Management | Security Compliance UAE | NOCKO',
           description: 'Security compliance and audit management services in UAE. Meet security compliance requirements and pass security audits. From GDPR to industry-specif',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-07-13',
+          dateModified: '2025-07-13',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

@@ -83,8 +83,8 @@ export default function CybersecurityProtectionPage() {
         data={{
           headline: articleData.hero.title || 'Comprehensive Cybersecurity Protection | Multi-Layered Security UAE | NOCKO',
           description: 'Comprehensive cybersecurity protection services for businesses in UAE. Multi-layered security defenses including firewalls, antivirus, intrusion detec',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-08-17',
+          dateModified: '2025-08-17',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

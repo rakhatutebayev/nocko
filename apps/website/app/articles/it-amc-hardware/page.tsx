@@ -107,8 +107,8 @@ export default function ITAMCHardwarePage() {
         data={{
           headline: articleData.hero.title || 'Hardware Maintenance and Repairs | IT AMC Services UAE | NOCKO',
           description: 'Hardware maintenance and repairs included in IT AMC. Equipment cleaning, part replacement, repairs, and lifecycle management to keep hardware reliable',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-09-14',
+          dateModified: '2025-09-14',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

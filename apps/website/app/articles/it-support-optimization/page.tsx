@@ -107,8 +107,8 @@ export default function ITSupportOptimizationPage() {
         data={{
           headline: articleData.hero.title || 'IT System Optimization and Performance Tuning | IT Support UAE | NOCKO',
           description: 'IT system optimization and performance tuning services for businesses in UAE. Improve system performance, capacity planning, and ensure your IT infras',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-12-21',
+          dateModified: '2025-12-21',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

@@ -85,8 +85,8 @@ export default function ManagedITBackupPage() {
         data={{
           headline: articleData.hero.title || 'Backup and Disaster Recovery Management | Data Backup Services UAE | NOCKO',
           description: 'Comprehensive backup and disaster recovery management services in UAE. Automated backups, regular testing, recovery procedures, and quick system resto',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2026-01-11',
+          dateModified: '2026-01-11',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

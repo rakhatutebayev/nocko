@@ -83,8 +83,8 @@ export default function CloudCostOptimizationPage() {
         data={{
           headline: articleData.hero.title || 'Cloud Cost Optimization | Cloud Cost Management UAE | NOCKO',
           description: 'Cloud cost optimization services in UAE. Right-size resources, identify unused services, and implement cost-saving strategies. Reduce cloud expenses w',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-06-01',
+          dateModified: '2025-06-01',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

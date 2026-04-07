@@ -85,8 +85,8 @@ export default function ManagedITSecurityPage() {
         data={{
           headline: articleData.hero.title || 'Security Management and Compliance | IT Security Management UAE | NOCKO',
           description: 'Comprehensive IT security management and compliance services in UAE. Firewall management, antivirus updates, security patches, compliance monitoring, ',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2026-02-15',
+          dateModified: '2026-02-15',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

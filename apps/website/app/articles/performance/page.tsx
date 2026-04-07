@@ -83,8 +83,8 @@ export default function PerformanceArticlePage() {
         data={{
           headline: articleData.hero.title || 'Network Performance Optimization | Structured Cabling UAE | NOCKO',
           description: 'Improve network performance across UAE sites with structured cabling best practices, certified installation, and proactive optimization. Reduce latenc',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2026-02-22',
+          dateModified: '2026-02-22',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

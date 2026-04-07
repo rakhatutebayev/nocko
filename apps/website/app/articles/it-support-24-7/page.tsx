@@ -107,8 +107,8 @@ export default function ITSupport247Page() {
         data={{
           headline: articleData.hero.title || '24/7 IT Support When You Need It Most | IT Support Services UAE | NOCKO',
           description: '24/7 IT support services available around the clock for businesses in UAE. Fast response times, on-site engineers, and immediate help when IT problems',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-11-23',
+          dateModified: '2025-11-23',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

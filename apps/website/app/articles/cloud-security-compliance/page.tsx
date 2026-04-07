@@ -83,8 +83,8 @@ export default function CloudSecurityCompliancePage() {
         data={{
           headline: articleData.hero.title || 'Cloud Security and Compliance | Cloud Security Services UAE | NOCKO',
           description: 'Comprehensive cloud security and compliance services in UAE. Encryption, access controls, security monitoring, and compliance management. Ensure your ',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-07-06',
+          dateModified: '2025-07-06',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

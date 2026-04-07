@@ -107,8 +107,8 @@ export default function ITAMCPriorityPage() {
         data={{
           headline: articleData.hero.title || 'Priority IT Support and Faster Response Times | IT AMC Benefits UAE | NOCKO',
           description: 'IT AMC customers get priority support with faster response times. Dedicated support team, guaranteed response times, and priority access to IT profess',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-09-28',
+          dateModified: '2025-09-28',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

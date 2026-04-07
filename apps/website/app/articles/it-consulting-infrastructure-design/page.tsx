@@ -83,8 +83,8 @@ export default function ITConsultingInfrastructureDesignPage() {
         data={{
           headline: articleData.hero.title || 'IT Infrastructure Design and Architecture | IT Architecture UAE | NOCKO',
           description: 'IT infrastructure design and architecture services in UAE. Design optimal, scalable, secure, and efficient infrastructure architectures. Support curre',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-10-26',
+          dateModified: '2025-10-26',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

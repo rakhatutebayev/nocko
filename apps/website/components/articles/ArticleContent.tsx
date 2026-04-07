@@ -49,6 +49,25 @@ export default function ArticleContent({ intro, blocks }: ArticleContentProps) {
           </div>
         ))}
       </div>
+      
+      {/* Related Articles for SEO Interlinking */}
+      <div className="container" style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid #eaeaea' }}>
+        <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>Explore Core IT Services</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+          <a href="/articles/it-support-24-7" style={{ display: 'block', padding: '1.5rem', border: '1px solid #e2e8f0', borderRadius: '8px', textDecoration: 'none', color: 'inherit', transition: 'box-shadow 0.2s' }}>
+            <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>24/7 IT Support</h4>
+            <p style={{ fontSize: '0.875rem', color: '#64748b' }}>Technical support around the clock for businesses across UAE.</p>
+          </a>
+          <a href="/articles/cloud-migration" style={{ display: 'block', padding: '1.5rem', border: '1px solid #e2e8f0', borderRadius: '8px', textDecoration: 'none', color: 'inherit', transition: 'box-shadow 0.2s' }}>
+            <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>Cloud Migration</h4>
+            <p style={{ fontSize: '0.875rem', color: '#64748b' }}>Move to AWS, Azure, or Google Cloud with zero downtime.</p>
+          </a>
+          <a href="/articles/cybersecurity-protection" style={{ display: 'block', padding: '1.5rem', border: '1px solid #e2e8f0', borderRadius: '8px', textDecoration: 'none', color: 'inherit', transition: 'box-shadow 0.2s' }}>
+            <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>Cybersecurity</h4>
+            <p style={{ fontSize: '0.875rem', color: '#64748b' }}>Multi-layered defenses against ransomware and cyber threats.</p>
+          </a>
+        </div>
+      </div>
     </article>
   );
 }

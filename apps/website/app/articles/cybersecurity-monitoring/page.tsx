@@ -83,8 +83,8 @@ export default function CybersecurityMonitoringPage() {
         data={{
           headline: articleData.hero.title || '24/7 Security Monitoring and Threat Detection | Continuous Security Monitoring UAE | NOCKO',
           description: '24/7 security monitoring and threat detection services in UAE. Continuous monitoring for security threats and suspicious activity. Advanced threat det',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-08-10',
+          dateModified: '2025-08-10',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

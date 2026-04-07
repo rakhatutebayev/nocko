@@ -83,8 +83,8 @@ export default function LifecycleArticlePage() {
         data={{
           headline: articleData.hero.title || 'Network Lifecycle Management | Structured Cabling UAE | NOCKO',
           description: 'Maintain performance across the entire network lifecycle with proactive monitoring, preventive maintenance, and optimization for businesses in UAE.',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2026-01-04',
+          dateModified: '2026-01-04',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

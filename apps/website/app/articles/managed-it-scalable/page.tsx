@@ -85,8 +85,8 @@ export default function ManagedITScalablePage() {
         data={{
           headline: articleData.hero.title || 'Scalable IT Solutions That Grow With Your Business | IT Scalability UAE | NOCKO',
           description: 'Scalable IT solutions that grow with your business in UAE. Add capacity, expand infrastructure, and adapt to new requirements as your business grows. ',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2026-02-08',
+          dateModified: '2026-02-08',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

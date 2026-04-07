@@ -107,8 +107,8 @@ export default function ITSupportHelpdeskPage() {
         data={{
           headline: articleData.hero.title || 'Professional Helpdesk for Quick Issue Resolution | IT Support UAE | NOCKO',
           description: 'Professional IT helpdesk services for businesses in UAE. Fast issue resolution, clear communication, and efficient support processes. Expert helpdesk ',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-11-30',
+          dateModified: '2025-11-30',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

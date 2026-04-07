@@ -107,8 +107,8 @@ export default function ITSupportOnsitePage() {
         data={{
           headline: articleData.hero.title || 'On-Site Support When Remote Is Not Enough | IT Support UAE | NOCKO',
           description: 'On-site IT support services available 24/7 across all Emirates. Hardware installation, network troubleshooting, emergency repairs, and hands-on IT sup',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-12-14',
+          dateModified: '2025-12-14',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

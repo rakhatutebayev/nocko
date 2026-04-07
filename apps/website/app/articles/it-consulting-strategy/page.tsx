@@ -83,8 +83,8 @@ export default function ITConsultingStrategyPage() {
         data={{
           headline: articleData.hero.title || 'IT Strategy and Planning | IT Strategy Development UAE | NOCKO',
           description: 'IT strategy and planning services for businesses in UAE. Develop comprehensive IT strategies aligned with business goals. IT infrastructure analysis, ',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-11-16',
+          dateModified: '2025-11-16',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

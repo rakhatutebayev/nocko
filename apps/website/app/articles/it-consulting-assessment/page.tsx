@@ -83,8 +83,8 @@ export default function ITConsultingAssessmentPage() {
         data={{
           headline: articleData.hero.title || 'Technology Assessment and Evaluation | IT Assessment Services UAE | NOCKO',
           description: 'Technology assessment and evaluation services for businesses in UAE. Evaluate your technology stack, assess IT infrastructure, and identify improvemen',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-10-12',
+          dateModified: '2025-10-12',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

@@ -85,8 +85,8 @@ export default function ManagedITInfrastructurePage() {
         data={{
           headline: articleData.hero.title || 'Complete IT Infrastructure Management Services | Full IT Management UAE | NOCKO',
           description: 'Complete IT infrastructure management services for businesses in UAE. Full responsibility for network monitoring, system maintenance, security updates',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2026-01-25',
+          dateModified: '2026-01-25',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

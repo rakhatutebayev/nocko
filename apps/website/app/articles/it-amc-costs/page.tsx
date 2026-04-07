@@ -106,8 +106,8 @@ export default function ITAMCCostsPage() {
         data={{
           headline: articleData.hero.title || 'Predictable IT Costs with Annual Maintenance Contract | IT AMC Benefits UAE | NOCKO',
           description: 'Learn how IT Annual Maintenance Contract (AMC) provides fixed annual costs for IT maintenance and support. Predictable budgeting, no surprise expenses',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-09-07',
+          dateModified: '2025-09-07',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

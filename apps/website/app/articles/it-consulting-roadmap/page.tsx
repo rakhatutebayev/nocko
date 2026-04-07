@@ -83,8 +83,8 @@ export default function ITConsultingRoadmapPage() {
         data={{
           headline: articleData.hero.title || 'Implementation Roadmap and Project Planning | IT Project Planning UAE | NOCKO',
           description: 'Implementation roadmap and project planning services for businesses in UAE. Create detailed roadmaps for IT projects. Plan phases, timelines, resource',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-11-02',
+          dateModified: '2025-11-02',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

@@ -107,8 +107,8 @@ export default function ITSupportMonitoringPage() {
         data={{
           headline: articleData.hero.title || 'Proactive Monitoring and Maintenance | IT Support UAE | NOCKO',
           description: 'Proactive IT monitoring and maintenance services for businesses in UAE. 24/7 system monitoring, preventive maintenance, and issue prevention. Keep you',
-          datePublished: '2026-01-20',
-          dateModified: '2026-01-23',
+          datePublished: '2025-12-07',
+          dateModified: '2025-12-07',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',
