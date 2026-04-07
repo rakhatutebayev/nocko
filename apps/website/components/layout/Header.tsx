@@ -1,9 +1,8 @@
 'use client';
 
-/* eslint-disable @next/next/no-img-element */
-
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import MenuNavigation from './MenuNavigation';
 import ContactModal from '../contact/ContactModal';
 
@@ -249,23 +248,23 @@ export default function Header({ menu }: HeaderProps) {
 
         <div className="header__left">
           <Link href="/" className="header__logo">
-            <img
+            <Image
               src="/images/logo-white.svg"
               alt="NOCKO Information Technology"
               width={120}
               height={40}
               className="logo-white"
-              fetchPriority="high"
-              decoding="async"
+              priority
+              unoptimized
             />
-            <img
+            <Image
               src="/images/logo-black.svg"
               alt="NOCKO Information Technology"
               width={120}
               height={40}
               className="logo-black"
-              fetchPriority="high"
-              decoding="async"
+              priority
+              unoptimized
             />
           </Link>
 

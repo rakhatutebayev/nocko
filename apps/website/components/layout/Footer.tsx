@@ -107,6 +107,22 @@ export default function Footer() {
             </ul>
           </div>
 
+          <div className="footer__nav">
+            <h4 className="footer__nav-title">Languages</h4>
+            <ul className="footer__menu">
+              <li>
+                <Link href="/services/it-support-ru" className="footer__lang-link">
+                  Русский (RU)
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="footer__lang-link active">
+                  English (EN)
+                </Link>
+              </li>
+            </ul>
+          </div>
+
         </div>
 
         <div className="footer__bottom">

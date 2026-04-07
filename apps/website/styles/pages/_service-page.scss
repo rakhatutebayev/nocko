@@ -239,7 +239,6 @@
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  max-height: 345px;
   min-height: 300px;
   padding: $spacing-xxl 0;
   padding-top: 120px; // Отступ для фиксированного header
@@ -295,7 +294,7 @@
   
   @include desktop {
     padding-top: 160px; // min-width: 1200px — отступ для фиксированного header
-    padding-bottom: 23px;
+    padding-bottom: $spacing-xl; // Better bottom padding instead of a tight 23px
   }
   
   .hero__content {
@@ -304,13 +303,17 @@
     margin: 0 auto;
   }
   
-  .hero__title {
-    color: white;
-    font-size: 2.5rem;
-    margin-bottom: $spacing-md;
-    
-    @include mobile {
-      font-size: 1.75rem;
+  // `h1` raises specificity over global `_typography.scss` and `.hero__title` in `_hero.scss`
+  h1.hero__title {
+    color: #fff;
+    margin-bottom: 24px; // same as former $spacing-md (24px) — only font-size changed vs older 2.5rem
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 300;
+
+    @include laptop {
+      font-size: 1.75em;
+      line-height: 1.3;
     }
   }
   

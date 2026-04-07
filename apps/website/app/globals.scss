@@ -44,10 +44,10 @@
 @import '../styles/sections/contact';
 @import '../styles/sections/benefits';
 
-// Pages
-@import '../styles/pages/_service-page';
+// Pages (service page last so `.hero--service-enhanced` wins over other page SCSS)
 @import '../styles/pages/_article';
 @import '../styles/pages/_case-studies';
+@import '../styles/pages/_service-page';
 
 // Base styles
 * {

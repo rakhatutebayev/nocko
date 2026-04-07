@@ -42,7 +42,7 @@ const itAmcContent = {
       text: "IT AMC provides fixed annual costs for all your IT maintenance and support needs. No surprise expenses, no unexpected bills. You know exactly what you'll pay for IT maintenance each year, making budgeting easier and financial planning more predictable. One contract covers all your IT maintenance requirements.",
       link: '/articles/it-amc-costs',
       linkText: 'Learn more',
-      image: '/images/services/placeholder.svg',
+      image: '/images/services/it-amc-costs.png',
       imageAlt: 'IT AMC annual maintenance contract services',
     },
     {
@@ -86,7 +86,7 @@ const itAmcContent = {
       text: 'We schedule regular maintenance visits to check your systems, update software, clean equipment, and ensure everything is working properly. Proactive maintenance prevents problems before they occur, keeping your IT infrastructure reliable and your business running smoothly.',
       link: '/articles/it-amc-maintenance-visits',
       linkText: 'Learn more',
-      image: '/images/services/placeholder.svg',
+      image: '/images/services/it-amc-maintenance.png',
       imageAlt: 'Regular IT maintenance visits and system checks',
     },
     {

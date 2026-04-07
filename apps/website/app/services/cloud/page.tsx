@@ -44,7 +44,7 @@ const cloudContent = {
       text: "Move your business to the cloud safely and efficiently. We plan and execute cloud migrations carefully, ensuring minimal downtime and zero data loss. Whether you're moving to AWS, Azure, Google Cloud, or private cloud, we handle the entire migration process smoothly.",
       link: '/articles/cloud-migration',
       linkText: 'Learn more',
-      image: '/images/services/placeholder.svg',
+      image: '/images/services/cloud-migration-v2.png',
       imageAlt: 'Cloud migration services in UAE',
     },
     {
@@ -88,7 +88,7 @@ const cloudContent = {
       text: 'We support multi-cloud and hybrid cloud architectures. Use multiple cloud providers or combine cloud with on-premises infrastructure for maximum flexibility. We manage complex cloud environments, ensuring everything works together seamlessly.',
       link: '/articles/cloud-multi-hybrid',
       linkText: 'Learn more',
-      image: '/images/services/placeholder.svg',
+      image: '/images/services/cloud-hybrid-v2.png',
       imageAlt: 'Multi-cloud and hybrid cloud solutions',
     },
     {

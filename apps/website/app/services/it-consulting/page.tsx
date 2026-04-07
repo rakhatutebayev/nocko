@@ -42,7 +42,7 @@ const itConsultingContent = {
       text: 'Develop a comprehensive IT strategy aligned with your business goals. We analyze your current IT infrastructure, identify gaps, and create a strategic plan for technology adoption and optimization. Your IT strategy supports business growth and drives competitive advantage.',
       link: '/articles/it-consulting-strategy',
       linkText: 'Learn more',
-      image: '/images/services/placeholder.svg',
+      image: '/images/services/it-consulting-strategy-v2.png',
       imageAlt: 'IT strategy and planning services',
     },
     {
@@ -86,7 +86,7 @@ const itConsultingContent = {
       text: 'Design optimal IT infrastructure architecture for your business needs. We create scalable, secure, and efficient infrastructure designs that support current operations and future growth. Proper architecture ensures your IT infrastructure performs well and adapts to changing requirements.',
       link: '/articles/it-consulting-infrastructure-design',
       linkText: 'Learn more',
-      image: '/images/services/placeholder.svg',
+      image: '/images/services/it-consulting-architecture-v2.png',
       imageAlt: 'IT infrastructure design and architecture',
     },
     {

@@ -42,7 +42,7 @@ const cybersecurityContent = {
       text: 'Protect your business from cyber threats with comprehensive security solutions. We implement multi-layered security defenses including firewalls, antivirus, intrusion detection, and threat monitoring. Your systems stay protected from malware, ransomware, phishing attacks, and other cyber threats.',
       link: '/articles/cybersecurity-protection',
       linkText: 'Learn more',
-      image: '/images/services/placeholder.svg',
+      image: '/images/services/cybersecurity-protection.png',
       imageAlt: 'Comprehensive cybersecurity protection services',
     },
     {
@@ -86,7 +86,7 @@ const cybersecurityContent = {
       text: 'We manage your firewalls and network security infrastructure. Proper firewall configuration, network segmentation, and access controls protect your network from unauthorized access. Regular security updates and rule optimization keep your defenses strong and effective.',
       link: '/articles/cybersecurity-firewall',
       linkText: 'Learn more',
-      image: '/images/services/placeholder.svg',
+      image: '/images/services/cybersecurity-firewall.png',
       imageAlt: 'Firewall management and network security',
     },
     {

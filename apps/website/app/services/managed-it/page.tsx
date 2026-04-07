@@ -42,8 +42,8 @@ const managedItContent = {
       text: 'We take full responsibility for your IT infrastructure. From network monitoring to system maintenance, security updates to performance optimization, we handle everything. You get a dedicated IT team managing your systems 24/7, ensuring everything runs smoothly without you having to worry about it.',
       link: '/articles/managed-it-infrastructure',
       linkText: 'Learn more',
-      image: '/images/services/placeholder.svg',
-      imageAlt: 'Complete IT infrastructure management services',
+      image: '/images/services/managed-it-infrastructure.webp',
+      imageAlt: 'Managed IT infrastructure management services in UAE',
     },
     {
       title: 'Proactive IT Management and Monitoring',
@@ -86,8 +86,8 @@ const managedItContent = {
       text: "We manage your IT security comprehensively—firewall management, antivirus updates, security patches, and compliance monitoring. Regular security audits and vulnerability assessments ensure your systems stay protected. We handle security so you don't have to worry about threats.",
       link: '/articles/managed-it-security',
       linkText: 'Learn more',
-      image: '/images/services/placeholder.svg',
-      imageAlt: 'IT security management and compliance',
+      image: '/images/services/managed-it-security.webp',
+      imageAlt: 'Managed IT security and compliance services in UAE',
     },
     {
       title: 'Backup and Disaster Recovery Management',

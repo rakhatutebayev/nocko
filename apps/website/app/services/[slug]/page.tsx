@@ -351,11 +351,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         {content.firstSection.length === 0 &&
           content.features.length === 0 &&
           content.secondSection.length === 0 && (
-            <section className="section">
-              <div className="container">
-                <p>Content coming soon...</p>
-              </div>
-            </section>
+            notFound()
           )}
       </main>
       <Footer />

@@ -57,6 +57,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'it-amc',
     'it-consulting',
     'it-support',
+    'it-support-ru',
     'managed-it',
     'structured-cabling',
   ].map((slug) => ({
