@@ -1,236 +1,32 @@
 [
   {
-    "id": "static-cloud-cost-optimization",
-    "slug": "cloud-cost-optimization",
-    "title": "Cloud Cost Optimization | Cloud Cost Management UAE | NOCKO",
-    "excerpt": "Cloud cost optimization services in UAE. Right-size resources, identify unused services, and implement cost-saving strategies. Reduce cloud expenses while maintaining performance and getting maximum value."
+    "id": "static-cloud-infrastructure-guide",
+    "slug": "cloud-infrastructure-guide",
+    "title": "The Ultimate Guide to Enterprise Cloud Infrastructure",
+    "excerpt": "A comprehensive guide to planning, executing, and optimizing cloud migrations in the UAE. Covers cost management, data security, hybrid architectures, and AWS/Azure deployment strategies."
   },
   {
-    "id": "static-cloud-data-management",
-    "slug": "cloud-data-management",
-    "title": "Data Management and Backup Solutions | Cloud Data Management UAE | NOCKO",
-    "excerpt": "Comprehensive data management and backup solutions for businesses in UAE. Automated backups, data archiving, disaster recovery, and data governance. Protect and organize your data in the cloud."
+    "id": "static-cybersecurity-guide",
+    "slug": "cybersecurity-guide",
+    "title": "Complete Cybersecurity Guide for Enterprises",
+    "excerpt": "An exhaustive guide to enterprise cybersecurity in the UAE. Master threat monitoring, data protection, security compliance audits, and incident response planning."
   },
   {
-    "id": "static-cloud-infrastructure",
-    "slug": "cloud-infrastructure",
-    "title": "Cloud Infrastructure Setup and Management | Cloud Infrastructure UAE | NOCKO",
-    "excerpt": "Cloud infrastructure setup and management services in UAE. Design and deploy secure, scalable, and cost-effective cloud environments. Optimized cloud architecture tailored to your business needs."
+    "id": "static-managed-it-services-guide",
+    "slug": "managed-it-services-guide",
+    "title": "Complete Guide to Managed IT Services & Support",
+    "excerpt": "A detailed breakdown of Managed IT Services. Learn how predictable costs, 24/7 helpdesk support, proactive monitoring, and scalable infrastructure benefit businesses in Dubai."
   },
   {
-    "id": "static-cloud-migration",
-    "slug": "cloud-migration",
-    "title": "Cloud Migration Services | Safe Cloud Migration UAE | NOCKO",
-    "excerpt": "Safe and efficient cloud migration services for businesses in UAE. Move to AWS, Azure, Google Cloud, or private cloud with zero downtime and zero data loss. Professional cloud migration planning and execution."
+    "id": "static-it-consulting-guide",
+    "slug": "it-consulting-guide",
+    "title": "Strategic IT Consulting and Digital Transformation",
+    "excerpt": "A guide to strategic IT consulting in the UAE. Explore digital transformation, ROI analysis, IT roadmaps, and architecture design for growing organizations."
   },
   {
-    "id": "static-cloud-multi-hybrid",
-    "slug": "cloud-multi-hybrid",
-    "title": "Multi-Cloud and Hybrid Cloud Solutions | Multi-Cloud Architecture UAE | NOCKO",
-    "excerpt": "Multi-cloud and hybrid cloud solutions for businesses in UAE. Use multiple cloud providers or combine cloud with on-premises infrastructure for maximum flexibility. Managed complex cloud environments."
-  },
-  {
-    "id": "static-cloud-security-compliance",
-    "slug": "cloud-security-compliance",
-    "title": "Cloud Security and Compliance | Cloud Security Services UAE | NOCKO",
-    "excerpt": "Comprehensive cloud security and compliance services in UAE. Encryption, access controls, security monitoring, and compliance management. Ensure your cloud environment meets security standards and regulatory requirements."
-  },
-  {
-    "id": "static-cybersecurity-compliance",
-    "slug": "cybersecurity-compliance",
-    "title": "Security Compliance and Audit Management | Security Compliance UAE | NOCKO",
-    "excerpt": "Security compliance and audit management services in UAE. Meet security compliance requirements and pass security audits. From GDPR to industry-specific regulations, ensure your security practices meet all compliance standards."
-  },
-  {
-    "id": "static-cybersecurity-data-protection",
-    "slug": "cybersecurity-data-protection",
-    "title": "Data Protection and Encryption | Data Security Services UAE | NOCKO",
-    "excerpt": "Advanced data protection and encryption services for businesses in UAE. Encrypt data at rest and in transit, implement access controls, and ensure data privacy compliance. Protect sensitive business data from unauthorized access."
-  },
-  {
-    "id": "static-cybersecurity-firewall",
-    "slug": "cybersecurity-firewall",
-    "title": "Firewall Management and Network Security | Network Security Services UAE | NOCKO",
-    "excerpt": "Firewall management and network security services in UAE. Proper firewall configuration, network segmentation, and access controls protect your network from unauthorized access. Regular security updates and rule optimization."
-  },
-  {
-    "id": "static-cybersecurity-incident-response",
-    "slug": "cybersecurity-incident-response",
-    "title": "Incident Response and Security Recovery | Security Incident Response UAE | NOCKO",
-    "excerpt": "Incident response and security recovery services in UAE. Rapid response to contain threats and restore systems. Proven procedures to minimize damage, recover data, and prevent future incidents. Complete recovery support."
-  },
-  {
-    "id": "static-cybersecurity-monitoring",
-    "slug": "cybersecurity-monitoring",
-    "title": "24/7 Security Monitoring and Threat Detection | Continuous Security Monitoring UAE | NOCKO",
-    "excerpt": "24/7 security monitoring and threat detection services in UAE. Continuous monitoring for security threats and suspicious activity. Advanced threat detection systems identify potential attacks before they cause damage. Immediate alerts and rapid response."
-  },
-  {
-    "id": "static-cybersecurity-protection",
-    "slug": "cybersecurity-protection",
-    "title": "Comprehensive Cybersecurity Protection | Multi-Layered Security UAE | NOCKO",
-    "excerpt": "Comprehensive cybersecurity protection services for businesses in UAE. Multi-layered security defenses including firewalls, antivirus, intrusion detection, and threat monitoring. Protect from malware, ransomware, phishing attacks, and other cyber threats."
-  },
-  {
-    "id": "static-deployment",
-    "slug": "deployment",
-    "title": "Rapid Network Deployment | Structured Cabling UAE | NOCKO",
-    "excerpt": "Rapid network deployment for businesses in UAE. Prebuilt structured cabling plans, certified technicians, and compliant execution to deploy infrastructure across Dubai and the Emirates with minimal disruption."
-  },
-  {
-    "id": "static-it-amc-comprehensive",
-    "slug": "it-amc-comprehensive",
-    "title": "Comprehensive IT Maintenance and Support Services | IT AMC Coverage UAE | NOCKO",
-    "excerpt": "Complete IT maintenance and support services covered under IT Annual Maintenance Contract. Regular system checks, software updates, hardware maintenance, troubleshooting, and technical support for businesses in Dubai, UAE."
-  },
-  {
-    "id": "static-it-amc-costs",
-    "slug": "it-amc-costs",
-    "title": "Predictable IT Costs with Annual Maintenance Contract | IT AMC Benefits UAE | NOCKO",
-    "excerpt": "Learn how IT Annual Maintenance Contract (AMC) provides fixed annual costs for IT maintenance and support. Predictable budgeting, no surprise expenses, and complete IT coverage under one contract in Dubai, UAE."
-  },
-  {
-    "id": "static-it-amc-hardware",
-    "slug": "it-amc-hardware",
-    "title": "Hardware Maintenance and Repairs | IT AMC Services UAE | NOCKO",
-    "excerpt": "Hardware maintenance and repairs included in IT AMC. Equipment cleaning, part replacement, repairs, and lifecycle management to keep hardware reliable in Dubai, UAE."
-  },
-  {
-    "id": "static-it-amc-maintenance-visits",
-    "slug": "it-amc-maintenance-visits",
-    "title": "Regular IT Maintenance Visits and System Checks | IT AMC Services UAE | NOCKO",
-    "excerpt": "Regular maintenance visits and proactive system checks as part of IT AMC. Prevent problems before they occur, keep IT infrastructure reliable, and ensure smooth business operations in Dubai, UAE."
-  },
-  {
-    "id": "static-it-amc-priority",
-    "slug": "it-amc-priority",
-    "title": "Priority IT Support and Faster Response Times | IT AMC Benefits UAE | NOCKO",
-    "excerpt": "IT AMC customers get priority support with faster response times. Dedicated support team, guaranteed response times, and priority access to IT professionals in Dubai, UAE."
-  },
-  {
-    "id": "static-it-amc-updates",
-    "slug": "it-amc-updates",
-    "title": "Software Updates and Security Patches | IT AMC Services UAE | NOCKO",
-    "excerpt": "Automatic software updates and security patches as part of IT AMC. Keep systems current, secure, and protected without managing updates yourself in Dubai, UAE."
-  },
-  {
-    "id": "static-it-consulting-assessment",
-    "slug": "it-consulting-assessment",
-    "title": "Technology Assessment and Evaluation | IT Assessment Services UAE | NOCKO",
-    "excerpt": "Technology assessment and evaluation services for businesses in UAE. Evaluate your technology stack, assess IT infrastructure, and identify improvement opportunities. Expert analysis and industry best practices."
-  },
-  {
-    "id": "static-it-consulting-digital-transformation",
-    "slug": "it-consulting-digital-transformation",
-    "title": "Digital Transformation Consulting | Digital Transformation UAE | NOCKO",
-    "excerpt": "Digital transformation consulting services for businesses in UAE. Navigate digital transformation with expert guidance. Modernize IT infrastructure, adopt new technologies, and transform business processes."
-  },
-  {
-    "id": "static-it-consulting-infrastructure-design",
-    "slug": "it-consulting-infrastructure-design",
-    "title": "IT Infrastructure Design and Architecture | IT Architecture UAE | NOCKO",
-    "excerpt": "IT infrastructure design and architecture services in UAE. Design optimal, scalable, secure, and efficient infrastructure architectures. Support current operations and future growth with proper architecture."
-  },
-  {
-    "id": "static-it-consulting-roadmap",
-    "slug": "it-consulting-roadmap",
-    "title": "Implementation Roadmap and Project Planning | IT Project Planning UAE | NOCKO",
-    "excerpt": "Implementation roadmap and project planning services for businesses in UAE. Create detailed roadmaps for IT projects. Plan phases, timelines, resources, and milestones for successful implementation."
-  },
-  {
-    "id": "static-it-consulting-roi",
-    "slug": "it-consulting-roi",
-    "title": "Cost-Benefit Analysis and ROI Evaluation | IT ROI Analysis UAE | NOCKO",
-    "excerpt": "Cost-benefit analysis and ROI evaluation services for businesses in UAE. Evaluate technology investments with detailed analysis. Understand financial impact before committing to ensure maximum value."
-  },
-  {
-    "id": "static-it-consulting-strategy",
-    "slug": "it-consulting-strategy",
-    "title": "IT Strategy and Planning | IT Strategy Development UAE | NOCKO",
-    "excerpt": "IT strategy and planning services for businesses in UAE. Develop comprehensive IT strategies aligned with business goals. IT infrastructure analysis, strategic planning, and technology adoption optimization."
-  },
-  {
-    "id": "static-it-support-24-7",
-    "slug": "it-support-24-7",
-    "title": "24/7 IT Support When You Need It Most | IT Support Services UAE | NOCKO",
-    "excerpt": "24/7 IT support services available around the clock for businesses in UAE. Fast response times, on-site engineers, and immediate help when IT problems occur. Expert IT professionals available 24/7."
-  },
-  {
-    "id": "static-it-support-helpdesk",
-    "slug": "it-support-helpdesk",
-    "title": "Professional Helpdesk for Quick Issue Resolution | IT Support UAE | NOCKO",
-    "excerpt": "Professional IT helpdesk services for businesses in UAE. Fast issue resolution, clear communication, and efficient support processes. Expert helpdesk team handles all IT support requests."
-  },
-  {
-    "id": "static-it-support-monitoring",
-    "slug": "it-support-monitoring",
-    "title": "Proactive Monitoring and Maintenance | IT Support UAE | NOCKO",
-    "excerpt": "Proactive IT monitoring and maintenance services for businesses in UAE. 24/7 system monitoring, preventive maintenance, and issue prevention. Keep your IT systems running smoothly."
-  },
-  {
-    "id": "static-it-support-onsite",
-    "slug": "it-support-onsite",
-    "title": "On-Site Support When Remote Is Not Enough | IT Support UAE | NOCKO",
-    "excerpt": "On-site IT support services available 24/7 across all Emirates. Hardware installation, network troubleshooting, emergency repairs, and hands-on IT support when remote assistance isn\\"
-  },
-  {
-    "id": "static-it-support-optimization",
-    "slug": "it-support-optimization",
-    "title": "IT System Optimization and Performance Tuning | IT Support UAE | NOCKO",
-    "excerpt": "IT system optimization and performance tuning services for businesses in UAE. Improve system performance, capacity planning, and ensure your IT infrastructure supports business growth."
-  },
-  {
-    "id": "static-it-support-remote",
-    "slug": "it-support-remote",
-    "title": "Remote Support for Instant Problem Solving | IT Support UAE | NOCKO",
-    "excerpt": "Remote IT support services for businesses in UAE. Secure remote access, fast problem resolution, and convenient support without on-site visits. Expert remote support team available 24/7."
-  },
-  {
-    "id": "static-lifecycle",
-    "slug": "lifecycle",
-    "title": "Network Lifecycle Management | Structured Cabling UAE | NOCKO",
-    "excerpt": "Maintain performance across the entire network lifecycle with proactive monitoring, preventive maintenance, and optimization for businesses in UAE."
-  },
-  {
-    "id": "static-managed-it-backup",
-    "slug": "managed-it-backup",
-    "title": "Backup and Disaster Recovery Management | Data Backup Services UAE | NOCKO",
-    "excerpt": "Comprehensive backup and disaster recovery management services in UAE. Automated backups, regular testing, recovery procedures, and quick system restoration. Ensure your data is safe and recoverable, and your business can continue operating after disasters."
-  },
-  {
-    "id": "static-managed-it-cost",
-    "slug": "managed-it-cost",
-    "title": "Cost-Effective IT Management | Predictable IT Costs UAE | NOCKO",
-    "excerpt": "Cost-effective IT management services in UAE. Predictable costs, better value than in-house teams, enterprise-level IT management without overhead. Fixed monthly costs make budgeting easier and avoid unexpected IT expenses."
-  },
-  {
-    "id": "static-managed-it-infrastructure",
-    "slug": "managed-it-infrastructure",
-    "title": "Complete IT Infrastructure Management Services | Full IT Management UAE | NOCKO",
-    "excerpt": "Complete IT infrastructure management services for businesses in UAE. Full responsibility for network monitoring, system maintenance, security updates, and performance optimization. Dedicated IT team managing your systems 24/7."
-  },
-  {
-    "id": "static-managed-it-monitoring",
-    "slug": "managed-it-monitoring",
-    "title": "Proactive IT Management and Monitoring | Continuous IT Monitoring UAE | NOCKO",
-    "excerpt": "Proactive IT management and continuous monitoring services in UAE. Catch issues before they become problems, fix things before they break, and optimize performance before slowdowns occur. Keep your IT infrastructure healthy and reliable."
-  },
-  {
-    "id": "static-managed-it-scalable",
-    "slug": "managed-it-scalable",
-    "title": "Scalable IT Solutions That Grow With Your Business | IT Scalability UAE | NOCKO",
-    "excerpt": "Scalable IT solutions that grow with your business in UAE. Add capacity, expand infrastructure, and adapt to new requirements as your business grows. Seamless IT scaling for opening new offices or adding employees."
-  },
-  {
-    "id": "static-managed-it-security",
-    "slug": "managed-it-security",
-    "title": "Security Management and Compliance | IT Security Management UAE | NOCKO",
-    "excerpt": "Comprehensive IT security management and compliance services in UAE. Firewall management, antivirus updates, security patches, compliance monitoring, security audits, and vulnerability assessments. Complete security management so you don\\"
-  },
-  {
-    "id": "static-performance",
-    "slug": "performance",
-    "title": "Network Performance Optimization | Structured Cabling UAE | NOCKO",
-    "excerpt": "Improve network performance across UAE sites with structured cabling best practices, certified installation, and proactive optimization. Reduce latency, boost throughput, and maintain reliability."
+    "id": "static-structured-cabling-guide",
+    "slug": "structured-cabling-guide",
+    "title": "Network Infrastructure & Structured Cabling Guide",
+    "excerpt": "A complete guide to structured cabling, network infrastructure deployment, lifecycle management, and performance optimization for businesses in Dubai and the UAE."
   }
 ]

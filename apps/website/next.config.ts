@@ -55,6 +55,37 @@ const nextConfig: NextConfig = {
     } : false,
   },
   
+  // Redirects mapping thin content articles to new Pillar Guides
+  async redirects() {
+    return [
+      ...['cloud-cost-optimization', 'cloud-data-management', 'cloud-infrastructure', 'cloud-migration', 'cloud-multi-hybrid', 'cloud-security-compliance'].map(slug => ({
+        source: `/articles/${slug}`,
+        destination: '/articles/cloud-infrastructure-guide',
+        permanent: true,
+      })),
+      ...['cybersecurity-compliance', 'cybersecurity-data-protection', 'cybersecurity-firewall', 'cybersecurity-incident-response', 'cybersecurity-monitoring', 'cybersecurity-protection'].map(slug => ({
+        source: `/articles/${slug}`,
+        destination: '/articles/cybersecurity-guide',
+        permanent: true,
+      })),
+      ...['managed-it-backup', 'managed-it-cost', 'managed-it-infrastructure', 'managed-it-monitoring', 'managed-it-scalable', 'managed-it-security', 'it-support-24-7', 'it-support-helpdesk', 'it-support-monitoring', 'it-support-onsite', 'it-support-optimization', 'it-support-remote'].map(slug => ({
+        source: `/articles/${slug}`,
+        destination: '/articles/managed-it-services-guide',
+        permanent: true,
+      })),
+      ...['it-consulting-assessment', 'it-consulting-digital-transformation', 'it-consulting-infrastructure-design', 'it-consulting-roadmap', 'it-consulting-roi', 'it-consulting-strategy'].map(slug => ({
+        source: `/articles/${slug}`,
+        destination: '/articles/it-consulting-guide',
+        permanent: true,
+      })),
+      ...['it-amc-comprehensive', 'it-amc-costs', 'it-amc-hardware', 'it-amc-maintenance-visits', 'it-amc-priority', 'it-amc-updates', 'deployment', 'lifecycle', 'performance'].map(slug => ({
+        source: `/articles/${slug}`,
+        destination: '/articles/structured-cabling-guide',
+        permanent: true,
+      })),
+    ];
+  },
+  
   // Headers for caching and security
   async headers() {
     return [
