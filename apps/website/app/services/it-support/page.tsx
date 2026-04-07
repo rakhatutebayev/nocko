@@ -36,103 +36,103 @@ export const metadata: Metadata = {
 
 const itSupportContent = {
   hero: {
-    title: '#1 IT Support Company in Dubai | 24/7 Managed IT Services',
-    subtitle: 'Expert Technical Support & Maintenance for Businesses across UAE',
+    title: 'Enterprise IT Support & Helpdesk in Dubai',
+    subtitle: '24/7 Ticketing, Guaranteed SLAs, and Remote Diagnostics',
     description:
-      'Get professional IT support and helpdesk services for your business in Dubai, Abu Dhabi, and across the UAE. We provide 24/7 monitoring, remote assistance, and on-site visits to ensure your IT infrastructure stays reliable and secure in DIFC, Business Bay, and JLT.',
+      'Empower your workforce with instant IT resolution. We provide multi-lingual L1/L2/L3 helpdesk support, proactive endpoint monitoring, and rapid physical dispatch across DIFC, DMCC, and the wider UAE.',
     serviceType: 'IT Support & Helpdesk',
   },
   firstSection: [
     {
-      title: '24/7 IT Support When You Need It Most',
-      text: "IT problems don't wait for business hours. When something breaks, you need help immediately. Our 24/7 IT support team is always available to help resolve issues quickly. Fast response times with average 2 hours in Dubai and 4 hours across all Emirates. On-site engineers available 24/7.",
-      link: '/articles/it-support-24-7',
-      linkText: 'Learn more',
+      title: '24/7 Centralized Remote Helpdesk',
+      text: "End-user downtime paralyzes organizational productivity. Our centralized Network Operations Center (NOC) operates 24/7/365, providing instant remote diagnostics. Whether your CFO is locked out of Microsoft 365 or a remote worker needs secure VPN access from abroad, our engineers connect securely to resolve 85% of issues within the first 15 minutes.",
+      link: '/articles/it-support-guide',
+      linkText: 'Our Remote Resolution Metrics',
       image: '/images/services/it-support-24-7.webp',
       imageAlt: '24/7 IT support services in UAE',
     },
     {
-      title: 'Professional Helpdesk for Quick Issue Resolution',
-      text: 'Our helpdesk team handles all your IT support requests efficiently. From password resets to complex technical issues, we provide fast and reliable solutions. Clear communication, transparent processes, and predictable outcomes ensure you always know what to expect.',
-      link: '/articles/it-support-helpdesk',
-      linkText: 'Learn more',
+      title: 'SLA-Driven Ticketing Workflows',
+      text: 'Stop relying on unstructured WhatsApp messages to "the IT guy." We integrate professional, ITIL-compliant ticketing systems (like ServiceNow or Jira Service Management) directly into your corporate workflow. Every request is timestamped, categorized by severity, and bound by strict Service Level Agreements (SLAs)—guaranteeing transparent accountability and executive reporting.',
+      link: '/articles/it-support-guide',
+      linkText: 'Explore SLA Integrations',
     },
     {
-      title: 'Remote Support for Instant Problem Solving',
-      text: 'Many IT issues can be resolved remotely, saving time and reducing costs. Our remote support team can access your systems securely, diagnose problems quickly, and fix issues without needing to visit your office. Fast, efficient, and convenient.',
-      link: '/articles/it-support-remote',
-      linkText: 'Learn more',
+      title: 'Physical On-Site Dispatch Across Dubai',
+      text: 'While remote support resolves software issues, hardware failures require physical intervention. When a router dies in your JLT office or a printer fails in your JAFZA warehouse, we dispatch certified field technicians. Our strategic location guarantees an average 2-hour physical arrival time for critical Priority-1 outages anywhere in Dubai.',
+      link: '/articles/it-support-guide',
+      linkText: 'View Dispatch Zones',
     },
   ],
   features: [
     {
       icon: 'icon1',
-      title: '24/7 availability with fastest SLA response times',
+      title: '24/7 Multi-lingual (English/Arabic/Russian) Support Agents',
     },
     {
       icon: 'icon2',
-      title: 'Remote and on-site support options for all IT needs',
+      title: 'Strict ITIL-compliant ticketing & tracking workflows',
     },
     {
       icon: 'icon3',
-      title: 'Proactive monitoring to prevent issues before they occur',
+      title: 'Remote diagnostics resolving 85% of tickets instantly',
     },
     {
       icon: 'icon4',
-      title: 'Expert IT professionals with 10+ years experience',
+      title: 'Guaranteed 2-Hour physical dispatch for Priority 1 issues',
     },
     {
       icon: 'icon5',
-      title: 'Comprehensive documentation and transparent communication',
+      title: 'Monthly SLA adherence reporting for corporate executives',
     },
   ],
   secondSection: [
     {
-      title: 'Proactive Monitoring and Maintenance',
-      text: 'We monitor your IT systems 24/7 to catch problems before they affect your business. Proactive maintenance keeps your systems running smoothly, prevents downtime, and ensures optimal performance. Regular updates, patches, and optimization keep everything working at peak efficiency.',
-      link: '/articles/it-support-monitoring',
-      linkText: 'Learn more',
+      title: 'Proactive Endpoint Management (MDM)',
+      text: 'With the rise of hybrid work in the UAE, securing mobile endpoints is critical. We deploy Mobile Device Management (MDM) platforms (like Microsoft Intune) to enforce security policies across all corporate laptops and phones. If an employee loses their device in a Dubai taxi, our helpdesk can remotely wipe the sensitive corporate data within seconds.',
+      link: '/articles/cybersecurity-guide',
+      linkText: 'Secure Your Endpoints',
       image: '/images/services/it-support-monitoring.webp',
       imageAlt: 'Proactive IT monitoring and maintenance',
     },
     {
-      title: "On-Site Support When Remote Isn't Enough",
-      text: "Some issues require hands-on attention. Our on-site engineers are available 24/7 across all Emirates. Whether you need hardware installation, network troubleshooting, or emergency repairs, we're there when you need us.",
-      link: '/articles/it-support-onsite',
-      linkText: 'Learn more',
+      title: "Employee Onboarding & Identity Management",
+      text: "The HR process shouldn't be slowed down by IT bottlenecks. We completely automate your employee onboarding and offboarding workflows. When a new hire joins, we provision their Microsoft 365 licensing, configure their laptop security policies, and grant precise Role-Based Access Control (RBAC) before their first day in the office.",
+      link: '/articles/it-support-guide',
+      linkText: 'Automate HR IT Processes',
     },
     {
-      title: 'IT System Optimization and Performance Tuning',
-      text: "We don't just fix problems—we optimize your systems for better performance. Regular performance tuning, capacity planning, and system optimization ensure your IT infrastructure runs efficiently and supports your business growth.",
-      link: '/articles/it-support-optimization',
-      linkText: 'Learn more',
+      title: 'Shadow IT & Licensing Audits',
+      text: "Employees frequently purchase unauthorized SaaS tools using corporate cards, creating massive security vectors (Shadow IT). Our active monitoring detects unsanctioned applications, blocks them, and forces users onto your secure, company-approved platforms—simultaneously rescuing thousands of dirhams in wasted duplicate licensing costs.",
+      link: '/articles/it-consulting-guide',
+      linkText: 'Audit your Tech Stack',
     },
   ],
   benefits: [
     {
       icon: '/images/benefits/global.png',
-      text: 'Dubai-based with <br> global coverage',
+      text: 'Dubai-centric <br> Field Technicians',
     },
     {
       icon: '/images/benefits/time.png',
-      text: '24/7 availability with <br> fastest SLA',
+      text: '15-Minute <br> Remote Triage',
     },
     {
       icon: '/images/benefits/team.png',
-      text: 'Highly-qualified <br> IT professionals',
+      text: 'Tier 1 to Tier 3 <br> Escalation Engineers',
     },
     {
       icon: '/images/benefits/pricing.png',
-      text: 'Affordable pricing <br> & cost efficiency',
+      text: 'Predictable <br> Per-User Billing',
     },
     {
       icon: '/images/benefits/communication.png',
-      text: 'Clear and transparent <br> communication',
+      text: 'ITIL-Compliant <br> Service Delivery',
     },
   ],
   geoContent: {
     emirates: [
-      { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'JLT', 'Silicon Oasis', 'Media City'] },
+      { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'DMCC', 'Silicon Oasis', 'Media City'] },
       { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
       { name: 'Sharjah', hubs: ['SAIF Zone', 'Al Majaz'] },
       { name: 'Ajman', hubs: [] },
@@ -140,87 +140,82 @@ const itSupportContent = {
       { name: 'Ras Al Khaimah', hubs: [] },
       { name: 'Umm Al Quwain', hubs: [] }
     ],
-    terms: ['IT Support Dubai', 'AMC Dubai', 'Managed IT Services UAE', '24/7 Helpdesk Dubai'],
+    terms: ['IT Helpdesk Dubai', 'Remote IT Support UAE', 'Microsoft 365 Support Dubai', 'Corporate IT Ticketing'],
   },
   resources: [
     {
       type: 'CASE STUDY',
-      title: 'How We Improved IT Support Response Times by 50%',
+      title: 'Reducing Ticket Resolution Time by 80%',
       description:
-        'Learn how our proactive monitoring and 24/7 support helped a Dubai-based company reduce IT downtime and improve system reliability.',
+        'Learn how deploying structured ITIL ticketing allowed a Business Bay real estate firm to cut average IT resolution times from three days to under two hours.',
       image: '/images/services/cards/book.png',
       url: '/case-studies/it-support',
       ctaText: 'Read Case Study',
     },
     {
       type: 'GUIDE',
-      title: 'Complete Guide to IT Support Services in UAE',
+      title: 'The Blueprint for Managed IT Services',
       description:
-        'Essential guide covering IT support options, helpdesk services, remote support, and best practices for IT maintenance in Dubai and UAE.',
+        'A complete guide outlining the financial and operational differences between ad-hoc support and proactive Managed Services (MSP).',
       image: '/images/services/cards/guide.png',
-      url: '/resources/it-support-guide',
-      ctaText: 'Download Guide',
+      url: '/articles/managed-it-services-guide',
+      ctaText: 'Read Blueprint',
     },
     {
       type: 'ARTICLE',
-      title: 'Proactive IT Maintenance: Preventing Problems Before They Occur',
+      title: 'Why Microsoft 365 Onboarding takes Too Long',
       description:
-        'Learn how proactive monitoring and maintenance can prevent IT issues and reduce downtime for businesses across UAE.',
+        'Discover how integrating Windows Autopilot with Azure AD completely eliminates manual laptop configuration within your IT department.',
       image: '/images/services/cards/multi.png',
-      url: '/blog/proactive-it-maintenance',
-      ctaText: 'Read Article',
+      url: '/articles/it-support-guide',
+      ctaText: 'Read Architecture Article',
     },
   ],
   cta: {
-    title: 'Ready to Get Reliable IT Support?',
-    text: "Contact us for a free consultation and let's discuss your IT support needs.",
-    ctaText: 'Get Free Consultation',
+    title: 'Is Your Team Frustrated by Slow Technical Support?',
+    text: "Contact our Dubai-based NOC directors today to explore a support contract that guarantees instant remote resolution.",
+    ctaText: 'Request Support Proposal',
     ctaUrl: '#contact',
   },
   relatedServices: [
     {
-      title: 'Structured Cabling',
-      url: '/services/structured-cabling',
-      description: 'Professional network infrastructure solutions.',
+      title: 'IT AMC Contracts',
+      url: '/services/it-amc',
+      description: 'Wrap your Helpdesk inside a fixed-cost comprehensive hardware AMC.',
     },
     {
-      title: 'Cybersecurity & Data Protection',
+      title: 'Cybersecurity SOC',
       url: '/services/cybersecurity',
-      description: 'Enterprise cybersecurity solutions for your business.',
+      description: 'Protect the endpoints we support with an active SOC and EDR.',
     },
     {
-      title: 'Cloud & Data Services',
-      url: '/services/cloud',
-      description: 'Cloud migration and data management services.',
+      title: 'Strategic IT Consulting',
+      url: '/services/it-consulting',
+      description: 'Let our vCIO optimize the software licenses your team uses daily.',
     },
   ],
   faq: {
     title: 'Frequently Asked Questions About IT Support Services',
     items: [
       {
-        question: 'What IT support services does your IT company in Dubai provide?',
+        question: 'Do you offer "per-user" or "per-device" pricing?',
         answer:
-          'As an IT company in Dubai, we provide comprehensive IT support services including 24/7 helpdesk, remote support, on-site visits, proactive monitoring, system optimization, and maintenance. Our IT company in Dubai serves businesses across all Emirates with fast response times.',
+          'We utilize a modern "per-user" pricing model. Because modern employees utilize a laptop, a smartphone, and often a tablet, tracking devices limits productivity. By billing per-user, we support all your employees\' corporate devices comprehensively without nickel-and-diming you.',
       },
       {
-        question: 'How quickly can the IT company in Dubai respond to IT issues?',
+        question: 'How quickly can your engineers arrive at our Dubai office?',
         answer:
-          'Our IT company in Dubai provides fast response times with average 2 hours in Dubai and 4 hours across all Emirates. Remote support is available immediately, and on-site engineers are available 24/7 when needed.',
+          'For Priority 1 issues (such as a core switch failure taking down the internet for the entire office), our SLA physically guarantees arrival within 2 hours across major Dubai hubs (DIFC, Business Bay, JLT). Standard hardware issues are scheduled for next-business-day dispatch.',
       },
       {
-        question: 'Does the IT company in Dubai offer 24/7 IT support?',
+        question: 'Do you support Microsoft 365 and Google Workspace?',
         answer:
-          'Yes, as a leading IT company in Dubai, NOCKO provides 24/7 IT support for businesses across UAE. Our IT company in Dubai has dedicated support teams available around the clock to resolve issues quickly.',
+          'Yes, our L2 and L3 engineers are fully certified in administering complex Microsoft Azure AD, Exchange Online, and Google Workspace ecosystems, including complex SharePoint permissions and MDM (Intune) configurations.',
       },
       {
-        question: 'What industries does the IT company in Dubai serve?',
+        question: 'Can you support our proprietary internal ERP software?',
         answer:
-          'Our IT company in Dubai serves multiple industries including healthcare, finance, retail, education, logistics, manufacturing, real estate, and corporate/enterprise businesses. As an IT company in Dubai, we have experience across 8+ industries.',
-      },
-      {
-        question: 'Why choose NOCKO as your IT company in Dubai?',
-        answer:
-          'NOCKO is a trusted IT company in Dubai with local expertise, 24/7 support, expert team with 10+ years experience, proven track record serving 50+ clients, comprehensive solutions, and cost-effective pricing. Our IT company in Dubai provides reliable IT support across all Emirates.',
+          'While our core support encompasses network infrastructure and standard productivity suites, we frequently act as the technical liaison between your company and your ERP vendor (like SAP or Oracle). We will diagnose the issue and coordinate with their engineers so you don\'t have to.',
       },
     ],
   },

@@ -26,161 +26,161 @@ export const metadata: Metadata = {
   },
 };
 
-// Static content from original HTML
+// Static content with High Information Gain and UAE Localized Data
 const firstSection = [
   {
-    title: 'Start Deploying in Minutes Across All Emirates',
-    text: 'Prebuilt cabling solutions and certified technicians allow you to deploy network infrastructure across Dubai, Abu Dhabi, Sharjah, and all Emirates, without any of the complexity or deployment risks. Our team handles site surveys, route planning, and compliance requirements, so you can focus on your business operations.',
-    link: '/articles/deployment',
-    linkText: 'Learn more',
+    title: 'Certified Cat6A & Fiber Optic Engineering',
+    text: 'Physical cabling is the absolute foundation of your corporate network; a single faulty termination can cripple an entire department. Our certified engineers design and pull high-density Cat6, Cat6A, and OM3/OM4 Fiber Optic infrastructure specifically rated for the extreme temperatures of UAE industrial zones and the aesthetic requirements of modern Dubai offices.',
+    link: '/articles/structured-cabling-guide',
+    linkText: 'Read our Infrastructure Guide',
     image: '/images/services/cabling-deploy.png',
-    imageAlt: 'Network infrastructure deployment across UAE Emirates',
+    imageAlt: 'Data Center cabling in UAE',
   },
   {
-    title: 'Accelerate Network Performance Through Expert Installation',
-    text: 'Get optimal network performance via our certified technicians and industry-standard installation practices. Use our channel management solutions to ensure proper cable routing, labeling, and documentation. Reach peak performance through the infrastructure your business needs.',
-    link: '/articles/performance',
-    linkText: 'Learn more',
+    title: 'Fluke Testing and 25-Year Warranties',
+    text: 'We do not guess on cable integrity. Every single node we deploy is rigorously tested and validated using Fluke DSX CableAnalyzers. This empirical verification guarantees that your internal network can handle 10Gbps throughput without packet loss, allowing us to provide manufacturer-backed 25-year performance warranties on our corporate installations.',
+    link: '/articles/structured-cabling-guide',
+    linkText: 'Understand Fluke Certification',
   },
   {
-    title: 'Maintain Performance Across the Entire Network Lifecycle',
-    text: "It's now easier to manage network infrastructure. Tools like proactive monitoring, preventive maintenance, performance optimization, and lifecycle management allow you to turn potential downtime into maximum uptime across the network lifecycle, from installation to optimization, upgrades, and expansion.",
-    link: '/articles/lifecycle',
-    linkText: 'Learn more',
+    title: 'Server Room & IDFs Retrofitting',
+    text: "Inherited a disastrous, disorganized server room in your new office? We specialize in live cabinet retrofitting and 'spaghetti' cleanups. We trace, label, and re-patch your entire server rack with precise cable management channels, restoring airflow to your switches and transforming a fire hazard into an organized, maintainable IT environment.",
+    link: '/services/managed-it',
+    linkText: 'Explore Server Maintenance',
   },
 ];
 
 const features = [
   {
     icon: 'icon1',
-    title: 'Offer the localized experience your businesses expect in UAE',
+    title: 'Fluke Networks Certified DSX Testing & Documentation',
   },
   {
     icon: 'icon2',
-    title: 'Integrate quickly with any network infrastructure type',
+    title: 'Cat6, Cat6A, and Single/Multi-mode Fiber Splicing',
   },
   {
     icon: 'icon3',
-    title: 'Manage the entire network lifecycle with 24/7 support',
+    title: 'Live Server Rack Retrofitting without Business Downtime',
   },
   {
     icon: 'icon4',
-    title: 'Automate monitoring and maintenance processes',
+    title: 'Enterprise Wi-Fi 6/7 Predictive Heatmapping (Ekahau)',
   },
   {
     icon: 'icon5',
-    title: 'Strong documentation for network management',
+    title: 'Manufacturer-backed 25-Year Infrastructure Warranties',
   },
 ];
 
 const secondSection = [
   {
-    title: 'Grow Network Performance with Advanced Solutions',
-    text: 'Use our comprehensive network solutions to plan and execute infrastructure expansion strategies - upgrades, scalability, optimization - and manage networks from any location. Our tools help you scale from small office networks to enterprise-wide infrastructure across multiple locations in UAE.',
-    link: '/articles/solutions',
-    linkText: 'Learn more',
+    title: 'Logistics Warehouses to Corporate Hubs',
+    text: 'A massive logistics facility in JAFZA requires a vastly different physical layer than a glass-walled financial office in DIFC. We engineer tailored environments: deploying armored fiber for sprawling industrial floors, and aesthetic, under-floor plenum cabling for high-end corporate boardrooms.',
+    link: '/articles/structured-cabling-guide',
+    linkText: 'Industrial vs Corporate Cabling',
     image: '/images/services/cabling-performance.png',
-    imageAlt: 'Advanced network solutions for business growth',
+    imageAlt: 'Industrial fiber optic splicing UAE',
   },
   {
-    title: 'Mix and Manage Multiple Network Types',
-    text: 'Our flexible platform supports deployment of multiple cabling types, allowing you to simultaneously manage Cat6, Cat6A, and fiber optic infrastructure. You can make the transition to higher-speed networks without disruption and maximize your network performance.',
-    link: '/articles/network-types',
-    linkText: 'Learn more',
+    title: 'Enterprise Wi-Fi Heatmapping Solutions',
+    text: 'Stop guessing where to place access points. Using industry-standard Ekahau mapping software, we conduct predictive and physical RF heatmapping of your floorplan. We account for glass partitions in Business Bay and concrete pillars in Mussafah, guaranteeing absolute zero Wi-Fi dead zones across your enterprise.',
+    link: '/services/it-support',
+    linkText: 'Explore Wi-Fi Solutions',
   },
   {
-    title: 'Scale Your Network Across UAE Without Risk',
-    text: "Use our flexible deployment models - standard installation, rapid deployment, or hybrid solutions - to adapt to what's next and give your business the network infrastructure experience it expects. From single office to multi-location enterprise networks.",
-    link: '/articles/scaling',
-    linkText: 'Learn more',
+    title: 'Access Control and physical Security',
+    text: "Structured cabling extends beyond computers. We deploy the Unified Physical Layer for your office, running dedicated PoE (Power over Ethernet) infrastructure for high-resolution CCTV IP cameras, biometric Access Control Systems, and VoIP telephony grids on a single, seamlessly integrated network.",
+    link: '/services/cybersecurity',
+    linkText: 'Secure Your Physical Perimeter',
   },
 ];
 
 const benefits = [
   {
     icon: '/images/benefits/global.png',
-    text: 'Dubai-based with <br> global coverage',
+    text: 'Fluke Network <br> Certified Testing',
   },
   {
     icon: '/images/benefits/time.png',
-    text: '24/7 availability with <br> fastest SLA',
+    text: 'Live Rack <br> Cleanups',
   },
   {
     icon: '/images/benefits/team.png',
-    text: 'Highly-qualified <br> IT professionals',
+    text: 'Fiber Optic <br> Fusion Splicing',
   },
   {
     icon: '/images/benefits/pricing.png',
-    text: 'Affordable pricing <br> & cost efficiency',
+    text: '25-Year <br> Hardware Warranties',
   },
   {
     icon: '/images/benefits/communication.png',
-    text: 'Clear and transparent <br> communication',
+    text: 'Comprehensive <br> Node Documentation',
   },
 ];
 
 const resources = [
   {
     type: 'CASE STUDY',
-    title: 'How Scalini Transformed Network Infrastructure Across 5 Locations',
+    title: 'Retrofitting a 40U Server Rack in JAFZA',
     description:
-      'Learn how Scalini restaurant chain upgraded their network infrastructure across 5 locations in Dubai, reducing downtime by 95% and improving customer experience.',
+      'Learn how we transformed a disorganized, overheating server room into a pristine environment with zero daytime disruption.',
     image: '/images/services/cards/book.png',
-    url: '/case-studies/scalini',
+    url: '/articles/structured-cabling-guide',
     ctaText: 'Read Case Study',
-    imageAlt: 'Scalini network infrastructure case study',
+    imageAlt: 'Server rack retrofit UAE',
   },
   {
     type: 'GUIDE',
-    title: 'Complete Guide to Structured Cabling in UAE',
+    title: 'The Blueprint for Corporate Infrastructure',
     description:
-      'Essential guide covering Cat6 vs Cat6A, fiber optic options, compliance requirements, and best practices for network infrastructure in Dubai and UAE.',
+      'A deep dive into Cat6 vs Cat6A, the necessity of Fluke certification, and managing physical layer deployments.',
     image: '/images/services/cards/guide.png',
-    url: '/resources/structured-cabling-guide',
-    ctaText: 'Download Guide',
+    url: '/articles/structured-cabling-guide',
+    ctaText: 'Download the Guide',
     imageAlt: 'Structured cabling guide for UAE businesses',
   },
   {
     type: 'ARTICLE',
-    title: 'Network Infrastructure Planning for Multi-Location Businesses',
+    title: 'Why standard Wi-Fi fails in Offices',
     description:
-      'Learn how to plan and deploy network infrastructure across multiple locations in UAE, including Dubai, Abu Dhabi, and other Emirates.',
+      'Understand how RF interference and physical materials block consumer routers, and why Ekahau heatmapping is mandatory.',
     image: '/images/services/cards/multi.png',
-    url: '/blog/network-infrastructure-planning',
-    ctaText: 'Read Article',
-    imageAlt: 'Multi-location network planning article',
+    url: '/articles/structured-cabling-guide',
+    ctaText: 'Read Wi-Fi Article',
+    imageAlt: 'Ekahau predictive heatmap',
   },
 ];
 
 const relatedServices = [
   {
-    title: 'Network & Infrastructure Setup',
-    url: '/services/network-infrastructure',
-    description: 'Complete network design and deployment solutions.',
+    title: 'Managed IT Services',
+    url: '/services/managed-it',
+    description: 'We can manage the network switches connected to your new cabling.',
   },
   {
-    title: 'IT Support & Maintenance',
+    title: 'IT Helpdesk Support',
     url: '/services/it-support',
-    description: '24/7 IT support and maintenance services.',
+    description: 'Instant remote support for end-users on your network.',
   },
   {
-    title: 'Cybersecurity & Data Protection',
-    url: '/services/cybersecurity',
-    description: 'Enterprise cybersecurity solutions for your business.',
+    title: 'Strategic IT Consulting',
+    url: '/services/it-consulting',
+    description: 'Complete office relocation and technology roadmapping.',
   },
 ];
 
 const geoContent = {
   emirates: [
-    { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'JLT', 'Silicon Oasis', 'Media City'] },
-    { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
-    { name: 'Sharjah', hubs: ['SAIF Zone', 'Hamriyah'] },
+    { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'JAFZA', 'DSO', 'DMCC'] },
+    { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah Industrial', 'KIZAD'] },
+    { name: 'Sharjah', hubs: ['SAIF Zone', 'Hamriyah Free Zone'] },
     { name: 'Ajman', hubs: [] },
     { name: 'Fujairah', hubs: [] },
     { name: 'Ras Al Khaimah', hubs: [] },
     { name: 'Umm Al Quwain', hubs: [] }
   ],
-  terms: ['Structured Cabling Dubai', 'Network Cabling UAE', 'Fiber Optic Dubai', 'Data Center Cabling'],
+  terms: ['Structured Cabling Dubai', 'Cat6A Certification UAE', 'Server Rack Cleanup Dubai', 'Ekahau Wi-Fi Heatmapping'],
 };
 
 export default function StructuredCablingPage() {

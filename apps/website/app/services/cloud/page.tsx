@@ -32,98 +32,98 @@ export const metadata: Metadata = {
 
 const cloudContent = {
   hero: {
-    title: 'Cloud Services Dubai | #1 Cloud Migration UAE',
-    subtitle: 'Secure, Scalable Cloud Solutions for Modern Businesses across UAE',
+    title: 'Enterprise Cloud Services & Migration in Dubai',
+    subtitle: 'Cost-Optimized AWS, Azure, and Private Cloud Solutions for UAE Businesses',
     description:
-      'Migrate to the cloud with confidence. We provide expert cloud infrastructure, data management, and backup solutions for businesses in Dubai, Abu Dhabi, and across the UAE including DIFC and Business Bay.',
+      'Reduce your IT CAPEX securely. We provide expert cloud architecture, zero-downtime migrations, and Data Residency-compliant hosting tailored for enterprises in Dubai, Abu Dhabi, and across the GCC.',
     serviceType: 'Cloud & Data Services',
   },
   firstSection: [
     {
-      title: 'Cloud Migration Services',
-      text: "Move your business to the cloud safely and efficiently. We plan and execute cloud migrations carefully, ensuring minimal downtime and zero data loss. Whether you're moving to AWS, Azure, Google Cloud, or private cloud, we handle the entire migration process smoothly.",
-      link: '/articles/cloud-migration',
-      linkText: 'Learn more',
+      title: 'Zero-Downtime Cloud Migration',
+      text: "Evacuate your aging server room smoothly. Our certified cloud architects meticulously plan and execute migrations to the AWS Middle East (UAE) Region and Azure UAE Central. By utilizing secure parallel validation, we guarantee zero data loss and absolutely minimal downtime—whether you require a 'lift-and-shift' or an application refactoring.",
+      link: '/articles/cloud-infrastructure-guide',
+      linkText: 'Read our Integration Guide',
       image: '/images/services/cloud-migration-v2.png',
       imageAlt: 'Cloud migration services in UAE',
     },
     {
-      title: 'Cloud Infrastructure Setup and Management',
-      text: 'We design and deploy cloud infrastructure tailored to your business needs. From initial setup to ongoing management, we ensure your cloud environment is secure, scalable, and cost-effective. Optimized cloud architecture supports your business growth efficiently.',
-      link: '/articles/cloud-infrastructure',
-      linkText: 'Learn more',
+      title: 'Infrastructure Setup and Cloud FinOps',
+      text: 'Moving to the cloud should lower costs, not explode them. We design strictly optimized environments utilizing auto-scaling and Reserved Instances (RIs) to drastically reduce your monthly OPEX. Our FinOps dashboards ensure you never suffer from "bill shock" by instantly shutting down orphaned test servers during Dubai off-hours.',
+      link: '/articles/cloud-infrastructure-guide',
+      linkText: 'Learn about FinOps',
     },
     {
-      title: 'Data Management and Backup Solutions',
-      text: 'Manage your data effectively with comprehensive data management solutions. Automated backups, data archiving, disaster recovery, and data governance ensure your data is protected, accessible, and compliant. Your data stays safe and organized in the cloud.',
+      title: 'Compliance-Driven Data Backup (DRaaS)',
+      text: 'Is your company prepared for a massive ransomware attack? We deploy robust Disaster Recovery as a Service (DRaaS) with exact Recovery Point Objectives (RPO). By implementing immutable, air-gapped backups and strict AES-256 encryption, we ensure your data survives any disaster while strictly adhering to UAE federal data laws.',
       link: '/articles/cloud-data-management',
-      linkText: 'Learn more',
+      linkText: 'Data Protection Strategies',
     },
   ],
   features: [
     {
       icon: 'icon1',
-      title: 'Safe and efficient cloud migration with zero downtime',
+      title: 'Zero-downtime migration workflows to AWS and Azure',
     },
     {
       icon: 'icon2',
-      title: 'Scalable cloud infrastructure designed for your business',
+      title: 'Guaranteed compliance with UAE TRA data residency mandates',
     },
     {
       icon: 'icon3',
-      title: 'Comprehensive data management and backup solutions',
+      title: 'Proactive Cloud FinOps ensuring maximum cost reduction',
     },
     {
       icon: 'icon4',
-      title: 'Secure cloud environments with advanced security',
+      title: 'Military-grade encryption and automated Disaster Recovery',
     },
     {
       icon: 'icon5',
-      title: 'Cost optimization and cloud cost management',
+      title: '24/7 localized SOC monitoring from our Dubai headquarters',
     },
   ],
   secondSection: [
     {
-      title: 'Multi-Cloud and Hybrid Cloud Solutions',
-      text: 'We support multi-cloud and hybrid cloud architectures. Use multiple cloud providers or combine cloud with on-premises infrastructure for maximum flexibility. We manage complex cloud environments, ensuring everything works together seamlessly.',
+      title: 'Hybrid Cloud: The Best of Both Worlds',
+      text: 'Not all data belongs on a public server. We design sophisticated Hybrid Cloud architectures that keep your highly sensitive financial databases on secure, local private servers within UAE datacenters (like Khazna or Equinix DX1), while bursting non-sensitive frontend web traffic seamlessly into scalable AWS environments.',
       link: '/articles/cloud-multi-hybrid',
-      linkText: 'Learn more',
+      linkText: 'Explore Hybrid Clouds',
       image: '/images/services/cloud-hybrid-v2.png',
-      imageAlt: 'Multi-cloud and hybrid cloud solutions',
+      imageAlt: 'Hybrid cloud solutions in Dubai',
     },
     {
-      title: 'Cloud Security and Compliance',
-      text: 'We implement comprehensive cloud security measures to protect your data and applications. Encryption, access controls, security monitoring, and compliance management ensure your cloud environment meets security standards and regulatory requirements.',
+      title: 'Cloud Security and NESA Alignment',
+      text: 'In the cloud, security relies on the Shared Responsibility Model. We take full ownership of your IAM (Identity and Access Management), deploying Zero-Trust protocols and securing endpoints. We ensure your architecture meets the rigorous National Electronic Security Authority (NESA/SIA) frameworks required by UAE government and enterprise clients.',
       link: '/articles/cloud-security-compliance',
-      linkText: 'Learn more',
+      linkText: 'Ensure Cloud Security',
     },
     {
-      title: 'Cloud Cost Optimization',
-      text: "We optimize your cloud costs to ensure you're getting the best value. Right-sizing resources, identifying unused services, and implementing cost-saving strategies reduce your cloud expenses while maintaining performance. You get maximum value from your cloud investment.",
+      title: 'Microsoft 365 and Google Workspace Integration',
+      text: "Modernize your remote workforce. We handle complete corporate migrations from legacy on-premise Exchange servers directly into Microsoft 365 or Google Workspace. Complete with advanced spam filtering, SharePoint architecture, and strict mobile device management (MDM) endpoint controls.",
       link: '/articles/cloud-cost-optimization',
-      linkText: 'Learn more',
+      linkText: 'Modernize Your Workforce',
     },
   ],
   benefits: [
     {
       icon: '/images/benefits/global.png',
-      text: 'Dubai-based with <br> global coverage',
+      text: 'Dubai-based Cloud <br> Certified Architects',
     },
     {
       icon: '/images/benefits/time.png',
-      text: '24/7 availability with <br> fastest SLA',
+      text: 'Zero-Downtime <br> Migration Workflows',
     },
     {
       icon: '/images/benefits/team.png',
-      text: 'Highly-qualified <br> IT professionals',
+      text: 'TRA / NESA <br> Data Compliance',
     },
     {
       icon: '/images/benefits/pricing.png',
-      text: 'Affordable pricing <br> & cost efficiency',
+      text: 'Aggressive Cloud <br> Cost Optimization',
     },
     {
       icon: '/images/benefits/communication.png',
-      text: 'Clear and transparent <br> communication',
+      text: 'Transparent <br> Dashboard Metrics',
     },
   ],
   geoContent: {
@@ -136,82 +136,82 @@ const cloudContent = {
       { name: 'Ras Al Khaimah', hubs: [] },
       { name: 'Umm Al Quwain', hubs: [] }
     ],
-    terms: ['Cloud Services Dubai', 'Cloud Migration UAE', 'Data Management Dubai', 'Managed Cloud Solutions'],
+    terms: ['AWS Migration Dubai', 'Azure Integrator UAE', 'Cloud FinOps Middle East', 'Private Datacenter Hosting'],
   },
   resources: [
     {
       type: 'CASE STUDY',
-      title: 'Successful Cloud Migration: 50% Cost Reduction',
+      title: 'Successful Hybrid Migration: 40% OPEX Reduction',
       description:
-        'Learn how a Dubai-based company successfully migrated to the cloud and reduced IT costs by 50% while improving performance.',
+        'Learn how a JLT-based financial firm maintained strict data residency compliance while completely removing their on-premise CAPEX.',
       image: '/images/services/cards/book.png',
       url: '/case-studies/cloud-migration',
       ctaText: 'Read Case Study',
     },
     {
       type: 'GUIDE',
-      title: 'Complete Guide to Cloud Services in UAE',
+      title: 'The Ultimate Guide to Cloud Infrastructure',
       description:
-        'Essential guide covering cloud migration, cloud infrastructure, data management, and best practices for cloud services in Dubai and UAE.',
+        'Essential architectural guide covering TCO analysis, FinOps, and multi-cloud strategies for GCC businesses.',
       image: '/images/services/cards/guide.png',
-      url: '/resources/cloud-services-guide',
-      ctaText: 'Download Guide',
+      url: '/articles/cloud-infrastructure-guide',
+      ctaText: 'Read Guide',
     },
     {
-      type: 'ARTICLE',
-      title: 'Cloud Migration Strategy: Planning Your Move to the Cloud',
+      type: 'CAPABILITY',
+      title: 'Defending Your Cloud with Zero Trust',
       description:
-        'Learn how to plan and execute a successful cloud migration strategy for your business in the UAE.',
+        'Understand the shared responsibility model and why IAM security is critical for your Azure deployment.',
       image: '/images/services/cards/multi.png',
-      url: '/blog/cloud-migration-strategy',
-      ctaText: 'Read Article',
+      url: '/articles/cybersecurity-guide',
+      ctaText: 'Secure Your Cloud',
     },
   ],
   cta: {
-    title: 'Ready to Move to the Cloud?',
-    text: "Contact us for a free consultation and let's discuss your cloud and data services needs.",
-    ctaText: 'Get Free Consultation',
+    title: 'Ready to Evacuate Your Server Room?',
+    text: "Contact our Senior Cloud Architects for a Free Total Cost of Ownership (TCO) Analysis.",
+    ctaText: 'Request TCO Analysis',
     ctaUrl: '#contact',
   },
   relatedServices: [
     {
-      title: 'Cybersecurity & Data Protection',
+      title: 'Cybersecurity & IAM',
       url: '/services/cybersecurity',
-      description: 'Enterprise cybersecurity solutions for your business.',
+      description: 'Zero Trust architecture and cloud endpoint security.',
+    },
+    {
+      title: 'Strategic IT Consulting',
+      url: '/services/it-consulting',
+      description: 'Vendor selection and digital transformation roadmaps.',
     },
     {
       title: 'Managed IT Services',
       url: '/services/managed-it',
-      description: 'Complete IT infrastructure management.',
-    },
-    {
-      title: 'IT Support & Helpdesk',
-      url: '/services/it-support',
-      description: '24/7 IT support and helpdesk services.',
+      description: '24/7 NOC monitoring of your new cloud environment.',
     },
   ],
   faq: {
-    title: 'Frequently Asked Questions About Cloud Services',
+    title: 'Frequently Asked Questions About Cloud Migrations',
     items: [
       {
-        question: 'What cloud services does your IT company in Dubai provide?',
+        question: 'Does AWS/Azure comply with UAE data residency laws?',
         answer:
-          'As an IT company in Dubai, we provide comprehensive cloud services including cloud migration, cloud infrastructure setup, data management, backup solutions, multi-cloud and hybrid cloud solutions. Our IT company in Dubai helps businesses move to the cloud safely and efficiently.',
+          'Yes. Both AWS and Microsoft Azure now host dedicated Local Regions within the UAE (AWS Middle East Region, Azure UAE Central). By actively selecting these availability zones, your data remains physically within the Emirates, fully complying with TDRA and NESA regulations.',
       },
       {
-        question: 'How long does cloud migration take with an IT company in Dubai?',
+        question: 'How long does an enterprise cloud migration take in Dubai?',
         answer:
-          'Cloud migration timelines vary based on your infrastructure size and complexity. As an IT company in Dubai, we typically complete migrations in 2-8 weeks, depending on your requirements. Our IT company in Dubai ensures minimal downtime during migration.',
+          'Depending on whether you are executing a simple "lift-and-shift" or refactoring legacy applications, standard enterprise migrations take 4 to 12 weeks. Our Dubai team stages parallel environments to ensure the final cutover is instantaneous, guaranteeing zero downtime during business hours.',
       },
       {
-        question: 'Does the IT company in Dubai offer cloud cost optimization?',
+        question: 'Can you lower our existing AWS or Azure bills?',
         answer:
-          'Yes, our IT company in Dubai provides cloud cost optimization services including right-sizing resources, identifying unused services, and implementing cost-saving strategies. We help businesses reduce cloud expenses while maintaining performance.',
+          'Absolutely. We utilize Cloud FinOps strategies. By terminating orphaned resources, right-sizing over-provisioned virtual machines, and implementing 3-Year Reserved Instances (RIs) or Savings Plans, we typically slash our clients’ monthly compute bills by 30% to 50%.',
       },
       {
-        question: 'What cloud platforms does the IT company in Dubai support?',
+        question: 'What is a Hybrid Cloud and do we need one?',
         answer:
-          'Our IT company in Dubai supports all major cloud platforms including AWS, Microsoft Azure, Google Cloud Platform, and private cloud solutions. As an IT company in Dubai, we help you choose the best platform for your business needs.',
+          'A Hybrid Cloud combines your physical on-premise servers (or a dedicated local private datacenter like Khazna) with massive public clouds like AWS. This is critical for banks or government contractors in Abu Dhabi who need high-performance computing without ever moving sensitive IP out of their physical building.',
       },
     ],
   },

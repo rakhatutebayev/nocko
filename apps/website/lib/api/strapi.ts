@@ -264,14 +264,14 @@ async function fetchAPIInternal<T>(
     }
 
     return res.json();
-  } catch (error) {
+  } catch (error: any) {
     // Clear timeout on error
     if (timeoutId) {
       clearTimeout(timeoutId);
     }
     
     // Handle network errors (connection refused, timeout, etc.)
-    if (error instanceof TypeError && error.message.includes('fetch failed')) {
+    if ((error instanceof TypeError && error.message.includes('fetch failed')) || error.name === 'AbortError') {
       // Try fallback to localhost if using internal Docker URL
       if (typeof window === 'undefined' && STRAPI_URL.includes('cms:1337')) {
         const fallbackUrl = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';

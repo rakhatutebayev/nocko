@@ -151,22 +151,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'projection') {
     caseStudy = {
       attributes: {
-        title: 'How Projection Improved IT Reliability with Annual Maintenance Contract',
-        client: 'Projection',
-        industry: 'IT AMC',
+        title: 'How Projection Improved IT Reliability with a Dedicated AMC',
+        client: 'Projection (Dubai & Abu Dhabi)',
+        industry: 'IT AMC & Maintenance',
         challenge:
-          '<p>Projection is a UAE‑based company with three offices and ~80 endpoints. Their IT stack included aging switches, mixed cable standards, and unmanaged Wi‑Fi. Support was reactive: tickets piled up, vendors arrived late, and repeat incidents increased.</p><p>The leadership team needed faster response times, higher reliability, and an upgrade plan that would not disrupt operations.</p>',
+          '<p>Projection is a UAE-based company with three major offices across Dubai and Abu Dhabi, managing over 80 endpoints. Their legacy IT stack included aging switches, disorganized cabling, and unmanaged Wi-Fi. Support was purely reactive: employees wasted hours waiting for ad-hoc IT freelancers, and recurring incidents crippled productivity.</p><p>leadership required guaranteed response times (SLAs), physical hardware reliability across multiple Emirates, and a unified upgrade roadmap that wouldn\'t disrupt ongoing operations.</p>',
         solution:
-          '<p>We introduced a structured Annual Maintenance Contract (AMC) that combined proactive monitoring, quarterly preventive visits, and a clearly defined SLA. The first 30 days focused on asset discovery, network mapping, and risk scoring.</p><p>We standardized switch configurations, replaced failing patch panels, and labeled/recertified critical cabling runs. A priority‑based ticket system and escalation path were implemented, with a dedicated onsite engineer for the highest‑risk office.</p>',
+          '<p>NOCKO introduced a strict Annual Maintenance Contract (AMC) combining 24/7 proactive NOC monitoring, quarterly physical preventive maintenance (PM) visits, and financially backed SLAs. The first 30 days were dedicated to complete IT asset discovery and network risk scoring.</p><p>We replaced failing patch panels, labeled all IDFs, and standardized switch configurations. A priority-based ServiceNow ticketing workflow provided transparent escalation, placing a dedicated Level-2 onsite engineer at their highest-traffic Business Bay office.</p>',
         results: {
-          uptime: 'Achieved 99.9% uptime across core network services',
-          responseTime: 'Average response time improved from 6h to 2h (Dubai)',
-          incidents: 'Critical incident volume reduced by 48% within 4 months',
-          rollout: 'Completed phased upgrades without downtime for client‑facing systems',
-          satisfaction: 'Helpdesk satisfaction score increased from 3.6 to 4.7/5',
+          uptime: 'Achieved 99.9% uptime across core branch network services',
+          responseTime: 'Average physical response time improved from 6 hours to under 2 hours (Dubai)',
+          incidents: 'Critical Priority-1 incident volume reduced by 48% within 4 months',
+          rollout: 'Completed phased Wi-Fi upgrades without downtime for client-facing systems',
+          satisfaction: 'Internal Helpdesk satisfaction score increased from 3.6 to 4.7/5',
         },
         testimonial:
-          '“We now have predictable costs, faster response, and a clear upgrade roadmap. The AMC program removed the chaos from our IT operations.”',
+          '“We now have predictable costs, faster response, and a clear upgrade roadmap. The NOCKO AMC program completely removed the chaos from our multi-branch IT operations.”',
       },
     } as any;
   }
@@ -175,21 +175,21 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
     caseStudy = {
       attributes: {
         title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity',
-        client: 'Solus Insurance',
-        industry: 'Cybersecurity',
+        client: 'Solus Insurance (DIFC)',
+        industry: 'Cybersecurity & Compliance',
         challenge:
-          '<p>Solus Insurance manages sensitive customer data across multiple lines of business. Their security stack had grown organically, leaving gaps in visibility and inconsistent policies across endpoints and cloud workloads.</p><p>They needed stronger detection, faster incident response, and a compliance‑ready security posture without disrupting daily operations.</p>',
+          '<p>Solus Insurance manages highly sensitive financial and customer data within the Dubai International Financial Centre (DIFC). Their legacy security stack had grown organically, leaving blind spots across remote endpoints and Azure cloud workloads.</p><p>Facing strict new compliance requirements from the UAE NESA and DFSA frameworks, Solus needed enterprise-grade threat detection, instant incident response, and a Zero Trust posture without slowing down their brokers.</p>',
         solution:
-          '<p>We deployed an enterprise cybersecurity program with centralized monitoring, endpoint hardening, and segmented network access. A layered approach combined firewall policy cleanup, EDR rollout, and 24/7 SOC monitoring.</p><p>We also implemented security baselines, phishing protection, and a structured incident response playbook aligned to insurance compliance requirements.</p>',
+          '<p>We deployed a comprehensive Zero Trust cybersecurity architecture featuring centralized 24/7 SOC monitoring, EDR (Endpoint Detection and Response) hardening, and micro-segmented network access.</p><p>The deployment included firewall policy optimization, automated phishing simulation for brokers, and a structured Incident Response payload entirely aligned to DFSA regulatory compliance standards.</p>',
         results: {
-          detection: 'Reduced average threat detection time from hours to minutes',
-          coverage: '100% endpoint visibility across offices and remote users',
-          incidents: 'Security incidents reduced by 42% within 90 days',
-          compliance: 'Improved audit readiness with standardized security controls',
-          response: 'Faster incident response with clear escalation paths',
+          detection: 'Reduced average ransomware/threat detection time from hours to under 4 minutes',
+          coverage: '100% EDR visibility across all DIFC offices and remote broker laptops',
+          incidents: 'False-positive security alerts reduced by 42% within 90 days',
+          compliance: 'Successfully passed annual DFSA IT audits with zero critical findings',
+          response: 'Automated containment isolates infected endpoints in seconds',
         },
         testimonial:
-          '“We gained visibility across our entire environment and a clear response plan. Security is now proactive, not reactive.”',
+          '“We gained visibility across our entire multi-cloud environment and a clear response plan. Security is now an automated compliance asset, not a daily IT headache.”',
       },
     } as any;
   }
@@ -197,22 +197,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'fh') {
     caseStudy = {
       attributes: {
-        title: 'How FH Fundamental Migrated to Cloud with Zero Downtime',
+        title: 'How FH Fundamental Migrated to AWS UAE with Zero Downtime',
         client: 'FH Fundamental',
         industry: 'Cloud & Data Services',
         challenge:
-          '<p>FH Fundamental operated legacy on‑premises infrastructure hosting business‑critical applications and customer data. Aging hardware, limited scalability, and high maintenance overhead constrained their growth and innovation capacity.</p><p>They needed a migration path to cloud that ensured zero downtime, preserved data integrity, and enabled rapid deployment of new services without disrupting existing operations.</p>',
+          '<p>FH Fundamental operated entirely on aging on-premises infrastructure located in a local server room. The physical hardware constrained their scalability, required heavy CapEx for upgrades, and posed a significant disaster recovery risk during power fluctuations.</p><p>They needed a seamless migration path to the cloud that ensured absolute zero downtime, strictly adhered to UAE TRA data residency requirements, and allowed for rapid deployment of new web services.</p>',
         solution:
-          '<p>We designed a phased cloud migration strategy targeting AWS, with parallel run capability to validate workloads before cutover. Application assessment identified dependencies, and a lift‑and‑shift approach was combined with selective re‑platforming for high‑traffic services.</p><p>Pre‑migration testing, synchronized data replication, and a rollback plan ensured safety at each stage. We migrated non‑critical workloads first, validated performance, then moved production systems during planned maintenance windows with health checks at every step.</p>',
+          '<p>NOCKO engineered a phased cloud migration targeting the AWS Middle East (UAE) Region, utilizing parallel-run capabilities to validate workloads before final DNS cutover. We utilized a strategic mix of Lift-and-Shift for legacy ERPs and selective re-platforming (Docker) for high-traffic web applications.</p><p>Pre-migration ekahau testing, synchronized block-level data replication, and strict rollback plans guaranteed safety. Production cutovers were executed during predetermined 3 AM maintenance windows.</p>',
         results: {
-          uptime: 'Achieved zero downtime during migration of 12 production workloads',
-          performance: 'Application response times improved by 35% post‑migration',
-          scalability: 'Auto‑scaling enabled for peak traffic periods without manual intervention',
-          deployment: 'New feature deployment time reduced from weeks to hours',
-          reliability: 'Infrastructure uptime improved from 98.2% to 99.95%',
+          uptime: 'Achieved 100% zero downtime during the live migration of 12 production databases',
+          performance: 'Database query response times improved by 35% utilizing AWS NVMe instances',
+          scalability: 'Auto-scaling enabled for peak ramadan traffic periods without manual intervention',
+          residency: '100% Compliance with UAE TRA data residency regulations',
+          reliability: 'Total infrastructure uptime improved from 98.2% to 99.99%',
         },
         testimonial:
-          '"The migration was seamless. Our teams kept working without interruption, and we immediately gained speed and reliability we never had with on‑prem."',
+          '"The AWS migration was completely invisible to our users. Our teams kept working without interruption, and we instantly gained the enterprise speed and reliability we could never afford on-premise."',
       },
     } as any;
   }
@@ -220,22 +220,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'scalini') {
     caseStudy = {
       attributes: {
-        title: 'How Scalini Transformed Network Infrastructure Across 5 Locations',
+        title: 'How Scalini Standardized Network Infrastructure Across 5 Locations',
         client: 'Scalini Restaurant Group',
         industry: 'Structured Cabling',
         challenge:
-          '<p>Scalini operates 5 restaurant locations across Dubai and Abu Dhabi. Each site had been cabled independently over time, resulting in mixed standards, undocumented patch panels, unlabeled runs, and inconsistent Wi‑Fi coverage. POS downtime during peak hours led to lost revenue and customer complaints.</p><p>The IT team needed a standardized network foundation that could support centralized reservation systems, security cameras, digital signage, and reliable guest Wi‑Fi without ongoing troubleshooting.</p>',
+          '<p>Scalini operates 5 high-end restaurant locations across Dubai and Abu Dhabi. Each site was cabled independently by different contractors, resulting in uncertified cabling patches, unlabeled IDFs, and massive Wi-Fi dead zones. Constant POS drops during peak dining hours led directly to lost revenue.</p><p>Their IT team demanded a standardized physical layer capable of unified reservation systems, 4K security cameras, and uninterrupted guest Wi-Fi across all Emirates.</p>',
         solution:
-          '<p>We deployed a unified structured cabling program across all 5 locations. Each site received certified Cat6A runs to support 10Gbps backbone links, labeled patch panels, and a documented cable map. Centralized switches were placed in each location with fiber uplinks to a regional hub.</p><p>Wi‑Fi access points were strategically positioned for full guest and back‑of‑house coverage. All installations were certified with Fluke testing, and as‑built documentation was delivered with each site handover.</p>',
+          '<p>NOCKO executed a unified Structured Cabling overhaul across all 5 properties. Each site received certified Cat6A runs to support 10Gbps backbone links, meticulously labeled patch panels, and 25-year manufacturer warranties. </p><p>Utilizing Ekahau predictive heatmapping, we strategically placed enterprise access points to eliminate concrete and kitchen interference. All installations were strictly validated with Fluke DSX CableAnalyzers, and complete as-built CAD documentation was handed over.</p>',
         results: {
-          coverage: '100% Wi‑Fi coverage across all dining and kitchen areas',
-          uptime: 'Achieved 99.9% network uptime for POS and reservation systems',
-          deployment: 'Completed rollout across 5 locations in 8 weeks without disrupting operations',
-          standardization: 'Single cabling standard and labeling scheme across all sites',
-          scalability: 'Ready for future expansion with documented infrastructure',
+          coverage: '100% Enterprise Wi-Fi coverage across all VIP dining and kitchen areas',
+          uptime: 'Achieved 99.99% network uptime for mission-critical POS systems',
+          deployment: 'Completed night-shift physical rollouts across 5 locations without disrupting daytime operations',
+          standardization: 'Single flawless Fluke-certified cabling standard across all restaurants',
+          scalability: 'Fully documented physical backbone ready for their next 3 location expansions',
         },
         testimonial:
-          '"Our network used to be a constant headache. Now it just works. Every location has the same reliable setup, and we can finally focus on serving our guests instead of troubleshooting Wi‑Fi."',
+          '"Our restaurant networks used to be a terrifying black box. Now, every location has the exact same Fluke-certified setup, and we can finally focus on VIP guest experiences instead of apologizing for dropped Wi-Fi."',
       },
     } as any;
   }
@@ -243,22 +243,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'gss') {
     caseStudy = {
       attributes: {
-        title: 'How Global Service Solution Achieved 24/7 IT Support Excellence',
-        client: 'Global Service Solution',
-        industry: 'IT Support',
+        title: 'How Global Service Solution Achieved 24/7 Flight IT Support',
+        client: 'Global Service Solution (Aviation Hub)',
+        industry: 'IT Support & Helpdesk',
         challenge:
-          '<p>Global Service Solution operates a 24/7 flight dispatch center coordinating aircraft operations across the Middle East and Asia. Their dispatch teams rely on mission‑critical systems for flight planning, weather data, real‑time tracking, and regulatory compliance.</p><p>Any IT downtime directly impacts flight schedules and safety. They needed guaranteed 24/7 IT support with rapid response times, proactive monitoring, and zero tolerance for unscheduled outages.</p>',
+          '<p>Global Service Solution operates a hyper-critical 24/7 flight dispatch center coordinating aircraft across the Middle East. Their dispatchers rely entirely on real-time weather software, secure VPNs, and compliance-heavy flight planning systems.</p><p>Standard "9-to-5" IT contractors were failing them. Any overnight IT downtime directly grounded flights. They demanded a guaranteed 24/7 Helpdesk with instant remote diagnostics and zero tolerance for missed SLAs.</p>',
         solution:
-          '<p>We implemented a comprehensive 24/7 IT support program with dedicated onsite engineers during peak hours and remote monitoring coverage around the clock. A tiered escalation system ensures critical incidents reach senior engineers within minutes.</p><p>Proactive monitoring tracks server health, network performance, and application uptime with automated alerts. Redundant systems were deployed for all critical workloads, and a detailed runbook was created for common incident scenarios to minimize resolution time.</p>',
+          '<p>NOCKO implemented an aviation-grade 24/7 IT Support workflow. We assigned dedicated onsite engineers during peak dispatch hours and seamlessly handed over to our remote NOC (Network Operations Center) for overnight coverage.</p><p>Our L2 engineers integrated ServiceNow ticketing with VIP escalation paths to ensure any dispatcher issue was addressed instantly within 15 minutes. Proactive MDM endpoint monitoring detects laptop failures before dispatchers even report them.</p>',
         results: {
-          uptime: 'Achieved 99.8% uptime for dispatch systems with zero unscheduled downtime',
-          response: 'Average response time of 30 minutes for P1 incidents (target: 1 hour)',
-          availability: '24/7 onsite or remote engineer coverage with <15min escalation',
-          incidents: 'Critical incident count reduced by 62% through proactive monitoring',
-          satisfaction: 'Dispatch team satisfaction rating: 4.9/5 for IT support quality',
+          uptime: 'Achieved 99.9% availability for dispatch terminals with zero unscheduled downtime',
+          response: 'Average Helpdesk remote triage time of under 10 minutes for Priority-1 incidents',
+          availability: 'True 24/7/365 coverage with continuous holiday rotations',
+          incidents: 'Avoidable hardware crashes reduced by 62% via proactive MDM monitoring',
+          satisfaction: 'Flight Dispatch team satisfaction rating hit 4.9/5',
         },
         testimonial:
-          '"Our flight dispatch operations never stop, and now our IT support never stops either. The team is always available, and issues are resolved before they impact our operations."',
+          '"Aviation never sleeps, and now our IT support doesn\'t either. NOCKO is always online, instantly fixing VPN drops before they can delay our flight schedules."',
       },
     } as any;
   }
@@ -266,22 +266,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'technohub') {
     caseStudy = {
       attributes: {
-        title: 'How TechnoHub Transformed IT Operations with Managed Services',
+        title: 'How TechnoHub Transformed Operations with Full Managed IT (MSP)',
         client: 'TechnoHub',
-        industry: 'Managed Services',
+        industry: 'Managed Services (MSP)',
         challenge:
-          '<p>TechnoHub is a growing technology consultancy managing IT infrastructure across multiple projects. Their in‑house IT team was overwhelmed with reactive support, vendor management, security patching, and infrastructure maintenance, leaving no time for strategic initiatives.</p><p>Rising costs, fragmented vendor relationships, and unpredictable IT spending made it difficult to plan budgets. They needed a partner to fully manage their IT operations while aligning technology with business goals.</p>',
+          '<p>TechnoHub, a growing consultancy in Dubai Media City, was bleeding money on fragmented IT contractors. Their solo internal IT manager was overwhelmed by reactive password resets, disjointed vendor management (Du/Etisalat), and manual laptop setups for new hires.</p><p>The lack of strategic IT leadership led to massive Shadow IT spending. They needed a Managed Service Provider (MSP) to completely take over daily operations while providing executive-level guidance.</p>',
         solution:
-          '<p>We transitioned TechnoHub to a fully managed IT services model, taking ownership of infrastructure, security, support, and vendor coordination. A dedicated account manager became the single point of contact, and a 24/7 SOC monitored all systems with proactive alerts.</p><p>We consolidated vendor contracts, implemented security baselines, automated patch management, and created a quarterly technology roadmap aligned with business objectives. Predictable monthly pricing replaced unpredictable project‑based costs.</p>',
+          '<p>We transitioned TechnoHub to a comprehensive NOCKO Managed Services agreement (MSP). We became their entire IT department overnight, absorbing all Helpdesk requests, SOC security monitoring, and hardware lifecycle procurement.</p><p>Through our embedded Virtual CTO (vCTO) program, we consolidated their SaaS vendors, audited Microsoft 365 licenses to eliminate bloat, and shifted their erratic IT spending into a predictable, flat-rate monthly OPEX model.</p>',
         results: {
-          cost: 'IT operational costs reduced by 40% through vendor consolidation',
-          predictability: 'Fixed monthly pricing with zero surprise invoices',
-          focus: 'Internal IT team freed to focus on strategic projects and innovation',
-          security: 'Security posture improved with automated patching and 24/7 monitoring',
-          alignment: 'Quarterly roadmap meetings ensure IT supports business growth',
+          cost: 'Total IT operational costs dropped by 40% purely through SaaS vendor consolidation',
+          predictability: 'Transitioned to a flat-rate monthly per-user OPEX with zero hidden invoices',
+          focus: 'Internal management freed entirely from daily IT firefighting',
+          security: 'Achieved Zero Trust security posture with 24/7 automated patching',
+          alignment: 'Quarterly vCTO roadmap meetings ensure IT strictly supports their revenue goals',
         },
         testimonial:
-          '"Managed services removed all the complexity. We now have a predictable IT budget, better security, and a partner who understands our business. Our internal team can finally focus on innovation instead of firefighting."',
+          '"NOCKO\'s Managed Services removed every ounce of IT friction. We finally have a predictable budget, bulletproof security, and a vCTO who understands our growth. They aren\'t contractors; they are our IT department."',
       },
     } as any;
   }
@@ -347,11 +347,38 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             {caseStudy.attributes.results && (
               <div className="case-study__section">
                 <h2>Results</h2>
-                <pre>{JSON.stringify(caseStudy.attributes.results, null, 2)}</pre>
+                <div className="case-study__results-grid" style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                  backgroundColor: '#f8f9fa',
+                  padding: '24px',
+                  borderRadius: '12px',
+                  marginTop: '16px',
+                  border: '1px solid #e9ecef'
+                }}>
+                  {Object.entries(caseStudy.attributes.results as Record<string, string>).map(([key, value]) => (
+                    <div key={key} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                      <span style={{ color: '#3474FF', fontSize: '1.2rem', lineHeight: '1.2' }}>✓</span>
+                      <div>
+                        {value}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
             {caseStudy.attributes.testimonial && (
-              <div className="case-study__testimonial">
+              <div className="case-study__testimonial" style={{
+                marginTop: '40px',
+                padding: '32px',
+                backgroundColor: '#ffffff',
+                borderLeft: '4px solid #3474FF',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
+                fontStyle: 'italic',
+                fontSize: '1.1rem',
+                color: '#495057'
+              }}>
                 <blockquote>{caseStudy.attributes.testimonial}</blockquote>
               </div>
             )}

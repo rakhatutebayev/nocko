@@ -21,7 +21,7 @@ interface CaseStudiesProps {
 const defaultCaseStudies: CaseStudy[] = [
   {
     id: 'scalini',
-    title: 'How Scalini Transformed Network Infrastructure Across 5 Locations',
+    title: 'How Scalini Standardized Network Infrastructure Across 5 Locations',
     type: 'Structured Cabling',
     image: '/images/cases/structured.svg',
     alt: 'Scalini network infrastructure transformation',
@@ -30,7 +30,7 @@ const defaultCaseStudies: CaseStudy[] = [
   },
   {
     id: 'gss',
-    title: 'How Global Service Solution Achieved 24/7 IT Support Excellence',
+    title: 'How Global Service Solution Achieved 24/7 Flight IT Support',
     type: 'IT Support & Helpdesk',
     image: '/images/cases/itsupport.svg',
     alt: 'IT Support & Helpdesk case study',
@@ -39,7 +39,7 @@ const defaultCaseStudies: CaseStudy[] = [
   },
   {
     id: 'technohub',
-    title: 'How TechnoHub Transformed IT Operations with Managed Services',
+    title: 'How TechnoHub Transformed Operations with Full Managed IT (MSP)',
     type: 'Managed IT Services',
     image: '/images/cases/itmanagment.svg',
     alt: 'Managed IT Services case study',
@@ -48,7 +48,7 @@ const defaultCaseStudies: CaseStudy[] = [
   },
   {
     id: 'projection',
-    title: 'How Projection Improved IT Reliability with Annual Maintenance Contract',
+    title: 'How Projection Improved IT Reliability with a Dedicated AMC',
     type: 'IT AMC',
     image: '/images/cases/amc.svg',
     alt: 'IT AMC case study',
@@ -66,7 +66,7 @@ const defaultCaseStudies: CaseStudy[] = [
   },
   {
     id: 'fh',
-    title: 'How FH Fundamental Migrated to Cloud with Zero Downtime',
+    title: 'How FH Fundamental Migrated to AWS UAE with Zero Downtime',
     type: 'Cloud & Data Services',
     image: '/images/cases/cloud.svg',
     alt: 'Cloud migration case study',

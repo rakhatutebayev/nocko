@@ -27,55 +27,55 @@ export const metadata: Metadata = {
 
 const articleData = {
   hero: {
-    title: 'Network Infrastructure & Structured Cabling',
-    subtitle: 'Deployment, Performance Optimization, and IT AMC',
+    title: 'Network Infrastructure & Structured Cabling in the UAE',
+    subtitle: 'Deployment, Fluke Certification, and Physical Layer Optimization',
     description: '',
   },
   intro:
-    'The physical layer of your IT environment dictates the reliability of everything stacked above it. Poorly installed wiring causes unexplained latency, dropped VoIP calls, and agonizing deployment delays. A unified approach combining certified Structured Cabling with strict IT Annual Maintenance Contracts (AMC) guarantees long-term network performance. This guide covers how to deploy, optimize, and maintain enterprise infrastructure.',
+    'The physical layer of your IT environment dictates the reliability of everything stacked above it. In the UAE environment, physical heat, dust in industrial zones, and dense concrete in modern high-rises pose significant challenges. Poorly installed wiring causes unexplained latency, dropped VoIP calls, and agonizing deployment delays. A unified approach combining certified Structured Cabling with strict IT Annual Maintenance Contracts (AMC) guarantees long-term network performance. This engineering guide covers how to deploy, certify, and optimize enterprise infrastructure across Dubai and Abu Dhabi.',
   blocks: [
     {
-      title: '1. Rapid Network Deployment and Structured Cabling',
-      text: '<p>Structured cabling organizes the chaos of IT hardware. By establishing standardized connectivity through central patch panels and high-grade unshielded twisted pair (UTP) or fiber optics, businesses can rapidly open new offices without network bottlenecks.</p><p>Deploying Cat6 or Cat6A cabling with proper documentation drastically simplifies future expansions. Certified technicians map out cable pathways avoiding electrical interference, ensuring the backbone supports at least 10Gbps connectivity between core switches.</p>',
+      title: '1. Industrial vs. Corporate Cabling (JAFZA vs. Business Bay)',
+      text: '<p>Deploying infrastructure in a high-rise corporate office in DIFC is fundamentally different from cabling a massive logistics warehouse in JAFZA or DIP. In corporate environments, the priority is density—running thousands of Cat6A cables tightly through raised floors to support Power over Ethernet (PoE) devices like VoIP phones and Wi-Fi 6 access points without causing cross-talk.</p><p>Conversely, industrial environments require heavy-duty deployment. Operating temperatures and electromagnetic interference (EMI) from factory equipment mean that standard Unshielded Twisted Pair (UTP) will fail. In these environments, we deploy Shielded Twisted Pair (STP) or armored OM4 fiber optics, suspended in robust hot-dip galvanized cable trays to ensure absolute longevity.</p>',
       list: [
-        'Site surveys to determine optimal routing for fiber backbones and copper horizontals',
-        'Installation of high-density patch panels, cable organizers, and rack labeling',
-        'Deployment of Cat6/Cat6A cabling supporting advanced PoE (Power over Ethernet) devices',
-        'Delivery of strict as-built documentation and Fluke test certification reports'
+        'Site surveys to document drop lengths (ensuring no copper run exceeds the strict 90-meter limit).',
+        'Installation of high-density patch panels, cable management arms (CMA), and rigorous port labeling.',
+        'Deployment of Cat6A cabling supporting advanced 802.3bt PoE++ (up to 90W) for PTZ cameras and smart lighting.',
+        'Delivery of strict as-built documentation and Fluke DSX-8000 test certification reports.'
       ],
       image: '/images/services/cabling-deploy.png',
       imageAlt: 'Certified network cabling rack',
     },
     {
-      title: '2. Network Performance Optimization',
-      text: '<p>Intermittent connection drops and slow file transfers signal degrading infrastructure. Optimizing network performance starts at the switch level. By configuring intelligent Quality of Service (QoS) protocols, critical applications like Microsoft Teams voice traffic are prioritized over background Windows updates.</p><p>Hardware auditing identifies legacy 100Mbps bottlenecks. Upgrading to managed gigabit switches with robust spanning-tree setups ensures network loops are blocked and traffic routes efficiently.</p>',
+      title: '2. Fiber Optic Backbones and Core Routing',
+      text: '<p>For multi-floor enterprise deployments or campus environments connecting multiple buildings, copper simply cannot handle the distance or bandwidth. Fiber optic backbones represent the core interstate highway of your corporate data.</p><p>We specialize in both Single-mode (for multi-kilometer distances between isolated campus buildings) and Multi-mode (for inter-rack 10G or 40G datacenter connections) fiber splicing. Once the physical layer is flawless, optimizing network performance involves configuring intelligent Quality of Service (QoS), ensuring critical traffic (like SAP or Microsoft Teams) is never choked by background Windows updates.</p>',
       list: [
-        'VLAN segmentation to separate IP cameras, guest Wi-Fi, and corporate data traffic',
-        'Configuring Traffic Shaping and QoS to guarantee bandwidth for critical voice/video',
-        'Upgrading legacy edge switches to eliminate throughput bottlenecks',
-        'Identifying and resolving broadcast storms degrading subnet performance'
+        'Fusion splicing for near-zero db signal loss across all OM3/OM4 fiber connections.',
+        'VLAN segmentation to cryptographically separate IP cameras, guest Wi-Fi, and corporate HR traffic.',
+        'Configuring Traffic Shaping and QoS on edge switches to guarantee bandwidth for critical voice/video.',
+        'Upgrading legacy edge switches with 10Gbps SFP+ uplinks to eliminate throughput bottlenecks.'
       ],
       image: '/images/services/cabling-performance.png',
       imageAlt: 'Network performance routing diagram',
     },
     {
-      title: '3. Lifecycle Management and Comprehensive IT AMC',
-      text: '<p>Structured cabling and hardware constitute massive capital expenditures. Without an IT Annual Maintenance Contract (AMC), dust, failing fans, and neglected software patches rapidly shorten hardware lifespans. IT AMC ensures your infrastructure is proactively maintained.</p><p>Comprehensive AMC agreements guarantee strict Service Level Agreements (SLAs). Quarterly maintenance visits check server rack thermals, reorganize untidy patch cables, and apply firmware updates to core routers.</p>',
+      title: '3. Datacenter Thermals and Rack Lifecycle Management',
+      text: '<p>Structured cabling and hardware constitute massive capital expenditures. Without an IT Annual Maintenance Contract (AMC), Dubai’s ubiquitous fine dust, failing server fans, and neglected software patches rapidly shorten hardware lifespans. Proper cable management directly impacts datacenter thermals—the "spaghetti" of unmanaged cables blocks server exhaust fans, causing CPUS to thermal throttle and crash.</p><p>Comprehensive AMC agreements guarantee strict physical maintenance. Quarterly physical visits check server rack thermals using infrared scanning, reorganize untidy patch cables restoring laminar airflow, and apply firmware updates to core routers before vulnerabilities are exploited.</p>',
       list: [
-        'Routine hardware cleaning and preventative thermal scanning on dense server racks',
-        'Priority hardware replacement managing RMAs on failing switches and endpoints',
-        'Lifecycle tracking forecasting exactly when servers will require physical replacement',
-        'Fixed annual costs (IT AMC) ensuring hardware preservation without surprise bills'
+        'Implementation of hot-aisle/cold-aisle containment strategies in local server rooms.',
+        'Routine hardware vacuuming and preventative thermal scanning on dense, high-load router racks.',
+        'Priority hardware replacement managing manufacturer RMAs on failing Dell/HP endpoints.',
+        'Fixed annual AMC costs allowing CFOs to precisely forecast hardware replacement without surprise CAPEX.'
       ],
     },
     {
-      title: '4. Ongoing Reliability with AMC Coverage',
-      text: '<p>Reliability requires continuity. Engaging a single provider for both your initial structured cabling deployment and ongoing AMC ensures absolute accountability. When an access point fails, the tech team already possesses the cable maps and switch port configurations needed to resolve it instantly.</p><p>This holistic approach aligns physical infrastructure management with operational strategy, guaranteeing that your network scales effortlessly alongside your Dubai-based business.</p>',
+      title: '4. Ongoing Reliability with Single-Vendor AMC Coverage',
+      text: '<p>Reliability requires continuity. Engaging a single IT provider for both your initial structured cabling deployment and ongoing managed AMC ensures absolute accountability. When an access point on the 40th floor fails, the technical NOC team already possesses the exact cable maps, port numbers, and switch configurations needed to resolve it instantly without sending a tech blindly into the ceiling.</p><p>This holistic approach aligns physical infrastructure management with your operational digital strategy, guaranteeing that your network backbone scales effortlessly as your company expands across the GCC.</p>',
       list: [
-        'Unified accountability covering physical layer cabling and software layer routing',
-        'Instant identification of issues via detailed pre-existing infrastructure documentation',
-        'Streamlined troubleshooting since engineers understand the bespoke network architecture',
-        'Adaptable IT coverage evolving as your headcount and office footprint expands'
+        'Unified accountability covering both the physical layer (cables) and software layer (routing/switching).',
+        'Instant identification of issues via detailed pre-existing 2D/3D infrastructure documentation.',
+        'Streamlined troubleshooting since engineers inherently understand the bespoke network architecture.',
+        'Adaptable IT cabling coverage scaling dynamically as your headcount and office footprint expands.'
       ],
     },
   ],
