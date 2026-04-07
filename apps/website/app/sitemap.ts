@@ -84,6 +84,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Static article pages
   const staticArticlePages: MetadataRoute.Sitemap = [
+    'centralized-helpdesk-ru',
     'cloud-infrastructure-guide',
     'cybersecurity-guide',
     'it-consulting-guide',
