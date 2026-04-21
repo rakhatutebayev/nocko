@@ -601,6 +601,29 @@
     }
   }
 
+  &__lang {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: $color-white;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color $transition-base;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    @include laptop {
+      color: #3474ff;
+      font-size: 14px;
+      margin-right: 15px;
+    }
+  }
+
   // IMPORTANT:
   // `layout/_header.scss` is imported BEFORE `components/_buttons.scss` (see `app/globals.scss`),
   // so generic `.btn--secondary` rules can override `.header__menu-cta`.
@@ -646,6 +669,13 @@
     
     @include mobile {
       color: #293443;
+    }
+  }
+  
+  &.scrolled &__lang {
+    color: #293443;
+    &:hover {
+      color: $color-primary;
     }
   }
   

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import MenuNavigation from './MenuNavigation';
 import ContactModal from '../contact/ContactModal';
 
@@ -51,6 +52,7 @@ export default function Header({ menu }: HeaderProps) {
   const navRef = useRef<HTMLElement>(null);
   const burgerRef = useRef<HTMLButtonElement>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
 
   // Make all "#contact" links work across the site:
   // - If a real section with id="contact" exists on the page -> smooth scroll to it
@@ -279,6 +281,13 @@ export default function Header({ menu }: HeaderProps) {
 
         {menu.attributes?.ctaText && (
           <div className="header__right">
+            <Link 
+              href={pathname === '/ru' ? '/' : '/ru'} 
+              className="header__lang"
+              aria-label="Switch Language"
+            >
+              {pathname === '/ru' ? 'EN' : 'RU'}
+            </Link>
             <button
               onClick={() => setIsContactModalOpen(true)}
               className="btn btn--secondary btn--sm header__menu-cta" 
