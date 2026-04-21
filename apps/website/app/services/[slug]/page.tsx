@@ -37,10 +37,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const service = await getService(slug);
 
-  if (!service) {
+  if (!service && slug !== 'structured-cabling') {
+    notFound();
+  }
+
+  if (!service && slug === 'structured-cabling') {
     return {
-      title: 'Service Not Found | NOCKO',
-      robots: { index: false, follow: false },
+      title: 'Structured Cabling Services | IT Services in UAE | NOCKO',
+      description: 'Professional Structured Cabling Services in UAE.',
     };
   }
 
