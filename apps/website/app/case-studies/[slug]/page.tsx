@@ -128,7 +128,8 @@ export async function generateMetadata({
 
   if (!caseStudy) {
     return {
-      title: 'Case Study Not Found',
+      title: 'Case Study Not Found | NOCKO',
+      robots: { index: false, follow: false },
     };
   }
 

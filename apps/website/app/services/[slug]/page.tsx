@@ -39,7 +39,8 @@ export async function generateMetadata({
 
   if (!service) {
     return {
-      title: 'Service Not Found',
+      title: 'Service Not Found | NOCKO',
+      robots: { index: false, follow: false },
     };
   }
 

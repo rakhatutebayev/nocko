@@ -1,6 +1,16 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
+
+export const metadata: Metadata = {
+  title: '404 - Page Not Found | NOCKO',
+  description: 'The page you are looking for does not exist.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function NotFound() {
   return (
