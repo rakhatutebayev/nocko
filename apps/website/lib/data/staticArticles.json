@@ -28,5 +28,11 @@
     "slug": "structured-cabling-guide",
     "title": "Network Infrastructure & Structured Cabling Guide",
     "excerpt": "A complete guide to structured cabling, network infrastructure deployment, lifecycle management, and performance optimization for businesses in Dubai and the UAE."
+  },
+  {
+    "id": "static-it-support-guide",
+    "slug": "it-support-guide",
+    "title": "Modern IT Support: SLAs, Helpdesk & Automation",
+    "excerpt": "A comprehensive guide to enterprise-grade IT support in the UAE. Explore the benefits of SLA-driven ticketing, zero-touch onboarding with Windows Autopilot, and 24/7 proactive monitoring."
   }
 ]
