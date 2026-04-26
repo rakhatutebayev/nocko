@@ -68,7 +68,7 @@ const nextConfig: NextConfig = {
         destination: '/articles/cybersecurity-guide',
         permanent: true,
       })),
-      ...['managed-it-backup', 'managed-it-cost', 'managed-it-infrastructure', 'managed-it-monitoring', 'managed-it-scalable', 'managed-it-security', 'it-support-24-7', 'it-support-helpdesk', 'it-support-monitoring', 'it-support-onsite', 'it-support-optimization', 'it-support-remote'].map(slug => ({
+      ...['managed-it-backup', 'managed-it-cost', 'managed-it-infrastructure', 'managed-it-monitoring', 'managed-it-scalable', 'managed-it-security'].map(slug => ({
         source: `/articles/${slug}`,
         destination: '/articles/managed-it-services-guide',
         permanent: true,

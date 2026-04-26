@@ -46,7 +46,7 @@ const itSupportContent = {
     {
       title: '24/7 Centralized Remote Helpdesk',
       text: "End-user downtime paralyzes organizational productivity. Our centralized Network Operations Center (NOC) operates 24/7/365, providing instant remote diagnostics. Whether your CFO is locked out of Microsoft 365 or a remote worker needs secure VPN access from abroad, our engineers connect securely to resolve 85% of issues within the first 15 minutes.",
-      link: '/articles/it-support-guide',
+      link: '/articles/it-support-remote',
       linkText: 'Our Remote Resolution Metrics',
       image: '/images/services/it-support-24-7.webp',
       imageAlt: '24/7 IT support services in UAE',
@@ -54,13 +54,13 @@ const itSupportContent = {
     {
       title: 'SLA-Driven Ticketing Workflows',
       text: 'Stop relying on unstructured WhatsApp messages to "the IT guy." We integrate professional, ITIL-compliant ticketing systems (like ServiceNow or Jira Service Management) directly into your corporate workflow. Every request is timestamped, categorized by severity, and bound by strict Service Level Agreements (SLAs)—guaranteeing transparent accountability and executive reporting.',
-      link: '/articles/it-support-guide',
+      link: '/articles/it-support-helpdesk',
       linkText: 'Explore SLA Integrations',
     },
     {
       title: 'Physical On-Site Dispatch Across Dubai',
       text: 'While remote support resolves software issues, hardware failures require physical intervention. When a router dies in your JLT office or a printer fails in your JAFZA warehouse, we dispatch certified field technicians. Our strategic location guarantees an average 2-hour physical arrival time for critical Priority-1 outages anywhere in Dubai.',
-      link: '/articles/it-support-guide',
+      link: '/articles/it-support-onsite',
       linkText: 'View Dispatch Zones',
     },
   ],
@@ -90,7 +90,7 @@ const itSupportContent = {
     {
       title: 'Proactive Endpoint Management (MDM)',
       text: 'With the rise of hybrid work in the UAE, securing mobile endpoints is critical. We deploy Mobile Device Management (MDM) platforms (like Microsoft Intune) to enforce security policies across all corporate laptops and phones. If an employee loses their device in a Dubai taxi, our helpdesk can remotely wipe the sensitive corporate data within seconds.',
-      link: '/articles/cybersecurity-guide',
+      link: '/articles/it-support-monitoring',
       linkText: 'Secure Your Endpoints',
       image: '/images/services/it-support-monitoring.webp',
       imageAlt: 'Proactive IT monitoring and maintenance',
@@ -98,13 +98,13 @@ const itSupportContent = {
     {
       title: "Employee Onboarding & Identity Management",
       text: "The HR process shouldn't be slowed down by IT bottlenecks. We completely automate your employee onboarding and offboarding workflows. When a new hire joins, we provision their Microsoft 365 licensing, configure their laptop security policies, and grant precise Role-Based Access Control (RBAC) before their first day in the office.",
-      link: '/articles/it-support-guide',
+      link: '/articles/it-support-optimization',
       linkText: 'Automate HR IT Processes',
     },
     {
       title: 'Shadow IT & Licensing Audits',
       text: "Employees frequently purchase unauthorized SaaS tools using corporate cards, creating massive security vectors (Shadow IT). Our active monitoring detects unsanctioned applications, blocks them, and forces users onto your secure, company-approved platforms—simultaneously rescuing thousands of dirhams in wasted duplicate licensing costs.",
-      link: '/articles/it-consulting-guide',
+      link: '/articles/it-support-24-7',
       linkText: 'Audit your Tech Stack',
     },
   ],

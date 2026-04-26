@@ -66,9 +66,39 @@
     "excerpt": "Stop overpaying for Microsoft 365 and Azure in Dubai. Maximize IT ROI and eliminate duplicate software costs."
   },
   {
-    "id": "static-it-consulting-digital-transformation",
-    "slug": "it-consulting-digital-transformation",
-    "title": "Business Continuity & Disaster Recovery UAE",
-    "excerpt": "Architecting cloud-native Disaster Recovery as a Service (DRaaS) to ensure zero data loss."
+    "id": "static-it-support-remote",
+    "slug": "it-support-remote",
+    "title": "24/7 IT Remote Helpdesk Services UAE",
+    "excerpt": "Instant remote IT diagnostics and resolution. Our centralized NOC resolves 85% of end-user issues within 15 minutes."
+  },
+  {
+    "id": "static-it-support-helpdesk",
+    "slug": "it-support-helpdesk",
+    "title": "ITIL Ticketing & SLA Workflows",
+    "excerpt": "Discover how ITIL-compliant ticketing systems and strict Service Level Agreements (SLAs) bring accountability to your IT operations."
+  },
+  {
+    "id": "static-it-support-onsite",
+    "slug": "it-support-onsite",
+    "title": "On-Site IT Dispatch Services Dubai",
+    "excerpt": "Certified field technicians dispatched physically for hardware failures. We guarantee 2-hour Priority-1 arrival across Dubai."
+  },
+  {
+    "id": "static-it-support-monitoring",
+    "slug": "it-support-monitoring",
+    "title": "Endpoint Management & MDM Solutions UAE",
+    "excerpt": "Secure corporate laptops and hybrid-work mobile devices with endpoint management (MDM/MAM) using Microsoft Intune."
+  },
+  {
+    "id": "static-it-support-optimization",
+    "slug": "it-support-optimization",
+    "title": "Automated Employee IT Onboarding UAE",
+    "excerpt": "Eliminate HR bottlenecks by fully automating your IT onboarding processes, IAM, and strict RBAC security in Dubai."
+  },
+  {
+    "id": "static-it-support-24-7",
+    "slug": "it-support-24-7",
+    "title": "Shadow IT Detection & Cloud Licensing Audits",
+    "excerpt": "Shut down dangerous shadow IT and unapproved SaaS applications. Reclaim thousands in duplicated licensing costs."
   }
 ]
