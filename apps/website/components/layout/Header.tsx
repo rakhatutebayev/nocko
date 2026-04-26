@@ -54,50 +54,6 @@ export default function Header({ menu }: HeaderProps) {
   const headerRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
 
-  const isRu = pathname === '/ru' || pathname.endsWith('-ru') || pathname.startsWith('/ru/');
-
-  const displayMenu: Menu = isRu ? {
-    id: 99,
-    attributes: {
-      items: [
-        {
-          id: 101,
-          label: 'Услуги',
-          url: '/ru#services',
-          isDropdown: true,
-          order: 1,
-          submenu: [
-            { id: 1, label: 'Монтаж сетей (СКС)', url: '/ru#services', order: 1 },
-            { id: 2, label: 'Техническая поддержка', url: '/services/it-support-ru', order: 2 }, // Link to the translated service page
-            { id: 3, label: 'ИТ Аутсорсинг', url: '/ru#services', order: 3 },
-            { id: 4, label: 'Абонентское обслуживание', url: '/ru#services', order: 4 },
-            { id: 5, label: 'Кибербезопасность', url: '/ru#services', order: 5 },
-            { id: 6, label: 'Облачные серверы', url: '/ru#services', order: 6 },
-            { id: 7, label: 'ИТ Консалтинг', url: '/ru#services', order: 7 },
-          ],
-        },
-        {
-          id: 102,
-          label: 'Отрасли',
-          url: '/ru#industries',
-          isDropdown: true,
-          order: 2,
-          submenu: [
-            { id: 8, label: 'Финансы и Финтех', url: '/ru#industries', order: 1 },
-            { id: 9, label: 'Недвижимость', url: '/ru#industries', order: 2 },
-            { id: 10, label: 'Медицина и Клиники', url: '/ru#industries', order: 3 },
-            { id: 11, label: 'Образование', url: '/ru#industries', order: 4 },
-            { id: 12, label: 'Ритейл и HoReCa', url: '/ru#industries', order: 5 },
-            { id: 13, label: 'Производство', url: '/ru#industries', order: 6 },
-          ],
-        },
-        { id: 103, label: 'О Нас', url: '/ru#clients', order: 3 },
-      ],
-      ctaText: 'Связаться',
-      ctaUrl: '#contact',
-    }
-  } : menu;
-
   // Make all "#contact" links work across the site:
   // - If a real section with id="contact" exists on the page -> smooth scroll to it
   // - Otherwise -> open the contact modal (used on most pages)
@@ -315,7 +271,7 @@ export default function Header({ menu }: HeaderProps) {
           </Link>
 
           <MenuNavigation
-            items={displayMenu.attributes?.items || []}
+            items={menu.attributes?.items || []}
             onItemClick={closeMenu}
             isMenuOpen={isMenuOpen}
             isMobile={isMobile}
@@ -323,11 +279,11 @@ export default function Header({ menu }: HeaderProps) {
           />
         </div>
 
-        {displayMenu.attributes?.ctaText && (
+        {menu.attributes?.ctaText && (
           <div className="header__right">
             <Link 
               href={pathname === '/ru' ? '/' : '/ru'} 
-              className="btn btn--secondary btn--sm header__menu-cta"
+              className="header__lang"
               aria-label="Switch Language"
             >
               {pathname === '/ru' ? 'EN' : 'RU'}
@@ -336,9 +292,9 @@ export default function Header({ menu }: HeaderProps) {
               onClick={() => setIsContactModalOpen(true)}
               className="btn btn--secondary btn--sm header__menu-cta" 
               tabIndex={0}
-              aria-label={`Open contact form: ${displayMenu.attributes?.ctaText}`}
+              aria-label={`Open contact form: ${menu.attributes.ctaText}`}
             >
-              {displayMenu.attributes?.ctaText}
+              {menu.attributes.ctaText}
             </button>
           </div>
         )}

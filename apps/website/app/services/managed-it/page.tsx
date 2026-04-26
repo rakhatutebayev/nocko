@@ -40,16 +40,22 @@ const managedItContent = {
     {
       title: 'Complete Infrastructure Outsourcing',
       text: 'For fast-growing companies in Dubai Multi Commodities Centre (DMCC) or JAFZA, hiring an internal IT department is costly and scales poorly. Our fully Managed IT solution acts as your entire IT department. From configuring the office firewall to resetting an employee’s Microsoft 365 password at 2 AM, we take 100% ownership of your technology stack.',
+      link: '/articles/managed-it-services-guide',
+      linkText: 'Explore Fully Managed IT',
       image: '/images/services/managed-it-infrastructure.webp',
       imageAlt: 'Managed IT infrastructure management services in UAE',
     },
     {
       title: 'Co-Managed IT for Enterprise Teams',
       text: 'If you already have a skilled IT Director or internal Helpdesk in your Dubai headquarters, they shouldn’t be wasting time on server patching or managing localized backups. Our Co-Managed IT structure integrates directly with your existing IT team. We handle the 24/7 backend NOC/SOC monitoring, freeing your internal staff to focus on high-value corporate projects.',
+      link: '/articles/managed-it-services-guide',
+      linkText: 'Learn about Co-Managed IT',
     },
     {
       title: 'Virtual Chief Technology Officer (vCTO)',
       text: "Every business needs technical leadership, but a full-time CTO in the UAE commands a premium salary. Our Managed IT agreements include embedded vCTO guidance. We sit with your board quarterly to review IT utilization metrics, plan cloud migrations, and align technology spending directly with your firm's multi-year revenue goals.",
+      link: '/articles/it-consulting-guide',
+      linkText: 'Discover vCTO Benefits',
     },
   ],
   features: [
@@ -78,16 +84,22 @@ const managedItContent = {
     {
       title: 'Strict UAE Data Residency & Compliance',
       text: "Managing IT in the Middle East requires strict adherence to local laws. As an established UAE Managed Service Provider (MSP), we ensure your backup architecture, cloud storage locations (AWS/Azure UAE Regions), and data handling policies are fully compliant with TRA, DESC, and NESA regulations, protecting your executives from compliance liabilities.",
+      link: '/articles/cloud-infrastructure-guide',
+      linkText: 'Ensure UAE Data Compliance',
       image: '/images/services/managed-it-security.webp',
       imageAlt: 'Managed IT security and compliance services in UAE',
     },
     {
       title: 'Automated Device Lifecycle & Procurement',
       text: 'Stop wasting management hours buying laptops on Amazon. When you need to scale your team, NOCKO handles the entire hardware lifecycle. We procure enterprise-grade hardware (Dell, Lenovo, Apple), apply custom zero-touch corporate imaging via Microsoft Intune, and deliver the ready-to-work device directly to your new employee’s desk in Dubai or Abu Dhabi.',
+      link: '/services/it-support',
+      linkText: 'Automate Device Procurement',
     },
     {
       title: 'Disaster Recovery and Business Continuity',
       text: 'A cyberattack is mathematically inevitable. Our Managed IT packages include enterprise Disaster Recovery capabilities. We manage immutable, air-gapped backups and conduct quarterly failover testing to ensure that, in the event of a total server failure or ransomware strike, your operations can be restored within our guaranteed Recovery Time Objective (RTO).',
+      link: '/articles/cybersecurity-guide',
+      linkText: 'View Disaster Recovery Metrics',
     },
   ],
   benefits: [

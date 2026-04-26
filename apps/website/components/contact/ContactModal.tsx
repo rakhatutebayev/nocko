@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { usePathname } from 'next/navigation';
 import { submitContact } from '@/lib/api/strapi';
 import RecaptchaScript from './RecaptchaScript';
 
@@ -28,36 +27,6 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [mounted, setMounted] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string>('');
-
-  const pathname = usePathname();
-  const isRu = typeof pathname === 'string' && (pathname === '/ru' || pathname.startsWith('/ru/') || pathname.endsWith('-ru'));
-
-  const t = {
-    title: isRu ? "Связаться с Нами" : "Get in Touch",
-    subtitle: isRu ? "Готовы развивать свой бизнес? Оставьте заявку." : "Ready to transform your business? Let's talk.",
-    nameLabel: isRu ? "Имя *" : "Name *",
-    emailLabel: isRu ? "Email *" : "Email *",
-    phoneLabel: isRu ? "Телефон" : "Phone",
-    messageLabel: isRu ? "Сообщение *" : "Message *",
-    successMsg: isRu 
-      ? "Спасибо! Ваше сообщение отправлено. Мы скоро свяжемся с Вами."
-      : "Thank you! Your message has been sent successfully. We'll get back to you soon.",
-    errorMsgFallback: isRu 
-      ? "Произошла ошибка. Пожалуйста, попробуйте еще раз."
-      : "An error occurred. Please try again.",
-    validationError: isRu
-      ? "Пожалуйста, заполните все обязательные поля (Имя, Email, Сообщение)"
-      : "Please fill in all required fields (Name, Email, Message)",
-    emailError: isRu
-      ? "Пожалуйста, введите корректный email"
-      : "Please enter a valid email address",
-    spamError: isRu
-      ? "Обнаружен спам. Пожалуйста, попробуйте еще раз."
-      : "Spam detected. Please try again.",
-    sendBtn: isRu ? "Отправить" : "Send Message",
-    sendingBtn: isRu ? "Отправка..." : "Sending...",
-    sentBtn: isRu ? "Успешно!" : "Sent!",
-  };
 
   // Закрытие по ESC
   useEffect(() => {
@@ -118,7 +87,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     if (website) {
       console.warn('Spam detected: honeypot field filled');
       setSubmitStatus('error');
-      setErrorMessage(t.spamError);
+      setErrorMessage('Spam detected. Please try again.');
       setIsSubmitting(false);
       return;
     }
@@ -126,7 +95,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     // Валидация на клиенте
     if (!name || !email || !message) {
       setSubmitStatus('error');
-      setErrorMessage(t.validationError);
+      setErrorMessage('Please fill in all required fields (Name, Email, Message)');
       setIsSubmitting(false);
       return;
     }
@@ -135,7 +104,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setSubmitStatus('error');
-      setErrorMessage(t.emailError);
+      setErrorMessage('Please enter a valid email address');
       setIsSubmitting(false);
       return;
     }
@@ -222,11 +191,11 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         }, 2000);
       } else {
         setSubmitStatus('error');
-        setErrorMessage(result.message || t.errorMsgFallback);
+        setErrorMessage(result.message || 'Failed to send message. Please try again.');
       }
     } catch (error) {
       setSubmitStatus('error');
-      setErrorMessage(error instanceof Error ? error.message : t.errorMsgFallback);
+      setErrorMessage(error instanceof Error ? error.message : 'An error occurred. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -277,17 +246,17 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         </button>
         
         <h2 id="contact-modal-title" className="contact-modal__title">
-          {t.title}
+          Get in Touch
         </h2>
         <p className="contact-modal__subtitle">
-          {t.subtitle}
+          Ready to transform your business? Let's talk.
         </p>
         
         <form ref={formRef} className="form" onSubmit={handleSubmit} noValidate>
           <div className="contact-modal__body">
             <div className="form__group">
               <label htmlFor="modal-name" className="form__label">
-                {t.nameLabel}
+                Name *
               </label>
               <input
                 ref={firstInputRef}
@@ -304,7 +273,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
             <div className="form__group">
               <label htmlFor="modal-email" className="form__label">
-                {t.emailLabel}
+                Email *
               </label>
               <input
                 type="email"
@@ -320,7 +289,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
             <div className="form__group">
               <label htmlFor="modal-phone" className="form__label">
-                {t.phoneLabel}
+                Phone
               </label>
               <input
                 type="tel"
@@ -334,7 +303,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
             <div className="form__group">
               <label htmlFor="modal-message" className="form__label">
-                {t.messageLabel}
+                Message *
               </label>
               <textarea
                 id="modal-message"
@@ -366,13 +335,13 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           <div className="contact-modal__footer">
             {submitStatus === 'success' && (
               <div className="form__success" role="alert">
-                <p>{t.successMsg}</p>
+                <p>Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
               </div>
             )}
 
             {submitStatus === 'error' && (
               <div className="form__error-message" role="alert">
-                <p>{errorMessage || t.errorMsgFallback}</p>
+                <p>{errorMessage || 'An error occurred. Please try again.'}</p>
               </div>
             )}
 
@@ -414,7 +383,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               className="form__submit btn btn--primary"
               disabled={isSubmitting || submitStatus === 'success'}
             >
-              {isSubmitting ? t.sendingBtn : submitStatus === 'success' ? t.sentBtn : t.sendBtn}
+              {isSubmitting ? 'Sending...' : submitStatus === 'success' ? 'Sent!' : 'Send Message'}
             </button>
           </div>
         </form>

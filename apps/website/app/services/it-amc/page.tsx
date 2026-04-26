@@ -41,16 +41,22 @@ const itAmcContent = {
     {
       title: 'Predictable CAPEX through Fixed-Cost Contracts',
       text: "The traditional 'break-fix' model destroys financial predictability. An Annual Maintenance Contract (AMC) shifts your IT from a volatile cost center to a fixed, predictable utility. One comprehensive contract covers all Level 1 to Level 3 support, server maintenance, and emergency NOC response—allowing CFOs to accurately model yearly IT expenditure without surprise invoices.",
+      link: '/articles/managed-it-services-guide',
+      linkText: 'Understand AMC Structures',
       image: '/images/services/it-amc-costs.png',
       imageAlt: 'IT AMC annual maintenance contract services',
     },
     {
       title: 'Guaranteed 2-Hour SLA in Dubai Core Hubs',
       text: "Downtime during trading hours in the UAE is catastrophic. Standard AMC contracts promise 'fast response', but we mathematically guarantee it. Across major Dubai business clusters including DIFC, DMCC, and Business Bay, we guarantee a 15-minute remote triage response and a maximum 2-hour physical on-site arrival for Priority 1 infrastructure failures.",
+      link: '/articles/managed-it-services-guide',
+      linkText: 'Review our SLA Matrices',
     },
     {
       title: 'Hardware Lifecycle and Manufacturer RMAs',
       text: "We completely offload the burden of managing decaying hardware. When a Dell server fan fails or a Cisco access point burns out, your staff shouldn't spend hours on hold with manufacturers. Our AMC includes complete RMA (Return Merchandise Authorization) management. We diagnose the physical fault, ship the failing component to the vendor, and install the replacement.",
+      link: '/articles/structured-cabling-guide',
+      linkText: 'Hardware Management Capabilities',
     },
   ],
   features: [
@@ -79,16 +85,22 @@ const itAmcContent = {
     {
       title: 'Proactive System Maintenance vs Reactive Repairs',
       text: 'Why wait for a server to crash? Under our AMC, your entire infrastructure is outfitted with precise Remote Monitoring and Management (RMM) agents. If an Exchange server drive reaches 98% capacity at 3 AM on a Sunday, our NOC engineers receive the alert and preemptively expand the volume before your office opens on Monday morning.',
+      link: '/articles/managed-it-services-guide',
+      linkText: 'Learn about Proactive RMM',
       image: '/images/services/it-amc-maintenance.png',
       imageAlt: 'Regular IT maintenance visits and system checks',
     },
     {
       title: 'Automated Vulnerability Patching Workflow',
       text: 'The vast majority of ransomware penetrations in the Middle East exploit unpatched software. As a core component of your comprehensive AMC, we implement strict automated patching. All Microsoft Windows, Linux, and 3rd-party application updates are tested in our sandbox and deployed centrally to your fleet over the weekend, eliminating production disruption.',
+      link: '/articles/cybersecurity-guide',
+      linkText: 'Our Patching SLA',
     },
     {
       title: 'Strategic vCIO Consulting Included',
       text: 'An AMC should provide direction, not just technical hands. Upgrading your AMC tier unlocks access to our virtual Chief Information Officer (vCIO) services. We conduct quarterly architectural reviews to align your aging infrastructure with your 3-to-5 year business expansion goals across the Emirates.',
+      link: '/articles/it-consulting-guide',
+      linkText: 'Explore vCIO Benefits',
     },
   ],
   benefits: [
