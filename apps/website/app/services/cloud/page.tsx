@@ -42,7 +42,7 @@ const cloudContent = {
     {
       title: 'Zero-Downtime Cloud Migration',
       text: "Evacuate your aging server room smoothly. Our certified cloud architects meticulously plan and execute migrations to the AWS Middle East (UAE) Region and Azure UAE Central. By utilizing secure parallel validation, we guarantee zero data loss and absolutely minimal downtime—whether you require a 'lift-and-shift' or an application refactoring.",
-      link: '/articles/cloud-infrastructure-guide',
+      link: '/articles/cloud-migration',
       linkText: 'Read our Integration Guide',
       image: '/images/services/cloud-migration-v2.png',
       imageAlt: 'Cloud migration services in UAE',
@@ -50,7 +50,7 @@ const cloudContent = {
     {
       title: 'Infrastructure Setup and Cloud FinOps',
       text: 'Moving to the cloud should lower costs, not explode them. We design strictly optimized environments utilizing auto-scaling and Reserved Instances (RIs) to drastically reduce your monthly OPEX. Our FinOps dashboards ensure you never suffer from "bill shock" by instantly shutting down orphaned test servers during Dubai off-hours.',
-      link: '/articles/cloud-infrastructure-guide',
+      link: '/articles/cloud-cost-optimization',
       linkText: 'Learn about FinOps',
     },
     {
@@ -100,7 +100,7 @@ const cloudContent = {
     {
       title: 'Microsoft 365 and Google Workspace Integration',
       text: "Modernize your remote workforce. We handle complete corporate migrations from legacy on-premise Exchange servers directly into Microsoft 365 or Google Workspace. Complete with advanced spam filtering, SharePoint architecture, and strict mobile device management (MDM) endpoint controls.",
-      link: '/articles/cloud-cost-optimization',
+      link: '/articles/cloud-infrastructure',
       linkText: 'Modernize Your Workforce',
     },
   ],

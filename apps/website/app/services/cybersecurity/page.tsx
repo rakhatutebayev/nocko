@@ -40,7 +40,7 @@ const cybersecurityContent = {
     {
       title: 'Zero-Trust Architecture & IAM',
       text: 'Remove implicit trust from your network. We architect uncompromising Identity and Access Management (IAM) solutions where every user, whether sitting in your Business Bay office or working remotely, is continuously authenticated using contextual Multi-Factor Authentication (MFA) before accessing corporate data.',
-      link: '/articles/cybersecurity-guide',
+      link: '/articles/cybersecurity-data-protection',
       linkText: 'Explore Zero-Trust Policies',
       image: '/images/services/cybersecurity-protection.png',
       imageAlt: 'Zero-Trust Architecture integration',
@@ -48,13 +48,13 @@ const cybersecurityContent = {
     {
       title: '24/7 Security Operations Center (SOC)',
       text: 'Automated malware triggers don’t wait for business hours. Our dedicated SOC constantly analyzes your Microsoft 365 logs, firewall telemetry, and endpoint behaviors. Using SIEM (Security Information and Event Management) integrated with AI threat intelligence, our analysts physically block active ransomware encryption attempts in real-time.',
-      link: '/articles/cybersecurity-guide',
+      link: '/articles/cybersecurity-monitoring',
       linkText: 'Learn about Active Threat Hunting',
     },
     {
       title: 'Next-Generation Firewall (NGFW) Management',
       text: 'Legacy routers cannot stop modern application-layer attacks. We deploy and manage Fortinet, Palo Alto, and Cisco Meraki NGFWs utilizing Deep Packet Inspection (DPI). By heavily segmenting your VLANs, we quarantine Guest Wi-Fi and IoT devices completely away from your critical on-premise Active Directory servers.',
-      link: '/articles/cybersecurity-guide',
+      link: '/articles/cybersecurity-firewall',
       linkText: 'Upgrade your Perimeter',
     },
   ],
@@ -84,7 +84,7 @@ const cybersecurityContent = {
     {
       title: 'NESA & DESC Compliance Integration',
       text: 'For UAE government contractors, healthcare providers, and DIFC financial institutions, regulatory compliance is non-negotiable. NOCKO maps your IT infrastructure directly to the National Electronic Security Authority (SIA/NESA) controls, guaranteeing audit readiness and protecting C-level executives from Federal data breach liabilities.',
-      link: '/articles/cybersecurity-guide',
+      link: '/articles/cybersecurity-compliance',
       linkText: 'Ensure Regulatory Compliance',
       image: '/images/services/cybersecurity-firewall.png',
       imageAlt: 'Security compliance and NESA auditing',
@@ -92,13 +92,13 @@ const cybersecurityContent = {
     {
       title: 'Endpoint Detection and Response (EDR) against Ransomware',
       text: 'Standard Antivirus is mathematically obsolete against zero-day fileless malware. We deploy behavioral EDR agents (like CrowdStrike or SentinelOne) across your fleet of laptops and servers. If a background process attempts to sequentially encrypt files, the EDR instantly severs the machine from the network, containing the ransomware blast radius.',
-      link: '/articles/cybersecurity-guide',
+      link: '/articles/cybersecurity-protection',
       linkText: 'Defeat Ransomware Syndicates',
     },
     {
       title: 'Incident Response & Digital Forensics',
       text: 'When a breach happens, time is your most valuable asset. Our elite Incident Response team acts as your digital paramedics. We follow strict chain-of-custody protocols to isolate the compromised hardware, eradicate the persistence mechanism from your network, and provide the legal reporting required under UAE cybercrime laws.',
-      link: '/articles/cybersecurity-guide',
+      link: '/articles/cybersecurity-incident-response',
       linkText: 'Establish an Incident Response Plan',
     },
   ],

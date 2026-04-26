@@ -100,5 +100,149 @@
     "slug": "it-support-24-7",
     "title": "Shadow IT Detection & Cloud Licensing Audits",
     "excerpt": "Shut down dangerous shadow IT and unapproved SaaS applications. Reclaim thousands in duplicated licensing costs."
+  },
+  {
+    "id": "static-it-amc-costs",
+    "slug": "it-amc-costs",
+    "title": "Predictable CAPEX through Fixed-Cost Contracts",
+    "excerpt": "Stop paying surprise break/fix invoices. We guarantee your entire IT operations budget for the full year."
+  },
+  {
+    "id": "static-it-amc-priority",
+    "slug": "it-amc-priority",
+    "title": "Guaranteed 2-Hour SLA Response",
+    "excerpt": "We promise and deliver 15-minute remote diagnostic times and 2-hour physical dispatch SLA contracts."
+  },
+  {
+    "id": "static-it-amc-hardware",
+    "slug": "it-amc-hardware",
+    "title": "IT Hardware Lifecycle Management & RMA",
+    "excerpt": "We diagnose failures, handle complex vendor RMAs, and physically install the replacements."
+  },
+  {
+    "id": "static-it-amc-maintenance-visits",
+    "slug": "it-amc-maintenance-visits",
+    "title": "Proactive Datacenter Maintenance",
+    "excerpt": "Monthly physical site visits to clean hardware thermals, check RAID status, and prevent catastrophic downtime."
+  },
+  {
+    "id": "static-it-amc-updates",
+    "slug": "it-amc-updates",
+    "title": "Automated Vulnerability Patching",
+    "excerpt": "We handle weekend patching rounds for zero production downtime."
+  },
+  {
+    "id": "static-it-amc-comprehensive",
+    "slug": "it-amc-comprehensive",
+    "title": "Strategic vCIO Consulting",
+    "excerpt": "We align your technology directly with your 3-year business strategy."
+  },
+  {
+    "id": "static-managed-it-cost",
+    "slug": "managed-it-cost",
+    "title": "Predictable IT Budgets and Costs",
+    "excerpt": "Reduce TCO and ensure absolute pricing transparency with our Managed Service Provider (MSP) agreements."
+  },
+  {
+    "id": "static-managed-it-infrastructure",
+    "slug": "managed-it-infrastructure",
+    "title": "Complete NOC Remote Integration",
+    "excerpt": "Our Network Operations Center monitors thousands of your data points live."
+  },
+  {
+    "id": "static-managed-it-backup",
+    "slug": "managed-it-backup",
+    "title": "Disaster Recovery and SLA Guarantees",
+    "excerpt": "Strict RTO and RPO objectives ensuring zero data loss."
+  },
+  {
+    "id": "static-managed-it-monitoring",
+    "slug": "managed-it-monitoring",
+    "title": "Constant Endpoint Security",
+    "excerpt": "Deploying EDR and MDM dynamically."
+  },
+  {
+    "id": "static-managed-it-scalable",
+    "slug": "managed-it-scalable",
+    "title": "Elastic Workforce Office Scaling",
+    "excerpt": "Spin up 50 new laptops and licenses instantly as you acquire new talent."
+  },
+  {
+    "id": "static-managed-it-security",
+    "slug": "managed-it-security",
+    "title": "Advanced Cybersecurity Hardening",
+    "excerpt": "Integrating SIEM and AI monitoring directly into your Managed IT stack."
+  },
+  {
+    "id": "static-cloud-migration",
+    "slug": "cloud-migration",
+    "title": "Zero-Downtime Cloud Extrications",
+    "excerpt": "We orchestrate massively parallel AWS and Azure migrations with zero missing packets."
+  },
+  {
+    "id": "static-cloud-cost-optimization",
+    "slug": "cloud-cost-optimization",
+    "title": "Cloud FinOps and Billing Optimization",
+    "excerpt": "Slashing your OPEX compute costs by 30-50% with Reserved Instances and Autoscaling."
+  },
+  {
+    "id": "static-cloud-data-management",
+    "slug": "cloud-data-management",
+    "title": "Data Residency and Backup Compliance",
+    "excerpt": "We architect natively within AWS Middle East and Azure UAE Central."
+  },
+  {
+    "id": "static-cloud-multi-hybrid",
+    "slug": "cloud-multi-hybrid",
+    "title": "Hybrid Cloud Security",
+    "excerpt": "Keep your databases locked locally while your web servers scale globally."
+  },
+  {
+    "id": "static-cloud-security-compliance",
+    "slug": "cloud-security-compliance",
+    "title": "AWS and Azure Cloud Security",
+    "excerpt": "You are still responsible for your own data security in the cloud."
+  },
+  {
+    "id": "static-cloud-infrastructure",
+    "slug": "cloud-infrastructure",
+    "title": "SaaS Integration & M365 Deployments",
+    "excerpt": "We migrate legacy Exchange environments into modern Entra ID and M365."
+  },
+  {
+    "id": "static-cybersecurity-compliance",
+    "slug": "cybersecurity-compliance",
+    "title": "NESA & SIA IT Compliance",
+    "excerpt": "We harden your infrastructure to pass massive federal security compliance audits."
+  },
+  {
+    "id": "static-cybersecurity-data-protection",
+    "slug": "cybersecurity-data-protection",
+    "title": "Zero Trust Network Enforcement",
+    "excerpt": "Eliminate inherent network trust. Every access vector is strictly authenticated."
+  },
+  {
+    "id": "static-cybersecurity-firewall",
+    "slug": "cybersecurity-firewall",
+    "title": "Next-Generation Edge Protection",
+    "excerpt": "Deep Packet Inspection stops malware before it enters the routing table."
+  },
+  {
+    "id": "static-cybersecurity-incident-response",
+    "slug": "cybersecurity-incident-response",
+    "title": "Ransomware Extrication & Incident Response",
+    "excerpt": "Our emergency SWAT teams immediately freeze active malware ingress."
+  },
+  {
+    "id": "static-cybersecurity-monitoring",
+    "slug": "cybersecurity-monitoring",
+    "title": "24/7 SIEM & SOC Integration",
+    "excerpt": "Constant intelligent monitoring over millions of daily log events."
+  },
+  {
+    "id": "static-cybersecurity-protection",
+    "slug": "cybersecurity-protection",
+    "title": "Advanced Email Sandboxing",
+    "excerpt": "We execute suspicious attachments in isolated cloud hardware."
   }
 ]
