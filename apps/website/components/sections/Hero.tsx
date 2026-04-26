@@ -109,6 +109,42 @@ export default function Hero({
     );
   }
 
+  // Article variant - clean layout for written content
+  if (variant === 'article') {
+    const heroClasses = [
+      'hero',
+      'hero--service',
+      'hero--article',
+      className,
+    ]
+      .filter(Boolean)
+      .join(' ');
+
+    return (
+      <section className={heroClasses} itemScope itemType="https://schema.org/CreativeWork">
+        <div className="container">
+          <div className="hero__content">
+            {title && (
+              <h1 className="hero__title" itemProp="name">
+                {title}
+              </h1>
+            )}
+            {subtitle && (
+              <h2 className="hero__subtitle" itemProp="description">
+                {subtitle}
+              </h2>
+            )}
+            {description && (
+              <p className="hero__description" itemProp="description" style={{ marginTop: '1rem', opacity: 0.9 }}>
+                {description}
+              </p>
+            )}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   // Default variant with wrapper, CTA, and stats
   const heroClasses = [
     'hero',
