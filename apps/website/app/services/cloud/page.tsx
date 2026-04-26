@@ -42,22 +42,16 @@ const cloudContent = {
     {
       title: 'Zero-Downtime Cloud Migration',
       text: "Evacuate your aging server room smoothly. Our certified cloud architects meticulously plan and execute migrations to the AWS Middle East (UAE) Region and Azure UAE Central. By utilizing secure parallel validation, we guarantee zero data loss and absolutely minimal downtime—whether you require a 'lift-and-shift' or an application refactoring.",
-      link: '/articles/cloud-infrastructure-guide',
-      linkText: 'Read our Integration Guide',
       image: '/images/services/cloud-migration-v2.png',
       imageAlt: 'Cloud migration services in UAE',
     },
     {
       title: 'Infrastructure Setup and Cloud FinOps',
       text: 'Moving to the cloud should lower costs, not explode them. We design strictly optimized environments utilizing auto-scaling and Reserved Instances (RIs) to drastically reduce your monthly OPEX. Our FinOps dashboards ensure you never suffer from "bill shock" by instantly shutting down orphaned test servers during Dubai off-hours.',
-      link: '/articles/cloud-infrastructure-guide',
-      linkText: 'Learn about FinOps',
     },
     {
       title: 'Compliance-Driven Data Backup (DRaaS)',
       text: 'Is your company prepared for a massive ransomware attack? We deploy robust Disaster Recovery as a Service (DRaaS) with exact Recovery Point Objectives (RPO). By implementing immutable, air-gapped backups and strict AES-256 encryption, we ensure your data survives any disaster while strictly adhering to UAE federal data laws.',
-      link: '/articles/cloud-data-management',
-      linkText: 'Data Protection Strategies',
     },
   ],
   features: [
@@ -86,22 +80,16 @@ const cloudContent = {
     {
       title: 'Hybrid Cloud: The Best of Both Worlds',
       text: 'Not all data belongs on a public server. We design sophisticated Hybrid Cloud architectures that keep your highly sensitive financial databases on secure, local private servers within UAE datacenters (like Khazna or Equinix DX1), while bursting non-sensitive frontend web traffic seamlessly into scalable AWS environments.',
-      link: '/articles/cloud-multi-hybrid',
-      linkText: 'Explore Hybrid Clouds',
       image: '/images/services/cloud-hybrid-v2.png',
       imageAlt: 'Hybrid cloud solutions in Dubai',
     },
     {
       title: 'Cloud Security and NESA Alignment',
       text: 'In the cloud, security relies on the Shared Responsibility Model. We take full ownership of your IAM (Identity and Access Management), deploying Zero-Trust protocols and securing endpoints. We ensure your architecture meets the rigorous National Electronic Security Authority (NESA/SIA) frameworks required by UAE government and enterprise clients.',
-      link: '/articles/cloud-security-compliance',
-      linkText: 'Ensure Cloud Security',
     },
     {
       title: 'Microsoft 365 and Google Workspace Integration',
       text: "Modernize your remote workforce. We handle complete corporate migrations from legacy on-premise Exchange servers directly into Microsoft 365 or Google Workspace. Complete with advanced spam filtering, SharePoint architecture, and strict mobile device management (MDM) endpoint controls.",
-      link: '/articles/cloud-cost-optimization',
-      linkText: 'Modernize Your Workforce',
     },
   ],
   benefits: [

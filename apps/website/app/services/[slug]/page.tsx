@@ -65,22 +65,16 @@ const structuredCablingContent = {
     {
       title: 'Start Deploying in Minutes Across All Emirates',
       text: 'Prebuilt cabling solutions and certified technicians allow you to deploy network infrastructure across Dubai, Abu Dhabi, Sharjah, and all Emirates, without any of the complexity or deployment risks. Our team handles site surveys, route planning, and compliance requirements, so you can focus on your business operations.',
-      link: '/articles/deployment',
-      linkText: 'Learn more',
       image: '/images/services/cabling-deploy.png',
       imageAlt: 'Network infrastructure deployment across UAE Emirates',
     },
     {
       title: 'Accelerate Network Performance Through Expert Installation',
       text: 'Get optimal network performance via our certified technicians and industry-standard installation practices. Use our channel management solutions to ensure proper cable routing, labeling, and documentation. Reach peak performance through the infrastructure your business needs.',
-      link: '/articles/performance',
-      linkText: 'Learn more',
     },
     {
       title: 'Maintain Performance Across the Entire Network Lifecycle',
       text: "It's now easier to manage network infrastructure. Tools like proactive monitoring, preventive maintenance, performance optimization, and lifecycle management allow you to turn potential downtime into maximum uptime across the network lifecycle, from installation to optimization, upgrades, and expansion.",
-      link: '/articles/lifecycle',
-      linkText: 'Learn more',
     },
   ],
   features: [
@@ -109,22 +103,16 @@ const structuredCablingContent = {
     {
       title: 'Grow Network Performance with Advanced Solutions',
       text: 'Use our comprehensive network solutions to plan and execute infrastructure expansion strategies - upgrades, scalability, optimization - and manage networks from any location. Our tools help you scale from small office networks to enterprise-wide infrastructure across multiple locations in UAE.',
-      link: '/articles/solutions',
-      linkText: 'Learn more',
       image: '/images/services/cabling-performance.png',
       imageAlt: 'Advanced network solutions for business growth',
     },
     {
       title: 'Mix and Manage Multiple Network Types',
       text: 'Our flexible platform supports deployment of multiple cabling types, allowing you to simultaneously manage Cat6, Cat6A, and fiber optic infrastructure. You can make the transition to higher-speed networks without disruption and maximize your network performance.',
-      link: '/articles/network-types',
-      linkText: 'Learn more',
     },
     {
       title: 'Scale Your Network Across UAE Without Risk',
       text: 'Use our flexible deployment models - standard installation, rapid deployment, or hybrid solutions - to adapt to what\'s next and give your business the network infrastructure experience it expects. From single office to multi-location enterprise networks.',
-      link: '/articles/scaling',
-      linkText: 'Learn more',
     },
   ],
   benefits: [

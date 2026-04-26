@@ -73,6 +73,7 @@
   &__right {
     display: flex;
     align-items: center;
+    gap: 20px;
     margin-left: auto;
     
     @include laptop {
@@ -81,6 +82,7 @@
       margin-left: auto;
       align-items: center;
       z-index: 10;
+      gap: 10px;
     }
   }
   
@@ -601,28 +603,7 @@
     }
   }
 
-  &__lang {
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: $color-white;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-right: 20px;
-    transition: color $transition-base;
-    display: flex;
-    align-items: center;
 
-    &:hover {
-      color: $color-primary;
-    }
-
-    @include laptop {
-      color: #3474ff;
-      font-size: 14px;
-      margin-right: 15px;
-    }
-  }
 
   // IMPORTANT:
   // `layout/_header.scss` is imported BEFORE `components/_buttons.scss` (see `app/globals.scss`),
@@ -672,12 +653,7 @@
     }
   }
   
-  &.scrolled &__lang {
-    color: #293443;
-    &:hover {
-      color: $color-primary;
-    }
-  }
+
   
   &.scrolled &__menu-item--dropdown > a::after {
     border-bottom-color: rgba(41, 52, 67, 0.5);

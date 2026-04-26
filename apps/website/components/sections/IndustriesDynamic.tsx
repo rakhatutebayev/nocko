@@ -9,6 +9,6 @@ const Industries = dynamic(() => import('./Industries'), {
   ),
 });
 
-export default function IndustriesDynamic() {
-  return <Industries />;
+export default function IndustriesDynamic(props: any) {
+  return <Industries {...props} />;
 }
