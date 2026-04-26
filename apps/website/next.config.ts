@@ -73,11 +73,7 @@ const nextConfig: NextConfig = {
         destination: '/articles/managed-it-services-guide',
         permanent: true,
       })),
-      ...['it-consulting-assessment', 'it-consulting-digital-transformation', 'it-consulting-infrastructure-design', 'it-consulting-roadmap', 'it-consulting-roi', 'it-consulting-strategy'].map(slug => ({
-        source: `/articles/${slug}`,
-        destination: '/articles/it-consulting-guide',
-        permanent: true,
-      })),
+
       ...['it-amc-comprehensive', 'it-amc-costs', 'it-amc-hardware', 'it-amc-maintenance-visits', 'it-amc-priority', 'it-amc-updates', 'deployment', 'lifecycle', 'performance'].map(slug => ({
         source: `/articles/${slug}`,
         destination: '/articles/structured-cabling-guide',

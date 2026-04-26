@@ -34,5 +34,41 @@
     "slug": "it-support-guide",
     "title": "Modern IT Support: SLAs, Helpdesk & Automation",
     "excerpt": "A comprehensive guide to enterprise-grade IT support in the UAE. Explore the benefits of SLA-driven ticketing, zero-touch onboarding with Windows Autopilot, and 24/7 proactive monitoring."
+  },
+  {
+    "id": "static-it-consulting-assessment",
+    "slug": "it-consulting-assessment",
+    "title": "Forensic IT Audits & Technical Assessments UAE",
+    "excerpt": "Uncover hidden tech debt and security vulnerabilities with RAG-status forensic IT audits for Dubai enterprises."
+  },
+  {
+    "id": "static-it-consulting-strategy",
+    "slug": "it-consulting-strategy",
+    "title": "IT Vendor Governance & Negotiations UAE",
+    "excerpt": "Impartial third-party software vendor RFP negotiations and fractional vCIO engagements."
+  },
+  {
+    "id": "static-it-consulting-roadmap",
+    "slug": "it-consulting-roadmap",
+    "title": "Multi-Year IT Strategic Roadmaps UAE",
+    "excerpt": "Align your digital transformation with revenue targets through structured, 3-to-5-year actionable IT roadmaps."
+  },
+  {
+    "id": "static-it-consulting-infrastructure-design",
+    "slug": "it-consulting-infrastructure-design",
+    "title": "M&A Technology Integration Services UAE",
+    "excerpt": "Flawless IT infrastructure integration during Mergers and Acquisitions (M&A). Prevent technical disruptions."
+  },
+  {
+    "id": "static-it-consulting-roi",
+    "slug": "it-consulting-roi",
+    "title": "Microsoft 365 Licensing Optimization & ROI",
+    "excerpt": "Stop overpaying for Microsoft 365 and Azure in Dubai. Maximize IT ROI and eliminate duplicate software costs."
+  },
+  {
+    "id": "static-it-consulting-digital-transformation",
+    "slug": "it-consulting-digital-transformation",
+    "title": "Business Continuity & Disaster Recovery UAE",
+    "excerpt": "Architecting cloud-native Disaster Recovery as a Service (DRaaS) to ensure zero data loss."
   }
 ]

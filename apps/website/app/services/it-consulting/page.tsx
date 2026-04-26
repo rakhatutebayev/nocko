@@ -40,7 +40,7 @@ const itConsultingContent = {
     {
       title: 'Forensic IT Audits & RAG Health Checks',
       text: 'Many organizations in Dubai operate with hidden tech debt. We conduct forensic audits of your entire infrastructure—from physical wiring in your Business Bay office to cloud licensing utilization. We deliver an actionable Red/Amber/Green (RAG) report isolating critical bottlenecks, security vulnerabilities, and wasted software expenditure.',
-      link: '/articles/it-consulting-guide',
+      link: '/articles/it-consulting-assessment',
       linkText: 'Learn about Forensic Audits',
       image: '/images/services/it-consulting-strategy-v2.png',
       imageAlt: 'IT strategy and planning services',
@@ -48,13 +48,13 @@ const itConsultingContent = {
     {
       title: 'Impartial Vendor Negotiations & Governance',
       text: 'Enterprise software vendors frequently lock UAE businesses into punishing long-term contracts. As your fractional vCIO, NOCKO sits on your side of the table during Request for Proposal (RFP) processes. We technically scrutinize Service Level Agreements (SLAs), drive down implementation costs, and completely eliminate vendor lock-in risks.',
-      link: '/articles/it-consulting-guide',
+      link: '/articles/it-consulting-strategy',
       linkText: 'Explore Vendor Governance',
     },
     {
       title: 'Multi-Year Actionable IT Roadmaps',
       text: 'Digital Transformation is more than buying software. We build mathematically modeled, 3-to-5-year actionable IT roadmaps aligned strictly with your board’s revenue targets. From Phase 1 SD-WAN integrations to Phase 3 ERP migrations (SAP, Dynamics 365), we plan resource allocation so your tech stack scales flawlessly.',
-      link: '/articles/it-consulting-guide',
+      link: '/articles/it-consulting-roadmap',
       linkText: 'Review Example Roadmaps',
     },
   ],
@@ -84,7 +84,7 @@ const itConsultingContent = {
     {
       title: 'M&A Technology Integration',
       text: 'Mergers and Acquisitions (M&A) frequently fail due to incompatible IT systems. When acquiring a new firm in the UAE, our architects assess the target company’s technical debt and design a seamless Active Directory and Cloud integration plan, ensuring day-one operational continuity for your staff.',
-      link: '/articles/it-consulting-guide',
+      link: '/articles/it-consulting-infrastructure-design',
       linkText: 'M&A Tech Integrations',
       image: '/images/services/it-consulting-architecture-v2.png',
       imageAlt: 'IT infrastructure design and architecture',
@@ -92,13 +92,13 @@ const itConsultingContent = {
     {
       title: 'Microsoft 365 Licensing Optimization',
       text: 'We routinely find that Dubai enterprises overpay by up to 40% on Microsoft 365 and Azure licensing. We conduct deep licensing audits, downgrading unutilized E5 licenses to basic tiers where appropriate, and consolidating disparate software subscriptions into unified, cost-effective Microsoft ecosystem tools.',
-      link: '/articles/it-consulting-guide',
+      link: '/articles/it-consulting-roi',
       linkText: 'Optimize your Licensing',
     },
     {
       title: 'Business Continuity and Disaster Recovery (BCDR)',
       text: 'Relying on a local hard drive backup is not a Disaster Recovery plan. We define exact RTO (Recovery Time Objective) and RPO (Recovery Point Objective) metrics with your executives, and architect cloud-native DRaaS failovers to ensure compliance with UAE insurance mandates and data residency laws.',
-      link: '/articles/cloud-infrastructure-guide',
+      link: '/articles/it-consulting-digital-transformation',
       linkText: 'Ensure Business Continuity',
     },
   ],
