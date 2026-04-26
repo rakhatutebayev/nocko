@@ -13,6 +13,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
+      url: `${baseUrl}/ru`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -88,6 +94,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'cloud-infrastructure-guide',
     'cybersecurity-guide',
     'it-consulting-guide',
+    'it-support-guide',
     'managed-it-services-guide',
     'structured-cabling-guide',
   ].map((slug) => ({
