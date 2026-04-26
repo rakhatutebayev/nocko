@@ -283,7 +283,7 @@ export default function Header({ menu }: HeaderProps) {
           <div className="header__right">
             <Link 
               href={pathname === '/ru' ? '/' : '/ru'} 
-              className="header__lang"
+              className="btn btn--secondary btn--sm header__lang"
               aria-label="Switch Language"
             >
               {pathname === '/ru' ? 'EN' : 'RU'}
