@@ -149,7 +149,7 @@ const itSupportContent = {
       description:
         'Learn how deploying structured ITIL ticketing allowed a Business Bay real estate firm to cut average IT resolution times from three days to under two hours.',
       image: '/images/services/cards/book.png',
-      url: '/case-studies/it-support',
+      url: '/case-studies/gss',
       ctaText: 'Read Case Study',
     },
     {
@@ -167,7 +167,7 @@ const itSupportContent = {
       description:
         'Discover how integrating Windows Autopilot with Azure AD completely eliminates manual laptop configuration within your IT department.',
       image: '/images/services/cards/multi.png',
-      url: '/articles/it-support-guide',
+      url: '/articles/it-support-onboarding',
       ctaText: 'Read Architecture Article',
     },
   ],

@@ -126,6 +126,38 @@ export async function generateMetadata({
     };
   }
 
+  if (!caseStudy && slug === 'ransomware-recovery') {
+    return {
+      title: 'How We Isolated and Defeated Ransomware in 4 Hours | Case Study | NOCKO',
+      description:
+        'A Dubai logistics firm saved millions in downtime when our automated EDR isolated a phishing payload within minutes of execution.',
+      keywords:
+        'Ransomware recovery case study, cybersecurity response UAE, EDR deployment Dubai, phishing protection, zero downtime',
+      openGraph: {
+        title: 'How We Isolated and Defeated Ransomware in 4 Hours | NOCKO',
+        description:
+          'A Dubai logistics firm saved millions in downtime when our automated EDR isolated a phishing payload within minutes.',
+        type: 'article',
+      },
+    };
+  }
+
+  if (!caseStudy && slug === 'm365-audit') {
+    return {
+      title: 'How an M365 Audit Saved a Dubai Firm 40% Annually | Case Study | NOCKO',
+      description:
+        'Discover how our forensic licensing audit eliminated duplicate SaaS tools and recovered $45,000 annually for a Dubai firm.',
+      keywords:
+        'Microsoft 365 audit case study, IT consulting UAE, software license optimization, IT cost reduction Dubai, SaaS audit',
+      openGraph: {
+        title: 'How an M365 Audit Saved a Dubai Firm 40% Annually | NOCKO',
+        description:
+          'Discover how our forensic licensing audit eliminated duplicate SaaS tools and recovered $45,000 annually for a Dubai firm.',
+        type: 'article',
+      },
+    };
+  }
+
   if (!caseStudy) {
     notFound();
   }
@@ -280,6 +312,52 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         },
         testimonial:
           '"NOCKO\'s Managed Services removed every ounce of IT friction. We finally have a predictable budget, bulletproof security, and a vCTO who understands our growth. They aren\'t contractors; they are our IT department."',
+      },
+    } as any;
+  }
+
+  if (!caseStudy && slug === 'ransomware-recovery') {
+    caseStudy = {
+      attributes: {
+        title: 'Defeating Ransomware: A 4-Hour Recovery',
+        client: 'Global Logistics Firm (Dubai)',
+        industry: 'Cybersecurity Incident Response',
+        challenge:
+          '<p>A leading Dubai-based logistics firm faced a critical security incident when an employee unknowingly clicked a malicious phishing link hidden within a forged vendor invoice. The payload, a sophisticated zero-day ransomware variant, immediately attempted to establish lateral movement across their internal network, aiming to encrypt mission-critical shipping manifest databases.</p><p>With hundreds of containers actively moving through Jebel Ali Port, even a single day of database downtime would result in millions of dirhams in SLA penalties and supply chain chaos.</p>',
+        solution:
+          '<p>Fortunately, NOCKO had recently deployed an advanced Endpoint Detection and Response (EDR) agent across their entire fleet. Within milliseconds of the payload executing, the EDR’s behavioral AI flagged the anomalous encryption attempt.</p><p>The system automatically severed the infected machine’s connection to the corporate network, containing the "blast radius" to a single laptop. NOCKO\'s 24/7 SOC analysts were immediately alerted, allowing our Incident Response team to remotely wipe the compromised device and restore it from an immutable cloud backup.</p>',
+        results: {
+          containment: 'Threat isolated within 4 minutes of initial execution',
+          downtime: 'Zero impact on core shipping manifest databases or port operations',
+          recovery: 'Compromised laptop fully wiped and restored via Windows Autopilot in under 4 hours',
+          compliance: 'Full forensic report generated to satisfy UAE federal data breach notification laws',
+          roi: 'Prevented an estimated $2.4M in potential downtime and ransomware extortion fees',
+        },
+        testimonial:
+          '"We watched the attack happen in real-time on the NOCKO dashboard. Their EDR stopped the encryption instantly. Without them, our entire fleet operation would have been grounded for weeks."',
+      },
+    } as any;
+  }
+
+  if (!caseStudy && slug === 'm365-audit') {
+    caseStudy = {
+      attributes: {
+        title: 'M365 Audit Saves 40% Annually',
+        client: 'Regional Investment Firm (DIFC)',
+        industry: 'Strategic IT Consulting',
+        challenge:
+          '<p>A fast-growing investment firm in the DIFC was experiencing uncontrolled "Shadow IT" sprawl. Different departments were independently expensing overlapping SaaS tools like Zoom, Dropbox, and Slack, completely ignoring their existing Microsoft 365 enterprise licenses.</p><p>Furthermore, they were paying for premium Microsoft E5 licenses for all 150 employees, despite 80% of the workforce only requiring basic webmail and Teams access. The CFO required an immediate forensic audit to halt the bleeding.</p>',
+        solution:
+          '<p>NOCKO’s vCIO conducted a comprehensive forensic licensing audit. We analyzed active usage telemetry across their entire tenant. We identified that the firm was paying for $45,000 worth of redundant third-party applications that were natively included in their Microsoft subscription.</p><p>We executed a strict consolidation roadmap. We migrated all data from Dropbox to SharePoint, transitioned video conferencing to Teams, and right-sized their Microsoft licensing—downgrading non-essential staff to Business Basic while reserving E5 licenses solely for executives handling highly classified financial models.</p>',
+        results: {
+          savings: 'Recovered $45,000 annually by eliminating duplicate SaaS subscriptions',
+          optimization: 'Reduced monthly Microsoft 365 licensing costs by 40%',
+          security: 'Eliminated 12 unauthorized "Shadow IT" applications, closing major compliance gaps',
+          adoption: 'Conducted targeted staff training, increasing Microsoft Teams utilization by 300%',
+          governance: 'Implemented centralized approval workflows for any future software purchases',
+        },
+        testimonial:
+          '"NOCKO didn\'t just save us money; they forced us to actually use the enterprise tools we were already paying for. The audit paid for itself in the first month."',
       },
     } as any;
   }

@@ -38,211 +38,301 @@
   {
     "id": "static-it-consulting-assessment",
     "slug": "it-consulting-assessment",
-    "title": "Forensic IT Audits & Technical Assessments UAE",
-    "excerpt": "Uncover hidden tech debt and security vulnerabilities with RAG-status forensic IT audits for Dubai enterprises."
+    "title": "Forensic IT Audits & RAG Health Checks",
+    "excerpt": "Many organizations in Dubai operate with hidden tech debt. We conduct forensic audits of your entire infrastructure—from physical wiring in your Business Bay office to cloud licensing utilization. We deliver an actionable Red/Amber/Green (RAG) report isolating critical bottlenecks, security vulnerabilities, and wasted software expenditure."
   },
   {
     "id": "static-it-consulting-strategy",
     "slug": "it-consulting-strategy",
-    "title": "IT Vendor Governance & Negotiations UAE",
-    "excerpt": "Impartial third-party software vendor RFP negotiations and fractional vCIO engagements."
+    "title": "Impartial Vendor Negotiations & Governance",
+    "excerpt": "Enterprise software vendors frequently lock UAE businesses into punishing long-term contracts. As your fractional vCIO, NOCKO sits on your side of the table during Request for Proposal (RFP) processes. We technically scrutinize Service Level Agreements (SLAs), drive down implementation costs, and completely eliminate vendor lock-in risks."
   },
   {
     "id": "static-it-consulting-roadmap",
     "slug": "it-consulting-roadmap",
-    "title": "Multi-Year IT Strategic Roadmaps UAE",
-    "excerpt": "Align your digital transformation with revenue targets through structured, 3-to-5-year actionable IT roadmaps."
+    "title": "Multi-Year Actionable IT Roadmaps",
+    "excerpt": "Digital Transformation is more than buying software. We build mathematically modeled, 3-to-5-year actionable IT roadmaps aligned strictly with your board’s revenue targets. From Phase 1 SD-WAN integrations to Phase 3 ERP migrations (SAP, Dynamics 365), we plan resource allocation so your tech stack scales flawlessly."
   },
   {
     "id": "static-it-consulting-infrastructure-design",
     "slug": "it-consulting-infrastructure-design",
-    "title": "M&A Technology Integration Services UAE",
-    "excerpt": "Flawless IT infrastructure integration during Mergers and Acquisitions (M&A). Prevent technical disruptions."
+    "title": "M&A Technology Integration",
+    "excerpt": "Mergers and Acquisitions (M&A) frequently fail due to incompatible IT systems. When acquiring a new firm in the UAE, our architects assess the target company’s technical debt and design a seamless Active Directory and Cloud integration plan, ensuring day-one operational continuity for your staff."
   },
   {
     "id": "static-it-consulting-roi",
     "slug": "it-consulting-roi",
-    "title": "Microsoft 365 Licensing Optimization & ROI",
-    "excerpt": "Stop overpaying for Microsoft 365 and Azure in Dubai. Maximize IT ROI and eliminate duplicate software costs."
+    "title": "Microsoft 365 Licensing Optimization",
+    "excerpt": "We routinely find that Dubai enterprises overpay by up to 40% on Microsoft 365 and Azure licensing. We conduct deep licensing audits, downgrading unutilized E5 licenses to basic tiers where appropriate, and consolidating disparate software subscriptions into unified, cost-effective Microsoft ecosystem tools."
   },
   {
     "id": "static-it-support-remote",
     "slug": "it-support-remote",
-    "title": "24/7 IT Remote Helpdesk Services UAE",
-    "excerpt": "Instant remote IT diagnostics and resolution. Our centralized NOC resolves 85% of end-user issues within 15 minutes."
+    "title": "24/7 Centralized Remote Helpdesk",
+    "excerpt": "End-user downtime paralyzes organizational productivity. Our centralized Network Operations Center (NOC) operates 24/7/365, providing instant remote diagnostics. Whether your CFO is locked out of Microsoft 365 or a remote worker needs secure VPN access from abroad, our engineers connect securely to resolve 85% of issues within the first 15 minutes."
   },
   {
     "id": "static-it-support-helpdesk",
     "slug": "it-support-helpdesk",
-    "title": "ITIL Ticketing & SLA Workflows",
-    "excerpt": "Discover how ITIL-compliant ticketing systems and strict Service Level Agreements (SLAs) bring accountability to your IT operations."
+    "title": "SLA-Driven Ticketing Workflows",
+    "excerpt": "Stop relying on unstructured WhatsApp messages to \"the IT guy.\" We integrate professional, ITIL-compliant ticketing systems (like ServiceNow or Jira Service Management) directly into your corporate workflow. Every request is timestamped, categorized by severity, and bound by strict Service Level Agreements (SLAs)—guaranteeing transparent accountability and executive reporting."
   },
   {
     "id": "static-it-support-onsite",
     "slug": "it-support-onsite",
-    "title": "On-Site IT Dispatch Services Dubai",
-    "excerpt": "Certified field technicians dispatched physically for hardware failures. We guarantee 2-hour Priority-1 arrival across Dubai."
+    "title": "Physical On-Site Dispatch Across Dubai",
+    "excerpt": "While remote support resolves software issues, hardware failures require physical intervention. When a router dies in your JLT office or a printer fails in your JAFZA warehouse, we dispatch certified field technicians. Our strategic location guarantees an average 2-hour physical arrival time for critical Priority-1 outages anywhere in Dubai."
   },
   {
     "id": "static-it-support-monitoring",
     "slug": "it-support-monitoring",
-    "title": "Endpoint Management & MDM Solutions UAE",
-    "excerpt": "Secure corporate laptops and hybrid-work mobile devices with endpoint management (MDM/MAM) using Microsoft Intune."
+    "title": "Proactive Endpoint Management (MDM)",
+    "excerpt": "With the rise of hybrid work in the UAE, securing mobile endpoints is critical. We deploy Mobile Device Management (MDM) platforms (like Microsoft Intune) to enforce security policies across all corporate laptops and phones. If an employee loses their device in a Dubai taxi, our helpdesk can remotely wipe the sensitive corporate data within seconds."
   },
   {
     "id": "static-it-support-optimization",
     "slug": "it-support-optimization",
-    "title": "Automated Employee IT Onboarding UAE",
-    "excerpt": "Eliminate HR bottlenecks by fully automating your IT onboarding processes, IAM, and strict RBAC security in Dubai."
+    "title": "Employee Onboarding & Identity Management",
+    "excerpt": "The HR process shouldn't be slowed down by IT bottlenecks. We completely automate your employee onboarding and offboarding workflows. When a new hire joins, we provision their Microsoft 365 licensing, configure their laptop security policies, and grant precise Role-Based Access Control (RBAC) before their first day in the office."
   },
   {
     "id": "static-it-support-24-7",
     "slug": "it-support-24-7",
-    "title": "Shadow IT Detection & Cloud Licensing Audits",
-    "excerpt": "Shut down dangerous shadow IT and unapproved SaaS applications. Reclaim thousands in duplicated licensing costs."
+    "title": "Shadow IT & Licensing Audits",
+    "excerpt": "Employees frequently purchase unauthorized SaaS tools using corporate cards, creating massive security vectors (Shadow IT). Our active monitoring detects unsanctioned applications, blocks them, and forces users onto your secure, company-approved platforms—simultaneously rescuing thousands of dirhams in wasted duplicate licensing costs."
   },
   {
     "id": "static-it-amc-costs",
     "slug": "it-amc-costs",
     "title": "Predictable CAPEX through Fixed-Cost Contracts",
-    "excerpt": "Stop paying surprise break/fix invoices. We guarantee your entire IT operations budget for the full year."
+    "excerpt": "The traditional 'break-fix' model destroys financial predictability. An Annual Maintenance Contract (AMC) shifts your IT from a volatile cost center to a fixed, predictable utility. One comprehensive contract covers all Level 1 to Level 3 support, server maintenance, and emergency NOC response—allowing CFOs to accurately model yearly IT expenditure without surprise invoices."
   },
   {
     "id": "static-it-amc-priority",
     "slug": "it-amc-priority",
-    "title": "Guaranteed 2-Hour SLA Response",
-    "excerpt": "We promise and deliver 15-minute remote diagnostic times and 2-hour physical dispatch SLA contracts."
+    "title": "Guaranteed 2-Hour SLA in Dubai Core Hubs",
+    "excerpt": "Downtime during trading hours in the UAE is catastrophic. Standard AMC contracts promise 'fast response"
   },
   {
     "id": "static-it-amc-hardware",
     "slug": "it-amc-hardware",
-    "title": "IT Hardware Lifecycle Management & RMA",
-    "excerpt": "We diagnose failures, handle complex vendor RMAs, and physically install the replacements."
+    "title": "Hardware Lifecycle and Manufacturer RMAs",
+    "excerpt": "We completely offload the burden of managing decaying hardware. When a Dell server fan fails or a Cisco access point burns out, your staff shouldn't spend hours on hold with manufacturers. Our AMC includes complete RMA (Return Merchandise Authorization) management. We diagnose the physical fault, ship the failing component to the vendor, and install the replacement."
   },
   {
     "id": "static-it-amc-maintenance-visits",
     "slug": "it-amc-maintenance-visits",
-    "title": "Proactive Datacenter Maintenance",
-    "excerpt": "Monthly physical site visits to clean hardware thermals, check RAID status, and prevent catastrophic downtime."
+    "title": "Proactive System Maintenance vs Reactive Repairs",
+    "excerpt": "Why wait for a server to crash? Under our AMC, your entire infrastructure is outfitted with precise Remote Monitoring and Management (RMM) agents. If an Exchange server drive reaches 98% capacity at 3 AM on a Sunday, our NOC engineers receive the alert and preemptively expand the volume before your office opens on Monday morning."
   },
   {
     "id": "static-it-amc-updates",
     "slug": "it-amc-updates",
-    "title": "Automated Vulnerability Patching",
-    "excerpt": "We handle weekend patching rounds for zero production downtime."
+    "title": "Automated Vulnerability Patching Workflow",
+    "excerpt": "The vast majority of ransomware penetrations in the Middle East exploit unpatched software. As a core component of your comprehensive AMC, we implement strict automated patching. All Microsoft Windows, Linux, and 3rd-party application updates are tested in our sandbox and deployed centrally to your fleet over the weekend, eliminating production disruption."
   },
   {
     "id": "static-it-amc-comprehensive",
     "slug": "it-amc-comprehensive",
-    "title": "Strategic vCIO Consulting",
-    "excerpt": "We align your technology directly with your 3-year business strategy."
+    "title": "Strategic vCIO Consulting Included",
+    "excerpt": "An AMC should provide direction, not just technical hands. Upgrading your AMC tier unlocks access to our virtual Chief Information Officer (vCIO) services. We conduct quarterly architectural reviews to align your aging infrastructure with your 3-to-5 year business expansion goals across the Emirates."
   },
   {
     "id": "static-managed-it-cost",
     "slug": "managed-it-cost",
-    "title": "Predictable IT Budgets and Costs",
-    "excerpt": "Reduce TCO and ensure absolute pricing transparency with our Managed Service Provider (MSP) agreements."
+    "title": "Virtual Chief Technology Officer (vCTO)",
+    "excerpt": "Every business needs technical leadership, but a full-time CTO in the UAE commands a premium salary. Our Managed IT agreements include embedded vCTO guidance. We sit with your board quarterly to review IT utilization metrics, plan cloud migrations, and align technology spending directly with your firm's multi-year revenue goals."
   },
   {
     "id": "static-managed-it-infrastructure",
     "slug": "managed-it-infrastructure",
-    "title": "Complete NOC Remote Integration",
-    "excerpt": "Our Network Operations Center monitors thousands of your data points live."
+    "title": "Complete Infrastructure Outsourcing",
+    "excerpt": "For fast-growing companies in Dubai Multi Commodities Centre (DMCC) or JAFZA, hiring an internal IT department is costly and scales poorly. Our fully Managed IT solution acts as your entire IT department. From configuring the office firewall to resetting an employee’s Microsoft 365 password at 2 AM, we take 100% ownership of your technology stack."
   },
   {
     "id": "static-managed-it-backup",
     "slug": "managed-it-backup",
-    "title": "Disaster Recovery and SLA Guarantees",
-    "excerpt": "Strict RTO and RPO objectives ensuring zero data loss."
+    "title": "Disaster Recovery and Business Continuity",
+    "excerpt": "A cyberattack is mathematically inevitable. Our Managed IT packages include enterprise Disaster Recovery capabilities. We manage immutable, air-gapped backups and conduct quarterly failover testing to ensure that, in the event of a total server failure or ransomware strike, your operations can be restored within our guaranteed Recovery Time Objective (RTO)."
   },
   {
     "id": "static-managed-it-monitoring",
     "slug": "managed-it-monitoring",
-    "title": "Constant Endpoint Security",
-    "excerpt": "Deploying EDR and MDM dynamically."
+    "title": "Automated Device Lifecycle & Procurement",
+    "excerpt": "Stop wasting management hours buying laptops on Amazon. When you need to scale your team, NOCKO handles the entire hardware lifecycle. We procure enterprise-grade hardware (Dell, Lenovo, Apple), apply custom zero-touch corporate imaging via Microsoft Intune, and deliver the ready-to-work device directly to your new employee’s desk in Dubai or Abu Dhabi."
   },
   {
     "id": "static-managed-it-scalable",
     "slug": "managed-it-scalable",
-    "title": "Elastic Workforce Office Scaling",
-    "excerpt": "Spin up 50 new laptops and licenses instantly as you acquire new talent."
+    "title": "Co-Managed IT for Enterprise Teams",
+    "excerpt": "If you already have a skilled IT Director or internal Helpdesk in your Dubai headquarters, they shouldn’t be wasting time on server patching or managing localized backups. Our Co-Managed IT structure integrates directly with your existing IT team. We handle the 24/7 backend NOC/SOC monitoring, freeing your internal staff to focus on high-value corporate projects."
   },
   {
     "id": "static-managed-it-security",
     "slug": "managed-it-security",
-    "title": "Advanced Cybersecurity Hardening",
-    "excerpt": "Integrating SIEM and AI monitoring directly into your Managed IT stack."
+    "title": "Strict UAE Data Residency & Compliance",
+    "excerpt": "Managing IT in the Middle East requires strict adherence to local laws. As an established UAE Managed Service Provider (MSP), we ensure your backup architecture, cloud storage locations (AWS/Azure UAE Regions), and data handling policies are fully compliant with TRA, DESC, and NESA regulations, protecting your executives from compliance liabilities."
   },
   {
     "id": "static-cloud-migration",
     "slug": "cloud-migration",
-    "title": "Zero-Downtime Cloud Extrications",
-    "excerpt": "We orchestrate massively parallel AWS and Azure migrations with zero missing packets."
+    "title": "Zero-Downtime Cloud Migration",
+    "excerpt": "Evacuate your aging server room smoothly. Our certified cloud architects meticulously plan and execute migrations to the AWS Middle East (UAE) Region and Azure UAE Central. By utilizing secure parallel validation, we guarantee zero data loss and absolutely minimal downtime—whether you require a 'lift-and-shift' or an application refactoring."
   },
   {
     "id": "static-cloud-cost-optimization",
     "slug": "cloud-cost-optimization",
-    "title": "Cloud FinOps and Billing Optimization",
-    "excerpt": "Slashing your OPEX compute costs by 30-50% with Reserved Instances and Autoscaling."
+    "title": "Infrastructure Setup and Cloud FinOps",
+    "excerpt": "Moving to the cloud should lower costs, not explode them. We design strictly optimized environments utilizing auto-scaling and Reserved Instances (RIs) to drastically reduce your monthly OPEX. Our FinOps dashboards ensure you never suffer from \"bill shock\" by instantly shutting down orphaned test servers during Dubai off-hours."
   },
   {
     "id": "static-cloud-data-management",
     "slug": "cloud-data-management",
-    "title": "Data Residency and Backup Compliance",
-    "excerpt": "We architect natively within AWS Middle East and Azure UAE Central."
+    "title": "Compliance-Driven Data Backup (DRaaS)",
+    "excerpt": "Is your company prepared for a massive ransomware attack? We deploy robust Disaster Recovery as a Service (DRaaS) with exact Recovery Point Objectives (RPO). By implementing immutable, air-gapped backups and strict AES-256 encryption, we ensure your data survives any disaster while strictly adhering to UAE federal data laws."
   },
   {
     "id": "static-cloud-multi-hybrid",
     "slug": "cloud-multi-hybrid",
-    "title": "Hybrid Cloud Security",
-    "excerpt": "Keep your databases locked locally while your web servers scale globally."
+    "title": "Hybrid Cloud: The Best of Both Worlds",
+    "excerpt": "Not all data belongs on a public server. We design sophisticated Hybrid Cloud architectures that keep your highly sensitive financial databases on secure, local private servers within UAE datacenters (like Khazna or Equinix DX1), while bursting non-sensitive frontend web traffic seamlessly into scalable AWS environments."
   },
   {
     "id": "static-cloud-security-compliance",
     "slug": "cloud-security-compliance",
-    "title": "AWS and Azure Cloud Security",
-    "excerpt": "You are still responsible for your own data security in the cloud."
+    "title": "Cloud Security and NESA Alignment",
+    "excerpt": "In the cloud, security relies on the Shared Responsibility Model. We take full ownership of your IAM (Identity and Access Management), deploying Zero-Trust protocols and securing endpoints. We ensure your architecture meets the rigorous National Electronic Security Authority (NESA/SIA) frameworks required by UAE government and enterprise clients."
   },
   {
     "id": "static-cloud-infrastructure",
     "slug": "cloud-infrastructure",
-    "title": "SaaS Integration & M365 Deployments",
-    "excerpt": "We migrate legacy Exchange environments into modern Entra ID and M365."
+    "title": "Microsoft 365 and Google Workspace Integration",
+    "excerpt": "Modernize your remote workforce. We handle complete corporate migrations from legacy on-premise Exchange servers directly into Microsoft 365 or Google Workspace. Complete with advanced spam filtering, SharePoint architecture, and strict mobile device management (MDM) endpoint controls."
   },
   {
     "id": "static-cybersecurity-compliance",
     "slug": "cybersecurity-compliance",
-    "title": "NESA & SIA IT Compliance",
-    "excerpt": "We harden your infrastructure to pass massive federal security compliance audits."
+    "title": "NESA & DESC Compliance Integration",
+    "excerpt": "For UAE government contractors, healthcare providers, and DIFC financial institutions, regulatory compliance is non-negotiable. NOCKO maps your IT infrastructure directly to the National Electronic Security Authority (SIA/NESA) controls, guaranteeing audit readiness and protecting C-level executives from Federal data breach liabilities."
   },
   {
     "id": "static-cybersecurity-data-protection",
     "slug": "cybersecurity-data-protection",
-    "title": "Zero Trust Network Enforcement",
-    "excerpt": "Eliminate inherent network trust. Every access vector is strictly authenticated."
+    "title": "Zero-Trust Architecture & IAM",
+    "excerpt": "Remove implicit trust from your network. We architect uncompromising Identity and Access Management (IAM) solutions where every user, whether sitting in your Business Bay office or working remotely, is continuously authenticated using contextual Multi-Factor Authentication (MFA) before accessing corporate data."
   },
   {
     "id": "static-cybersecurity-firewall",
     "slug": "cybersecurity-firewall",
-    "title": "Next-Generation Edge Protection",
-    "excerpt": "Deep Packet Inspection stops malware before it enters the routing table."
+    "title": "Next-Generation Firewall (NGFW) Management",
+    "excerpt": "Legacy routers cannot stop modern application-layer attacks. We deploy and manage Fortinet, Palo Alto, and Cisco Meraki NGFWs utilizing Deep Packet Inspection (DPI). By heavily segmenting your VLANs, we quarantine Guest Wi-Fi and IoT devices completely away from your critical on-premise Active Directory servers."
   },
   {
     "id": "static-cybersecurity-incident-response",
     "slug": "cybersecurity-incident-response",
-    "title": "Ransomware Extrication & Incident Response",
-    "excerpt": "Our emergency SWAT teams immediately freeze active malware ingress."
+    "title": "Incident Response & Digital Forensics",
+    "excerpt": "When a breach happens, time is your most valuable asset. Our elite Incident Response team acts as your digital paramedics. We follow strict chain-of-custody protocols to isolate the compromised hardware, eradicate the persistence mechanism from your network, and provide the legal reporting required under UAE cybercrime laws."
   },
   {
     "id": "static-cybersecurity-monitoring",
     "slug": "cybersecurity-monitoring",
-    "title": "24/7 SIEM & SOC Integration",
-    "excerpt": "Constant intelligent monitoring over millions of daily log events."
+    "title": "24/7 Security Operations Center (SOC)",
+    "excerpt": "Automated malware triggers don’t wait for business hours. Our dedicated SOC constantly analyzes your Microsoft 365 logs, firewall telemetry, and endpoint behaviors. Using SIEM (Security Information and Event Management) integrated with AI threat intelligence, our analysts physically block active ransomware encryption attempts in real-time."
   },
   {
     "id": "static-cybersecurity-protection",
     "slug": "cybersecurity-protection",
-    "title": "Advanced Email Sandboxing",
-    "excerpt": "We execute suspicious attachments in isolated cloud hardware."
+    "title": "Endpoint Detection and Response (EDR) against Ransomware",
+    "excerpt": "Standard Antivirus is mathematically obsolete against zero-day fileless malware. We deploy behavioral EDR agents (like CrowdStrike or SentinelOne) across your fleet of laptops and servers. If a background process attempts to sequentially encrypt files, the EDR instantly severs the machine from the network, containing the ransomware blast radius."
+  },
+  {
+    "id": "static-structured-cabling-fiber-optic",
+    "slug": "structured-cabling-fiber-optic",
+    "title": "Certified Cat6A & Fiber Optic Engineering",
+    "excerpt": "Physical cabling is the absolute foundation of your corporate network; a single faulty termination can cripple an entire department. Our certified engineers design and pull high-density Cat6, Cat6A, and OM3/OM4 Fiber Optic infrastructure specifically rated for the extreme temperatures of UAE industrial zones and the aesthetic requirements of modern Dubai offices."
+  },
+  {
+    "id": "static-structured-cabling-fluke-testing",
+    "slug": "structured-cabling-fluke-testing",
+    "title": "Fluke Testing and 25-Year Warranties",
+    "excerpt": "We do not guess on cable integrity. Every single node we deploy is rigorously tested and validated using Fluke DSX CableAnalyzers. This empirical verification guarantees that your internal network can handle 10Gbps throughput without packet loss, allowing us to provide manufacturer-backed 25-year performance warranties on our corporate installations."
+  },
+  {
+    "id": "static-structured-cabling-retrofitting",
+    "slug": "structured-cabling-retrofitting",
+    "title": "Server Room & IDFs Retrofitting",
+    "excerpt": "Inherited a disastrous, disorganized server room in your new office? We specialize in live cabinet retrofitting and 'spaghetti' cleanups. We trace, label, and re-patch your entire server rack with precise cable management channels, restoring airflow to your switches and transforming a fire hazard into an organized, maintainable IT environment."
+  },
+  {
+    "id": "static-structured-cabling-industrial",
+    "slug": "structured-cabling-industrial",
+    "title": "Logistics Warehouses to Corporate Hubs",
+    "excerpt": "A massive logistics facility in JAFZA requires a vastly different physical layer than a glass-walled financial office in DIFC. We engineer tailored environments: deploying armored fiber for sprawling industrial floors, and aesthetic, under-floor plenum cabling for high-end corporate boardrooms."
+  },
+  {
+    "id": "static-structured-cabling-wifi-heatmapping",
+    "slug": "structured-cabling-wifi-heatmapping",
+    "title": "Enterprise Wi-Fi Heatmapping Solutions",
+    "excerpt": "Stop guessing where to place access points. Using industry-standard Ekahau mapping software, we conduct predictive and physical RF heatmapping of your floorplan. We account for glass partitions in Business Bay and concrete pillars in Mussafah, guaranteeing absolute zero Wi-Fi dead zones across your enterprise."
+  },
+  {
+    "id": "static-structured-cabling-physical-security",
+    "slug": "structured-cabling-physical-security",
+    "title": "Access Control and physical Security",
+    "excerpt": "Structured cabling extends beyond computers. We deploy the Unified Physical Layer for your office, running dedicated PoE (Power over Ethernet) infrastructure for high-resolution CCTV IP cameras, biometric Access Control Systems, and VoIP telephony grids on a single, seamlessly integrated network."
+  },
+  {
+    "id": "static-managed-it-co-managed",
+    "slug": "managed-it-co-managed",
+    "title": "Co-Managed IT: The Best of Both Worlds",
+    "excerpt": "A guide for IT Directors on how to effectively outsource tedious NOC alerts while maintaining control of corporate strategy. We integrate directly with your internal team."
+  },
+  {
+    "id": "static-cloud-zero-trust",
+    "slug": "cloud-zero-trust",
+    "title": "Defending Your Cloud with Zero Trust",
+    "excerpt": "Understand the shared responsibility model and why IAM security is critical for your Azure deployment. Do not leave your cloud endpoints exposed."
+  },
+  {
+    "id": "static-cybersecurity-antivirus-dead",
+    "slug": "cybersecurity-antivirus-dead",
+    "title": "Why standard Antivirus is dead in 2024",
+    "excerpt": "Understand the stark technical difference between legacy signature-based Antivirus and behavioral AI-driven EDR platforms like CrowdStrike."
+  },
+  {
+    "id": "static-it-support-onboarding",
+    "slug": "it-support-onboarding",
+    "title": "Why Microsoft 365 Onboarding takes Too Long",
+    "excerpt": "Discover how integrating Windows Autopilot with Azure AD completely eliminates manual laptop configuration within your IT department."
+  },
+  {
+    "id": "static-it-amc-vs-msp",
+    "slug": "it-amc-vs-msp",
+    "title": "The AMC vs MSP Decision Guide",
+    "excerpt": "Understand the critical difference between inclusive scopes and exclusive out-of-scope hardware capital expenditures. Choose the right contract for your business."
+  },
+  {
+    "id": "static-it-amc-hardware-lifecycle",
+    "slug": "it-amc-hardware-lifecycle",
+    "title": "Hardware Lifecycle Management",
+    "excerpt": "An executive breakdown of why saving $500 on a cheap AMC contract will cost you $50,000 during a 3-day server outage due to aging hardware."
+  },
+  {
+    "id": "static-it-consulting-ransomware-survival",
+    "slug": "it-consulting-ransomware-survival",
+    "title": "Surviving a Ransomware Strike",
+    "excerpt": "Understand exactly what RTO and RPO mean, and how to architect a Disaster Recovery plan that actually works under the pressure of a real-world breach."
+  },
+  {
+    "id": "static-structured-cabling-fiber-vs-cat6a",
+    "slug": "structured-cabling-fiber-vs-cat6a",
+    "title": "The Guide to Cat6A vs Fiber Optic",
+    "excerpt": "A deep dive into Cat6 vs Cat6A, the necessity of Fluke certification, and managing physical layer deployments for modern smart offices."
+  },
+  {
+    "id": "static-structured-cabling-fluke-importance",
+    "slug": "structured-cabling-fluke-importance",
+    "title": "Why Fluke Testing is Non-Negotiable",
+    "excerpt": "Understand how RF interference and physical materials block consumer routers, and why Ekahau heatmapping and Fluke testing is mandatory."
   }
 ]

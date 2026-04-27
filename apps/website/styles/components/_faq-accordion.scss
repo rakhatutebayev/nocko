@@ -49,7 +49,7 @@
     align-items: center;
     justify-content: center;
     color: $color-primary;
-    transition: transform $transition-base;
+    transition: transform 0.3s ease-in-out;
 
     &-img {
       width: 24px;
@@ -61,10 +61,20 @@
       width: 100%;
       height: 100%;
     }
+    
+    &-vertical {
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      transform-origin: center;
+      transform-box: fill-box;
+    }
   }
 
   &__item--open &__icon {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
+  }
+
+  &__item--open &__icon-vertical {
+    opacity: 0;
   }
 
   &__question {
@@ -76,15 +86,24 @@
   }
 
   &__answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-in-out;
     padding: 0 0 0 calc(24px + 1rem);
 
     &--open {
-      max-height: 1000px;
-      padding-bottom: 1.5rem;
+      grid-template-rows: 1fr;
     }
+  }
+
+  &__answer-inner {
+    overflow: hidden;
+    padding-bottom: 0;
+    transition: padding-bottom 0.3s ease-in-out;
+  }
+
+  &__item--open &__answer-inner {
+    padding-bottom: 1.5rem;
   }
 
   &__answer-text {

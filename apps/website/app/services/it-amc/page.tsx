@@ -140,7 +140,7 @@ const itAmcContent = {
       description:
         'Read how a JAFZA logistics firm transitioned from ad-hoc break/fix calls to a fixed AMC, slashing their IT costs by 35% while increasing uptime.',
       image: '/images/services/cards/book.png',
-      url: '/articles/managed-it-services-guide',
+      url: '/case-studies/projection',
       ctaText: 'Read Case Study',
     },
     {
@@ -149,7 +149,7 @@ const itAmcContent = {
       description:
         'Understand the critical difference between inclusive scopes and exclusive out-of-scope hardware capital expenditures.',
       image: '/images/services/cards/guide.png',
-      url: '/articles/it-consulting-guide',
+      url: '/articles/it-amc-vs-msp',
       ctaText: 'Read Legal Guide',
     },
     {
@@ -158,7 +158,7 @@ const itAmcContent = {
       description:
         'An executive breakdown of why saving $500 on a cheap AMC contract will cost you $50,000 during a 3-day server outage.',
       image: '/images/services/cards/multi.png',
-      url: '/articles/managed-it-services-guide',
+      url: '/articles/it-amc-hardware-lifecycle',
       ctaText: 'Calculate True Downtime',
     },
   ],

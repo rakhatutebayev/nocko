@@ -143,7 +143,7 @@ const itConsultingContent = {
       description:
         'Discover how our forensic licensing audit eliminated duplicate SaaS tools and recovered $45,000 annually for a Dubai firm.',
       image: '/images/services/cards/book.png',
-      url: '/case-studies/it-consulting',
+      url: '/case-studies/m365-audit',
       ctaText: 'Read Case Study',
     },
     {
@@ -161,7 +161,7 @@ const itConsultingContent = {
       description:
         'Understand exactly what RTO and RPO mean, and how to architect a Disaster Recovery plan that actually works.',
       image: '/images/services/cards/multi.png',
-      url: '/articles/cybersecurity-guide',
+      url: '/articles/it-consulting-ransomware-survival',
       ctaText: 'Read Architecture Guide',
     },
   ],

@@ -61,39 +61,29 @@ export default function FAQAccordion({
                       aria-controls={`faq-answer-${index}`}
                     >
                       <span className="faq-accordion__icon">
-                        {isOpen ? (
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M5 12H19"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        ) : (
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12 5V19M5 12H19"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        )}
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5 12H19"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M12 5V19"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="faq-accordion__icon-vertical"
+                          />
+                        </svg>
                       </span>
                       <span className="faq-accordion__question">{item.question}</span>
                     </button>
@@ -102,7 +92,9 @@ export default function FAQAccordion({
                       className={`faq-accordion__answer ${isOpen ? 'faq-accordion__answer--open' : ''}`}
                       aria-hidden={!isOpen}
                     >
-                      <p className="faq-accordion__answer-text">{item.answer}</p>
+                      <div className="faq-accordion__answer-inner">
+                        <p className="faq-accordion__answer-text">{item.answer}</p>
+                      </div>
                     </div>
                   </div>
                 );

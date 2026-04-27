@@ -282,11 +282,11 @@ export default function Header({ menu }: HeaderProps) {
         {menu.attributes?.ctaText && (
           <div className="header__right">
             <Link 
-              href={pathname === '/ru' ? '/' : '/ru'} 
+              href={pathname === '/' ? '/ru' : pathname.startsWith('/ru') ? (pathname.replace('/ru', '') || '/') : `/ru${pathname}`} 
               className="btn btn--secondary btn--sm header__lang"
               aria-label="Switch Language"
             >
-              {pathname === '/ru' ? 'EN' : 'RU'}
+              {pathname.startsWith('/ru') ? 'EN' : 'RU'}
             </Link>
             <button
               onClick={() => setIsContactModalOpen(true)}

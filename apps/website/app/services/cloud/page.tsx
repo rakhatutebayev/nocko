@@ -145,7 +145,7 @@ const cloudContent = {
       description:
         'Learn how a JLT-based financial firm maintained strict data residency compliance while completely removing their on-premise CAPEX.',
       image: '/images/services/cards/book.png',
-      url: '/case-studies/cloud-migration',
+      url: '/case-studies/fh',
       ctaText: 'Read Case Study',
     },
     {
@@ -163,7 +163,7 @@ const cloudContent = {
       description:
         'Understand the shared responsibility model and why IAM security is critical for your Azure deployment.',
       image: '/images/services/cards/multi.png',
-      url: '/articles/cybersecurity-guide',
+      url: '/articles/cloud-zero-trust',
       ctaText: 'Secure Your Cloud',
     },
   ],

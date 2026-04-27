@@ -143,7 +143,7 @@ const cybersecurityContent = {
       description:
         'Read how our EDR deployment automatically isolated a phishing payload, saving a Dubai logistics firm millions in downtime.',
       image: '/images/services/cards/book.png',
-      url: '/articles/cybersecurity-guide',
+      url: '/case-studies/solus',
       ctaText: 'Read Case Study',
     },
     {
@@ -161,7 +161,7 @@ const cybersecurityContent = {
       description:
         'Understand the stark technical difference between legacy signature-based Antivirus and behavioral AI-driven EDR.',
       image: '/images/services/cards/multi.png',
-      url: '/articles/cybersecurity-guide',
+      url: '/articles/cybersecurity-antivirus-dead',
       ctaText: 'Read Architecture Article',
     },
   ],

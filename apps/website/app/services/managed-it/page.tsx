@@ -143,7 +143,7 @@ const managedItContent = {
       description:
         'Learn how a scaling JLT logistics firm abandoned their disjointed external contractors for a unified NOCKO Managed Services agreement.',
       image: '/images/services/cards/book.png',
-      url: '/case-studies/managed-it',
+      url: '/case-studies/technohub',
       ctaText: 'Read MSP Case Study',
     },
     {
@@ -161,7 +161,7 @@ const managedItContent = {
       description:
         'A guide for IT Directors on how to effectively outsource tedious NOC alerts while maintaining control of corporate strategy.',
       image: '/images/services/cards/multi.png',
-      url: '/articles/managed-it-services-guide',
+      url: '/articles/managed-it-co-managed',
       ctaText: 'Read Co-Managed Strategy',
     },
   ],

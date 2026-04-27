@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import HeaderWrapper from '@/components/layout/HeaderWrapper';
-import Footer from '@/components/layout/Footer';
+import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
+import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
 import Features from '@/components/sections/Features';
 import Services from '@/components/sections/Services';
@@ -93,28 +93,28 @@ const ruServices = [
   {
     title: 'ИТ Аутсорсинг и AMC (Договор Поддержки)',
     description: 'Полное обслуживание ИТ-систем вашей компании (IT AMC - Annual Maintenance Contract). Включает круглосуточную поддержку (Helpdesk), удаленный мониторинг и выезд приходящего системного администратора в офис.',
-    href: '/services/it-support-ru',
+    href: '/ru/services/it-support',
     serviceType: 'ИТ Поддержка',
     color: 'blue' as const,
   },
   {
     title: 'Монтаж локальных сетей (СКС)',
     description: 'Проектирование и прокладка высокоскоростных локальных сетей и сертифицированной системы каблирования для новых офисов, ресторанов и складов.',
-    href: '/services/structured-cabling',
+    href: '/ru/services/structured-cabling',
     serviceType: 'Сетевая архитектура',
     color: 'yellow' as const,
   },
   {
     title: 'Кибербезопасность и аудит',
     description: 'Решения корпоративной безопасности. Аудиты уязвимостей, настройка файрволов, шифрование данных и внедрение политик Zero Trust для защиты вашего бизнеса от угроз.',
-    href: '/services/cybersecurity',
+    href: '/ru/services/cybersecurity',
     serviceType: 'Кибербезопасность',
     color: 'green' as const,
   },
   {
     title: 'Облачные серверы и миграция',
     description: 'Внедрение и поддержка облачной инфраструктуры (AWS, Microsoft Azure, Google Cloud). Бесперебойный перенос данных (миграция) без простоя ваших сотрудников.',
-    href: '/services/cloud',
+    href: '/ru/services/cloud',
     serviceType: 'Облачные вычисления',
     color: 'cyan' as const,
   },
