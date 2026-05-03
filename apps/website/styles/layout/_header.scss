@@ -601,34 +601,50 @@
     }
   }
 
+  &__right {
+    gap: 10px;
+  }
+
   &__lang {
-    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-    margin-right: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
     display: inline-flex;
     align-items: center;
-
-    // Use CTA button specific styling
-    font-size: 12px;
-    font-weight: 300;
+    justify-content: center;
     border-color: #3474ff;
     color: #3474ff;
     background-color: transparent;
+    white-space: nowrap;
 
     &:hover,
     &:focus {
-      color: #ffffff;
+      color: $color-white;
       border-color: #3474ff;
       background-color: #3474ff;
     }
 
+    &:focus-visible {
+      color: $color-white;
+      border-color: #3474ff;
+      background-color: #3474ff;
+      outline: 2px solid #3474ff;
+      outline-offset: 2px;
+    }
+
     @include laptop {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       font-size: 11px;
       padding: 6px 16px;
       min-height: 33px;
-      margin-right: 10px; // A bit of gap
       border-color: #3474ff;
       color: #3474ff;
+      white-space: nowrap;
+      visibility: visible;
+      opacity: 1;
     }
   }
 

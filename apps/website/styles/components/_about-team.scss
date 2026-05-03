@@ -1,0 +1,138 @@
+// About Team — same card pattern as .service-resources__card
+.about-team {
+  background-color: #e0e7ef;
+}
+
+.about-team__header {
+  text-align: center;
+  margin-bottom: $spacing-xxl;
+
+  @include mobile {
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.about-team__title {
+  @extend .section__title;
+}
+
+.about-team__subtitle {
+  font-size: 16px;
+  line-height: 26px;
+  color: #293443;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+// 4 cards in a row on desktop, 2 on tablet, 1 on mobile
+.about-team__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-lg;
+
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Card — mirrors .service-resources__card
+.about-team__card {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow $transition-base;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Photo full-width at top of card
+.about-team__photo-wrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #e0e7ef;
+  flex-shrink: 0;
+}
+
+.about-team__photo {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+// Text body
+.about-team__body {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-md;
+  flex: 1;
+}
+
+.about-team__name {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #293443;
+  margin: 0 0 4px;
+}
+
+.about-team__role {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 $spacing-sm;
+}
+
+.about-team__bio {
+  font-size: 13px;
+  line-height: 20px;
+  color: #293443;
+  font-weight: 300;
+  margin: 0 0 $spacing-sm;
+  flex: 1;
+}
+
+// Cert list at bottom
+.about-team__certs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #e0e7ef;
+  padding-top: $spacing-sm;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about-team__cert {
+  font-size: 11px;
+  line-height: 18px;
+  color: #666666;
+  font-weight: 400;
+  padding-left: 12px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: currentColor;
+    opacity: 0.5;
+  }
+}

@@ -27,12 +27,12 @@ export default function Hero({
   subtitle = 'Professional IT company in Dubai providing network infrastructure, cloud solutions, cybersecurity, and 24/7 IT support for businesses across UAE.',
   description,
   ctaPrimary = {
-    text: 'Get IT Support in UAE',
+    text: 'Request a Free Consultation',
     href: '#contact',
   },
   ctaSecondary = {
     text: 'View All Services',
-    href: '#services',
+    href: '/services',
   },
   stats = [
     { number: '10+', label: 'Years Expert Experience' },
@@ -239,7 +239,7 @@ export default function Hero({
             )}
 
             {variant === 'default' && stats && stats.length > 0 && (
-              <div className="hero__stats" itemScope itemType="https://schema.org/AggregateRating">
+              <div className="hero__stats">
                 {stats.map((stat, index) => (
                   <div key={index} className="hero__stat">
                     <span className="hero__stat-number">{stat.number}</span>

@@ -4,7 +4,7 @@ import path from 'path';
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
-  
+
   // Compress responses
   compress: true,
   
@@ -39,6 +39,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: '**.amazonaws.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'randomuser.me',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
   
@@ -46,6 +54,7 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['@nocko/ui', '@nocko/shared'],
   },
+
   
   // Optimize CSS loading - Next.js automatically minifies and optimizes CSS
   // To reduce render blocking, we rely on automatic CSS optimization
@@ -55,9 +64,27 @@ const nextConfig: NextConfig = {
     } : false,
   },
   
-  // Redirects mapping thin content articles to new Pillar Guides
+  // Redirects: .html duplicates, www subdomain, and legacy URLs
   async redirects() {
     return [
+      // www → non-www canonical redirect
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.nocko.com' }],
+        destination: 'https://nocko.com/:path*',
+        permanent: true,
+      },
+      // .html duplicate case-study URLs
+      { source: '/case-studies/gss.html', destination: '/case-studies/gss', permanent: true },
+      { source: '/case-studies/solus.html', destination: '/case-studies/solus', permanent: true },
+      { source: '/case-studies/scalini.html', destination: '/case-studies/scalini', permanent: true },
+      // .html duplicate service URLs
+      { source: '/services/managed-it.html', destination: '/services/managed-it', permanent: true },
+      { source: '/services/it-amc.html', destination: '/services/it-amc', permanent: true },
+      // Legacy URL → current slug
+      { source: '/services/network-infrastructure', destination: '/services/structured-cabling', permanent: true },
+      // RU articles → EN canonical (articles not translated, EN is canonical)
+      { source: '/ru/articles/:slug*', destination: '/articles/:slug*', permanent: true },
     ];
   },
   
@@ -110,6 +137,18 @@ const nextConfig: NextConfig = {
             value: 'public, max-age=31536000, immutable',
           },
         ],
+      },
+      {
+        source: '/_next/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
+      {
+        source: '/manifest.json',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
+      {
+        source: '/favicon.ico',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
       },
     ];
   },

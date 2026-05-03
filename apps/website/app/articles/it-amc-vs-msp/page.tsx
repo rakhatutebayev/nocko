@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: 'Understand the critical difference between inclusive scopes and exclusive out-of-scope hardware capital expenditures. Choose the right contract for your business.',
   alternates: {
     canonical: '/articles/it-amc-vs-msp',
+    languages: {
+      'en-AE': '/articles/it-amc-vs-msp',
+      'ru-RU': '/ru/articles/it-amc-vs-msp',
+    },
   },
 };
 
@@ -46,10 +50,9 @@ const articleData = {
 };
 
 export default function ItAmcVsMspPage() {
-  const currDate = new Date().toISOString().split('T')[0];
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-07-02', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero 

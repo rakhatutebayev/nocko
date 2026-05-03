@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: 'A deep dive into Cat6 vs Cat6A, the necessity of Fluke certification, and managing physical layer deployments for modern smart offices.',
   alternates: {
     canonical: '/articles/structured-cabling-fiber-vs-cat6a',
+    languages: {
+      'en-AE': '/articles/structured-cabling-fiber-vs-cat6a',
+      'ru-RU': '/ru/articles/structured-cabling-fiber-vs-cat6a',
+    },
   },
 };
 
@@ -42,10 +46,9 @@ const articleData = {
 };
 
 export default function StructuredCablingFiberVsCat6aPage() {
-  const currDate = new Date().toISOString().split('T')[0];
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-10-15', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero 

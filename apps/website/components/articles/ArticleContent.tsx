@@ -6,12 +6,18 @@ interface ArticleBlock {
   list?: string[];
 }
 
+interface ArticleFAQItem {
+  question: string;
+  answer: string;
+}
+
 interface ArticleContentProps {
   intro: string;
   blocks: ArticleBlock[];
+  faq?: ArticleFAQItem[];
 }
 
-export default function ArticleContent({ intro, blocks }: ArticleContentProps) {
+export default function ArticleContent({ intro, blocks, faq }: ArticleContentProps) {
   return (
     <article className="article section" itemScope itemType="https://schema.org/Article" itemProp="articleBody">
       <div className="container">
@@ -50,6 +56,22 @@ export default function ArticleContent({ intro, blocks }: ArticleContentProps) {
         ))}
       </div>
       
+      {faq && faq.length > 0 && (
+        <div className="container">
+          <div className="article__faq">
+            <h2 className="article__faq-title">Frequently Asked Questions</h2>
+            <dl className="article__faq-list">
+              {faq.map((item, i) => (
+                <div key={i} className="article__faq-item">
+                  <dt className="article__faq-question">{item.question}</dt>
+                  <dd className="article__faq-answer">{item.answer}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      )}
+
       {/* Related Articles for SEO Interlinking */}
       <div className="container" style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid #eaeaea' }}>
         <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>Explore Core IT Services</h3>

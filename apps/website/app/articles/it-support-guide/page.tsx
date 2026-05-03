@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: 'A comprehensive guide to enterprise-grade IT support in the UAE. Learn about ITIL-compliant helpdesks, guaranteed SLAs, and zero-touch onboarding.',
   alternates: {
     canonical: '/articles/it-support-guide',
+    languages: {
+      'en-AE': '/articles/it-support-guide',
+      'ru-RU': '/ru/articles/it-support-guide',
+    },
   },
 };
 
@@ -56,10 +60,9 @@ const articleData = {
 };
 
 export default function ITSupportGuidePage() {
-  const currDate = new Date().toISOString().split('T')[0];
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-01-15', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero 

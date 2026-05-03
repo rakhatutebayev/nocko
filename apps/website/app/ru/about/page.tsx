@@ -17,6 +17,13 @@ export const metadata: Metadata = {
     description: 'NOCKO Information Technology - Экспертный поставщик ИТ-решений в Дубае, ОАЭ.',
     type: 'website',
   },
+  alternates: {
+    canonical: '/ru/about',
+    languages: {
+      'en-AE': '/about',
+      'ru-RU': '/ru/about',
+    },
+  },
 };
 
 const aboutFAQ = {

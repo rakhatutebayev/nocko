@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     description: 'Свяжитесь с NOCKO для ИТ поддержки и решений в ОАЭ.',
     type: 'website',
   },
+  alternates: {
+    canonical: '/ru/contact',
+    languages: {
+      'en-AE': '/contact',
+      'ru-RU': '/ru/contact',
+    },
+  },
 };
 
 export default function ContactPageRu() {

@@ -58,11 +58,11 @@ const defaultServices: Service[] = [
     color: 'lightblue',
   },
   {
-    title: 'IT Support & Helpdesk',
+    title: 'IT AMC Dubai',
     description:
-      '24/7 IT support services from your trusted IT company in Dubai. Fast response times, remote support, and on-site visits when needed.',
-    href: '/services/it-support',
-    serviceType: 'IT Support',
+      'Annual maintenance contracts for IT infrastructure in Dubai and UAE. Fixed monthly cost, predictable IT budget, priority support, and proactive maintenance — zero surprises.',
+    href: '/services/it-amc',
+    serviceType: 'IT Annual Maintenance Contract',
     color: 'red',
   },
 ];

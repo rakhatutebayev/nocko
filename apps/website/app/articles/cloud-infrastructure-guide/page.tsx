@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/articles/cloud-infrastructure-guide',
+    languages: {
+      'en-AE': '/articles/cloud-infrastructure-guide',
+      'ru-RU': '/ru/articles/cloud-infrastructure-guide',
+    },
   },
 };
 
@@ -75,10 +79,9 @@ const articleData = {
 
 export default function CloudGuidePage() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
-  const currDate = new Date().toISOString().split('T')[0];
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-02-05', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main"><Hero variant="article" title={articleData.hero.title} subtitle={articleData.hero.subtitle} /><div className="container"><Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Cloud Infrastructure Guide' }]} /><div className="article"><ArticleContent intro={articleData.intro} blocks={articleData.blocks} /></div></div></main>
       <Footer />

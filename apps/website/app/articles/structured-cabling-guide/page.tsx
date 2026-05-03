@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/articles/structured-cabling-guide',
+    languages: {
+      'en-AE': '/articles/structured-cabling-guide',
+      'ru-RU': '/ru/articles/structured-cabling-guide',
+    },
   },
 };
 
@@ -83,7 +87,6 @@ const articleData = {
 
 export default function StructuredCablingGuidePage() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
-  const currDate = new Date().toISOString().split('T')[0];
 
   return (
     <>
@@ -92,8 +95,8 @@ export default function StructuredCablingGuidePage() {
         data={{
           headline: articleData.hero.title,
           description: metadata.description as string,
-          datePublished: currDate,
-          dateModified: currDate,
+          datePublished: '2025-02-24',
+          dateModified: '2025-02-24',
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

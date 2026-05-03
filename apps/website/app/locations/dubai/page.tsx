@@ -6,27 +6,25 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Company in Dubai | IT Support Services Dubai | NOCKO',
+  title: 'IT Support & Managed IT Services in Dubai | NOCKO',
   description:
-    'Leading IT company in Dubai providing comprehensive IT support, network infrastructure, cloud solutions, cybersecurity, and managed IT services. Expert IT company in Dubai with 24/7 support for businesses.',
+    'NOCKO provides IT support, network infrastructure, cloud solutions, and cybersecurity for businesses in Dubai — DIFC, Business Bay, DMCC, JAFZA, and across the UAE.',
   keywords: [
-    'it company in dubai',
-    'IT company Dubai',
     'IT support Dubai',
-    'IT services Dubai',
     'managed IT services Dubai',
+    'IT services Dubai',
     'IT consulting Dubai',
     'network infrastructure Dubai',
     'cloud solutions Dubai',
     'cybersecurity Dubai',
-    'IT company in Dubai UAE',
-    'best IT company Dubai',
-    'IT support company Dubai',
+    'IT company Dubai',
+    'IT support DIFC',
+    'IT support Business Bay',
   ],
   openGraph: {
-    title: 'IT Company in Dubai | IT Support Services Dubai | NOCKO',
+    title: 'IT Support & Managed IT Services in Dubai | NOCKO',
     description:
-      'Leading IT company in Dubai providing comprehensive IT support, network infrastructure, cloud solutions, and cybersecurity services.',
+      'NOCKO provides IT support, network infrastructure, cloud solutions, and cybersecurity for businesses across Dubai and the UAE.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
@@ -38,95 +36,95 @@ export const metadata: Metadata = {
 
 const dubaiContent = {
   hero: {
-    title: 'IT Company in Dubai | Expert IT Support & Solutions',
-    subtitle: 'Leading IT Company in Dubai Serving Businesses Across UAE',
+    title: 'IT Support & Managed Services in Dubai',
+    subtitle: 'Reliable IT for Finance, Logistics, Real Estate & Hospitality',
     description:
-      'NOCKO is a trusted IT company in Dubai providing comprehensive IT support, network infrastructure, cloud solutions, cybersecurity, and managed IT services.',
+      'NOCKO delivers professional IT support, network infrastructure, cloud solutions, and cybersecurity for businesses operating across Dubai — from DIFC and Business Bay to JAFZA and Expo City.',
   },
   intro: {
-    title: 'Why Choose NOCKO as Your IT Company in Dubai?',
-    text: 'As a leading IT company in Dubai, NOCKO provides comprehensive IT solutions for businesses across UAE. Our IT company in Dubai offers 24/7 support, expert consulting, and reliable infrastructure services. With deep local knowledge and global expertise, we understand the unique IT challenges businesses face in Dubai and across the Emirates.',
+    title: 'Professional IT Services Built for Dubai\'s Business Environment',
+    text: 'Dubai operates at a pace where IT downtime is not a minor inconvenience — it is a revenue event. Financial firms in DIFC face regulatory obligations that require auditable, always-on systems. Logistics operators in JAFZA and Jebel Ali run 24-hour warehousing that cannot pause for a server failure. Hospitality groups across JBR and Downtown depend on property management software, payment systems, and guest Wi-Fi that must work without exception. NOCKO was built to serve exactly these environments: businesses where professional, accountable IT management is a functional requirement, not a luxury.',
   },
   services: {
-    title: 'IT Services from Your Trusted IT Company in Dubai',
-    text: 'As an IT company in Dubai, we provide a full range of IT services to help your business succeed. From network infrastructure setup to cloud migration, cybersecurity to managed IT services, our IT company in Dubai delivers solutions tailored to your needs.',
+    title: 'IT Services for Dubai Businesses',
+    text: 'We cover the full spectrum of business IT — from initial infrastructure design through to ongoing day-to-day management. Whether you are setting up a new office in Business Bay or consolidating IT across multiple locations in the UAE, our team handles the technical complexity so your people can stay focused on operations.',
     items: [
       {
         title: 'IT Support & Helpdesk',
         description:
-          'Round-the-clock technical assistance for Dubai businesses. Our local IT support team ensures minimal downtime with rapid response and expert troubleshooting for all your IT needs.',
+          'Guaranteed response times for every ticket, with L1 through L3 resolution handled by our local engineers. Average on-site response in Dubai under two hours, with remote triage beginning in under 15 minutes for critical issues.',
         link: '/services/it-support',
       },
       {
         title: 'Network Infrastructure',
         description:
-          'Enterprise-grade network solutions designed for Dubai\'s business environment. We deliver robust connectivity, scalable architecture, and reliable performance for your growing operations.',
+          'Structured cabling, Wi-Fi design, firewall deployment, and VLAN segmentation for offices and commercial fit-outs across Dubai. We design for performance, redundancy, and the physical realities of high-density Dubai commercial spaces.',
         link: '/services/structured-cabling',
       },
       {
         title: 'Cloud Solutions',
         description:
-          'Transform your business with cloud technologies tailored for Dubai enterprises. We help you migrate, optimize, and secure your cloud infrastructure for maximum efficiency and cost savings.',
+          'Microsoft 365, Azure, and AWS deployments managed end-to-end. We handle migration planning, data residency compliance under UAE PDPL, and ongoing licence management — ensuring you only pay for what you actually use.',
         link: '/services/cloud',
       },
       {
         title: 'Cybersecurity',
         description:
-          'Protect your Dubai business with advanced security measures. Our cybersecurity services include threat detection, vulnerability assessments, and compliance solutions to safeguard your digital assets.',
+          'Endpoint protection, firewall policy management, phishing simulation, and vulnerability assessments. For DIFC-regulated entities we assist with DFSA technology risk requirements and ISO 27001 alignment.',
         link: '/services/cybersecurity',
       },
       {
         title: 'Managed IT Services',
         description:
-          'Outsource your IT operations to Dubai\'s trusted managed services provider. We handle day-to-day IT management, allowing you to focus on core business activities while we ensure optimal performance.',
+          'A fixed monthly AMC that covers proactive monitoring, patch management, hardware support, and helpdesk access. Predictable costs and a defined scope — no surprise invoices when something breaks.',
         link: '/services/managed-it',
       },
       {
         title: 'IT Consulting',
         description:
-          'Strategic technology guidance for Dubai businesses. Our consultants help you make informed IT decisions, plan digital initiatives, and align technology investments with your business objectives.',
+          'Technology roadmap planning, vendor selection, IT budget reviews, and infrastructure audits. Useful for growing businesses that need a clear picture of where their IT is today and what it needs to look like in 12 months.',
         link: '/services/it-consulting',
       },
     ],
   },
   whyChoose: {
-    title: 'Why Choose NOCKO as Your IT Company in Dubai?',
+    title: 'Why Dubai Businesses Choose NOCKO',
     items: [
       {
-        title: 'Local Expertise',
+        title: 'Presence Across Key Districts',
         description:
-          'As an IT company in Dubai, we understand the local business environment, regulations, and IT requirements specific to Dubai and UAE.',
+          'We support clients in DIFC, Business Bay, DMCC, Media City, JAFZA, Deira, and across the Northern Emirates. Our engineers know the buildings, the access procedures, and the local logistics.',
       },
       {
-        title: '24/7 Support',
+        title: '24/7 Monitoring & Response',
         description:
-          'Your IT company in Dubai available around the clock. Fast response times with average 2 hours in Dubai and 4 hours across all Emirates.',
+          'NOC-level monitoring runs continuously. For critical incidents, our average Dubai on-site response is under two hours and UAE-wide under four. We align to DIFC market hours, logistics shift patterns, and hospitality needs.',
       },
       {
-        title: 'Expert Team',
+        title: 'Experienced Engineers',
         description:
-          'Our IT company in Dubai employs highly qualified IT professionals with 10+ years of individual experience in enterprise IT solutions.',
+          'Each engineer on our team brings over a decade of enterprise IT experience. We work with Microsoft, Cisco, Fortinet, and leading cloud platforms — no generalists handed a toolkit.',
       },
       {
-        title: 'Proven Track Record',
+        title: '50+ Active Clients in the UAE',
         description:
-          'Trusted IT company in Dubai serving 50+ clients across UAE. Healthcare, finance, retail, education, and enterprise businesses.',
+          'Our client base spans finance, real estate, logistics, hospitality, healthcare, and professional services. Long-term relationships rather than transactional support contracts.',
       },
       {
-        title: 'Comprehensive Solutions',
+        title: 'Single Point of Accountability',
         description:
-          'Full-service IT company in Dubai offering everything from infrastructure to cloud, security to consulting under one roof.',
+          'Infrastructure, cloud, security, and helpdesk all under one contract. When something goes wrong at 11pm, one call reaches the team responsible for the entire stack.',
       },
       {
-        title: 'Cost-Effective',
+        title: 'Transparent, Fixed-Cost Contracts',
         description:
-          'Affordable IT solutions from IT company in Dubai. Transparent pricing, predictable costs, and excellent value for your IT investment.',
+          'AMC pricing is scoped against your actual asset inventory. No vague retainers, no hidden call-out fees for standard issues within contract scope.',
       },
     ],
   },
   localBenefits: {
-    title: 'IT Company in Dubai Serving All Emirates',
-    text: 'Our IT company in Dubai provides services across all Emirates including Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain. While based in Dubai, our IT company serves businesses throughout UAE with the same level of expertise and support.',
+    title: 'Coverage Across Dubai and the UAE',
+    text: 'While NOCKO is headquartered in Dubai, we provide the same service levels to businesses in Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain. For multi-site organisations operating across the Emirates, we act as a unified IT partner rather than a separate vendor in each location. A single contract, a single helpdesk number, and engineers who can reach any site in the UAE.',
   },
 };
 
@@ -136,9 +134,9 @@ export default function DubaiPage() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'NOCKO Information Technology - IT Company in Dubai',
+    name: 'NOCKO Information Technology',
     image: `${baseUrl}/images/logo-white.svg`,
-    description: 'Leading IT company in Dubai providing IT support and solutions',
+    description: 'Managed IT services, IT support, cloud solutions, and cybersecurity for businesses in Dubai and across the UAE.',
     url: `${baseUrl}/locations/dubai`,
     telephone: '+971542448888',
     email: 'info@nocko.com',

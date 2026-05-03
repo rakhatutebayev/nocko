@@ -8,15 +8,17 @@ import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
 import ServiceGeo from '@/components/services/ServiceGeo';
+import ServiceFAQ from '@/components/services/ServiceFAQ';
+import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'IT AMC Services in Dubai | #1 Annual Maintenance Contract UAE | NOCKO',
+  title: 'IT AMC Services in Dubai | Annual Maintenance Contract UAE | NOCKO',
   description:
     'Reliable IT Annual Maintenance Contract (AMC) services in Dubai and across UAE. Fixed annual costs for IT maintenance, server management, and 24/7 support. Expert IT AMC provider for businesses in DIFC, JLT and Business Bay.',
   keywords:
     'IT AMC Dubai, annual maintenance contract UAE, IT maintenance contract Dubai, AMC services UAE, IT support contract Dubai, best IT AMC Dubai',
   openGraph: {
-    title: 'IT AMC Services in Dubai | #1 Annual Maintenance Contract UAE | NOCKO',
+    title: 'IT AMC Services in Dubai | Annual Maintenance Contract UAE | NOCKO',
     description:
       'Predictable IT maintenance with Annual Maintenance Contract (AMC) in Dubai and UAE. Complete IT support and management with fixed annual costs.',
     type: 'website',
@@ -138,7 +140,7 @@ const itAmcContent = {
       type: 'CASE STUDY',
       title: 'Eliminating the Break-Fix Trap: 35% Cost Reduction',
       description:
-        'Read how a JAFZA logistics firm transitioned from ad-hoc break/fix calls to a fixed AMC, slashing their IT costs by 35% while increasing uptime.',
+        'Read how Projection moved from reactive break-fix IT to a structured AMC with 24/7 monitoring, cutting P1 incidents by 48% and achieving 99.9% uptime across their Dubai and Abu Dhabi offices.',
       image: '/images/services/cards/book.png',
       url: '/case-studies/projection',
       ctaText: 'Read Case Study',
@@ -185,11 +187,62 @@ const itAmcContent = {
       description: 'Zero Trust architecture and 24/7 EDR ransomware protection.',
     },
   ],
+  faq: {
+    title: 'Frequently Asked Questions About IT AMC Services',
+    items: [
+      {
+        question: 'What is included in NOCKO\'s IT AMC service?',
+        answer: 'Our Annual Maintenance Contract includes: 24/7 NOC monitoring, quarterly preventive maintenance visits, hardware fault diagnosis and RMA management, software patching, helpdesk ticketing (ServiceNow), and financially backed SLAs with response time guarantees. Hardware replacement costs are scoped separately.',
+      },
+      {
+        question: 'What are typical AMC response times in Dubai?',
+        answer: 'For Priority-1 critical failures (server down, network outage), remote triage begins within 15 minutes and onsite dispatch within 2 hours in Dubai. For Priority-2 issues, onsite response is within 4 hours. All SLAs are contractually backed with service credits.',
+      },
+      {
+        question: 'How much does an IT AMC cost in Dubai?',
+        answer: 'IT AMC pricing in Dubai typically ranges from AED 150–500 per user per month depending on scope, number of endpoints, and SLA level. A 50-seat office with standard monitoring and quarterly visits typically costs AED 8,000–15,000/month. We provide fixed quotes after a free IT assessment.',
+      },
+      {
+        question: 'Can NOCKO take over AMC from our current IT provider?',
+        answer: 'Yes. We handle full IT transitions including asset discovery, documentation of your current state, and a parallel-run handover period. Most transitions complete within 30 days with zero service disruption.',
+      },
+    ],
+  },
 };
 
 export default function ITAMCPage() {
   return (
     <>
+      <StructuredData
+        type="Service"
+        data={{
+          '@id': 'https://nocko.com/services/it-amc#service',
+          name: 'IT AMC Dubai — Annual Maintenance Contract',
+          serviceType: 'IT Annual Maintenance Contract',
+          description: 'Annual IT maintenance contracts for businesses in Dubai and UAE. Fixed cost, predictable budget, priority support, and proactive maintenance.',
+          url: 'https://nocko.com/services/it-amc',
+          provider: { '@type': 'Organization', '@id': 'https://nocko.com/#localbusiness', name: 'NOCKO Information Technology' },
+          areaServed: [{ '@type': 'City', name: 'Dubai' }, { '@type': 'City', name: 'Abu Dhabi' }, { '@type': 'City', name: 'Sharjah' }],
+        }}
+      />
+      <StructuredData
+        type="BreadcrumbList"
+        data={{ itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://nocko.com/services' },
+          { '@type': 'ListItem', position: 3, name: 'IT AMC Dubai', item: 'https://nocko.com/services/it-amc' },
+        ]}}
+      />
+      <StructuredData
+        type="FAQPage"
+        data={{
+          mainEntity: itAmcContent.faq.items.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: { '@type': 'Answer', text: item.answer },
+          })),
+        }}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -213,6 +266,10 @@ export default function ITAMCPage() {
           footerNote="Corporate IT Excellence"
         />
 
+        <ServiceFAQ
+          title={itAmcContent.faq.title}
+          items={itAmcContent.faq.items}
+        />
         <ServiceCTA
           title={itAmcContent.cta.title}
           text={itAmcContent.cta.text}

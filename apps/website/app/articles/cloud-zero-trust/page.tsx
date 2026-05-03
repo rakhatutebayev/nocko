@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: 'Understand the shared responsibility model and why IAM security is critical for your Azure deployment. Do not leave your cloud endpoints exposed.',
   alternates: {
     canonical: '/articles/cloud-zero-trust',
+    languages: {
+      'en-AE': '/articles/cloud-zero-trust',
+      'ru-RU': '/ru/articles/cloud-zero-trust',
+    },
   },
 };
 
@@ -46,10 +50,9 @@ const articleData = {
 };
 
 export default function CloudZeroTrustPage() {
-  const currDate = new Date().toISOString().split('T')[0];
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-08-18', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero 

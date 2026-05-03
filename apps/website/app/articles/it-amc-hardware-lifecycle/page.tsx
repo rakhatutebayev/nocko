@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: 'An executive breakdown of why saving $500 on a cheap AMC contract will cost you $50,000 during a 3-day server outage due to aging hardware.',
   alternates: {
     canonical: '/articles/it-amc-hardware-lifecycle',
+    languages: {
+      'en-AE': '/articles/it-amc-hardware-lifecycle',
+      'ru-RU': '/ru/articles/it-amc-hardware-lifecycle',
+    },
   },
 };
 
@@ -46,10 +50,9 @@ const articleData = {
 };
 
 export default function ItAmcHardwareLifecyclePage() {
-  const currDate = new Date().toISOString().split('T')[0];
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-06-14', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero 

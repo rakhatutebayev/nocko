@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server';
 /**
  * Middleware for geo-location routing, headers, and blocking vercel.app domain indexing
  */
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const hostname = request.headers.get('host') || '';
   const response = NextResponse.next();
 

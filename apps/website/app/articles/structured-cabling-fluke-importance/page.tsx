@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: 'Understand how RF interference and physical materials block consumer routers, and why Ekahau heatmapping and Fluke testing is mandatory.',
   alternates: {
     canonical: '/articles/structured-cabling-fluke-importance',
+    languages: {
+      'en-AE': '/articles/structured-cabling-fluke-importance',
+      'ru-RU': '/ru/articles/structured-cabling-fluke-importance',
+    },
   },
 };
 
@@ -42,10 +46,9 @@ const articleData = {
 };
 
 export default function StructuredCablingFlukeImportancePage() {
-  const currDate = new Date().toISOString().split('T')[0];
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-06-09', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero 

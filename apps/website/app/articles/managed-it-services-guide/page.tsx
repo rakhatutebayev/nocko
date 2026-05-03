@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: 'A detailed breakdown of Managed IT Services in Dubai.',
   alternates: {
     canonical: '/articles/managed-it-services-guide',
+    languages: {
+      'en-AE': '/articles/managed-it-services-guide',
+      'ru-RU': '/ru/articles/managed-it-services-guide',
+    },
   },
 };
 
@@ -42,10 +46,9 @@ const articleData = {
 
 export default function ManagedITGuidePage() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
-  const currDate = new Date().toISOString().split('T')[0];
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-17', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main"><Hero variant="article" title={articleData.hero.title} subtitle={articleData.hero.subtitle} /><div className="container"><Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Managed IT Services Guide' }]} /><div className="article"><ArticleContent intro={articleData.intro} blocks={articleData.blocks} /></div></div></main>
       <Footer />

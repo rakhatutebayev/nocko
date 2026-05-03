@@ -8,15 +8,17 @@ import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
 import ServiceGeo from '@/components/services/ServiceGeo';
+import ServiceFAQ from '@/components/services/ServiceFAQ';
+import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Managed IT Services in Dubai | #1 Complete IT Management UAE | NOCKO',
+  title: 'Managed IT Services in Dubai | Complete IT Management UAE | NOCKO',
   description:
     'Comprehensive managed IT services in Dubai and UAE. Complete IT infrastructure management, 24/7 monitoring, and proactive maintenance for businesses. Expert IT outsourcing for DIFC, JLT and Business Bay.',
   keywords:
     'managed IT services Dubai, IT management UAE, managed IT infrastructure Dubai, IT outsourcing UAE, complete IT management Dubai, best managed IT UAE',
   openGraph: {
-    title: 'Managed IT Services in Dubai | #1 Complete IT Management UAE | NOCKO',
+    title: 'Managed IT Services in Dubai | Complete IT Management UAE | NOCKO',
     description:
       'Professional managed IT services and infrastructure management for businesses in Dubai and across the UAE. Proactive IT support and monitoring.',
     type: 'website',
@@ -188,11 +190,62 @@ const managedItContent = {
       description: 'Zero Trust architecture and 24/7 EDR ransomware protection.',
     },
   ],
+  faq: {
+    title: 'Frequently Asked Questions About Managed IT Services',
+    items: [
+      {
+        question: 'What is included in NOCKO Managed IT Services?',
+        answer: 'Our fully managed IT service includes: 24/7 NOC monitoring and alerting, helpdesk (unlimited tickets), endpoint management (Windows Autopilot, Intune MDM), patch management, backup and disaster recovery, cybersecurity baseline (EDR, DNS filtering), and a dedicated vCIO. Everything is covered under a single monthly fee.',
+      },
+      {
+        question: 'How is Managed IT different from IT AMC?',
+        answer: 'IT AMC focuses on maintaining your existing hardware and infrastructure reactively. Managed IT is proactive and comprehensive — we own your IT outcomes, not just your hardware uptime. This includes security, cloud management, user onboarding/offboarding, and strategic planning.',
+      },
+      {
+        question: 'How much does Managed IT cost in Dubai?',
+        answer: 'Managed IT Services in Dubai typically cost AED 200–600 per user per month depending on service tier. A 50-seat company pays approximately AED 12,000–25,000/month for full management including security and cloud. This compares to AED 180,000–280,000/year for an equivalent in-house IT team.',
+      },
+      {
+        question: 'How long does it take to onboard to NOCKO Managed IT?',
+        answer: 'Standard onboarding takes 2–4 weeks. Week 1: IT discovery and documentation. Week 2: RMM agent deployment, monitoring setup, and helpdesk onboarding. Week 3–4: security baseline deployment and user training. During onboarding your existing IT remains operational.',
+      },
+    ],
+  },
 };
 
 export default function ManagedITPage() {
   return (
     <>
+      <StructuredData
+        type="Service"
+        data={{
+          '@id': 'https://nocko.com/services/managed-it#service',
+          name: 'Managed IT Services Dubai',
+          serviceType: 'Managed IT Services',
+          description: 'Fully managed IT infrastructure, 24/7 monitoring, and proactive maintenance for businesses in Dubai and UAE.',
+          url: 'https://nocko.com/services/managed-it',
+          provider: { '@type': 'Organization', '@id': 'https://nocko.com/#localbusiness', name: 'NOCKO Information Technology' },
+          areaServed: [{ '@type': 'City', name: 'Dubai' }, { '@type': 'City', name: 'Abu Dhabi' }, { '@type': 'City', name: 'Sharjah' }],
+        }}
+      />
+      <StructuredData
+        type="BreadcrumbList"
+        data={{ itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://nocko.com/services' },
+          { '@type': 'ListItem', position: 3, name: 'Managed IT Services', item: 'https://nocko.com/services/managed-it' },
+        ]}}
+      />
+      <StructuredData
+        type="FAQPage"
+        data={{
+          mainEntity: managedItContent.faq.items.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: { '@type': 'Answer', text: item.answer },
+          })),
+        }}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -215,6 +268,10 @@ export default function ManagedITPage() {
           footerNote="Scale with NOCKO"
         />
 
+        <ServiceFAQ
+          title={managedItContent.faq.title}
+          items={managedItContent.faq.items}
+        />
         <ServiceCTA
           title={managedItContent.cta.title}
           text={managedItContent.cta.text}

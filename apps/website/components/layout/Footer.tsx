@@ -72,13 +72,16 @@ export default function Footer() {
                 <a href="#features">Why Choose Us</a>
               </li>
               <li>
-                <a href="#services">IT Services</a>
+                <Link href="/services">IT Services</Link>
               </li>
               <li>
                 <Link href="/locations/dubai">IT Company in Dubai</Link>
               </li>
               <li>
-                <a href="#clients">Our Clients</a>
+                <Link href="/locations/abu-dhabi">IT Company in Abu Dhabi</Link>
+              </li>
+              <li>
+                <Link href="/locations/sharjah">IT Company in Sharjah</Link>
               </li>
               <li>
                 <ContactCtaLink href="#contact">Contact Us</ContactCtaLink>
@@ -130,6 +133,11 @@ export default function Footer() {
             &copy; <span itemProp="copyrightYear">{currentYear}</span>{' '}
             <span itemProp="name">NOCKO Information Technology</span>. All rights reserved.
           </p>
+          <nav className="footer__legal" aria-label="Legal">
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/terms">Terms of Service</Link>
+            <a href="https://www.linkedin.com/company/nocko" target="_blank" rel="noopener noreferrer" aria-label="NOCKO on LinkedIn">LinkedIn</a>
+          </nav>
         </div>
       </div>
     </footer>

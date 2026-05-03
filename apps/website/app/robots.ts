@@ -8,13 +8,21 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/', '/_next/'],
+        disallow: ['/api/', '/admin/', '/_next/static/media/', '/_next/static/chunks/', '/manifest.json', '/favicon.ico'],
       },
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: ['/api/', '/admin/'],
+        disallow: ['/api/', '/admin/', '/_next/static/media/', '/_next/static/chunks/', '/manifest.json', '/favicon.ico'],
       },
+      { userAgent: 'GPTBot', allow: '/' },
+      { userAgent: 'OAI-SearchBot', allow: '/' },
+      { userAgent: 'ClaudeBot', allow: '/' },
+      { userAgent: 'PerplexityBot', allow: '/' },
+      { userAgent: 'Google-Extended', allow: '/' },
+      { userAgent: 'CCBot', disallow: '/' },
+      { userAgent: 'anthropic-ai', disallow: '/' },
+      { userAgent: 'cohere-ai', disallow: '/' },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
   };

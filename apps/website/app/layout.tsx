@@ -89,12 +89,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={montserrat.variable}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-      </head>
+      <head></head>
       <body className={montserrat.className}>
         <div id="root">
           {children}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 const STORAGE_KEY = "nocko-cookie-consent";
 
@@ -130,6 +130,8 @@ export default function CookieConsent() {
   const [mounted, setMounted] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [analyticsEnabled, setAnalyticsEnabled] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const modalTitleId = "cookie-modal-title";
 
   useEffect(() => {
     try {
@@ -149,10 +151,43 @@ export default function CookieConsent() {
     if (!settingsOpen) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+
+    // Focus trap
+    const modal = modalRef.current;
+    if (!modal) return;
+    const focusable = modal.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    first?.focus();
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        if (consent === null) save("rejected", false);
+        setSettingsOpen(false);
+        return;
+      }
+      if (e.key !== "Tab") return;
+      if (focusable.length === 0) return;
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last?.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first?.focus();
+        }
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
     return () => {
       document.body.style.overflow = prev;
+      document.removeEventListener("keydown", onKeyDown);
     };
-  }, [mounted, settingsOpen]);
+  }, [mounted, settingsOpen]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const save = (status: ConsentStatus, analytics: boolean) => {
     try {
@@ -237,7 +272,7 @@ export default function CookieConsent() {
       )}
 
       {mounted && settingsOpen && (
-        <div className="cookie-consent-modal" role="dialog" aria-modal="true">
+        <div ref={modalRef} className="cookie-consent-modal" role="dialog" aria-modal="true" aria-labelledby={modalTitleId}>
           <button
             type="button"
             className="cookie-consent-modal__backdrop"
@@ -253,7 +288,7 @@ export default function CookieConsent() {
                 <span className="cookie-consent-modal__titleicon" aria-hidden="true">
                   {cookieIcon}
                 </span>
-                <h2 className="cookie-consent-modal__title">Cookie preferences</h2>
+                <h2 id={modalTitleId} className="cookie-consent-modal__title">Cookie preferences</h2>
               </div>
               <button
                 type="button"

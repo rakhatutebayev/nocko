@@ -1,5 +1,5 @@
 interface StructuredDataProps {
-  type: 'Organization' | 'Service' | 'Article' | 'LocalBusiness' | 'BreadcrumbList' | 'FAQPage';
+  type: 'Organization' | 'Service' | 'Article' | 'LocalBusiness' | 'BreadcrumbList' | 'FAQPage' | 'WebSite' | 'ContactPage' | 'ItemList';
   data: Record<string, any>;
 }
 
@@ -21,11 +21,11 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           name: data.name || 'NOCKO Information Technology',
           url: data.url || 'https://nocko.com',
           logo: data.logo || 'https://nocko.com/images/logo-white.svg',
-          telephone: data.telephone || '+971-XX-XXX-XXXX',
+          telephone: data.telephone || '+971542448888',
           description: data.description || '',
           contactPoint: {
             '@type': 'ContactPoint',
-            telephone: data.telephone || '+971-XX-XXX-XXXX',
+            telephone: data.telephone || '+971542448888',
             contactType: 'customer service',
             areaServed: 'AE',
             availableLanguage: 'en',
@@ -47,8 +47,8 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           image: data.image || 'https://nocko.com/images/og-image.jpg',
           description: data.description || '',
           url: data.url || 'https://nocko.com',
-          telephone: data.telephone || '+971-XX-XXX-XXXX',
-          email: data.email || '',
+          telephone: data.telephone || '+971542448888',
+          email: data.email || 'info@nocko.com',
           address: {
             '@type': 'PostalAddress',
             streetAddress: data.streetAddress || '',
@@ -98,9 +98,16 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           headline: data.headline || '',
           datePublished: data.datePublished || '',
           dateModified: data.dateModified || data.datePublished || '',
-          author: {
+          image: data.image || {
+            '@type': 'ImageObject',
+            url: 'https://nocko.com/og-image.jpg',
+            width: 1200,
+            height: 630,
+          },
+          author: data.author || {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',
+            url: 'https://nocko.com',
           },
           publisher: {
             '@type': 'Organization',

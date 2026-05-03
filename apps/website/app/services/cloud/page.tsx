@@ -10,15 +10,16 @@ import RelatedServices from '@/components/services/RelatedServices';
 import ServiceGeo from '@/components/services/ServiceGeo';
 import ServiceFAQ from '@/components/services/ServiceFAQ';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Cloud Services in Dubai | #1 Cloud Migration & Management UAE | NOCKO',
+  title: 'Cloud Services in Dubai | Cloud Migration & Management for UAE Businesses | NOCKO',
   description:
     'Expert cloud services in Dubai and UAE. Cloud migration, infrastructure setup, data management, and secure backup solutions for businesses. Specialized in AWS, Azure, and private cloud for DIFC and Business Bay.',
   keywords:
     'cloud services Dubai, cloud migration UAE, cloud hosting Dubai, data management UAE, cloud backup Dubai, managed cloud services Dubai, cloud infrastructure UAE',
   openGraph: {
-    title: 'Cloud Services in Dubai | #1 Cloud Migration & Management UAE | NOCKO',
+    title: 'Cloud Services in Dubai | Cloud Migration & Management for UAE Businesses | NOCKO',
     description:
       'Secure and scalable cloud solutions for businesses in Dubai and across the UAE. Expert cloud migration and infrastructure management.',
     type: 'website',
@@ -220,6 +221,26 @@ const cloudContent = {
 export default function CloudPage() {
   return (
     <>
+      <StructuredData
+        type="Service"
+        data={{
+          '@id': 'https://nocko.com/services/cloud#service',
+          name: 'Cloud Solutions & Migration Dubai',
+          serviceType: 'Cloud Services',
+          description: 'Cloud migration, management, and optimization for businesses in Dubai and UAE. AWS, Azure, and hybrid cloud solutions.',
+          url: 'https://nocko.com/services/cloud',
+          provider: { '@type': 'Organization', '@id': 'https://nocko.com/#localbusiness', name: 'NOCKO Information Technology' },
+          areaServed: [{ '@type': 'City', name: 'Dubai' }, { '@type': 'City', name: 'Abu Dhabi' }, { '@type': 'City', name: 'Sharjah' }],
+        }}
+      />
+      <StructuredData
+        type="BreadcrumbList"
+        data={{ itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://nocko.com/services' },
+          { '@type': 'ListItem', position: 3, name: 'Cloud Solutions', item: 'https://nocko.com/services/cloud' },
+        ]}}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Breadcrumbs

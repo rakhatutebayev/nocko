@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: 'Understand the stark technical difference between legacy signature-based Antivirus and behavioral AI-driven EDR platforms like CrowdStrike.',
   alternates: {
     canonical: '/articles/cybersecurity-antivirus-dead',
+    languages: {
+      'en-AE': '/articles/cybersecurity-antivirus-dead',
+      'ru-RU': '/ru/articles/cybersecurity-antivirus-dead',
+    },
   },
 };
 
@@ -46,10 +50,9 @@ const articleData = {
 };
 
 export default function CybersecurityAntivirusDeadPage() {
-  const currDate = new Date().toISOString().split('T')[0];
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-09-10', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero 

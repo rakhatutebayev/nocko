@@ -10,15 +10,16 @@ import RelatedServices from '@/components/services/RelatedServices';
 import ServiceFAQ from '@/components/services/ServiceFAQ';
 import ServiceGeo from '@/components/services/ServiceGeo';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: '#1 IT Support Company in Dubai | 24/7 Managed IT Services UAE',
+  title: 'IT Support Company in Dubai | 24/7 Managed IT Services UAE',
   description:
     'Leading IT support company in Dubai providing 24/7 helpdesk, proactive maintenance, and managed IT services across UAE. Expert IT professionals available for on-site and remote support in DIFC, Business Bay, and JLT.',
   keywords:
     'IT support Dubai, IT support company Dubai, managed IT services UAE, 24/7 IT support, IT maintenance Dubai, technical support UAE, IT helpdesk Dubai',
   openGraph: {
-    title: '#1 IT Support Company in Dubai | 24/7 Managed IT Services UAE',
+    title: 'IT Support Company in Dubai | 24/7 Managed IT Services UAE',
     description:
       'Professional IT support and managed services for businesses in Dubai and across the UAE. 24/7 helpdesk and expert technical maintenance.',
     type: 'website',
@@ -224,6 +225,26 @@ const itSupportContent = {
 export default function ITSupportPage() {
   return (
     <>
+      <StructuredData
+        type="Service"
+        data={{
+          '@id': 'https://nocko.com/services/it-support#service',
+          name: 'IT Support & Helpdesk Dubai',
+          serviceType: 'IT Support',
+          description: '24/7 IT support and helpdesk services for businesses in Dubai and UAE. Fast response times, remote and on-site support available.',
+          url: 'https://nocko.com/services/it-support',
+          provider: { '@type': 'Organization', '@id': 'https://nocko.com/#localbusiness', name: 'NOCKO Information Technology' },
+          areaServed: [{ '@type': 'City', name: 'Dubai' }, { '@type': 'City', name: 'Abu Dhabi' }, { '@type': 'City', name: 'Sharjah' }],
+        }}
+      />
+      <StructuredData
+        type="BreadcrumbList"
+        data={{ itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://nocko.com/services' },
+          { '@type': 'ListItem', position: 3, name: 'IT Support & Helpdesk', item: 'https://nocko.com/services/it-support' },
+        ]}}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Breadcrumbs

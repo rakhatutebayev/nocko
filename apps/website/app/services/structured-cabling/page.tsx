@@ -8,15 +8,16 @@ import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
 import ServiceGeo from '@/components/services/ServiceGeo';
+import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Structured Cabling Services in Dubai | #1 Network Infrastructure UAE | NOCKO',
+  title: 'Structured Cabling Services in Dubai | Network Infrastructure & Structured Cabling UAE | NOCKO',
   description:
     'Professional structured cabling services in Dubai, UAE. Expert Cat6, Cat6A and fiber optic installation, testing, and certification. Reliable network infrastructure for businesses in DIFC, JLT and Business Bay.',
   keywords:
     'structured cabling Dubai, network cabling UAE, Cat6 installation Dubai, fiber optic cabling UAE, network infrastructure Dubai, data cabling Dubai',
   openGraph: {
-    title: 'Structured Cabling Services in Dubai | #1 Network Infrastructure UAE | NOCKO',
+    title: 'Structured Cabling Services in Dubai | Network Infrastructure & Structured Cabling UAE | NOCKO',
     description:
       'Professional structured cabling and network infrastructure solutions in Dubai and UAE. Cat6/Cat6A and fiber optic certification.',
     type: 'website',
@@ -122,9 +123,9 @@ const benefits = [
 const resources = [
   {
     type: 'CASE STUDY',
-    title: 'Retrofitting a 40U Server Rack in JAFZA',
+    title: 'How Scalini Standardized Network Infrastructure Across 5 UAE Locations',
     description:
-      'Learn how we transformed a disorganized, overheating server room into a pristine environment with zero daytime disruption.',
+      'Scalini restaurant group unified network infrastructure across 5 locations with certified Cat6A cabling, centralized switching, and 99.9% uptime.',
     image: '/images/services/cards/book.png',
     url: '/case-studies/scalini',
     ctaText: 'Read Case Study',
@@ -186,11 +187,31 @@ const geoContent = {
 export default function StructuredCablingPage() {
   return (
     <>
+      <StructuredData
+        type="Service"
+        data={{
+          '@id': 'https://nocko.com/services/structured-cabling#service',
+          name: 'Structured Cabling & Network Infrastructure Dubai',
+          serviceType: 'Structured Cabling',
+          description: 'Professional structured cabling, Cat6/Cat6A/fiber optic installation, and network infrastructure for businesses in Dubai and UAE.',
+          url: 'https://nocko.com/services/structured-cabling',
+          provider: { '@type': 'Organization', '@id': 'https://nocko.com/#localbusiness', name: 'NOCKO Information Technology' },
+          areaServed: [{ '@type': 'City', name: 'Dubai' }, { '@type': 'City', name: 'Abu Dhabi' }, { '@type': 'City', name: 'Sharjah' }],
+        }}
+      />
+      <StructuredData
+        type="BreadcrumbList"
+        data={{ itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://nocko.com/services' },
+          { '@type': 'ListItem', position: 3, name: 'Structured Cabling', item: 'https://nocko.com/services/structured-cabling' },
+        ]}}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
           variant="service-enhanced"
-          title="Structured Cabling Dubai | #1 Network Infrastructure UAE"
+          title="Structured Cabling Dubai | Network Infrastructure & Structured Cabling UAE"
           subtitle="Professional Cat6, Cat6A & Fiber Optic Installation for Businesses"
           description="Get reliable structured cabling and network infrastructure solutions for your office in Dubai and across the UAE. We provide certified installation, testing, and lifecycle management in DIFC, JLT, and Business Bay."
         />

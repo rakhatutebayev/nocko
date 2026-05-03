@@ -6,17 +6,27 @@ import AboutStats from '@/components/sections/AboutStats';
 import AboutVisionMission from '@/components/sections/AboutVisionMission';
 import AboutStory from '@/components/sections/AboutStory';
 import FAQAccordion from '@/components/sections/FAQAccordion';
+import AboutTeam from '@/components/sections/AboutTeam';
+import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
   title: 'About NOCKO | IT Solutions Provider in Dubai, UAE',
   description:
-    'NOCKO Information Technology - Expert IT solutions provider in Dubai, UAE. Established in 2025, serving businesses across 8+ industries with 10+ years of team experience.',
+    'NOCKO Information Technology — IT solutions provider in Dubai, UAE. 50+ clients served, 10+ years of team experience, 24/7 support across all Emirates.',
   keywords: 'about NOCKO, IT company Dubai, IT services UAE, technology solutions Dubai',
   openGraph: {
     title: 'About NOCKO | IT Solutions Provider in Dubai, UAE',
     description:
-      'NOCKO Information Technology - Expert IT solutions provider in Dubai, UAE.',
+      'NOCKO Information Technology — IT solutions provider in Dubai, UAE. 50+ clients served, 10+ years of team experience, 24/7 support across all Emirates.',
     type: 'website',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'NOCKO Information Technology' }],
+  },
+  alternates: {
+    canonical: '/about',
+    languages: {
+      'en-AE': '/about',
+      'ru-RU': '/ru/about',
+    },
   },
 };
 
@@ -54,16 +64,56 @@ const aboutFAQ = {
 export default function AboutPage() {
   return (
     <>
+      <StructuredData
+        type="FAQPage"
+        data={{
+          mainEntity: aboutFAQ.items.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: item.answer,
+            },
+          })),
+        }}
+      />
+      <StructuredData
+        type="BreadcrumbList"
+        data={{
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
+            { '@type': 'ListItem', position: 2, name: 'About NOCKO', item: 'https://nocko.com/about' },
+          ],
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'NOCKO Engineering Team',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, item: { '@type': 'Person', name: 'Alex Petrov', jobTitle: 'Head of Infrastructure', worksFor: { '@type': 'Organization', name: 'NOCKO Information Technology' }, hasCredential: [{ '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'CCNP Enterprise' }, { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'Microsoft MCSE' }] } },
+              { '@type': 'ListItem', position: 2, item: { '@type': 'Person', name: 'Maria Smirnova', jobTitle: 'Cybersecurity Lead', worksFor: { '@type': 'Organization', name: 'NOCKO Information Technology' }, hasCredential: [{ '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'CISSP' }, { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'CEH' }] } },
+              { '@type': 'ListItem', position: 3, item: { '@type': 'Person', name: 'Denis Kovalev', jobTitle: 'Cloud & Microsoft 365 Architect', worksFor: { '@type': 'Organization', name: 'NOCKO Information Technology' }, hasCredential: [{ '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'Microsoft Azure Solutions Architect' }] } },
+              { '@type': 'ListItem', position: 4, item: { '@type': 'Person', name: 'Aisha Al Mansoori', jobTitle: 'Client Success Manager', worksFor: { '@type': 'Organization', name: 'NOCKO Information Technology' }, hasCredential: [{ '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'ITIL v4 Foundation' }, { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'PMP' }] } },
+            ],
+          }),
+        }}
+        suppressHydrationWarning
+      />
       <HeaderWrapper />
       <main role="main">
         <Hero
           variant="about"
-          title="About us"
+          title="About NOCKO — IT Company in Dubai, UAE"
           description="We are present wherever your business operates — in every network, every office, every process. No matter where you are or how fast you grow. We make IT infrastructure predictable and secure. We simplify complex systems, restore order, and create the foundation on which companies can work faster, more stable, and more secure."
         />
         <AboutStats />
         <AboutVisionMission />
         <AboutStory />
+        <AboutTeam />
         <FAQAccordion title={aboutFAQ.title} items={aboutFAQ.items} />
       </main>
       <Footer />

@@ -1,0 +1,23 @@
+# NOCKO Information Technology
+> NOCKO is a Dubai-based IT services company providing IT support, network infrastructure, cloud solutions, and cybersecurity for businesses across the UAE (Dubai, Abu Dhabi, Sharjah).
+
+## About
+NOCKO delivers managed IT services, 24/7 IT support, structured cabling, cloud migrations, and cybersecurity solutions to businesses across the United Arab Emirates. Office located in Dubai (Office R20-42, Wavez Residence, Wadi Al Safa 2). Contact: +971542448888, info@nocko.com.
+
+## Key Pages
+- [Homepage](https://nocko.com): Overview of all IT services and company
+- [Services](https://nocko.com/services): Full list of IT services offered
+- [IT Support](https://nocko.com/services/it-support): 24/7 IT support and helpdesk
+- [Managed IT](https://nocko.com/services/managed-it): Managed IT services for businesses
+- [Cloud](https://nocko.com/services/cloud): Cloud migration and infrastructure
+- [Cybersecurity](https://nocko.com/services/cybersecurity): Cybersecurity solutions UAE
+- [IT AMC](https://nocko.com/services/it-amc): Annual maintenance contracts Dubai
+- [IT Consulting](https://nocko.com/services/it-consulting): IT strategy and consulting
+- [Structured Cabling](https://nocko.com/services/structured-cabling): Network cabling Dubai
+- [About](https://nocko.com/about): Company background and credentials
+- [Case Studies](https://nocko.com/case-studies): Real client projects with outcomes
+- [Articles](https://nocko.com/articles): IT guides and resources
+- [Contact](https://nocko.com/contact): Office address, phone, email
+
+## Licensing
+Content on this site may be cited for informational and research purposes. Use for AI model training requires written consent from NOCKO Information Technology.

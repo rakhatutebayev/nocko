@@ -8,15 +8,17 @@ import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
 import ServiceGeo from '@/components/services/ServiceGeo';
+import ServiceFAQ from '@/components/services/ServiceFAQ';
+import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'IT Consulting Services in Dubai | #1 Technology Strategy UAE | NOCKO',
+  title: 'IT Consulting Services in Dubai | Technology Strategy & IT Consulting UAE | NOCKO',
   description:
     'Strategic IT consulting services in Dubai and UAE. Technology assessment, digital transformation, and infrastructure planning for businesses. Expert IT advisors for DIFC, JLT and Business Bay.',
   keywords:
     'IT consulting Dubai, IT strategy UAE, technology consulting Dubai, IT planning UAE, digital transformation Dubai, IT assessment UAE, best IT consulting Dubai',
   openGraph: {
-    title: 'IT Consulting Services in Dubai | #1 Technology Strategy UAE | NOCKO',
+    title: 'IT Consulting Services in Dubai | Technology Strategy & IT Consulting UAE | NOCKO',
     description:
       'Expert IT strategy and technology consulting for businesses in Dubai and across the UAE. Drive growth through digital transformation.',
     type: 'website',
@@ -188,11 +190,62 @@ const itConsultingContent = {
       description: 'Zero Trust architecture and NESA compliance.',
     },
   ],
+  faq: {
+    title: 'Frequently Asked Questions About IT Consulting Services',
+    items: [
+      {
+        question: 'What does a NOCKO IT consulting engagement look like?',
+        answer: 'A typical engagement starts with a 2-week IT assessment covering your infrastructure, licensing, security posture, and vendor contracts. We then deliver a prioritised IT roadmap with 30/90/180-day milestones and ROI projections in AED. Ongoing vCIO retainers are available from AED 5,000/month.',
+      },
+      {
+        question: 'How can IT consulting reduce costs for a Dubai SME?',
+        answer: 'Most Dubai SMEs overspend on redundant SaaS tools, mismanaged Microsoft 365 licensing, and underutilised cloud resources. Our M365 audits alone recover AED 30,000–80,000 annually for 50–150 seat businesses. Shadow IT elimination and vendor consolidation typically add another 15–25% in savings.',
+      },
+      {
+        question: 'What is a vCIO and does my company need one?',
+        answer: 'A vCIO (virtual Chief Information Officer) provides strategic IT leadership without the AED 400,000+ annual cost of a full-time CIO. NOCKO vCIOs attend board meetings, own your IT roadmap, manage vendor relationships, and ensure your technology investment aligns with business growth.',
+      },
+      {
+        question: 'Do you work with DIFC and ADGM regulated companies?',
+        answer: 'Yes. We have experience supporting DFSA-regulated financial firms in DIFC and FSRA-regulated entities in ADGM. We understand the specific IT governance, data residency, and audit requirements of UAE financial regulators.',
+      },
+    ],
+  },
 };
 
 export default function ITConsultingPage() {
   return (
     <>
+      <StructuredData
+        type="Service"
+        data={{
+          '@id': 'https://nocko.com/services/it-consulting#service',
+          name: 'IT Consulting & Strategy Dubai',
+          serviceType: 'IT Consulting',
+          description: 'Strategic IT consulting, digital transformation, and technology roadmap services for businesses in Dubai and UAE.',
+          url: 'https://nocko.com/services/it-consulting',
+          provider: { '@type': 'Organization', '@id': 'https://nocko.com/#localbusiness', name: 'NOCKO Information Technology' },
+          areaServed: [{ '@type': 'City', name: 'Dubai' }, { '@type': 'City', name: 'Abu Dhabi' }, { '@type': 'City', name: 'Sharjah' }],
+        }}
+      />
+      <StructuredData
+        type="BreadcrumbList"
+        data={{ itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://nocko.com/services' },
+          { '@type': 'ListItem', position: 3, name: 'IT Consulting', item: 'https://nocko.com/services/it-consulting' },
+        ]}}
+      />
+      <StructuredData
+        type="FAQPage"
+        data={{
+          mainEntity: itConsultingContent.faq.items.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: { '@type': 'Answer', text: item.answer },
+          })),
+        }}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -215,6 +268,10 @@ export default function ITConsultingPage() {
           footerNote="Expert Strategic Advice"
         />
 
+        <ServiceFAQ
+          title={itConsultingContent.faq.title}
+          items={itConsultingContent.faq.items}
+        />
         <ServiceCTA
           title={itConsultingContent.cta.title}
           text={itConsultingContent.cta.text}

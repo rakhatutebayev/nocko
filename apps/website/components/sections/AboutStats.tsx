@@ -15,18 +15,18 @@ interface AboutStatsProps {
 const defaultStats: Stat[] = [
   {
     icon: '/images/about/icon/plased.svg',
-    text: '500+ Places Helped',
-    alt: '500+ Places Helped',
+    text: '50+ Clients in UAE',
+    alt: '50+ Clients in UAE',
   },
   {
     icon: '/images/about/icon/99.svg',
-    text: '99.9% Stability',
-    alt: '99.9% Stability',
+    text: '99.9% Uptime SLA',
+    alt: '99.9% Uptime SLA',
   },
   {
     icon: '/images/about/icon/expertise.svg',
-    text: '12+ Years Expertise',
-    alt: '12+ Years Expertise',
+    text: '10+ Years Team Experience',
+    alt: '10+ Years Team Experience',
   },
   {
     icon: '/images/about/icon/response.svg',

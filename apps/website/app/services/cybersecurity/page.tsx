@@ -8,15 +8,17 @@ import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import RelatedServices from '@/components/services/RelatedServices';
 import ServiceGeo from '@/components/services/ServiceGeo';
+import ServiceFAQ from '@/components/services/ServiceFAQ';
+import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity Services in Dubai | #1 Data Protection UAE | NOCKO',
+  title: 'Cybersecurity Services in Dubai | Data Protection & Cybersecurity UAE | NOCKO',
   description:
     'Advanced cybersecurity services in Dubai and UAE. Firewall management, threat detection, data encryption, and security compliance for businesses. Expert security solutions for DIFC, JLT and Business Bay.',
   keywords:
     'cybersecurity Dubai, data protection UAE, IT security services Dubai, network security UAE, security compliance Dubai, threat detection UAE, cybersecurity company Dubai',
   openGraph: {
-    title: 'Cybersecurity Services in Dubai | #1 Data Protection UAE | NOCKO',
+    title: 'Cybersecurity Services in Dubai | Data Protection & Cybersecurity UAE | NOCKO',
     description:
       'Enterprise cybersecurity and data protection for businesses in Dubai and across the UAE. Advanced threat detection and security compliance.',
     type: 'website',
@@ -188,11 +190,62 @@ const cybersecurityContent = {
       description: 'Physical layer security and access control systems.',
     },
   ],
+  faq: {
+    title: 'Frequently Asked Questions About Cybersecurity Services',
+    items: [
+      {
+        question: 'How long does a NESA compliance assessment take for a Dubai business?',
+        answer: 'A full NESA IA-compliant gap assessment typically takes 5–10 business days depending on your infrastructure size. We deliver a prioritised remediation roadmap within 2 weeks of the initial assessment. Most DIFC and ADGM-regulated clients achieve compliance within 60–90 days.',
+      },
+      {
+        question: 'What is the difference between EDR and traditional antivirus?',
+        answer: 'Traditional antivirus uses signature-based detection — it can only catch known threats. EDR (Endpoint Detection and Response) tools like CrowdStrike Falcon and SentinelOne use behavioral AI to detect zero-day threats, ransomware, and fileless attacks in real time, and can automatically isolate infected endpoints within seconds.',
+      },
+      {
+        question: 'Do you provide 24/7 SOC monitoring in Dubai?',
+        answer: 'Yes. Our Security Operations Centre provides 24/7 threat monitoring with Arabic and English-speaking analysts. We monitor SIEM alerts, firewall logs, and endpoint telemetry around the clock, with a guaranteed P1 response under 15 minutes.',
+      },
+      {
+        question: 'Can you help with a DFSA or HAAD cybersecurity audit?',
+        answer: 'Yes. We have direct experience with DFSA IT risk framework requirements for DIFC-registered firms and HAAD/DOH cybersecurity compliance for UAE healthcare providers. We prepare your documentation, conduct the internal audit, and support you through the regulator\'s review process.',
+      },
+    ],
+  },
 };
 
 export default function CybersecurityPage() {
   return (
     <>
+      <StructuredData
+        type="Service"
+        data={{
+          '@id': 'https://nocko.com/services/cybersecurity#service',
+          name: 'Cybersecurity Services Dubai',
+          serviceType: 'Cybersecurity',
+          description: 'Enterprise cybersecurity, threat detection, firewall management, and compliance for businesses in Dubai and UAE.',
+          url: 'https://nocko.com/services/cybersecurity',
+          provider: { '@type': 'Organization', '@id': 'https://nocko.com/#localbusiness', name: 'NOCKO Information Technology' },
+          areaServed: [{ '@type': 'City', name: 'Dubai' }, { '@type': 'City', name: 'Abu Dhabi' }, { '@type': 'City', name: 'Sharjah' }],
+        }}
+      />
+      <StructuredData
+        type="BreadcrumbList"
+        data={{ itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://nocko.com/services' },
+          { '@type': 'ListItem', position: 3, name: 'Cybersecurity', item: 'https://nocko.com/services/cybersecurity' },
+        ]}}
+      />
+      <StructuredData
+        type="FAQPage"
+        data={{
+          mainEntity: cybersecurityContent.faq.items.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: { '@type': 'Answer', text: item.answer },
+          })),
+        }}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -215,6 +268,10 @@ export default function CybersecurityPage() {
           footerNote="Enterprise Grade Security"
         />
 
+        <ServiceFAQ
+          title={cybersecurityContent.faq.title}
+          items={cybersecurityContent.faq.items}
+        />
         <ServiceCTA
           title={cybersecurityContent.cta.title}
           text={cybersecurityContent.cta.text}

@@ -14,7 +14,7 @@ export default function ContactCtaLink({ href, className, ariaLabel, children }:
 
   return (
     <a
-      href={href}
+      href={isContact ? '/contact' : href}
       className={className}
       aria-label={ariaLabel}
       onClick={(e) => {

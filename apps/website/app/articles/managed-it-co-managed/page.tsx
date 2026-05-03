@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: 'A guide for IT Directors on how to effectively outsource tedious NOC alerts while maintaining control of corporate strategy. We integrate directly with your internal team.',
   alternates: {
     canonical: '/articles/managed-it-co-managed',
+    languages: {
+      'en-AE': '/articles/managed-it-co-managed',
+      'ru-RU': '/ru/articles/managed-it-co-managed',
+    },
   },
 };
 
@@ -46,10 +50,9 @@ const articleData = {
 };
 
 export default function ManagedItCoManagedPage() {
-  const currDate = new Date().toISOString().split('T')[0];
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-09-25', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero 

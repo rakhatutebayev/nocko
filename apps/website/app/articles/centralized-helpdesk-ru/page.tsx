@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/articles/centralized-helpdesk-ru',
+    languages: {
+      'en-AE': '/articles/centralized-helpdesk-ru',
+      'ru-RU': '/ru/articles/centralized-helpdesk-ru',
+    },
   },
 };
 
@@ -75,11 +79,10 @@ const articleData = {
 
 export default function CentralizedHelpdeskRuPage() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
-  const currDate = new Date().toISOString().split('T')[0];
   
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-01-20', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main">
         <Hero variant="article" title={articleData.hero.title} subtitle={articleData.hero.subtitle} />

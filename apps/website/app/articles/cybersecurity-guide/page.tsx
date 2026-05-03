@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: 'An exhaustive guide to enterprise cybersecurity in the UAE.',
   alternates: {
     canonical: '/articles/cybersecurity-guide',
+    languages: {
+      'en-AE': '/articles/cybersecurity-guide',
+      'ru-RU': '/ru/articles/cybersecurity-guide',
+    },
   },
 };
 
@@ -46,10 +50,9 @@ const articleData = {
 
 export default function CybersecurityGuidePage() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
-  const currDate = new Date().toISOString().split('T')[0];
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-02-28', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main"><Hero variant="article" title={articleData.hero.title} subtitle={articleData.hero.subtitle} /><div className="container"><Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Enterprise Cybersecurity Guide' }]} /><div className="article"><ArticleContent intro={articleData.intro} blocks={articleData.blocks} /></div></div></main>
       <Footer />

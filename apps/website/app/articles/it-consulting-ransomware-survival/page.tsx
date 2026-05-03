@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: 'Understand exactly what RTO and RPO mean, and how to architect a Disaster Recovery plan that actually works under the pressure of a real-world breach.',
   alternates: {
     canonical: '/articles/it-consulting-ransomware-survival',
+    languages: {
+      'en-AE': '/articles/it-consulting-ransomware-survival',
+      'ru-RU': '/ru/articles/it-consulting-ransomware-survival',
+    },
   },
 };
 
@@ -46,10 +50,9 @@ const articleData = {
 };
 
 export default function ItConsultingRansomwareSurvivalPage() {
-  const currDate = new Date().toISOString().split('T')[0];
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: currDate }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-10-08', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero 
