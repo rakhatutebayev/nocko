@@ -12,7 +12,7 @@ export default function LayoutScripts() {
           telephone: '+971542448888',
           description: 'Leading IT company in Dubai providing 24/7 IT support, network infrastructure, cloud solutions, and cybersecurity services for businesses across UAE.',
           sameAs: [
-            'https://www.linkedin.com/company/nocko-it',
+            'https://www.linkedin.com/company/it-nocko/',
             // Добавьте другие соцсети здесь
           ],
           address: {

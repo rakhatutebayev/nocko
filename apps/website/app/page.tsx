@@ -75,7 +75,7 @@ export default function HomePage() {
             { '@type': 'City', name: 'Sharjah' },
           ],
           sameAs: [
-            'https://www.linkedin.com/company/nocko',
+            'https://www.linkedin.com/company/it-nocko/',
           ],
           openingHoursSpecification: [
             {

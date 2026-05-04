@@ -136,7 +136,7 @@ export default function Footer() {
           <nav className="footer__legal" aria-label="Legal">
             <Link href="/privacy-policy">Privacy Policy</Link>
             <Link href="/terms">Terms of Service</Link>
-            <a href="https://www.linkedin.com/company/nocko" target="_blank" rel="noopener noreferrer" aria-label="NOCKO on LinkedIn">LinkedIn</a>
+            <a href="https://www.linkedin.com/company/it-nocko/" target="_blank" rel="noopener noreferrer" aria-label="NOCKO on LinkedIn">LinkedIn</a>
           </nav>
         </div>
       </div>
