@@ -98,7 +98,7 @@ const articleData = {
 export default function ItSupportOnboardingPage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-04-07', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-04-07', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -110,7 +110,11 @@ export default function ItSupportOnboardingPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Support & Helpdesk', href: '/services/it-support' }, { label: 'Article Details' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq}  relatedArticles={[
+    { href: '/articles/it-support-helpdesk', title: 'IT Helpdesk Services', description: 'Centralised helpdesk for ongoing user support.' },
+    { href: '/articles/it-support-remote', title: 'Remote IT Support', description: 'Remote support for day-to-day IT issues.' },
+    { href: '/services/it-support', title: 'IT Support Services', description: 'Full-spectrum IT support across Dubai and UAE.' }
+  ]}/>
           </div>
         </div>
       </main>

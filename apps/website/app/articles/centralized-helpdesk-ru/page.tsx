@@ -82,14 +82,18 @@ export default function CentralizedHelpdeskRuPage() {
   
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-01-20', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-01-20', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main">
         <Hero variant="article" title={articleData.hero.title} subtitle={articleData.hero.subtitle} />
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Централизованный Helpdesk 24/7' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/ru/services/it-support', title: 'IT Support (RU)', description: 'Комплексная ИТ-поддержка для бизнеса в ОАЭ.' },
+    { href: '/ru/services/managed-it', title: 'Managed IT (RU)', description: 'Полностью управляемая ИТ-инфраструктура.' },
+    { href: '/ru/services/cybersecurity', title: 'Кибербезопасность', description: 'Защита бизнеса от киберугроз в ОАЭ.' }
+  ]}/>
           </div>
         </div>
       </main>

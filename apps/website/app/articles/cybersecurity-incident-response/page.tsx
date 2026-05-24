@@ -16,6 +16,7 @@ export const metadata: Metadata = {
       'ru-RU': '/ru/articles/cybersecurity-incident-response',
     },
   },
+  robots: { index: false, follow: true },
 };
 
 const articleData = {

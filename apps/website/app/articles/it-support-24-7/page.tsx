@@ -95,7 +95,7 @@ const faqData = {
 export default function ITSupport247Page() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-01-28', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-01-28', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <StructuredData type="FAQPage" data={faqData} />
       <HeaderWrapper />
       <main className="main" role="main">
@@ -108,7 +108,11 @@ export default function ITSupport247Page() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Support', href: '/services/it-support' }, { label: '24/7 IT Support' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/articles/it-support-remote', title: 'Remote IT Support', description: 'How NOCKO resolves incidents without a site visit.' },
+    { href: '/articles/it-support-monitoring', title: 'IT Infrastructure Monitoring', description: 'Proactive monitoring that powers 24/7 alerting.' },
+    { href: '/services/managed-it', title: 'Managed IT Services', description: 'Fully managed IT with round-the-clock coverage.' }
+  ]}/>
           </div>
 
           <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #eaeaea' }}>

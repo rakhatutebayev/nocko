@@ -16,6 +16,7 @@ export const metadata: Metadata = {
       'ru-RU': '/ru/articles/it-amc-vs-msp',
     },
   },
+  robots: { index: false, follow: true },
 };
 
 const articleData = {

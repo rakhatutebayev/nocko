@@ -89,7 +89,7 @@ const articleData = {
 export default function ITConsultingBCDRePage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-07-21', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-07-21', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -101,7 +101,11 @@ export default function ITConsultingBCDRePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Consulting', href: '/services/it-consulting' }, { label: 'Disaster Recovery' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq}  relatedArticles={[
+    { href: '/articles/it-consulting-strategy', title: 'IT Strategy Consulting', description: 'Strategic IT planning to support digital change.' },
+    { href: '/articles/it-consulting-roi', title: 'IT Investment ROI', description: 'Measuring and justifying technology investment returns.' },
+    { href: '/services/cloud', title: 'Cloud Services', description: 'Cloud migration and infrastructure for UAE businesses.' }
+  ]}/>
           </div>
         </div>
       </main>

@@ -75,7 +75,13 @@ const articleData = {
 export default function ITConsultingRoadmapPage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-04-14', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-04-14', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="FAQPage" data={{ mainEntity: [
+          { '@type': 'Question', name: `How long does it take to build an IT roadmap?`, acceptedAnswer: { '@type': 'Answer', text: `NOCKO delivers a complete IT roadmap in 3 weeks from kickoff. Week 1 covers current-state assessment and documentation. Week 2 covers gap analysis and initiative identification. Week 3 covers prioritisation, AED budget modelling, and presentation to leadership. Ongoing quarterly vCIO reviews keep the roadmap current as the business evolves.` } },
+          { '@type': 'Question', name: `What should an IT roadmap include?`, acceptedAnswer: { '@type': 'Answer', text: `A practical IT roadmap should include an infrastructure upgrade schedule with hardware end-of-life dates, a software contract renewal calendar, security improvement milestones covering MFA, EDR, and SIEM, compliance deadlines for applicable frameworks such as NESA, DFSA, or HAAD, AED budget per quarter across the planning horizon, and a 30/90/180-day quick-win list for immediate cost savings and risk reduction.` } },
+          { '@type': 'Question', name: `How much does an IT roadmap cost?`, acceptedAnswer: { '@type': 'Answer', text: `A standalone IT roadmap engagement for a 50–150 seat Dubai business typically costs AED 12,000–22,000. Ongoing vCIO-managed roadmap reviews are available from AED 5,000 per month as part of a managed IT plan. The roadmap almost always identifies savings that exceed its cost within the first 90 days — particularly through M365 licence consolidation and cloud rightsizing.` } },
+          { '@type': 'Question', name: `Can you build a roadmap for a business planning to expand to Abu Dhabi or KSA?`, acceptedAnswer: { '@type': 'Answer', text: `Yes. Multi-emirate and GCC expansion is a common roadmap theme across our Dubai client base. We plan data residency architecture, inter-emirate connectivity via Etisalat or du links or SD-WAN overlay, Microsoft Entra ID multi-tenant or single-tenant decisions for acquired or new entities, and IT compliance requirements for each jurisdiction. Planning this before expansion costs a fraction of what it costs to fix after the fact.` } }
+        ] }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -87,7 +93,11 @@ export default function ITConsultingRoadmapPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Consulting', href: '/services/it-consulting' }, { label: 'IT Roadmaps' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/articles/it-consulting-strategy', title: 'IT Strategy Consulting', description: 'Aligning IT investment with business objectives.' },
+    { href: '/articles/it-consulting-digital-transformation', title: 'Digital Transformation', description: 'Cloud, automation, and AI adoption for UAE businesses.' },
+    { href: '/services/it-consulting', title: 'IT Consulting Services', description: 'Advisory and architecture consulting for UAE organisations.' }
+  ]}/>
           </div>
         </div>
       </main>

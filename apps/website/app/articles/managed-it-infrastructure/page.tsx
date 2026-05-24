@@ -16,6 +16,7 @@ export const metadata: Metadata = {
       'ru-RU': '/ru/articles/managed-it-infrastructure',
     },
   },
+  robots: { index: false, follow: true },
 };
 
 const articleData = {

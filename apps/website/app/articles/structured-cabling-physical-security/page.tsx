@@ -61,7 +61,7 @@ const articleData = {
 export default function StructuredcablingphysicalsecurityPage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-05-05', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-05-05', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero 
@@ -73,7 +73,11 @@ export default function StructuredcablingphysicalsecurityPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Structured Cabling', href: '/services/structured-cabling' }, { label: 'Article Details' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/articles/structured-cabling-guide', title: 'Structured Cabling Guide', description: 'Complete guide to structured cabling for UAE offices.' },
+    { href: '/services/structured-cabling', title: 'Structured Cabling Services', description: 'EIA/TIA 568-C certified cabling across Dubai and UAE.' },
+    { href: '/services/cybersecurity', title: 'Cybersecurity Services', description: 'Physical and cyber security integration for UAE businesses.' }
+  ]}/>
           </div>
         </div>
       </main>

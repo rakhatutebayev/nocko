@@ -78,9 +78,11 @@ const nextConfig: NextConfig = {
       { source: '/case-studies/gss.html', destination: '/case-studies/gss', permanent: true },
       { source: '/case-studies/solus.html', destination: '/case-studies/solus', permanent: true },
       { source: '/case-studies/scalini.html', destination: '/case-studies/scalini', permanent: true },
+      { source: '/case-studies/enterprise.html', destination: '/case-studies/enterprise', permanent: true },
       // .html duplicate service URLs
       { source: '/services/managed-it.html', destination: '/services/managed-it', permanent: true },
       { source: '/services/it-amc.html', destination: '/services/it-amc', permanent: true },
+      { source: '/services/cloud.html', destination: '/services/cloud', permanent: true },
       // Legacy URL → current slug
       { source: '/services/network-infrastructure', destination: '/services/structured-cabling', permanent: true },
       // RU articles → EN canonical (articles not translated, EN is canonical)

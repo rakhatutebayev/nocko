@@ -101,7 +101,7 @@ const articleData = {
 export default function ITConsultingInfrastructureDesignPage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-04-22', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-04-22', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -113,7 +113,11 @@ export default function ITConsultingInfrastructureDesignPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Consulting', href: '/services/it-consulting' }, { label: 'M&A IT Integration' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq}  relatedArticles={[
+    { href: '/articles/it-consulting-assessment', title: 'IT Assessment', description: 'Infrastructure review before design begins.' },
+    { href: '/articles/it-consulting-strategy', title: 'IT Strategy Consulting', description: 'Business-aligned IT planning for UAE organisations.' },
+    { href: '/services/it-consulting', title: 'IT Consulting Services', description: 'Advisory and architecture consulting for UAE organisations.' }
+  ]}/>
           </div>
         </div>
       </main>

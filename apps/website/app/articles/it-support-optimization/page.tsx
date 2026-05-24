@@ -95,7 +95,12 @@ const articleData = {
 export default function ITSupportOptimizationPage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-24', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="FAQPage" data={{ mainEntity: [
+          { '@type': 'Question', name: `How long does it take to see measurable improvements from IT performance optimization?`, acceptedAnswer: { '@type': 'Answer', text: `Quick wins — resolving a duplex mismatch on a switch port, rescheduling antivirus scans outside business hours, or downsizing an oversized Azure VM — are implemented within the first week and are immediately measurable. Structural improvements such as VLAN segmentation, full endpoint hardening deployment, and patch compliance programme establishment take 30–60 days to reach steady state. NOCKO documents before/after metrics for every intervention using Windows Performance Monitor baselines, so improvement is quantified, not estimated. For a 50–100 seat Dubai business, the typical 60-day outcome is: 30–50% reduction in user-reported performance tickets, patch compliance from 65% to 95%+, and AED 30,000–80,000 in identified Azure/M365 licence savings.` } },
+          { '@type': 'Question', name: `Do we need to replace hardware to improve server performance, or can tuning alone make a difference?`, acceptedAnswer: { '@type': 'Answer', text: `In most Dubai SME environments, hardware replacement is the last resort, not the first. NOCKO\'s experience is that 60–70% of server performance complaints are resolved by configuration changes rather than hardware upgrades: rescheduling maintenance tasks, configuring SQL Server maximum memory, adjusting Windows power plans from Balanced to High Performance (which alone increases sustained CPU clock speeds by 10–15% on older Intel Xeon platforms), and eliminating unnecessary services. Hardware replacement is recommended only when Performance Monitor data shows consistent resource saturation at peak load that cannot be resolved by workload redistribution or configuration tuning — and when we do recommend hardware, we provide specific specifications with AED cost estimates attached.` } },
+          { '@type': 'Question', name: `What is a realistic patch compliance target for a UAE business, and how is it measured?`, acceptedAnswer: { '@type': 'Answer', text: `A realistic and auditable patch compliance target for a UAE business is 95% of managed devices at the current patch level within 21 days of release for standard patches, and 98%+ for Critical CVEs within 72 hours of vendor release. The 5% tolerance accounts for devices that are legitimately offline (employee on leave, hardware in for repair) and should not be treated as a compliance failure if the device returns to compliance within 5 business days of coming back online. Compliance is measured through Microsoft Intune compliance reports or WSUS/MECM reporting dashboards, which provide per-device patch status, age of missing patches, and CVE severity mapping. For DIFC-regulated firms, these reports are formatted for DFSA IT Risk Management evidence submissions.` } }
+        ] }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -107,7 +112,11 @@ export default function ITSupportOptimizationPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Support', href: '/services/it-support' }, { label: 'Performance Optimization' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/articles/it-support-monitoring', title: 'IT Infrastructure Monitoring', description: 'Proactive RMM monitoring for Dubai businesses.' },
+    { href: '/articles/it-support-helpdesk', title: 'IT Helpdesk Services', description: 'Centralised helpdesk for end-user support requests.' },
+    { href: '/services/it-support', title: 'IT Support Services', description: 'Full-spectrum IT support across Dubai and UAE.' }
+  ]}/>
           </div>
         </div>
       </main>

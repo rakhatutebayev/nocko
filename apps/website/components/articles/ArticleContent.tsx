@@ -11,13 +11,27 @@ interface ArticleFAQItem {
   answer: string;
 }
 
+interface RelatedArticle {
+  href: string;
+  title: string;
+  description: string;
+}
+
 interface ArticleContentProps {
   intro: string;
   blocks: ArticleBlock[];
   faq?: ArticleFAQItem[];
+  relatedArticles?: RelatedArticle[];
 }
 
-export default function ArticleContent({ intro, blocks, faq }: ArticleContentProps) {
+const DEFAULT_RELATED: RelatedArticle[] = [
+  { href: '/services/it-support', title: 'IT Support Services', description: 'Comprehensive IT support for UAE businesses.' },
+  { href: '/services/managed-it', title: 'Managed IT', description: 'Fully managed IT infrastructure and operations.' },
+  { href: '/services/cybersecurity', title: 'Cybersecurity', description: 'Multi-layered defenses against cyber threats.' },
+];
+
+export default function ArticleContent({ intro, blocks, faq, relatedArticles }: ArticleContentProps) {
+  const related = relatedArticles ?? DEFAULT_RELATED;
   return (
     <article className="article section" itemScope itemType="https://schema.org/Article" itemProp="articleBody">
       <div className="container">
@@ -74,20 +88,14 @@ export default function ArticleContent({ intro, blocks, faq }: ArticleContentPro
 
       {/* Related Articles for SEO Interlinking */}
       <div className="container" style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid #eaeaea' }}>
-        <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>Explore Core IT Services</h3>
+        <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>Related Services & Resources</h3>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
-          <a href="/articles/it-support-24-7" style={{ display: 'block', padding: '1.5rem', border: '1px solid #e2e8f0', borderRadius: '8px', textDecoration: 'none', color: 'inherit', transition: 'box-shadow 0.2s' }}>
-            <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>24/7 IT Support</h4>
-            <p style={{ fontSize: '0.875rem', color: '#64748b' }}>Technical support around the clock for businesses across UAE.</p>
-          </a>
-          <a href="/articles/cloud-migration" style={{ display: 'block', padding: '1.5rem', border: '1px solid #e2e8f0', borderRadius: '8px', textDecoration: 'none', color: 'inherit', transition: 'box-shadow 0.2s' }}>
-            <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>Cloud Migration</h4>
-            <p style={{ fontSize: '0.875rem', color: '#64748b' }}>Move to AWS, Azure, or Google Cloud with zero downtime.</p>
-          </a>
-          <a href="/articles/cybersecurity-protection" style={{ display: 'block', padding: '1.5rem', border: '1px solid #e2e8f0', borderRadius: '8px', textDecoration: 'none', color: 'inherit', transition: 'box-shadow 0.2s' }}>
-            <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>Cybersecurity</h4>
-            <p style={{ fontSize: '0.875rem', color: '#64748b' }}>Multi-layered defenses against ransomware and cyber threats.</p>
-          </a>
+          {related.map((item) => (
+            <a key={item.href} href={item.href} style={{ display: 'block', padding: '1.5rem', border: '1px solid #e2e8f0', borderRadius: '8px', textDecoration: 'none', color: 'inherit', transition: 'box-shadow 0.2s' }}>
+              <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>{item.title}</h4>
+              <p style={{ fontSize: '0.875rem', color: '#64748b' }}>{item.description}</p>
+            </a>
+          ))}
         </div>
       </div>
     </article>

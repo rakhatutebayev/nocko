@@ -90,7 +90,7 @@ const articleData = {
 export default function ITConsultingROIPage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-05-19', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-05-19', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -102,7 +102,11 @@ export default function ITConsultingROIPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Consulting', href: '/services/it-consulting' }, { label: 'Licensing ROI' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq}  relatedArticles={[
+    { href: '/articles/it-consulting-strategy', title: 'IT Strategy Consulting', description: 'ROI-focused IT planning for UAE businesses.' },
+    { href: '/articles/it-consulting-digital-transformation', title: 'Digital Transformation', description: 'Cloud and automation investments with measurable returns.' },
+    { href: '/services/it-consulting', title: 'IT Consulting Services', description: 'Advisory and architecture consulting for UAE organisations.' }
+  ]}/>
           </div>
         </div>
       </main>

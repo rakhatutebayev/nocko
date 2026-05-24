@@ -61,7 +61,7 @@ const articleData = {
 export default function StructuredcablingretrofittingPage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-11-01', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-11-01', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero 
@@ -73,7 +73,11 @@ export default function StructuredcablingretrofittingPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Structured Cabling', href: '/services/structured-cabling' }, { label: 'Article Details' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/articles/structured-cabling-guide', title: 'Structured Cabling Guide', description: 'Complete guide to structured cabling for UAE offices.' },
+    { href: '/articles/structured-cabling-fiber-optic', title: 'Fibre Optic Cabling', description: 'High-speed fibre for new and upgraded installations.' },
+    { href: '/services/structured-cabling', title: 'Structured Cabling Services', description: 'EIA/TIA 568-C certified cabling across Dubai and UAE.' }
+  ]}/>
           </div>
         </div>
       </main>

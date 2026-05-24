@@ -107,7 +107,12 @@ const articleData = {
 export default function ITSupportRemotePage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-31', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-31', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="FAQPage" data={{ mainEntity: [
+          { '@type': 'Question', name: `How quickly does NOCKO begin a remote support session after a ticket is raised?`, acceptedAnswer: { '@type': 'Answer', text: `For managed IT support clients in Dubai, L1 remote session initiation SLA is 15 minutes for P1 (system down, business-critical) and 30–60 minutes for P2/P3 during UAE business hours (Sunday–Thursday, 08:00–18:00 GST). After-hours and 24/7 coverage is available under premium managed agreements. For ad-hoc (non-contract) remote support, response times are typically 1–3 hours depending on engineer availability. Remote session tools (ConnectWise Control agent) are pre-deployed on client endpoints as part of onboarding, so there is no delay installing access software at incident time.` } },
+          { '@type': 'Question', name: `Is remote IT support secure — can engineers access systems without the user knowing?`, acceptedAnswer: { '@type': 'Answer', text: `Unattended remote access (via ConnectWise Control agent) is enabled only on systems explicitly enrolled by the client IT administrator during onboarding. NOCKO engineers cannot initiate connections to endpoints that have not been enrolled. All sessions are logged with engineer ID, timestamp, and session duration. Session recordings are retained for 12 months. For attended sessions, the user sees a notification and can terminate the session at any time. Clients receive monthly access audit reports showing which systems were accessed, by which engineer, and for how long — a requirement for businesses with ISO 27001 or NESA IA compliance obligations.` } },
+          { '@type': 'Question', name: `What is the cost of remote IT support for a Dubai SME without a managed contract?`, acceptedAnswer: { '@type': 'Answer', text: `Ad-hoc remote support is available at AED 250–450 per incident (per session, capped at 1 hour) depending on L1 or L2 tier. For businesses with predictable support volumes, managed IT support agreements start from AED 180–350 per seat per month and include unlimited remote support incidents within SLA, proactive monitoring via RMM, and on-site dispatch for hardware issues at no additional call-out charge. For a 30-seat Dubai business, the typical managed agreement cost is AED 6,000–10,500 per month — compared to AED 15,000–25,000 per month in reactive on-site break-fix costs for the same incident volume.` } }
+        ] }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -119,7 +124,11 @@ export default function ITSupportRemotePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Support', href: '/services/it-support' }, { label: 'Remote IT Support' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/articles/it-support-onsite', title: 'On-Site IT Support', description: 'Field engineer dispatch with defined SLA windows.' },
+    { href: '/articles/it-support-monitoring', title: 'IT Infrastructure Monitoring', description: 'Proactive monitoring to catch issues before users do.' },
+    { href: '/services/it-support', title: 'IT Support Services', description: 'Full-spectrum IT support across Dubai and UAE.' }
+  ]}/>
           </div>
         </div>
       </main>

@@ -92,7 +92,12 @@ const articleData = {
 export default function ITSupportMonitoringPage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-10', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-10', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="FAQPage" data={{ mainEntity: [
+          { '@type': 'Question', name: `What is the difference between RMM monitoring and a NOC service?`, acceptedAnswer: { '@type': 'Answer', text: `RMM (Remote Monitoring and Management) refers to the tooling layer — the agents, SNMP collectors, and dashboards that gather and display infrastructure telemetry. A NOC (Network Operations Centre) service is the human operations layer on top of the RMM — engineers who actively watch, triage, and respond to the telemetry 24/7. NOCKO provides both: we deploy and configure the RMM tooling (N-able, Datto RMM, Zabbix, PRTG) and we operate the NOC function, either fully managed or as an after-hours extension of your internal IT team. For most Dubai SMEs with 50–200 seats, a fully managed NOC service is more cost-effective than hiring two or three additional IT staff to provide the same coverage.` } },
+          { '@type': 'Question', name: `How quickly can NOCKO deploy infrastructure monitoring for a new client?`, acceptedAnswer: { '@type': 'Answer', text: `For a 50-seat environment, initial monitoring coverage is live within 2–3 business days of engagement start. This includes RMM agent deployment to all Windows and macOS endpoints via group policy or MDM, SNMP configuration on switches and firewalls, and base alert threshold configuration. Full threshold tuning — calibrating alerts to the client\'s specific environment baseline to minimise false positives — takes an additional 2–3 weeks of live operation. By the end of the first month, alert noise is typically reduced by 60–70% from initial defaults while genuine alert detection rate improves.` } },
+          { '@type': 'Question', name: `Can NOCKO integrate monitoring alerts into our existing IT ticketing system?`, acceptedAnswer: { '@type': 'Answer', text: `Yes. NOCKO\'s monitoring stack integrates with ConnectWise Manage, Autotask PSA, Freshservice, Jira Service Management, and ServiceNow via native API connectors or webhook-based integrations. Monitoring alerts generate tickets automatically with pre-populated diagnostic data — affected device, alert type, threshold breached, current metric value, and correlated recent events — so the engineer receiving the ticket has context immediately rather than having to gather it manually. For clients with existing ITSM platforms, we configure bidirectional sync so ticket status updates in your system are reflected in our monitoring dashboard in real time.` } }
+        ] }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -104,7 +109,11 @@ export default function ITSupportMonitoringPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Support', href: '/services/it-support' }, { label: 'Infrastructure Monitoring' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/articles/it-support-remote', title: 'Remote IT Support', description: 'Resolving issues remotely before they require a visit.' },
+    { href: '/articles/it-support-optimization', title: 'IT Support Optimisation', description: 'Reducing ticket volumes and improving resolution time.' },
+    { href: '/services/managed-it', title: 'Managed IT Services', description: 'Fully managed IT with 24/7 monitoring included.' }
+  ]}/>
           </div>
         </div>
       </main>

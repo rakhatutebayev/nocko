@@ -81,9 +81,13 @@ export default function CloudGuidePage() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-02-05', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-02-05', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
       <HeaderWrapper />
-      <main className="main"><Hero variant="article" title={articleData.hero.title} subtitle={articleData.hero.subtitle} /><div className="container"><Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Cloud Infrastructure Guide' }]} /><div className="article"><ArticleContent intro={articleData.intro} blocks={articleData.blocks} /></div></div></main>
+      <main className="main"><Hero variant="article" title={articleData.hero.title} subtitle={articleData.hero.subtitle} /><div className="container"><Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Cloud Infrastructure Guide' }]} /><div className="article"><ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/articles/it-consulting-digital-transformation', title: 'Digital Transformation', description: 'Cloud and automation adoption for UAE businesses.' },
+    { href: '/articles/it-consulting-infrastructure-design', title: 'IT Infrastructure Design', description: 'On-premises and hybrid infrastructure design.' },
+    { href: '/services/cloud', title: 'Cloud Services', description: 'Cloud migration and infrastructure for UAE businesses.' }
+  ]}/></div></div></main>
       <Footer />
     </>
   );

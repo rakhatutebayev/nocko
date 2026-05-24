@@ -73,7 +73,13 @@ const articleData = {
 export default function ITConsultingAssessmentPage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-11', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-11', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="FAQPage" data={{ mainEntity: [
+          { '@type': 'Question', name: `How long does an IT assessment take?`, acceptedAnswer: { '@type': 'Answer', text: `For a 50–100 seat Dubai business, a full IT assessment takes 5–10 business days. This includes on-site infrastructure inspection, remote tooling deployment via RMM agent, licence audit against Microsoft Entra ID logs, and security review. You receive a written report with RAG scoring and a prioritised remediation plan within 2 weeks of kickoff.` } },
+          { '@type': 'Question', name: `Does NOCKO provide IT assessments for DIFC or ADGM firms?`, acceptedAnswer: { '@type': 'Answer', text: `Yes. We conduct IT assessments specifically mapped to DFSA IT Risk Management requirements for DIFC-licensed firms and FSRA Technology Risk Guidelines for ADGM entities. Our reports are formatted for regulatory submission and include evidence packs for auditors. These are not generic assessments with compliance language bolted on — the framework mapping is built into the assessment methodology.` } },
+          { '@type': 'Question', name: `What does an IT assessment cost?`, acceptedAnswer: { '@type': 'Answer', text: `IT assessments for Dubai SMEs with 50–150 seats typically cost AED 8,000–18,000 as a one-time engagement. This fee is frequently recovered within the first month of implementing the identified savings — particularly through M365 licence consolidation and Azure rightsizing, where most Dubai businesses find AED 30,000–80,000 in annual waste on the first audit.` } },
+          { '@type': 'Question', name: `What happens if critical vulnerabilities are found during the assessment?`, acceptedAnswer: { '@type': 'Answer', text: `We triage findings in real time. If we discover an actively exploited vulnerability — for example, an unpatched RDP server exposed directly to the internet — we notify you the same day and can begin emergency remediation immediately. P1 emergency response is handled as a separate engagement from the assessment scope, so the assessment does not pause while the critical issue is resolved.` } }
+        ] }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -85,7 +91,11 @@ export default function ITConsultingAssessmentPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Consulting', href: '/services/it-consulting' }, { label: 'Forensic Audits' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/articles/it-consulting-strategy', title: 'IT Strategy Consulting', description: 'Translating business goals into an IT roadmap.' },
+    { href: '/articles/it-consulting-infrastructure-design', title: 'IT Infrastructure Design', description: 'Designing scalable infrastructure for UAE businesses.' },
+    { href: '/services/it-consulting', title: 'IT Consulting Services', description: 'Advisory and architecture consulting for UAE organisations.' }
+  ]}/>
           </div>
         </div>
       </main>

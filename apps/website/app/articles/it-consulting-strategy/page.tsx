@@ -65,7 +65,13 @@ const articleData = {
 export default function ITConsultingStrategyPage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-25', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-25', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="FAQPage" data={{ mainEntity: [
+          { '@type': 'Question', name: `How much can IT strategy consulting save a Dubai business?`, acceptedAnswer: { '@type': 'Answer', text: `Based on our engagements with Dubai SMEs across 50–200 seats, IT strategy consulting typically delivers AED 50,000–150,000 in annual savings through vendor consolidation, licence rightsizing, and contract renegotiation. The engagement cost is usually recovered within 3–6 months. For businesses that have never formally audited their vendor contracts, the first audit routinely finds savings that exceed the consulting fee within the first 30 days of implementation.` } },
+          { '@type': 'Question', name: `How do you handle Microsoft licensing optimisation in the UAE?`, acceptedAnswer: { '@type': 'Answer', text: `We audit your current M365 and Azure usage against actual consumption data from Microsoft Entra ID and Azure Cost Management. We identify over-provisioned licences — E3 or E5 assigned to users who only need F3, Power BI Pro seats assigned to users who have never logged in, Teams Premium features enabled on licences that pre-date the requirement. We then restructure your CSP agreement through our Microsoft partner status. Most Dubai businesses with 50 or more seats are overpaying by 20–40% on Microsoft licensing.` } },
+          { '@type': 'Question', name: `Can you help us plan IT for UAE free zone expansion?`, acceptedAnswer: { '@type': 'Answer', text: `Yes. We specialise in IT planning for UAE free zone expansion across JAFZA, DMCC, ADGM, and SAIF Zone, as well as GCC regional growth into KSA, Qatar, and Kuwait. This covers data residency planning, WAN connectivity between emirates using Etisalat or du MPLS or SD-WAN, unified IT management across entities, and regulatory compliance for each jurisdiction\'s IT requirements.` } },
+          { '@type': 'Question', name: `What is Shadow IT and why is it dangerous for UAE businesses?`, acceptedAnswer: { '@type': 'Answer', text: `Shadow IT refers to software tools purchased and used by staff without IT department approval — personal Dropbox accounts, WhatsApp file sharing, unauthorised cloud storage, unapproved SaaS subscriptions expensed directly to department budgets. For UAE-regulated businesses subject to DFSA, HAAD, or NESA requirements, Shadow IT creates data residency violations and produces audit findings. We identify and document all Shadow IT as part of every strategy engagement and produce a remediation plan that eliminates it without disrupting the workflows it was solving.` } }
+        ] }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -77,7 +83,11 @@ export default function ITConsultingStrategyPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Consulting', href: '/services/it-consulting' }, { label: 'Vendor Governance' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/articles/it-consulting-assessment', title: 'IT Assessment', description: 'Understanding your current IT environment before planning.' },
+    { href: '/articles/it-consulting-roadmap', title: 'IT Roadmap Planning', description: '12–36 month IT roadmap with prioritised initiatives.' },
+    { href: '/services/it-consulting', title: 'IT Consulting Services', description: 'Advisory and architecture consulting for UAE organisations.' }
+  ]}/>
           </div>
         </div>
       </main>

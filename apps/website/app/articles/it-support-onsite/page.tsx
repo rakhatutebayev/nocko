@@ -94,7 +94,12 @@ const articleData = {
 export default function ITSupportOnsitePage() {
   return (
     <>
-      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-17', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-17', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <StructuredData type="FAQPage" data={{ mainEntity: [
+          { '@type': 'Question', name: `How quickly can NOCKO dispatch a field engineer in Dubai?`, acceptedAnswer: { '@type': 'Answer', text: `Under a Managed IT contract, P1 critical incidents (complete business systems down) are dispatched for 2-hour on-site arrival in Dubai core zones: DIFC, Business Bay, Downtown, Sheikh Zayed Road corridor, and DWTC. P2 high-priority faults are 4-hour on-site for all Dubai zones including JLT/DMCC and Dubai Silicon Oasis. For ad-hoc break-fix callouts without a Managed IT contract, same-day attendance is typically available for morning bookings made before 10 AM, subject to engineer availability and a priority callout surcharge.` } },
+          { '@type': 'Question', name: `Do NOCKO engineers carry spare parts to site?`, acceptedAnswer: { '@type': 'Answer', text: `NOCKO maintains a Dubai spare-parts stock covering the most common break-fix components: server hard drives (SAS and SATA, common capacities for HPE and Dell arrays), server PSUs (top HPE ProLiant and Dell PowerEdge models), Cat6 patch cables and keystone jacks, APC UPS battery cartridges (common SMT and SUA models), and desktop/laptop RAM and SSDs. For less common components — a specific RAID controller, a proprietary NIC, or a fibre SFP — we source from local Dubai distributors same-day or next-day for most items. Engineers confirm parts availability at ticket triage before dispatch so there are no wasted site visits.` } },
+          { '@type': 'Question', name: `Can NOCKO provide on-site support in Abu Dhabi — ADGM and Mussafah?`, acceptedAnswer: { '@type': 'Answer', text: `Yes. NOCKO covers Abu Dhabi including ADGM (Al Maryah Island), Mussafah industrial district, Khalifa City, and the main CBD around Corniche and Al Reem Island. For Managed IT clients in Abu Dhabi, P1 SLA is 4-hour on-site and P2 is 8-hour (same business day). NOCKO has a field engineer presence in Abu Dhabi during business hours. Ad-hoc callouts to Abu Dhabi carry a minimum 2-hour billable engagement plus a travel charge; Managed IT clients in Abu Dhabi have travel included in the contract fee.` } }
+        ] }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -106,7 +111,11 @@ export default function ITSupportOnsitePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Support', href: '/services/it-support' }, { label: 'On-Site Support' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/articles/it-support-remote', title: 'Remote IT Support', description: 'How NOCKO resolves issues without a site visit.' },
+    { href: '/articles/it-support-monitoring', title: 'IT Infrastructure Monitoring', description: 'Proactive RMM monitoring to prevent failures.' },
+    { href: '/services/it-support', title: 'IT Support Services', description: 'Full-spectrum IT support across Dubai and UAE.' }
+  ]}/>
           </div>
         </div>
       </main>

@@ -128,7 +128,11 @@ export default function StructuredCablingGuidePage() {
             ]}
           />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks}  relatedArticles={[
+    { href: '/articles/structured-cabling-fiber-optic', title: 'Fibre Optic Cabling', description: 'Single-mode and multi-mode fibre installation in UAE.' },
+    { href: '/articles/structured-cabling-retrofitting', title: 'Cabling Retrofit Projects', description: 'Upgrading legacy cabling in occupied office buildings.' },
+    { href: '/services/structured-cabling', title: 'Structured Cabling Services', description: 'EIA/TIA 568-C certified cabling across Dubai and UAE.' }
+  ]}/>
           </div>
         </div>
       </main>
