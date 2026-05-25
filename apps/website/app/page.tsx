@@ -6,6 +6,7 @@ import Features from '@/components/sections/Features';
 import Services from '@/components/sections/Services';
 import Clients from '@/components/sections/Clients';
 import IndustriesDynamic from '@/components/sections/IndustriesDynamic';
+import FeaturedArticles from '@/components/sections/FeaturedArticles';
 import LayoutScripts from '@/app/layout-scripts';
 import StructuredData from '@/components/seo/StructuredData';
 
@@ -93,6 +94,7 @@ export default function HomePage() {
         <Features />
         <Services />
         <Clients />
+        <FeaturedArticles />
         <IndustriesDynamic />
       </main>
       <Footer />
