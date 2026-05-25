@@ -133,23 +133,23 @@ const resources = [
   },
   {
     type: 'GUIDE',
-    title: 'The Blueprint for Corporate Infrastructure',
+    title: 'Structured Cabling Guide for UAE Offices',
     description:
-      'A deep dive into Cat6 vs Cat6A, the necessity of Fluke certification, and managing physical layer deployments.',
+      'Complete guide to Cat6A, fibre optic, EIA/TIA 568-C certification, and designing cabling infrastructure for Dubai free zone and mainland offices.',
     image: '/images/services/cards/guide.png',
-    url: '/articles/structured-cabling-fiber-vs-cat6a',
+    url: '/articles/structured-cabling-guide',
     ctaText: 'Download the Guide',
     imageAlt: 'Structured cabling guide for UAE businesses',
   },
   {
     type: 'ARTICLE',
-    title: 'Why standard Wi-Fi fails in Offices',
+    title: 'Fibre Optic Cabling: Single-Mode vs Multi-Mode',
     description:
-      'Understand how RF interference and physical materials block consumer routers, and why Ekahau heatmapping is mandatory.',
+      'When to specify single-mode vs multi-mode fibre, splice vs connector termination, and how fibre backbone design decisions affect your network for the next decade.',
     image: '/images/services/cards/multi.png',
-    url: '/articles/structured-cabling-fluke-importance',
-    ctaText: 'Read Wi-Fi Article',
-    imageAlt: 'Ekahau predictive heatmap',
+    url: '/articles/structured-cabling-fiber-optic',
+    ctaText: 'Read Fibre Guide',
+    imageAlt: 'Fibre optic cabling UAE',
   },
 ];
 

@@ -150,21 +150,21 @@ const managedItContent = {
     },
     {
       type: 'GUIDE',
-      title: 'The Blueprint for Managed IT Services',
+      title: '24/7 IT Support Operations for UAE Businesses',
       description:
-        'Understand the critical technical difference between reactive "Break/Fix" AMC contracts and true proactive Managed Services.',
+        'How NOCKO structures round-the-clock coverage — shift handover protocols, escalation trees, and why response time SLAs only matter if they are contractually enforced.',
       image: '/images/services/cards/guide.png',
-      url: '/articles/managed-it-services-guide',
-      ctaText: 'Download the MSP Blueprint',
+      url: '/articles/it-support-24-7',
+      ctaText: 'Read 24/7 Support Guide',
     },
     {
       type: 'ARTICLE',
-      title: 'Co-Managed IT: The Best of Both Worlds',
+      title: 'Remote IT Support: Scope, Tools, and SLAs',
       description:
-        'A guide for IT Directors on how to effectively outsource tedious NOC alerts while maintaining control of corporate strategy.',
+        'What remote-first support actually covers, the RMM tooling behind it, and when physical presence is non-negotiable — even in a fully managed service.',
       image: '/images/services/cards/multi.png',
-      url: '/articles/managed-it-co-managed',
-      ctaText: 'Read Co-Managed Strategy',
+      url: '/articles/it-support-remote',
+      ctaText: 'Read Remote Support Guide',
     },
   ],
   cta: {

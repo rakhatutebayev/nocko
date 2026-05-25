@@ -150,21 +150,21 @@ const cybersecurityContent = {
     },
     {
       type: 'GUIDE',
-      title: 'The Blueprint for Enterprise Cybersecurity',
+      title: 'IT Infrastructure Monitoring & NOC Services',
       description:
-        'A comprehensive guide covering NESA compliance, Zero-Trust Architecture, and Next-Gen Perimeters.',
+        'How RMM-driven monitoring detects lateral movement, suspicious processes, and endpoint anomalies before they escalate into security incidents.',
       image: '/images/services/cards/guide.png',
-      url: '/articles/cybersecurity-guide',
-      ctaText: 'Download Guide',
+      url: '/articles/it-support-monitoring',
+      ctaText: 'Read Monitoring Guide',
     },
     {
       type: 'ARTICLE',
-      title: 'Why standard Antivirus is dead in 2024',
+      title: 'IT Assessment & Security Audit for UAE Businesses',
       description:
-        'Understand the stark technical difference between legacy signature-based Antivirus and behavioral AI-driven EDR.',
+        'What a thorough IT assessment covers — from network vulnerability scanning to access control review — and how it maps to NESA and ISO 27001 frameworks.',
       image: '/images/services/cards/multi.png',
-      url: '/articles/cybersecurity-antivirus-dead',
-      ctaText: 'Read Architecture Article',
+      url: '/articles/it-consulting-assessment',
+      ctaText: 'Read Assessment Guide',
     },
   ],
   cta: {

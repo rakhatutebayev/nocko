@@ -155,12 +155,12 @@ const itSupportContent = {
     },
     {
       type: 'GUIDE',
-      title: 'The Blueprint for Managed IT Services',
+      title: 'IT Support Optimisation for UAE Businesses',
       description:
-        'A complete guide outlining the financial and operational differences between ad-hoc support and proactive Managed Services (MSP).',
+        'How to reduce ticket volume, improve first-call resolution, and design an IT support model that scales without scaling headcount.',
       image: '/images/services/cards/guide.png',
-      url: '/articles/managed-it-services-guide',
-      ctaText: 'Read Blueprint',
+      url: '/articles/it-support-optimization',
+      ctaText: 'Read Optimisation Guide',
     },
     {
       type: 'ARTICLE',

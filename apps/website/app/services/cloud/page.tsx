@@ -160,12 +160,12 @@ const cloudContent = {
     },
     {
       type: 'CAPABILITY',
-      title: 'Defending Your Cloud with Zero Trust',
+      title: 'Digital Transformation Strategy for UAE Businesses',
       description:
-        'Understand the shared responsibility model and why IAM security is critical for your Azure deployment.',
+        'How UAE organisations are adopting cloud, AI, and automation — with ROI frameworks, vendor selection, and change management for successful transformation.',
       image: '/images/services/cards/multi.png',
-      url: '/articles/cloud-zero-trust',
-      ctaText: 'Secure Your Cloud',
+      url: '/articles/it-consulting-digital-transformation',
+      ctaText: 'Read Transformation Guide',
     },
   ],
   cta: {

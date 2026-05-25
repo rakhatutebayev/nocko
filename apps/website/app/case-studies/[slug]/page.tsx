@@ -519,6 +519,70 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
 
+  const RELATED_BY_SLUG: Record<string, { href: string; title: string; desc: string }[]> = {
+    projection: [
+      { href: '/articles/it-support-monitoring', title: 'IT Infrastructure Monitoring', desc: 'Proactive RMM and NOC monitoring for UAE businesses.' },
+      { href: '/articles/it-support-onsite', title: 'On-Site IT Support', desc: 'Field engineer dispatch with 2-hour SLA across Dubai.' },
+      { href: '/services/it-amc', title: 'IT AMC Services', desc: 'Annual maintenance contracts with financially backed SLAs.' },
+    ],
+    solus: [
+      { href: '/articles/it-consulting-assessment', title: 'IT Assessment & Security Audit', desc: 'Gap assessment mapped to NESA and ISO 27001 frameworks.' },
+      { href: '/articles/it-support-monitoring', title: 'IT Infrastructure Monitoring', desc: 'EDR, SIEM, and endpoint monitoring for UAE businesses.' },
+      { href: '/services/cybersecurity', title: 'Cybersecurity Services', desc: 'Zero Trust, EDR, and compliance for UAE businesses.' },
+    ],
+    fh: [
+      { href: '/articles/cloud-infrastructure-guide', title: 'Cloud Infrastructure Guide', desc: 'AWS, Azure, and GCP deployment patterns for UAE businesses.' },
+      { href: '/articles/it-consulting-digital-transformation', title: 'Digital Transformation', desc: 'Cloud adoption and automation strategy for UAE organisations.' },
+      { href: '/services/cloud', title: 'Cloud Services', desc: 'Cloud migration and managed cloud infrastructure.' },
+    ],
+    scalini: [
+      { href: '/articles/it-support-helpdesk', title: 'IT Helpdesk Services', desc: 'Centralised helpdesk for end-user support across UAE.' },
+      { href: '/articles/it-support-remote', title: 'Remote IT Support', desc: 'Remote resolution for software and connectivity issues.' },
+      { href: '/services/it-support', title: 'IT Support Services', desc: 'Full-spectrum IT support across Dubai and UAE.' },
+    ],
+    gss: [
+      { href: '/articles/it-support-24-7', title: '24/7 IT Support', desc: 'Round-the-clock IT support operations for UAE businesses.' },
+      { href: '/articles/it-support-monitoring', title: 'IT Infrastructure Monitoring', desc: 'Continuous monitoring so issues are caught before users notice.' },
+      { href: '/services/it-support', title: 'IT Support Services', desc: 'Full-spectrum IT support across Dubai and UAE.' },
+    ],
+    technohub: [
+      { href: '/articles/it-support-helpdesk', title: 'IT Helpdesk Services', desc: 'Centralised helpdesk for end-user support.' },
+      { href: '/articles/it-support-optimization', title: 'IT Support Optimisation', desc: 'Reducing ticket volumes and improving resolution time.' },
+      { href: '/services/it-support', title: 'IT Support Services', desc: 'Full-spectrum IT support across Dubai and UAE.' },
+    ],
+    enterprise: [
+      { href: '/articles/it-support-remote', title: 'Remote IT Support', desc: 'Remote support across multiple sites and emirates.' },
+      { href: '/articles/it-consulting-infrastructure-design', title: 'IT Infrastructure Design', desc: 'Scalable network and server architecture for UAE businesses.' },
+      { href: '/services/managed-it', title: 'Managed IT Services', desc: 'Fully managed IT for multi-site UAE businesses.' },
+    ],
+    cybersecurity: [
+      { href: '/articles/it-consulting-assessment', title: 'IT Assessment & Security Audit', desc: 'Gap assessment mapped to HAAD, NESA, and ISO 27001.' },
+      { href: '/articles/it-consulting-infrastructure-design', title: 'IT Infrastructure Design', desc: 'Network segmentation and security architecture for UAE.' },
+      { href: '/services/cybersecurity', title: 'Cybersecurity Services', desc: 'Zero Trust, EDR, and compliance for UAE businesses.' },
+    ],
+    'ransomware-recovery': [
+      { href: '/articles/it-consulting-assessment', title: 'IT Assessment & Security Audit', desc: 'Identify vulnerabilities before attackers do.' },
+      { href: '/articles/it-support-monitoring', title: 'IT Infrastructure Monitoring', desc: 'Continuous monitoring and threat detection.' },
+      { href: '/services/cybersecurity', title: 'Cybersecurity Services', desc: 'Ransomware protection and incident response.' },
+    ],
+    'm365-audit': [
+      { href: '/articles/it-consulting-assessment', title: 'IT Assessment', desc: 'Comprehensive IT and security gap assessment.' },
+      { href: '/articles/it-consulting-strategy', title: 'IT Strategy Consulting', desc: 'Business-aligned IT planning for UAE organisations.' },
+      { href: '/services/it-consulting', title: 'IT Consulting Services', desc: 'Advisory and architecture consulting for UAE.' },
+    ],
+    'it-consulting': [
+      { href: '/articles/it-consulting-guide', title: 'IT Consulting Guide', desc: 'Full guide to IT consulting engagements in the UAE.' },
+      { href: '/articles/it-consulting-roadmap', title: 'IT Roadmap Planning', desc: '12–36 month IT roadmaps with prioritised initiatives.' },
+      { href: '/services/it-consulting', title: 'IT Consulting Services', desc: 'Advisory and architecture consulting for UAE.' },
+    ],
+  };
+
+  const relatedArticles = RELATED_BY_SLUG[slug] ?? [
+    { href: '/articles/it-support-monitoring', title: 'IT Infrastructure Monitoring', desc: 'Proactive RMM monitoring for UAE businesses.' },
+    { href: '/articles/it-consulting-assessment', title: 'IT Assessment', desc: 'Comprehensive IT gap assessment for UAE organisations.' },
+    { href: '/services', title: 'All IT Services', desc: 'Browse NOCKO\'s full range of IT services.' },
+  ];
+
   return (
     <>
       <StructuredData
@@ -609,6 +673,19 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 <blockquote>{caseStudy.attributes.testimonial}</blockquote>
               </div>
             )}
+          </div>
+        </section>
+        <section className="section" style={{ borderTop: '1px solid #eaeaea', paddingTop: '3rem' }}>
+          <div className="container">
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>Related Services & Resources</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+              {relatedArticles.map((item) => (
+                <a key={item.href} href={item.href} style={{ display: 'block', padding: '1.5rem', border: '1px solid #e2e8f0', borderRadius: '8px', textDecoration: 'none', color: 'inherit' }}>
+                  <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem', fontSize: '1rem' }}>{item.title}</h4>
+                  <p style={{ fontSize: '0.875rem', color: '#64748b', margin: 0 }}>{item.desc}</p>
+                </a>
+              ))}
+            </div>
           </div>
         </section>
       </main>

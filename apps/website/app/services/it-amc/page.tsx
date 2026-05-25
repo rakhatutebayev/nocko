@@ -147,21 +147,21 @@ const itAmcContent = {
     },
     {
       type: 'GUIDE',
-      title: 'How to structure a bombproof AMC Contract',
+      title: 'IT Infrastructure Monitoring & NOC Services',
       description:
-        'Understand the critical difference between inclusive scopes and exclusive out-of-scope hardware capital expenditures.',
+        'How proactive RMM monitoring prevents the failures that generate emergency AMC callouts — and why monitoring SLAs matter more than headline pricing.',
       image: '/images/services/cards/guide.png',
-      url: '/articles/it-amc-vs-msp',
-      ctaText: 'Read Legal Guide',
+      url: '/articles/it-support-monitoring',
+      ctaText: 'Read Monitoring Guide',
     },
     {
       type: 'ARTICLE',
-      title: 'Why SLAs matter more than price',
+      title: 'On-Site IT Support & Field Engineer Dispatch',
       description:
-        'An executive breakdown of why saving $500 on a cheap AMC contract will cost you $50,000 during a 3-day server outage.',
+        'P1 2-hour response, engineer certification requirements, and how on-site SLAs translate into real hardware replacement timelines across Dubai and Abu Dhabi.',
       image: '/images/services/cards/multi.png',
-      url: '/articles/it-amc-hardware-lifecycle',
-      ctaText: 'Calculate True Downtime',
+      url: '/articles/it-support-onsite',
+      ctaText: 'See SLA Details',
     },
   ],
   cta: {

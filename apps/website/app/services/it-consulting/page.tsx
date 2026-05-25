@@ -159,12 +159,12 @@ const itConsultingContent = {
     },
     {
       type: 'CAPABILITY',
-      title: 'Surviving a Ransomware Strike',
+      title: 'Measuring IT Investment ROI for UAE Businesses',
       description:
-        'Understand exactly what RTO and RPO mean, and how to architect a Disaster Recovery plan that actually works.',
+        'How to build a business case for IT investment — TCO modelling, productivity lift calculation, and the financial frameworks UAE CFOs use to approve IT spend.',
       image: '/images/services/cards/multi.png',
-      url: '/articles/it-consulting-ransomware-survival',
-      ctaText: 'Read Architecture Guide',
+      url: '/articles/it-consulting-roi',
+      ctaText: 'Read ROI Guide',
     },
   ],
   cta: {
