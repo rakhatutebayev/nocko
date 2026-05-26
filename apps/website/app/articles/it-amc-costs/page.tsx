@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'ru-RU': '/ru/articles/it-amc-costs',
     },
   },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
 const articleData = {

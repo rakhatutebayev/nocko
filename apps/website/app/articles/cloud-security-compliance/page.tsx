@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'ru-RU': '/ru/articles/cloud-security-compliance',
     },
   },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
 const articleData = {

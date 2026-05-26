@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'ru-RU': '/ru/articles/cybersecurity-antivirus-dead',
     },
   },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
 const articleData = {
