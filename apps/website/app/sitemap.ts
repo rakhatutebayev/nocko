@@ -147,6 +147,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static article pages — EN
   const staticArticlePages: MetadataRoute.Sitemap = [
     'centralized-helpdesk-ru',
+    'data-backup-services-dubai',
     'cloud-cost-optimization',
     'cloud-data-management',
     'cloud-infrastructure',
@@ -214,6 +215,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // RU article pages
   const ruArticlePages: MetadataRoute.Sitemap = [
     'centralized-helpdesk-ru',
+    'data-backup-services-dubai',
     'cloud-cost-optimization',
     'cloud-data-management',
     'cloud-infrastructure',
