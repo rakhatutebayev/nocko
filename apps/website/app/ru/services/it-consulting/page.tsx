@@ -1,13 +1,11 @@
 import { Metadata } from 'next';
 import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
 import Footer from '@/components/layout/FooterRu';
-import Hero from '@/components/sections/Hero';
-import ServiceContentEnhanced from '@/components/services/ServiceContentEnhanced';
-import ServiceFeatures from '@/components/services/ServiceFeatures';
-import ServiceBenefits from '@/components/services/ServiceBenefits';
-import ServiceCTA from '@/components/services/ServiceCTA';
-import RelatedServices from '@/components/services/RelatedServices';
+import ServicePageTemplate from '@/components/services/ServicePageTemplate';
 import ServiceGeo from '@/components/services/ServiceGeo';
+import StructuredData from '@/components/seo/StructuredData';
+import { getService } from '@/lib/api/strapi';
+import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
   title: 'ИТ Консалтинг в Дубае | Технологическая Стратегия ОАЭ | NOCKO',
@@ -17,24 +15,22 @@ export const metadata: Metadata = {
     'ИТ консалтинг Дубай, ИТ стратегия ОАЭ, технологический консалтинг Дубай, ИТ планирование ОАЭ, цифровая трансформация Дубай',
   openGraph: {
     title: 'ИТ Консалтинг в Дубае | Технологическая Стратегия ОАЭ | NOCKO',
-    description:
-      'Экспертная ИТ-стратегия и технологический консалтинг для бизнеса в Дубае и по всему ОАЭ. Стимулируйте рост с помощью цифровой трансформации.',
+    description: 'Экспертная ИТ-стратегия и технологический консалтинг для бизнеса в Дубае и по всему ОАЭ.',
     type: 'website',
     locale: 'ru_RU',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: {
-    canonical: '/ru/services/it-consulting',
-  },
+  alternates: { canonical: '/ru/services/it-consulting' },
 };
 
-const itConsultingContent = {
+export const revalidate = 3600;
+
+const fallback: MappedServiceContent = {
   hero: {
     title: 'Стратегический ИТ-Консалтинг и услуги vCIO в Дубае',
     subtitle: 'Цифровая трансформация, дорожные карты ИТ и управление поставщиками',
     description:
       'Перестаньте делать слепые инвестиции в технологии. NOCKO предоставляет услуги виртуального ИТ-директора (vCIO), беспристрастные переговоры с вендорами и комплексные ИТ-аудиты для развивающихся предприятий ОАЭ.',
-    serviceType: 'ИТ Консалтинг',
   },
   firstSection: [
     {
@@ -59,26 +55,11 @@ const itConsultingContent = {
     },
   ],
   features: [
-    {
-      icon: 'icon1',
-      title: 'Отчеты о состоянии инфраструктуры Red/Amber/Green (RAG)',
-    },
-    {
-      icon: 'icon2',
-      title: 'Беспристрастные переговоры при проведении тендеров (RFP)',
-    },
-    {
-      icon: 'icon3',
-      title: 'Услуги внештатного vCIO для отчетности перед советом директоров',
-    },
-    {
-      icon: 'icon4',
-      title: 'Анализ затрат и выгод и моделирование окупаемости (ROI) для CAPEX',
-    },
-    {
-      icon: 'icon5',
-      title: 'Разработка планов непрерывности бизнеса (BCDR)',
-    },
+    { icon: 'icon1', title: 'Отчеты о состоянии инфраструктуры Red/Amber/Green (RAG)' },
+    { icon: 'icon2', title: 'Беспристрастные переговоры при проведении тендеров (RFP)' },
+    { icon: 'icon3', title: 'Услуги внештатного vCIO для отчетности перед советом директоров' },
+    { icon: 'icon4', title: 'Анализ затрат и выгод и моделирование окупаемости (ROI) для CAPEX' },
+    { icon: 'icon5', title: 'Разработка планов непрерывности бизнеса (BCDR)' },
   ],
   secondSection: [
     {
@@ -103,97 +84,71 @@ const itConsultingContent = {
     },
   ],
   benefits: [
-    {
-      icon: '/images/benefits/global.png',
-      text: 'Опытные технологические <br> архитекторы в GCC',
-    },
-    {
-      icon: '/images/benefits/time.png',
-      text: 'Независимые советы, <br> не привязанные к вендорам',
-    },
-    {
-      icon: '/images/benefits/team.png',
-      text: 'Отчетность KPI <br> для руководителей',
-    },
-    {
-      icon: '/images/benefits/pricing.png',
-      text: 'Мгновенный ROI за счет <br> сокращения лицензий',
-    },
-    {
-      icon: '/images/benefits/communication.png',
-      text: 'Прямое общение <br> на уровне руководства',
-    },
+    { icon: '/images/benefits/global.png', text: 'Опытные технологические архитекторы в GCC' },
+    { icon: '/images/benefits/time.png', text: 'Независимые советы, не привязанные к вендорам' },
+    { icon: '/images/benefits/team.png', text: 'Отчетность KPI для руководителей' },
+    { icon: '/images/benefits/pricing.png', text: 'Мгновенный ROI за счет сокращения лицензий' },
+    { icon: '/images/benefits/communication.png', text: 'Прямое общение на уровне руководства' },
   ],
-  geoContent: {
-    emirates: [
-      { name: 'Дубай', hubs: ['DIFC', 'Business Bay', 'JLT', 'Silicon Oasis', 'Media City'] },
-      { name: 'Абу-Даби', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
-      { name: 'Шарджа', hubs: ['SAIF Zone'] },
-      { name: 'Аджман', hubs: [] },
-      { name: 'Фуджейра', hubs: [] },
-      { name: 'Рас-эль-Хайма', hubs: [] },
-      { name: 'Умм-эль-Кайвайн', hubs: [] }
-    ],
-    terms: ['Virtual CIO Дубай', 'ИТ Аудит ОАЭ', 'Консалтинг по интеграции ERP', 'Аудит лицензий Microsoft 365'],
-  },
+  resources: [],
   cta: {
     title: 'Хватит тратить ИТ-бюджет впустую.',
-    text: "Запишитесь на ознакомительный звонок с главным архитектором NOCKO для обсуждения вашей дорожной карты цифровой трансформации.",
+    text: 'Запишитесь на ознакомительный звонок с главным архитектором NOCKO для обсуждения вашей дорожной карты цифровой трансформации.',
     ctaText: 'Заказать звонок',
     ctaUrl: '#contact',
   },
   relatedServices: [
-    {
-      title: 'Миграция в облако',
-      url: '/ru/services/cloud',
-      description: 'Выполнение дорожной карты с нашими облачными архитекторами.',
-    },
-    {
-      title: 'Управляемые ИТ-услуги',
-      url: '/ru/services/managed-it',
-      description: 'Комплексное управление ИТ-инфраструктурой.',
-    },
-    {
-      title: 'Кибербезопасность',
-      url: '/ru/services/cybersecurity',
-      description: 'Архитектура Zero Trust и соответствие требованиям NESA.',
-    },
+    { title: 'Миграция в облако', url: '/ru/services/cloud', description: 'Выполнение дорожной карты с нашими облачными архитекторами.' },
+    { title: 'Управляемые ИТ-услуги', url: '/ru/services/managed-it', description: 'Комплексное управление ИТ-инфраструктурой.' },
+    { title: 'Кибербезопасность', url: '/ru/services/cybersecurity', description: 'Архитектура Zero Trust и соответствие требованиям NESA.' },
   ],
 };
 
-export default function ITConsultingPage() {
+const geoData = {
+  emirates: [
+    { name: 'Дубай', hubs: ['DIFC', 'Business Bay', 'JLT', 'Silicon Oasis', 'Media City'] },
+    { name: 'Абу-Даби', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
+    { name: 'Шарджа', hubs: ['SAIF Zone'] },
+    { name: 'Аджман', hubs: [] },
+    { name: 'Фуджейра', hubs: [] },
+    { name: 'Рас-эль-Хайма', hubs: [] },
+    { name: 'Умм-эль-Кайвайн', hubs: [] },
+  ],
+  terms: ['Virtual CIO Дубай', 'ИТ Аудит ОАЭ', 'Консалтинг по интеграции ERP', 'Аудит лицензий Microsoft 365'],
+};
+
+export default async function ItConsultingPage() {
+  const service = await getService('it-consulting', 'ru');
+  const content = service ? mapServiceData(service) : fallback;
+
   return (
     <>
+      <StructuredData
+        type="BreadcrumbList"
+        data={{
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://nocko.com/ru' },
+            { '@type': 'ListItem', position: 2, name: 'Услуги', item: 'https://nocko.com/ru/services' },
+            { '@type': 'ListItem', position: 3, name: 'ИТ Консалтинг', item: 'https://nocko.com/ru/services/it-consulting' },
+          ],
+        }}
+      />
       <HeaderWrapper />
-      <main className="main" role="main">
-        <Hero
-          variant="service-enhanced"
-          title={itConsultingContent.hero.title}
-          subtitle={itConsultingContent.hero.subtitle}
-          description={itConsultingContent.hero.description}
-        />
-
-        <ServiceContentEnhanced blocks={itConsultingContent.firstSection} />
-        <ServiceFeatures features={itConsultingContent.features} />
-        <ServiceContentEnhanced modifier="second" blocks={itConsultingContent.secondSection} />
-        <ServiceBenefits benefits={itConsultingContent.benefits} />
-        
-        <ServiceGeo 
-          title="Стратегическое ИТ-руководство по всем Эмиратам"
-          description="От финансовых стратегий DIFC до цифровых трансформаций в Business Bay, NOCKO является надежным ИТ-консультантом для бизнеса в ОАЭ."
-          emirates={itConsultingContent.geoContent.emirates}
-          terms={itConsultingContent.geoContent.terms}
-          footerNote="Экспертные Стратегические Советы"
-        />
-
-        <ServiceCTA
-          title={itConsultingContent.cta.title}
-          text={itConsultingContent.cta.text}
-          ctaText={itConsultingContent.cta.ctaText}
-          ctaUrl={itConsultingContent.cta.ctaUrl}
-        />
-        <RelatedServices services={itConsultingContent.relatedServices} />
-      </main>
+      <ServicePageTemplate
+        content={content}
+        breadcrumbs={[{ name: 'Услуги', url: '/ru/services' }, { name: 'ИТ Консалтинг' }]}
+        articleBlocks={service?.attributes.articleBlocks}
+        articleCards={service?.attributes.articleCards}
+        geoSection={
+          <ServiceGeo
+            title="Стратегическое ИТ-руководство по всем Эмиратам"
+            description="От финансовых стратегий DIFC до цифровых трансформаций в Business Bay, NOCKO является надежным ИТ-консультантом для бизнеса в ОАЭ."
+            emirates={geoData.emirates}
+            terms={geoData.terms}
+            footerNote="Экспертные Стратегические Советы"
+          />
+        }
+      />
       <Footer />
     </>
   );
