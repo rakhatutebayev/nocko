@@ -7,8 +7,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: '24/7 SIEM & SOC Integration | NOCKO UAE',
-  description: 'NOCKO feeds firewall drops, failed logins, and file access events into a centralised SIEM platform, with Dubai-based SOC engineers reviewing AI-flagged anomalies 24/7 and responding to active threats before business hours.',
+  title: 'Cyber Security Monitoring Service Dubai | 24/7 SOC & SIEM | NOCKO UAE',
+  description: 'Professional cyber security monitoring service in Dubai. 24/7 SOC with SIEM log analysis, real-time threat detection, NESA-compliant reporting, and sub-15-minute incident response for UAE businesses. Free security assessment.',
   alternates: {
     canonical: '/articles/cybersecurity-monitoring',
     languages: {
@@ -16,44 +16,93 @@ export const metadata: Metadata = {
       'ru-RU': '/ru/articles/cybersecurity-monitoring',
     },
   },
+  keywords: 'cyber security monitoring service, cybersecurity monitoring dubai, soc monitoring services dubai, 24/7 security monitoring uae, siem services dubai, managed soc dubai, nesa compliance monitoring, threat detection dubai',
   robots: { index: true, follow: true },
 };
 
 const articleData = {
   hero: {
-    title: '24/7 SIEM & SOC Integration',
-    subtitle: 'A dedicated Security Operations Center in Dubai',
-    description: 'Constant intelligent monitoring over millions of daily log events.',
+    title: 'Cyber Security Monitoring Service in Dubai',
+    subtitle: '24/7 SOC with SIEM — Real-Time Threat Detection for UAE Businesses',
+    description: 'Continuous cyber security monitoring service operated from Dubai. Our SOC engineers detect and respond to threats in under 15 minutes, 24 hours a day, 7 days a week — keeping your business compliant with NESA and DFSA requirements.',
   },
-  intro: 'We pipe every firewall drop, every failed login attempt, and every file deletion into our Security Information and Event Management (SIEM) orchestrator. Our 24/7 specialized SOC engineers review these compiled AI-driven anomalies live, shutting down brute-force attacks in the middle of the night.',
+  intro: 'A single undetected intrusion can cost a UAE business millions in regulatory fines, ransom payments, and reputational damage. Yet most companies in Dubai rely on reactive security — checking logs only after something breaks. Our managed cyber security monitoring service changes that: we pipe every firewall drop, failed login, and file access event into a centralised SIEM platform and have Dubai-based SOC engineers reviewing AI-flagged anomalies around the clock, shutting down attacks before your staff arrives in the morning.',
   blocks: [
     {
-      title: 'SIEM Platform and Log Ingestion',
-      text: '<p>We deploy Microsoft Sentinel or Splunk as the SIEM backbone, ingesting logs from firewalls (FortiGate, Palo Alto), Active Directory, cloud platforms (AWS CloudTrail, Azure Monitor), email gateways, and endpoint agents. A medium-sized Dubai office typically generates 2–5 million log events per day — far too many for manual review. Correlation rules and ML-based anomaly detection reduce these to 20–50 actionable alerts per day.</p><p>Log retention is configured for 12 months in hot storage and 3 years in cold storage, satisfying NESA IA requirements for log preservation and enabling forensic investigation of historical incidents.</p>',
+      title: '1. What Is a Cyber Security Monitoring Service?',
+      text: '<p>A cyber security monitoring service continuously collects, analyses, and responds to security events across your entire IT environment — servers, firewalls, endpoints, cloud platforms, and email. Unlike antivirus software that only blocks known malware signatures, a monitoring service detects anomalous behaviour patterns: a user downloading 50 GB at midnight, an admin account logging in from two countries simultaneously, or a server communicating with a known command-and-control IP.</p><p>For UAE businesses operating in regulated free zones such as DIFC, ADGM, or entities subject to NESA (National Electronic Security Authority) requirements, a documented security monitoring programme is not optional — it is a compliance obligation. Our service provides both the technical monitoring and the audit-ready evidence reports your compliance team needs.</p>',
       list: [
-        'Multi-source log ingestion: firewall, AD, cloud, endpoints, email',
-        'ML-based anomaly detection reducing noise to actionable alerts',
-        '12-month hot log retention for NESA compliance',
-        'Custom detection rules for UAE-specific threat patterns',
-        'Automated incident ticket creation in your ITSM platform',
+        'Continuous monitoring of network, cloud, endpoints, and email',
+        'Behaviour-based detection — catches zero-day threats antivirus misses',
+        'NESA IA-Standards and DFSA Technology Risk compliant logging',
+        'Documented audit trail for regulatory inspections',
       ],
     },
     {
-      title: '24/7 SOC Response and Threat Hunting',
-      text: '<p>Our Security Operations Center runs three shifts covering UAE business hours, evening, and overnight. When the SIEM raises a high-severity alert — such as a credential stuffing attack against your M365 tenant at 2 AM — a SOC engineer reviews the event context, confirms it is not a false positive, and acts within 15 minutes: blocking the attacking IP at the firewall and disabling the targeted account pending investigation.</p><p>Beyond reactive alerting, we conduct weekly threat hunting sessions to proactively search for indicators of compromise that automated rules may have missed — such as low-and-slow data exfiltration or living-off-the-land attacks using legitimate Windows tools.</p>',
+      title: '2. SIEM Platform and Log Ingestion',
+      text: '<p>We deploy Microsoft Sentinel or Splunk as the SIEM backbone, ingesting logs from firewalls (FortiGate, Palo Alto, Check Point), Active Directory, cloud platforms (AWS CloudTrail, Azure Monitor), email gateways (Microsoft 365 Defender, Proofpoint), and endpoint agents. A medium-sized Dubai office typically generates 2–5 million log events per day — far too many for manual review.</p><p>Our correlation rules and ML-based anomaly detection condense those millions of events into 20–50 actionable alerts per day. Log retention is configured for 12 months in hot storage and 3 years in cold storage, satisfying NESA IA requirements for log preservation and enabling forensic investigation of historical incidents.</p>',
+      list: [
+        'Multi-source ingestion: firewall, Active Directory, cloud, endpoints, email gateway',
+        'Microsoft Sentinel or Splunk SIEM deployment and management',
+        'ML-based anomaly detection — reduces noise by 99.5%',
+        '12-month hot + 3-year cold log retention for NESA compliance',
+        'Custom detection rules for UAE-specific threat patterns (BEC, ransomware, insider threat)',
+        'Automated incident ticket creation in ServiceNow, Jira, or Freshservice',
+      ],
     },
     {
-      title: 'Reporting and Compliance Evidence',
-      text: '<p>Monthly security reports summarise incident counts, mean time to detect (MTTD), mean time to respond (MTTR), and top threat categories. For entities undergoing NESA or DFSA audits, we produce control-mapped evidence reports showing log retention, access monitoring, and incident response history aligned to the relevant regulatory framework.</p>',
+      title: '3. 24/7 SOC: Human Response, Not Just Alerts',
+      text: '<p>Technology alone is not enough. Our Security Operations Center runs three shifts — covering UAE business hours, evening, and overnight — so a real engineer reviews every high-severity alert. When the SIEM flags a credential stuffing attack against your Microsoft 365 tenant at 2 AM, a SOC analyst confirms it is a genuine attack (not a false positive), blocks the attacking IP at the perimeter firewall, disables the targeted account, and opens an incident ticket — all within 15 minutes.</p><p>Beyond reactive alerting, we run weekly threat hunting sessions: proactive searches for indicators of compromise that automated rules may have missed. Common examples include low-and-slow data exfiltration (100 MB per hour for 30 days) and living-off-the-land attacks using legitimate Windows tools like PowerShell and WMI to avoid triggering signature-based detection.</p>',
+      list: [
+        'Three-shift SOC coverage — UAE business hours, evening, and overnight',
+        'Guaranteed 15-minute response time for critical severity alerts',
+        'Verified response: analyst confirms genuine threat before taking action',
+        'Containment actions: IP blocking, account disabling, network segmentation',
+        'Weekly proactive threat hunting for low-and-slow attacks',
+      ],
     },
     {
-      title: 'Frequently Asked Questions',
+      title: '4. Endpoint Detection and Response (EDR) Integration',
+      text: '<p>Perimeter monitoring alone misses threats that enter via phishing emails or USB drives. We integrate EDR agents (Microsoft Defender for Endpoint, CrowdStrike Falcon, or SentinelOne) on every workstation and server, feeding endpoint telemetry directly into the SIEM. This gives our SOC engineers process-level visibility: if ransomware begins encrypting files, we see it at the first encrypted file — not after thousands.</p><p>For remote workers — common across Dubai\'s free zone business community — EDR provides consistent protection regardless of whether the device is on the corporate network or a home Wi-Fi connection in JBR or Marina.</p>',
+      list: [
+        'EDR deployment on all endpoints: workstations, laptops, servers',
+        'Process-level telemetry fed to SIEM for correlated analysis',
+        'Ransomware detection at first encrypted file — not after mass damage',
+        'Remote worker protection regardless of network location',
+      ],
+    },
+    {
+      title: '5. NESA Compliance Monitoring and Reporting',
+      text: '<p>The UAE\'s National Electronic Security Authority (NESA) IA Standards require organisations in critical sectors to maintain documented security monitoring programmes. Our cyber security monitoring service is designed around these requirements: log sources, retention periods, alert thresholds, and response procedures all map directly to NESA control categories.</p><p>For entities in DIFC or ADGM, we also map monitoring outputs to DFSA Technology Risk and Cyber Risk guidance. Monthly security reports include incident counts, MTTD, MTTR, top threat categories, and a control evidence annex that your compliance officer can submit directly to regulators or auditors.</p>',
+      list: [
+        'NESA IA-Standards control mapping for all monitoring activities',
+        'DFSA Technology Risk and Cyber Risk guidance alignment',
+        'Monthly compliance report with evidence annex',
+        'Incident response documentation suitable for regulatory submission',
+        'Annual penetration testing coordination with monitoring baseline',
+      ],
+    },
+    {
+      title: '6. Security Monitoring for Cloud Environments (AWS & Azure)',
+      text: '<p>As UAE businesses migrate workloads to AWS Middle East Region and Azure UAE Central, security monitoring must follow. Cloud environments generate their own security events — IAM permission changes, unusual API calls, S3 bucket policy modifications — that on-premise security tools miss entirely.</p><p>We connect AWS CloudTrail, AWS GuardDuty, Azure Defender, and Azure Sentinel into our centralised SIEM, giving your SOC team unified visibility across on-premise and cloud infrastructure. A single dashboard shows whether a suspicious login originated from your Dubai office, your AWS workload, or a compromised cloud credential.</p>',
+      list: [
+        'AWS CloudTrail and GuardDuty integration with central SIEM',
+        'Azure Defender and Azure Monitor log ingestion',
+        'Unified on-premise + cloud security dashboard',
+        'Cloud-specific detection rules: IAM abuse, S3 exposure, cryptomining',
+      ],
+    },
+    {
+      title: 'Frequently Asked Questions — Cyber Security Monitoring Service Dubai',
       text: '',
       list: [
-        '<strong>Q: What is the difference between a SIEM and an MDR service?</strong><br/>A: A SIEM aggregates and correlates logs. MDR (Managed Detection and Response) adds human analysts who investigate alerts and take containment actions. Our SOC service combines both — SIEM technology plus analyst response.',
-        '<strong>Q: How long does it take to get the SIEM operational?</strong><br/>A: Initial deployment and basic log ingestion takes 1–2 weeks. Fine-tuning detection rules to reduce false positives for your specific environment typically takes another 2–4 weeks.',
-        '<strong>Q: Can you integrate with our existing ticketing system?</strong><br/>A: Yes — we integrate with ServiceNow, Jira, Freshservice, and most major ITSM platforms via webhook or API, so SIEM alerts automatically create tickets in your workflow.',
-        '<strong>Q: What languages do your SOC engineers speak?</strong><br/>A: Our Dubai-based SOC team communicates in English and Arabic, and we have engineers comfortable with both.',
+        '<strong>Q: What is a cyber security monitoring service and does my business need it?</strong><br/>A: A cyber security monitoring service continuously watches your IT environment for threats and responds in real time. Any UAE business with more than 20 employees, customer data, or regulatory obligations (NESA, DFSA, ADGM) should have one. Without it, breaches go undetected for an average of 207 days globally.',
+        '<strong>Q: What is the difference between a SIEM and an MDR service?</strong><br/>A: A SIEM is a platform that aggregates and correlates logs. MDR (Managed Detection and Response) adds human analysts who investigate alerts and take containment actions. Our SOC service combines both — enterprise SIEM technology plus 24/7 analyst response at a managed service price.',
+        '<strong>Q: How quickly do you respond to a detected threat?</strong><br/>A: For critical severity alerts (active intrusion, ransomware, data exfiltration), our guaranteed response time is 15 minutes. For high severity, 1 hour. For medium severity, 4 hours. Response actions include IP blocking, account suspension, network isolation, and customer notification.',
+        '<strong>Q: How long does it take to set up the monitoring service?</strong><br/>A: Initial SIEM deployment and basic log ingestion takes 1–2 weeks. Fine-tuning detection rules to reduce false positives for your specific environment takes another 2–4 weeks. Full operational capability is typically achieved within 30 days.',
+        '<strong>Q: Is your monitoring service NESA compliant?</strong><br/>A: Yes. Our log retention (12 months hot, 3 years cold), alert documentation, and incident response procedures are designed to satisfy NESA IA Standards requirements. We provide monthly evidence reports suitable for NESA audit submissions.',
+        '<strong>Q: Can you monitor our Microsoft 365 and Azure environment?</strong><br/>A: Yes. We ingest Microsoft 365 Defender, Azure Monitor, and Azure Sentinel data into our centralised SIEM. This covers email threats, Teams activity, SharePoint access, Azure AD sign-ins, and cloud resource changes.',
+        '<strong>Q: How much does a cyber security monitoring service cost in Dubai?</strong><br/>A: Pricing depends on the number of log sources and endpoints monitored. For a 50-user business in Dubai, managed SOC services typically start from AED 3,000–6,000 per month — significantly less than the cost of a single in-house security analyst. Contact us for a free security assessment and pricing.',
       ],
     },
   ],
