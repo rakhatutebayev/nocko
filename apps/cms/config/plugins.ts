@@ -1,4 +1,7 @@
 export default {
+  i18n: {
+    enabled: true,
+  },
   'users-permissions': {
     enabled: true,
     config: {

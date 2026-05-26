@@ -1,14 +1,10 @@
 import { Metadata } from 'next';
 import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
-import Hero from '@/components/sections/Hero';
-import ServiceContentEnhanced from '@/components/services/ServiceContentEnhanced';
-import ServiceFeatures from '@/components/services/ServiceFeatures';
-import ServiceBenefits from '@/components/services/ServiceBenefits';
-import ServiceCTA from '@/components/services/ServiceCTA';
-import RelatedServices from '@/components/services/RelatedServices';
-import ServiceGeo from '@/components/services/ServiceGeo';
+import ServicePageTemplate from '@/components/services/ServicePageTemplate';
 import StructuredData from '@/components/seo/StructuredData';
+import { getService } from '@/lib/api/strapi';
+import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
   title: 'Structured Cabling Services in Dubai | Network Infrastructure & Structured Cabling UAE | NOCKO',
@@ -17,232 +13,151 @@ export const metadata: Metadata = {
   keywords:
     'structured cabling Dubai, network cabling UAE, Cat6 installation Dubai, fiber optic cabling UAE, network infrastructure Dubai, data cabling Dubai',
   openGraph: {
-    title: 'Structured Cabling Services in Dubai | Network Infrastructure & Structured Cabling UAE | NOCKO',
-    description:
-      'Professional structured cabling and network infrastructure solutions in Dubai and UAE. Cat6/Cat6A and fiber optic certification.',
+    title: 'Structured Cabling Services in Dubai | Network Infrastructure UAE | NOCKO',
+    description: 'Professional structured cabling and network infrastructure solutions in Dubai and UAE.',
     type: 'website',
+    locale: 'en_AE',
+    siteName: 'NOCKO Information Technology',
   },
-  alternates: {
-    canonical: '/services/structured-cabling',
-  },
+  alternates: { canonical: '/services/structured-cabling' },
 };
 
-// Static content with High Information Gain and UAE Localized Data
-const firstSection = [
-  {
-    title: 'Certified Cat6A & Fiber Optic Engineering',
-    text: 'Physical cabling is the absolute foundation of your corporate network; a single faulty termination can cripple an entire department. Our certified engineers design and pull high-density Cat6, Cat6A, and OM3/OM4 Fiber Optic infrastructure specifically rated for the extreme temperatures of UAE industrial zones and the aesthetic requirements of modern Dubai offices.',
-    link: '/articles/structured-cabling-fiber-optic',
-    linkText: 'Read our Infrastructure Guide',
-    image: '/images/services/cabling-deploy.png',
-    imageAlt: 'Data Center cabling in UAE',
-  },
-  {
-    title: 'Fluke Testing and 25-Year Warranties',
-    text: 'We do not guess on cable integrity. Every single node we deploy is rigorously tested and validated using Fluke DSX CableAnalyzers. This empirical verification guarantees that your internal network can handle 10Gbps throughput without packet loss, allowing us to provide manufacturer-backed 25-year performance warranties on our corporate installations.',
-    link: '/articles/structured-cabling-fluke-testing',
-    linkText: 'Understand Fluke Certification',
-  },
-  {
-    title: 'Server Room & IDFs Retrofitting',
-    text: "Inherited a disastrous, disorganized server room in your new office? We specialize in live cabinet retrofitting and 'spaghetti' cleanups. We trace, label, and re-patch your entire server rack with precise cable management channels, restoring airflow to your switches and transforming a fire hazard into an organized, maintainable IT environment.",
-    link: '/articles/structured-cabling-retrofitting',
-    linkText: 'Explore Server Maintenance',
-  },
-];
+export const revalidate = 3600;
 
-const features = [
-  {
-    icon: 'icon1',
-    title: 'Fluke Networks Certified DSX Testing & Documentation',
-  },
-  {
-    icon: 'icon2',
-    title: 'Cat6, Cat6A, and Single/Multi-mode Fiber Splicing',
-  },
-  {
-    icon: 'icon3',
-    title: 'Live Server Rack Retrofitting without Business Downtime',
-  },
-  {
-    icon: 'icon4',
-    title: 'Enterprise Wi-Fi 6/7 Predictive Heatmapping (Ekahau)',
-  },
-  {
-    icon: 'icon5',
-    title: 'Manufacturer-backed 25-Year Infrastructure Warranties',
-  },
-];
-
-const secondSection = [
-  {
-    title: 'Logistics Warehouses to Corporate Hubs',
-    text: 'A massive logistics facility in JAFZA requires a vastly different physical layer than a glass-walled financial office in DIFC. We engineer tailored environments: deploying armored fiber for sprawling industrial floors, and aesthetic, under-floor plenum cabling for high-end corporate boardrooms.',
-    link: '/articles/structured-cabling-industrial',
-    linkText: 'Industrial vs Corporate Cabling',
-    image: '/images/services/cabling-performance.png',
-    imageAlt: 'Industrial fiber optic splicing UAE',
-  },
-  {
-    title: 'Enterprise Wi-Fi Heatmapping Solutions',
-    text: 'Stop guessing where to place access points. Using industry-standard Ekahau mapping software, we conduct predictive and physical RF heatmapping of your floorplan. We account for glass partitions in Business Bay and concrete pillars in Mussafah, guaranteeing absolute zero Wi-Fi dead zones across your enterprise.',
-    link: '/articles/structured-cabling-wifi-heatmapping',
-    linkText: 'Explore Wi-Fi Solutions',
-  },
-  {
-    title: 'Access Control and physical Security',
-    text: "Structured cabling extends beyond computers. We deploy the Unified Physical Layer for your office, running dedicated PoE (Power over Ethernet) infrastructure for high-resolution CCTV IP cameras, biometric Access Control Systems, and VoIP telephony grids on a single, seamlessly integrated network.",
-    link: '/articles/structured-cabling-physical-security',
-    linkText: 'Secure Your Physical Perimeter',
-  },
-];
-
-const benefits = [
-  {
-    icon: '/images/benefits/global.png',
-    text: 'Fluke Network <br> Certified Testing',
-  },
-  {
-    icon: '/images/benefits/time.png',
-    text: 'Live Rack <br> Cleanups',
-  },
-  {
-    icon: '/images/benefits/team.png',
-    text: 'Fiber Optic <br> Fusion Splicing',
-  },
-  {
-    icon: '/images/benefits/pricing.png',
-    text: '25-Year <br> Hardware Warranties',
-  },
-  {
-    icon: '/images/benefits/communication.png',
-    text: 'Comprehensive <br> Node Documentation',
-  },
-];
-
-const resources = [
-  {
-    type: 'CASE STUDY',
-    title: 'How Scalini Standardized Network Infrastructure Across 5 UAE Locations',
+const fallback: MappedServiceContent = {
+  hero: {
+    title: 'Professional Structured Cabling & Network Infrastructure in Dubai',
+    subtitle: 'Cat6/Cat6A, Fiber Optic Installation, Testing & Certification Across UAE',
     description:
-      'Scalini restaurant group unified network infrastructure across 5 locations with certified Cat6A cabling, centralized switching, and 99.9% uptime.',
-    image: '/images/services/cards/book.png',
-    url: '/case-studies/scalini',
-    ctaText: 'Read Case Study',
-    imageAlt: 'Server rack retrofit UAE',
+      'Build the network foundation your business depends on. Our certified cabling engineers design and install high-performance structured cabling systems that support your current needs and future growth across Dubai and the UAE.',
   },
-  {
-    type: 'GUIDE',
-    title: 'Structured Cabling Guide for UAE Offices',
-    description:
-      'Complete guide to Cat6A, fibre optic, EIA/TIA 568-C certification, and designing cabling infrastructure for Dubai free zone and mainland offices.',
-    image: '/images/services/cards/guide.png',
-    url: '/articles/structured-cabling-guide',
-    ctaText: 'Download the Guide',
-    imageAlt: 'Structured cabling guide for UAE businesses',
-  },
-  {
-    type: 'ARTICLE',
-    title: 'Fibre Optic Cabling: Single-Mode vs Multi-Mode',
-    description:
-      'When to specify single-mode vs multi-mode fibre, splice vs connector termination, and how fibre backbone design decisions affect your network for the next decade.',
-    image: '/images/services/cards/multi.png',
-    url: '/articles/structured-cabling-fiber-optic',
-    ctaText: 'Read Fibre Guide',
-    imageAlt: 'Fibre optic cabling UAE',
-  },
-];
-
-const relatedServices = [
-  {
-    title: 'Managed IT Services',
-    url: '/services/managed-it',
-    description: 'We can manage the network switches connected to your new cabling.',
-  },
-  {
-    title: 'IT Helpdesk Support',
-    url: '/services/it-support',
-    description: 'Instant remote support for end-users on your network.',
-  },
-  {
-    title: 'Strategic IT Consulting',
-    url: '/services/it-consulting',
-    description: 'Complete office relocation and technology roadmapping.',
-  },
-];
-
-const geoContent = {
-  emirates: [
-    { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'JAFZA', 'DSO', 'DMCC'] },
-    { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah Industrial', 'KIZAD'] },
-    { name: 'Sharjah', hubs: ['SAIF Zone', 'Hamriyah Free Zone'] },
-    { name: 'Ajman', hubs: [] },
-    { name: 'Fujairah', hubs: [] },
-    { name: 'Ras Al Khaimah', hubs: [] },
-    { name: 'Umm Al Quwain', hubs: [] }
+  firstSection: [
+    {
+      title: 'Fast Deployment Across All Emirates',
+      text: 'Prebuilt cabling solutions and certified technicians allow you to deploy network infrastructure across Dubai, Abu Dhabi, Sharjah, and all Emirates. Our team handles site surveys, route planning, and compliance requirements.',
+      link: '/articles/structured-cabling-fiber-optic',
+      linkText: 'Infrastructure deployment guide',
+      image: '/images/services/cabling-deploy.png',
+      imageAlt: 'Network infrastructure deployment across UAE Emirates',
+    },
+    {
+      title: 'Expert Installation & Fluke Testing',
+      text: 'Every cable run is tested with Fluke certification equipment to industry standards. We provide detailed test reports for every point, giving you documented proof of performance that satisfies insurance and compliance requirements.',
+      link: '/articles/structured-cabling-fluke-testing',
+      linkText: 'Fluke testing standards',
+    },
+    {
+      title: 'Network Lifecycle Management',
+      text: 'From installation to expansion and eventual upgrades, we manage your network infrastructure throughout its lifecycle. Proactive monitoring and maintenance keeps your cabling performing at specification for years.',
+      link: '/articles/structured-cabling-retrofitting',
+      linkText: 'Lifecycle management',
+    },
   ],
-  terms: ['Structured Cabling Dubai', 'Cat6A Certification UAE', 'Server Rack Cleanup Dubai', 'Ekahau Wi-Fi Heatmapping'],
+  features: [
+    { icon: 'icon1', title: 'Cat6, Cat6A, and fiber optic installation' },
+    { icon: 'icon2', title: 'Fluke certified testing with full documentation' },
+    { icon: 'icon3', title: 'TIA/EIA and ISO/IEC standards compliance' },
+    { icon: 'icon4', title: 'WiFi heatmapping and access point optimization' },
+    { icon: 'icon5', title: 'Complete cable management and labeling' },
+  ],
+  secondSection: [
+    {
+      title: 'Advanced Network Performance Solutions',
+      text: 'Use our comprehensive network solutions to plan and execute infrastructure expansion strategies. Our tools help you scale from small office networks to enterprise-wide infrastructure across multiple UAE locations.',
+      link: '/articles/structured-cabling-industrial',
+      linkText: 'Enterprise network solutions',
+      image: '/images/services/cabling-performance.png',
+      imageAlt: 'Advanced network solutions for business growth',
+    },
+    {
+      title: 'Multi-Type Cabling Management',
+      text: 'Our flexible platform supports simultaneous management of Cat6, Cat6A, and fiber optic infrastructure. Transition to higher-speed networks without disruption and maximize your network performance.',
+      link: '/articles/structured-cabling-wifi-heatmapping',
+      linkText: 'WiFi and cabling integration',
+    },
+    {
+      title: 'Physical Security Integration',
+      text: 'Modern cabling infrastructure supports more than data. We integrate CCTV, access control, and intercom systems into your structured cabling framework — creating a unified physical security and data network.',
+      link: '/articles/structured-cabling-physical-security',
+      linkText: 'Security system integration',
+    },
+  ],
+  benefits: [
+    { icon: '/images/benefits/global.png', text: 'Dubai-based certified cabling engineers' },
+    { icon: '/images/benefits/time.png', text: 'Fast deployment across all UAE' },
+    { icon: '/images/benefits/team.png', text: 'Fluke certified testing' },
+    { icon: '/images/benefits/pricing.png', text: 'Competitive project pricing' },
+    { icon: '/images/benefits/communication.png', text: 'Full documentation provided' },
+  ],
+  resources: [
+    {
+      type: 'CASE STUDY',
+      title: 'How Scalini Transformed Network Infrastructure Across 5 Locations',
+      description: 'Learn how Scalini restaurant chain upgraded their network infrastructure across 5 Dubai locations, reducing downtime by 95%.',
+      image: '/images/services/cards/book.png',
+      url: '/case-studies/scalini',
+      ctaText: 'Read Case Study',
+    },
+    {
+      type: 'GUIDE',
+      title: 'Complete Guide to Structured Cabling in UAE',
+      description: 'Essential guide covering Cat6 vs Cat6A, fiber optic options, compliance requirements, and best practices for network infrastructure.',
+      image: '/images/services/cards/guide.png',
+      url: '/articles/structured-cabling-guide',
+      ctaText: 'Read Guide',
+    },
+    {
+      type: 'ARTICLE',
+      title: 'Network Infrastructure Planning for Multi-Location Businesses',
+      description: 'Learn how to plan and deploy network infrastructure across multiple UAE locations.',
+      image: '/images/services/cards/multi.png',
+      url: '/articles/structured-cabling-fiber-vs-cat6a',
+      ctaText: 'Read Article',
+    },
+  ],
+  cta: {
+    title: 'Ready to Upgrade Your Network Infrastructure?',
+    text: "Contact us for a free site survey and structured cabling proposal tailored to your space.",
+    ctaText: 'Get Free Site Survey',
+    ctaUrl: '#contact',
+  },
+  relatedServices: [
+    { title: 'Managed IT Services', url: '/services/managed-it', description: 'Complete managed IT for your infrastructure.' },
+    { title: 'IT Support', url: '/services/it-support', description: '24/7 IT support and maintenance services.' },
+    { title: 'Cybersecurity', url: '/services/cybersecurity', description: 'Network security and endpoint protection.' },
+  ],
+  faq: [
+    { question: 'What cabling standards do you work with?', answer: 'We install and certify Cat6, Cat6A, and single/multi-mode fiber optic cabling to TIA/EIA-568 and ISO/IEC 11801 standards. All work is documented with Fluke DSX-8000 certification.' },
+    { question: 'How long does a typical cabling project take?', answer: 'A standard office floor (50 points) takes 1-2 days. Larger projects are scoped individually. We provide detailed project timelines during the proposal phase.' },
+    { question: 'Do you provide cabling for data centers?', answer: 'Yes. We design and install structured cabling for data centers including high-density fiber, copper backbone cabling, and cable management systems that meet ANSI/TIA-942 standards.' },
+  ],
+  faqTitle: 'Structured Cabling FAQs',
 };
 
-export default function StructuredCablingPage() {
+export default async function StructuredCablingPage() {
+  const service = await getService('structured-cabling');
+  const content = service ? mapServiceData(service) : fallback;
+
   return (
     <>
       <StructuredData
-        type="Service"
+        type="BreadcrumbList"
         data={{
-          '@id': 'https://nocko.com/services/structured-cabling#service',
-          name: 'Structured Cabling & Network Infrastructure Dubai',
-          serviceType: 'Structured Cabling',
-          description: 'Professional structured cabling, Cat6/Cat6A/fiber optic installation, and network infrastructure for businesses in Dubai and UAE.',
-          url: 'https://nocko.com/services/structured-cabling',
-          provider: { '@type': 'Organization', '@id': 'https://nocko.com/#localbusiness', name: 'NOCKO Information Technology' },
-          areaServed: [{ '@type': 'City', name: 'Dubai' }, { '@type': 'City', name: 'Abu Dhabi' }, { '@type': 'City', name: 'Sharjah' }],
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
+            { '@type': 'ListItem', position: 2, name: 'IT Services', item: 'https://nocko.com/services' },
+            { '@type': 'ListItem', position: 3, name: 'Structured Cabling', item: 'https://nocko.com/services/structured-cabling' },
+          ],
         }}
       />
-      <StructuredData
-        type="BreadcrumbList"
-        data={{ itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
-          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://nocko.com/services' },
-          { '@type': 'ListItem', position: 3, name: 'Structured Cabling', item: 'https://nocko.com/services/structured-cabling' },
-        ]}}
-      />
       <HeaderWrapper />
-      <main className="main" role="main">
-        <Hero
-          variant="service-enhanced"
-          title="Structured Cabling Dubai | Network Infrastructure & Structured Cabling UAE"
-          subtitle="Professional Cat6, Cat6A & Fiber Optic Installation for Businesses"
-          description="Get reliable structured cabling and network infrastructure solutions for your office in Dubai and across the UAE. We provide certified installation, testing, and lifecycle management in DIFC, JLT, and Business Bay."
-        />
-
-        <ServiceContentEnhanced blocks={firstSection} />
-        <ServiceFeatures features={features} />
-        <ServiceContentEnhanced modifier="second" blocks={secondSection} />
-        <ServiceBenefits benefits={benefits} />
-        
-        <ServiceGeo 
-          title="Professional Network Cabling Across UAE"
-          description="NOCKO provides certified structured cabling services for corporate offices and data centers in Dubai, Abu Dhabi, Sharjah, and all Emirates."
-          emirates={geoContent.emirates}
-          terms={geoContent.terms}
-          footerNote="Certified Infrastructure"
-        />
-
-        <ServiceCTA
-          title="Ready to Upgrade Your Network Infrastructure?"
-          text="Contact us for a free consultation and let's discuss your structured cabling needs."
-          ctaText="Get Free Consultation"
-          ctaUrl="#contact"
-        />
-        <RelatedServices
-          title="Related Services"
-          subtitle="Explore other IT infrastructure services we offer"
-          services={relatedServices}
-        />
-      </main>
+      <ServicePageTemplate
+        content={content}
+        breadcrumbs={[{ name: 'Services', url: '/services' }, { name: 'Structured Cabling' }]}
+        articleBlocks={service?.attributes.articleBlocks}
+        articleCards={service?.attributes.articleCards}
+      />
       <Footer />
     </>
   );
 }
-

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_service_ctas_v2",
+  "info": {
+    "displayName": "Service CTA",
+    "description": "Call-to-action section for service pages",
+    "icon": "bullhorn"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "ctaText": {
+      "type": "string",
+      "required": true,
+      "default": "Get Free Consultation"
+    },
+    "ctaUrl": {
+      "type": "string",
+      "required": true,
+      "default": "#contact"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_service_resources_v2",
+  "info": {
+    "displayName": "Service Resource",
+    "description": "Resource card with type, title, description, image and link",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": ["ARTICLE", "GUIDE", "CASE STUDY", "VIDEO"],
+      "required": true,
+      "default": "ARTICLE"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "imagePath": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "ctaText": {
+      "type": "string",
+      "default": "Learn more"
+    }
+  }
+}

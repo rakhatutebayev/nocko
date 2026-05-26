@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_service_related_v2",
+  "info": {
+    "displayName": "Service Related",
+    "description": "Related service link with title, description and URL",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

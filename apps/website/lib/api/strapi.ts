@@ -73,21 +73,70 @@ export interface Article {
   };
 }
 
+export interface ServiceContentBlock {
+  title: string;
+  text: string;
+  link?: string;
+  linkText?: string;
+  image?: StrapiImage;
+  imageAlt?: string;
+}
+
+export interface ServiceFeature {
+  icon: string;
+  title: string;
+}
+
+export interface ServiceBenefit {
+  iconPath: string;
+  text: string;
+}
+
+export interface ServiceCta {
+  title: string;
+  text: string;
+  ctaText: string;
+  ctaUrl: string;
+}
+
+export interface ServiceResource {
+  type: string;
+  title: string;
+  description: string;
+  imagePath?: string;
+  url: string;
+  ctaText?: string;
+}
+
+export interface ServiceRelated {
+  title: string;
+  description?: string;
+  url: string;
+}
+
+export interface ServiceFaqItem {
+  question: string;
+  answer: string;
+}
+
 export interface Service {
   id: number;
   attributes: {
     title: string;
     slug: string;
-    hero?: any;
+    locale?: string;
+    hero?: { heroTitle: string; heroSubtitle?: string; heroDescription?: string };
+    firstSection?: ServiceContentBlock[];
+    serviceFeatures?: ServiceFeature[];
+    secondSection?: ServiceContentBlock[];
+    benefits?: ServiceBenefit[];
+    resources?: ServiceResource[];
+    cta?: ServiceCta;
+    relatedServices?: ServiceRelated[];
+    faq?: ServiceFaqItem[];
+    faqTitle?: string;
     articleBlocks?: any[];
     articleCards?: any[];
-    firstSection?: any[];
-    serviceFeatures?: any[];
-    secondSection?: any[];
-    benefits?: any[];
-    resources?: any[];
-    cta?: any;
-    relatedServices?: any[];
     publishedAt?: string;
     createdAt: string;
     updatedAt: string;
@@ -344,25 +393,37 @@ export async function getPages(): Promise<Page[]> {
   }
 }
 
+const SERVICE_POPULATE = [
+  'populate[hero][populate]=*',
+  'populate[firstSection][populate]=*',
+  'populate[serviceFeatures][populate]=*',
+  'populate[secondSection][populate]=*',
+  'populate[benefits][populate]=*',
+  'populate[resources][populate]=*',
+  'populate[cta][populate]=*',
+  'populate[relatedServices][populate]=*',
+  'populate[faq][populate]=*',
+  'populate[articleBlocks][populate][blockArticle][populate]=*',
+  'populate[articleCards][populate][cardArticle][populate]=*',
+  'populate[articleCards][populate][cardIcon][populate]=*',
+].join('&');
+
 /**
- * Get single service by slug
+ * Get single service by slug, optionally filtered by locale
  */
-export async function getService(slug: string): Promise<Service | null> {
+export async function getService(slug: string, locale?: string): Promise<Service | null> {
   try {
-    const cacheKey = generateCacheKey('service', { slug });
-            const response = await fetchAPI<Service[]>(
-              `/services?filters[slug][$eq]=${slug}&populate[firstSection][populate]=*&populate[serviceFeatures][populate]=*&populate[secondSection][populate]=*&populate[benefits][populate]=*&populate[resources][populate]=*&populate[cta][populate]=*&populate[relatedServices][populate]=*&populate[icon][populate]=*&populate[caseStudies][populate]=*&populate[hero][populate]=*&populate[articleBlocks][populate][blockArticle][populate]=*&populate[articleCards][populate][cardArticle][populate]=*&populate[articleCards][populate][cardIcon][populate]=*`,
-              {},
-              cacheKey,
-              CACHE_TTL.SERVICES
-            );
-    
-    // Handle case when Strapi is not available or returns null
+    const localeParam = locale ? `&locale=${locale}` : '';
+    const cacheKey = generateCacheKey('service', { slug, locale: locale || 'en' });
+    const response = await fetchAPI<Service[]>(
+      `/services?filters[slug][$eq]=${slug}&${SERVICE_POPULATE}${localeParam}`,
+      {},
+      cacheKey,
+      CACHE_TTL.SERVICES
+    );
     if (!response || !response.data) {
-      console.warn(`Service "${slug}" not found or Strapi is unavailable. Using fallback content if available.`);
       return null;
     }
-    
     return response.data?.[0] || null;
   } catch (error) {
     console.error('Error fetching service:', error);
@@ -371,13 +432,14 @@ export async function getService(slug: string): Promise<Service | null> {
 }
 
 /**
- * Get all services
+ * Get all services, optionally filtered by locale
  */
-export async function getServices(): Promise<Service[]> {
+export async function getServices(locale?: string): Promise<Service[]> {
   try {
-    const cacheKey = generateCacheKey('services', {});
+    const localeParam = locale ? `&locale=${locale}` : '';
+    const cacheKey = generateCacheKey('services', { locale: locale || 'en' });
     const response = await fetchAPI<Service[]>(
-      '/services?populate=*&sort=createdAt:asc',
+      `/services?populate=*&sort=createdAt:asc${localeParam}`,
       {},
       cacheKey,
       CACHE_TTL.SERVICES

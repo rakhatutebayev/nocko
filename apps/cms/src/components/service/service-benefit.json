@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_service_benefits_v2",
+  "info": {
+    "displayName": "Service Benefit",
+    "description": "Benefit item with icon path and text",
+    "icon": "check-circle"
+  },
+  "options": {},
+  "attributes": {
+    "iconPath": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

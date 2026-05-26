@@ -1,16 +1,10 @@
 import { Metadata } from 'next';
 import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
-import Hero from '@/components/sections/Hero';
-import ServiceContentEnhanced from '@/components/services/ServiceContentEnhanced';
-import ServiceFeatures from '@/components/services/ServiceFeatures';
-import ServiceBenefits from '@/components/services/ServiceBenefits';
-import ServiceCTA from '@/components/services/ServiceCTA';
-import RelatedServices from '@/components/services/RelatedServices';
-import ServiceFAQ from '@/components/services/ServiceFAQ';
-import ServiceGeo from '@/components/services/ServiceGeo';
-import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import ServicePageTemplate from '@/components/services/ServicePageTemplate';
 import StructuredData from '@/components/seo/StructuredData';
+import { getService } from '@/lib/api/strapi';
+import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
   title: 'IT Support Company in Dubai | 24/7 Managed IT Services UAE',
@@ -20,272 +14,127 @@ export const metadata: Metadata = {
     'IT support Dubai, IT support company Dubai, managed IT services UAE, 24/7 IT support, IT maintenance Dubai, technical support UAE, IT helpdesk Dubai',
   openGraph: {
     title: 'IT Support Company in Dubai | 24/7 Managed IT Services UAE',
-    description:
-      'Professional IT support and managed services for businesses in Dubai and across the UAE. 24/7 helpdesk and expert technical maintenance.',
+    description: 'Professional IT support and managed services for businesses in Dubai and across the UAE.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
   },
   alternates: {
     canonical: '/services/it-support',
-    languages: {
-      'en-AE': '/services/it-support',
-      'ru-RU': '/services/it-support-ru',
-    },
+    languages: { 'en-AE': '/services/it-support', 'ru-RU': '/ru/services/it-support' },
   },
 };
 
-const itSupportContent = {
+export const revalidate = 3600;
+
+const fallback: MappedServiceContent = {
   hero: {
     title: 'Enterprise IT Support & Helpdesk in Dubai',
     subtitle: '24/7 Ticketing, Guaranteed SLAs, and Remote Diagnostics',
     description:
       'Empower your workforce with instant IT resolution. We provide multi-lingual L1/L2/L3 helpdesk support, proactive endpoint monitoring, and rapid physical dispatch across DIFC, DMCC, and the wider UAE.',
-    serviceType: 'IT Support & Helpdesk',
   },
   firstSection: [
     {
       title: '24/7 Centralized Remote Helpdesk',
-      text: "End-user downtime paralyzes organizational productivity. Our centralized Network Operations Center (NOC) operates 24/7/365, providing instant remote diagnostics. Whether your CFO is locked out of Microsoft 365 or a remote worker needs secure VPN access from abroad, our engineers connect securely to resolve 85% of issues within the first 15 minutes.",
+      text: "Our centralized Network Operations Center (NOC) operates 24/7/365, providing instant remote diagnostics. Whether your CFO is locked out of Microsoft 365 or a remote worker needs secure VPN access, our engineers connect securely to resolve 85% of issues within the first 15 minutes.",
       link: '/articles/it-support-remote',
-      linkText: 'Our Remote Resolution Metrics',
-      image: '/images/services/it-support-24-7.webp',
-      imageAlt: '24/7 IT support services in UAE',
+      linkText: 'Remote support details',
+      image: '/images/services/it-support-24-7.png',
+      imageAlt: 'IT support helpdesk Dubai',
     },
     {
-      title: 'SLA-Driven Ticketing Workflows',
-      text: 'Stop relying on unstructured WhatsApp messages to "the IT guy." We integrate professional, ITIL-compliant ticketing systems (like ServiceNow or Jira Service Management) directly into your corporate workflow. Every request is timestamped, categorized by severity, and bound by strict Service Level Agreements (SLAs)—guaranteeing transparent accountability and executive reporting.',
-      link: '/articles/it-support-helpdesk',
-      linkText: 'Explore SLA Integrations',
-    },
-    {
-      title: 'Physical On-Site Dispatch Across Dubai',
-      text: 'While remote support resolves software issues, hardware failures require physical intervention. When a router dies in your JLT office or a printer fails in your JAFZA warehouse, we dispatch certified field technicians. Our strategic location guarantees an average 2-hour physical arrival time for critical Priority-1 outages anywhere in Dubai.',
+      title: 'On-Site IT Support Across UAE',
+      text: 'When remote support isn\'t enough, our certified engineers dispatch to your location within 2 hours anywhere in Dubai and same-day across Abu Dhabi, Sharjah, and other Emirates.',
       link: '/articles/it-support-onsite',
-      linkText: 'View Dispatch Zones',
+      linkText: 'On-site support coverage',
+    },
+    {
+      title: 'Proactive Endpoint Monitoring',
+      text: 'We monitor your servers, workstations, and network devices around the clock. Automated alerts notify our NOC team of anomalies before they become outages, dramatically reducing unplanned downtime.',
+      link: '/articles/it-support-monitoring',
+      linkText: 'Monitoring capabilities',
     },
   ],
   features: [
-    {
-      icon: 'icon1',
-      title: '24/7 Multi-lingual (English/Arabic/Russian) Support Agents',
-    },
-    {
-      icon: 'icon2',
-      title: 'Strict ITIL-compliant ticketing & tracking workflows',
-    },
-    {
-      icon: 'icon3',
-      title: 'Remote diagnostics resolving 85% of tickets instantly',
-    },
-    {
-      icon: 'icon4',
-      title: 'Guaranteed 2-Hour physical dispatch for Priority 1 issues',
-    },
-    {
-      icon: 'icon5',
-      title: 'Monthly SLA adherence reporting for corporate executives',
-    },
+    { icon: 'icon1', title: '24/7 NOC with 15-minute first response SLA' },
+    { icon: 'icon2', title: 'Multi-lingual support (English, Arabic, Russian)' },
+    { icon: 'icon3', title: 'L1/L2/L3 tiered helpdesk structure' },
+    { icon: 'icon4', title: 'Proactive endpoint and server monitoring' },
+    { icon: 'icon5', title: 'On-site dispatch within 2 hours in Dubai' },
   ],
   secondSection: [
     {
-      title: 'Proactive Endpoint Management (MDM)',
-      text: 'With the rise of hybrid work in the UAE, securing mobile endpoints is critical. We deploy Mobile Device Management (MDM) platforms (like Microsoft Intune) to enforce security policies across all corporate laptops and phones. If an employee loses their device in a Dubai taxi, our helpdesk can remotely wipe the sensitive corporate data within seconds.',
-      link: '/articles/it-support-monitoring',
-      linkText: 'Secure Your Endpoints',
-      image: '/images/services/it-support-monitoring.webp',
-      imageAlt: 'Proactive IT monitoring and maintenance',
+      title: 'Structured Ticketing & SLA Reporting',
+      text: 'Every IT issue is logged, tracked, and resolved through our ITSM platform. Monthly SLA reports give your management team full visibility into IT performance, resolution times, and recurring issues.',
+      link: '/articles/it-support-helpdesk',
+      linkText: 'ITSM and ticketing system',
+      image: '/images/services/it-support-monitoring.png',
+      imageAlt: 'IT support reporting UAE',
     },
     {
-      title: "Employee Onboarding & Identity Management",
-      text: "The HR process shouldn't be slowed down by IT bottlenecks. We completely automate your employee onboarding and offboarding workflows. When a new hire joins, we provision their Microsoft 365 licensing, configure their laptop security policies, and grant precise Role-Based Access Control (RBAC) before their first day in the office.",
+      title: 'IT Onboarding & Offboarding',
+      text: 'Streamline employee IT lifecycle management. We handle new hire setups, device provisioning, account creation, and secure offboarding — ensuring productivity from day one and security at departure.',
+      link: '/articles/it-support-onboarding',
+      linkText: 'Onboarding process',
+    },
+    {
+      title: 'IT Optimization & Performance Tuning',
+      text: 'Regular system optimization keeps your IT running at peak performance. We analyze usage patterns, identify bottlenecks, and implement improvements that increase productivity across your organization.',
       link: '/articles/it-support-optimization',
-      linkText: 'Automate HR IT Processes',
-    },
-    {
-      title: 'Shadow IT & Licensing Audits',
-      text: "Employees frequently purchase unauthorized SaaS tools using corporate cards, creating massive security vectors (Shadow IT). Our active monitoring detects unsanctioned applications, blocks them, and forces users onto your secure, company-approved platforms—simultaneously rescuing thousands of dirhams in wasted duplicate licensing costs.",
-      link: '/articles/it-support-24-7',
-      linkText: 'Audit your Tech Stack',
+      linkText: 'Optimization approach',
     },
   ],
   benefits: [
-    {
-      icon: '/images/benefits/global.png',
-      text: 'Dubai-centric <br> Field Technicians',
-    },
-    {
-      icon: '/images/benefits/time.png',
-      text: '15-Minute <br> Remote Triage',
-    },
-    {
-      icon: '/images/benefits/team.png',
-      text: 'Tier 1 to Tier 3 <br> Escalation Engineers',
-    },
-    {
-      icon: '/images/benefits/pricing.png',
-      text: 'Predictable <br> Per-User Billing',
-    },
-    {
-      icon: '/images/benefits/communication.png',
-      text: 'ITIL-Compliant <br> Service Delivery',
-    },
+    { icon: '/images/benefits/global.png', text: 'Dubai-based engineers on-call 24/7' },
+    { icon: '/images/benefits/time.png', text: '15-min first response SLA' },
+    { icon: '/images/benefits/team.png', text: 'Multi-lingual support team' },
+    { icon: '/images/benefits/pricing.png', text: 'Transparent per-ticket pricing' },
+    { icon: '/images/benefits/communication.png', text: 'Monthly SLA reports' },
   ],
-  geoContent: {
-    emirates: [
-      { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'DMCC', 'Silicon Oasis', 'Media City'] },
-      { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
-      { name: 'Sharjah', hubs: ['SAIF Zone', 'Al Majaz'] },
-      { name: 'Ajman', hubs: [] },
-      { name: 'Fujairah', hubs: [] },
-      { name: 'Ras Al Khaimah', hubs: [] },
-      { name: 'Umm Al Quwain', hubs: [] }
-    ],
-    terms: ['IT Helpdesk Dubai', 'Remote IT Support UAE', 'Microsoft 365 Support Dubai', 'Corporate IT Ticketing'],
-  },
-  resources: [
-    {
-      type: 'CASE STUDY',
-      title: 'Reducing Ticket Resolution Time by 80%',
-      description:
-        'Learn how deploying structured ITIL ticketing allowed a Business Bay real estate firm to cut average IT resolution times from three days to under two hours.',
-      image: '/images/services/cards/book.png',
-      url: '/case-studies/gss',
-      ctaText: 'Read Case Study',
-    },
-    {
-      type: 'GUIDE',
-      title: 'IT Support Optimisation for UAE Businesses',
-      description:
-        'How to reduce ticket volume, improve first-call resolution, and design an IT support model that scales without scaling headcount.',
-      image: '/images/services/cards/guide.png',
-      url: '/articles/it-support-optimization',
-      ctaText: 'Read Optimisation Guide',
-    },
-    {
-      type: 'ARTICLE',
-      title: 'Why Microsoft 365 Onboarding takes Too Long',
-      description:
-        'Discover how integrating Windows Autopilot with Azure AD completely eliminates manual laptop configuration within your IT department.',
-      image: '/images/services/cards/multi.png',
-      url: '/articles/it-support-onboarding',
-      ctaText: 'Read Architecture Article',
-    },
-  ],
+  resources: [],
   cta: {
-    title: 'Is Your Team Frustrated by Slow Technical Support?',
-    text: "Contact our Dubai-based NOC directors today to explore a support contract that guarantees instant remote resolution.",
-    ctaText: 'Request Support Proposal',
+    title: 'Ready for Reliable IT Support?',
+    text: 'Get a free IT support assessment and discover how we can reduce your downtime and IT costs.',
+    ctaText: 'Get Free Assessment',
     ctaUrl: '#contact',
   },
   relatedServices: [
-    {
-      title: 'IT AMC Contracts',
-      url: '/services/it-amc',
-      description: 'Wrap your Helpdesk inside a fixed-cost comprehensive hardware AMC.',
-    },
-    {
-      title: 'Cybersecurity SOC',
-      url: '/services/cybersecurity',
-      description: 'Protect the endpoints we support with an active SOC and EDR.',
-    },
-    {
-      title: 'Strategic IT Consulting',
-      url: '/services/it-consulting',
-      description: 'Let our vCIO optimize the software licenses your team uses daily.',
-    },
+    { title: 'Managed IT Services', url: '/services/managed-it', description: 'Complete IT infrastructure outsourcing.' },
+    { title: 'IT AMC', url: '/services/it-amc', description: 'Annual maintenance contract with fixed costs.' },
+    { title: 'Cybersecurity', url: '/services/cybersecurity', description: 'Endpoint protection and threat monitoring.' },
   ],
-  faq: {
-    title: 'Frequently Asked Questions About IT Support Services',
-    items: [
-      {
-        question: 'Do you offer "per-user" or "per-device" pricing?',
-        answer:
-          'We utilize a modern "per-user" pricing model. Because modern employees utilize a laptop, a smartphone, and often a tablet, tracking devices limits productivity. By billing per-user, we support all your employees\' corporate devices comprehensively without nickel-and-diming you.',
-      },
-      {
-        question: 'How quickly can your engineers arrive at our Dubai office?',
-        answer:
-          'For Priority 1 issues (such as a core switch failure taking down the internet for the entire office), our SLA physically guarantees arrival within 2 hours across major Dubai hubs (DIFC, Business Bay, JLT). Standard hardware issues are scheduled for next-business-day dispatch.',
-      },
-      {
-        question: 'Do you support Microsoft 365 and Google Workspace?',
-        answer:
-          'Yes, our L2 and L3 engineers are fully certified in administering complex Microsoft Azure AD, Exchange Online, and Google Workspace ecosystems, including complex SharePoint permissions and MDM (Intune) configurations.',
-      },
-      {
-        question: 'Can you support our proprietary internal ERP software?',
-        answer:
-          'While our core support encompasses network infrastructure and standard productivity suites, we frequently act as the technical liaison between your company and your ERP vendor (like SAP or Oracle). We will diagnose the issue and coordinate with their engineers so you don\'t have to.',
-      },
-    ],
-  },
+  faq: [
+    { question: 'What are your IT support response time guarantees?', answer: 'Critical issues: 15-minute remote response, 2-hour on-site in Dubai. High priority: 1-hour remote, 4-hour on-site. Standard: 4-hour remote, next business day on-site.' },
+    { question: 'Do you provide support outside of business hours?', answer: 'Yes. Our NOC operates 24/7/365. After-hours support is included in Premium and Enterprise plans, and available as add-on for Standard plans.' },
+    { question: 'Can you support remote and hybrid workforces?', answer: 'Absolutely. We provide VPN setup, secure remote access, cloud collaboration tools support, and remote endpoint management for fully distributed teams.' },
+  ],
+  faqTitle: 'IT Support FAQs',
 };
 
-export default function ITSupportPage() {
+export default async function ItSupportPage() {
+  const service = await getService('it-support');
+  const content = service ? mapServiceData(service) : fallback;
+
   return (
     <>
       <StructuredData
-        type="Service"
+        type="BreadcrumbList"
         data={{
-          '@id': 'https://nocko.com/services/it-support#service',
-          name: 'IT Support & Helpdesk Dubai',
-          serviceType: 'IT Support',
-          description: '24/7 IT support and helpdesk services for businesses in Dubai and UAE. Fast response times, remote and on-site support available.',
-          url: 'https://nocko.com/services/it-support',
-          provider: { '@type': 'Organization', '@id': 'https://nocko.com/#localbusiness', name: 'NOCKO Information Technology' },
-          areaServed: [{ '@type': 'City', name: 'Dubai' }, { '@type': 'City', name: 'Abu Dhabi' }, { '@type': 'City', name: 'Sharjah' }],
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
+            { '@type': 'ListItem', position: 2, name: 'IT Services', item: 'https://nocko.com/services' },
+            { '@type': 'ListItem', position: 3, name: 'IT Support', item: 'https://nocko.com/services/it-support' },
+          ],
         }}
       />
-      <StructuredData
-        type="BreadcrumbList"
-        data={{ itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
-          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://nocko.com/services' },
-          { '@type': 'ListItem', position: 3, name: 'IT Support & Helpdesk', item: 'https://nocko.com/services/it-support' },
-        ]}}
-      />
       <HeaderWrapper />
-      <main className="main" role="main">
-        <Breadcrumbs
-          hidden={true}
-          items={[
-            { name: 'Services', url: '/services' },
-            { name: 'IT Support & Helpdesk' },
-          ]}
-        />
-        <Hero
-          variant="service-enhanced"
-          title={itSupportContent.hero.title}
-          subtitle={itSupportContent.hero.subtitle}
-          description={itSupportContent.hero.description}
-        />
-
-        <ServiceContentEnhanced blocks={itSupportContent.firstSection} />
-        <ServiceFeatures features={itSupportContent.features} />
-        <ServiceContentEnhanced modifier="second" blocks={itSupportContent.secondSection} />
-        <ServiceBenefits benefits={itSupportContent.benefits} />
-        
-        <ServiceGeo 
-          title="Serving Businesses Across the UAE"
-          description="From high-frequency financial hubs like DIFC to industrial zones, NOCKO provides managed IT support tailored to your location in Dubai, Abu Dhabi and all Emirates."
-          emirates={itSupportContent.geoContent.emirates}
-          terms={itSupportContent.geoContent.terms}
-          footerNote="Expert IT Solutions"
-        />
-
-        <ServiceFAQ
-          title={itSupportContent.faq.title}
-          items={itSupportContent.faq.items}
-        />
-        <ServiceCTA
-          title={itSupportContent.cta.title}
-          text={itSupportContent.cta.text}
-          ctaText={itSupportContent.cta.ctaText}
-          ctaUrl={itSupportContent.cta.ctaUrl}
-        />
-        <RelatedServices services={itSupportContent.relatedServices} />
-      </main>
+      <ServicePageTemplate
+        content={content}
+        breadcrumbs={[{ name: 'Services', url: '/services' }, { name: 'IT Support' }]}
+        articleBlocks={service?.attributes.articleBlocks}
+        articleCards={service?.attributes.articleCards}
+      />
       <Footer />
     </>
   );

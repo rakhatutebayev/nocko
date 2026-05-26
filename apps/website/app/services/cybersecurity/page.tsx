@@ -1,15 +1,10 @@
 import { Metadata } from 'next';
 import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
-import Hero from '@/components/sections/Hero';
-import ServiceContentEnhanced from '@/components/services/ServiceContentEnhanced';
-import ServiceFeatures from '@/components/services/ServiceFeatures';
-import ServiceBenefits from '@/components/services/ServiceBenefits';
-import ServiceCTA from '@/components/services/ServiceCTA';
-import RelatedServices from '@/components/services/RelatedServices';
-import ServiceGeo from '@/components/services/ServiceGeo';
-import ServiceFAQ from '@/components/services/ServiceFAQ';
+import ServicePageTemplate from '@/components/services/ServicePageTemplate';
 import StructuredData from '@/components/seo/StructuredData';
+import { getService } from '@/lib/api/strapi';
+import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
   title: 'Cybersecurity Services in Dubai | Data Protection & Cybersecurity UAE | NOCKO',
@@ -19,269 +14,125 @@ export const metadata: Metadata = {
     'cybersecurity Dubai, data protection UAE, IT security services Dubai, network security UAE, security compliance Dubai, threat detection UAE, cybersecurity company Dubai',
   openGraph: {
     title: 'Cybersecurity Services in Dubai | Data Protection & Cybersecurity UAE | NOCKO',
-    description:
-      'Enterprise cybersecurity and data protection for businesses in Dubai and across the UAE. Advanced threat detection and security compliance.',
+    description: 'Enterprise cybersecurity and data protection for businesses in Dubai and across the UAE.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: {
-    canonical: '/services/cybersecurity',
-  },
+  alternates: { canonical: '/services/cybersecurity' },
 };
 
-const cybersecurityContent = {
+export const revalidate = 3600;
+
+const fallback: MappedServiceContent = {
   hero: {
-    title: 'Enterprise Cybersecurity & SOC in Dubai',
-    subtitle: 'Zero-Trust Architecture, Active Threat Hunting, and NESA Compliance',
+    title: 'Enterprise Cybersecurity & Data Protection in Dubai',
+    subtitle: 'Zero-Trust Architecture, Threat Detection, and NESA Compliance for UAE Businesses',
     description:
-      'Defend your corporate perimeter. We deliver 24/7 localized SOC monitoring, Next-Gen Firewall management, and advanced endpoint protection tailored specifically for UAE-based enterprises.',
-    serviceType: 'Cybersecurity',
+      'Protect your business from evolving cyber threats. We deliver enterprise-grade cybersecurity solutions including firewall management, endpoint protection, and compliance frameworks tailored for businesses in Dubai and across the UAE.',
   },
   firstSection: [
     {
-      title: 'Zero-Trust Architecture & IAM',
-      text: 'Remove implicit trust from your network. We architect uncompromising Identity and Access Management (IAM) solutions where every user, whether sitting in your Business Bay office or working remotely, is continuously authenticated using contextual Multi-Factor Authentication (MFA) before accessing corporate data.',
-      link: '/articles/cybersecurity-data-protection',
-      linkText: 'Explore Zero-Trust Policies',
-      image: '/images/services/cybersecurity-protection.png',
-      imageAlt: 'Zero-Trust Architecture integration',
-    },
-    {
-      title: '24/7 Security Operations Center (SOC)',
-      text: 'Automated malware triggers don’t wait for business hours. Our dedicated SOC constantly analyzes your Microsoft 365 logs, firewall telemetry, and endpoint behaviors. Using SIEM (Security Information and Event Management) integrated with AI threat intelligence, our analysts physically block active ransomware encryption attempts in real-time.',
+      title: 'Advanced Threat Detection & Response',
+      text: 'Our Security Operations Center (SOC) monitors your infrastructure 24/7, detecting and neutralizing threats before they impact your business. We deploy AI-powered threat intelligence with sub-15-minute response times across all UAE business hours.',
       link: '/articles/cybersecurity-monitoring',
-      linkText: 'Learn about Active Threat Hunting',
+      linkText: 'Learn about threat monitoring',
+      image: '/images/services/cybersecurity-protection.png',
+      imageAlt: 'Cybersecurity threat detection in UAE',
     },
     {
-      title: 'Next-Generation Firewall (NGFW) Management',
-      text: 'Legacy routers cannot stop modern application-layer attacks. We deploy and manage Fortinet, Palo Alto, and Cisco Meraki NGFWs utilizing Deep Packet Inspection (DPI). By heavily segmenting your VLANs, we quarantine Guest Wi-Fi and IoT devices completely away from your critical on-premise Active Directory servers.',
+      title: 'Firewall Management & Network Security',
+      text: 'We implement and manage enterprise-grade firewalls from Fortinet, Cisco, and Palo Alto Networks. Our network security engineers continuously tune rules to block emerging threats while maintaining optimal business performance.',
       link: '/articles/cybersecurity-firewall',
-      linkText: 'Upgrade your Perimeter',
+      linkText: 'Network security details',
+    },
+    {
+      title: 'Data Encryption & Protection',
+      text: 'Comprehensive data protection covering data at rest and in transit. We implement AES-256 encryption, DLP policies, and access controls ensuring your sensitive business data remains protected and compliant with UAE data regulations.',
+      link: '/articles/cybersecurity-data-protection',
+      linkText: 'Data protection strategies',
     },
   ],
   features: [
-    {
-      icon: 'icon1',
-      title: 'Zero-Trust Architecture & strict Contextual MFA',
-    },
-    {
-      icon: 'icon2',
-      title: '24/7 localized SOC Event Monitoring in Dubai',
-    },
-    {
-      icon: 'icon3',
-      title: 'Endpoint Detection and Response (EDR / XDR)',
-    },
-    {
-      icon: 'icon4',
-      title: 'Strict adherence to UAE NESA and DESC frameworks',
-    },
-    {
-      icon: 'icon5',
-      title: 'Quarterly Penetration Testing and Vulnerability Audits',
-    },
+    { icon: 'icon1', title: '24/7 SOC monitoring and real-time threat detection' },
+    { icon: 'icon2', title: 'Zero-Trust network architecture implementation' },
+    { icon: 'icon3', title: 'NESA and UAE regulatory compliance frameworks' },
+    { icon: 'icon4', title: 'Endpoint Detection and Response (EDR) solutions' },
+    { icon: 'icon5', title: 'Security awareness training for your team' },
   ],
   secondSection: [
     {
-      title: 'NESA & DESC Compliance Integration',
-      text: 'For UAE government contractors, healthcare providers, and DIFC financial institutions, regulatory compliance is non-negotiable. NOCKO maps your IT infrastructure directly to the National Electronic Security Authority (SIA/NESA) controls, guaranteeing audit readiness and protecting C-level executives from Federal data breach liabilities.',
-      link: '/articles/cybersecurity-compliance',
-      linkText: 'Ensure Regulatory Compliance',
+      title: 'Zero-Trust Security Architecture',
+      text: 'Implement a comprehensive Zero-Trust security model that verifies every user, device, and network request. We design and deploy micro-segmentation, multi-factor authentication, and least-privilege access controls across your entire infrastructure.',
+      link: '/articles/cloud-zero-trust',
+      linkText: 'Explore Zero-Trust',
       image: '/images/services/cybersecurity-firewall.png',
-      imageAlt: 'Security compliance and NESA auditing',
+      imageAlt: 'Zero-Trust security architecture Dubai',
     },
     {
-      title: 'Endpoint Detection and Response (EDR) against Ransomware',
-      text: 'Standard Antivirus is mathematically obsolete against zero-day fileless malware. We deploy behavioral EDR agents (like CrowdStrike or SentinelOne) across your fleet of laptops and servers. If a background process attempts to sequentially encrypt files, the EDR instantly severs the machine from the network, containing the ransomware blast radius.',
-      link: '/articles/cybersecurity-protection',
-      linkText: 'Defeat Ransomware Syndicates',
+      title: 'Security Compliance & Auditing',
+      text: 'Achieve and maintain compliance with UAE NESA, ISO 27001, and international security standards. Our compliance experts conduct thorough security audits, gap analysis, and provide detailed remediation roadmaps.',
+      link: '/articles/cybersecurity-compliance',
+      linkText: 'Compliance frameworks',
     },
     {
-      title: 'Incident Response & Digital Forensics',
-      text: 'When a breach happens, time is your most valuable asset. Our elite Incident Response team acts as your digital paramedics. We follow strict chain-of-custody protocols to isolate the compromised hardware, eradicate the persistence mechanism from your network, and provide the legal reporting required under UAE cybercrime laws.',
+      title: 'Incident Response Planning',
+      text: 'Prepare for the worst with a robust incident response plan. We develop, test, and maintain your organization\'s ability to detect, contain, and recover from security incidents with minimal business disruption.',
       link: '/articles/cybersecurity-incident-response',
-      linkText: 'Establish an Incident Response Plan',
+      linkText: 'Incident response details',
     },
   ],
   benefits: [
-    {
-      icon: '/images/benefits/global.png',
-      text: 'Certified Ethical <br> Hackers & Analysts',
-    },
-    {
-      icon: '/images/benefits/time.png',
-      text: 'Sub-15 Minute <br> Threat Triage SLA',
-    },
-    {
-      icon: '/images/benefits/team.png',
-      text: 'Mandatory UAE <br> NESA Standardized',
-    },
-    {
-      icon: '/images/benefits/pricing.png',
-      text: 'Fixed-cost <br> Proactive Security',
-    },
-    {
-      icon: '/images/benefits/communication.png',
-      text: 'Executive-Level <br> Risk Dashboards',
-    },
+    { icon: '/images/benefits/global.png', text: 'Certified security experts in Dubai' },
+    { icon: '/images/benefits/time.png', text: '24/7 SOC monitoring' },
+    { icon: '/images/benefits/team.png', text: 'NESA & ISO 27001 compliance' },
+    { icon: '/images/benefits/pricing.png', text: 'Predictable security costs' },
+    { icon: '/images/benefits/communication.png', text: 'Regular security reports' },
   ],
-  geoContent: {
-    emirates: [
-      { name: 'Dubai', hubs: ['DIFC', 'Business Bay', 'JLT', 'Silicon Oasis', 'Media City'] },
-      { name: 'Abu Dhabi', hubs: ['ADGM', 'Mussafah', 'Khalifa City'] },
-      { name: 'Sharjah', hubs: ['SAIF Zone'] },
-      { name: 'Ajman', hubs: [] },
-      { name: 'Fujairah', hubs: [] },
-      { name: 'Ras Al Khaimah', hubs: [] },
-      { name: 'Umm Al Quwain', hubs: [] }
-    ],
-    terms: ['Cybersecurity SOC Dubai', 'NESA Compliance UAE', 'Ransomware Protection Middle East', 'Zero Trust IAM'],
-  },
-  resources: [
-    {
-      type: 'CASE STUDY',
-      title: 'Defeating Ransomware: A 4-Hour Recovery',
-      description:
-        'Read how our EDR deployment automatically isolated a phishing payload, saving a Dubai logistics firm millions in downtime.',
-      image: '/images/services/cards/book.png',
-      url: '/case-studies/solus',
-      ctaText: 'Read Case Study',
-    },
-    {
-      type: 'GUIDE',
-      title: 'IT Infrastructure Monitoring & NOC Services',
-      description:
-        'How RMM-driven monitoring detects lateral movement, suspicious processes, and endpoint anomalies before they escalate into security incidents.',
-      image: '/images/services/cards/guide.png',
-      url: '/articles/it-support-monitoring',
-      ctaText: 'Read Monitoring Guide',
-    },
-    {
-      type: 'ARTICLE',
-      title: 'IT Assessment & Security Audit for UAE Businesses',
-      description:
-        'What a thorough IT assessment covers — from network vulnerability scanning to access control review — and how it maps to NESA and ISO 27001 frameworks.',
-      image: '/images/services/cards/multi.png',
-      url: '/articles/it-consulting-assessment',
-      ctaText: 'Read Assessment Guide',
-    },
-  ],
+  resources: [],
   cta: {
-    title: 'Is Your Corporate Network Compromised Right Now?',
-    text: "Contact our UAE Security Analysts for an immediate Penetration Test and Infrastructure Audit.",
-    ctaText: 'Request Security Audit',
+    title: 'Ready to Secure Your Business?',
+    text: 'Get a free cybersecurity assessment and discover your vulnerabilities before attackers do.',
+    ctaText: 'Get Free Security Assessment',
     ctaUrl: '#contact',
   },
   relatedServices: [
-    {
-      title: 'Strategic IT Consulting',
-      url: '/services/it-consulting',
-      description: 'Audit your current architecture and licensing.',
-    },
-    {
-      title: 'Managed IT Services',
-      url: '/services/managed-it',
-      description: 'Comprehensive 24/7 IT management and Helpdesk.',
-    },
-    {
-      title: 'Structured Cabling',
-      url: '/services/structured-cabling',
-      description: 'Physical layer security and access control systems.',
-    },
+    { title: 'Cloud Services', url: '/services/cloud', description: 'Secure cloud infrastructure and migration.' },
+    { title: 'Managed IT Services', url: '/services/managed-it', description: '24/7 IT infrastructure monitoring and management.' },
+    { title: 'IT Consulting', url: '/services/it-consulting', description: 'Strategic security planning and technology roadmaps.' },
   ],
-  faq: {
-    title: 'Frequently Asked Questions About Cybersecurity Services',
-    items: [
-      {
-        question: 'How long does a NESA compliance assessment take for a Dubai business?',
-        answer: 'A full NESA IA-compliant gap assessment typically takes 5–10 business days depending on your infrastructure size. We deliver a prioritised remediation roadmap within 2 weeks of the initial assessment. Most DIFC and ADGM-regulated clients achieve compliance within 60–90 days.',
-      },
-      {
-        question: 'What is the difference between EDR and traditional antivirus?',
-        answer: 'Traditional antivirus uses signature-based detection — it can only catch known threats. EDR (Endpoint Detection and Response) tools like CrowdStrike Falcon and SentinelOne use behavioral AI to detect zero-day threats, ransomware, and fileless attacks in real time, and can automatically isolate infected endpoints within seconds.',
-      },
-      {
-        question: 'Do you provide 24/7 SOC monitoring in Dubai?',
-        answer: 'Yes. Our Security Operations Centre provides 24/7 threat monitoring with Arabic and English-speaking analysts. We monitor SIEM alerts, firewall logs, and endpoint telemetry around the clock, with a guaranteed P1 response under 15 minutes.',
-      },
-      {
-        question: 'Can you help with a DFSA or HAAD cybersecurity audit?',
-        answer: 'Yes. We have direct experience with DFSA IT risk framework requirements for DIFC-registered firms and HAAD/DOH cybersecurity compliance for UAE healthcare providers. We prepare your documentation, conduct the internal audit, and support you through the regulator\'s review process.',
-      },
-    ],
-  },
+  faq: [
+    { question: 'What cybersecurity standards apply to businesses in UAE?', answer: 'UAE businesses must comply with NESA (National Electronic Security Authority) standards. Financial institutions also follow CBUAE guidelines, while healthcare follows DHA requirements.' },
+    { question: 'How quickly can you respond to a security incident?', answer: 'Our SOC team responds to critical alerts within 15 minutes, 24/7. For on-site response in Dubai, we can dispatch engineers within 2 hours.' },
+    { question: 'Do you provide employee security awareness training?', answer: 'Yes. We conduct quarterly security awareness training, phishing simulations, and provide ongoing educational resources to reduce human-factor risks.' },
+  ],
+  faqTitle: 'Cybersecurity FAQs',
 };
 
-export default function CybersecurityPage() {
+export default async function CybersecurityPage() {
+  const service = await getService('cybersecurity');
+  const content = service ? mapServiceData(service) : fallback;
+
   return (
     <>
       <StructuredData
-        type="Service"
-        data={{
-          '@id': 'https://nocko.com/services/cybersecurity#service',
-          name: 'Cybersecurity Services Dubai',
-          serviceType: 'Cybersecurity',
-          description: 'Enterprise cybersecurity, threat detection, firewall management, and compliance for businesses in Dubai and UAE.',
-          url: 'https://nocko.com/services/cybersecurity',
-          provider: { '@type': 'Organization', '@id': 'https://nocko.com/#localbusiness', name: 'NOCKO Information Technology' },
-          areaServed: [{ '@type': 'City', name: 'Dubai' }, { '@type': 'City', name: 'Abu Dhabi' }, { '@type': 'City', name: 'Sharjah' }],
-        }}
-      />
-      <StructuredData
         type="BreadcrumbList"
-        data={{ itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
-          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://nocko.com/services' },
-          { '@type': 'ListItem', position: 3, name: 'Cybersecurity', item: 'https://nocko.com/services/cybersecurity' },
-        ]}}
-      />
-      <StructuredData
-        type="FAQPage"
         data={{
-          mainEntity: cybersecurityContent.faq.items.map((item) => ({
-            '@type': 'Question',
-            name: item.question,
-            acceptedAnswer: { '@type': 'Answer', text: item.answer },
-          })),
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
+            { '@type': 'ListItem', position: 2, name: 'IT Services', item: 'https://nocko.com/services' },
+            { '@type': 'ListItem', position: 3, name: 'Cybersecurity', item: 'https://nocko.com/services/cybersecurity' },
+          ],
         }}
       />
       <HeaderWrapper />
-      <main className="main" role="main">
-        <Hero
-          variant="service-enhanced"
-          title={cybersecurityContent.hero.title}
-          subtitle={cybersecurityContent.hero.subtitle}
-          description={cybersecurityContent.hero.description}
-        />
-
-        <ServiceContentEnhanced blocks={cybersecurityContent.firstSection} />
-        <ServiceFeatures features={cybersecurityContent.features} />
-        <ServiceContentEnhanced modifier="second" blocks={cybersecurityContent.secondSection} />
-        <ServiceBenefits benefits={cybersecurityContent.benefits} />
-        
-        <ServiceGeo 
-          title="Securing Businesses Throughout the Emirates"
-          description="From high-stakes finance in DIFC to multi-national HQs in Business Bay, NOCKO protects the digital assets of UAE enterprise."
-          emirates={cybersecurityContent.geoContent.emirates}
-          terms={cybersecurityContent.geoContent.terms}
-          footerNote="Enterprise Grade Security"
-        />
-
-        <ServiceFAQ
-          title={cybersecurityContent.faq.title}
-          items={cybersecurityContent.faq.items}
-        />
-        <ServiceCTA
-          title={cybersecurityContent.cta.title}
-          text={cybersecurityContent.cta.text}
-          ctaText={cybersecurityContent.cta.ctaText}
-          ctaUrl={cybersecurityContent.cta.ctaUrl}
-        />
-        <RelatedServices services={cybersecurityContent.relatedServices} />
-      </main>
+      <ServicePageTemplate
+        content={content}
+        breadcrumbs={[{ name: 'Services', url: '/services' }, { name: 'Cybersecurity' }]}
+        articleBlocks={service?.attributes.articleBlocks}
+        articleCards={service?.attributes.articleCards}
+      />
       <Footer />
     </>
   );
 }
-
