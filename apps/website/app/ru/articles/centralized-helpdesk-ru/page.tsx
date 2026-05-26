@@ -1,0 +1,101 @@
+import { Metadata } from 'next';
+import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
+import Footer from '@/components/layout/FooterRu';
+import Hero from '@/components/sections/Hero';
+import ArticleContent from '@/components/articles/ArticleContent';
+import StructuredData from '@/components/seo/StructuredData';
+import Breadcrumbs from '@/components/common/Breadcrumbs';
+
+export const metadata: Metadata = {
+  title: 'Централизованный Helpdesk 24/7 в Дубае | NOCKO',
+  description:
+    'Полное руководство по организации ИТ-поддержки бизнеса в ОАЭ. Как централизованный Helpdesk 24/7 и русскоговорящие ИТ специалисты спасают корпоративные сети от простоев.',
+  keywords:
+    'helpdesk дубай, ит поддержка в оаэ, русскоговорящие ИТ специалисты, сервисный центр, ит аутсорсинг дубай, mdm, noc 24/7',
+  openGraph: {
+    title: 'Централизованный Helpdesk 24/7 в Дубае | NOCKO',
+    description:
+      'Полное руководство по организации ИТ-поддержки бизнеса в ОАЭ. Как централизованный Helpdesk 24/7 и русскоговорящие ИТ специалисты спасают корпоративные сети от простоев.',
+    type: 'article',
+    locale: 'ru_RU',
+    siteName: 'NOCKO Information Technology',
+  },
+  alternates: {
+    canonical: '/ru/articles/centralized-helpdesk-ru',
+    languages: {
+      'en-AE': '/articles/centralized-helpdesk-ru',
+      'ru-RU': '/ru/articles/centralized-helpdesk-ru',
+    },
+  },
+};
+
+const articleData = {
+  hero: {
+    title: 'Централизованный Helpdesk 24/7 в ОАЭ',
+    subtitle: 'Мгновенное реагирование, SLA и поддержка для растущего бизнеса',
+    description: '',
+  },
+  intro:
+    'В динамичной бизнес-среде Дубая и Абу-Даби любая минута простоя ИТ-инфраструктуры напрямую ведет к финансовым потерям и срыву сроков. Будь то неработающий VPN у удаленного сотрудника или сбой POS-системы в ресторане в часы пик, бизнесу требуется немедленное решение. Именно поэтому переход от "приходящих сисадминов" к модели "Централизованный Helpdesk 24/7" становится стандартом для корпоративного сектора ОАЭ.',
+  blocks: [
+    {
+      title: '1. Что такое Истинный Централизованный Helpdesk?',
+      text: '<p>Централизованная служба поддержки (Helpdesk) — это единая точка входа (Single Point of Contact - SPOC) для всех технических инцидентов в вашей компании. Использование платформ корпоративного класса, таких как ServiceNow или Jira Service Management, позволяет маршрутизировать каждую заявку согласно строгим SLA (Service Level Agreement).</p><p>Работу правильно выстроенного Helpdesk отличает многоуровневость: заявки первой линии (L1) обрабатываются за считанные минуты удаленно, тогда как сложные сетевые инциденты мгновенно эскалируются на L3 инженеров.</p>',
+      list: [
+        'Единый omnichannel-подход: прием тикетов через email, портал самообслуживания, Teams/Slack интеграции или выделенный номер телефона.',
+        'Жесткие SLA: гарантированное время реакции (например, 15 минут) и время разрешения инцидента в зависимости от его приоритета (P1-P4).',
+        'Автоматизированный триаж: умное распределение заявок по профильным инженерам.',
+      ],
+    },
+    {
+      title: '2. Ценность: Русскоговорящие ИТ Специалисты в Дубае',
+      text: '<p>Многие компании, релоцировавшие свой бизнес в ОАЭ или открывшие здесь филиалы, сталкиваются с серьезным языковым и культурным барьером при попытке работать с дешевым локальным аутсорсом. Технические термины и детали инцидентов очень часто теряются при переводе, что растягивает решение простых проблем на дни.</p><p>Наш Helpdesk закрывает эту проблему: сертифицированные <strong>русскоговорящие ИТ специалисты</strong> обеспечивают кристально чистую коммуникацию с вашей командой.</p>',
+      list: [
+        'Отсутствие языковых барьеров: мгновенное понимание контекста проблемы.',
+        'Высочайшая инженерная квалификация, подтвержденная сертификатами Microsoft, AWS, Cisco.',
+        'Доступность 24/7: бесперебойная поддержка с учетом разницы часовых поясов.',
+      ],
+    },
+    {
+      title: '3. Мониторинг Эндпоинтов (MDM и RMM) и Проактивность',
+      text: '<p>Современный Helpdesk 24/7 больше не ждет, пока у пользователя сломается компьютер. Основа надежного сервиса — это проактивный мониторинг. Решения из класса RMM (Remote Monitoring and Management) и MDM (Mobile Device Management), такие как Microsoft Intune, позволяют нам видеть начинающуюся проблему задолго до того, как пользователь создаст тикет.</p>',
+      list: [
+        'Политики безопасности (Zero Trust): автоматический отзыв доступа при попытке входа с неавторизованного устройства.',
+        'Автоматическая установка патчей безопасности (Patch Management) без вмешательства пользователя.',
+        'Глубокая инвентаризация: точное отслеживание местоположения и состояния всех ИТ-активов компании.',
+      ],
+    },
+    {
+      title: '4. Переход от IT-хаоса к предсказуемости',
+      text: '<p>Внедрение профессионального централизованного Helpdesk переводит ИТ из категории "тушение пожаров" в разряд предсказуемых, управляемых бизнес-процессов. Для руководства компании это означает прозрачность: каждый месяц вы получаете детализированный дашборд с метриками.</p><p>Выбирая NOCKO в качестве своего MSP (Managed Service Provider) в ОАЭ, вы передаете все технологические риски нам.</p>',
+      list: [
+        'Снижение потерь рабочего времени ваших сотрудников до 40% за счет удаленной поддержки.',
+        'Прозрачная аналитика и выявление проблемных узлов инфраструктуры.',
+        'Единый счет за ИТ (OPEX): превращение непредсказуемых капитальных затрат в спокойный операционный бюджет.',
+      ],
+    },
+  ],
+};
+
+export default function CentralizedHelpdeskRuPage() {
+  return (
+    <>
+      <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-01-20', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
+      <HeaderWrapper />
+      <main className="main" role="main">
+        <Hero variant="article" title={articleData.hero.title} subtitle={articleData.hero.subtitle} description={articleData.hero.description} />
+        <div className="container">
+          <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'ИТ Поддержка', href: '/ru/services/it-support' }, { label: 'Статья' }]} />
+          <div className="article">
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+              { href: '/ru/services/it-support', title: 'ИТ Поддержка', description: 'Комплексная ИТ-поддержка для бизнеса в ОАЭ.' },
+              { href: '/ru/services/managed-it', title: 'Управляемые ИТ Услуги', description: 'Полностью управляемая ИТ-инфраструктура.' },
+              { href: '/ru/services/cybersecurity', title: 'Кибербезопасность', description: 'Защита бизнеса от киберугроз в ОАЭ.' },
+            ]} />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
