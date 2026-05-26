@@ -283,16 +283,18 @@ export default function Header({ menu }: HeaderProps) {
 
         {menu.attributes?.ctaText && (
           <div className="header__right">
-            <Link
-              href={pathname === '/' ? '/ru' : pathname.startsWith('/ru') ? (pathname.replace('/ru', '') || '/') : `/ru${pathname}`}
-              className="btn btn--secondary btn--sm header__lang"
-              aria-label="Switch language"
-            >
-              {pathname.startsWith('/ru') ? 'EN' : 'RU'}
-            </Link>
+            {!isMobile && (
+              <Link
+                href={pathname === '/' ? '/ru' : pathname.startsWith('/ru') ? (pathname.replace('/ru', '') || '/') : `/ru${pathname}`}
+                className="btn btn--secondary btn--sm header__lang"
+                aria-label="Switch language"
+              >
+                {pathname.startsWith('/ru') ? 'EN' : 'RU'}
+              </Link>
+            )}
             <button
               onClick={() => setIsContactModalOpen(true)}
-              className="btn btn--secondary btn--sm header__menu-cta" 
+              className="btn btn--secondary btn--sm header__menu-cta"
               tabIndex={0}
               aria-label={`Open contact form: ${menu.attributes.ctaText}`}
             >

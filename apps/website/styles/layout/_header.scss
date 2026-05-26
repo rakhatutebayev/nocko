@@ -644,10 +644,6 @@
     background-color: transparent;
     white-space: nowrap;
 
-    @include laptop {
-      display: none;
-    }
-
     &:hover,
     &:focus {
       color: $color-white;
