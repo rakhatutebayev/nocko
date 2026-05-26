@@ -85,8 +85,6 @@ const nextConfig: NextConfig = {
       { source: '/services/cloud.html', destination: '/services/cloud', permanent: true },
       // Legacy URL → current slug
       { source: '/services/network-infrastructure', destination: '/services/structured-cabling', permanent: true },
-      // RU articles → EN canonical (articles not translated, EN is canonical)
-      { source: '/ru/articles/:slug*', destination: '/articles/:slug*', permanent: true },
       // .html duplicates — top-level pages
       { source: '/case-studies.html', destination: '/case-studies', permanent: true },
       { source: '/services.html', destination: '/services', permanent: true },
