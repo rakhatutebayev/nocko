@@ -30,9 +30,11 @@ interface MenuNavigationProps {
   isMenuOpen: boolean;
   isMobile: boolean;
   navRef?: React.RefObject<HTMLElement | null>;
+  langUrl?: string;
+  langLabel?: string;
 }
 
-export default function MenuNavigation({ items, onItemClick, isMenuOpen, isMobile, navRef }: MenuNavigationProps) {
+export default function MenuNavigation({ items, onItemClick, isMenuOpen, isMobile, navRef, langUrl, langLabel }: MenuNavigationProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
@@ -96,6 +98,13 @@ export default function MenuNavigation({ items, onItemClick, isMenuOpen, isMobil
         role="navigation"
       >
         <ul className="header__menu" role="menubar">
+          {isMobile && langUrl && langLabel && (
+            <li className="header__menu-item header__menu-item--lang" role="none">
+              <Link href={langUrl} role="menuitem" onClick={handleItemClick}>
+                {langLabel}
+              </Link>
+            </li>
+          )}
           {sortedItems.map((item) => {
             const itemId = `menu-${item.id}`;
             const hasSubmenu = item.submenu && item.submenu.length > 0;

@@ -461,6 +461,16 @@
     }
   }
   
+  &__menu-item--lang {
+    border-top: 2px solid rgba(0, 0, 0, 0.08);
+    margin-top: 4px;
+
+    a {
+      color: #3474ff !important;
+      font-weight: 500;
+    }
+  }
+
   &__dropdown {
     position: absolute;
     top: calc(100% + 5px); // Подняли еще на 5px (было 10px, стало 5px)
@@ -633,6 +643,10 @@
     color: #3474ff;
     background-color: transparent;
     white-space: nowrap;
+
+    @include laptop {
+      display: none;
+    }
 
     &:hover,
     &:focus {

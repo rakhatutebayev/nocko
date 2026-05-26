@@ -276,6 +276,8 @@ export default function Header({ menu }: HeaderProps) {
             isMenuOpen={isMenuOpen}
             isMobile={isMobile}
             navRef={navRef}
+            langUrl={pathname === '/' ? '/ru' : pathname.startsWith('/ru') ? (pathname.replace('/ru', '') || '/') : `/ru${pathname}`}
+            langLabel={pathname.startsWith('/ru') ? 'EN' : 'RU'}
           />
         </div>
 
