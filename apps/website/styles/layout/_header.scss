@@ -662,26 +662,6 @@
       outline: 2px solid #3474ff;
       outline-offset: 2px;
     }
-
-    @include laptop {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      padding: 6px 10px;
-      min-height: 33px;
-      border-color: #3474ff;
-      color: #3474ff;
-      white-space: nowrap;
-      visibility: visible;
-      opacity: 1;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 10px;
-      padding: 5px 8px;
-      min-height: 30px;
-    }
   }
 
   // IMPORTANT:
