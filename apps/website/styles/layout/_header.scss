@@ -41,6 +41,12 @@
       align-items: center;
       overflow: visible; // Убеждаемся, что кнопка не обрезается
     }
+
+    @media (max-width: 400px) {
+      gap: 6px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
   }
   
   .burger {
@@ -569,7 +575,7 @@
     border-color: #3474ff;
     color: #3474ff;
     background-color: transparent;
-    
+
     // На мобильных: стиль как при скролинге (синий вместо белого)
     @include laptop {
       display: inline-flex;
@@ -583,6 +589,12 @@
       white-space: nowrap;
       visibility: visible;
       opacity: 1;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 10px;
+      padding: 5px 10px;
+      min-height: 30px;
     }
 
     &:hover,
@@ -603,6 +615,10 @@
 
   &__right {
     gap: 10px;
+
+    @media (max-width: 400px) {
+      gap: 6px;
+    }
   }
 
   &__lang {
@@ -645,6 +661,12 @@
       white-space: nowrap;
       visibility: visible;
       opacity: 1;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 10px;
+      padding: 5px 10px;
+      min-height: 30px;
     }
   }
 
