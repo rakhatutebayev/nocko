@@ -98,13 +98,6 @@ export default function MenuNavigation({ items, onItemClick, isMenuOpen, isMobil
         role="navigation"
       >
         <ul className="header__menu" role="menubar">
-          {isMobile && langUrl && langLabel && (
-            <li className="header__menu-item header__menu-item--lang" role="none">
-              <Link href={langUrl} role="menuitem" onClick={handleItemClick}>
-                {langLabel}
-              </Link>
-            </li>
-          )}
           {sortedItems.map((item) => {
             const itemId = `menu-${item.id}`;
             const hasSubmenu = item.submenu && item.submenu.length > 0;
@@ -171,6 +164,13 @@ export default function MenuNavigation({ items, onItemClick, isMenuOpen, isMobil
               </li>
             );
           })}
+          {isMobile && langUrl && langLabel && (
+            <li className="header__menu-item header__menu-item--lang" role="none">
+              <Link href={langUrl} role="menuitem" onClick={handleItemClick}>
+                {langLabel}
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
     </>
