@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'ru_RU',
   },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
 const articleData = {

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'ru-RU': '/ru/articles/structured-cabling-industrial',
     },
   },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
   openGraph: {
     locale: 'ru_RU',
   },
