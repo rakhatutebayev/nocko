@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
 import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
-import CaseStudies, { defaultCaseStudies } from '@/components/sections/CaseStudies';
+import CaseStudies from '@/components/sections/CaseStudies';
+import { defaultCaseStudies } from '@/lib/data/caseStudies';
 import { getCaseStudies } from '@/lib/api/strapi';
 
 export const metadata: Metadata = {
