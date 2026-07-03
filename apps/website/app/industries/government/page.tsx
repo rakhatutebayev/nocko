@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/industries/government',
+    languages: {
+      'en-AE': '/industries/government',
+      'ru-RU': '/ru/industries/government',
+    },
   },
 };
 

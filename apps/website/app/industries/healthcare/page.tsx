@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/industries/healthcare',
+    languages: {
+      'en-AE': '/industries/healthcare',
+      'ru-RU': '/ru/industries/healthcare',
+    },
   },
 };
 

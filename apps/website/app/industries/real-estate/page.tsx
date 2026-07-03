@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/industries/real-estate',
+    languages: {
+      'en-AE': '/industries/real-estate',
+      'ru-RU': '/ru/industries/real-estate',
+    },
   },
 };
 

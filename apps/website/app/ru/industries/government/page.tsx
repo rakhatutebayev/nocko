@@ -7,67 +7,71 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Government | NOCKO UAE',
+  title: 'ИТ-решения для государственного сектора | NOCKO ОАЭ',
   description:
-    'Secure IT solutions for government entities in UAE. Compliance, data security, network infrastructure, e-government services, and 24/7 support for public sector organizations.',
+    'Безопасные ИТ-решения для государственных организаций в ОАЭ. Соответствие требованиям, защита данных, сетевая инфраструктура, услуги электронного правительства и поддержка 24/7 для организаций государственного сектора.',
   keywords:
-    'IT solutions government UAE, government IT services Dubai, public sector technology, e-government infrastructure, government cybersecurity UAE',
+    'ИТ-решения для госсектора ОАЭ, ИТ-услуги для государственных организаций Дубай, технологии для государственного сектора, инфраструктура электронного правительства, кибербезопасность для госсектора ОАЭ',
   openGraph: {
-    title: 'IT Solutions for Government | NOCKO UAE',
+    title: 'ИТ-решения для государственного сектора | NOCKO ОАЭ',
     description:
-      'Secure IT solutions for government entities in UAE. Compliance, data security, network infrastructure, and 24/7 support.',
+      'Безопасные ИТ-решения для государственных организаций в ОАЭ. Соответствие требованиям, защита данных, сетевая инфраструктура и поддержка 24/7.',
     type: 'article',
-    locale: 'en_AE',
+    locale: 'ru_RU',
     siteName: 'NOCKO Information Technology',
   },
   alternates: {
-    canonical: '/industries/government',
+    canonical: '/ru/industries/government',
+    languages: {
+      'en-AE': '/industries/government',
+      'ru-RU': '/ru/industries/government',
+    },
   },
 };
 
 const industryData = {
   hero: {
-    title: 'IT Solutions for Government',
-    subtitle: 'Secure, Compliant, and Reliable Technology for Public Sector Organizations',
+    title: 'ИТ-решения для государственного сектора',
+    subtitle: 'Безопасные, соответствующие требованиям и надёжные технологии для организаций государственного сектора',
     description: '',
   },
   intro:
-    'Government entities require the highest standards of security, compliance, and reliability. Our IT solutions for the public sector deliver secure infrastructure, data protection, regulatory compliance, and 24/7 support for government operations and services.',
+    'Государственные организации предъявляют самые высокие требования к безопасности, соответствию нормативам и надёжности. Наши ИТ-решения для государственного сектора обеспечивают защищённую инфраструктуру, защиту данных, соответствие регуляторным требованиям и поддержку 24/7 для работы государственных служб и предоставления услуг.',
   blocks: [
     {
-      title: 'Security & Compliance for Public Sector',
-      text: '<p>Government organizations handle sensitive citizen data and critical infrastructure that must be protected and managed in compliance with strict regulations. We implement security measures, access controls, and monitoring to safeguard data and ensure regulatory compliance.</p><p>Our solutions include multi-layered security, encryption, audit logging, and compliance documentation to meet local and international standards.</p>',
+      title: 'Безопасность и соответствие требованиям для государственного сектора',
+      text: '<p>Государственные организации работают с конфиденциальными данными граждан и критически важной инфраструктурой, которые должны быть защищены и управляться в соответствии со строгими нормативными требованиями. Мы внедряем меры безопасности, средства контроля доступа и мониторинг для защиты данных и обеспечения соответствия регуляторным требованиям.</p><p>Наши решения включают многоуровневую защиту, шифрование, ведение журналов аудита и документацию по соответствию требованиям, отвечающую местным и международным стандартам.</p>',
       list: [
-        '<li>Government security standards compliance</li>',
-        '<li>Data classification and protection</li>',
-        '<li>Role-based access control (RBAC)</li>',
-        '<li>Network segmentation and isolation</li>',
-        '<li>Security audit trails and reporting</li>',
-        '<li>Incident response and forensics readiness</li>',
+        '<li>Соответствие государственным стандартам безопасности</li>',
+        '<li>Классификация и защита данных</li>',
+        '<li>Ролевая модель управления доступом (RBAC)</li>',
+        '<li>Сегментация и изоляция сети</li>',
+        '<li>Журналы аудита безопасности и отчётность</li>',
+        '<li>Реагирование на инциденты и готовность к криминалистическому анализу</li>',
       ],
     },
     {
-      title: 'E-Government Services & Digital Transformation',
-      text: '<p>Modern government services are delivered digitally. We help public sector organizations implement e-government platforms, citizen portals, and digital services that improve accessibility, efficiency, and transparency.</p><p>Our solutions integrate with existing systems, support mobile access, and ensure secure authentication and data exchange between government entities.</p>',
+      title: 'Услуги электронного правительства и цифровая трансформация',
+      text: '<p>Современные государственные услуги предоставляются в цифровом формате. Мы помогаем организациям государственного сектора внедрять платформы электронного правительства, порталы для граждан и цифровые сервисы, повышающие доступность, эффективность и прозрачность.</p><p>Наши решения интегрируются с существующими системами, поддерживают мобильный доступ и обеспечивают безопасную аутентификацию и обмен данными между государственными организациями.</p>',
       list: [
-        '<li>E-government platform implementation</li>',
-        '<li>Citizen portal and mobile app development</li>',
-        '<li>Digital identity and authentication systems</li>',
-        '<li>Inter-agency data exchange and integration</li>',
-        '<li>Document management and workflow automation</li>',
-        '<li>Open data and transparency initiatives</li>',
+        '<li>Внедрение платформ электронного правительства</li>',
+        '<li>Разработка порталов для граждан и мобильных приложений</li>',
+        '<li>Системы цифровой идентификации и аутентификации</li>',
+        '<li>Межведомственный обмен данными и интеграция</li>',
+        '<li>Управление документами и автоматизация рабочих процессов</li>',
+        '<li>Инициативы по открытым данным и прозрачности</li>',
       ],
     },
     {
-      title: 'High-Availability Infrastructure for Critical Services',
-      text: '<p>Government services must operate continuously without interruption. We design and deploy resilient infrastructure with redundancy, disaster recovery, and 24/7 monitoring to ensure continuous availability.</p><p>Our solutions provide backup systems, failover capabilities, and business continuity plans that minimize downtime and maintain service delivery during incidents.</p>',
+      title: 'Отказоустойчивая инфраструктура для критически важных услуг',
+      text: '<p>Государственные услуги должны предоставляться непрерывно, без сбоев. Мы проектируем и разворачиваем отказоустойчивую инфраструктуру с резервированием, аварийным восстановлением и мониторингом 24/7 для обеспечения постоянной доступности.</p><p>Наши решения включают системы резервного копирования, механизмы автоматического переключения при отказах и планы обеспечения непрерывности бизнеса, которые минимизируют простои и сохраняют предоставление услуг во время инцидентов.</p>',
       list: [
-        '<li>Redundant network design with failover</li>',
-        '<li>Data center and cloud infrastructure</li>',
-        '<li>99.9%+ uptime SLA for critical systems</li>',
-        '<li>Disaster recovery and business continuity</li>',
-        '<li>24/7 monitoring and support</li>',
-        '<li>Automated backup and recovery testing</li>',
+        '<li>Резервируемая архитектура сети с автоматическим переключением при отказах</li>',
+        '<li>Инфраструктура центров обработки данных и облачных сервисов</li>',
+        '<li>SLA доступности 99,9%+ для критически важных систем</li>',
+        '<li>Аварийное восстановление и непрерывность бизнеса</li>',
+        '<li>Мониторинг и поддержка 24/7</li>',
+        '<li>Автоматизированное резервное копирование и тестирование восстановления</li>',
       ],
     },
   ],
@@ -101,9 +105,9 @@ export default function GovernmentPage() {
       />
       <Breadcrumbs
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Industries', href: '#' },
-          { label: 'Government' },
+          { label: 'Главная', href: '/ru' },
+          { label: 'Отрасли', href: '#' },
+          { label: 'Государственный сектор' },
         ]}
       />
       <HeaderWrapper />

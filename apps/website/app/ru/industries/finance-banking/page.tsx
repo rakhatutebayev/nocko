@@ -7,67 +7,71 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Finance & Banking | NOCKO UAE',
+  title: 'IT-решения для финансов и банкинга | NOCKO ОАЭ',
   description:
-    'Secure IT solutions for financial institutions in UAE. Network infrastructure, cybersecurity, compliance, data protection, and 24/7 support for banks and financial services.',
+    'Безопасные IT-решения для финансовых организаций в ОАЭ. Сетевая инфраструктура, кибербезопасность, соответствие требованиям, защита данных и поддержка 24/7 для банков и финансовых компаний.',
   keywords:
-    'IT solutions finance UAE, banking IT services Dubai, financial cybersecurity, banking network infrastructure, financial compliance IT',
+    'IT-решения для финансов ОАЭ, банковские IT-услуги Дубай, финансовая кибербезопасность, сетевая инфраструктура для банков, IT-соответствие требованиям в финансах',
   openGraph: {
-    title: 'IT Solutions for Finance & Banking | NOCKO UAE',
+    title: 'IT-решения для финансов и банкинга | NOCKO ОАЭ',
     description:
-      'Secure IT solutions for financial institutions in UAE. Network infrastructure, cybersecurity, compliance, and 24/7 support.',
+      'Безопасные IT-решения для финансовых организаций в ОАЭ. Сетевая инфраструктура, кибербезопасность, соответствие требованиям и поддержка 24/7.',
     type: 'article',
-    locale: 'en_AE',
+    locale: 'ru_RU',
     siteName: 'NOCKO Information Technology',
   },
   alternates: {
-    canonical: '/industries/finance-banking',
+    canonical: '/ru/industries/finance-banking',
+    languages: {
+      'en-AE': '/industries/finance-banking',
+      'ru-RU': '/ru/industries/finance-banking',
+    },
   },
 };
 
 const industryData = {
   hero: {
-    title: 'IT Solutions for Finance & Banking',
-    subtitle: 'Secure, Compliant, and Reliable Technology for Financial Institutions',
+    title: 'IT-решения для финансов и банкинга',
+    subtitle: 'Безопасные, соответствующие требованиям и надёжные технологии для финансовых организаций',
     description: '',
   },
   intro:
-    'Financial institutions require the highest standards of security, reliability, and compliance. Our IT solutions for finance and banking deliver secure infrastructure, data protection, regulatory compliance, and 24/7 support to keep your operations running smoothly.',
+    'Финансовым организациям необходимы самые высокие стандарты безопасности, надёжности и соответствия требованиям. Наши IT-решения для финансов и банкинга обеспечивают защищённую инфраструктуру, защиту данных, соблюдение нормативных требований и поддержку 24/7, чтобы ваши операции выполнялись бесперебойно.',
   blocks: [
     {
-      title: 'Security & Compliance First',
-      text: '<p>Financial services face stringent security and regulatory requirements. Our solutions ensure compliance with local and international standards while protecting sensitive customer data and transactions.</p><p>We implement multi-layered security, encryption, access controls, and continuous monitoring to prevent breaches and ensure audit readiness.</p>',
+      title: 'Безопасность и соответствие требованиям прежде всего',
+      text: '<p>Финансовые компании сталкиваются со строгими требованиями к безопасности и нормативному регулированию. Наши решения обеспечивают соответствие местным и международным стандартам, одновременно защищая конфиденциальные данные клиентов и транзакции.</p><p>Мы внедряем многоуровневую защиту, шифрование, контроль доступа и непрерывный мониторинг, чтобы предотвращать нарушения и обеспечивать готовность к аудиту.</p>',
       list: [
-        '<li>PCI DSS compliance support</li>',
-        '<li>Data encryption at rest and in transit</li>',
-        '<li>Multi-factor authentication (MFA)</li>',
-        '<li>Network segmentation and firewalls</li>',
-        '<li>Regular security audits and penetration testing</li>',
-        '<li>Compliance documentation and reporting</li>',
+        '<li>Поддержка соответствия стандарту PCI DSS</li>',
+        '<li>Шифрование данных при хранении и передаче</li>',
+        '<li>Многофакторная аутентификация (MFA)</li>',
+        '<li>Сегментация сети и межсетевые экраны</li>',
+        '<li>Регулярные аудиты безопасности и тестирование на проникновение</li>',
+        '<li>Документирование и отчётность по соответствию требованиям</li>',
       ],
     },
     {
-      title: 'High-Availability Infrastructure',
-      text: '<p>Banking systems must operate 24/7 without interruption. Our infrastructure solutions provide redundancy, failover capabilities, and disaster recovery to ensure continuous availability.</p><p>We design and deploy resilient networks, backup systems, and business continuity plans that minimize downtime and protect against data loss.</p>',
+      title: 'Инфраструктура высокой доступности',
+      text: '<p>Банковские системы должны работать круглосуточно и без перебоев. Наши инфраструктурные решения обеспечивают резервирование, механизмы отказоустойчивости и аварийное восстановление для непрерывной доступности.</p><p>Мы проектируем и внедряем отказоустойчивые сети, системы резервного копирования и планы обеспечения непрерывности бизнеса, которые минимизируют простои и защищают от потери данных.</p>',
       list: [
-        '<li>Redundant network design with failover</li>',
-        '<li>Backup and disaster recovery solutions</li>',
-        '<li>99.9%+ uptime SLA</li>',
-        '<li>Real-time system monitoring</li>',
-        '<li>Automated backup and recovery testing</li>',
-        '<li>Business continuity planning</li>',
+        '<li>Резервированная архитектура сети с механизмом отказоустойчивости</li>',
+        '<li>Решения для резервного копирования и аварийного восстановления</li>',
+        '<li>SLA с гарантией доступности 99,9%+</li>',
+        '<li>Мониторинг систем в реальном времени</li>',
+        '<li>Автоматизированное тестирование резервного копирования и восстановления</li>',
+        '<li>Планирование непрерывности бизнеса</li>',
       ],
     },
     {
-      title: 'Digital Transformation & Cloud Services',
-      text: '<p>Modern financial institutions need agility and scalability. We help banks and financial services migrate to secure cloud environments, implement digital banking platforms, and integrate new technologies.</p><p>Our cloud solutions balance security, compliance, and innovation, enabling you to deliver better customer experiences while maintaining control over sensitive data.</p>',
+      title: 'Цифровая трансформация и облачные сервисы',
+      text: '<p>Современным финансовым организациям необходимы гибкость и масштабируемость. Мы помогаем банкам и финансовым компаниям переходить в защищённые облачные среды, внедрять платформы цифрового банкинга и интегрировать новые технологии.</p><p>Наши облачные решения сочетают безопасность, соответствие требованиям и инновации, позволяя вам улучшать клиентский опыт, сохраняя контроль над конфиденциальными данными.</p>',
       list: [
-        '<li>Secure cloud migration and hybrid solutions</li>',
-        '<li>Core banking system integration</li>',
-        '<li>API development and integration</li>',
-        '<li>Mobile and online banking platforms</li>',
-        '<li>Payment gateway integration</li>',
-        '<li>Legacy system modernization</li>',
+        '<li>Безопасная миграция в облако и гибридные решения</li>',
+        '<li>Интеграция с основной банковской системой (core banking)</li>',
+        '<li>Разработка и интеграция API</li>',
+        '<li>Платформы мобильного и онлайн-банкинга</li>',
+        '<li>Интеграция платёжных шлюзов</li>',
+        '<li>Модернизация устаревших систем</li>',
       ],
     },
   ],
@@ -101,9 +105,9 @@ export default function FinanceBankingPage() {
       />
       <Breadcrumbs
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Industries', href: '#' },
-          { label: 'Finance & Banking' },
+          { label: 'Главная', href: '/ru' },
+          { label: 'Отрасли', href: '#' },
+          { label: 'Финансы и банкинг' },
         ]}
       />
       <HeaderWrapper />

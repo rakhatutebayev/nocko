@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/industries/finance-banking',
+    languages: {
+      'en-AE': '/industries/finance-banking',
+      'ru-RU': '/ru/industries/finance-banking',
+    },
   },
 };
 

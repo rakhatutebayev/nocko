@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/industries/education',
+    languages: {
+      'en-AE': '/industries/education',
+      'ru-RU': '/ru/industries/education',
+    },
   },
 };
 

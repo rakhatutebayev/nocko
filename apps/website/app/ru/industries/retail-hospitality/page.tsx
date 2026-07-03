@@ -7,67 +7,71 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Retail & Hospitality | NOCKO UAE',
+  title: 'IT-решения для ритейла и гостеприимства | NOCKO ОАЭ',
   description:
-    'Reliable IT solutions for retail and hospitality businesses in UAE. POS systems, guest Wi-Fi, network infrastructure, digital signage, and 24/7 support for stores, restaurants, and hotels.',
+    'Надежные IT-решения для предприятий розничной торговли и гостеприимства в ОАЭ. POS-системы, гостевой Wi-Fi, сетевая инфраструктура, цифровые вывески и круглосуточная поддержка для магазинов, ресторанов и отелей.',
   keywords:
-    'IT solutions retail UAE, hospitality IT services Dubai, POS systems UAE, restaurant IT infrastructure, hotel network infrastructure',
+    'IT-решения для ритейла ОАЭ, IT-услуги для гостеприимства Дубай, POS-системы ОАЭ, IT-инфраструктура для ресторанов, сетевая инфраструктура для отелей',
   openGraph: {
-    title: 'IT Solutions for Retail & Hospitality | NOCKO UAE',
+    title: 'IT-решения для ритейла и гостеприимства | NOCKO ОАЭ',
     description:
-      'Reliable IT solutions for retail and hospitality businesses in UAE. POS systems, guest Wi-Fi, and 24/7 support.',
+      'Надежные IT-решения для предприятий розничной торговли и гостеприимства в ОАЭ. POS-системы, гостевой Wi-Fi и круглосуточная поддержка.',
     type: 'article',
-    locale: 'en_AE',
+    locale: 'ru_RU',
     siteName: 'NOCKO Information Technology',
   },
   alternates: {
-    canonical: '/industries/retail-hospitality',
+    canonical: '/ru/industries/retail-hospitality',
+    languages: {
+      'en-AE': '/industries/retail-hospitality',
+      'ru-RU': '/ru/industries/retail-hospitality',
+    },
   },
 };
 
 const industryData = {
   hero: {
-    title: 'IT Solutions for Retail & Hospitality',
-    subtitle: 'Reliable Technology for Stores, Restaurants, Hotels, and Entertainment Venues',
+    title: 'IT-решения для ритейла и гостеприимства',
+    subtitle: 'Надежные технологии для магазинов, ресторанов, отелей и развлекательных заведений',
     description: '',
   },
   intro:
-    'Retail and hospitality businesses depend on reliable IT systems for customer service, operations, and revenue. Our solutions deliver POS infrastructure, guest Wi-Fi, digital signage, and 24/7 support to keep your business running smoothly.',
+    'Предприятия розничной торговли и гостеприимства зависят от надежных IT-систем в вопросах обслуживания клиентов, операционной деятельности и выручки. Наши решения обеспечивают POS-инфраструктуру, гостевой Wi-Fi, цифровые вывески и круглосуточную поддержку, чтобы ваш бизнес работал бесперебойно.',
   blocks: [
     {
-      title: 'POS & Payment Systems',
-      text: '<p>Point-of-sale systems are the backbone of retail and hospitality operations. We design and deploy reliable network infrastructure to support POS terminals, payment gateways, kitchen display systems, and inventory management.</p><p>Our networks ensure fast transaction processing, minimal downtime, and secure payment handling across all locations.</p>',
+      title: 'POS-системы и платежные решения',
+      text: '<p>POS-системы (точки продаж) являются основой работы предприятий розничной торговли и гостеприимства. Мы проектируем и внедряем надежную сетевую инфраструктуру для поддержки POS-терминалов, платежных шлюзов, кухонных дисплеев и систем управления запасами.</p><p>Наши сети обеспечивают быструю обработку транзакций, минимальные простои и безопасное проведение платежей во всех точках.</p>',
       list: [
-        '<li>POS network infrastructure design</li>',
-        '<li>Redundant connectivity for payment terminals</li>',
-        '<li>Wired and wireless POS support</li>',
-        '<li>Payment gateway integration</li>',
-        '<li>Kitchen display system (KDS) connectivity</li>',
-        '<li>Inventory and order management system integration</li>',
+        '<li>Проектирование сетевой инфраструктуры для POS</li>',
+        '<li>Резервированное подключение для платежных терминалов</li>',
+        '<li>Поддержка проводных и беспроводных POS</li>',
+        '<li>Интеграция платежных шлюзов</li>',
+        '<li>Подключение кухонных дисплеев (KDS)</li>',
+        '<li>Интеграция систем управления запасами и заказами</li>',
       ],
     },
     {
-      title: 'Guest Wi-Fi & Digital Experience',
-      text: '<p>Customers expect fast, reliable Wi-Fi in retail stores, restaurants, and hotels. We deploy secure guest Wi-Fi networks with captive portals, speed controls, and content filtering to enhance customer experience while protecting your business network.</p><p>Digital signage, loyalty programs, and mobile ordering integrate seamlessly with our network solutions to create engaging customer experiences.</p>',
+      title: 'Гостевой Wi-Fi и цифровой опыт',
+      text: '<p>Клиенты ожидают быстрый и надежный Wi-Fi в магазинах, ресторанах и отелях. Мы развертываем безопасные сети гостевого Wi-Fi с captive-порталами, управлением скоростью и фильтрацией контента, чтобы улучшить клиентский опыт и защитить корпоративную сеть.</p><p>Цифровые вывески, программы лояльности и мобильные заказы легко интегрируются с нашими сетевыми решениями, создавая привлекательный клиентский опыт.</p>',
       list: [
-        '<li>High-performance guest Wi-Fi networks</li>',
-        '<li>Branded captive portal with social login</li>',
-        '<li>Bandwidth management and fair usage policies</li>',
-        '<li>Network segmentation (guest vs. business)</li>',
-        '<li>Digital signage and display connectivity</li>',
-        '<li>Mobile ordering and loyalty app support</li>',
+        '<li>Высокопроизводительные сети гостевого Wi-Fi</li>',
+        '<li>Брендированный captive-портал с входом через соцсети</li>',
+        '<li>Управление пропускной способностью и политики справедливого использования</li>',
+        '<li>Сегментация сети (гостевая и корпоративная)</li>',
+        '<li>Подключение цифровых вывесок и дисплеев</li>',
+        '<li>Поддержка мобильных заказов и приложений лояльности</li>',
       ],
     },
     {
-      title: 'Multi-Location Management',
-      text: '<p>Retail chains, restaurant groups, and hotel operators need centralized management across multiple locations. We standardize network infrastructure, implement remote monitoring, and provide unified support for all your sites.</p><p>Cloud-based management platforms enable real-time visibility, faster troubleshooting, and consistent service quality across your entire operation.</p>',
+      title: 'Управление сетью филиалов',
+      text: '<p>Розничным сетям, ресторанным группам и гостиничным операторам необходимо централизованное управление множеством локаций. Мы стандартизируем сетевую инфраструктуру, внедряем удаленный мониторинг и обеспечиваем единую поддержку для всех ваших объектов.</p><p>Облачные платформы управления обеспечивают контроль в реальном времени, ускоренное устранение неполадок и стабильное качество обслуживания по всей вашей сети.</p>',
       list: [
-        '<li>Standardized network design for all locations</li>',
-        '<li>Centralized network management and monitoring</li>',
-        '<li>Remote diagnostics and support</li>',
-        '<li>Automated alerts for system failures</li>',
-        '<li>Scalable infrastructure for business expansion</li>',
-        '<li>24/7 support with fast response times</li>',
+        '<li>Стандартизированное проектирование сети для всех локаций</li>',
+        '<li>Централизованное управление и мониторинг сети</li>',
+        '<li>Удаленная диагностика и поддержка</li>',
+        '<li>Автоматические оповещения о сбоях систем</li>',
+        '<li>Масштабируемая инфраструктура для расширения бизнеса</li>',
+        '<li>Круглосуточная поддержка с быстрым временем реагирования</li>',
       ],
     },
   ],
@@ -101,9 +105,9 @@ export default function RetailHospitalityPage() {
       />
       <Breadcrumbs
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Industries', href: '#' },
-          { label: 'Retail & Hospitality' },
+          { label: 'Главная', href: '/ru' },
+          { label: 'Отрасли', href: '#' },
+          { label: 'Ритейл и гостеприимство' },
         ]}
       />
       <HeaderWrapper />

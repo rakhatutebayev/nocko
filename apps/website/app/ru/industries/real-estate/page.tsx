@@ -7,67 +7,71 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Real Estate | NOCKO UAE',
+  title: 'IT-решения для недвижимости | NOCKO ОАЭ',
   description:
-    'Modern IT solutions for real estate companies in UAE. Property management systems, network infrastructure, cloud services, and 24/7 support for developers and agencies.',
+    'Современные IT-решения для компаний в сфере недвижимости в ОАЭ. Системы управления объектами, сетевая инфраструктура, облачные сервисы и круглосуточная поддержка для застройщиков и агентств.',
   keywords:
-    'IT solutions real estate UAE, property management IT Dubai, real estate network infrastructure, property technology UAE, real estate IT support',
+    'IT-решения для недвижимости ОАЭ, IT для управления недвижимостью Дубай, сетевая инфраструктура для недвижимости, технологии для недвижимости ОАЭ, IT-поддержка недвижимости',
   openGraph: {
-    title: 'IT Solutions for Real Estate | NOCKO UAE',
+    title: 'IT-решения для недвижимости | NOCKO ОАЭ',
     description:
-      'Modern IT solutions for real estate companies in UAE. Property management systems, network infrastructure, and cloud services.',
+      'Современные IT-решения для компаний в сфере недвижимости в ОАЭ. Системы управления объектами, сетевая инфраструктура и облачные сервисы.',
     type: 'article',
-    locale: 'en_AE',
+    locale: 'ru_RU',
     siteName: 'NOCKO Information Technology',
   },
   alternates: {
-    canonical: '/industries/real-estate',
+    canonical: '/ru/industries/real-estate',
+    languages: {
+      'en-AE': '/industries/real-estate',
+      'ru-RU': '/ru/industries/real-estate',
+    },
   },
 };
 
 const industryData = {
   hero: {
-    title: 'IT Solutions for Real Estate',
-    subtitle: 'Technology Infrastructure for Property Developers, Agencies, and Management Companies',
+    title: 'IT-решения для недвижимости',
+    subtitle: 'Технологическая инфраструктура для застройщиков, агентств и управляющих компаний',
     description: '',
   },
   intro:
-    'Real estate companies need reliable IT systems to manage properties, serve clients, and operate efficiently across multiple locations. Our solutions deliver secure infrastructure, property management integration, and scalable technology for growth.',
+    'Компаниям в сфере недвижимости необходимы надёжные IT-системы для управления объектами, обслуживания клиентов и эффективной работы в нескольких локациях. Наши решения обеспечивают безопасную инфраструктуру, интеграцию систем управления недвижимостью и масштабируемые технологии для роста.',
   blocks: [
     {
-      title: 'Property Management & CRM Integration',
-      text: '<p>Modern real estate operations depend on integrated systems for property listings, client management, and transaction processing. We implement and support property management platforms, CRM systems, and document management solutions.</p><p>Our integration services connect your existing systems, automate workflows, and ensure data flows seamlessly between sales, leasing, and property management teams.</p>',
+      title: 'Управление недвижимостью и интеграция CRM',
+      text: '<p>Современная работа в сфере недвижимости зависит от интегрированных систем для размещения объектов, управления клиентами и обработки сделок. Мы внедряем и поддерживаем платформы управления недвижимостью, CRM-системы и решения для документооборота.</p><p>Наши услуги интеграции связывают ваши существующие системы, автоматизируют рабочие процессы и обеспечивают бесперебойный обмен данными между отделами продаж, аренды и управления недвижимостью.</p>',
       list: [
-        '<li>Property management system integration</li>',
-        '<li>CRM and sales automation platforms</li>',
-        '<li>Document management and e-signing</li>',
-        '<li>Virtual tour and 3D visualization support</li>',
-        '<li>Client portal and mobile app integration</li>',
-        '<li>Listing syndication and API integration</li>',
+        '<li>Интеграция систем управления недвижимостью</li>',
+        '<li>CRM и платформы автоматизации продаж</li>',
+        '<li>Документооборот и электронная подпись</li>',
+        '<li>Поддержка виртуальных туров и 3D-визуализации</li>',
+        '<li>Интеграция клиентского портала и мобильного приложения</li>',
+        '<li>Синдикация объявлений и интеграция через API</li>',
       ],
     },
     {
-      title: 'Multi-Site Network Infrastructure',
-      text: '<p>Real estate companies operate across multiple sales offices, showrooms, and construction sites. We design and deploy standardized network infrastructure that connects all locations with secure, reliable connectivity.</p><p>Centralized management, remote monitoring, and rapid deployment capabilities ensure consistent performance and simplified support across your entire portfolio.</p>',
+      title: 'Сетевая инфраструктура для нескольких объектов',
+      text: '<p>Компании в сфере недвижимости работают одновременно в нескольких офисах продаж, шоурумах и на строительных площадках. Мы проектируем и разворачиваем стандартизированную сетевую инфраструктуру, которая объединяет все локации с безопасным и надёжным подключением.</p><p>Централизованное управление, удалённый мониторинг и возможность быстрого развёртывания обеспечивают стабильную производительность и упрощают поддержку по всему вашему портфелю объектов.</p>',
       list: [
-        '<li>Standardized network design for all locations</li>',
-        '<li>Secure VPN and site-to-site connectivity</li>',
-        '<li>Wi-Fi for showrooms and sales centers</li>',
-        '<li>Video conferencing and digital displays</li>',
-        '<li>Mobile connectivity for field teams</li>',
-        '<li>Construction site temporary networks</li>',
+        '<li>Стандартизированное проектирование сети для всех локаций</li>',
+        '<li>Безопасный VPN и соединение между площадками (site-to-site)</li>',
+        '<li>Wi-Fi для шоурумов и центров продаж</li>',
+        '<li>Видеоконференцсвязь и цифровые дисплеи</li>',
+        '<li>Мобильное подключение для выездных сотрудников</li>',
+        '<li>Временные сети для строительных площадок</li>',
       ],
     },
     {
-      title: 'Cloud & Digital Transformation',
-      text: '<p>Move your real estate operations to the cloud for better collaboration, mobility, and scalability. We help you migrate to cloud-based property management, file storage, and communication platforms.</p><p>Cloud solutions enable remote work, mobile access, and seamless collaboration between offices, construction sites, and external partners.</p>',
+      title: 'Облачные технологии и цифровая трансформация',
+      text: '<p>Перенесите работу вашей компании в облако для более удобной совместной работы, мобильности и масштабируемости. Мы помогаем перейти на облачные платформы управления недвижимостью, хранения файлов и коммуникаций.</p><p>Облачные решения обеспечивают удалённую работу, мобильный доступ и бесперебойное взаимодействие между офисами, строительными площадками и внешними партнёрами.</p>',
       list: [
-        '<li>Cloud-based property management systems</li>',
-        '<li>Secure file sharing and collaboration</li>',
-        '<li>Microsoft 365 and Google Workspace setup</li>',
-        '<li>Mobile CRM and field service apps</li>',
-        '<li>Automated backup and disaster recovery</li>',
-        '<li>Scalable infrastructure for business growth</li>',
+        '<li>Облачные системы управления недвижимостью</li>',
+        '<li>Безопасный обмен файлами и совместная работа</li>',
+        '<li>Настройка Microsoft 365 и Google Workspace</li>',
+        '<li>Мобильные CRM и приложения для выездного обслуживания</li>',
+        '<li>Автоматическое резервное копирование и аварийное восстановление</li>',
+        '<li>Масштабируемая инфраструктура для роста бизнеса</li>',
       ],
     },
   ],
@@ -101,9 +105,9 @@ export default function RealEstatePage() {
       />
       <Breadcrumbs
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Industries', href: '#' },
-          { label: 'Real Estate' },
+          { label: 'Главная', href: '/ru' },
+          { label: 'Отрасли', href: '#' },
+          { label: 'Недвижимость' },
         ]}
       />
       <HeaderWrapper />

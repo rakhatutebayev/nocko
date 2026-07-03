@@ -7,67 +7,71 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Healthcare | NOCKO UAE',
+  title: 'IT-решения для здравоохранения | NOCKO ОАЭ',
   description:
-    'Secure IT solutions for healthcare providers in UAE. EMR/EHR systems, medical network infrastructure, HIPAA compliance, data security, and 24/7 support for clinics and hospitals.',
+    'Безопасные IT-решения для медицинских учреждений в ОАЭ. Системы EMR/EHR, сетевая инфраструктура для клиник, соответствие HIPAA, защита данных и поддержка 24/7 для клиник и больниц.',
   keywords:
-    'IT solutions healthcare UAE, medical IT services Dubai, healthcare network infrastructure, EMR EHR systems UAE, healthcare cybersecurity',
+    'IT-решения для здравоохранения ОАЭ, медицинские IT-услуги Дубай, сетевая инфраструктура для клиник, системы EMR EHR ОАЭ, кибербезопасность в здравоохранении',
   openGraph: {
-    title: 'IT Solutions for Healthcare | NOCKO UAE',
+    title: 'IT-решения для здравоохранения | NOCKO ОАЭ',
     description:
-      'Secure IT solutions for healthcare providers in UAE. EMR/EHR systems, network infrastructure, compliance, and 24/7 support.',
+      'Безопасные IT-решения для медицинских учреждений в ОАЭ. Системы EMR/EHR, сетевая инфраструктура, соответствие требованиям и поддержка 24/7.',
     type: 'article',
-    locale: 'en_AE',
+    locale: 'ru_RU',
     siteName: 'NOCKO Information Technology',
   },
   alternates: {
-    canonical: '/industries/healthcare',
+    canonical: '/ru/industries/healthcare',
+    languages: {
+      'en-AE': '/industries/healthcare',
+      'ru-RU': '/ru/industries/healthcare',
+    },
   },
 };
 
 const industryData = {
   hero: {
-    title: 'IT Solutions for Healthcare',
-    subtitle: 'Secure, Compliant, and Reliable Technology for Medical Facilities',
+    title: 'IT-решения для здравоохранения',
+    subtitle: 'Безопасные, надёжные и соответствующие требованиям технологии для медицинских учреждений',
     description: '',
   },
   intro:
-    'Healthcare providers require secure, reliable IT systems to protect patient data, ensure continuous availability, and comply with regulations. Our solutions deliver medical-grade infrastructure, EMR/EHR integration, and 24/7 support for clinics, hospitals, and medical centers.',
+    'Медицинским учреждениям необходимы безопасные и надёжные IT-системы для защиты данных пациентов, обеспечения непрерывной доступности и соответствия нормативным требованиям. Наши решения обеспечивают инфраструктуру медицинского уровня, интеграцию с системами EMR/EHR и поддержку 24/7 для клиник, больниц и медицинских центров.',
   blocks: [
     {
-      title: 'Patient Data Security & Compliance',
-      text: '<p>Healthcare facilities handle sensitive patient data that must be protected and managed in compliance with regulations. We implement security measures, access controls, and encryption to safeguard electronic health records and ensure regulatory compliance.</p><p>Our solutions include data backup, disaster recovery, and audit logging to protect patient information and maintain operational continuity.</p>',
+      title: 'Безопасность данных пациентов и соответствие требованиям',
+      text: '<p>Медицинские учреждения работают с конфиденциальными данными пациентов, которые должны быть защищены и обрабатываться в соответствии с нормативными требованиями. Мы внедряем меры безопасности, средства контроля доступа и шифрование для защиты электронных медицинских карт и обеспечения соответствия требованиям регуляторов.</p><p>Наши решения включают резервное копирование данных, аварийное восстановление и ведение журналов аудита для защиты информации о пациентах и поддержания непрерывности работы.</p>',
       list: [
-        '<li>HIPAA and local healthcare compliance support</li>',
-        '<li>Data encryption and secure storage</li>',
-        '<li>Role-based access control (RBAC)</li>',
-        '<li>Audit trails and activity logging</li>',
-        '<li>Secure patient portal integration</li>',
-        '<li>Regular compliance assessments</li>',
+        '<li>Поддержка соответствия HIPAA и местным требованиям в сфере здравоохранения</li>',
+        '<li>Шифрование данных и безопасное хранение</li>',
+        '<li>Ролевое управление доступом (RBAC)</li>',
+        '<li>Журналы аудита и регистрация активности</li>',
+        '<li>Интеграция защищённого портала для пациентов</li>',
+        '<li>Регулярная оценка соответствия требованиям</li>',
       ],
     },
     {
-      title: 'EMR/EHR Systems & Integration',
-      text: '<p>Electronic medical records are the backbone of modern healthcare. We implement, integrate, and support EMR/EHR systems, ensuring seamless data flow between departments, medical devices, and external systems.</p><p>Our integration services connect lab systems, imaging equipment, billing platforms, and appointment scheduling to create a unified healthcare IT environment.</p>',
+      title: 'Системы EMR/EHR и интеграция',
+      text: '<p>Электронные медицинские карты — основа современного здравоохранения. Мы внедряем, интегрируем и поддерживаем системы EMR/EHR, обеспечивая бесперебойный обмен данными между отделениями, медицинским оборудованием и внешними системами.</p><p>Наши услуги интеграции объединяют лабораторные системы, оборудование для визуализации, платформы биллинга и запись на приём в единую IT-среду медицинского учреждения.</p>',
       list: [
-        '<li>EMR/EHR implementation and migration</li>',
-        '<li>HL7 and FHIR integration standards</li>',
-        '<li>Medical device connectivity (PACS, lab systems)</li>',
-        '<li>Pharmacy and billing system integration</li>',
-        '<li>Telemedicine platform setup</li>',
-        '<li>Mobile access for healthcare providers</li>',
+        '<li>Внедрение и миграция систем EMR/EHR</li>',
+        '<li>Стандарты интеграции HL7 и FHIR</li>',
+        '<li>Подключение медицинского оборудования (PACS, лабораторные системы)</li>',
+        '<li>Интеграция аптечных и биллинговых систем</li>',
+        '<li>Настройка платформы телемедицины</li>',
+        '<li>Мобильный доступ для медицинского персонала</li>',
       ],
     },
     {
-      title: 'High-Availability Medical Networks',
-      text: '<p>Healthcare facilities cannot afford downtime. We design and deploy redundant network infrastructure with failover capabilities, backup power, and 24/7 monitoring to ensure continuous availability.</p><p>Our medical-grade networks support critical applications, real-time imaging, video consultations, and electronic prescriptions with reliability and performance.</p>',
+      title: 'Отказоустойчивые медицинские сети',
+      text: '<p>Медицинские учреждения не могут допустить простоев. Мы проектируем и разворачиваем резервированную сетевую инфраструктуру с механизмами аварийного переключения, резервным питанием и мониторингом 24/7 для обеспечения непрерывной доступности.</p><p>Наши сети медицинского уровня надёжно и производительно поддерживают критически важные приложения, визуализацию в реальном времени, видеоконсультации и электронные рецепты.</p>',
       list: [
-        '<li>Redundant network design with failover</li>',
-        '<li>Uninterrupted power supply (UPS) integration</li>',
-        '<li>99.9%+ uptime SLA for critical systems</li>',
-        '<li>24/7 network monitoring and support</li>',
-        '<li>Wireless networks for medical devices</li>',
-        '<li>Secure guest Wi-Fi for patients and visitors</li>',
+        '<li>Проектирование резервированной сети с аварийным переключением</li>',
+        '<li>Интеграция источников бесперебойного питания (ИБП)</li>',
+        '<li>SLA с доступностью 99.9%+ для критически важных систем</li>',
+        '<li>Мониторинг и поддержка сети 24/7</li>',
+        '<li>Беспроводные сети для медицинского оборудования</li>',
+        '<li>Защищённый гостевой Wi-Fi для пациентов и посетителей</li>',
       ],
     },
   ],
@@ -101,9 +105,9 @@ export default function HealthcarePage() {
       />
       <Breadcrumbs
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Industries', href: '#' },
-          { label: 'Healthcare' },
+          { label: 'Главная', href: '/ru' },
+          { label: 'Отрасли', href: '#' },
+          { label: 'Здравоохранение' },
         ]}
       />
       <HeaderWrapper />
