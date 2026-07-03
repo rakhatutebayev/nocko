@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   description: 'Terms of Service for NOCKO Information Technology. Governing terms for use of our website and IT services in Dubai and the UAE.',
   alternates: {
     canonical: '/terms',
+    languages: {
+      'en-AE': '/terms',
+      'ru-RU': '/ru/terms',
+    },
   },
   robots: {
     index: true,

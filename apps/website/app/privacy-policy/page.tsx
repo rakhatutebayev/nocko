@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   description: 'Privacy Policy for NOCKO Information Technology. Learn how we collect, use, and protect your personal data in accordance with UAE data protection laws.',
   alternates: {
     canonical: '/privacy-policy',
+    languages: {
+      'en-AE': '/privacy-policy',
+      'ru-RU': '/ru/privacy-policy',
+    },
   },
   robots: {
     index: true,
