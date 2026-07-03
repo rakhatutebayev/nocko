@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Continuous Security Configuration Review',
       text: '<p>Security configurations drift as staff add exceptions, install new software, or modify policies. We run monthly Secure Score assessments in Microsoft Defender and Entra ID, reviewing the current configuration against the Microsoft recommended baseline and the CIS Benchmark controls applicable to your industry. Regressions trigger immediate remediation rather than waiting for an incident to reveal them.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Is Microsoft Defender for Endpoint enough or do we need a separate EDR?</strong><br/>A: MDE is a fully capable EDR platform and is included with Microsoft 365 Business Premium and E3/E5 licences. For organisations without M365, we deploy CrowdStrike or SentinelOne as standalone solutions.',
-        '<strong>Q: How do we enforce MFA for staff who refuse to use it?</strong><br/>A: Conditional Access policies make MFA technically mandatory — users who do not enrol cannot access M365 applications. We manage the rollout communication and provide support during the transition period.',
-        '<strong>Q: What is the most common security gap you find in UAE managed IT environments?</strong><br/>A: Legacy authentication protocols and overly permissive Active Directory group membership. Both are easy to fix but require careful testing to avoid breaking dependent applications.',
-        '<strong>Q: Does the security hardening require any downtime?</strong><br/>A: Most hardening steps are zero-downtime configuration changes. Blocking legacy authentication requires a pilot phase to identify any applications using it, which we run over 2–4 weeks before enforcement.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Is Microsoft Defender for Endpoint enough or do we need a separate EDR?",
+    answer: "MDE is a fully capable EDR platform and is included with Microsoft 365 Business Premium and E3/E5 licences. For organisations without M365, we deploy CrowdStrike or SentinelOne as standalone solutions.",
+  },
+  {
+    question: "How do we enforce MFA for staff who refuse to use it?",
+    answer: "Conditional Access policies make MFA technically mandatory — users who do not enrol cannot access M365 applications. We manage the rollout communication and provide support during the transition period.",
+  },
+  {
+    question: "What is the most common security gap you find in UAE managed IT environments?",
+    answer: "Legacy authentication protocols and overly permissive Active Directory group membership. Both are easy to fix but require careful testing to avoid breaking dependent applications.",
+  },
+];
 
 export default function ManageditsecurityPage() {
   return (
@@ -72,11 +79,16 @@ export default function ManageditsecurityPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT', href: '/services/managed-it' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

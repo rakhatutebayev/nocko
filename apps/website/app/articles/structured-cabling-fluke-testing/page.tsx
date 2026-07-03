@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Fibre Optic Testing with OTDR',
       text: '<p>For multimode (OM3/OM4) and single-mode fibre runs, we use an OTDR (Optical Time Domain Reflectometer) to characterise each fibre link — measuring insertion loss, connector return loss, and identifying any bend or splice issues along the cable run. The OTDR trace is delivered with the test report, documenting the fibre infrastructure for any future troubleshooting or third-party verification.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Can we get a 25-year warranty on an existing cabling installation?</strong><br/>A: Only if the existing installation uses a qualifying end-to-end manufacturer system and all nodes pass current Fluke DSX testing. We can test an existing installation and determine warranty eligibility.',
-        '<strong>Q: What happens if some nodes fail testing?</strong><br/>A: Failed nodes are re-terminated at no additional charge until they pass. We do not submit test reports with failing results — every node on the report is a passing node.',
-        '<strong>Q: Do you test patch cords as well as permanent cabling?</strong><br/>A: The channel test includes the patch cord contribution. We also supply manufacturer-certified patch cords that match the cable system, because third-party patch cords can compromise NEXT performance and void the warranty.',
-        '<strong>Q: Is Fluke testing required by law in UAE construction projects?</strong><br/>A: While not always legally mandated, TRA (Telecommunications Regulatory Authority) guidelines for UAE building cabling reference ISO/IEC 11801 standards, and many UAE commercial landlords and fit-out specifications require test certification before handover.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Can we get a 25-year warranty on an existing cabling installation?",
+    answer: "Only if the existing installation uses a qualifying end-to-end manufacturer system and all nodes pass current Fluke DSX testing. We can test an existing installation and determine warranty eligibility.",
+  },
+  {
+    question: "What happens if some nodes fail testing?",
+    answer: "Failed nodes are re-terminated at no additional charge until they pass. We do not submit test reports with failing results — every node on the report is a passing node.",
+  },
+  {
+    question: "Do you test patch cords as well as permanent cabling?",
+    answer: "The channel test includes the patch cord contribution. We also supply manufacturer-certified patch cords that match the cable system, because third-party patch cords can compromise NEXT performance and void the warranty.",
+  },
+];
 
 export default function StructuredcablingfluketestingPage() {
   return (
@@ -77,6 +84,11 @@ export default function StructuredcablingfluketestingPage() {
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'After-Hours and Weekend Emergency Coverage',
       text: '<p>Major incidents do not schedule themselves around business hours. Our premium AMC tier includes 24/7 emergency coverage with an on-call engineer who receives alerts from our NOC monitoring platform. If a server goes offline at 2 AM on a Friday, the on-call engineer begins remote diagnosis immediately and dispatches physically if the issue cannot be resolved remotely within 30 minutes.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: What defines a P1 critical incident?</strong><br/>A: A P1 is any incident that renders a core business system unavailable for all or most users — including complete internet outage, server room power failure, Exchange server down, or firewall failure blocking all access.',
-        '<strong>Q: How do you measure SLA response time?</strong><br/>A: Response time is measured from the moment your call or ticket is received to the moment an engineer begins active work on the issue — not when a solution is delivered. This is standard industry practice.',
-        '<strong>Q: What is the on-site response coverage area?</strong><br/>A: Our standard 2-hour on-site SLA covers Dubai. For Abu Dhabi, Sharjah, and other UAE emirates, a 4-hour on-site SLA applies. Same-day coverage is available for Al Ain and Fujairah under premium tiers.',
-        '<strong>Q: Can we escalate directly to a senior engineer rather than tier-1 support?</strong><br/>A: Premium AMC clients have a dedicated account line that connects directly to a mid-level or senior engineer. This removes the tier-1 triage step for clients where the additional 10 minutes matters.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "What defines a P1 critical incident?",
+    answer: "A P1 is any incident that renders a core business system unavailable for all or most users — including complete internet outage, server room power failure, Exchange server down, or firewall failure blocking all access.",
+  },
+  {
+    question: "How do you measure SLA response time?",
+    answer: "Response time is measured from the moment your call or ticket is received to the moment an engineer begins active work on the issue — not when a solution is delivered. This is standard industry practice.",
+  },
+  {
+    question: "What is the on-site response coverage area?",
+    answer: "Our standard 2-hour on-site SLA covers Dubai. For Abu Dhabi, Sharjah, and other UAE emirates, a 4-hour on-site SLA applies. Same-day coverage is available for Al Ain and Fujairah under premium tiers.",
+  },
+];
 
 export default function ItamcpriorityPage() {
   return (
@@ -72,11 +79,16 @@ export default function ItamcpriorityPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC', href: '/services/it-amc' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

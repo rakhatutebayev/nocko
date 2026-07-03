@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Visit Reports and Asset Documentation',
       text: '<p>After every maintenance visit, we issue a written visit report documenting the equipment checked, any findings and the actions taken, and any items requiring follow-up or budget planning. These reports accumulate into a maintenance history log that is invaluable during hardware insurance claims and provides evidence of due diligence for regulatory compliance audits.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: How long does a monthly maintenance visit take?</strong><br/>A: For a typical server room with 2–5 servers and a network cabinet, a thorough maintenance visit takes 1.5–2.5 hours. Larger environments with dedicated datacenter cabinets may take half a day.',
-        '<strong>Q: Do we need to be present during the visit?</strong><br/>A: We need access to the server room and a brief handover of any issues observed since the last visit. A technical contact does not need to remain present throughout — we work independently and brief you after.',
-        '<strong>Q: What if you find a critical issue during the visit?</strong><br/>A: Critical findings (e.g. a UPS on bypass with dead batteries, a RAID drive showing imminent failure) are treated as active incidents — we do not wait until the next visit. The AMC agreement covers emergency remediation within the same visit.',
-        '<strong>Q: Is server room cleaning part of the maintenance visit?</strong><br/>A: Dust removal from server fan inlets, cable management tidying, and rack inspection are included. Deep server room cleaning (floor tiles, AC duct cleaning) is a separate scheduled service.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "How long does a monthly maintenance visit take?",
+    answer: "For a typical server room with 2–5 servers and a network cabinet, a thorough maintenance visit takes 1.5–2.5 hours. Larger environments with dedicated datacenter cabinets may take half a day.",
+  },
+  {
+    question: "Do we need to be present during the visit?",
+    answer: "We need access to the server room and a brief handover of any issues observed since the last visit. A technical contact does not need to remain present throughout — we work independently and brief you after.",
+  },
+  {
+    question: "What if you find a critical issue during the visit?",
+    answer: "Critical findings (e.g. a UPS on bypass with dead batteries, a RAID drive showing imminent failure) are treated as active incidents — we do not wait until the next visit. The AMC agreement covers emergency remediation within the same visit.",
+  },
+];
 
 export default function ItamcmaintenancevisitsPage() {
   return (
@@ -72,11 +79,16 @@ export default function ItamcmaintenancevisitsPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC', href: '/services/it-amc' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

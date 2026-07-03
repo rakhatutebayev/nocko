@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -98,22 +99,43 @@ const articleData = {
         'Granular recovery: restore a single email without restoring the entire mailbox',
       ],
     },
-    {
-      title: 'Frequently Asked Questions — Data Backup Services Dubai',
-      text: '',
-      list: [
-        '<strong>Q: How much do data backup services cost in Dubai?</strong><br/>A: Managed backup services for a 20–50 user business in Dubai typically range from AED 800–2,500 per month, depending on data volume and RTO/RPO requirements. This includes backup software licensing, cloud storage costs, 24/7 monitoring, and quarterly restore testing. The cost of recovering from an unbackd data loss event — lost contracts, regulatory fines, operational downtime — is orders of magnitude higher.',
-        '<strong>Q: Where is our backup data stored — is it in the UAE?</strong><br/>A: Yes. We store backup data in UAE-resident cloud regions: Azure UAE Central (Abu Dhabi) or AWS Middle East (UAE) Region. Data does not leave the UAE, satisfying TRA data residency requirements and NESA cybersecurity standards for data localisation.',
-        '<strong>Q: Can ransomware delete our cloud backups?</strong><br/>A: Not if configured correctly with immutable storage. AWS S3 Object Lock and Azure immutable blob storage enforce retention at the infrastructure level — the cloud provider itself prevents deletion during the locked period, even if an attacker gains admin credentials. This is why immutable vaults are mandatory in our backup design.',
-        '<strong>Q: How long does it take to restore a server from backup?</strong><br/>A: It depends on the backup tier and restore method. Instant VM recovery (booting directly from the backup file) takes 10–20 minutes. Full restore of a 1TB VM from local backup takes 2–4 hours. Restore from cloud backup over a 100Mbps link takes longer — typically 8–20 hours for a 1TB server. For critical systems, we maintain a local backup copy specifically for fast recovery.',
-        '<strong>Q: Does Microsoft 365 need separate backup?</strong><br/>A: Yes. Microsoft provides availability (your data is accessible) but not backup (you can recover data from any point in the past). Deleted items are recoverable for 30–93 days; after that, data is permanently gone. We back up Exchange Online, SharePoint, OneDrive, and Teams with 12-month retention and granular point-in-time recovery.',
-        '<strong>Q: How often should we test our backups?</strong><br/>A: We recommend quarterly restore tests as a minimum. Annual full DR simulations for critical systems. Backup job success monitoring should be daily — our NOC reviews backup job logs every morning and investigates any anomalies before they become multi-day failures.',
-        '<strong>Q: We already have a NAS device with RAID. Do we still need offsite backup?</strong><br/>A: RAID protects against drive failure — it is not backup. RAID does not protect against ransomware (which encrypts all files on the NAS), accidental deletion, fire, flood, or theft. You need at least one offsite copy, ideally immutable cloud storage, in addition to your local NAS.',
-        '<strong>Q: Can you take over our existing backup setup?</strong><br/>A: Yes. We audit existing backup configurations, test actual recoverability, document gaps, and either remediate the existing setup or redesign it. Transition takes 1–2 weeks with no data exposure.',
-      ],
-    },
   ],
 };
+
+const faqItems = [
+  {
+    question: "How much do data backup services cost in Dubai?",
+    answer: "Managed backup services for a 20–50 user business in Dubai typically range from AED 800–2,500 per month, depending on data volume and RTO/RPO requirements. This includes backup software licensing, cloud storage costs, 24/7 monitoring, and quarterly restore testing. The cost of recovering from an unprotected data loss event — lost contracts, regulatory fines, operational downtime — is orders of magnitude higher.",
+  },
+  {
+    question: "Where is our backup data stored — is it in the UAE?",
+    answer: "Yes. We store backup data in UAE-resident cloud regions: Azure UAE Central (Abu Dhabi) or AWS Middle East (UAE) Region. Data does not leave the UAE, satisfying TRA data residency requirements and NESA cybersecurity standards for data localisation.",
+  },
+  {
+    question: "Can ransomware delete our cloud backups?",
+    answer: "Not if configured correctly with immutable storage. AWS S3 Object Lock and Azure immutable blob storage enforce retention at the infrastructure level — the cloud provider itself prevents deletion during the locked period, even if an attacker gains admin credentials. This is why immutable vaults are mandatory in our backup design.",
+  },
+  {
+    question: "How long does it take to restore a server from backup?",
+    answer: "It depends on the backup tier and restore method. Instant VM recovery (booting directly from the backup file) takes 10–20 minutes. Full restore of a 1TB VM from local backup takes 2–4 hours. Restore from cloud backup over a 100Mbps link typically takes 8–20 hours for a 1TB server. For critical systems, we maintain a local backup copy specifically for fast recovery.",
+  },
+  {
+    question: "Does Microsoft 365 need separate backup?",
+    answer: "Yes. Microsoft provides availability (your data is accessible) but not backup in the traditional sense. Deleted items are recoverable for 30–93 days; after that, data is permanently gone. Ransomware that encrypts OneDrive files syncs the encrypted versions to the cloud — Microsoft does not prevent this. We back up Exchange Online, SharePoint, OneDrive, and Teams with 12-month retention and granular point-in-time recovery.",
+  },
+  {
+    question: "How often should we test our backups?",
+    answer: "We recommend quarterly restore tests as a minimum. Annual full DR simulations for critical systems. Backup job success monitoring should be daily — our NOC reviews backup job logs every morning and investigates any anomalies before they become multi-day failures.",
+  },
+  {
+    question: "We already have a NAS device with RAID. Do we still need offsite backup?",
+    answer: "RAID protects against drive failure — it is not backup. RAID does not protect against ransomware (which encrypts all files on the NAS), accidental deletion, fire, flood, or theft. You need at least one offsite copy, ideally immutable cloud storage, in addition to your local NAS.",
+  },
+  {
+    question: "Can you take over our existing backup setup?",
+    answer: "Yes. We audit existing backup configurations, test actual recoverability, document gaps, and either remediate the existing setup or redesign it. Transition takes 1–2 weeks with no data exposure.",
+  },
+];
 
 export default function DataBackupServicesDubaiPage() {
   return (
@@ -128,11 +150,15 @@ export default function DataBackupServicesDubaiPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT' }, { label: 'Data Backup Services Dubai' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT', href: '/services/managed-it' }, { label: 'Data Backup Services Dubai' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+        <FAQAccordion
+          title="Frequently Asked Questions — Data Backup Services Dubai"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

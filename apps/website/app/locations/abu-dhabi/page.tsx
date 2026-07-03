@@ -32,6 +32,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/locations/abu-dhabi',
+    languages: {
+      'en-AE': '/locations/abu-dhabi',
+      'ru-RU': '/ru/locations/abu-dhabi',
+    },
   },
 };
 

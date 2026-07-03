@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Contract Structure and SLA Negotiation',
       text: '<p>We structure AMC contracts with clear escalation paths: Tier 1 issues (printer jams, password resets) resolved remotely within 4 business hours; Tier 2 issues (server down, network outage) responded within 2 hours with physical dispatch if needed; Tier 3 critical incidents (data loss, security breach) receive immediate response with senior engineer involvement and a dedicated incident bridge call.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: What is a typical AMC cost per user in Dubai?</strong><br/>A: AMC pricing in Dubai typically ranges from AED 200–600 per user per month depending on service scope. Basic helpdesk-only contracts start lower; comprehensive contracts with 24/7 NOC, security monitoring, and vCIO services are at the higher end.',
-        '<strong>Q: Is hardware replacement included in an AMC?</strong><br/>A: Labour for hardware replacement is included. Parts and hardware are typically excluded (billed at cost) unless you add a hardware cover rider, which covers parts up to an agreed per-claim limit.',
-        '<strong>Q: What happens if we grow significantly during the contract year?</strong><br/>A: AMC contracts include a true-up clause — if your headcount grows by more than 20%, the contract fee adjusts pro-rata for the remaining contract months.',
-        '<strong>Q: Can we move from break/fix to AMC mid-year?</strong><br/>A: Yes — we can start an AMC contract at any point. We conduct an initial audit to document the existing infrastructure state, which protects both parties at contract start.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "What is a typical AMC cost per user in Dubai?",
+    answer: "AMC pricing in Dubai typically ranges from AED 200–600 per user per month depending on service scope. Basic helpdesk-only contracts start lower; comprehensive contracts with 24/7 NOC, security monitoring, and vCIO services are at the higher end.",
+  },
+  {
+    question: "Is hardware replacement included in an AMC?",
+    answer: "Labour for hardware replacement is included. Parts and hardware are typically excluded (billed at cost) unless you add a hardware cover rider, which covers parts up to an agreed per-claim limit.",
+  },
+  {
+    question: "What happens if we grow significantly during the contract year?",
+    answer: "AMC contracts include a true-up clause — if your headcount grows by more than 20%, the contract fee adjusts pro-rata for the remaining contract months.",
+  },
+];
 
 export default function ItamccostsPage() {
   return (
@@ -72,11 +79,16 @@ export default function ItamccostsPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC', href: '/services/it-amc' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Remote Access Without VPN',
       text: '<p>Traditional VPN gives remote users the same level of access as if they were physically in the office — which means a stolen VPN credential provides unrestricted internal network access. We replace VPN with Zscaler Private Access or Cloudflare Access, which provide application-level access to specific internal apps based on identity, without exposing the entire internal network to the remote device.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Does Zero Trust work for small businesses or only enterprises?</strong><br/>A: Core Zero Trust principles — MFA, conditional access, least-privilege — are applicable and affordable for businesses of all sizes. The complexity and tooling scales up for larger enterprises.',
-        '<strong>Q: Will Zero Trust slow down our staff accessing applications?</strong><br/>A: Properly configured, Zero Trust is transparent to users on trusted devices in normal conditions. Friction only appears when anomalies are detected, such as login from an unfamiliar location.',
-        '<strong>Q: Can Zero Trust help with remote workers connecting from outside the UAE?</strong><br/>A: Yes — location-based policies can permit access from abroad after MFA, while blocking access from untrusted devices regardless of location.',
-        '<strong>Q: How long does a full Zero Trust implementation take?</strong><br/>A: A phased implementation typically takes 3–6 months. We start with MFA and conditional access (highest impact, lowest disruption) and progressively add microsegmentation and ZTNA.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Does Zero Trust work for small businesses or only enterprises?",
+    answer: "Core Zero Trust principles — MFA, conditional access, least-privilege — are applicable and affordable for businesses of all sizes. The complexity and tooling scales up for larger enterprises.",
+  },
+  {
+    question: "Will Zero Trust slow down our staff accessing applications?",
+    answer: "Properly configured, Zero Trust is transparent to users on trusted devices in normal conditions. Friction only appears when anomalies are detected, such as login from an unfamiliar location.",
+  },
+  {
+    question: "Can Zero Trust help with remote workers connecting from outside the UAE?",
+    answer: "Yes — location-based policies can permit access from abroad after MFA, while blocking access from untrusted devices regardless of location.",
+  },
+];
 
 export default function CybersecuritydataprotectionPage() {
   return (
@@ -72,11 +79,16 @@ export default function CybersecuritydataprotectionPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cybersecurity' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cybersecurity', href: '/services/cybersecurity' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

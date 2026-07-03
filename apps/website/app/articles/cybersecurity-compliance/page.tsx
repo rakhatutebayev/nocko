@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Annual Penetration Testing and Remediation',
       text: '<p>Both NESA and financial regulators require documented evidence of regular penetration testing. We coordinate external penetration tests through approved UAE penetration testing firms and manage the remediation of findings against agreed timelines, producing a re-test report that confirms closure of critical and high vulnerabilities before submission to auditors.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: How long does a NESA compliance preparation engagement take?</strong><br/>A: From gap assessment to audit-ready status typically takes 3–6 months depending on the size of your infrastructure and the number of gaps identified.',
-        '<strong>Q: Are international standards like ISO 27001 accepted in place of NESA IA?</strong><br/>A: ISO 27001 certification is recognised and can reduce the scope of a NESA audit, but it does not replace NESA IA requirements for critical information infrastructure operators.',
-        '<strong>Q: What happens if we fail a NESA audit?</strong><br/>A: NESA issues a non-conformance report with a remediation deadline. We have supported companies through multiple remediation cycles and can represent your organisation during the follow-up audit.',
-        '<strong>Q: Does DFSA compliance cover cybersecurity specifically?</strong><br/>A: Yes — the DFSA Technology Governance Guidelines (TGN) cover cybersecurity, operational resilience, and outsourcing risk. We produce control documentation specifically formatted for DFSA submissions.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "How long does a NESA compliance preparation engagement take?",
+    answer: "From gap assessment to audit-ready status typically takes 3–6 months depending on the size of your infrastructure and the number of gaps identified.",
+  },
+  {
+    question: "Are international standards like ISO 27001 accepted in place of NESA IA?",
+    answer: "ISO 27001 certification is recognised and can reduce the scope of a NESA audit, but it does not replace NESA IA requirements for critical information infrastructure operators.",
+  },
+  {
+    question: "What happens if we fail a NESA audit?",
+    answer: "NESA issues a non-conformance report with a remediation deadline. We have supported companies through multiple remediation cycles and can represent your organisation during the follow-up audit.",
+  },
+];
 
 export default function CybersecuritycompliancePage() {
   return (
@@ -72,11 +79,16 @@ export default function CybersecuritycompliancePage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cybersecurity' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cybersecurity', href: '/services/cybersecurity' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

@@ -11,7 +11,8 @@
     "dev": "turbo run dev",
     "build": "turbo run build",
     "lint": "turbo run lint",
-    "clean": "turbo run clean"
+    "clean": "turbo run clean",
+    "seo:semrush": "node scripts/semrush-seo-report.js"
   },
   "devDependencies": {
     "turbo": "^2.0.0",

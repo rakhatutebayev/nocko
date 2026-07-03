@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -52,18 +53,24 @@ const articleData = {
       title: 'Encryption and Key Custody',
       text: '<p>All data at rest is encrypted with AES-256 using Customer Managed Keys (CMK) stored in AWS KMS or Azure Key Vault, both configured with HSM-backed key material. This satisfies NESA Information Assurance standards requiring that encryption keys remain under the organisation\'s direct custody rather than delegated to the cloud provider.</p><p>We implement key rotation on a 90-day cycle and maintain a complete key lifecycle audit trail. For entities regulated by the UAE Central Bank or UAE Securities and Commodities Authority, we produce key management documentation as part of your annual IT audit package.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Does data stored in AWS Bahrain actually stay inside the UAE?</strong><br/>A: AWS Middle East (Bahrain) is the closest certified region, but for strict UAE-only residency we use Azure UAE Central (Abu Dhabi) or Azure UAE North (Dubai), which are physically within UAE borders. We select regions based on your specific regulatory requirement.',
-        '<strong>Q: How do you prove data residency to a TDRA auditor?</strong><br/>A: We produce AWS CloudTrail logs filtered by region, Azure Policy compliance reports, and resource inventory exports showing every asset tagged to the approved region. These are packaged into an evidence bundle for your audit submission.',
-        '<strong>Q: What happens to backups if we switch cloud providers?</strong><br/>A: We design backup workflows to be provider-agnostic where possible, storing exports in open formats such as SQL dumps or VM disk images. Migration between providers typically takes one to two weekends depending on data volume.',
-        '<strong>Q: Can we keep sensitive HR data on-premise and burst compute workloads to the cloud?</strong><br/>A: Yes — hybrid architectures with private data stores in your Dubai datacenter connecting securely to cloud compute via ExpressRoute or AWS Direct Connect are a common pattern we implement.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Does data stored in AWS Bahrain actually stay inside the UAE?",
+    answer: "AWS Middle East (Bahrain) is the closest certified region, but for strict UAE-only residency we use Azure UAE Central (Abu Dhabi) or Azure UAE North (Dubai), which are physically within UAE borders. We select regions based on your specific regulatory requirement.",
+  },
+  {
+    question: "How do you prove data residency to a TDRA auditor?",
+    answer: "We produce AWS CloudTrail logs filtered by region, Azure Policy compliance reports, and resource inventory exports showing every asset tagged to the approved region. These are packaged into an evidence bundle for your audit submission.",
+  },
+  {
+    question: "What happens to backups if we switch cloud providers?",
+    answer: "We design backup workflows to be provider-agnostic where possible, storing exports in open formats such as SQL dumps or VM disk images. Migration between providers typically takes one to two weekends depending on data volume.",
+  },
+];
 
 export default function ClouddatamanagementPage() {
   return (
@@ -78,11 +85,16 @@ export default function ClouddatamanagementPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cloud' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cloud', href: '/services/cloud' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

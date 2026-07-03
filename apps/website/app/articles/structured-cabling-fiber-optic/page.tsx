@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -45,18 +46,24 @@ const articleData = {
       title: 'Cable Management and Labelling Standards',
       text: '<p>A cable installation without disciplined management and labelling creates an operational liability — the next engineer who needs to trace a fault wastes hours rather than minutes, and untidy server rooms in Dubai accumulate the dust that kills fans and drives faster in UAE conditions. We install D-ring cable managers on all patch panels, route cables in dedicated trays separated from power runs, and apply TIA-606 compliant machine-printed labels at both ends of every run, matching the as-built documentation delivered at project handover.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Should we install Cat6 or Cat6A in a new office fit-out?</strong><br/>A: For any fit-out in 2025 and beyond, Cat6A is the right choice. The incremental cost over Cat6 is 20–30% per node, but it future-proofs the installation for 10G to the desktop and high-power PoE++ devices for the next 20 years.',
-        '<strong>Q: How do you run cables through a raised floor in a DIFC office?</strong><br/>A: We use under-floor cable trays and ensure cables are not run in the same tray as electrical power cables. All cable entry points into the tray are sealed with fire-rated foam after installation.',
-        '<strong>Q: What is the difference between OM3 and OM4 fibre?</strong><br/>A: OM4 supports higher bandwidth over longer distances — 40G up to 150 metres versus 100 metres for OM3. For intra-building runs in most Dubai offices, OM3 is sufficient. For distances over 100 metres or future 100G requirements, OM4 is the correct specification.',
-        '<strong>Q: Can you work in a live office without disrupting operations?</strong><br/>A: Yes — core cabling work (pulling cable, installing patch panels) is done out of hours or in phases by section. End-user disruption is typically limited to brief connection interruptions during final termination and testing.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Should we install Cat6 or Cat6A in a new office fit-out?",
+    answer: "For any fit-out in 2025 and beyond, Cat6A is the right choice. The incremental cost over Cat6 is 20–30% per node, but it future-proofs the installation for 10G to the desktop and high-power PoE++ devices for the next 20 years.",
+  },
+  {
+    question: "How do you run cables through a raised floor in a DIFC office?",
+    answer: "We use under-floor cable trays and ensure cables are not run in the same tray as electrical power cables. All cable entry points into the tray are sealed with fire-rated foam after installation.",
+  },
+  {
+    question: "What is the difference between OM3 and OM4 fibre?",
+    answer: "OM4 supports higher bandwidth over longer distances — 40G up to 150 metres versus 100 metres for OM3. For intra-building runs in most Dubai offices, OM3 is sufficient. For distances over 100 metres or future 100G requirements, OM4 is the correct specification.",
+  },
+];
 
 export default function StructuredcablingfiberopticPage() {
   return (
@@ -80,6 +87,11 @@ export default function StructuredcablingfiberopticPage() {
   ]}/>
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

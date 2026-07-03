@@ -28,6 +28,19 @@ Scripts for setting up and migrating content to Strapi CMS.
 
 ## Scripts
 
+### Semrush SEO Report
+
+Creates a Google SEO opportunity report from Semrush organic data and saves it to `docs/`.
+If the domain has no current Semrush visibility, the script still researches NOCKO service seed keywords and builds a target-page keyword plan.
+
+```bash
+npm run seo:semrush -- nocko.com ae
+```
+
+Environment variables:
+- `SEMRUSH_API_KEY` - required Semrush API key
+- `SEMRUSH_DATABASE` - optional Semrush Google database, defaults to `ae`
+
 ### 1. Setup API Permissions
 
 Configures public read access for all content types.

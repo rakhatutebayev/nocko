@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -88,20 +89,32 @@ const articleData = {
         'Annual cloud vendor negotiation support',
       ],
     },
-    {
-      title: 'Frequently Asked Questions About Cloud Cost Optimization in UAE',
-      text: '',
-      list: [
-        '<strong>Q: How quickly will we see cost reductions after you start?</strong><br/>A: Waste elimination typically shows results within the first billing cycle (30 days). Reserved Instance savings appear from month two onward, since AWS and Azure apply discounts from the commitment date.',
-        '<strong>Q: Do we need to change our application architecture to save money?</strong><br/>A: Not necessarily. The majority of savings (70–80%) come from right-sizing, RI purchases, and waste cleanup — all infrastructure-level changes that do not require application code modifications.',
-        '<strong>Q: What is a realistic cost reduction percentage for a UAE business?</strong><br/>A: For companies that have never done FinOps work, 30–50% is achievable within 90 days. Companies already using Reserved Instances typically see 10–20% additional savings through Savings Plans and multi-cloud optimization.',
-        '<strong>Q: Can you manage multi-account AWS organisations with separate UAE free zone entities?</strong><br/>A: Yes — we configure AWS Organizations with consolidated billing and separate cost allocation by account, mapping directly to your UAE free zone entity structure (JAFZA, DMCC, DAFZA, DIFC).',
-        '<strong>Q: What cloud platforms do you support for cost optimization?</strong><br/>A: We support AWS, Microsoft Azure, and Google Cloud Platform. For most UAE businesses, the primary focus is AWS and Azure as they have local data center regions in UAE (AWS Middle East UAE Region and Azure UAE Central).',
-        '<strong>Q: Is there a minimum cloud spend to make optimization worthwhile?</strong><br/>A: We typically work with businesses spending AED 5,000+ per month on cloud services. Below that threshold, the optimization savings often do not justify the engagement cost.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "How quickly will we see cost reductions after you start?",
+    answer: "Waste elimination typically shows results within the first billing cycle (30 days). Reserved Instance savings appear from month two onward, since AWS and Azure apply discounts from the commitment date.",
+  },
+  {
+    question: "Do we need to change our application architecture to save money?",
+    answer: "Not necessarily. The majority of savings (70–80%) come from right-sizing, RI purchases, and waste cleanup — all infrastructure-level changes that do not require application code modifications.",
+  },
+  {
+    question: "What is a realistic cost reduction percentage for a UAE business?",
+    answer: "For companies that have never done FinOps work, 30–50% is achievable within 90 days. Companies already using Reserved Instances typically see 10–20% additional savings through Savings Plans and multi-cloud optimization.",
+  },
+  {
+    question: "Can you manage multi-account AWS organisations with separate UAE free zone entities?",
+    answer: "Yes — we configure AWS Organizations with consolidated billing and separate cost allocation by account, mapping directly to your UAE free zone entity structure (JAFZA, DMCC, DAFZA, DIFC).",
+  },
+  {
+    question: "What cloud platforms do you support for cost optimization?",
+    answer: "We support AWS, Microsoft Azure, and Google Cloud Platform. For most UAE businesses, the primary focus is AWS and Azure as they have local data center regions in UAE (AWS Middle East UAE Region and Azure UAE Central).",
+  },
+];
 
 export default function CloudcostoptimizationPage() {
   return (
@@ -116,11 +129,16 @@ export default function CloudcostoptimizationPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cloud' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cloud', href: '/services/cloud' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions About Cloud Cost Optimization in UAE"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

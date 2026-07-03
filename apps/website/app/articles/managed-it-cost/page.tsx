@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Licence and Vendor Management Savings',
       text: '<p>We manage all vendor relationships and licence renewals for your account — Microsoft 365, Fortinet, Adobe, and others. We purchase through CSP (Cloud Solution Provider) and volume licensing agreements that provide 10–25% discounts versus retail pricing. Renewals are tracked automatically with 90-day advance notice, preventing the expensive lapse-and-reactivate cycle that many UAE companies fall into with annual software subscriptions.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: What is the typical per-user monthly cost for managed IT in Dubai?</strong><br/>A: Entry-level managed IT (helpdesk + basic monitoring) starts around AED 200–250/user/month. Comprehensive managed IT including security, backup, and vCIO services ranges from AED 400–600/user/month.',
-        '<strong>Q: Are hardware costs included in managed IT pricing?</strong><br/>A: Hardware procurement and capital refresh are typically separate from the monthly managed service fee, but we manage the procurement, warranty, and replacement at cost — you never pay a markup on hardware.',
-        '<strong>Q: What happens to our internal IT team if we move to managed IT?</strong><br/>A: Most companies retain a junior IT coordinator as an on-site liaison while the managed service handles technical depth. Some companies fully outsource. We design the model around your preference.',
-        '<strong>Q: Is there a minimum contract term?</strong><br/>A: Our standard managed IT contracts are 12 months. We offer 24-month terms with a 5% discount. Month-to-month arrangements are available with a 30-day notice period at a 15% premium.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "What is the typical per-user monthly cost for managed IT in Dubai?",
+    answer: "Entry-level managed IT (helpdesk + basic monitoring) starts around AED 200–250/user/month. Comprehensive managed IT including security, backup, and vCIO services ranges from AED 400–600/user/month.",
+  },
+  {
+    question: "Are hardware costs included in managed IT pricing?",
+    answer: "Hardware procurement and capital refresh are typically separate from the monthly managed service fee, but we manage the procurement, warranty, and replacement at cost — you never pay a markup on hardware.",
+  },
+  {
+    question: "What happens to our internal IT team if we move to managed IT?",
+    answer: "Most companies retain a junior IT coordinator as an on-site liaison while the managed service handles technical depth. Some companies fully outsource. We design the model around your preference.",
+  },
+];
 
 export default function ManageditcostPage() {
   return (
@@ -72,11 +79,16 @@ export default function ManageditcostPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT', href: '/services/managed-it' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

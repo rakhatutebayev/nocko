@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Vulnerability Scanning and Remediation Tracking',
       text: '<p>Monthly vulnerability scans using Tenable Nessus or Qualys identify unpatched software, weak configurations, and default credentials across your entire network. Findings are tracked in our ticketing system with remediation deadlines by severity — critical findings must be resolved within 7 days, high within 30 days. For NESA-regulated entities, the monthly scan report forms part of your continuous compliance evidence.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: What happens if a patch breaks a business-critical application?</strong><br/>A: We take pre-patch snapshots of servers and test on ring-0 machines first. If a patch causes issues on test machines, we exclude it from the production deployment ring until the vendor releases a fix.',
-        '<strong>Q: How do you handle servers running legacy software that cannot be patched?</strong><br/>A: We implement compensating controls — network isolation, additional monitoring, and application whitelisting — to reduce exposure for systems that cannot be patched for business reasons.',
-        '<strong>Q: Do you patch network devices (firewalls, switches) as well?</strong><br/>A: Yes — firmware updates for FortiGate, Cisco, HP ProCurve, and other network devices are included in our AMC patch management scope.',
-        '<strong>Q: How quickly are critical zero-day vulnerabilities patched?</strong><br/>A: For critical zero-days (e.g. ProxyShell, Log4Shell type vulnerabilities), we treat them as emergency changes and deploy patches or mitigations within 24–48 hours of vendor release.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "What happens if a patch breaks a business-critical application?",
+    answer: "We take pre-patch snapshots of servers and test on ring-0 machines first. If a patch causes issues on test machines, we exclude it from the production deployment ring until the vendor releases a fix.",
+  },
+  {
+    question: "How do you handle servers running legacy software that cannot be patched?",
+    answer: "We implement compensating controls — network isolation, additional monitoring, and application whitelisting — to reduce exposure for systems that cannot be patched for business reasons.",
+  },
+  {
+    question: "Do you patch network devices (firewalls, switches) as well?",
+    answer: "Yes — firmware updates for FortiGate, Cisco, HP ProCurve, and other network devices are included in our AMC patch management scope.",
+  },
+];
 
 export default function ItamcupdatesPage() {
   return (
@@ -72,11 +79,16 @@ export default function ItamcupdatesPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC', href: '/services/it-amc' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

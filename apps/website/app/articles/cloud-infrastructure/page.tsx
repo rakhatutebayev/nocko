@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Licensing and Cost Optimisation',
       text: '<p>M365 licensing in the UAE is frequently over-purchased — companies buy E3 for every user when most staff only need F3 or Business Standard. We audit your licence assignment against actual feature usage, reallocating and downgrading where appropriate. For a 100-seat company this typically saves AED 8,000–15,000 per year.</p><p>We also manage the annual renewal cycle with Microsoft CSP pricing, ensuring you do not renew on expired promotional rates or miss commitment discount windows.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: How long does an Exchange to M365 migration take for a 100-person company?</strong><br/>A: Typically 2–3 weekends. The first weekend we set up the hybrid environment and sync directories. The second weekend we migrate mailboxes in batches. The final weekend handles cutover and DNS changes.',
-        '<strong>Q: Will staff lose access to email during the migration?</strong><br/>A: No — hybrid mode keeps both Exchange on-premise and Exchange Online active simultaneously during migration, so users continue receiving and sending mail throughout the process.',
-        '<strong>Q: Do you support migrating from Google Workspace to M365?</strong><br/>A: Yes — we use Microsoft\'s Migration Manager to import Google Drive content and Gmail history into SharePoint and Exchange Online respectively.',
-        '<strong>Q: Can Conditional Access work for staff travelling outside the UAE?</strong><br/>A: Yes — we configure named locations and trusted device policies so that travelling staff authenticate via MFA rather than being blocked, while still preventing access from unknown devices.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "How long does an Exchange to M365 migration take for a 100-person company?",
+    answer: "Typically 2–3 weekends. The first weekend we set up the hybrid environment and sync directories. The second weekend we migrate mailboxes in batches. The final weekend handles cutover and DNS changes.",
+  },
+  {
+    question: "Will staff lose access to email during the migration?",
+    answer: "No — hybrid mode keeps both Exchange on-premise and Exchange Online active simultaneously during migration, so users continue receiving and sending mail throughout the process.",
+  },
+  {
+    question: "Do you support migrating from Google Workspace to M365?",
+    answer: "Yes — we use Microsoft's Migration Manager to import Google Drive content and Gmail history into SharePoint and Exchange Online respectively.",
+  },
+];
 
 export default function CloudinfrastructurePage() {
   return (
@@ -72,11 +79,16 @@ export default function CloudinfrastructurePage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cloud' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cloud', href: '/services/cloud' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

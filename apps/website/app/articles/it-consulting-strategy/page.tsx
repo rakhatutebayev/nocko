@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -43,24 +44,28 @@ const articleData = {
       text: `<p>Fast-growing Dubai businesses routinely expand to Abu Dhabi, Sharjah, or across the GCC — often with 4–8 weeks notice. An IT strategy built for 50 seats with no documented growth architecture is a liability when that expansion happens. NOCKO roadmaps plan explicitly for UAE free zone expansion (JAFZA, DMCC, ADGM, SAIF Zone), GCC multi-entity setups requiring consolidated IT management, and DIFC/ADGM regulatory transitions that impose IT compliance obligations on previously unregulated businesses.</p>
 <p>The strategic roadmap covers data residency planning (which workloads must remain in UAE-hosted infrastructure vs. what can use AWS ME-Central-1 or Azure UAE North), WAN connectivity between emirates via Etisalat or du MPLS or SD-WAN overlay, and Microsoft Entra ID architecture for multi-entity environments. This is planning work that costs far less to do before expansion than to fix after the fact.</p>`,
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: `<dl>
-<dt><strong>How much can IT strategy consulting save a Dubai business?</strong></dt>
-<dd>Based on our engagements with Dubai SMEs across 50–200 seats, IT strategy consulting typically delivers AED 50,000–150,000 in annual savings through vendor consolidation, licence rightsizing, and contract renegotiation. The engagement cost is usually recovered within 3–6 months. For businesses that have never formally audited their vendor contracts, the first audit routinely finds savings that exceed the consulting fee within the first 30 days of implementation.</dd>
-
-<dt><strong>How do you handle Microsoft licensing optimisation in the UAE?</strong></dt>
-<dd>We audit your current M365 and Azure usage against actual consumption data from Microsoft Entra ID and Azure Cost Management. We identify over-provisioned licences — E3 or E5 assigned to users who only need F3, Power BI Pro seats assigned to users who have never logged in, Teams Premium features enabled on licences that pre-date the requirement. We then restructure your CSP agreement through our Microsoft partner status. Most Dubai businesses with 50 or more seats are overpaying by 20–40% on Microsoft licensing.</dd>
-
-<dt><strong>Can you help us plan IT for UAE free zone expansion?</strong></dt>
-<dd>Yes. We specialise in IT planning for UAE free zone expansion across JAFZA, DMCC, ADGM, and SAIF Zone, as well as GCC regional growth into KSA, Qatar, and Kuwait. This covers data residency planning, WAN connectivity between emirates using Etisalat or du MPLS or SD-WAN, unified IT management across entities, and regulatory compliance for each jurisdiction's IT requirements.</dd>
-
-<dt><strong>What is Shadow IT and why is it dangerous for UAE businesses?</strong></dt>
-<dd>Shadow IT refers to software tools purchased and used by staff without IT department approval — personal Dropbox accounts, WhatsApp file sharing, unauthorised cloud storage, unapproved SaaS subscriptions expensed directly to department budgets. For UAE-regulated businesses subject to DFSA, HAAD, or NESA requirements, Shadow IT creates data residency violations and produces audit findings. We identify and document all Shadow IT as part of every strategy engagement and produce a remediation plan that eliminates it without disrupting the workflows it was solving.</dd>
-</dl>`,
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "How much can IT strategy consulting save a Dubai business?",
+    answer: "Based on our engagements with Dubai SMEs across 50–200 seats, IT strategy consulting typically delivers AED 50,000–150,000 in annual savings through vendor consolidation, licence rightsizing, and contract renegotiation. The engagement cost is usually recovered within 3–6 months. For businesses that have never formally audited their vendor contracts, the first audit routinely finds savings that exceed the consulting fee within the first 30 days of implementation.",
+  },
+  {
+    question: "How do you handle Microsoft licensing optimisation in the UAE?",
+    answer: "We audit your current M365 and Azure usage against actual consumption data from Microsoft Entra ID and Azure Cost Management. We identify over-provisioned licences — E3 or E5 assigned to users who only need F3, Power BI Pro seats assigned to users who have never logged in, Teams Premium features enabled on licences that pre-date the requirement. We then restructure your CSP agreement through our Microsoft partner status. Most Dubai businesses with 50 or more seats are overpaying by 20–40% on Microsoft licensing.",
+  },
+  {
+    question: "Can you help us plan IT for UAE free zone expansion?",
+    answer: "Yes. We specialise in IT planning for UAE free zone expansion across JAFZA, DMCC, ADGM, and SAIF Zone, as well as GCC regional growth into KSA, Qatar, and Kuwait. This covers data residency planning, WAN connectivity between emirates using Etisalat or du MPLS or SD-WAN, unified IT management across entities, and regulatory compliance for each jurisdiction's IT requirements.",
+  },
+  {
+    question: "What is Shadow IT and why is it dangerous for UAE businesses?",
+    answer: "Shadow IT refers to software tools purchased and used by staff without IT department approval — personal Dropbox accounts, WhatsApp file sharing, unauthorised cloud storage, unapproved SaaS subscriptions expensed directly to department budgets. For UAE-regulated businesses subject to DFSA, HAAD, or NESA requirements, Shadow IT creates data residency violations and produces audit findings. We identify and document all Shadow IT as part of every strategy engagement and produce a remediation plan that eliminates it without disrupting the workflows it was solving.",
+  },
+];
 
 export default function ITConsultingStrategyPage() {
   return (
@@ -90,6 +95,11 @@ export default function ITConsultingStrategyPage() {
   ]}/>
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

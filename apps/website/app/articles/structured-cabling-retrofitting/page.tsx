@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -45,18 +46,24 @@ const articleData = {
       title: 'Post-Retrofit Testing and Documentation',
       text: '<p>After any retrofit, we conduct Fluke DSX verification testing on all re-terminated nodes to confirm that the new terminations pass Cat6 or Cat6A performance standards. This is particularly important in retrofits where existing cable runs are reused with new termination — the original cable may have been poorly installed with excessive untwisting at the old connector, and only a DSX test confirms the link performance is acceptable after re-termination.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Can you retrofit a live server room without taking down servers?</strong><br/>A: Yes — this is standard practice. We work cable by cable, keeping all active connections live until we have the replacement run ready, then make the switch-over individually. Downtime per connection is under 30 seconds.',
-        '<strong>Q: How long does a server room retrofit take?</strong><br/>A: A single rack with 24 patch cables typically takes 4–6 hours for a thorough retrofit with custom cables and label replacement. A full server room with 4–6 cabinets is typically a 2-day project.',
-        '<strong>Q: What do we do with the old abandoned cables in the ceiling void?</strong><br/>A: Abandoned cables in ceiling voids should be removed — they are a fire load, a potential pathway for smoke propagation, and add weight to cable trays. We remove abandoned runs as part of the IDF cleanup scope.',
-        '<strong>Q: Should we retrofit or completely rewire our old office?</strong><br/>A: If the existing cable runs are Cat6 or better and the cable routes are sensible, retrofit (re-terminate and re-label) is cost-effective. If the existing runs are Cat5e and you need 10G capability, a full rewire with Cat6A is justified.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Can you retrofit a live server room without taking down servers?",
+    answer: "Yes — this is standard practice. We work cable by cable, keeping all active connections live until we have the replacement run ready, then make the switch-over individually. Downtime per connection is under 30 seconds.",
+  },
+  {
+    question: "How long does a server room retrofit take?",
+    answer: "A single rack with 24 patch cables typically takes 4–6 hours for a thorough retrofit with custom cables and label replacement. A full server room with 4–6 cabinets is typically a 2-day project.",
+  },
+  {
+    question: "What do we do with the old abandoned cables in the ceiling void?",
+    answer: "Abandoned cables in ceiling voids should be removed — they are a fire load, a potential pathway for smoke propagation, and add weight to cable trays. We remove abandoned runs as part of the IDF cleanup scope.",
+  },
+];
 
 export default function StructuredcablingretrofittingPage() {
   return (
@@ -80,6 +87,11 @@ export default function StructuredcablingretrofittingPage() {
   ]}/>
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

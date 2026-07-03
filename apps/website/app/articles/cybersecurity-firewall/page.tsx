@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Firewall Policy Review and Hardening',
       text: '<p>Legacy firewalls accumulate hundreds of stale rules over years of ad-hoc changes. We conduct a firewall audit using FortiAnalyzer or Palo Alto Panorama, identifying unused rules, overly permissive ANY-ANY entries, and shadow rules that are never reached. Rules are pruned and documented in a change-controlled policy baseline, giving your compliance team an auditable security posture.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Which firewall brand do you recommend for UAE businesses?</strong><br/>A: For most SME and mid-market companies we recommend Fortinet FortiGate for its strong price-performance ratio. For enterprises requiring advanced threat intelligence integration, Palo Alto is the preferred platform.',
-        '<strong>Q: Does SSL inspection cause performance problems?</strong><br/>A: Modern NGFWs have dedicated SSL inspection hardware. For typical office throughput (under 1Gbps), the latency overhead is under 2ms — imperceptible to users.',
-        '<strong>Q: How often do firewall rules need to be reviewed?</strong><br/>A: We recommend quarterly reviews for growing companies. Rules for decommissioned servers or ex-employee VPN accounts should be removed immediately and are caught by our monthly monitoring.',
-        '<strong>Q: Can you manage our firewall remotely from your NOC?</strong><br/>A: Yes — we manage firewalls remotely via FortiManager or Panorama with full change logging. Emergency rule changes can be applied within 15 minutes of a reported incident.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Which firewall brand do you recommend for UAE businesses?",
+    answer: "For most SME and mid-market companies we recommend Fortinet FortiGate for its strong price-performance ratio. For enterprises requiring advanced threat intelligence integration, Palo Alto is the preferred platform.",
+  },
+  {
+    question: "Does SSL inspection cause performance problems?",
+    answer: "Modern NGFWs have dedicated SSL inspection hardware. For typical office throughput (under 1Gbps), the latency overhead is under 2ms — imperceptible to users.",
+  },
+  {
+    question: "How often do firewall rules need to be reviewed?",
+    answer: "We recommend quarterly reviews for growing companies. Rules for decommissioned servers or ex-employee VPN accounts should be removed immediately and are caught by our monthly monitoring.",
+  },
+];
 
 export default function CybersecurityfirewallPage() {
   return (
@@ -72,11 +79,16 @@ export default function CybersecurityfirewallPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cybersecurity' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cybersecurity', href: '/services/cybersecurity' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -76,21 +77,24 @@ const articleData = {
         '<strong>Availability and reliability recommendations:</strong> Advisor identifies single-instance VMs without Availability Sets, storage accounts without geo-redundancy enabled, and Azure SQL databases without backup retention configured. For DIFC and ADGM regulated entities, these findings map directly to DFSA IT Risk Management requirements for system availability and data durability.',
       ],
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: `<dl>
-<dt><strong>How long does it take to see measurable improvements from IT performance optimization?</strong></dt>
-<dd>Quick wins — resolving a duplex mismatch on a switch port, rescheduling antivirus scans outside business hours, or downsizing an oversized Azure VM — are implemented within the first week and are immediately measurable. Structural improvements such as VLAN segmentation, full endpoint hardening deployment, and patch compliance programme establishment take 30–60 days to reach steady state. NOCKO documents before/after metrics for every intervention using Windows Performance Monitor baselines, so improvement is quantified, not estimated. For a 50–100 seat Dubai business, the typical 60-day outcome is: 30–50% reduction in user-reported performance tickets, patch compliance from 65% to 95%+, and AED 30,000–80,000 in identified Azure/M365 licence savings.</dd>
-
-<dt><strong>Do we need to replace hardware to improve server performance, or can tuning alone make a difference?</strong></dt>
-<dd>In most Dubai SME environments, hardware replacement is the last resort, not the first. NOCKO's experience is that 60–70% of server performance complaints are resolved by configuration changes rather than hardware upgrades: rescheduling maintenance tasks, configuring SQL Server maximum memory, adjusting Windows power plans from Balanced to High Performance (which alone increases sustained CPU clock speeds by 10–15% on older Intel Xeon platforms), and eliminating unnecessary services. Hardware replacement is recommended only when Performance Monitor data shows consistent resource saturation at peak load that cannot be resolved by workload redistribution or configuration tuning — and when we do recommend hardware, we provide specific specifications with AED cost estimates attached.</dd>
-
-<dt><strong>What is a realistic patch compliance target for a UAE business, and how is it measured?</strong></dt>
-<dd>A realistic and auditable patch compliance target for a UAE business is 95% of managed devices at the current patch level within 21 days of release for standard patches, and 98%+ for Critical CVEs within 72 hours of vendor release. The 5% tolerance accounts for devices that are legitimately offline (employee on leave, hardware in for repair) and should not be treated as a compliance failure if the device returns to compliance within 5 business days of coming back online. Compliance is measured through Microsoft Intune compliance reports or WSUS/MECM reporting dashboards, which provide per-device patch status, age of missing patches, and CVE severity mapping. For DIFC-regulated firms, these reports are formatted for DFSA IT Risk Management evidence submissions.</dd>
-</dl>`,
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "How long does it take to see measurable improvements from IT performance optimization?",
+    answer: "Quick wins — resolving a duplex mismatch on a switch port, rescheduling antivirus scans outside business hours, or downsizing an oversized Azure VM — are implemented within the first week and are immediately measurable. Structural improvements such as VLAN segmentation, full endpoint hardening deployment, and patch compliance programme establishment take 30–60 days to reach steady state. NOCKO documents before/after metrics for every intervention using Windows Performance Monitor baselines, so improvement is quantified, not estimated. For a 50–100 seat Dubai business, the typical 60-day outcome is: 30–50% reduction in user-reported performance tickets, patch compliance from 65% to 95%+, and AED 30,000–80,000 in identified Azure/M365 licence savings.",
+  },
+  {
+    question: "Do we need to replace hardware to improve server performance, or can tuning alone make a difference?",
+    answer: "In most Dubai SME environments, hardware replacement is the last resort, not the first. NOCKO's experience is that 60–70% of server performance complaints are resolved by configuration changes rather than hardware upgrades: rescheduling maintenance tasks, configuring SQL Server maximum memory, adjusting Windows power plans from Balanced to High Performance (which alone increases sustained CPU clock speeds by 10–15% on older Intel Xeon platforms), and eliminating unnecessary services. Hardware replacement is recommended only when Performance Monitor data shows consistent resource saturation at peak load that cannot be resolved by workload redistribution or configuration tuning — and when we do recommend hardware, we provide specific specifications with AED cost estimates attached.",
+  },
+  {
+    question: "What is a realistic patch compliance target for a UAE business, and how is it measured?",
+    answer: "A realistic and auditable patch compliance target for a UAE business is 95% of managed devices at the current patch level within 21 days of release for standard patches, and 98%+ for Critical CVEs within 72 hours of vendor release. The 5% tolerance accounts for devices that are legitimately offline (employee on leave, hardware in for repair) and should not be treated as a compliance failure if the device returns to compliance within 5 business days of coming back online. Compliance is measured through Microsoft Intune compliance reports or WSUS/MECM reporting dashboards, which provide per-device patch status, age of missing patches, and CVE severity mapping. For DIFC-regulated firms, these reports are formatted for DFSA IT Risk Management evidence submissions.",
+  },
+];
 
 export default function ITSupportOptimizationPage() {
   return (
@@ -119,6 +123,11 @@ export default function ITSupportOptimizationPage() {
   ]}/>
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -45,18 +46,24 @@ const articleData = {
       title: 'CCTV Storage and Retention Design',
       text: '<p>IP cameras generate substantial storage volumes — a single 4MP camera at 15fps with H.265 compression requires approximately 40–60GB per day. For a 20-camera system with 30-day retention, that is 24–36TB of storage. We calculate storage requirements accurately and specify a NVR or server with appropriate RAID redundancy, located in the server room with adequate cooling and connected via the structured cabling backbone.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Can existing Cat5e cabling support IP cameras and access control?</strong><br/>A: Cat5e supports PoE and gigabit ethernet, so it is technically compatible with most IP cameras and access control systems. The question is whether the existing installation has sufficient cable runs and patch panel documentation to integrate cleanly.',
-        '<strong>Q: Do you supply the cameras and access control hardware, or just the cabling?</strong><br/>A: We provide both — structured cabling installation plus supply and integration of the IP camera system and access control hardware, giving you a single point of responsibility for the complete physical security layer.',
-        '<strong>Q: How many cameras can one PoE switch support?</strong><br/>A: A 24-port 802.3af switch with 370W PoE budget supports approximately 24 standard cameras. For high-power PTZ cameras, the count per switch is lower. We calculate the PoE budget during design to ensure the switch is not overloaded.',
-        '<strong>Q: Is CCTV footage storage subject to UAE data protection law?</strong><br/>A: Yes — the UAE Personal Data Protection Law (Federal Decree-Law No. 45 of 2021) covers CCTV footage as personal data. We configure retention periods and access controls to support compliance, though legal advice on your specific obligations should come from a qualified UAE legal practitioner.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Can existing Cat5e cabling support IP cameras and access control?",
+    answer: "Cat5e supports PoE and gigabit ethernet, so it is technically compatible with most IP cameras and access control systems. The question is whether the existing installation has sufficient cable runs and patch panel documentation to integrate cleanly.",
+  },
+  {
+    question: "Do you supply the cameras and access control hardware, or just the cabling?",
+    answer: "We provide both — structured cabling installation plus supply and integration of the IP camera system and access control hardware, giving you a single point of responsibility for the complete physical security layer.",
+  },
+  {
+    question: "How many cameras can one PoE switch support?",
+    answer: "A 24-port 802.3af switch with 370W PoE budget supports approximately 24 standard cameras. For high-power PTZ cameras, the count per switch is lower. We calculate the PoE budget during design to ensure the switch is not overloaded.",
+  },
+];
 
 export default function StructuredcablingphysicalsecurityPage() {
   return (
@@ -80,6 +87,11 @@ export default function StructuredcablingphysicalsecurityPage() {
   ]}/>
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

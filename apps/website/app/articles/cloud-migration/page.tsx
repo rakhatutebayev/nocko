@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -51,18 +52,24 @@ const articleData = {
       title: 'Post-Migration Optimisation',
       text: '<p>After migration, cloud resources are rarely right-sized on day one. We monitor resource utilisation for the first 30 days and make instance type adjustments based on actual usage patterns. We also convert remaining On-Demand instances to Reserved Instances once workload patterns are confirmed, and implement auto-scaling groups for web tiers to handle peak traffic without manual intervention.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: How long does a full server room migration take?</strong><br/>A: For a 20–40 server environment, the full migration including staging, replication, and cutover typically takes 4–8 weeks from start to completion.',
-        '<strong>Q: What if something goes wrong during the cutover?</strong><br/>A: We maintain the on-premise environment in standby for 72 hours post-cutover. Rolling back is a single DNS change — we rehearse this exact procedure in staging before touching production.',
-        '<strong>Q: Can you migrate while our office is still operating?</strong><br/>A: Yes — replication happens in the background using encrypted tunnels that do not interrupt production traffic. Only the final cutover window requires a brief scheduled maintenance period.',
-        '<strong>Q: Do you support migrating from one cloud provider to another (e.g. AWS to Azure)?</strong><br/>A: Yes — we handle cloud-to-cloud migrations using export/import pipelines, though these are typically more complex than on-premise-to-cloud migrations.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "How long does a full server room migration take?",
+    answer: "For a 20–40 server environment, the full migration including staging, replication, and cutover typically takes 4–8 weeks from start to completion.",
+  },
+  {
+    question: "What if something goes wrong during the cutover?",
+    answer: "We maintain the on-premise environment in standby for 72 hours post-cutover. Rolling back is a single DNS change — we rehearse this exact procedure in staging before touching production.",
+  },
+  {
+    question: "Can you migrate while our office is still operating?",
+    answer: "Yes — replication happens in the background using encrypted tunnels that do not interrupt production traffic. Only the final cutover window requires a brief scheduled maintenance period.",
+  },
+];
 
 export default function CloudmigrationPage() {
   return (
@@ -77,11 +84,16 @@ export default function CloudmigrationPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cloud' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cloud', href: '/services/cloud' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -51,18 +52,24 @@ const articleData = {
       title: 'Burst Scaling and Cost Management',
       text: '<p>The public cloud layer handles unpredictable demand spikes — promotional campaigns, year-end financial processing, or peak e-commerce periods. We configure auto-scaling groups on AWS or Azure VM Scale Sets that automatically provision and decommission instances based on CPU and queue depth metrics. Instances are only live when needed, so you pay only for burst capacity actually consumed.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Is a hybrid setup more expensive than going fully public cloud?</strong><br/>A: For UAE-regulated entities the private layer is a compliance requirement, not an option. However, moving bursty workloads to the public layer typically saves 40–60% compared to over-provisioning on-premise hardware for peak capacity.',
-        '<strong>Q: What is the latency between a Dubai private datacenter and Azure UAE Central?</strong><br/>A: Via ExpressRoute, typical round-trip latency is under 5ms, which is acceptable for most application architectures.',
-        '<strong>Q: Can we start with a fully public cloud setup and add a private layer later?</strong><br/>A: Yes — we frequently design architectures where the private layer is added when the company scales to a size that triggers regulatory scrutiny.',
-        '<strong>Q: Which datacenters in Dubai support this kind of private co-location?</strong><br/>A: We work primarily with Khazna Data Centers and du Datamena, both of which hold ISO 27001 and Tier III certifications.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Is a hybrid setup more expensive than going fully public cloud?",
+    answer: "For UAE-regulated entities the private layer is a compliance requirement, not an option. However, moving bursty workloads to the public layer typically saves 40–60% compared to over-provisioning on-premise hardware for peak capacity.",
+  },
+  {
+    question: "What is the latency between a Dubai private datacenter and Azure UAE Central?",
+    answer: "Via ExpressRoute, typical round-trip latency is under 5ms, which is acceptable for most application architectures.",
+  },
+  {
+    question: "Can we start with a fully public cloud setup and add a private layer later?",
+    answer: "Yes — we frequently design architectures where the private layer is added when the company scales to a size that triggers regulatory scrutiny.",
+  },
+];
 
 export default function CloudmultihybridPage() {
   return (
@@ -77,11 +84,16 @@ export default function CloudmultihybridPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cloud' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cloud', href: '/services/cloud' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

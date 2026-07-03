@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
 import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -49,18 +50,24 @@ const articleData = {
       title: 'Лицензирование и оптимизация расходов',
       text: '<p>Лицензирование M365 в ОАЭ зачастую избыточно — компании покупают E3 для каждого сотрудника, тогда как большинству достаточно F3 или Business Standard. Мы аудируем распределение лицензий в сравнении с реальным использованием функций и перераспределяем или понижаем уровень там, где это оправданно. Для компании из 100 сотрудников это, как правило, экономит 8 000–15 000 AED в год.</p><p>Мы также управляем ежегодным циклом продления через CSP-партнёрское ценообразование Microsoft, гарантируя, что вы не обновите контракт по истёкшим льготным ставкам и не пропустите окна скидок за обязательства.</p>',
     },
-    {
-      title: 'Часто задаваемые вопросы',
-      text: '',
-      list: [
-        '<strong>В: Сколько времени занимает миграция с Exchange на M365 для компании из 100 человек?</strong><br/>О: Как правило, 2–3 уик-энда. В первый уик-энд мы настраиваем гибридную среду и синхронизируем каталоги. Во второй — мигрируем почтовые ящики пакетами. В третий проводим финальное переключение и обновление DNS.',
-        '<strong>В: Потеряют ли сотрудники доступ к почте во время миграции?</strong><br/>О: Нет — гибридный режим поддерживает одновременную работу Exchange on-premise и Exchange Online в ходе миграции, поэтому пользователи продолжают получать и отправлять почту без перебоев.',
-        '<strong>В: Вы поддерживаете миграцию с Google Workspace на M365?</strong><br/>О: Да — мы используем Microsoft Migration Manager для импорта содержимого Google Drive и истории Gmail в SharePoint и Exchange Online соответственно.',
-        '<strong>В: Будет ли работать условный доступ для сотрудников в командировках за пределами ОАЭ?</strong><br/>О: Да — мы настраиваем именованные расположения и политики доверенных устройств таким образом, чтобы командированные сотрудники проходили аутентификацию через MFA, а не блокировались, при этом сохраняя защиту от входа с неизвестных устройств.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Сколько времени занимает миграция с Exchange на M365 для компании из 100 человек?",
+    answer: "Как правило, 2–3 уик-энда. В первый уик-энд мы настраиваем гибридную среду и синхронизируем каталоги. Во второй — мигрируем почтовые ящики пакетами. В третий проводим финальное переключение и обновление DNS.",
+  },
+  {
+    question: "Потеряют ли сотрудники доступ к почте во время миграции?",
+    answer: "Нет — гибридный режим поддерживает одновременную работу Exchange on-premise и Exchange Online в ходе миграции, поэтому пользователи продолжают получать и отправлять почту без перебоев.",
+  },
+  {
+    question: "Вы поддерживаете миграцию с Google Workspace на M365?",
+    answer: "Да — мы используем Microsoft Migration Manager для импорта содержимого Google Drive и истории Gmail в SharePoint и Exchange Online соответственно.",
+  },
+];
 
 export default function CloudinfrastructurePage() {
   return (
@@ -80,6 +87,11 @@ export default function CloudinfrastructurePage() {
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Часто задаваемые вопросы"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

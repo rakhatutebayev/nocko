@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Recovery and Hardening',
       text: '<p>We restore operations from the most recent clean backup — ideally an immutable snapshot from before the attack window. Systems are rebuilt from clean images rather than restored in-place where possible, eliminating any risk of missed persistence. After recovery, we implement the specific hardening measures that would have prevented the attack: MFA on RDP, patch deployment, email sandboxing, or EDR deployment — whichever was the missing control.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Should we pay the ransomware demand?</strong><br/>A: Generally no — payment does not guarantee decryption, funds criminal organisations, and may violate UAE financial regulations on payments to sanctioned entities. Recovery from clean backups is always the preferred path.',
-        '<strong>Q: How quickly can you restore operations from backups?</strong><br/>A: This depends entirely on your backup architecture. With immutable cloud backups and a tested recovery runbook, Tier-1 systems can be restored in 2–8 hours. Without tested backups, recovery can take days or weeks.',
-        '<strong>Q: Do we have to report a ransomware attack to UAE authorities?</strong><br/>A: If customer or employee personal data was accessed or exfiltrated, reporting to the UAE Data Office under the PDPL may be required. We advise on the regulatory reporting obligation as part of our incident response.',
-        '<strong>Q: Can you help us even if we do not have an AMC or managed IT contract?</strong><br/>A: Yes — we take emergency incident response cases. Hourly rates apply without a retainer, but we prioritise getting your business operational regardless.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Should we pay the ransomware demand?",
+    answer: "Generally no — payment does not guarantee decryption, funds criminal organisations, and may violate UAE financial regulations on payments to sanctioned entities. Recovery from clean backups is always the preferred path.",
+  },
+  {
+    question: "How quickly can you restore operations from backups?",
+    answer: "This depends entirely on your backup architecture. With immutable cloud backups and a tested recovery runbook, Tier-1 systems can be restored in 2–8 hours. Without tested backups, recovery can take days or weeks.",
+  },
+  {
+    question: "Do we have to report a ransomware attack to UAE authorities?",
+    answer: "If customer or employee personal data was accessed or exfiltrated, reporting to the UAE Data Office under the PDPL may be required. We advise on the regulatory reporting obligation as part of our incident response.",
+  },
+];
 
 export default function CybersecurityincidentresponsePage() {
   return (
@@ -72,11 +79,16 @@ export default function CybersecurityincidentresponsePage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cybersecurity' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cybersecurity', href: '/services/cybersecurity' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

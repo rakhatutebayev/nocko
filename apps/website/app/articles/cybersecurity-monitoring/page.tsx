@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -92,21 +93,36 @@ const articleData = {
         'Cloud-specific detection rules: IAM abuse, S3 exposure, cryptomining',
       ],
     },
-    {
-      title: 'Frequently Asked Questions — Cyber Security Monitoring Service Dubai',
-      text: '',
-      list: [
-        '<strong>Q: What is a cyber security monitoring service and does my business need it?</strong><br/>A: A cyber security monitoring service continuously watches your IT environment for threats and responds in real time. Any UAE business with more than 20 employees, customer data, or regulatory obligations (NESA, DFSA, ADGM) should have one. Without it, breaches go undetected for an average of 207 days globally.',
-        '<strong>Q: What is the difference between a SIEM and an MDR service?</strong><br/>A: A SIEM is a platform that aggregates and correlates logs. MDR (Managed Detection and Response) adds human analysts who investigate alerts and take containment actions. Our SOC service combines both — enterprise SIEM technology plus 24/7 analyst response at a managed service price.',
-        '<strong>Q: How quickly do you respond to a detected threat?</strong><br/>A: For critical severity alerts (active intrusion, ransomware, data exfiltration), our guaranteed response time is 15 minutes. For high severity, 1 hour. For medium severity, 4 hours. Response actions include IP blocking, account suspension, network isolation, and customer notification.',
-        '<strong>Q: How long does it take to set up the monitoring service?</strong><br/>A: Initial SIEM deployment and basic log ingestion takes 1–2 weeks. Fine-tuning detection rules to reduce false positives for your specific environment takes another 2–4 weeks. Full operational capability is typically achieved within 30 days.',
-        '<strong>Q: Is your monitoring service NESA compliant?</strong><br/>A: Yes. Our log retention (12 months hot, 3 years cold), alert documentation, and incident response procedures are designed to satisfy NESA IA Standards requirements. We provide monthly evidence reports suitable for NESA audit submissions.',
-        '<strong>Q: Can you monitor our Microsoft 365 and Azure environment?</strong><br/>A: Yes. We ingest Microsoft 365 Defender, Azure Monitor, and Azure Sentinel data into our centralised SIEM. This covers email threats, Teams activity, SharePoint access, Azure AD sign-ins, and cloud resource changes.',
-        '<strong>Q: How much does a cyber security monitoring service cost in Dubai?</strong><br/>A: Pricing depends on the number of log sources and endpoints monitored. For a 50-user business in Dubai, managed SOC services typically start from AED 3,000–6,000 per month — significantly less than the cost of a single in-house security analyst. Contact us for a free security assessment and pricing.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "What is a cyber security monitoring service and does my business need it?",
+    answer: "A cyber security monitoring service continuously watches your IT environment for threats and responds in real time. Any UAE business with more than 20 employees, customer data, or regulatory obligations (NESA, DFSA, ADGM) should have one. Without it, breaches go undetected for an average of 207 days globally.",
+  },
+  {
+    question: "What is the difference between a SIEM and an MDR service?",
+    answer: "A SIEM is a platform that aggregates and correlates logs. MDR (Managed Detection and Response) adds human analysts who investigate alerts and take containment actions. Our SOC service combines both — enterprise SIEM technology plus 24/7 analyst response at a managed service price.",
+  },
+  {
+    question: "How quickly do you respond to a detected threat?",
+    answer: "For critical severity alerts (active intrusion, ransomware, data exfiltration), our guaranteed response time is 15 minutes. For high severity, 1 hour. For medium severity, 4 hours. Response actions include IP blocking, account suspension, network isolation, and customer notification.",
+  },
+  {
+    question: "How long does it take to set up the monitoring service?",
+    answer: "Initial SIEM deployment and basic log ingestion takes 1–2 weeks. Fine-tuning detection rules to reduce false positives for your specific environment takes another 2–4 weeks. Full operational capability is typically achieved within 30 days.",
+  },
+  {
+    question: "Is your monitoring service NESA compliant?",
+    answer: "Yes. Our log retention (12 months hot, 3 years cold), alert documentation, and incident response procedures are designed to satisfy NESA IA Standards requirements. We provide monthly evidence reports suitable for NESA audit submissions.",
+  },
+  {
+    question: "Can you monitor our Microsoft 365 and Azure environment?",
+    answer: "Yes. We ingest Microsoft 365 Defender, Azure Monitor, and Azure Sentinel data into our centralised SIEM. This covers email threats, Teams activity, SharePoint access, Azure AD sign-ins, and cloud resource changes.",
+  },
+];
 
 export default function CybersecuritymonitoringPage() {
   return (
@@ -121,11 +137,16 @@ export default function CybersecuritymonitoringPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cybersecurity' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cybersecurity', href: '/services/cybersecurity' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions — Cyber Security Monitoring Service Dubai"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

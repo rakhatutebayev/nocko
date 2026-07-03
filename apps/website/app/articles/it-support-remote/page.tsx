@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -16,6 +17,8 @@ export const metadata: Metadata = {
       'ru-RU': '/ru/articles/it-support-remote',
     },
   },
+  keywords: 'remote IT support dubai, remote IT support UAE, IT helpdesk dubai, L1 L2 support dubai, remote troubleshooting UAE, managed helpdesk dubai, IT support remote access UAE',
+  robots: { index: true, follow: true },
 };
 
 const articleData = {
@@ -88,21 +91,24 @@ const articleData = {
 <p><strong>L2 to vendor escalation</strong> applies when the issue is within the scope of a third-party vendor's support responsibility — Microsoft Premier Support for Azure infrastructure issues, Fortinet TAC for FortiGate firmware bugs, Dell ProSupport for hardware under warranty. NOCKO manages vendor escalations on the client's behalf, maintaining the ticket and coordinating vendor access where remote sessions with vendor engineers are required.</p>
 <p>Every remote support session generates a ticket record with: timestamp of first contact and resolution, engineer ID, session recording reference, system information at time of incident, actions taken, and root cause classification. This documentation serves as the audit trail for ISO 27001-aligned IT operations and is available to clients via the support portal in real time.</p>`,
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: `<dl>
-<dt><strong>How quickly does NOCKO begin a remote support session after a ticket is raised?</strong></dt>
-<dd>For managed IT support clients in Dubai, L1 remote session initiation SLA is 15 minutes for P1 (system down, business-critical) and 30–60 minutes for P2/P3 during UAE business hours (Sunday–Thursday, 08:00–18:00 GST). After-hours and 24/7 coverage is available under premium managed agreements. For ad-hoc (non-contract) remote support, response times are typically 1–3 hours depending on engineer availability. Remote session tools (ConnectWise Control agent) are pre-deployed on client endpoints as part of onboarding, so there is no delay installing access software at incident time.</dd>
-
-<dt><strong>Is remote IT support secure — can engineers access systems without the user knowing?</strong></dt>
-<dd>Unattended remote access (via ConnectWise Control agent) is enabled only on systems explicitly enrolled by the client IT administrator during onboarding. NOCKO engineers cannot initiate connections to endpoints that have not been enrolled. All sessions are logged with engineer ID, timestamp, and session duration. Session recordings are retained for 12 months. For attended sessions, the user sees a notification and can terminate the session at any time. Clients receive monthly access audit reports showing which systems were accessed, by which engineer, and for how long — a requirement for businesses with ISO 27001 or NESA IA compliance obligations.</dd>
-
-<dt><strong>What is the cost of remote IT support for a Dubai SME without a managed contract?</strong></dt>
-<dd>Ad-hoc remote support is available at AED 250–450 per incident (per session, capped at 1 hour) depending on L1 or L2 tier. For businesses with predictable support volumes, managed IT support agreements start from AED 180–350 per seat per month and include unlimited remote support incidents within SLA, proactive monitoring via RMM, and on-site dispatch for hardware issues at no additional call-out charge. For a 30-seat Dubai business, the typical managed agreement cost is AED 6,000–10,500 per month — compared to AED 15,000–25,000 per month in reactive on-site break-fix costs for the same incident volume.</dd>
-</dl>`,
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "How quickly does NOCKO begin a remote support session after a ticket is raised?",
+    answer: "For managed IT support clients in Dubai, L1 remote session initiation SLA is 15 minutes for P1 (system down, business-critical) and 30–60 minutes for P2/P3 during UAE business hours (Sunday–Thursday, 08:00–18:00 GST). After-hours and 24/7 coverage is available under premium managed agreements. For ad-hoc (non-contract) remote support, response times are typically 1–3 hours depending on engineer availability. Remote session tools (ConnectWise Control agent) are pre-deployed on client endpoints as part of onboarding, so there is no delay installing access software at incident time.",
+  },
+  {
+    question: "Is remote IT support secure — can engineers access systems without the user knowing?",
+    answer: "Unattended remote access (via ConnectWise Control agent) is enabled only on systems explicitly enrolled by the client IT administrator during onboarding. NOCKO engineers cannot initiate connections to endpoints that have not been enrolled. All sessions are logged with engineer ID, timestamp, and session duration. Session recordings are retained for 12 months. For attended sessions, the user sees a notification and can terminate the session at any time. Clients receive monthly access audit reports showing which systems were accessed, by which engineer, and for how long — a requirement for businesses with ISO 27001 or NESA IA compliance obligations.",
+  },
+  {
+    question: "What is the cost of remote IT support for a Dubai SME without a managed contract?",
+    answer: "Ad-hoc remote support is available at AED 250–450 per incident (per session, capped at 1 hour) depending on L1 or L2 tier. For businesses with predictable support volumes, managed IT support agreements start from AED 180–350 per seat per month and include unlimited remote support incidents within SLA, proactive monitoring via RMM, and on-site dispatch for hardware issues at no additional call-out charge. For a 30-seat Dubai business, the typical managed agreement cost is AED 6,000–10,500 per month — compared to AED 15,000–25,000 per month in reactive on-site break-fix costs for the same incident volume.",
+  },
+];
 
 export default function ITSupportRemotePage() {
   return (
@@ -131,6 +137,11 @@ export default function ITSupportRemotePage() {
   ]}/>
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

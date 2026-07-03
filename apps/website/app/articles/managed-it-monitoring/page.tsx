@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'DNS Filtering and Web Security',
       text: '<p>We deploy Cisco Umbrella or Cloudflare Gateway as DNS-layer security for all managed endpoints, blocking connections to known malicious domains, phishing sites, and command-and-control infrastructure before a TCP connection is ever established. This protects devices on home networks and public Wi-Fi — not just when connected to the office network — covering the hybrid workforce that is standard across UAE businesses.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Does EDR replace our antivirus, or do we need both?</strong><br/>A: EDR includes antivirus functionality and replaces it. Running both simultaneously creates conflicts and performance overhead. We migrate clients from legacy AV to EDR as part of the managed service onboarding.',
-        '<strong>Q: What happens when a managed device is lost or stolen?</strong><br/>A: We remote-wipe the device via Intune within minutes of receiving notification. Full disk encryption (BitLocker on Windows, FileVault on Mac) ensures data is unreadable even if the device is accessed before the wipe completes.',
-        '<strong>Q: Can we enforce corporate security policies on personal devices without reading personal data?</strong><br/>A: Yes — Intune App Protection Policies apply to the corporate apps only (Outlook, Teams, OneDrive) and do not give us visibility into personal apps, photos, or messages on the personal device.',
-        '<strong>Q: How does DNS filtering work when staff travel outside the UAE?</strong><br/>A: Cisco Umbrella and Cloudflare Gateway route DNS queries through the filtering platform regardless of the device location — the protection follows the endpoint globally, not just within the UAE network perimeter.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Does EDR replace our antivirus, or do we need both?",
+    answer: "EDR includes antivirus functionality and replaces it. Running both simultaneously creates conflicts and performance overhead. We migrate clients from legacy AV to EDR as part of the managed service onboarding.",
+  },
+  {
+    question: "What happens when a managed device is lost or stolen?",
+    answer: "We remote-wipe the device via Intune within minutes of receiving notification. Full disk encryption (BitLocker on Windows, FileVault on Mac) ensures data is unreadable even if the device is accessed before the wipe completes.",
+  },
+  {
+    question: "Can we enforce corporate security policies on personal devices without reading personal data?",
+    answer: "Yes — Intune App Protection Policies apply to the corporate apps only (Outlook, Teams, OneDrive) and do not give us visibility into personal apps, photos, or messages on the personal device.",
+  },
+];
 
 export default function ManageditmonitoringPage() {
   return (
@@ -72,11 +79,16 @@ export default function ManageditmonitoringPage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT', href: '/services/managed-it' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

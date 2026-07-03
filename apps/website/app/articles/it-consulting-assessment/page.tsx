@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -51,24 +52,28 @@ const articleData = {
         '<strong>180 days (Strategic initiatives):</strong> Vendor consolidation to reduce the number of separate security tools, IT governance framework documentation, and BCDR testing schedule. These initiatives typically deliver AED 50,000–120,000 in annual savings for a 100-seat business.',
       ],
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: `<dl>
-<dt><strong>How long does an IT assessment take?</strong></dt>
-<dd>For a 50–100 seat Dubai business, a full IT assessment takes 5–10 business days. This includes on-site infrastructure inspection, remote tooling deployment via RMM agent, licence audit against Microsoft Entra ID logs, and security review. You receive a written report with RAG scoring and a prioritised remediation plan within 2 weeks of kickoff.</dd>
-
-<dt><strong>Does NOCKO provide IT assessments for DIFC or ADGM firms?</strong></dt>
-<dd>Yes. We conduct IT assessments specifically mapped to DFSA IT Risk Management requirements for DIFC-licensed firms and FSRA Technology Risk Guidelines for ADGM entities. Our reports are formatted for regulatory submission and include evidence packs for auditors. These are not generic assessments with compliance language bolted on — the framework mapping is built into the assessment methodology.</dd>
-
-<dt><strong>What does an IT assessment cost?</strong></dt>
-<dd>IT assessments for Dubai SMEs with 50–150 seats typically cost AED 8,000–18,000 as a one-time engagement. This fee is frequently recovered within the first month of implementing the identified savings — particularly through M365 licence consolidation and Azure rightsizing, where most Dubai businesses find AED 30,000–80,000 in annual waste on the first audit.</dd>
-
-<dt><strong>What happens if critical vulnerabilities are found during the assessment?</strong></dt>
-<dd>We triage findings in real time. If we discover an actively exploited vulnerability — for example, an unpatched RDP server exposed directly to the internet — we notify you the same day and can begin emergency remediation immediately. P1 emergency response is handled as a separate engagement from the assessment scope, so the assessment does not pause while the critical issue is resolved.</dd>
-</dl>`,
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "How long does an IT assessment take?",
+    answer: "For a 50–100 seat Dubai business, a full IT assessment takes 5–10 business days. This includes on-site infrastructure inspection, remote tooling deployment via RMM agent, licence audit against Microsoft Entra ID logs, and security review. You receive a written report with RAG scoring and a prioritised remediation plan within 2 weeks of kickoff.",
+  },
+  {
+    question: "Does NOCKO provide IT assessments for DIFC or ADGM firms?",
+    answer: "Yes. We conduct IT assessments specifically mapped to DFSA IT Risk Management requirements for DIFC-licensed firms and FSRA Technology Risk Guidelines for ADGM entities. Our reports are formatted for regulatory submission and include evidence packs for auditors. These are not generic assessments with compliance language bolted on — the framework mapping is built into the assessment methodology.",
+  },
+  {
+    question: "What does an IT assessment cost?",
+    answer: "IT assessments for Dubai SMEs with 50–150 seats typically cost AED 8,000–18,000 as a one-time engagement. This fee is frequently recovered within the first month of implementing the identified savings — particularly through M365 licence consolidation and Azure rightsizing, where most Dubai businesses find AED 30,000–80,000 in annual waste on the first audit.",
+  },
+  {
+    question: "What happens if critical vulnerabilities are found during the assessment?",
+    answer: "We triage findings in real time. If we discover an actively exploited vulnerability — for example, an unpatched RDP server exposed directly to the internet — we notify you the same day and can begin emergency remediation immediately. P1 emergency response is handled as a separate engagement from the assessment scope, so the assessment does not pause while the critical issue is resolved.",
+  },
+];
 
 export default function ITConsultingAssessmentPage() {
   return (
@@ -98,6 +103,11 @@ export default function ITConsultingAssessmentPage() {
   ]}/>
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

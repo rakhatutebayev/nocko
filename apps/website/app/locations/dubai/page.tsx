@@ -31,6 +31,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/locations/dubai',
+    languages: {
+      'en-AE': '/locations/dubai',
+      'ru-RU': '/ru/locations/dubai',
+    },
   },
 };
 

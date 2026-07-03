@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -51,18 +52,24 @@ const articleData = {
       title: 'Spare Parts and Emergency Procurement',
       text: '<p>For critical infrastructure, waiting for a warranty replacement is not always acceptable. We maintain a spare parts inventory of common failure items — RAM modules, hard drives, SFP transceivers, and power supplies — for immediate same-day replacement of critical components in Dubai-based clients under premium AMC tiers.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: How long does a Dell warranty hard drive replacement take in Dubai?</strong><br/>A: Dell ProSupport in the UAE typically delivers replacement parts next business day for in-warranty servers. We manage the claim submission and installation same-day once the part arrives.',
-        '<strong>Q: What happens when hardware is out of warranty?</strong><br/>A: Out-of-warranty hardware is replaced through our procurement channels. We source authorised hardware from UAE distributors and can typically deliver and install replacement hardware within 2–3 business days.',
-        '<strong>Q: Can you manage hardware at multiple office locations?</strong><br/>A: Yes — our AMC contracts cover all your UAE locations under a single agreement, with on-site SLA response times defined per location.',
-        '<strong>Q: Do you handle server room UPS and power infrastructure?</strong><br/>A: Yes — UPS maintenance, battery replacement, and APC/Eaton warranty management are included in comprehensive AMC tiers.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "How long does a Dell warranty hard drive replacement take in Dubai?",
+    answer: "Dell ProSupport in the UAE typically delivers replacement parts next business day for in-warranty servers. We manage the claim submission and installation same-day once the part arrives.",
+  },
+  {
+    question: "What happens when hardware is out of warranty?",
+    answer: "Out-of-warranty hardware is replaced through our procurement channels. We source authorised hardware from UAE distributors and can typically deliver and install replacement hardware within 2–3 business days.",
+  },
+  {
+    question: "Can you manage hardware at multiple office locations?",
+    answer: "Yes — our AMC contracts cover all your UAE locations under a single agreement, with on-site SLA response times defined per location.",
+  },
+];
 
 export default function ItamchardwarePage() {
   return (
@@ -77,11 +84,16 @@ export default function ItamchardwarePage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC', href: '/services/it-amc' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

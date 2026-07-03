@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Access Point Selection and Configuration',
       text: '<p>Not all access points are suitable for UAE office environments. Consumer-grade APs (TP-Link, Netgear home units) lack the radio management capabilities needed for multi-AP deployments — they do not enforce client band steering, do not support 802.11r fast roaming for VoIP users walking between floors, and cannot report per-client association data needed for troubleshooting. We deploy Cisco Catalyst (Meraki), Aruba, or Ubiquiti UniFi enterprise APs sized to your client density, with centralised management for policy and firmware updates.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Do we need a Wi-Fi heatmap for a small office of 20 people?</strong><br/>A: For open-plan offices under 200 sqm, an experienced engineer can place APs correctly without a formal Ekahau survey. For larger offices, multi-floor buildings, or offices with irregular layouts and construction materials, a predictive survey prevents expensive rework.',
-        '<strong>Q: How long does a physical validation survey take?</strong><br/>A: A 500–1,000 sqm floor takes approximately 3–4 hours to walk survey and post-process results. A full building with multiple floors is typically completed in 1 day.',
-        '<strong>Q: Why does our current Wi-Fi have dead zones even though we have many APs?</strong><br/>A: More APs does not mean better Wi-Fi — poorly placed or misconfigured APs cause co-channel interference that degrades performance. The heatmap survey identifies exactly which APs need repositioning or reconfiguration.',
-        '<strong>Q: Can you survey outdoor areas like terraces or car parks in Dubai?</strong><br/>A: Yes — we survey outdoor areas using IP67-rated outdoor access points and account for additional signal absorption from direct sunlight heating, which affects some AP radios in UAE summer conditions.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Do we need a Wi-Fi heatmap for a small office of 20 people?",
+    answer: "For open-plan offices under 200 sqm, an experienced engineer can place APs correctly without a formal Ekahau survey. For larger offices, multi-floor buildings, or offices with irregular layouts and construction materials, a predictive survey prevents expensive rework.",
+  },
+  {
+    question: "How long does a physical validation survey take?",
+    answer: "A 500–1,000 sqm floor takes approximately 3–4 hours to walk survey and post-process results. A full building with multiple floors is typically completed in 1 day.",
+  },
+  {
+    question: "Why does our current Wi-Fi have dead zones even though we have many APs?",
+    answer: "More APs does not mean better Wi-Fi — poorly placed or misconfigured APs cause co-channel interference that degrades performance. The heatmap survey identifies exactly which APs need repositioning or reconfiguration.",
+  },
+];
 
 export default function StructuredcablingwifiheatmappingPage() {
   return (
@@ -77,6 +84,11 @@ export default function StructuredcablingwifiheatmappingPage() {
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

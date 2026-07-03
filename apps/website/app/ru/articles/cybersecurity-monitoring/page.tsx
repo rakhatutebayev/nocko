@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
 import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -49,18 +50,24 @@ const articleData = {
       title: 'Отчётность и доказательная база для аудита',
       text: '<p>Ежемесячные отчёты по безопасности содержат статистику инцидентов, среднее время до обнаружения (MTTD), среднее время реагирования (MTTR) и классификацию основных категорий угроз. Для организаций, проходящих аудит NESA или DFSA, мы формируем отчёты с привязкой контролей к регуляторным требованиям: хранение журналов, мониторинг доступа и история реагирования на инциденты в соответствии с применимым фреймворком.</p>',
     },
-    {
-      title: 'Часто задаваемые вопросы',
-      text: '',
-      list: [
-        '<strong>В: Чем SIEM отличается от MDR-сервиса?</strong><br/>О: SIEM агрегирует и коррелирует журналы. MDR (Managed Detection and Response) добавляет к этому аналитиков-людей, которые расследуют оповещения и принимают меры по локализации угроз. Наш SOC-сервис объединяет оба подхода: технология SIEM плюс реагирование аналитиков.',
-        '<strong>В: Сколько времени нужно для запуска SIEM?</strong><br/>О: Первичное развёртывание и базовый приём журналов занимают 1–2 недели. Настройка правил обнаружения для снижения ложных срабатываний под конкретную среду обычно требует ещё 2–4 недели.',
-        '<strong>В: Можете ли вы интегрироваться с нашей системой управления заявками?</strong><br/>О: Да — мы интегрируемся с ServiceNow, Jira, Freshservice и большинством крупных ITSM-платформ через webhook или API, так что оповещения SIEM автоматически создают заявки в вашем рабочем процессе.',
-        '<strong>В: На каких языках общаются ваши инженеры SOC?</strong><br/>О: Наша дубайская команда SOC работает на английском и арабском языках.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Чем SIEM отличается от MDR-сервиса?",
+    answer: "SIEM агрегирует и коррелирует журналы. MDR (Managed Detection and Response) добавляет к этому аналитиков-людей, которые расследуют оповещения и принимают меры по локализации угроз. Наш SOC-сервис объединяет оба подхода: технология SIEM плюс реагирование аналитиков.",
+  },
+  {
+    question: "Сколько времени нужно для запуска SIEM?",
+    answer: "Первичное развёртывание и базовый приём журналов занимают 1–2 недели. Настройка правил обнаружения для снижения ложных срабатываний под конкретную среду обычно требует ещё 2–4 недели.",
+  },
+  {
+    question: "Можете ли вы интегрироваться с нашей системой управления заявками?",
+    answer: "Да — мы интегрируемся с ServiceNow, Jira, Freshservice и большинством крупных ITSM-платформ через webhook или API, так что оповещения SIEM автоматически создают заявки в вашем рабочем процессе.",
+  },
+];
 
 export default function CybersecuritymonitoringPage() {
   return (
@@ -80,6 +87,11 @@ export default function CybersecuritymonitoringPage() {
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Часто задаваемые вопросы"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

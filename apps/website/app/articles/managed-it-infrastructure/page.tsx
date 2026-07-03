@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Remote Access and Remediation',
       text: '<p>When an engineer needs to remediate an issue on a remote machine, they connect via the encrypted RMM remote desktop session — never using unmonitored third-party tools like AnyDesk or TeamViewer outside of the managed platform. All remote sessions are logged, recorded, and auditable. For regulated clients, this session recording satisfies NESA and DFSA requirements for privileged access monitoring.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: What is an RMM agent and is it safe to install?</strong><br/>A: RMM (Remote Monitoring and Management) agents are small background services that report system health telemetry to the management platform. They operate with no user-visible interface and are deployed via Group Policy or Intune — the same channels used for any enterprise software.',
-        '<strong>Q: Can we see what the NOC is doing on our systems at any time?</strong><br/>A: Yes — we provide a client portal showing all open tickets, recent alerts, and a log of all remote sessions conducted on your devices. Nothing happens on your systems without a corresponding audit record.',
-        '<strong>Q: Does the RMM agent affect system performance?</strong><br/>A: RMM agents consume less than 1% of CPU and 30–50MB of RAM in normal operation. The telemetry uploads are compressed and run on a separate low-priority thread that does not compete with business applications.',
-        '<strong>Q: What happens if our internet connection goes down — do we lose monitoring?</strong><br/>A: RMM agents cache telemetry locally during connectivity loss and sync when the connection is restored. We also monitor the connection from the network device level, so a complete internet outage is detected separately via network monitoring.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "What is an RMM agent and is it safe to install?",
+    answer: "RMM (Remote Monitoring and Management) agents are small background services that report system health telemetry to the management platform. They operate with no user-visible interface and are deployed via Group Policy or Intune — the same channels used for any enterprise software.",
+  },
+  {
+    question: "Can we see what the NOC is doing on our systems at any time?",
+    answer: "Yes — we provide a client portal showing all open tickets, recent alerts, and a log of all remote sessions conducted on your devices. Nothing happens on your systems without a corresponding audit record.",
+  },
+  {
+    question: "Does the RMM agent affect system performance?",
+    answer: "RMM agents consume less than 1% of CPU and 30–50MB of RAM in normal operation. The telemetry uploads are compressed and run on a separate low-priority thread that does not compete with business applications.",
+  },
+];
 
 export default function ManageditinfrastructurePage() {
   return (
@@ -72,11 +79,16 @@ export default function ManageditinfrastructurePage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT', href: '/services/managed-it' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

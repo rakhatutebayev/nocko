@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Network Scaling for Office Expansion',
       text: '<p>Physical office expansion requires network infrastructure to scale alongside headcount. We design and deploy new office networks using the same standards as your primary Dubai office — same VLAN structure, same firewall policy baseline, same Wi-Fi access point configuration — so that your IT environment is consistent and your security policies apply uniformly across all locations.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Can Autopilot provision devices for staff working remotely outside UAE?</strong><br/>A: Yes — Autopilot provisions over any internet connection. We configure the VPN client as part of the provisioning package so the device connects to your corporate network automatically after the initial setup.',
-        '<strong>Q: What laptop models do you recommend for Autopilot provisioning?</strong><br/>A: Any Windows 11 Pro device from Dell, HP, or Lenovo supports Autopilot. We source hardware pre-registered with your Autopilot tenant from UAE distributors, eliminating the manual serial number registration step.',
-        '<strong>Q: How do we handle employee off-boarding securely?</strong><br/>A: On termination, we disable the Entra ID account (blocking all access), initiate a remote wipe of the Intune-managed device, and reclaim the M365 licence — all within 30 minutes of receiving the off-boarding request.',
-        '<strong>Q: Does zero-touch provisioning work for Mac devices used by creative teams?</strong><br/>A: Yes — we support Apple Business Manager combined with Jamf or Intune for macOS devices, providing the same automated provisioning experience for Mac fleets.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Can Autopilot provision devices for staff working remotely outside UAE?",
+    answer: "Yes — Autopilot provisions over any internet connection. We configure the VPN client as part of the provisioning package so the device connects to your corporate network automatically after the initial setup.",
+  },
+  {
+    question: "What laptop models do you recommend for Autopilot provisioning?",
+    answer: "Any Windows 11 Pro device from Dell, HP, or Lenovo supports Autopilot. We source hardware pre-registered with your Autopilot tenant from UAE distributors, eliminating the manual serial number registration step.",
+  },
+  {
+    question: "How do we handle employee off-boarding securely?",
+    answer: "On termination, we disable the Entra ID account (blocking all access), initiate a remote wipe of the Intune-managed device, and reclaim the M365 licence — all within 30 minutes of receiving the off-boarding request.",
+  },
+];
 
 export default function ManageditscalablePage() {
   return (
@@ -72,11 +79,16 @@ export default function ManageditscalablePage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT', href: '/services/managed-it' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

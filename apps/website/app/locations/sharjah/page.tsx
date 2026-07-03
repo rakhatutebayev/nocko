@@ -32,6 +32,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/locations/sharjah',
+    languages: {
+      'en-AE': '/locations/sharjah',
+      'ru-RU': '/ru/locations/sharjah',
+    },
   },
 };
 

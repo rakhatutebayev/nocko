@@ -89,7 +89,29 @@ const fallback: MappedServiceContent = {
     { icon: '/images/benefits/pricing.png', text: 'Predictable security costs' },
     { icon: '/images/benefits/communication.png', text: 'Regular security reports' },
   ],
-  resources: [],
+  resources: [
+    {
+      type: 'Article',
+      title: 'Email Sandboxing & Phishing Protection',
+      description: 'How we detonate weaponised attachments in isolated cloud VMs and stop BEC fraud before it reaches your inbox.',
+      url: '/articles/cybersecurity-protection',
+      ctaText: 'Read the guide',
+    },
+    {
+      type: 'Article',
+      title: 'Why Traditional Antivirus Is Dead',
+      description: 'Signature-based antivirus can no longer stop modern ransomware. See what EDR does differently.',
+      url: '/articles/cybersecurity-antivirus-dead',
+      ctaText: 'Read the guide',
+    },
+    {
+      type: 'Guide',
+      title: 'UAE Cybersecurity Guide for Businesses',
+      description: 'A practical overview of the threats, controls, and compliance requirements facing UAE companies.',
+      url: '/articles/cybersecurity-guide',
+      ctaText: 'Read the guide',
+    },
+  ],
   cta: {
     title: 'Ready to Secure Your Business?',
     text: 'Get a free cybersecurity assessment and discover your vulnerabilities before attackers do.',

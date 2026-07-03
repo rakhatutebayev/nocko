@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -73,31 +74,28 @@ const articleData = {
         '<strong>Enterprise NOC (200+ seats or critical infrastructure):</strong> All Professional tier coverage plus dedicated NOC engineer coverage during business hours. Full Zabbix or PRTG deployment for deep infrastructure telemetry across all network devices, servers, and environmental systems. Custom dashboards for operations and executive reporting. SLA-backed response times with contractual uptime guarantees. Quarterly Business Reviews with infrastructure health trending and capacity planning forecasts. Suitable for financial services, healthcare, logistics, and hospitality businesses where infrastructure downtime has direct revenue or regulatory compliance consequences.',
       ],
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: `<dl>
-<dt><strong>What is the difference between RMM monitoring and a NOC service?</strong></dt>
-<dd>RMM (Remote Monitoring and Management) refers to the tooling layer — the agents, SNMP collectors, and dashboards that gather and display infrastructure telemetry. A NOC (Network Operations Centre) service is the human operations layer on top of the RMM — engineers who actively watch, triage, and respond to the telemetry 24/7. NOCKO provides both: we deploy and configure the RMM tooling (N-able, Datto RMM, Zabbix, PRTG) and we operate the NOC function, either fully managed or as an after-hours extension of your internal IT team. For most Dubai SMEs with 50–200 seats, a fully managed NOC service is more cost-effective than hiring two or three additional IT staff to provide the same coverage.</dd>
-
-<dt><strong>How quickly can NOCKO deploy infrastructure monitoring for a new client?</strong></dt>
-<dd>For a 50-seat environment, initial monitoring coverage is live within 2–3 business days of engagement start. This includes RMM agent deployment to all Windows and macOS endpoints via group policy or MDM, SNMP configuration on switches and firewalls, and base alert threshold configuration. Full threshold tuning — calibrating alerts to the client's specific environment baseline to minimise false positives — takes an additional 2–3 weeks of live operation. By the end of the first month, alert noise is typically reduced by 60–70% from initial defaults while genuine alert detection rate improves.</dd>
-
-<dt><strong>Can NOCKO integrate monitoring alerts into our existing IT ticketing system?</strong></dt>
-<dd>Yes. NOCKO's monitoring stack integrates with ConnectWise Manage, Autotask PSA, Freshservice, Jira Service Management, and ServiceNow via native API connectors or webhook-based integrations. Monitoring alerts generate tickets automatically with pre-populated diagnostic data — affected device, alert type, threshold breached, current metric value, and correlated recent events — so the engineer receiving the ticket has context immediately rather than having to gather it manually. For clients with existing ITSM platforms, we configure bidirectional sync so ticket status updates in your system are reflected in our monitoring dashboard in real time.</dd>
-</dl>`,
-    },
   ],
 };
+
+const faqItems = [
+  {
+    question: "What is the difference between RMM monitoring and a NOC service?",
+    answer: "RMM (Remote Monitoring and Management) refers to the tooling layer — the agents, SNMP collectors, and dashboards that gather and display infrastructure telemetry. A NOC (Network Operations Centre) service is the human operations layer on top of the RMM — engineers who actively watch, triage, and respond to the telemetry 24/7. NOCKO provides both: we deploy and configure the RMM tooling (N-able, Datto RMM, Zabbix, PRTG) and we operate the NOC function, either fully managed or as an after-hours extension of your internal IT team. For most Dubai SMEs with 50–200 seats, a fully managed NOC service is more cost-effective than hiring two or three additional IT staff to provide the same coverage.",
+  },
+  {
+    question: "How quickly can NOCKO deploy infrastructure monitoring for a new client?",
+    answer: "For a 50-seat environment, initial monitoring coverage is live within 2–3 business days of engagement start. This includes RMM agent deployment to all Windows and macOS endpoints via group policy or MDM, SNMP configuration on switches and firewalls, and base alert threshold configuration. Full threshold tuning — calibrating alerts to the client's specific environment baseline to minimise false positives — takes an additional 2–3 weeks of live operation. By the end of the first month, alert noise is typically reduced by 60–70% from initial defaults while genuine alert detection rate improves.",
+  },
+  {
+    question: "Can NOCKO integrate monitoring alerts into our existing IT ticketing system?",
+    answer: "Yes. NOCKO's monitoring stack integrates with ConnectWise Manage, Autotask PSA, Freshservice, Jira Service Management, and ServiceNow via native API connectors or webhook-based integrations. Monitoring alerts generate tickets automatically with pre-populated diagnostic data — affected device, alert type, threshold breached, current metric value, and correlated recent events — so the engineer receiving the ticket has context immediately rather than having to gather it manually. For clients with existing ITSM platforms, we configure bidirectional sync so ticket status updates in your system are reflected in our monitoring dashboard in real time.",
+  },
+];
 
 export default function ITSupportMonitoringPage() {
   return (
     <>
       <StructuredData type="Article" data={{ headline: articleData.hero.title, datePublished: '2025-03-10', dateModified: '2026-05-24', author: { '@type': 'Organization', name: 'NOCKO Information Technology' } }} />
-      <StructuredData type="FAQPage" data={{ mainEntity: [
-          { '@type': 'Question', name: `What is the difference between RMM monitoring and a NOC service?`, acceptedAnswer: { '@type': 'Answer', text: `RMM (Remote Monitoring and Management) refers to the tooling layer — the agents, SNMP collectors, and dashboards that gather and display infrastructure telemetry. A NOC (Network Operations Centre) service is the human operations layer on top of the RMM — engineers who actively watch, triage, and respond to the telemetry 24/7. NOCKO provides both: we deploy and configure the RMM tooling (N-able, Datto RMM, Zabbix, PRTG) and we operate the NOC function, either fully managed or as an after-hours extension of your internal IT team. For most Dubai SMEs with 50–200 seats, a fully managed NOC service is more cost-effective than hiring two or three additional IT staff to provide the same coverage.` } },
-          { '@type': 'Question', name: `How quickly can NOCKO deploy infrastructure monitoring for a new client?`, acceptedAnswer: { '@type': 'Answer', text: `For a 50-seat environment, initial monitoring coverage is live within 2–3 business days of engagement start. This includes RMM agent deployment to all Windows and macOS endpoints via group policy or MDM, SNMP configuration on switches and firewalls, and base alert threshold configuration. Full threshold tuning — calibrating alerts to the client\'s specific environment baseline to minimise false positives — takes an additional 2–3 weeks of live operation. By the end of the first month, alert noise is typically reduced by 60–70% from initial defaults while genuine alert detection rate improves.` } },
-          { '@type': 'Question', name: `Can NOCKO integrate monitoring alerts into our existing IT ticketing system?`, acceptedAnswer: { '@type': 'Answer', text: `Yes. NOCKO\'s monitoring stack integrates with ConnectWise Manage, Autotask PSA, Freshservice, Jira Service Management, and ServiceNow via native API connectors or webhook-based integrations. Monitoring alerts generate tickets automatically with pre-populated diagnostic data — affected device, alert type, threshold breached, current metric value, and correlated recent events — so the engineer receiving the ticket has context immediately rather than having to gather it manually. For clients with existing ITSM platforms, we configure bidirectional sync so ticket status updates in your system are reflected in our monitoring dashboard in real time.` } }
-        ] }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero
@@ -116,6 +114,10 @@ export default function ITSupportMonitoringPage() {
   ]}/>
           </div>
         </div>
+        <FAQAccordion
+          title="Frequently Asked Questions — IT Infrastructure Monitoring Dubai"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'IT Budget Planning and Financial Governance',
       text: '<p>We produce an annual IT budget recommendation covering all known expenditure categories: hardware refresh, software licences, security tools, connectivity costs, and managed service fees. For companies with multiple UAE entities, we allocate costs by entity for accurate P&L reporting. This level of detail satisfies the CFO, eliminates budget surprises, and supports accurate financial statements.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: What is the difference between a vCIO and a regular IT consultant?</strong><br/>A: An IT consultant delivers a project and leaves. A vCIO provides ongoing strategic oversight as part of your management team, attending meetings, tracking IT KPIs, and continuously aligning technology to business strategy.',
-        '<strong>Q: Do we need a vCIO if we already have an internal IT manager?</strong><br/>A: A vCIO complements an internal IT manager rather than replacing them. The internal manager handles day-to-day operations; the vCIO brings strategic expertise, vendor relationships, and board-level communication skills.',
-        '<strong>Q: How often does the vCIO meet with our management team?</strong><br/>A: Quarterly reviews are standard in our comprehensive AMC tier. Monthly touchpoints via email summary are included, and ad-hoc calls for urgent decisions are available without additional charge.',
-        '<strong>Q: Can the vCIO represent us in meetings with government entities like TRA or TDRA?</strong><br/>A: Yes — our vCIOs have experience representing clients in regulatory discussions with UAE government entities and can attend meetings on your behalf.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "What is the difference between a vCIO and a regular IT consultant?",
+    answer: "An IT consultant delivers a project and leaves. A vCIO provides ongoing strategic oversight as part of your management team, attending meetings, tracking IT KPIs, and continuously aligning technology to business strategy.",
+  },
+  {
+    question: "Do we need a vCIO if we already have an internal IT manager?",
+    answer: "A vCIO complements an internal IT manager rather than replacing them. The internal manager handles day-to-day operations; the vCIO brings strategic expertise, vendor relationships, and board-level communication skills.",
+  },
+  {
+    question: "How often does the vCIO meet with our management team?",
+    answer: "Quarterly reviews are standard in our comprehensive AMC tier. Monthly touchpoints via email summary are included, and ad-hoc calls for urgent decisions are available without additional charge.",
+  },
+];
 
 export default function ItamccomprehensivePage() {
   return (
@@ -72,11 +79,16 @@ export default function ItamccomprehensivePage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC', href: '/services/it-amc' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

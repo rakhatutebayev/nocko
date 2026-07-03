@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Continuous Compliance Scanning',
       text: '<p>Cloud configurations drift over time as developers make ad-hoc changes. We deploy AWS Security Hub with CIS Benchmark controls enabled, or Azure Security Centre with Defender for Cloud, sending real-time alerts when a security group is opened to 0.0.0.0/0 or public blob access is enabled on a storage account.</p><p>Weekly compliance reports are sent to your IT manager and CISO, showing the current security score and any open findings ranked by severity. For NESA-regulated entities, we map these findings directly to the NESA IA control framework for audit evidence.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Does moving to Azure or AWS automatically make us NESA compliant?</strong><br/>A: No — the cloud provider secures the infrastructure, but you remain responsible for IAM, encryption, patching, and network configuration. We handle all of those for you.',
-        '<strong>Q: How often should we rotate encryption keys?</strong><br/>A: NESA IA guidelines recommend 90-day key rotation for sensitive data. We automate this via AWS KMS automatic rotation or Azure Key Vault rotation policies.',
-        '<strong>Q: What is the risk of leaving default Security Group rules in place?</strong><br/>A: Default rules in AWS allow all outbound traffic and typically have broad inbound rules for common services. This creates unnecessary exposure — we close all unnecessary ports as part of initial hardening.',
-        '<strong>Q: Can you help us pass a cloud security audit for a UAE government tender?</strong><br/>A: Yes — we produce audit-ready evidence packages including AWS Config compliance reports, IAM access reviews, and encryption documentation formatted for UAE government and NESA audit requirements.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Does moving to Azure or AWS automatically make us NESA compliant?",
+    answer: "No — the cloud provider secures the infrastructure, but you remain responsible for IAM, encryption, patching, and network configuration. We handle all of those for you.",
+  },
+  {
+    question: "How often should we rotate encryption keys?",
+    answer: "NESA IA guidelines recommend 90-day key rotation for sensitive data. We automate this via AWS KMS automatic rotation or Azure Key Vault rotation policies.",
+  },
+  {
+    question: "What is the risk of leaving default Security Group rules in place?",
+    answer: "Default rules in AWS allow all outbound traffic and typically have broad inbound rules for common services. This creates unnecessary exposure — we close all unnecessary ports as part of initial hardening.",
+  },
+];
 
 export default function CloudsecuritycompliancePage() {
   return (
@@ -72,11 +79,16 @@ export default function CloudsecuritycompliancePage() {
           description={articleData.hero.description}
         />
         <div className="container">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cloud' }, { label: 'Article Details' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cloud', href: '/services/cloud' }, { label: 'Article Details' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>

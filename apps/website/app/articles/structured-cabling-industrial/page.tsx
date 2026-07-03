@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
+import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
@@ -46,18 +47,24 @@ const articleData = {
       title: 'Hospitality and Retail Environments',
       text: '<p>Hotels and retail fit-outs in Dubai Mall and other major centres require cabling that is invisible, installed without damage to high-value finishes, and integrated with building management systems. We work within the specific constraints of occupied retail environments and hospitality properties, including coordinating work during non-trading hours and protecting marble, glass, and fitted furniture from installation activity.</p>',
     },
-    {
-      title: 'Frequently Asked Questions',
-      text: '',
-      list: [
-        '<strong>Q: Can standard Cat6A cable be used in a JAFZA warehouse?</strong><br/>A: Standard PVC-jacketed Cat6A degrades at sustained temperatures above 60°C and in UV-exposed outdoor sections. We specify LSZH or PE-jacketed cable rated for the specific temperature and exposure conditions of each section of the installation.',
-        '<strong>Q: What connectivity standard applies to industrial automation networks?</strong><br/>A: Industrial automation uses PROFINET, EtherNet/IP, or Modbus TCP over standard ethernet. We design the passive infrastructure to support these protocols, but the active industrial network devices are typically supplied by the automation system vendor.',
-        '<strong>Q: How do you handle cabling in a building that is still under fit-out?</strong><br/>A: We coordinate with the main contractor and MEP consultant to install cable containment (trays, conduit) during the early fit-out stage before ceilings close, then pull and terminate cables during the final phase. This saves significant cost versus installing after the ceiling is complete.',
-        '<strong>Q: Do you handle cabling in UAE free zones outside Dubai (Sharjah, Abu Dhabi)?</strong><br/>A: Yes — we work across all UAE emirates including KIZAD in Abu Dhabi, SAIF Zone in Sharjah, and RAKIA in Ras Al Khaimah.',
-      ],
-    },
+    
   ],
 };
+
+const faqItems = [
+  {
+    question: "Can standard Cat6A cable be used in a JAFZA warehouse?",
+    answer: "Standard PVC-jacketed Cat6A degrades at sustained temperatures above 60°C and in UV-exposed outdoor sections. We specify LSZH or PE-jacketed cable rated for the specific temperature and exposure conditions of each section of the installation.",
+  },
+  {
+    question: "What connectivity standard applies to industrial automation networks?",
+    answer: "Industrial automation uses PROFINET, EtherNet/IP, or Modbus TCP over standard ethernet. We design the passive infrastructure to support these protocols, but the active industrial network devices are typically supplied by the automation system vendor.",
+  },
+  {
+    question: "How do you handle cabling in a building that is still under fit-out?",
+    answer: "We coordinate with the main contractor and MEP consultant to install cable containment (trays, conduit) during the early fit-out stage before ceilings close, then pull and terminate cables during the final phase. This saves significant cost versus installing after the ceiling is complete.",
+  },
+];
 
 export default function StructuredcablingindustrialPage() {
   return (
@@ -77,6 +84,11 @@ export default function StructuredcablingindustrialPage() {
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          items={faqItems}
+        />
       </main>
       <Footer />
     </>
