@@ -89,7 +89,15 @@ const fallback: MappedServiceContent = {
     { icon: '/images/benefits/pricing.png', text: 'Aggressive cost optimization' },
     { icon: '/images/benefits/communication.png', text: 'Transparent dashboard metrics' },
   ],
-  resources: [],
+  resources: [
+    {
+      type: 'Case Study',
+      title: 'Zero-Downtime Google Workspace Migration',
+      description: 'How a Dubai hospitality group moved every mailbox to a new domain during a rebrand — with zero downtime and no lost history.',
+      url: '/case-studies/workspace-migration',
+      ctaText: 'Read the case study',
+    },
+  ],
   cta: {
     title: 'Ready to Evacuate Your Server Room?',
     text: 'Contact our senior cloud architects for a free Total Cost of Ownership (TCO) analysis.',

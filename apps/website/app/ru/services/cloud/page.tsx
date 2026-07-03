@@ -90,7 +90,15 @@ const fallback: MappedServiceContent = {
     { icon: '/images/benefits/pricing.png', text: 'Агрессивная оптимизация затрат' },
     { icon: '/images/benefits/communication.png', text: 'Прозрачные метрики в дашборде' },
   ],
-  resources: [],
+  resources: [
+    {
+      type: 'Кейс',
+      title: 'Миграция Google Workspace без простоя',
+      description: 'Как гостиничная группа в Дубае перевела все почтовые ящики на новый домен при ребрендинге — без простоя и без потери истории.',
+      url: '/ru/case-studies/workspace-migration',
+      ctaText: 'Читать кейс',
+    },
+  ],
   faq: [
     { question: 'Соответствуют ли AWS/Azure законам ОАЭ о локализации данных?', answer: 'Да. Как AWS, так и Microsoft Azure теперь имеют выделенные локальные регионы в ОАЭ (AWS Middle East Region, Azure UAE Central).' },
     { question: 'Сколько времени занимает корпоративная миграция в облако в Дубае?', answer: 'В зависимости от сложности проекта, стандартные корпоративные миграции занимают от 4 до 12 недель. Наша команда разворачивает параллельные среды для обеспечения нулевого простоя.' },

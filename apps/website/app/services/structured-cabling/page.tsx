@@ -92,6 +92,14 @@ const fallback: MappedServiceContent = {
   resources: [
     {
       type: 'CASE STUDY',
+      title: 'Network Segmentation & FortiGate for a Dubai Group',
+      description: 'How we re-architected a flat network into segmented VLANs with a FortiGate edge and Cisco core — isolating POS, guest and back-office traffic.',
+      image: '/images/services/cards/book.png',
+      url: '/case-studies/network-segmentation',
+      ctaText: 'Read the case study',
+    },
+    {
+      type: 'CASE STUDY',
       title: 'How Scalini Transformed Network Infrastructure Across 5 Locations',
       description: 'Learn how Scalini restaurant chain upgraded their network infrastructure across 5 Dubai locations, reducing downtime by 95%.',
       image: '/images/services/cards/book.png',

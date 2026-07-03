@@ -89,7 +89,15 @@ const fallback: MappedServiceContent = {
     { icon: '/images/benefits/pricing.png', text: 'Predictable monthly costs' },
     { icon: '/images/benefits/communication.png', text: 'Monthly performance reports' },
   ],
-  resources: [],
+  resources: [
+    {
+      type: 'Case Study',
+      title: 'Automated EMR Backup & Compliance for a UAE Clinic',
+      description: 'How we protected a medical clinic\'s EMR, imaging and accounting data with automated daily backups and audit-ready reporting.',
+      url: '/case-studies/emr-backup',
+      ctaText: 'Read the case study',
+    },
+  ],
   cta: {
     title: 'Ready to Outsource Your IT?',
     text: 'Get a free managed services assessment and discover how much you can save while improving IT performance.',

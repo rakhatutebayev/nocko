@@ -90,7 +90,15 @@ const fallback: MappedServiceContent = {
     { icon: '/images/benefits/pricing.png', text: 'Предсказуемые счета (OPEX)' },
     { icon: '/images/benefits/communication.png', text: 'Полное управление контрагентами' },
   ],
-  resources: [],
+  resources: [
+    {
+      type: 'Кейс',
+      title: 'Автоматический бэкап EMR и комплаенс для клиники в ОАЭ',
+      description: 'Как мы защитили EMR, снимки и бухгалтерские данные клиники ежедневными автоматическими бэкапами и отчётами для аудита.',
+      url: '/ru/case-studies/emr-backup',
+      ctaText: 'Читать кейс',
+    },
+  ],
   cta: {
     title: 'Готовы перестать беспокоиться об ИТ?',
     text: 'Запланируйте аудит инфраструктуры с vCTO NOCKO, чтобы определить, готова ли ваша фирма к переходу на управляемые услуги.',

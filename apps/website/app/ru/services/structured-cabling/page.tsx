@@ -90,7 +90,15 @@ const fallback: MappedServiceContent = {
     { icon: '/images/benefits/pricing.png', text: '25-летняя гарантия на оборудование' },
     { icon: '/images/benefits/communication.png', text: 'Исчерпывающая документация' },
   ],
-  resources: [],
+  resources: [
+    {
+      type: 'Кейс',
+      title: 'Сегментация сети и FortiGate для группы в Дубае',
+      description: 'Как мы перестроили плоскую сеть в сегментированные VLAN с FortiGate на периметре и ядром Cisco — изолировав POS, гостевой и офисный трафик.',
+      url: '/ru/case-studies/network-segmentation',
+      ctaText: 'Читать кейс',
+    },
+  ],
   cta: {
     title: 'Готовы обновить сетевую инфраструктуру?',
     text: 'Свяжитесь с нами для бесплатной консультации, и мы обсудим ваши потребности в СКС.',
