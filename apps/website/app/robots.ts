@@ -8,12 +8,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/', '/_next/static/media/', '/_next/static/chunks/', '/manifest.json', '/favicon.ico'],
+        disallow: ['/api/', '/admin/'],
       },
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: ['/api/', '/admin/', '/_next/static/media/', '/_next/static/chunks/', '/manifest.json', '/favicon.ico'],
+        disallow: ['/api/', '/admin/'],
       },
       { userAgent: 'GPTBot', allow: '/' },
       { userAgent: 'OAI-SearchBot', allow: '/' },
