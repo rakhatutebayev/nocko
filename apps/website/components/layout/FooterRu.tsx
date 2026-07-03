@@ -131,6 +131,11 @@ export default function FooterRu() {
             &copy; <span itemProp="copyrightYear">{currentYear}</span>{' '}
             <span itemProp="name">NOCKO Information Technology</span>. Все права защищены.
           </p>
+          <nav className="footer__legal" aria-label="Правовая информация">
+            <Link href="/ru/privacy-policy">Политика конфиденциальности</Link>
+            <Link href="/ru/terms">Условия использования</Link>
+            <a href="https://www.linkedin.com/company/it-nocko/" target="_blank" rel="noopener noreferrer" aria-label="NOCKO в LinkedIn">LinkedIn</a>
+          </nav>
         </div>
       </div>
     </footer>

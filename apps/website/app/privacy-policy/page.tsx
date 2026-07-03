@@ -4,7 +4,7 @@ import Footer from '@/components/layout/Footer';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | NOCKO Information Technology',
+  title: 'Privacy Policy',
   description: 'Privacy Policy for NOCKO Information Technology. Learn how we collect, use, and protect your personal data in accordance with UAE data protection laws.',
   alternates: {
     canonical: '/privacy-policy',

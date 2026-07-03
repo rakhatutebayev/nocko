@@ -4,7 +4,7 @@ import Footer from '@/components/layout/FooterRu';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Условия использования | NOCKO Information Technology',
+  title: 'Условия использования',
   description: 'Условия использования NOCKO Information Technology. Условия, регулирующие использование нашего веб-сайта и ИТ-услуг в Дубае и ОАЭ.',
   alternates: {
     canonical: '/ru/terms',

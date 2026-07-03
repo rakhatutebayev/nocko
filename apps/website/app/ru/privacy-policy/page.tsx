@@ -4,7 +4,7 @@ import Footer from '@/components/layout/FooterRu';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Политика конфиденциальности | NOCKO Information Technology',
+  title: 'Политика конфиденциальности',
   description: 'Политика конфиденциальности NOCKO Information Technology. Узнайте, как мы собираем, используем и защищаем ваши персональные данные в соответствии с законодательством ОАЭ о защите данных.',
   alternates: {
     canonical: '/ru/privacy-policy',

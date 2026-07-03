@@ -4,7 +4,7 @@ import Footer from '@/components/layout/Footer';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | NOCKO Information Technology',
+  title: 'Terms of Service',
   description: 'Terms of Service for NOCKO Information Technology. Governing terms for use of our website and IT services in Dubai and the UAE.',
   alternates: {
     canonical: '/terms',
