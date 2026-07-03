@@ -173,6 +173,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'it-consulting',
     'enterprise',
     'cybersecurity',
+    'network-segmentation',
+    'emr-backup',
+    'workspace-migration',
   ].map((slug) => ({
     url: `${baseUrl}/case-studies/${slug}`,
     lastModified: new Date(),

@@ -217,6 +217,57 @@ export async function generateMetadata({
     };
   }
 
+  if (!caseStudy && slug === 'network-segmentation') {
+    return {
+      alternates: { canonical: `/case-studies/${slug}` },
+      title: 'How a Multi-Site Dubai Group Secured Its Network with Segmentation & FortiGate | Case Study | NOCKO',
+      description:
+        'A multi-site F&B group in Dubai replaced a flat, undocumented network with a segmented FortiGate + Cisco core architecture — isolating POS, guest and back-office traffic and securing remote access.',
+      keywords:
+        'network segmentation Dubai, FortiGate firewall UAE, VLAN segmentation, network audit Dubai, structured network UAE, IPsec VPN UAE',
+      openGraph: {
+        title: 'How a Multi-Site Dubai Group Secured Its Network with Segmentation & FortiGate | NOCKO',
+        description:
+          'A Dubai group replaced a flat network with a segmented FortiGate + Cisco core, isolating POS/guest/back-office and securing remote access.',
+        type: 'article',
+      },
+    };
+  }
+
+  if (!caseStudy && slug === 'emr-backup') {
+    return {
+      alternates: { canonical: `/case-studies/${slug}` },
+      title: 'How a UAE Medical Clinic Automated EMR Backup & Compliance Reporting | Case Study | NOCKO',
+      description:
+        'A UAE medical clinic protected its EMR, imaging and accounting systems with automated daily backups on Synology Active Backup for Business and a self-generating daily compliance report.',
+      keywords:
+        'EMR backup UAE, medical data backup Dubai, healthcare disaster recovery UAE, Synology Active Backup, backup compliance reporting, clinic IT backup',
+      openGraph: {
+        title: 'How a UAE Medical Clinic Automated EMR Backup & Compliance Reporting | NOCKO',
+        description:
+          'A UAE clinic protected EMR, imaging and accounting data with automated daily backups and self-generating compliance reports.',
+        type: 'article',
+      },
+    };
+  }
+
+  if (!caseStudy && slug === 'workspace-migration') {
+    return {
+      alternates: { canonical: `/case-studies/${slug}` },
+      title: 'How a Dubai Hospitality Group Migrated Google Workspace During a Rebrand with Zero Downtime | Case Study | NOCKO',
+      description:
+        'During a corporate rebrand, a Dubai hospitality group moved every mailbox to a new Google Workspace domain with zero downtime and no lost email history.',
+      keywords:
+        'Google Workspace migration Dubai, email migration UAE, domain migration, workspace migration UAE, zero downtime email migration, cloud migration Dubai',
+      openGraph: {
+        title: 'How a Dubai Hospitality Group Migrated Google Workspace During a Rebrand with Zero Downtime | NOCKO',
+        description:
+          'A Dubai hospitality group moved every mailbox to a new Google Workspace domain during a rebrand — zero downtime, no lost history.',
+        type: 'article',
+      },
+    };
+  }
+
   if (!caseStudy) {
     notFound();
   }
@@ -509,6 +560,81 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         },
         testimonial:
           '"We had 90 days to fix years of accumulated security debt before a regulatory audit. NOCKO delivered every single remediation on time. We passed with zero findings — something we genuinely did not expect to achieve."',
+      },
+    } as any;
+  }
+
+  if (!caseStudy && slug === 'network-segmentation') {
+    caseStudy = {
+      attributes: {
+        title: 'How a Multi-Site Dubai Group Secured Its Network with Segmentation and FortiGate',
+        client: 'Multi-Site F&B Group (Dubai)',
+        industry: 'Network Infrastructure & Security',
+        createdAt: '2026-05-14T00:00:00.000Z',
+        updatedAt: '2026-05-14T00:00:00.000Z',
+        challenge:
+          '<p>A growing food & beverage group operating multiple venues across Dubai had expanded faster than its network could keep up. The infrastructure had grown organically into a flat, largely undocumented topology — point-of-sale terminals, back-office accounting, CCTV and guest Wi-Fi all shared the same broadcast domain, with no isolation between sensitive systems and public traffic.</p><p>Leadership needed a clear, documented picture of what was actually running on the network, a firewall they could trust at the edge, and proper segmentation so a compromised guest device or POS terminal could never reach financial or management systems.</p>',
+        solution:
+          '<p>NOCKO began with a full L2/L3 topology audit, mapping every interface, VLAN and data flow into a single as-built diagram. We deployed a FortiGate firewall as the edge gateway handling NAT and secure IPsec VPN access for remote staff, and configured a Cisco Nexus core switch to perform inter-VLAN routing.</p><p>The flat network was re-architected into dedicated VLANs — corporate, point-of-sale, back-office, CCTV and guest — with access-control lists restricting the sensitive segments so that guest and public devices are fully isolated from financial and management systems. The entire design was documented and handed over as a maintainable reference.</p>',
+        results: {
+          segmentation: 'Re-architected a flat network into segmented VLANs with ACL isolation between sensitive and public traffic',
+          firewall: 'Deployed a FortiGate edge firewall with policy-based control and NAT',
+          remote: 'Enabled secure remote access for staff via encrypted IPsec VPN',
+          isolation: 'Fully isolated guest Wi-Fi and POS traffic from back-office and financial systems',
+          documentation: 'Delivered a complete as-built L2/L3 topology diagram as a single source of network truth',
+        },
+        testimonial:
+          '"For the first time we actually know what our network looks like. Guest devices can no longer touch our POS or accounts, and remote staff connect securely. NOCKO turned a tangle of cables into a documented, defensible system."',
+      },
+    } as any;
+  }
+
+  if (!caseStudy && slug === 'emr-backup') {
+    caseStudy = {
+      attributes: {
+        title: 'How a UAE Medical Clinic Automated EMR Backup and Compliance Reporting',
+        client: 'Private Medical Clinic (UAE)',
+        industry: 'Healthcare IT — Backup & Disaster Recovery',
+        createdAt: '2026-06-23T00:00:00.000Z',
+        updatedAt: '2026-06-23T00:00:00.000Z',
+        challenge:
+          '<p>A private medical clinic in the UAE ran its Electronic Medical Records (EMR) system, diagnostic imaging (X-ray) workstation and accounting server on a mix of virtual machines and physical PCs. Patient data must be protected and recoverable under UAE healthcare regulations, but the clinic had no automated way to verify that backups were actually running — or to produce evidence of it for an audit.</p><p>The team needed reliable, isolated daily backups of every critical system and, just as importantly, a repeatable way to prove to regulators and management that those backups completed successfully.</p>',
+        solution:
+          '<p>NOCKO consolidated backups onto a Synology NAS running Active Backup for Business, with dedicated jobs for the EMR production server (a Linux virtual machine), the X-ray imaging workstation, the accounting server and the domain controller. Backups run automatically overnight using an incremental-forever schedule with multi-version retention.</p><p>To close the compliance gap, we built an automated reporting script that runs on the NAS itself and emails a daily backup report — backup type, source, location, size, retention, network isolation and full server specifications — pulled directly from the backup database so the evidence is always accurate and never hand-edited.</p>',
+        results: {
+          coverage: 'Automated daily backups of EMR, diagnostic imaging, accounting and domain-controller systems',
+          emr: 'EMR production server protected with 1 TB daily incremental backups and multi-version retention',
+          reporting: 'Self-generating daily compliance report emailed automatically — audit-ready evidence with no manual work',
+          accuracy: 'Report data pulled directly from the backup engine, eliminating manual transcription errors',
+          recovery: 'Every critical system now has a verified, recoverable restore point every single day',
+        },
+        testimonial:
+          '"We used to hope our backups were working. Now we get a clean report in our inbox every morning that proves it — patient records, imaging and accounts, all covered. For a healthcare provider, that peace of mind is everything."',
+      },
+    } as any;
+  }
+
+  if (!caseStudy && slug === 'workspace-migration') {
+    caseStudy = {
+      attributes: {
+        title: 'How a Dubai Hospitality Group Migrated Google Workspace During a Rebrand with Zero Downtime',
+        client: 'Hospitality Group (Dubai)',
+        industry: 'Cloud & Email Migration',
+        createdAt: '2026-01-28T00:00:00.000Z',
+        updatedAt: '2026-01-28T00:00:00.000Z',
+        challenge:
+          '<p>A Dubai hospitality group was going through a full corporate rebrand, which meant moving the entire team from its old email domain to a brand-new Google Workspace domain. Email is the operational backbone of a hospitality business — reservations, supplier orders and management all run through it — so the migration had to happen without losing a single message or interrupting daily operations.</p><p>The group needed every mailbox, along with its full history, moved cleanly to the new domain, with no downtime during service hours and no risk of bounced or lost email during the cutover.</p>',
+        solution:
+          '<p>NOCKO planned a staged Google Workspace migration. We built a complete source-to-target mapping of every user account, provisioned the new domain, and used Google\'s data migration tooling to copy all mail and history into the new mailboxes while the old system stayed live and untouched.</p><p>Once every mailbox was verified against the source, we scheduled the DNS and MX cutover for an off-peak window so the switch to the new domain was invisible to staff and guests. Passwords and access were reset on handover to keep the new tenant secure from day one.</p>',
+        results: {
+          downtime: 'Completed the domain migration with zero downtime during business hours',
+          history: 'Migrated every mailbox with full email history preserved — nothing lost',
+          cutover: 'Executed the DNS/MX cutover in an off-peak window, invisible to staff and guests',
+          security: 'Reset credentials and secured the new Google Workspace tenant on handover',
+          rebrand: 'Delivered a clean email identity aligned to the new brand, on schedule',
+        },
+        testimonial:
+          '"Rebranding is stressful enough without worrying about email. NOCKO moved everyone to the new domain over a weekend — Monday morning it just worked, with every old message still there. Not one complaint from the team."',
       },
     } as any;
   }
