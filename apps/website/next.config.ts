@@ -114,6 +114,9 @@ const nextConfig: NextConfig = {
       { source: '/resources/structured-cabling-guide', destination: '/articles/structured-cabling-guide', permanent: true },
       // /locations index → Dubai (main location page)
       { source: '/locations', destination: '/locations/dubai', permanent: true },
+      // Catch-all: strip legacy .html suffix from any remaining path.
+      // Must stay LAST so specific .html→different-slug rules above win first.
+      { source: '/:path*.html', destination: '/:path*', permanent: true },
     ];
   },
   
