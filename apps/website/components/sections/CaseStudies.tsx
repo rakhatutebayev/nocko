@@ -18,7 +18,7 @@ interface CaseStudiesProps {
   caseStudies?: CaseStudy[];
 }
 
-const defaultCaseStudies: CaseStudy[] = [
+export const defaultCaseStudies: CaseStudy[] = [
   {
     id: 'scalini',
     title: 'How Scalini Standardized Network Infrastructure Across 5 Locations',
@@ -71,6 +71,78 @@ const defaultCaseStudies: CaseStudy[] = [
     image: '/images/cases/cloud.svg',
     alt: 'Cloud migration case study',
     href: '/case-studies/fh',
+    color: 'blue',
+  },
+  {
+    id: 'network-segmentation',
+    title: 'How a Multi-Site Dubai Group Secured Its Network with Segmentation and FortiGate',
+    type: 'Network Infrastructure & Security',
+    image: '/images/cases/structured.svg',
+    alt: 'Network segmentation case study',
+    href: '/case-studies/network-segmentation',
+    color: 'blue',
+  },
+  {
+    id: 'emr-backup',
+    title: 'How a UAE Medical Clinic Automated EMR Backup and Compliance Reporting',
+    type: 'Backup & Disaster Recovery',
+    image: '/images/cases/itmanagment.svg',
+    alt: 'Healthcare EMR backup case study',
+    href: '/case-studies/emr-backup',
+    color: 'blue',
+  },
+  {
+    id: 'workspace-migration',
+    title: 'How a Dubai Hospitality Group Migrated Google Workspace with Zero Downtime',
+    type: 'Cloud & Email Migration',
+    image: '/images/cases/cloud.svg',
+    alt: 'Google Workspace migration case study',
+    href: '/case-studies/workspace-migration',
+    color: 'blue',
+  },
+  {
+    id: 'enterprise',
+    title: 'How a 300-Seat UAE Logistics Enterprise Unified IT Across 4 Offices',
+    type: 'Managed IT Services',
+    image: '/images/cases/itmanagment.svg',
+    alt: 'Enterprise managed IT case study',
+    href: '/case-studies/enterprise',
+    color: 'blue',
+  },
+  {
+    id: 'cybersecurity',
+    title: 'How a UAE Healthcare Group Passed Its HAAD Audit with Zero Findings',
+    type: 'Cybersecurity & Compliance',
+    image: '/images/cases/cybersecurity.svg',
+    alt: 'Healthcare cybersecurity case study',
+    href: '/case-studies/cybersecurity',
+    color: 'blue',
+  },
+  {
+    id: 'it-consulting',
+    title: 'How a Dubai Real Estate Firm Cut IT Costs 35% with Strategic IT Consulting',
+    type: 'IT Consulting & Strategy',
+    image: '/images/cases/amc.svg',
+    alt: 'IT consulting case study',
+    href: '/case-studies/it-consulting',
+    color: 'blue',
+  },
+  {
+    id: 'ransomware-recovery',
+    title: 'How We Isolated and Defeated Ransomware in 4 Hours',
+    type: 'Cybersecurity Incident Response',
+    image: '/images/cases/cybersecurity.svg',
+    alt: 'Ransomware recovery case study',
+    href: '/case-studies/ransomware-recovery',
+    color: 'blue',
+  },
+  {
+    id: 'm365-audit',
+    title: 'How an M365 Audit Saved a Dubai Firm 40% Annually',
+    type: 'IT Consulting',
+    image: '/images/cases/itmanagment.svg',
+    alt: 'Microsoft 365 audit case study',
+    href: '/case-studies/m365-audit',
     color: 'blue',
   },
 ];

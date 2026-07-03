@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
 import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
-import CaseStudies from '@/components/sections/CaseStudies';
+import CaseStudies, { defaultCaseStudies } from '@/components/sections/CaseStudies';
 import { getCaseStudies } from '@/lib/api/strapi';
 
 export const metadata: Metadata = {
@@ -52,7 +52,10 @@ export default async function CaseStudiesPageRu() {
                   href: `/ru/case-studies/${cs.attributes.slug}`,
                   color: 'blue' as const,
                 }))
-              : undefined // The component has English defaults if undefined, but we'll accept that for now
+              : defaultCaseStudies.map((cs) => ({
+                  ...cs,
+                  href: cs.href.replace('/case-studies/', '/ru/case-studies/'),
+                }))
           }
         />
       </main>
