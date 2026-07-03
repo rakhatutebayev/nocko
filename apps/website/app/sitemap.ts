@@ -244,6 +244,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'structured-cabling-physical-security',
     'structured-cabling-retrofitting',
     'structured-cabling-wifi-heatmapping',
+    'cloud-banking-uae',
+    'google-workspace-vs-microsoft-365',
+    'healthcare-it-backup-uae',
   ].map((slug) => ({
     url: `${baseUrl}/articles/${slug}`,
     lastModified: new Date(),
@@ -312,6 +315,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'structured-cabling-physical-security',
     'structured-cabling-retrofitting',
     'structured-cabling-wifi-heatmapping',
+    'cloud-banking-uae',
+    'google-workspace-vs-microsoft-365',
+    'healthcare-it-backup-uae',
   ].map((slug) => ({
     url: `${baseUrl}/ru/articles/${slug}`,
     lastModified: new Date(),
