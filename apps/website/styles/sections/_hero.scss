@@ -11,36 +11,44 @@
   background-repeat: no-repeat;
   overflow: hidden;
    
-  // WebP support
-  .webp & {
-    background-image: url('/images/hero-bg.webp');
-  }
+  // WebP via image-set — browser picks webp, jpg above is the fallback
+  background-image: -webkit-image-set(url('/images/hero-bg.webp') 1x);
+  background-image: image-set(
+    url('/images/hero-bg.webp') type('image/webp'),
+    url('/images/hero-bg.jpg') type('image/jpeg')
+  );
   
   // Мобильная версия (≤992px) - используем оптимизированное изображение
   @media (max-width: 992px) {
     background-image: url('/images/hero-bg-mobile.jpg');
     
-    .webp & {
-      background-image: url('/images/hero-bg-mobile.webp');
-    }
+    background-image: -webkit-image-set(url('/images/hero-bg-mobile.webp') 1x);
+    background-image: image-set(
+      url('/images/hero-bg-mobile.webp') type('image/webp'),
+      url('/images/hero-bg-mobile.jpg') type('image/jpeg')
+    );
   }
   
   // Маленькие экраны (≤768px) - используем самое маленькое изображение
   @media (max-width: 768px) {
     background-image: url('/images/hero-bg-small.jpg');
     
-    .webp & {
-      background-image: url('/images/hero-bg-small.webp');
-    }
+    background-image: -webkit-image-set(url('/images/hero-bg-small.webp') 1x);
+    background-image: image-set(
+      url('/images/hero-bg-small.webp') type('image/webp'),
+      url('/images/hero-bg-small.jpg') type('image/jpeg')
+    );
   }
   
   // Очень маленькие экраны (≤480px) - используем самое компактное изображение
   @media (max-width: 480px) {
     background-image: url('/images/hero-bg-xs.jpg');
     
-    .webp & {
-      background-image: url('/images/hero-bg-xs.webp');
-    }
+    background-image: -webkit-image-set(url('/images/hero-bg-xs.webp') 1x);
+    background-image: image-set(
+      url('/images/hero-bg-xs.webp') type('image/webp'),
+      url('/images/hero-bg-xs.jpg') type('image/jpeg')
+    );
   }
   
   @include desktop {
