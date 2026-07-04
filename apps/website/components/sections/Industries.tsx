@@ -154,7 +154,7 @@ export default function Industries({
               <div
                 className="industries-tabs__content-area"
                 id="industry-panel-desktop"
-                role="region"
+                role="tabpanel"
                 aria-live="polite"
               >
                 <div className="industries-tabs__image-area">
@@ -199,6 +199,7 @@ export default function Industries({
                     <button
                       key={industry.id}
                       type="button"
+                      role="tab"
                       className={`industries-tabs__tab-clone tab-button ${isActive ? 'active' : ''}`}
                       aria-selected={isActive}
                       aria-controls="industry-panel-desktop"
