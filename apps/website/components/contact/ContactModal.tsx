@@ -27,6 +27,11 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [mounted, setMounted] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string>('');
+  const openedAtRef = useRef<number>(Date.now());
+
+  useEffect(() => {
+    if (isOpen) openedAtRef.current = Date.now();
+  }, [isOpen]);
 
   // Закрытие по ESC
   useEffect(() => {
@@ -175,6 +180,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         phone: phone || undefined,
         message,
         recaptchaToken,
+        formStartedAt: openedAtRef.current,
       });
       
       if (result.success) {

@@ -704,6 +704,7 @@ export async function submitContact(data: {
   phone?: string;
   message: string;
   recaptchaToken?: string;
+  formStartedAt?: number;
 }): Promise<{ success: boolean; message?: string }> {
   try {
     const response = await fetch('/api/contact', {

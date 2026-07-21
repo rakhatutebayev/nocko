@@ -46,9 +46,16 @@ function rateLimit(ip: string, max = 5, windowMs = 3600_000): boolean {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, message, website, recaptchaToken } = body.data || body;
+    const { name, email, phone, message, website, recaptchaToken, formStartedAt } = body.data || body;
 
     if (website?.trim()) {
+      return NextResponse.json({ success: false, message: 'Spam detected' }, { status: 400 });
+    }
+
+    // Bots POST instantly; humans take at least a few seconds to fill the form.
+    const startedAt = Number(formStartedAt);
+    const elapsed = Date.now() - startedAt;
+    if (!Number.isFinite(startedAt) || elapsed < 3000 || elapsed > 24 * 3600_000) {
       return NextResponse.json({ success: false, message: 'Spam detected' }, { status: 400 });
     }
 
@@ -78,6 +85,15 @@ export async function POST(request: NextRequest) {
 
     if (isSpam(`${name} ${email} ${message}`)) {
       return NextResponse.json({ success: false, message: 'Spam detected' }, { status: 400 });
+    }
+
+    // When reCAPTCHA is configured, a missing token is a hard failure — otherwise
+    // bots could skip verification by simply omitting the token.
+    if (RECAPTCHA_SECRET && !recaptchaToken) {
+      return NextResponse.json(
+        { success: false, message: 'reCAPTCHA verification failed' },
+        { status: 400 }
+      );
     }
 
     if (recaptchaToken && RECAPTCHA_SECRET) {
