@@ -49,7 +49,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Compliance-Driven Data Backup (DRaaS)',
       text: 'We deploy robust Disaster Recovery as a Service (DRaaS) with immutable, air-gapped backups and strict AES-256 encryption to ensure your data survives any disaster.',
-      link: '/articles/cloud-data-management',
+      link: '/articles/cloud-infrastructure-guide',
       linkText: 'Data Protection Strategies',
     },
   ],
@@ -64,7 +64,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Hybrid Cloud: Best of Both Worlds',
       text: 'We design sophisticated hybrid cloud architectures storing your sensitive databases on secure on-premise private servers in UAE data centers.',
-      link: '/articles/cloud-multi-hybrid',
+      link: '/articles/cloud-migration',
       linkText: 'Explore Hybrid Clouds',
       image: '/images/services/cloud-hybrid-v2.png',
       imageAlt: 'Hybrid cloud solutions in Dubai',
@@ -72,13 +72,13 @@ const fallback: MappedServiceContent = {
     {
       title: 'Cloud Security & NESA Compliance',
       text: 'We take full IAM management deploying Zero-Trust protocols and protecting endpoints, ensuring your architecture meets NESA strict standards.',
-      link: '/articles/cloud-security-compliance',
+      link: '/articles/cloud-infrastructure-guide',
       linkText: 'Secure Your Cloud',
     },
     {
       title: 'Microsoft 365 & Google Workspace Integration',
       text: 'We conduct full enterprise migrations from legacy on-premise Exchange servers directly to Microsoft 365 or Google Workspace.',
-      link: '/articles/cloud-infrastructure',
+      link: '/articles/cloud-infrastructure-guide',
       linkText: 'Modernize your workspace',
     },
   ],

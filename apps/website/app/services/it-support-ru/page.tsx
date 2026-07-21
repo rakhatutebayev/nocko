@@ -90,7 +90,7 @@ const itSupportRuContent = {
     {
       title: 'Управление мобильными устройствами (MDM)',
       text: 'В условиях гибридной работы защита мобильных устройств критична. Мы развертываем системы MDM (например, Microsoft Intune) для обеспечения безопасности корпоративных ноутбуков и телефонов. Если сотрудник потеряет устройство в такси, мы можем удаленно стереть все корпоративные данные за секунды.',
-      link: '/articles/cybersecurity-protection',
+      link: '/articles/cybersecurity-guide',
       linkText: 'Защита конечных точек',
       image: '/images/services/it-support-monitoring.webp',
       imageAlt: 'ИТ аутсорсинг в Дубае',

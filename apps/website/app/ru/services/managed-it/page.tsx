@@ -44,13 +44,13 @@ const fallback: MappedServiceContent = {
     {
       title: 'Совместное управление (Co-Managed IT)',
       text: 'Если у вас уже есть опытный ИТ-директор в Дубае, он не должен тратить время на установку патчей или управление резервными копиями. Наша структура Co-Managed IT интегрируется напрямую с вашей существующей командой, беря на себя рутину мониторинга.',
-      link: '/ru/articles/managed-it-scalable',
+      link: '/ru/articles/managed-it-services-guide',
       linkText: 'Узнать о Co-Managed IT',
     },
     {
       title: 'Виртуальный технический директор (vCTO)',
       text: 'Каждому бизнесу нужно техническое руководство, но CTO на полный рабочий день в ОАЭ стоит дорого. Наши контракты Managed IT включают руководство vCTO. Мы встречаемся с вашим советом директоров ежеквартально для планирования бюджетов и миграций.',
-      link: '/ru/articles/managed-it-cost',
+      link: '/ru/articles/managed-it-services-guide',
       linkText: 'Преимущества vCTO',
     },
   ],
@@ -65,7 +65,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Строгое соблюдение законов ОАЭ о данных',
       text: 'Управление ИТ на Ближнем Востоке требует строгого соблюдения местных законов. Мы гарантируем, что архитектура резервного копирования и места хранения данных полностью соответствуют требованиям TRA, DESC и NESA.',
-      link: '/ru/articles/managed-it-security',
+      link: '/ru/articles/managed-it-services-guide',
       linkText: 'Обеспечить соответствие данных',
       image: '/images/services/managed-it-security.webp',
       imageAlt: 'Услуги безопасности и соблюдения требований в ОАЭ',
@@ -73,13 +73,13 @@ const fallback: MappedServiceContent = {
     {
       title: 'Автоматизированный жизненный цикл устройств',
       text: 'Хватит тратить часы руководства на покупку ноутбуков. Когда вам нужно масштабировать команду, NOCKO берет на себя весь жизненный цикл оборудования. Мы закупаем корпоративное оборудование, применяем корпоративные образы через Microsoft Intune и доставляем устройство прямо на стол сотруднику.',
-      link: '/ru/articles/managed-it-monitoring',
+      link: '/ru/articles/it-support-monitoring',
       linkText: 'Автоматизировать закупки',
     },
     {
       title: 'Аварийное восстановление (Disaster Recovery)',
       text: 'Кибератака математически неизбежна. Наши пакеты Managed IT включают возможности аварийного восстановления корпоративного уровня. Мы управляем изолированными резервными копиями и проводим ежеквартальное тестирование.',
-      link: '/ru/articles/managed-it-backup',
+      link: '/ru/articles/data-backup-services-dubai',
       linkText: 'Посмотреть метрики восстановления',
     },
   ],

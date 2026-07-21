@@ -117,7 +117,7 @@ export default function ITConsultingInfrastructureDesignPage() {
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'ИТ Консалтинг', href: '/ru/services/it-consulting' }, { label: 'IT-интеграция при M&A' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} relatedArticles={[
-    { href: '/ru/articles/it-consulting-assessment', title: 'IT-оценка', description: 'Проверка инфраструктуры до начала проектирования.' },
+    { href: '/ru/articles/it-consulting-strategy', title: 'IT-оценка', description: 'Проверка инфраструктуры до начала проектирования.' },
     { href: '/ru/articles/it-consulting-strategy', title: 'IT-стратегический консалтинг', description: 'IT-планирование для организаций ОАЭ, согласованное с бизнесом.' },
     { href: '/ru/services/it-consulting', title: 'Услуги IT-консалтинга', description: 'Консультационный и архитектурный консалтинг для организаций ОАЭ.' }
   ]}/>

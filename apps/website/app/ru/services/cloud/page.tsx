@@ -50,7 +50,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Резервное копирование и DRaaS',
       text: 'Готова ли ваша компания к масштабной атаке программ-вымогателей? Мы внедряем надежное аварийное восстановление как услугу (DRaaS). Внедряя неизменяемые резервные копии и строгое шифрование AES-256, мы гарантируем, что ваши данные переживут любую катастрофу.',
-      link: '/ru/articles/cloud-data-management',
+      link: '/ru/articles/cloud-infrastructure-guide',
       linkText: 'Стратегии защиты данных',
     },
   ],
@@ -65,7 +65,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Гибридное облако: Лучшее из двух миров',
       text: 'Не все данные должны находиться на публичном сервере. Мы проектируем сложные архитектуры гибридного облака, которые хранят ваши высокочувствительные базы данных на безопасных локальных частных серверах в дата-центрах ОАЭ (таких как Khazna или Equinix DX1).',
-      link: '/ru/articles/cloud-multi-hybrid',
+      link: '/ru/articles/cloud-migration',
       linkText: 'Изучить Гибридные Облака',
       image: '/images/services/cloud-hybrid-v2.png',
       imageAlt: 'Гибридные облачные решения в Дубае',
@@ -73,13 +73,13 @@ const fallback: MappedServiceContent = {
     {
       title: 'Облачная безопасность и соответствие NESA',
       text: 'В облаке безопасность опирается на модель разделенной ответственности. Мы берем на себя полное управление IAM, развертывая протоколы Zero-Trust и защищая конечные точки, обеспечивая соответствие архитектуры строгим стандартам NESA.',
-      link: '/ru/articles/cloud-security-compliance',
+      link: '/ru/articles/cloud-infrastructure-guide',
       linkText: 'Обеспечить Безопасность Облака',
     },
     {
       title: 'Интеграция Microsoft 365 и Google Workspace',
       text: 'Модернизируйте вашу удаленную работу. Мы проводим полные корпоративные миграции с устаревших локальных серверов Exchange напрямую в Microsoft 365 или Google Workspace.',
-      link: '/ru/articles/cloud-infrastructure',
+      link: '/ru/articles/cloud-infrastructure-guide',
       linkText: 'Модернизируйте вашу работу',
     },
   ],

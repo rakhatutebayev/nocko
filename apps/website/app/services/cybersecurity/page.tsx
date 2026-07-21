@@ -35,7 +35,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Advanced Threat Detection & Response',
       text: 'Our Security Operations Center (SOC) monitors your infrastructure 24/7, detecting and neutralizing threats before they impact your business. We deploy AI-powered threat intelligence with sub-15-minute response times across all UAE business hours.',
-      link: '/articles/cybersecurity-monitoring',
+      link: '/articles/it-support-monitoring',
       linkText: 'Learn about threat monitoring',
       image: '/images/services/cybersecurity-protection.png',
       imageAlt: 'Cybersecurity threat detection in UAE',
@@ -43,13 +43,13 @@ const fallback: MappedServiceContent = {
     {
       title: 'Firewall Management & Network Security',
       text: 'We implement and manage enterprise-grade firewalls from Fortinet, Cisco, and Palo Alto Networks. Our network security engineers continuously tune rules to block emerging threats while maintaining optimal business performance.',
-      link: '/articles/cybersecurity-firewall',
+      link: '/articles/cybersecurity-guide',
       linkText: 'Network security details',
     },
     {
       title: 'Data Encryption & Protection',
       text: 'Comprehensive data protection covering data at rest and in transit. We implement AES-256 encryption, DLP policies, and access controls ensuring your sensitive business data remains protected and compliant with UAE data regulations.',
-      link: '/articles/cybersecurity-data-protection',
+      link: '/articles/cybersecurity-guide',
       linkText: 'Data protection strategies',
     },
   ],
@@ -72,13 +72,13 @@ const fallback: MappedServiceContent = {
     {
       title: 'Security Compliance & Auditing',
       text: 'Achieve and maintain compliance with UAE NESA, ISO 27001, and international security standards. Our compliance experts conduct thorough security audits, gap analysis, and provide detailed remediation roadmaps.',
-      link: '/articles/cybersecurity-compliance',
+      link: '/articles/cybersecurity-guide',
       linkText: 'Compliance frameworks',
     },
     {
       title: 'Incident Response Planning',
       text: 'Prepare for the worst with a robust incident response plan. We develop, test, and maintain your organization\'s ability to detect, contain, and recover from security incidents with minimal business disruption.',
-      link: '/articles/cybersecurity-incident-response',
+      link: '/articles/cybersecurity-guide',
       linkText: 'Incident response details',
     },
   ],
@@ -94,7 +94,7 @@ const fallback: MappedServiceContent = {
       type: 'Article',
       title: 'Email Sandboxing & Phishing Protection',
       description: 'How we detonate weaponised attachments in isolated cloud VMs and stop BEC fraud before it reaches your inbox.',
-      url: '/articles/cybersecurity-protection',
+      url: '/articles/cybersecurity-guide',
       ctaText: 'Read the guide',
     },
     {

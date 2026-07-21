@@ -114,6 +114,35 @@ const nextConfig: NextConfig = {
       { source: '/resources/structured-cabling-guide', destination: '/articles/structured-cabling-guide', permanent: true },
       // /locations index → Dubai (main location page)
       { source: '/locations', destination: '/locations/dubai', permanent: true },
+      // Thin-article consolidation (2026-07): merged into pillar guides, EN + RU pairs
+      ...[
+        ['it-amc-costs', 'it-amc-guide'],
+        ['it-amc-priority', 'it-amc-guide'],
+        ['it-amc-hardware', 'it-amc-guide'],
+        ['it-amc-updates', 'it-amc-guide'],
+        ['it-amc-comprehensive', 'it-amc-guide'],
+        ['it-amc-maintenance-visits', 'it-amc-guide'],
+        ['managed-it-cost', 'managed-it-services-guide'],
+        ['managed-it-scalable', 'managed-it-services-guide'],
+        ['managed-it-security', 'managed-it-services-guide'],
+        ['managed-it-backup', 'data-backup-services-dubai'],
+        ['managed-it-monitoring', 'it-support-monitoring'],
+        ['cybersecurity-monitoring', 'it-support-monitoring'],
+        ['cybersecurity-firewall', 'cybersecurity-guide'],
+        ['cybersecurity-protection', 'cybersecurity-guide'],
+        ['cybersecurity-data-protection', 'cybersecurity-guide'],
+        ['cybersecurity-compliance', 'cybersecurity-guide'],
+        ['cybersecurity-incident-response', 'cybersecurity-guide'],
+        ['cloud-infrastructure', 'cloud-infrastructure-guide'],
+        ['cloud-data-management', 'cloud-infrastructure-guide'],
+        ['cloud-security-compliance', 'cloud-infrastructure-guide'],
+        ['cloud-multi-hybrid', 'cloud-migration'],
+        ['it-consulting-roadmap', 'it-consulting-strategy'],
+        ['it-consulting-assessment', 'it-consulting-strategy'],
+      ].flatMap(([from, to]) => [
+        { source: `/articles/${from}`, destination: `/articles/${to}`, permanent: true },
+        { source: `/ru/articles/${from}`, destination: `/ru/articles/${to}`, permanent: true },
+      ]),
       // Catch-all: strip legacy .html suffix from any remaining path.
       // Must stay LAST so specific .html→different-slug rules above win first.
       { source: '/:path*.html', destination: '/:path*', permanent: true },

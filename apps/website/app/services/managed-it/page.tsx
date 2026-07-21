@@ -43,13 +43,13 @@ const fallback: MappedServiceContent = {
     {
       title: '24/7 NOC Monitoring & Alerting',
       text: 'Our Network Operations Center monitors your systems around the clock. Intelligent alerting catches performance degradation, security threats, and hardware failures before they impact your business — often resolving issues before you know they exist.',
-      link: '/articles/managed-it-monitoring',
+      link: '/articles/it-support-monitoring',
       linkText: 'NOC monitoring capabilities',
     },
     {
       title: 'Managed Security Operations',
       text: 'Security is built into every layer of our managed services. We deploy endpoint protection, manage firewall rules, apply security patches, and conduct regular vulnerability scans to keep your business protected.',
-      link: '/articles/managed-it-security',
+      link: '/articles/managed-it-services-guide',
       linkText: 'Security management approach',
     },
   ],
@@ -64,7 +64,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Managed Backup & Disaster Recovery',
       text: 'Business continuity starts with reliable backups. We design, implement, and continuously test your backup strategy — ensuring rapid recovery from ransomware, hardware failures, or natural disasters with defined RTOs and RPOs.',
-      link: '/articles/managed-it-backup',
+      link: '/articles/data-backup-services-dubai',
       linkText: 'Backup and DR planning',
       image: '/images/services/managed-it-security.png',
       imageAlt: 'Managed backup and disaster recovery UAE',
@@ -72,7 +72,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Scalable IT That Grows With You',
       text: 'Our managed services scale seamlessly with your business. Whether you\'re adding 10 users or opening a new office, we provision and configure infrastructure quickly — ensuring your IT always matches your business needs.',
-      link: '/articles/managed-it-scalable',
+      link: '/articles/managed-it-services-guide',
       linkText: 'Scalability approach',
     },
     {

@@ -105,7 +105,7 @@ export default function ITConsultingGuidePage() {
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Consulting', href: '/services/it-consulting' }, { label: 'Complete Guide' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq}  relatedArticles={[
-    { href: '/articles/it-consulting-assessment', title: 'IT Assessment', description: 'Starting point for any IT consulting engagement.' },
+    { href: '/articles/it-consulting-strategy', title: 'IT Assessment', description: 'Starting point for any IT consulting engagement.' },
     { href: '/articles/it-consulting-strategy', title: 'IT Strategy Consulting', description: 'Business-aligned IT roadmaps for UAE organisations.' },
     { href: '/services/it-consulting', title: 'IT Consulting Services', description: 'Advisory and architecture consulting for UAE organisations.' }
   ]}/>

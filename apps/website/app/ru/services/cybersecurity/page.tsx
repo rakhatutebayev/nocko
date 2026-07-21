@@ -36,7 +36,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Архитектура Zero-Trust и IAM',
       text: 'Исключите неявное доверие из своей сети. Мы разрабатываем бескомпромиссные решения для управления идентификацией и доступом (IAM), где каждый пользователь непрерывно аутентифицируется с использованием контекстной многофакторной аутентификации (MFA).',
-      link: '/ru/articles/cybersecurity-data-protection',
+      link: '/ru/articles/cybersecurity-guide',
       linkText: 'Изучить политики Zero-Trust',
       image: '/images/services/cybersecurity-protection.png',
       imageAlt: 'Интеграция Архитектуры Zero-Trust',
@@ -44,13 +44,13 @@ const fallback: MappedServiceContent = {
     {
       title: 'Круглосуточный Центр управления безопасностью (SOC) 24/7',
       text: 'Автоматизированные триггеры вредоносного ПО не ждут рабочих часов. Наш выделенный SOC постоянно анализирует логи Microsoft 365, телеметрию брандмауэра и поведение конечных точек. Используя SIEM с ИИ, мы физически блокируем атаки программ-вымогателей в реальном времени.',
-      link: '/ru/articles/cybersecurity-monitoring',
+      link: '/ru/articles/it-support-monitoring',
       linkText: 'Узнать об активном поиске угроз',
     },
     {
       title: 'Управление межсетевыми экранами (NGFW)',
       text: 'Устаревшие маршрутизаторы не могут остановить современные атаки прикладного уровня. Мы внедряем и управляем NGFW (Fortinet, Palo Alto, Cisco Meraki) с использованием глубокой инспекции пакетов (DPI).',
-      link: '/ru/articles/cybersecurity-firewall',
+      link: '/ru/articles/cybersecurity-guide',
       linkText: 'Обновите ваш периметр',
     },
   ],
@@ -65,7 +65,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Интеграция соответствия NESA и DESC',
       text: 'Для государственных подрядчиков ОАЭ, поставщиков медицинских услуг и финансовых учреждений DIFC соблюдение нормативных требований не подлежит обсуждению. NOCKO приводит вашу ИТ-инфраструктуру в соответствие со стандартами SIA/NESA.',
-      link: '/ru/articles/cybersecurity-compliance',
+      link: '/ru/articles/cybersecurity-guide',
       linkText: 'Обеспечить соответствие',
       image: '/images/services/cybersecurity-firewall.png',
       imageAlt: 'Соответствие безопасности и аудит NESA',
@@ -73,13 +73,13 @@ const fallback: MappedServiceContent = {
     {
       title: 'Защита от программ-вымогателей (EDR)',
       text: 'Стандартный антивирус математически устарел против бесфайловых вредоносных программ нулевого дня. Мы развертываем поведенческие агенты EDR (такие как CrowdStrike или SentinelOne) по всему вашему парку устройств.',
-      link: '/ru/articles/cybersecurity-protection',
+      link: '/ru/articles/cybersecurity-guide',
       linkText: 'Победить синдикаты вымогателей',
     },
     {
       title: 'Реагирование на инциденты и цифровая криминалистика',
       text: 'Когда происходит взлом, время — ваш самый ценный актив. Наша элитная команда реагирования на инциденты действует как цифровые парамедики. Мы следуем строгим протоколам для изоляции скомпрометированного оборудования и устранения угрозы.',
-      link: '/ru/articles/cybersecurity-incident-response',
+      link: '/ru/articles/cybersecurity-guide',
       linkText: 'Создать план реагирования',
     },
   ],

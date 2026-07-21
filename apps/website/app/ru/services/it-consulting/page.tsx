@@ -36,7 +36,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Комплексные ИТ-аудиты и проверки RAG',
       text: 'Многие организации в Дубае работают со скрытым техническим долгом. Мы проводим комплексный аудит всей вашей инфраструктуры — от физической проводки в офисе до использования облачных лицензий. Мы предоставляем отчет Red/Amber/Green (RAG), выделяющий критические узкие места и уязвимости безопасности.',
-      link: '/ru/articles/it-consulting-assessment',
+      link: '/ru/articles/it-consulting-strategy',
       linkText: 'Узнать об ИТ-аудитах',
       image: '/images/services/it-consulting-strategy-v2.png',
       imageAlt: 'Услуги по ИТ-стратегии и планированию',
@@ -50,7 +50,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Многолетние ИТ-дорожные карты',
       text: 'Цифровая трансформация — это больше, чем покупка ПО. Мы создаем математически смоделированные ИТ-карты на 3-5 лет, строго согласованные с целями по доходам вашего совета директоров.',
-      link: '/ru/articles/it-consulting-roadmap',
+      link: '/ru/articles/it-consulting-strategy',
       linkText: 'Посмотреть примеры',
     },
   ],

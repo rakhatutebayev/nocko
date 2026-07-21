@@ -35,7 +35,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Comprehensive IT Infrastructure Maintenance',
       text: 'Our AMC covers your entire IT infrastructure — servers, network equipment, workstations, and peripherals. Regular preventive maintenance visits ensure optimal performance and identify potential issues before they cause costly downtime.',
-      link: '/articles/it-amc-comprehensive',
+      link: '/articles/it-amc-guide',
       linkText: 'AMC coverage details',
       image: '/images/services/amc-maintenance.png',
       imageAlt: 'IT maintenance contract services Dubai',
@@ -43,13 +43,13 @@ const fallback: MappedServiceContent = {
     {
       title: 'Priority Support with Guaranteed Response Times',
       text: 'AMC clients receive priority support with guaranteed response times defined in your SLA. Our helpdesk prioritizes your tickets, ensuring critical issues receive immediate attention from senior engineers.',
-      link: '/articles/it-amc-priority',
+      link: '/articles/it-amc-guide',
       linkText: 'SLA guarantees',
     },
     {
       title: 'Hardware Lifecycle Management',
       text: 'We track your entire hardware inventory, monitor warranty expiration, and proactively recommend replacements before failures occur. Our procurement team ensures you get the best pricing on hardware upgrades.',
-      link: '/articles/it-amc-hardware',
+      link: '/articles/it-amc-hardware-lifecycle',
       linkText: 'Hardware management',
     },
   ],
@@ -64,7 +64,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Predictable IT Budgeting',
       text: 'Replace unpredictable IT costs with a fixed annual fee. Our AMC pricing covers all routine maintenance, emergency support calls, and remote assistance — giving your finance team complete cost visibility throughout the year.',
-      link: '/articles/it-amc-costs',
+      link: '/articles/it-amc-guide',
       linkText: 'AMC pricing structure',
       image: '/images/services/it-amc-costs.png',
       imageAlt: 'IT budget planning UAE',
@@ -72,13 +72,13 @@ const fallback: MappedServiceContent = {
     {
       title: 'Scheduled Maintenance Visits',
       text: 'Regular on-site maintenance visits by certified engineers who inspect, clean, test, and optimize your IT infrastructure. We document every visit with detailed reports so you always know the health status of your systems.',
-      link: '/articles/it-amc-maintenance-visits',
+      link: '/articles/it-amc-guide',
       linkText: 'Maintenance visit schedule',
     },
     {
       title: 'Software Updates & Patch Management',
       text: 'We manage all operating system patches, software updates, and security fixes across your infrastructure. Our controlled update process ensures patches are tested before deployment, minimizing disruption risk.',
-      link: '/articles/it-amc-updates',
+      link: '/articles/it-amc-guide',
       linkText: 'Patch management approach',
     },
   ],

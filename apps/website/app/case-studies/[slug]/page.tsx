@@ -652,7 +652,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       { href: '/services/it-amc', title: 'IT AMC Services', desc: 'Annual maintenance contracts with financially backed SLAs.' },
     ],
     solus: [
-      { href: '/articles/it-consulting-assessment', title: 'IT Assessment & Security Audit', desc: 'Gap assessment mapped to NESA and ISO 27001 frameworks.' },
+      { href: '/articles/it-consulting-strategy', title: 'IT Assessment & Security Audit', desc: 'Gap assessment mapped to NESA and ISO 27001 frameworks.' },
       { href: '/articles/it-support-monitoring', title: 'IT Infrastructure Monitoring', desc: 'EDR, SIEM, and endpoint monitoring for UAE businesses.' },
       { href: '/services/cybersecurity', title: 'Cybersecurity Services', desc: 'Zero Trust, EDR, and compliance for UAE businesses.' },
     ],
@@ -682,30 +682,30 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       { href: '/services/managed-it', title: 'Managed IT Services', desc: 'Fully managed IT for multi-site UAE businesses.' },
     ],
     cybersecurity: [
-      { href: '/articles/it-consulting-assessment', title: 'IT Assessment & Security Audit', desc: 'Gap assessment mapped to HAAD, NESA, and ISO 27001.' },
+      { href: '/articles/it-consulting-strategy', title: 'IT Assessment & Security Audit', desc: 'Gap assessment mapped to HAAD, NESA, and ISO 27001.' },
       { href: '/articles/it-consulting-infrastructure-design', title: 'IT Infrastructure Design', desc: 'Network segmentation and security architecture for UAE.' },
       { href: '/services/cybersecurity', title: 'Cybersecurity Services', desc: 'Zero Trust, EDR, and compliance for UAE businesses.' },
     ],
     'ransomware-recovery': [
-      { href: '/articles/it-consulting-assessment', title: 'IT Assessment & Security Audit', desc: 'Identify vulnerabilities before attackers do.' },
+      { href: '/articles/it-consulting-strategy', title: 'IT Assessment & Security Audit', desc: 'Identify vulnerabilities before attackers do.' },
       { href: '/articles/it-support-monitoring', title: 'IT Infrastructure Monitoring', desc: 'Continuous monitoring and threat detection.' },
       { href: '/services/cybersecurity', title: 'Cybersecurity Services', desc: 'Ransomware protection and incident response.' },
     ],
     'm365-audit': [
-      { href: '/articles/it-consulting-assessment', title: 'IT Assessment', desc: 'Comprehensive IT and security gap assessment.' },
+      { href: '/articles/it-consulting-strategy', title: 'IT Assessment', desc: 'Comprehensive IT and security gap assessment.' },
       { href: '/articles/it-consulting-strategy', title: 'IT Strategy Consulting', desc: 'Business-aligned IT planning for UAE organisations.' },
       { href: '/services/it-consulting', title: 'IT Consulting Services', desc: 'Advisory and architecture consulting for UAE.' },
     ],
     'it-consulting': [
       { href: '/articles/it-consulting-guide', title: 'IT Consulting Guide', desc: 'Full guide to IT consulting engagements in the UAE.' },
-      { href: '/articles/it-consulting-roadmap', title: 'IT Roadmap Planning', desc: '12–36 month IT roadmaps with prioritised initiatives.' },
+      { href: '/articles/it-consulting-strategy', title: 'IT Roadmap Planning', desc: '12–36 month IT roadmaps with prioritised initiatives.' },
       { href: '/services/it-consulting', title: 'IT Consulting Services', desc: 'Advisory and architecture consulting for UAE.' },
     ],
   };
 
   const relatedArticles = RELATED_BY_SLUG[slug] ?? [
     { href: '/articles/it-support-monitoring', title: 'IT Infrastructure Monitoring', desc: 'Proactive RMM monitoring for UAE businesses.' },
-    { href: '/articles/it-consulting-assessment', title: 'IT Assessment', desc: 'Comprehensive IT gap assessment for UAE organisations.' },
+    { href: '/articles/it-consulting-strategy', title: 'IT Assessment', desc: 'Comprehensive IT gap assessment for UAE organisations.' },
     { href: '/services', title: 'All IT Services', desc: 'Browse NOCKO\'s full range of IT services.' },
   ];
 

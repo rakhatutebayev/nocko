@@ -114,7 +114,7 @@ export default function ITConsultingInfrastructureDesignPage() {
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Consulting', href: '/services/it-consulting' }, { label: 'M&A IT Integration' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq}  relatedArticles={[
-    { href: '/articles/it-consulting-assessment', title: 'IT Assessment', description: 'Infrastructure review before design begins.' },
+    { href: '/articles/it-consulting-strategy', title: 'IT Assessment', description: 'Infrastructure review before design begins.' },
     { href: '/articles/it-consulting-strategy', title: 'IT Strategy Consulting', description: 'Business-aligned IT planning for UAE organisations.' },
     { href: '/services/it-consulting', title: 'IT Consulting Services', description: 'Advisory and architecture consulting for UAE organisations.' }
   ]}/>

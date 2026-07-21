@@ -35,7 +35,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'IT Infrastructure Assessment',
       text: 'Begin with a comprehensive assessment of your current IT environment. Our consultants evaluate your infrastructure, identify inefficiencies, security gaps, and opportunities for optimization — delivering a detailed report with actionable recommendations.',
-      link: '/articles/it-consulting-assessment',
+      link: '/articles/it-consulting-strategy',
       linkText: 'Assessment methodology',
       image: '/images/services/it-consulting-strategy-v2.png',
       imageAlt: 'IT infrastructure assessment Dubai',
@@ -43,7 +43,7 @@ const fallback: MappedServiceContent = {
     {
       title: 'Technology Roadmap Development',
       text: 'We create detailed 12-36 month technology roadmaps aligned with your business goals. Our roadmaps prioritize investments by ROI, risk reduction, and strategic impact — giving your leadership team a clear path forward.',
-      link: '/articles/it-consulting-roadmap',
+      link: '/articles/it-consulting-strategy',
       linkText: 'Roadmap approach',
     },
     {
