@@ -46,7 +46,11 @@ body:has(.contact-modal) .whatsapp-fab,
 body:has(.contact-modal) .cookie-consent-fab,
 body:has(.contact-form input:focus, .contact-form textarea:focus) .whatsapp-fab,
 body:has(.contact-form input:focus, .contact-form textarea:focus) .cookie-consent-fab {
+  // animation:none — both fabs have entry animations with fill-mode:forwards,
+  // which outrank normal declarations in the cascade and would pin opacity:1
+  animation: none;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   transition: opacity 0.2s ease;
 }
