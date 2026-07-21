@@ -40,7 +40,7 @@ export async function generateMetadata({
   if (!service) {
     if (slug === 'structured-cabling') {
       return {
-        title: 'Structured Cabling Services | IT Services in UAE | NOCKO',
+        title: 'Structured Cabling Services | IT Services in UAE',
         description: 'Professional Structured Cabling Services in UAE.',
       };
     }

@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'On-Site IT Support Dubai | Field Engineer Dispatch UAE | NOCKO',
+  title: 'On-Site IT Support Dubai | Field Engineer Dispatch UAE',
   description: 'NOCKO dispatches certified field engineers to DIFC, Business Bay, JLT, DSO, and Abu Dhabi within defined SLA windows. Hardware replacement, rack work, structured cabling, and break-fix on-site.',
   alternates: {
     canonical: '/articles/it-support-onsite',
     languages: {
       'en-AE': '/articles/it-support-onsite',
       'ru-RU': '/ru/articles/it-support-onsite',
+      'x-default': '/articles/it-support-onsite',
     },
   },
   keywords: 'on-site IT support dubai, onsite IT support UAE, IT field engineer dubai, IT engineer dispatch UAE, break-fix IT support dubai, on-site IT services dubai, field IT support DIFC',

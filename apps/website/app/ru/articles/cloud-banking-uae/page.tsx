@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Облачные решения для банков в ОАЭ | NOCKO',
+  title: 'Облачные решения для банков в ОАЭ',
   description: 'Как банки и финансовые организации ОАЭ безопасно переходят в облако: резидентность данных внутри ОАЭ, соответствие требованиям CBUAE, шифрование, высокая доступность и контролируемая миграция.',
   alternates: {
     canonical: '/ru/articles/cloud-banking-uae',
     languages: {
       'en-AE': '/articles/cloud-banking-uae',
       'ru-RU': '/ru/articles/cloud-banking-uae',
+      'x-default': '/articles/cloud-banking-uae',
     },
   },
   openGraph: {

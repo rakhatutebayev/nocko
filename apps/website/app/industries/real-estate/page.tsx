@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/industries/real-estate',
       'ru-RU': '/ru/industries/real-estate',
+      'x-default': '/industries/real-estate',
     },
   },
 };

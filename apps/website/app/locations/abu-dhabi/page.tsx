@@ -6,7 +6,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Company in Abu Dhabi | IT Support Services Abu Dhabi | NOCKO',
+  title: 'IT Company in Abu Dhabi | IT Support Services Abu Dhabi',
   description:
     'Professional IT services in Abu Dhabi — IT support, network infrastructure, cloud solutions, cybersecurity, and managed IT services. NOCKO serves ADGM, Khalifa City, Mussafah, and all Abu Dhabi zones with 24/7 support.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'ADGM IT support',
   ],
   openGraph: {
-    title: 'IT Company in Abu Dhabi | IT Support Services | NOCKO',
+    title: 'IT Company in Abu Dhabi | IT Support Services',
     description:
       'Professional IT services in Abu Dhabi — network, cloud, cybersecurity, and 24/7 managed IT support for businesses in ADGM, Khalifa City, and Mussafah.',
     type: 'website',
@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/locations/abu-dhabi',
       'ru-RU': '/ru/locations/abu-dhabi',
+      'x-default': '/locations/abu-dhabi',
     },
   },
 };
@@ -143,16 +144,6 @@ export default function AbuDhabiPage() {
               opens: '09:00',
               closes: '18:00',
             },
-          ],
-        }}
-      />
-      <StructuredData
-        type="BreadcrumbList"
-        data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
-            { '@type': 'ListItem', position: 2, name: 'Locations', item: `${baseUrl}/locations` },
-            { '@type': 'ListItem', position: 3, name: 'Abu Dhabi', item: `${baseUrl}/locations/abu-dhabi` },
           ],
         }}
       />

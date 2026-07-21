@@ -19,5 +19,16 @@ NOCKO delivers managed IT services, 24/7 IT support, structured cabling, cloud m
 - [Articles](https://nocko.com/articles): IT guides and resources
 - [Contact](https://nocko.com/contact): Office address, phone, email
 
+## Guides
+- [IT AMC in UAE: Complete Guide](https://nocko.com/articles/it-amc-guide): AMC coverage, AED pricing tiers, SLA levels
+- [Cybersecurity for UAE Business](https://nocko.com/articles/cybersecurity-guide): Threats, compliance (NESA/PDPL), incident response
+- [Managed IT Services Guide](https://nocko.com/articles/managed-it-services-guide): Scope, per-user pricing, choosing an MSP
+- [IT Support in UAE: Complete Guide](https://nocko.com/articles/it-support-guide): Support models, SLAs, in-house vs outsourced costs
+- [24/7 IT Monitoring Services](https://nocko.com/articles/it-support-monitoring): NOC/SOC monitoring, alert escalation
+- [Enterprise Cloud Infrastructure Guide](https://nocko.com/articles/cloud-infrastructure-guide): Architecture, security, data residency, FinOps
+- [Cloud Migration for UAE Business](https://nocko.com/articles/cloud-migration): Single vs multi-cloud vs hybrid, migration phases
+- [IT Strategy, Assessment & Roadmap](https://nocko.com/articles/it-consulting-strategy): Audits, roadmaps, budgeting and ROI
+- [Structured Cabling Guide](https://nocko.com/articles/structured-cabling-guide): Cat6A, fiber, Fluke certification
+
 ## Licensing
 Content on this site may be cited for informational and research purposes. Use for AI model training requires written consent from NOCKO Information Technology.

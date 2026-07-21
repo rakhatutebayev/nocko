@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Performance Optimization UAE | System Tuning & Infrastructure Efficiency Dubai | NOCKO',
+  title: 'IT Performance Optimization UAE | System Tuning & Infrastructure Efficiency Dubai',
   description: 'NOCKO delivers measurable IT performance optimization for Dubai and UAE businesses — server tuning, network throughput, Windows endpoint hardening, and patch cadence management with documented baselines.',
   alternates: {
     canonical: '/articles/it-support-optimization',
     languages: {
       'en-AE': '/articles/it-support-optimization',
       'ru-RU': '/ru/articles/it-support-optimization',
+      'x-default': '/articles/it-support-optimization',
     },
   },
 };

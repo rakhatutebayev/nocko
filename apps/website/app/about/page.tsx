@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/about',
       'ru-RU': '/ru/about',
+      'x-default': '/about',
     },
   },
 };

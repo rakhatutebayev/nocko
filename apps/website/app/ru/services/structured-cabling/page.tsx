@@ -8,19 +8,26 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'СКС и Монтаж Сетей в Дубае | Инфраструктура ОАЭ | NOCKO',
+  title: 'СКС и Монтаж Сетей в Дубае | Инфраструктура ОАЭ',
   description:
     'Профессиональный монтаж структурированных кабельных систем (СКС) в Дубае, ОАЭ. Установка, тестирование и сертификация сетей Cat6, Cat6A и оптоволокна. Надежная сетевая инфраструктура для бизнеса.',
   keywords:
     'монтаж СКС Дубай, прокладка кабеля ОАЭ, установка Cat6 Дубай, оптоволоконный кабель ОАЭ, сетевая инфраструктура Дубай, монтаж сетей Дубай',
   openGraph: {
-    title: 'СКС и Монтаж Сетей в Дубае | Инфраструктура ОАЭ | NOCKO',
+    title: 'СКС и Монтаж Сетей в Дубае | Инфраструктура ОАЭ',
     description: 'Профессиональные решения по СКС и сетевой инфраструктуре в Дубае и ОАЭ.',
     type: 'website',
     locale: 'ru_RU',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: { canonical: '/ru/services/structured-cabling' },
+  alternates: {
+    canonical: '/ru/services/structured-cabling',
+    languages: {
+      'en-AE': '/services/structured-cabling',
+      'ru-RU': '/ru/services/structured-cabling',
+      'x-default': '/services/structured-cabling',
+    },
+  },
 };
 
 export const revalidate = 3600;
@@ -132,13 +139,11 @@ export default async function StructuredCablingPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://nocko.com/ru' },
-            { '@type': 'ListItem', position: 2, name: 'Услуги', item: 'https://nocko.com/ru/services' },
-            { '@type': 'ListItem', position: 3, name: 'СКС и Монтаж Сетей', item: 'https://nocko.com/ru/services/structured-cabling' },
-          ],
+          serviceType: 'Structured Cabling',
+          name: 'Structured Cabling Services in Dubai & UAE',
+          description: 'Cat6A and fiber optic structured cabling design, installation, and Fluke-certified testing for UAE offices.',
         }}
       />
       <HeaderWrapper />

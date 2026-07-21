@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/privacy-policy',
       'ru-RU': '/ru/privacy-policy',
+      'x-default': '/privacy-policy',
     },
   },
   robots: {

@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Круглосуточная ИТ-поддержка в Дубае — что на самом деле означает время реакции | NOCKO',
+  title: 'Круглосуточная ИТ-поддержка в Дубае — что на самом деле означает время реакции',
   description: 'Что включает круглосуточная ИТ-поддержка для бизнеса в Дубае? Мониторинг NOC, уровни эскалации, время реакции P1/P2/P3 и честные ответы о том, что происходит в 3 часа ночи.',
   alternates: {
     canonical: '/ru/articles/it-support-24-7',
     languages: {
       'en-AE': '/articles/it-support-24-7',
       'ru-RU': '/ru/articles/it-support-24-7',
+      'x-default': '/articles/it-support-24-7',
     },
   },
   openGraph: {

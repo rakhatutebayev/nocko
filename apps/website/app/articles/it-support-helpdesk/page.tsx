@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'ITIL Ticketing & SLA Workflows | IT Helpdesk Dubai | NOCKO',
+  title: 'ITIL Ticketing & SLA Workflows | IT Helpdesk Dubai',
   description: 'NOCKO deploys ITIL-compliant ticketing on ServiceNow or Jira Service Management for Dubai businesses — with P1–P4 SLA tiers, FCR tracking, and monthly executive reporting.',
   alternates: {
     canonical: '/articles/it-support-helpdesk',
     languages: {
       'en-AE': '/articles/it-support-helpdesk',
       'ru-RU': '/ru/articles/it-support-helpdesk',
+      'x-default': '/articles/it-support-helpdesk',
     },
   },
 };

@@ -7,13 +7,13 @@ import { getServices } from '@/lib/api/strapi';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'IT Services in UAE | Network, Cloud, Security & Support | NOCKO',
+  title: 'IT Services in UAE | Network, Cloud, Security & Support',
   description:
     'Comprehensive IT solutions for businesses across UAE. Network setup, cloud migration, cybersecurity, and 24/7 support. Serving 8+ industries with experienced IT professionals.',
   keywords:
     'IT services UAE, network infrastructure Dubai, cloud solutions Abu Dhabi, cybersecurity UAE, IT support Dubai',
   openGraph: {
-    title: 'IT Services in UAE | NOCKO',
+    title: 'IT Services in UAE',
     description: 'Comprehensive IT solutions for businesses across UAE.',
     type: 'website',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'IT Services UAE — NOCKO' }],

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/structured-cabling-industrial',
       'ru-RU': '/ru/articles/structured-cabling-industrial',
+      'x-default': '/articles/structured-cabling-industrial',
     },
   },
   robots: { index: true, follow: true },

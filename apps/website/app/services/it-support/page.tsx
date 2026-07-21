@@ -148,13 +148,11 @@ export default async function ItSupportPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
-            { '@type': 'ListItem', position: 2, name: 'IT Services', item: 'https://nocko.com/services' },
-            { '@type': 'ListItem', position: 3, name: 'IT Support', item: 'https://nocko.com/services/it-support' },
-          ],
+          serviceType: 'IT Support',
+          name: 'IT Support & Helpdesk in Dubai & UAE',
+          description: '24/7 helpdesk, remote and on-site IT support with guaranteed response times across Dubai and the UAE.',
         }}
       />
       <HeaderWrapper />

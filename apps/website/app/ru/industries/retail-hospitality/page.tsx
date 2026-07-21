@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/industries/retail-hospitality',
       'ru-RU': '/ru/industries/retail-hospitality',
+      'x-default': '/industries/retail-hospitality',
     },
   },
 };

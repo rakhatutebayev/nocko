@@ -25,7 +25,7 @@ const defaultIndustries: Industry[] = [
     id: 'corporate',
     name: 'Corporate & Enterprise',
     icon: '/images/industries/enterprise.svg',
-    image: '/images/industries/enterprise.png',
+    image: '/images/industries/enterprise.webp',
     description: 'Full-cycle IT support for corporate environments, headquarters, and multi-office structures across UAE.',
     fullDescription:
       'Building, maintaining, and optimizing IT ecosystems — from internal communication systems and secure access controls to cloud infrastructures, virtualization, and workflow automation. Enterprises achieve operational continuity through proactive monitoring, asset management, failover protection, and strict security policies.',
@@ -35,7 +35,7 @@ const defaultIndustries: Industry[] = [
     id: 'hospitality',
     name: 'Hospitality & Retail',
     icon: '/images/industries/hospitality.svg',
-    image: '/images/industries/retail.png',
+    image: '/images/industries/retail.webp',
     description: 'Smart IT infrastructure tailored for hotels, restaurants, malls, and retail chains across UAE.',
     fullDescription:
       'Modernizing customer-facing environments with stable high-speed networks, POS terminals, secure wireless access, reservation and check-in systems, inventory tracking, and centralized payment platforms. Seamless integration of loyalty programs, digital signage, CCTV, and IoT devices ensures flawless guest experiences while maintaining efficient internal operations.',
@@ -45,7 +45,7 @@ const defaultIndustries: Industry[] = [
     id: 'education',
     name: 'Education & E-Learning',
     icon: '/images/industries/education.svg',
-    image: '/images/industries/education.png',
+    image: '/images/industries/education.webp',
     description: 'End-to-end digital ecosystems built for schools, universities, academies, and online learning platforms across UAE.',
     fullDescription:
       'Deploying secure LMS solutions, student portals, virtual classrooms, cloud collaboration tools, content distribution systems, and high-performance networks that support thousands of concurrent users. Institutions transition to hybrid or fully digital learning environments with device management, content delivery optimization, user authentication, and secure storage of student records.',
@@ -55,7 +55,7 @@ const defaultIndustries: Industry[] = [
     id: 'healthcare',
     name: 'Healthcare & Clinics',
     icon: '/images/industries/healthcare.svg',
-    image: '/images/industries/healthcare.png',
+    image: '/images/industries/healthcare.webp',
     description: 'Robust healthcare IT that protects sensitive data and supports critical medical workflows for hospitals, clinics, and medical facilities across UAE.',
     fullDescription:
       'Building and maintaining EMR/EHR systems, appointment platforms, imaging storage (PACS), telemedicine connections, secure internal networks, and encrypted communication channels. Optimizing clinical operations with high-availability infrastructure, device integration, automated backups, and redundancy — ensuring clinic IT remains stable even during peak patient load or emergency situations.',
@@ -65,7 +65,7 @@ const defaultIndustries: Industry[] = [
     id: 'realestate',
     name: 'Real Estate & Construction',
     icon: '/images/industries/retail.svg',
-    image: '/images/industries/manufacturing.png',
+    image: '/images/industries/manufacturing.webp',
     description: 'IT solutions engineered for construction sites, real estate firms, and property management operations across UAE.',
     fullDescription:
       'Providing rapid-deployment networks for field teams, rugged connectivity for construction zones, real-time communication tools, project management systems, and cloud environments for BIM files, CAD documents, and large datasets. Streamlining operations by integrating contractor communication, mobile device management, on-site surveillance, access control systems, and asset tracking platforms.',
@@ -75,7 +75,7 @@ const defaultIndustries: Industry[] = [
     id: 'finance',
     name: 'Financial Services',
     icon: '/images/industries/finance.svg',
-    image: '/images/industries/finance.png',
+    image: '/images/industries/finance.webp',
     description: 'Ultra-secure IT infrastructure engineered for banks, fintech platforms, payment providers, and insurance firms across UAE.',
     fullDescription:
       'Implementing encrypted networks, secure transaction gateways, fraud-detection systems, identity-verification workflows, compliance frameworks, and financial-grade cybersecurity controls. Supporting digital banking platforms, e-payment systems, trading environments, and cloud-based financial applications with proactive monitoring, risk management, and guaranteed business continuity.',
@@ -85,7 +85,7 @@ const defaultIndustries: Industry[] = [
     id: 'logistics',
     name: 'Logistics & Transportation',
     icon: '/images/industries/logistics.svg',
-    image: '/images/industries/logistics.png',
+    image: '/images/industries/logistics.webp',
     description: 'IT that keeps goods and data flowing — fast, safe, and trackable. Comprehensive IT solutions for warehouses, fleets, and distribution networks across UAE.',
     fullDescription:
       'Optimizing logistics operations with advanced tracking systems, warehouse automation, real-time communication platforms, fleet management telematics, secure communication across sites and vehicles, smart routing, performance analytics, and integration with shipping and delivery platforms.',
@@ -95,7 +95,7 @@ const defaultIndustries: Industry[] = [
     id: 'manufacturing',
     name: 'Manufacturing',
     icon: '/images/industries/manufacturing.svg',
-    image: '/images/industries/manufacturing.png',
+    image: '/images/industries/manufacturing.webp',
     description: 'Technology that keeps production moving without delays. Comprehensive IT support for automation, monitoring, and connected production floors across UAE.',
     fullDescription:
       'Empowering manufacturing facilities with smart factory solutions that integrate production systems, quality control, and supply chain management. Our IT infrastructure ensures seamless connectivity between machinery, control systems, and enterprise applications — including factory network optimization, equipment connectivity (IIoT), real-time monitoring dashboards, automated alerts, production data analytics, and ERP integration.',

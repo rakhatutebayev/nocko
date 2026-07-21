@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/structured-cabling-fiber-vs-cat6a',
       'ru-RU': '/ru/articles/structured-cabling-fiber-vs-cat6a',
+      'x-default': '/articles/structured-cabling-fiber-vs-cat6a',
     },
   },
   robots: { index: true, follow: true },

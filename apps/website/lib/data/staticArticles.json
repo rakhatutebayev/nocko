@@ -1,110 +1,242 @@
 [
   {
-    "id": "static-cloud-infrastructure-guide",
     "slug": "cloud-infrastructure-guide",
-    "title": "The Ultimate Guide to Enterprise Cloud Infrastructure",
-    "excerpt": "A comprehensive guide to planning, executing, and optimizing cloud migrations in the UAE. Covers cost management, data security, hybrid architectures, and AWS/Azure deployment strategies."
+    "title": "The Ultimate Guide to Cloud Infrastructure in UAE",
+    "excerpt": "Complete guide to cloud infrastructure for UAE businesses: migration strategy, storage tiers, data residency, NESA security, hybrid architecture and FinOps.",
+    "id": 1
   },
   {
-    "id": "static-it-consulting-guide",
+    "slug": "cloud-migration",
+    "title": "Cloud Migration for UAE Business: Strategy, Phases, Pitfalls",
+    "excerpt": "Zero-downtime cloud migration for UAE business: single vs multi-cloud vs hybrid strategy, migration phases, replication, cutover planning and common pitfalls.",
+    "id": 2
+  },
+  {
+    "slug": "cybersecurity-guide",
+    "title": "Cybersecurity for UAE Business: Complete Guide",
+    "excerpt": "Complete cybersecurity guide for UAE businesses: firewalls, endpoint protection, encryption, NESA and PDPL compliance, incident response, and Zero Trust.",
+    "id": 3
+  },
+  {
+    "slug": "it-amc-guide",
+    "title": "IT AMC in UAE: The Complete Guide",
+    "excerpt": "The complete guide to IT Annual Maintenance Contracts in the UAE — AED pricing per user and device, SLA tiers, hardware cover, and how to choose a provider.",
+    "id": 4
+  },
+  {
     "slug": "it-consulting-guide",
-    "title": "Strategic IT Consulting and Digital Transformation",
-    "excerpt": "A guide to strategic IT consulting in the UAE. Explore digital transformation, ROI analysis, IT roadmaps, and architecture design for growing organizations."
+    "title": "Strategic IT Consulting in UAE: The Complete Guide | NOCKO",
+    "excerpt": "From IT assessment to digital transformation roadmap — NOCKO's complete guide to strategic IT consulting for Dubai and UAE enterprises. vCIO services, vendor selection, and ROI measurement.",
+    "id": 5
   },
   {
-    "id": "static-structured-cabling-guide",
-    "slug": "structured-cabling-guide",
-    "title": "Network Infrastructure & Structured Cabling Guide",
-    "excerpt": "A complete guide to structured cabling, network infrastructure deployment, lifecycle management, and performance optimization for businesses in Dubai and the UAE."
-  },
-  {
-    "id": "static-it-consulting-assessment",
-    "slug": "it-consulting-assessment",
-    "title": "Forensic IT Audits & RAG Health Checks",
-    "excerpt": "Many organizations in Dubai operate with hidden tech debt. We conduct forensic audits of your entire infrastructure—from physical wiring in your Business Bay office to cloud licensing utilization. We deliver an actionable Red/Amber/Green (RAG) report isolating critical bottlenecks, security vulnerabilities, and wasted software expenditure."
-  },
-  {
-    "id": "static-it-consulting-strategy",
     "slug": "it-consulting-strategy",
-    "title": "Impartial Vendor Negotiations & Governance",
-    "excerpt": "Enterprise software vendors frequently lock UAE businesses into punishing long-term contracts. As your fractional vCIO, NOCKO sits on your side of the table during Request for Proposal (RFP) processes. We technically scrutinize Service Level Agreements (SLAs), drive down implementation costs, and completely eliminate vendor lock-in risks."
+    "title": "IT Strategy, Assessment & Roadmap for UAE Companies",
+    "excerpt": "How UAE companies build an IT strategy: structured assessment, vendor consolidation, a phased roadmap with AED budgets, and governance that protects ROI.",
+    "id": 6
   },
   {
-    "id": "static-it-consulting-roadmap",
-    "slug": "it-consulting-roadmap",
-    "title": "Multi-Year Actionable IT Roadmaps",
-    "excerpt": "Digital Transformation is more than buying software. We build mathematically modeled, 3-to-5-year actionable IT roadmaps aligned strictly with your board's revenue targets. From Phase 1 SD-WAN integrations to Phase 3 ERP migrations (SAP, Dynamics 365), we plan resource allocation so your tech stack scales flawlessly."
+    "slug": "it-support-guide",
+    "title": "IT Support in UAE: Complete Guide to Models, SLAs & Costs",
+    "excerpt": "Complete guide to IT support in the UAE: helpdesk vs remote vs on-site models, 24/7 SLAs, monitoring, onboarding, and in-house vs outsourced costs in AED.",
+    "id": 7
   },
   {
-    "id": "static-it-consulting-infrastructure-design",
-    "slug": "it-consulting-infrastructure-design",
-    "title": "M&A Technology Integration",
-    "excerpt": "Mergers and Acquisitions (M&A) frequently fail due to incompatible IT systems. When acquiring a new firm in the UAE, our architects assess the target company's technical debt and design a seamless Active Directory and Cloud integration plan, ensuring day-one operational continuity for your staff."
-  },
-  {
-    "id": "static-it-consulting-roi",
-    "slug": "it-consulting-roi",
-    "title": "Microsoft 365 Licensing Optimization",
-    "excerpt": "We routinely find that Dubai enterprises ovpay by up to 40% on Microsoft 365 and Azure licensing. We conduct deep licensing audits, downgrading unutilized E5 licenses to basic tiers where appropriate, and consolidating disparate software subscriptions into unified, cost-effective Microsoft ecosystem tools."
-  },
-  {
-    "id": "static-it-support-remote",
-    "slug": "it-support-remote",
-    "title": "24/7 Centralized Remote Helpdesk",
-    "excerpt": "End-user downtime paralyzes organizational productivity. Our centralized Network Operations Center (NOC) operates 24/7/365, providing instant remote diagnostics. Whether your CFO is locked out of Microsoft 365 or a remote worker needs secure VPN access from abroad, our engineers connect securely to resolve 85% of issues within the first 15 minutes."
-  },
-  {
-    "id": "static-it-support-helpdesk",
-    "slug": "it-support-helpdesk",
-    "title": "SLA-Driven Ticketing Workflows",
-    "excerpt": "Stop relying on unstructured WhatsApp messages to \"the IT guy.\" We integrate professional, ITIL-compliant ticketing systems (like ServiceNow or Jira Service Management) directly into your corporate workflow. Every request is timestamped, categorized by severity, and bound by strict Service Level Agreements (SLAs)—guaranteeing transparent accountability and executive reporting."
-  },
-  {
-    "id": "static-it-support-onsite",
-    "slug": "it-support-onsite",
-    "title": "Physical On-Site Dispatch Across Dubai",
-    "excerpt": "While remote support resolves software issues, hardware failures require physical intervention. When a router dies in your JLT office or a printer fails in your JAFZA warehouse, we dispatch certified field technicians. Our strategic location guarantees an average 2-hour physical arrival time for critical Priority-1 outages anywhere in Dubai."
-  },
-  {
-    "id": "static-it-support-monitoring",
     "slug": "it-support-monitoring",
-    "title": "Proactive Endpoint Management (MDM)",
-    "excerpt": "With the rise of hybrid work in the UAE, securing mobile endpoints is critical. We deploy Mobile Device Management (MDM) platforms (like Microsoft Intune) to enforce security policies across all corporate laptops and phones. If an employee loses their device in a Dubai taxi, our helpdesk can remotely wipe the sensitive corporate data within seconds."
+    "title": "24/7 IT Monitoring Services in UAE | NOC, SOC & RMM Coverage",
+    "excerpt": "24/7 IT monitoring services in the UAE: NOC infrastructure monitoring, SOC security alerting, endpoint EDR coverage and 15-minute response for Dubai business.",
+    "id": 8
   },
   {
-    "id": "static-it-support-optimization",
-    "slug": "it-support-optimization",
-    "title": "Employee Onboarding & Identity Management",
-    "excerpt": "The HR process shouldn't be slowed down by IT bottlenecks. We completely automate your employee onboarding and offboarding workflows. When a new hire joins, we provision their Microsoft 365 licensing, configure their laptop security policies, and grant precise Role-Based Access Control (RBAC) before their first day in the office."
+    "slug": "managed-it-services-guide",
+    "title": "Managed IT Services in UAE: Complete Guide",
+    "excerpt": "What managed IT services include, AED pricing per user and device, scaling, security, co-managed IT, and how to choose the right MSP in Dubai and the UAE.",
+    "id": 9
   },
   {
-    "id": "static-it-support-24-7",
+    "slug": "structured-cabling-guide",
+    "title": "Network Infrastructure & Structured Cabling Guide | NOCKO UAE",
+    "excerpt": "A complete guide to structured cabling, network infrastructure deployment, lifecycle management, and performance optimization for businesses in Dubai and the UAE.",
+    "id": 10
+  },
+  {
+    "slug": "centralized-helpdesk-ru",
+    "title": "Централизованный Helpdesk 24/7 в Дубае | NOCKO",
+    "excerpt": "Полное руководство по организации ИТ-поддержки бизнеса в ОАЭ. Как централизованный Helpdesk 24/7 и русскоговорящие ИТ специалисты спасают корпоративные сети от простоев.",
+    "id": 11
+  },
+  {
+    "slug": "cloud-banking-uae",
+    "title": "Cloud Services for Banks in the UAE | NOCKO",
+    "excerpt": "How UAE banks and financial institutions adopt cloud securely: in-country data residency, CBUAE-aligned compliance, encryption, high availability, and a controlled migration approach.",
+    "id": 12
+  },
+  {
+    "slug": "cloud-cost-optimization",
+    "title": "Cloud Cost Optimization Services UAE | AWS & Azure Billing Reduction | NOCKO",
+    "excerpt": "NOCKO reduces AWS and Azure bills for UAE businesses by 30–50% through Reserved Instance strategy, waste elimination, automated FinOps governance, and multi-cloud cost management. Free cloud cost audit for Dubai businesses.",
+    "id": 13
+  },
+  {
+    "slug": "cloud-zero-trust",
+    "title": "Defending Your Cloud with Zero Trust | NOCKO UAE",
+    "excerpt": "Understand the shared responsibility model and why IAM security is critical for your Azure deployment. Do not leave your cloud endpoints exposed.",
+    "id": 14
+  },
+  {
+    "slug": "cybersecurity-antivirus-dead",
+    "title": "Why standard Antivirus is dead in 2024 | NOCKO UAE",
+    "excerpt": "Understand the stark technical difference between legacy signature-based Antivirus and behavioral AI-driven EDR platforms like CrowdStrike.",
+    "id": 15
+  },
+  {
+    "slug": "data-backup-services-dubai",
+    "title": "Data Backup Services Dubai | Cloud Backup & Disaster Recovery UAE | NOCKO",
+    "excerpt": "Professional data backup services in Dubai. Managed cloud backup, immutable offsite storage, and disaster recovery for UAE businesses. Veeam, Azure Backup, AWS Backup — with NESA-compliant retention and quarterly tested restores. Free backup assessment.",
+    "id": 16
+  },
+  {
+    "slug": "google-workspace-vs-microsoft-365",
+    "title": "Google Workspace vs Microsoft 365 UAE | NOCKO",
+    "excerpt": "A practical, balanced comparison of Google Workspace and Microsoft 365 for UAE businesses — cost, collaboration, email, security, admin, and when to choose which platform.",
+    "id": 17
+  },
+  {
+    "slug": "healthcare-it-backup-uae",
+    "title": "Healthcare Data Backup & Compliance UAE | NOCKO",
+    "excerpt": "How UAE clinics and hospitals protect EMR, imaging and admin data with isolated, immutable backups aligned to DHA, HAAD and MOH patient data rules.",
+    "id": 18
+  },
+  {
+    "slug": "it-amc-hardware-lifecycle",
+    "title": "Hardware Lifecycle Management | NOCKO UAE",
+    "excerpt": "An executive breakdown of why saving $500 on a cheap AMC contract will cost you $50,000 during a 3-day server outage due to aging hardware.",
+    "id": 19
+  },
+  {
+    "slug": "it-amc-vs-msp",
+    "title": "The AMC vs MSP Decision Guide | NOCKO UAE",
+    "excerpt": "Understand the critical difference between inclusive scopes and exclusive out-of-scope hardware capital expenditures. Choose the right contract for your business.",
+    "id": 20
+  },
+  {
+    "slug": "it-consulting-digital-transformation",
+    "title": "Business Continuity & Disaster Recovery UAE | NOCKO",
+    "excerpt": "Architecting cloud-native Disaster Recovery as a Service (DRaaS) to ensure zero data loss and compliance with UAE insurance mandates.",
+    "id": 21
+  },
+  {
+    "slug": "it-consulting-infrastructure-design",
+    "title": "M&A Technology Integration Services UAE | NOCKO",
+    "excerpt": "Flawless IT infrastructure integration during Mergers and Acquisitions (M&A). Prevent technical disruptions during corporate restructuring.",
+    "id": 22
+  },
+  {
+    "slug": "it-consulting-ransomware-survival",
+    "title": "Surviving a Ransomware Strike | NOCKO UAE",
+    "excerpt": "Understand exactly what RTO and RPO mean, and how to architect a Disaster Recovery plan that actually works under the pressure of a real-world breach.",
+    "id": 23
+  },
+  {
+    "slug": "it-consulting-roi",
+    "title": "Microsoft 365 Licensing Optimization & ROI | NOCKO",
+    "excerpt": "Stop overpaying for Microsoft 365 and Azure in Dubai. NOCKO provides deep licensing audits to maximize IT ROI and eliminate duplicate software costs.",
+    "id": 24
+  },
+  {
     "slug": "it-support-24-7",
-    "title": "Shadow IT & Licensing Audits",
-    "excerpt": "Employees frequently purchase unauthorized SaaS tools using corporate cards, creating massive security vectors (Shadow IT). Our active monitoring detects unsanctioned applications, blocks them, and forces users onto your secure, company-approved platforms—simultaneously rescuing thousands of dirhams in wasted duplicate licensing costs."
+    "title": "24/7 IT Support in Dubai — What Response Time Actually Means | NOCKO",
+    "excerpt": "What does 24/7 IT support really include for Dubai businesses? NOC monitoring, escalation tiers, P1/P2/P3 response times, and honest answers about what happens at 3am.",
+    "id": 25
   },
   {
-    "id": "static-structured-cabling-fiber-optic",
-    "slug": "structured-cabling-fiber-optic",
-    "title": "Certified Cat6A & Fiber Optic Engineering",
-    "excerpt": "Physical cabling is the absolute foundation of your corporate network; a single faulty termination can cripple an entire department. Our certified engineers design and pull high-density Cat6, Cat6A, and OM3/OM4 Fiber Optic infrastructure specifically rated for the extreme temperatures of UAE industrial zones and the aesthetic requirements of modern Dubai offices."
+    "slug": "it-support-helpdesk",
+    "title": "ITIL Ticketing & SLA Workflows | IT Helpdesk Dubai | NOCKO",
+    "excerpt": "NOCKO deploys ITIL-compliant ticketing on ServiceNow or Jira Service Management for Dubai businesses — with P1–P4 SLA tiers, FCR tracking, and monthly executive reporting.",
+    "id": 26
   },
   {
-    "id": "static-structured-cabling-retrofitting",
-    "slug": "structured-cabling-retrofitting",
-    "title": "Server Room & IDFs Retrofitting",
-    "excerpt": "Inherited a disastrous, disorganized server room in your new office? We specialize in live cabinet retrofitting and 'spaghetti' cleanups. We trace, label, and re-patch your entire server rack with precise cable management channels, restoring airflow to your switches and transforming a fire hazard into an organized, maintainable IT environment."
-  },
-  {
-    "id": "static-structured-cabling-physical-security",
-    "slug": "structured-cabling-physical-security",
-    "title": "Access Control and Physical Security",
-    "excerpt": "Structured cabling extends beyond computers. We deploy the Unified Physical Layer for your office, running dedicated PoE (Power over Ethernet) infrastructure for high-resolution CCTV IP cameras, biometric Access Control Systems, and VoIP telephony grids on a single, seamlessly integrated network."
-  },
-  {
-    "id": "static-it-support-onboarding",
     "slug": "it-support-onboarding",
-    "title": "Why Microsoft 365 Onboarding Takes Too Long",
-    "excerpt": "Discover how integrating Windows Autopilot with Azure AD completely eliminates manual laptop configuration within your IT department."
+    "title": "IT Employee Onboarding & Offboarding UAE | Automated User Provisioning Dubai | NOCKO",
+    "excerpt": "Zero-touch device provisioning, Microsoft Intune MDM enrollment, Entra ID account setup, and secure offboarding procedures for Dubai and UAE enterprises. NOCKO automates the full employee IT lifecycle.",
+    "id": 27
+  },
+  {
+    "slug": "it-support-onsite",
+    "title": "On-Site IT Support Dubai | Field Engineer Dispatch UAE | NOCKO",
+    "excerpt": "NOCKO dispatches certified field engineers to DIFC, Business Bay, JLT, DSO, and Abu Dhabi within defined SLA windows. Hardware replacement, rack work, structured cabling, and break-fix on-site.",
+    "id": 28
+  },
+  {
+    "slug": "it-support-optimization",
+    "title": "IT Performance Optimization UAE | System Tuning & Infrastructure Efficiency Dubai | NOCKO",
+    "excerpt": "NOCKO delivers measurable IT performance optimization for Dubai and UAE businesses — server tuning, network throughput, Windows endpoint hardening, and patch cadence management with documented baselines.",
+    "id": 29
+  },
+  {
+    "slug": "it-support-remote",
+    "title": "Remote IT Support Dubai | L1/L2 Helpdesk & Remote Troubleshooting UAE | NOCKO",
+    "excerpt": "NOCKO delivers L1/L2 remote IT support across Dubai and UAE — first-call resolution via TeamViewer, ConnectWise Control, and RMM-based remote access. Faster than on-site, billed per incident or monthly.",
+    "id": 30
+  },
+  {
+    "slug": "managed-it-co-managed",
+    "title": "Co-Managed IT: The Best of Both Worlds | NOCKO UAE",
+    "excerpt": "A guide for IT Directors on how to effectively outsource tedious NOC alerts while maintaining control of corporate strategy. We integrate directly with your internal team.",
+    "id": 31
+  },
+  {
+    "slug": "managed-it-infrastructure",
+    "title": "Complete NOC Remote Integration | NOCKO UAE",
+    "excerpt": "NOCKO connects UAE businesses to a Dubai-based Network Operations Center via lightweight RMM agents — monitoring CPU, temperature, disk health, and network events in real time, with automated remediation for known issue patterns before they cause downtime.",
+    "id": 32
+  },
+  {
+    "slug": "structured-cabling-fiber-optic",
+    "title": "Certified Cat6A & Fiber Optic Engineering | NOCKO UAE",
+    "excerpt": "Physical cabling is the absolute foundation of your corporate network; a single faulty termination can cripple an entire department. Our certified engineers design and pull high-density Cat6, Cat6A, and OM3/OM4 Fiber Optic infrastructure specifically rated for the extreme temperatures of UAE industrial zones and the aesthetic requirements of modern Dubai offices.",
+    "id": 33
+  },
+  {
+    "slug": "structured-cabling-fiber-vs-cat6a",
+    "title": "The Guide to Cat6A vs Fiber Optic | NOCKO UAE",
+    "excerpt": "A deep dive into Cat6 vs Cat6A, the necessity of Fluke certification, and managing physical layer deployments for modern smart offices.",
+    "id": 34
+  },
+  {
+    "slug": "structured-cabling-fluke-importance",
+    "title": "Why Fluke Testing is Non-Negotiable | NOCKO UAE",
+    "excerpt": "Understand how RF interference and physical materials block consumer routers, and why Ekahau heatmapping and Fluke testing is mandatory.",
+    "id": 35
+  },
+  {
+    "slug": "structured-cabling-fluke-testing",
+    "title": "Fluke Testing and 25-Year Warranties | NOCKO UAE",
+    "excerpt": "We do not guess on cable integrity. Every single node we deploy is rigorously tested and validated using Fluke DSX CableAnalyzers. This empirical verification guarantees that your internal network can handle 10Gbps throughput without packet loss, allowing us to provide manufacturer-backed 25-year performance warranties on our corporate installations.",
+    "id": 36
+  },
+  {
+    "slug": "structured-cabling-industrial",
+    "title": "Logistics Warehouses to Corporate Hubs | NOCKO UAE",
+    "excerpt": "A massive logistics facility in JAFZA requires a vastly different physical layer than a glass-walled financial office in DIFC. We engineer tailored environments: deploying armored fiber for sprawling industrial floors, and aesthetic, under-floor plenum cabling for high-end corporate boardrooms.",
+    "id": 37
+  },
+  {
+    "slug": "structured-cabling-physical-security",
+    "title": "Access Control and physical Security | NOCKO UAE",
+    "excerpt": "Structured cabling extends beyond computers. We deploy the Unified Physical Layer for your office, running dedicated PoE (Power over Ethernet) infrastructure for high-resolution CCTV IP cameras, biometric Access Control Systems, and VoIP telephony grids on a single, seamlessly integrated network.",
+    "id": 38
+  },
+  {
+    "slug": "structured-cabling-retrofitting",
+    "title": "Server Room & IDFs Retrofitting | NOCKO UAE",
+    "excerpt": "Inherited a disastrous, disorganized server room in your new office? We specialize in live cabinet retrofitting and \"spaghetti\" cleanups. We trace, label, and re-patch your entire server rack with precise cable management channels, restoring airflow to your switches and transforming a fire hazard into an organized, maintainable IT environment.",
+    "id": 39
+  },
+  {
+    "slug": "structured-cabling-wifi-heatmapping",
+    "title": "Enterprise Wi-Fi Heatmapping Solutions | NOCKO UAE",
+    "excerpt": "Stop guessing where to place access points. Using industry-standard Ekahau mapping software, we conduct predictive and physical RF heatmapping of your floorplan. We account for glass partitions in Business Bay and concrete pillars in Mussafah, guaranteeing absolute zero Wi-Fi dead zones across your enterprise.",
+    "id": 40
   }
 ]

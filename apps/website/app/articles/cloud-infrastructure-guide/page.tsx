@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/cloud-infrastructure-guide',
       'ru-RU': '/ru/articles/cloud-infrastructure-guide',
+      'x-default': '/articles/cloud-infrastructure-guide',
     },
   },
   robots: { index: true, follow: true },

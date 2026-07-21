@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/terms',
       'ru-RU': '/ru/terms',
+      'x-default': '/terms',
     },
   },
   robots: {

@@ -67,6 +67,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/ru/articles`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -184,8 +190,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // Static article pages — EN
+  // NOTE: 'centralized-helpdesk-ru' is a RU-only article (EN path 308s to /ru/) — RU list only.
   const staticArticlePages: MetadataRoute.Sitemap = [
-    'centralized-helpdesk-ru',
     'data-backup-services-dubai',
     'cloud-cost-optimization',
     'cloud-infrastructure-guide',

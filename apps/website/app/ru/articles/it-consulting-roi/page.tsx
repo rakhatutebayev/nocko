@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Оптимизация лицензирования Microsoft 365 и ROI | NOCKO',
+  title: 'Оптимизация лицензирования Microsoft 365 и ROI',
   description: 'Перестаньте переплачивать за Microsoft 365 и Azure в Дубае. NOCKO проводит детальный аудит лицензирования для максимизации ROI IT и устранения дублирующихся расходов на ПО.',
   alternates: {
     canonical: '/ru/articles/it-consulting-roi',
     languages: {
       'en-AE': '/articles/it-consulting-roi',
       'ru-RU': '/ru/articles/it-consulting-roi',
+      'x-default': '/articles/it-consulting-roi',
     },
   },
   openGraph: {

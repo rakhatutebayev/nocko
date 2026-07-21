@@ -9,7 +9,7 @@ import IndustriesDynamic from '@/components/sections/IndustriesDynamic';
 import LayoutScripts from '@/app/layout-scripts';
 
 export const metadata: Metadata = {
-  title: 'Ведущая ИТ-Компания в Дубае | ИТ Аутсорсинг и Поддержка ОАЭ | NOCKO',
+  title: 'ИТ-компания в Дубае — аутсорсинг и поддержка 24/7',
   description:
     'Ищете лучшую ИТ-компанию в Дубае? NOCKO предлагает профессиональную техническую поддержку 24/7, настройку сетей, облачные решения и защиту данных для бизнеса в ОАЭ.',
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'приходящий системный администратор',
   ],
   openGraph: {
-    title: 'Ведущая ИТ-Компания в Дубае | ИТ Аутсорсинг и Поддержка ОАЭ | NOCKO',
+    title: 'ИТ-компания в Дубае — аутсорсинг и поддержка 24/7',
     description:
       'Ведущая русскоязычная ИТ-компания в Дубае: сетевые технологии, облачные решения, кибербезопасность и абонентское обслуживание (AMC).',
     type: 'website',
@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/',
       'ru-RU': '/ru',
+      'x-default': '/',
     },
   },
 };

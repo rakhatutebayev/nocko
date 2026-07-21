@@ -8,12 +8,12 @@ import AboutStory from '@/components/sections/AboutStory';
 import FAQAccordion from '@/components/sections/FAQAccordion';
 
 export const metadata: Metadata = {
-  title: 'О нас | Поставщик ИТ-решений в Дубае, ОАЭ | NOCKO',
+  title: 'О нас | Поставщик ИТ-решений в Дубае, ОАЭ',
   description:
     'NOCKO Information Technology - Экспертный поставщик ИТ-решений в Дубае, ОАЭ. Работаем с 2025 года, обслуживаем бизнес в более чем 8 отраслях с командой, имеющей более 10 лет опыта.',
   keywords: 'о нас NOCKO, ИТ компания Дубай, ИТ услуги ОАЭ, технологические решения Дубай',
   openGraph: {
-    title: 'О нас | Поставщик ИТ-решений в Дубае, ОАЭ | NOCKO',
+    title: 'О нас | Поставщик ИТ-решений в Дубае, ОАЭ',
     description: 'NOCKO Information Technology - Экспертный поставщик ИТ-решений в Дубае, ОАЭ.',
     type: 'website',
   },
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/about',
       'ru-RU': '/ru/about',
+      'x-default': '/about',
     },
   },
 };

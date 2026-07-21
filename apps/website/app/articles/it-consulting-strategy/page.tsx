@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/it-consulting-strategy',
       'ru-RU': '/ru/articles/it-consulting-strategy',
+      'x-default': '/articles/it-consulting-strategy',
     },
   },
 };

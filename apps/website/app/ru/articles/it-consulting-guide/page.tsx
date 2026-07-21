@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Стратегический IT-консалтинг в ОАЭ: полное руководство | NOCKO',
+  title: 'Стратегический IT-консалтинг в ОАЭ: полное руководство',
   description: 'От IT-оценки до дорожной карты цифровой трансформации — полное руководство NOCKO по стратегическому IT-консалтингу для предприятий Дубая и ОАЭ. Услуги vCIO, выбор вендоров и оценка ROI.',
   alternates: {
     canonical: '/ru/articles/it-consulting-guide',
     languages: {
       'en-AE': '/articles/it-consulting-guide',
       'ru-RU': '/ru/articles/it-consulting-guide',
+      'x-default': '/articles/it-consulting-guide',
     },
   },
   openGraph: {

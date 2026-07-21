@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/cybersecurity-guide',
       'ru-RU': '/ru/articles/cybersecurity-guide',
+      'x-default': '/articles/cybersecurity-guide',
     },
   },
   robots: { index: true, follow: true },

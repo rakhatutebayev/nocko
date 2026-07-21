@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'ИТ-онбординг и офбординг сотрудников в ОАЭ | Автоматизированное управление устройствами в Дубае | NOCKO',
+  title: 'ИТ-онбординг и офбординг сотрудников в ОАЭ | Автоматизированное управление устройствами в Дубае',
   description: 'Бесконтактное развёртывание устройств, регистрация в Microsoft Intune MDM, настройка учётных записей Entra ID и безопасный офбординг для предприятий Дубая и ОАЭ. NOCKO автоматизирует полный ИТ-жизненный цикл сотрудника.',
   alternates: {
     canonical: '/ru/articles/it-support-onboarding',
     languages: {
       'en-AE': '/articles/it-support-onboarding',
       'ru-RU': '/ru/articles/it-support-onboarding',
+      'x-default': '/articles/it-support-onboarding',
     },
   },
   openGraph: {

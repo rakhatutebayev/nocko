@@ -8,13 +8,13 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'ИТ Поддержка в Дубае | NOCKO',
+  title: 'ИТ Поддержка в Дубае',
   description:
     'Ведущая компания по ИТ-поддержке в Дубае, предоставляющая круглосуточную службу технической поддержки (Helpdesk), проактивное обслуживание и управляемые ИТ-услуги по всему ОАЭ.',
   keywords:
     'ИТ поддержка Дубай, ИТ компания Дубай, управляемые ИТ услуги ОАЭ, ИТ обслуживание Дубай, техническая поддержка ОАЭ',
   openGraph: {
-    title: 'ИТ Поддержка в Дубае | NOCKO',
+    title: 'ИТ Поддержка в Дубае',
     description: 'Профессиональная ИТ поддержка для бизнеса в Дубае и по всему ОАЭ. Круглосуточный Helpdesk и техническое обслуживание.',
     type: 'website',
     locale: 'ru_RU',
@@ -134,13 +134,11 @@ export default async function ItSupportPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://nocko.com/ru' },
-            { '@type': 'ListItem', position: 2, name: 'Услуги', item: 'https://nocko.com/ru/services' },
-            { '@type': 'ListItem', position: 3, name: 'ИТ Поддержка', item: 'https://nocko.com/ru/services/it-support' },
-          ],
+          serviceType: 'IT Support',
+          name: 'IT Support & Helpdesk in Dubai & UAE',
+          description: '24/7 helpdesk, remote and on-site IT support with guaranteed response times across Dubai and the UAE.',
         }}
       />
       <HeaderWrapper />

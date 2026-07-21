@@ -7,13 +7,13 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Централизованный Helpdesk 24/7 в Дубае | NOCKO',
+  title: 'Централизованный Helpdesk 24/7 в Дубае',
   description:
     'Полное руководство по организации ИТ-поддержки бизнеса в ОАЭ. Как централизованный Helpdesk 24/7 и русскоговорящие ИТ специалисты спасают корпоративные сети от простоев.',
   keywords:
     'helpdesk дубай, ит поддержка в оаэ, русскоговорящие ИТ специалисты, сервисный центр, ит аутсорсинг дубай, mdm, noc 24/7',
   openGraph: {
-    title: 'Централизованный Helpdesk 24/7 в Дубае | NOCKO',
+    title: 'Централизованный Helpdesk 24/7 в Дубае',
     description:
       'Полное руководство по организации ИТ-поддержки бизнеса в ОАЭ. Как централизованный Helpdesk 24/7 и русскоговорящие ИТ специалисты спасают корпоративные сети от простоев.',
     type: 'article',
@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/centralized-helpdesk-ru',
       'ru-RU': '/ru/articles/centralized-helpdesk-ru',
+      'x-default': '/articles/centralized-helpdesk-ru',
     },
   },
 };

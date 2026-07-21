@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Employee Onboarding & Offboarding UAE | Automated User Provisioning Dubai | NOCKO',
+  title: 'IT Employee Onboarding & Offboarding UAE | Automated User Provisioning Dubai',
   description: 'Zero-touch device provisioning, Microsoft Intune MDM enrollment, Entra ID account setup, and secure offboarding procedures for Dubai and UAE enterprises. NOCKO automates the full employee IT lifecycle.',
   alternates: {
     canonical: '/articles/it-support-onboarding',
     languages: {
       'en-AE': '/articles/it-support-onboarding',
       'ru-RU': '/ru/articles/it-support-onboarding',
+      'x-default': '/articles/it-support-onboarding',
     },
   },
 };

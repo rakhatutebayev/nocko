@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/it-amc-vs-msp',
       'ru-RU': '/ru/articles/it-amc-vs-msp',
+      'x-default': '/articles/it-amc-vs-msp',
     },
   },
   robots: { index: true, follow: true },

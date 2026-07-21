@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/managed-it-co-managed',
       'ru-RU': '/ru/articles/managed-it-co-managed',
+      'x-default': '/articles/managed-it-co-managed',
     },
   },
   openGraph: {

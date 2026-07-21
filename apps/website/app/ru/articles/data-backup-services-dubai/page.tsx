@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Резервное копирование данных в Дубае | Облачный бэкап и восстановление | NOCKO',
+  title: 'Резервное копирование данных в Дубае | Облачный бэкап и восстановление',
   description: 'Профессиональные услуги резервного копирования данных в Дубае. Управляемый облачный бэкап, иммутабельное хранилище, disaster recovery для бизнеса в ОАЭ. Veeam, Azure Backup, AWS — с соответствием NESA и ежеквартальным тестированием восстановления.',
   alternates: {
     canonical: '/ru/articles/data-backup-services-dubai',
     languages: {
       'en-AE': '/articles/data-backup-services-dubai',
       'ru-RU': '/ru/articles/data-backup-services-dubai',
+      'x-default': '/articles/data-backup-services-dubai',
     },
   },
   openGraph: {

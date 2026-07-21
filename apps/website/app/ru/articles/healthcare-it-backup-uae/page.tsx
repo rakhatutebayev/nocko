@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Резервное копирование в здравоохранении ОАЭ | NOCKO',
+  title: 'Резервное копирование в здравоохранении ОАЭ',
   description: 'Как клиники и больницы ОАЭ защищают EMR, снимки и админ-данные с помощью изолированных, неизменяемых резервных копий по требованиям DHA, HAAD и MOH.',
   alternates: {
     canonical: '/ru/articles/healthcare-it-backup-uae',
     languages: {
       'en-AE': '/articles/healthcare-it-backup-uae',
       'ru-RU': '/ru/articles/healthcare-it-backup-uae',
+      'x-default': '/articles/healthcare-it-backup-uae',
     },
   },
   openGraph: {

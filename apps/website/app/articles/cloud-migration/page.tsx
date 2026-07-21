@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/cloud-migration',
       'ru-RU': '/ru/articles/cloud-migration',
+      'x-default': '/articles/cloud-migration',
     },
   },
   robots: { index: true, follow: true },

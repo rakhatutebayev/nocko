@@ -6,7 +6,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'ИТ Поддержка в Дубае | Управляемые ИТ Услуги Дубай | NOCKO',
+  title: 'ИТ Поддержка в Дубае | Управляемые ИТ Услуги Дубай',
   description:
     'NOCKO предоставляет ИТ поддержку, сетевую инфраструктуру, облачные решения и кибербезопасность для бизнеса в Дубае — DIFC, Business Bay, DMCC, JAFZA и по всему ОАЭ.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'ИТ поддержка Business Bay',
   ],
   openGraph: {
-    title: 'ИТ Поддержка в Дубае | Управляемые ИТ Услуги | NOCKO',
+    title: 'ИТ Поддержка в Дубае | Управляемые ИТ Услуги',
     description:
       'NOCKO предоставляет ИТ поддержку, сетевую инфраструктуру, облачные решения и кибербезопасность для бизнеса в Дубае и ОАЭ.',
     type: 'website',
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/locations/dubai',
       'ru-RU': '/ru/locations/dubai',
+      'x-default': '/locations/dubai',
     },
   },
 };
@@ -174,13 +175,6 @@ export default function DubaiRuPage() {
   return (
     <>
       <StructuredData type="LocalBusiness" data={structuredData} />
-      <StructuredData type="BreadcrumbList" data={{
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Главная', item: `${baseUrl}/ru` },
-          { '@type': 'ListItem', position: 2, name: 'Локации', item: `${baseUrl}/ru/locations` },
-          { '@type': 'ListItem', position: 3, name: 'Дубай', item: `${baseUrl}/ru/locations/dubai` },
-        ],
-      }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Breadcrumbs

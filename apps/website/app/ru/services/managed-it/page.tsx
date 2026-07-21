@@ -8,19 +8,26 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Управляемые ИТ-услуги в Дубае | ИТ-аутсорсинг ОАЭ | NOCKO',
+  title: 'Управляемые ИТ-услуги в Дубае | ИТ-аутсорсинг ОАЭ',
   description:
     'Комплексные управляемые ИТ-услуги в Дубае и ОАЭ. Полное управление ИТ-инфраструктурой, круглосуточный мониторинг и проактивное обслуживание для бизнеса.',
   keywords:
     'управляемые ИТ-услуги Дубай, управление ИТ ОАЭ, ИТ-аутсорсинг ОАЭ, полное управление ИТ Дубай, лучшие управляемые ИТ ОАЭ',
   openGraph: {
-    title: 'Управляемые ИТ-услуги в Дубае | ИТ-аутсорсинг ОАЭ | NOCKO',
+    title: 'Управляемые ИТ-услуги в Дубае | ИТ-аутсорсинг ОАЭ',
     description: 'Профессиональные управляемые ИТ-услуги и управление инфраструктурой для бизнеса в Дубае и по всему ОАЭ.',
     type: 'website',
     locale: 'ru_RU',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: { canonical: '/ru/services/managed-it' },
+  alternates: {
+    canonical: '/ru/services/managed-it',
+    languages: {
+      'en-AE': '/services/managed-it',
+      'ru-RU': '/ru/services/managed-it',
+      'x-default': '/services/managed-it',
+    },
+  },
 };
 
 export const revalidate = 3600;
@@ -132,13 +139,11 @@ export default async function ManagedItPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://nocko.com/ru' },
-            { '@type': 'ListItem', position: 2, name: 'Услуги', item: 'https://nocko.com/ru/services' },
-            { '@type': 'ListItem', position: 3, name: 'Управляемые ИТ', item: 'https://nocko.com/ru/services/managed-it' },
-          ],
+          serviceType: 'Managed IT Services',
+          name: 'Managed IT Services in Dubai & UAE',
+          description: 'Fully managed IT operations: helpdesk, monitoring, security, and infrastructure management for a fixed monthly fee.',
         }}
       />
       <HeaderWrapper />

@@ -7,19 +7,26 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity Services in Dubai | Data Protection & Cybersecurity UAE | NOCKO',
+  title: 'Cybersecurity Services in Dubai | Data Protection & Cybersecurity UAE',
   description:
     'Advanced cybersecurity services in Dubai and UAE. Firewall management, threat detection, data encryption, and security compliance for businesses. Expert security solutions for DIFC, JLT and Business Bay.',
   keywords:
     'cybersecurity Dubai, data protection UAE, IT security services Dubai, network security UAE, security compliance Dubai, threat detection UAE, cybersecurity company Dubai',
   openGraph: {
-    title: 'Cybersecurity Services in Dubai | Data Protection & Cybersecurity UAE | NOCKO',
+    title: 'Cybersecurity Services in Dubai | Data Protection & Cybersecurity UAE',
     description: 'Enterprise cybersecurity and data protection for businesses in Dubai and across the UAE.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: { canonical: '/services/cybersecurity' },
+  alternates: {
+    canonical: '/services/cybersecurity',
+    languages: {
+      'en-AE': '/services/cybersecurity',
+      'ru-RU': '/ru/services/cybersecurity',
+      'x-default': '/services/cybersecurity',
+    },
+  },
 };
 
 export const revalidate = 3600;
@@ -138,13 +145,11 @@ export default async function CybersecurityPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
-            { '@type': 'ListItem', position: 2, name: 'IT Services', item: 'https://nocko.com/services' },
-            { '@type': 'ListItem', position: 3, name: 'Cybersecurity', item: 'https://nocko.com/services/cybersecurity' },
-          ],
+          serviceType: 'Cybersecurity Services',
+          name: 'Cybersecurity Services in Dubai & UAE',
+          description: 'Firewall, endpoint protection, security monitoring, and NESA/PDPL compliance support for UAE businesses.',
         }}
       />
       <HeaderWrapper />

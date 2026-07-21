@@ -11,7 +11,7 @@ import LayoutScripts from '@/app/layout-scripts';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'IT Company in Dubai — 24/7 IT Support & Managed Services | NOCKO',
+  title: 'IT Company in Dubai — 24/7 IT Support & Managed Services',
   description:
     'NOCKO delivers 24/7 IT support, network setup, cloud & cybersecurity for Dubai businesses. UAE-wide coverage. Fast response. Get a free consultation.',
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     'technical support Dubai',
   ],
   openGraph: {
-    title: 'IT Company in Dubai | IT Support & Solutions UAE | NOCKO',
+    title: 'IT Company in Dubai | IT Support & Solutions UAE',
     description:
       'Leading IT company in Dubai providing IT support, network infrastructure, cloud solutions, and cybersecurity services for businesses across UAE.',
     type: 'website',
@@ -39,6 +39,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/',
+    languages: {
+      'en-AE': '/',
+      'ru-RU': '/ru',
+      'x-default': '/',
+    },
   },
 };
 

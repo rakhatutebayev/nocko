@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Google Workspace или Microsoft 365 в ОАЭ | NOCKO',
+  title: 'Google Workspace или Microsoft 365 в ОАЭ',
   description: 'Практичное и объективное сравнение Google Workspace и Microsoft 365 для бизнеса в ОАЭ: стоимость, совместная работа, почта, безопасность, администрирование и что выбрать.',
   alternates: {
     canonical: '/ru/articles/google-workspace-vs-microsoft-365',
     languages: {
       'en-AE': '/articles/google-workspace-vs-microsoft-365',
       'ru-RU': '/ru/articles/google-workspace-vs-microsoft-365',
+      'x-default': '/articles/google-workspace-vs-microsoft-365',
     },
   },
   openGraph: {

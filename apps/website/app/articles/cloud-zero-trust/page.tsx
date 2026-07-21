@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/cloud-zero-trust',
       'ru-RU': '/ru/articles/cloud-zero-trust',
+      'x-default': '/articles/cloud-zero-trust',
     },
   },
   robots: { index: true, follow: true },

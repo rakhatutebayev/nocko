@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/it-amc-guide',
       'ru-RU': '/ru/articles/it-amc-guide',
+      'x-default': '/articles/it-amc-guide',
     },
   },
   robots: { index: true, follow: true },
@@ -45,18 +46,18 @@ const articleData = {
     },
     {
       title: '2. AMC Pricing in the UAE: Per-User and Per-Device Rates in AED',
-      text: '<p>AMC contracts are priced per user or per device, with the fee tier determined by response SLA and service scope. In Dubai, per-user pricing typically ranges from AED 200 to AED 600 per user per month. Basic helpdesk-only contracts sit at the lower end; comprehensive contracts with 24/7 NOC, security monitoring, and vCIO services occupy the upper end. Per-device pricing is common for environments with shared workstations or heavy infrastructure: expect roughly AED 80–150 per workstation per month and AED 400–900 per server per month depending on criticality and monitoring depth.</p><p>As a whole-of-contract reference point, a 50-person company typically pays AED 8,000–18,000 per year for an all-inclusive AMC. The typical tier structure looks like this:</p>',
+      text: '<p>AMC contracts are priced per user or per device, with the fee tier determined by response SLA and service scope. In Dubai, per-user pricing typically ranges from AED 75 to AED 190 per user per month. Basic helpdesk-only contracts sit at the lower end; comprehensive contracts with 24/7 NOC, security monitoring, and vCIO services occupy the upper end. Per-device pricing is common for environments with shared workstations or heavy infrastructure: expect roughly AED 80–150 per workstation per month and AED 400–900 per server per month depending on criticality and monitoring depth.</p><p>As a whole-of-contract reference point, a 20–50 user business typically budgets AED 18,000–45,000 per year all-inclusive: a 20–25 user company starts from about AED 18,000 on the Essential tier, while a 50-person company on Essential scope pays around AED 45,000. The typical tier structure looks like this:</p>',
       list: [
-        'Essential (approx. AED 200–300/user/month): 8×5 remote helpdesk, monthly maintenance visit, patching, next-business-day on-site',
-        'Business (approx. AED 300–450/user/month): extended-hours support, 4-hour on-site SLA, hardware RMA management, quarterly reporting',
-        'Comprehensive (approx. AED 450–600/user/month): 24×7 NOC monitoring, 2-hour on-site dispatch in Dubai, security monitoring, vCIO quarterly reviews',
+        'Essential (approx. AED 75–100/user/month): 8×5 remote helpdesk, monthly maintenance visit, patching, next-business-day on-site',
+        'Business (approx. AED 100–140/user/month): extended-hours support, 4-hour on-site SLA, hardware RMA management, quarterly reporting',
+        'Comprehensive (approx. AED 140–190/user/month): 24×7 NOC monitoring, 2-hour on-site dispatch in Dubai, security monitoring, vCIO quarterly reviews',
         'Hardware cover rider (optional): parts covered up to an agreed per-claim limit, on top of included replacement labour',
         'True-up clause: if headcount grows more than 20% mid-term, the fee adjusts pro-rata for the remaining months',
       ],
     },
     {
       title: '3. AMC vs Break/Fix: The Real Cost Comparison',
-      text: '<p>In the break/fix model, a single server failure requiring a part replacement, 4 hours of engineer labour at AED 350/hour, and emergency after-hours callout charges can easily cost AED 4,000–8,000 for one incident. A 50-person company typically experiences 3–5 such incidents per year, making the unbudgeted annual exposure AED 15,000–40,000 on top of regular IT bills — and that figure excludes the revenue lost while systems are down and an engineer is being sourced.</p><p>An AMC for the same company typically costs AED 8,000–18,000 per year all-inclusive. Beyond the raw numbers, the cost certainty matters as much as the savings: your finance team can enter the exact IT operations cost into the annual budget, which is particularly important for UAE free zone entities preparing annual financial statements for auditors or investors. Break/fix also creates a perverse incentive — the provider earns more when your systems fail more — whereas under an AMC the provider profits by preventing incidents. You can see how this played out for a real client in our <a href="/case-studies/technohub">TechnoHub case study</a>.</p>',
+      text: '<p>In the break/fix model, a single server failure requiring a part replacement, 4 hours of engineer labour at AED 350/hour, and emergency after-hours callout charges can easily cost AED 4,000–8,000 for one incident. A 25-person company typically experiences 3–5 such incidents per year, making the unbudgeted annual exposure AED 15,000–40,000 on top of regular IT bills — and that figure excludes the revenue lost while systems are down and an engineer is being sourced.</p><p>An AMC for the same company typically costs AED 18,000–25,000 per year all-inclusive. Beyond the raw numbers, the cost certainty matters as much as the savings: your finance team can enter the exact IT operations cost into the annual budget, which is particularly important for UAE free zone entities preparing annual financial statements for auditors or investors. Break/fix also creates a perverse incentive — the provider earns more when your systems fail more — whereas under an AMC the provider profits by preventing incidents. You can see how this played out for a real client in our <a href="/case-studies/technohub">TechnoHub case study</a>.</p>',
     },
     {
       title: '4. Preventive Maintenance Visits: What Happens Each Month',
@@ -92,7 +93,7 @@ const faqItems = [
   {
     question: 'What is a typical IT AMC cost per user in Dubai?',
     answer:
-      'AMC pricing in Dubai typically ranges from AED 200–600 per user per month depending on service scope. Basic helpdesk-only contracts start lower; comprehensive contracts with 24/7 NOC, security monitoring, and vCIO services are at the higher end. As a benchmark, a 50-person company usually pays AED 8,000–18,000 per year all-inclusive.',
+      'AMC pricing in Dubai typically ranges from AED 75–190 per user per month depending on service scope. Basic helpdesk-only contracts start lower; comprehensive contracts with 24/7 NOC, security monitoring, and vCIO services are at the higher end. As a benchmark, a 20–50 user business typically budgets AED 18,000–45,000 per year all-inclusive.',
   },
   {
     question: 'Is hardware replacement included in an AMC?',

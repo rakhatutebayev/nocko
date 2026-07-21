@@ -6,7 +6,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Support & Managed IT Services in Dubai | NOCKO',
+  title: 'IT Support & Managed IT Services in Dubai',
   description:
     'NOCKO provides IT support, network infrastructure, cloud solutions, and cybersecurity for businesses in Dubai — DIFC, Business Bay, DMCC, JAFZA, and across the UAE.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'IT support Business Bay',
   ],
   openGraph: {
-    title: 'IT Support & Managed IT Services in Dubai | NOCKO',
+    title: 'IT Support & Managed IT Services in Dubai',
     description:
       'NOCKO provides IT support, network infrastructure, cloud solutions, and cybersecurity for businesses across Dubai and the UAE.',
     type: 'website',
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/locations/dubai',
       'ru-RU': '/ru/locations/dubai',
+      'x-default': '/locations/dubai',
     },
   },
 };
@@ -178,13 +179,6 @@ export default function DubaiPage() {
   return (
     <>
       <StructuredData type="LocalBusiness" data={structuredData} />
-      <StructuredData type="BreadcrumbList" data={{
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
-          { '@type': 'ListItem', position: 2, name: 'Locations', item: `${baseUrl}/locations` },
-          { '@type': 'ListItem', position: 3, name: 'Dubai', item: `${baseUrl}/locations/dubai` },
-        ],
-      }} />
       <HeaderWrapper />
       <main className="main" role="main">
         <Breadcrumbs

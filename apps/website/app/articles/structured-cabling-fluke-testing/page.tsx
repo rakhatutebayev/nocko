@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/structured-cabling-fluke-testing',
       'ru-RU': '/ru/articles/structured-cabling-fluke-testing',
+      'x-default': '/articles/structured-cabling-fluke-testing',
     },
   },
   robots: { index: true, follow: true },

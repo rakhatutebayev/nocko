@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/managed-it-services-guide',
       'ru-RU': '/ru/articles/managed-it-services-guide',
+      'x-default': '/articles/managed-it-services-guide',
     },
   },
   robots: { index: true, follow: true },

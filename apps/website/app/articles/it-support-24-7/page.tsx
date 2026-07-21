@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: '24/7 IT Support in Dubai — What Response Time Actually Means | NOCKO',
+  title: '24/7 IT Support in Dubai — What Response Time Actually Means',
   description: 'What does 24/7 IT support really include for Dubai businesses? NOC monitoring, escalation tiers, P1/P2/P3 response times, and honest answers about what happens at 3am.',
   alternates: {
     canonical: '/articles/it-support-24-7',
     languages: {
       'en-AE': '/articles/it-support-24-7',
       'ru-RU': '/ru/articles/it-support-24-7',
+      'x-default': '/articles/it-support-24-7',
     },
   },
 };

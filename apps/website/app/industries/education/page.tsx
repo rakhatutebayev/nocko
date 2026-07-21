@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/industries/education',
       'ru-RU': '/ru/industries/education',
+      'x-default': '/industries/education',
     },
   },
 };

@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'M&A Technology Integration Services UAE | NOCKO',
+  title: 'M&A Technology Integration Services UAE',
   description: 'Flawless IT infrastructure integration during Mergers and Acquisitions (M&A). Prevent technical disruptions during corporate restructuring.',
   alternates: {
     canonical: '/articles/it-consulting-infrastructure-design',
     languages: {
       'en-AE': '/articles/it-consulting-infrastructure-design',
       'ru-RU': '/ru/articles/it-consulting-infrastructure-design',
+      'x-default': '/articles/it-consulting-infrastructure-design',
     },
   },
 };

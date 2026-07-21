@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/structured-cabling-guide',
       'ru-RU': '/ru/articles/structured-cabling-guide',
+      'x-default': '/articles/structured-cabling-guide',
     },
   },
 };

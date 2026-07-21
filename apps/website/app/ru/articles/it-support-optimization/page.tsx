@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Оптимизация ИТ-производительности в ОАЭ | Настройка систем и повышение эффективности инфраструктуры в Дубае | NOCKO',
+  title: 'Оптимизация ИТ-производительности в ОАЭ | Настройка систем и повышение эффективности инфраструктуры в Дубае',
   description: 'NOCKO обеспечивает измеримую оптимизацию ИТ-производительности для компаний Дубая и ОАЭ: настройка серверов, пропускная способность сети, защита конечных точек Windows и управление циклом обновлений с задокументированными базовыми показателями.',
   alternates: {
     canonical: '/ru/articles/it-support-optimization',
     languages: {
       'en-AE': '/articles/it-support-optimization',
       'ru-RU': '/ru/articles/it-support-optimization',
+      'x-default': '/articles/it-support-optimization',
     },
   },
   openGraph: {

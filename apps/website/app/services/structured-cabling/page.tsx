@@ -7,19 +7,26 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Structured Cabling Companies Dubai | Network Cabling UAE | NOCKO',
+  title: 'Structured Cabling Companies Dubai | Network Cabling UAE',
   description:
     'Leading structured cabling company in Dubai and UAE. Cat6, Cat6A, and fiber optic installation with Fluke certification. Network cabling for offices, data centers, and warehouses across DIFC, DMCC, JLT, Business Bay, and all UAE emirates.',
   keywords:
     'structured cabling companies in dubai, network cabling company in dubai, structured cabling dubai, structured cabling solutions dubai, structured cabling uae, structured cabling companies in uae, network cabling companies, networking companies in uae, cabling installation dubai',
   openGraph: {
-    title: 'Structured Cabling Companies Dubai | Network Cabling UAE | NOCKO',
+    title: 'Structured Cabling Companies Dubai | Network Cabling UAE',
     description: 'Top-rated structured cabling company in Dubai. Cat6, Cat6A, and fiber optic cabling with Fluke certification across UAE.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: { canonical: '/services/structured-cabling' },
+  alternates: {
+    canonical: '/services/structured-cabling',
+    languages: {
+      'en-AE': '/services/structured-cabling',
+      'ru-RU': '/ru/services/structured-cabling',
+      'x-default': '/services/structured-cabling',
+    },
+  },
 };
 
 export const revalidate = 3600;
@@ -174,13 +181,11 @@ export default async function StructuredCablingPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
-            { '@type': 'ListItem', position: 2, name: 'IT Services', item: 'https://nocko.com/services' },
-            { '@type': 'ListItem', position: 3, name: 'Structured Cabling', item: 'https://nocko.com/services/structured-cabling' },
-          ],
+          serviceType: 'Structured Cabling',
+          name: 'Structured Cabling Services in Dubai & UAE',
+          description: 'Cat6A and fiber optic structured cabling design, installation, and Fluke-certified testing for UAE offices.',
         }}
       />
       <HeaderWrapper />

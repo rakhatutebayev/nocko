@@ -8,19 +8,26 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'ИТ Консалтинг в Дубае | Технологическая Стратегия ОАЭ | NOCKO',
+  title: 'ИТ Консалтинг в Дубае | Технологическая Стратегия ОАЭ',
   description:
     'Стратегический ИТ-консалтинг в Дубае и ОАЭ. Оценка технологий, цифровая трансформация и планирование инфраструктуры для бизнеса. Эксперты-консультанты для DIFC и Business Bay.',
   keywords:
     'ИТ консалтинг Дубай, ИТ стратегия ОАЭ, технологический консалтинг Дубай, ИТ планирование ОАЭ, цифровая трансформация Дубай',
   openGraph: {
-    title: 'ИТ Консалтинг в Дубае | Технологическая Стратегия ОАЭ | NOCKO',
+    title: 'ИТ Консалтинг в Дубае | Технологическая Стратегия ОАЭ',
     description: 'Экспертная ИТ-стратегия и технологический консалтинг для бизнеса в Дубае и по всему ОАЭ.',
     type: 'website',
     locale: 'ru_RU',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: { canonical: '/ru/services/it-consulting' },
+  alternates: {
+    canonical: '/ru/services/it-consulting',
+    languages: {
+      'en-AE': '/services/it-consulting',
+      'ru-RU': '/ru/services/it-consulting',
+      'x-default': '/services/it-consulting',
+    },
+  },
 };
 
 export const revalidate = 3600;
@@ -124,13 +131,11 @@ export default async function ItConsultingPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://nocko.com/ru' },
-            { '@type': 'ListItem', position: 2, name: 'Услуги', item: 'https://nocko.com/ru/services' },
-            { '@type': 'ListItem', position: 3, name: 'ИТ Консалтинг', item: 'https://nocko.com/ru/services/it-consulting' },
-          ],
+          serviceType: 'IT Consulting',
+          name: 'IT Consulting Services in Dubai & UAE',
+          description: 'IT strategy, infrastructure assessment, roadmaps, and digital transformation consulting for UAE companies.',
         }}
       />
       <HeaderWrapper />

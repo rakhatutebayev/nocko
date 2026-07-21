@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Healthcare Data Backup & Compliance UAE | NOCKO',
+  title: 'Healthcare Data Backup & Compliance UAE',
   description: 'How UAE clinics and hospitals protect EMR, imaging and admin data with isolated, immutable backups aligned to DHA, HAAD and MOH patient data rules.',
   alternates: {
     canonical: '/articles/healthcare-it-backup-uae',
     languages: {
       'en-AE': '/articles/healthcare-it-backup-uae',
       'ru-RU': '/ru/articles/healthcare-it-backup-uae',
+      'x-default': '/articles/healthcare-it-backup-uae',
     },
   },
   robots: { index: true, follow: true },

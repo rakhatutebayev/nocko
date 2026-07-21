@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/it-amc-hardware-lifecycle',
       'ru-RU': '/ru/articles/it-amc-hardware-lifecycle',
+      'x-default': '/articles/it-amc-hardware-lifecycle',
     },
   },
   robots: { index: true, follow: true },

@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Business Continuity & Disaster Recovery UAE | NOCKO',
+  title: 'Business Continuity & Disaster Recovery UAE',
   description: 'Architecting cloud-native Disaster Recovery as a Service (DRaaS) to ensure zero data loss and compliance with UAE insurance mandates.',
   alternates: {
     canonical: '/articles/it-consulting-digital-transformation',
     languages: {
       'en-AE': '/articles/it-consulting-digital-transformation',
       'ru-RU': '/ru/articles/it-consulting-digital-transformation',
+      'x-default': '/articles/it-consulting-digital-transformation',
     },
   },
 };

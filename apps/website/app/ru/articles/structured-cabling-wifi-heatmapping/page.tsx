@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/structured-cabling-wifi-heatmapping',
       'ru-RU': '/ru/articles/structured-cabling-wifi-heatmapping',
+      'x-default': '/articles/structured-cabling-wifi-heatmapping',
     },
   },
   robots: { index: true, follow: true },

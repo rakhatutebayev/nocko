@@ -8,19 +8,26 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Контракты IT AMC в Дубае | Абонентское обслуживание | NOCKO',
+  title: 'Контракты IT AMC в Дубае | Абонентское обслуживание',
   description:
     'Надежные контракты на годовое ИТ-обслуживание (AMC) в Дубае и ОАЭ. Фиксированные затраты на обслуживание серверов и круглосуточную поддержку. Экспертный провайдер для бизнеса в DIFC и Business Bay.',
   keywords:
     'IT AMC Дубай, годовой контракт на обслуживание ОАЭ, контракт на ИТ-обслуживание Дубай, услуги AMC ОАЭ, поддержка ИТ Дубай, лучшие IT AMC Дубай',
   openGraph: {
-    title: 'Контракты IT AMC в Дубае | Абонентское обслуживание | NOCKO',
+    title: 'Контракты IT AMC в Дубае | Абонентское обслуживание',
     description: 'Предсказуемое ИТ-обслуживание с годовым контрактом (AMC) в Дубае и ОАЭ.',
     type: 'website',
     locale: 'ru_RU',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: { canonical: '/ru/services/it-amc' },
+  alternates: {
+    canonical: '/ru/services/it-amc',
+    languages: {
+      'en-AE': '/services/it-amc',
+      'ru-RU': '/ru/services/it-amc',
+      'x-default': '/services/it-amc',
+    },
+  },
 };
 
 export const revalidate = 3600;
@@ -120,13 +127,11 @@ export default async function ItAmcPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://nocko.com/ru' },
-            { '@type': 'ListItem', position: 2, name: 'Услуги', item: 'https://nocko.com/ru/services' },
-            { '@type': 'ListItem', position: 3, name: 'IT AMC', item: 'https://nocko.com/ru/services/it-amc' },
-          ],
+          serviceType: 'IT Annual Maintenance Contract',
+          name: 'IT AMC Services in Dubai & UAE',
+          description: 'Annual Maintenance Contracts covering servers, networks, and workstations with fixed pricing and guaranteed SLAs for UAE businesses.',
         }}
       />
       <HeaderWrapper />

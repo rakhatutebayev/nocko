@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/structured-cabling-fluke-importance',
       'ru-RU': '/ru/articles/structured-cabling-fluke-importance',
+      'x-default': '/articles/structured-cabling-fluke-importance',
     },
   },
   robots: { index: true, follow: true },

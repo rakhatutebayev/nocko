@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/it-consulting-ransomware-survival',
       'ru-RU': '/ru/articles/it-consulting-ransomware-survival',
+      'x-default': '/articles/it-consulting-ransomware-survival',
     },
   },
   robots: { index: true, follow: true },

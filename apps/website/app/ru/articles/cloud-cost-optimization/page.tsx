@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/cloud-cost-optimization',
       'ru-RU': '/ru/articles/cloud-cost-optimization',
+      'x-default': '/articles/cloud-cost-optimization',
     },
   },
   openGraph: {

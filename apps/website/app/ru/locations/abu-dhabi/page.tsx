@@ -6,7 +6,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'ИТ Компания в Абу-Даби | ИТ Поддержка Абу-Даби | NOCKO',
+  title: 'ИТ Компания в Абу-Даби | ИТ Поддержка Абу-Даби',
   description:
     'Профессиональные ИТ услуги в Абу-Даби — ИТ поддержка, сетевая инфраструктура, облачные решения, кибербезопасность и управляемые ИТ услуги. NOCKO обслуживает ADGM, Khalifa City, Mussafah и все районы Абу-Даби с поддержкой 24/7.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'ADGM ИТ поддержка',
   ],
   openGraph: {
-    title: 'ИТ Компания в Абу-Даби | ИТ Поддержка | NOCKO',
+    title: 'ИТ Компания в Абу-Даби | ИТ Поддержка',
     description:
       'Профессиональные ИТ услуги в Абу-Даби — сети, облако, кибербезопасность и управляемая ИТ поддержка 24/7 для бизнеса в ADGM, Khalifa City и Mussafah.',
     type: 'website',
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/locations/abu-dhabi',
       'ru-RU': '/ru/locations/abu-dhabi',
+      'x-default': '/locations/abu-dhabi',
     },
   },
 };
@@ -142,16 +143,6 @@ export default function AbuDhabiRuPage() {
               opens: '09:00',
               closes: '18:00',
             },
-          ],
-        }}
-      />
-      <StructuredData
-        type="BreadcrumbList"
-        data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Главная', item: `${baseUrl}/ru` },
-            { '@type': 'ListItem', position: 2, name: 'Локации', item: `${baseUrl}/ru/locations` },
-            { '@type': 'ListItem', position: 3, name: 'Абу-Даби', item: `${baseUrl}/ru/locations/abu-dhabi` },
           ],
         }}
       />

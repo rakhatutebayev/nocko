@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Data Backup Services Dubai | Cloud Backup & Disaster Recovery UAE | NOCKO',
+  title: 'Data Backup Services Dubai | Cloud Backup & Disaster Recovery UAE',
   description: 'Professional data backup services in Dubai. Managed cloud backup, immutable offsite storage, and disaster recovery for UAE businesses. Veeam, Azure Backup, AWS Backup — with NESA-compliant retention and quarterly tested restores. Free backup assessment.',
   alternates: {
     canonical: '/articles/data-backup-services-dubai',
     languages: {
       'en-AE': '/articles/data-backup-services-dubai',
       'ru-RU': '/ru/articles/data-backup-services-dubai',
+      'x-default': '/articles/data-backup-services-dubai',
     },
   },
   keywords: 'data backup services dubai, cloud backup dubai, backup solutions uae, disaster recovery dubai, data backup uae, managed backup services dubai, backup and recovery dubai, offsite backup dubai, server backup dubai, business continuity uae',

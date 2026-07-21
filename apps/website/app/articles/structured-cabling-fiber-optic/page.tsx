@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/structured-cabling-fiber-optic',
       'ru-RU': '/ru/articles/structured-cabling-fiber-optic',
+      'x-default': '/articles/structured-cabling-fiber-optic',
     },
   },
 };

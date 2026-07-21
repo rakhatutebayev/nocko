@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Непрерывность бизнеса и аварийное восстановление в ОАЭ | NOCKO',
+  title: 'Непрерывность бизнеса и аварийное восстановление в ОАЭ',
   description: 'Проектирование облачных систем аварийного восстановления (DRaaS) для обеспечения нулевой потери данных и соответствия требованиям страховщиков в ОАЭ.',
   alternates: {
     canonical: '/ru/articles/it-consulting-digital-transformation',
     languages: {
       'en-AE': '/articles/it-consulting-digital-transformation',
       'ru-RU': '/ru/articles/it-consulting-digital-transformation',
+      'x-default': '/articles/it-consulting-digital-transformation',
     },
   },
   openGraph: {

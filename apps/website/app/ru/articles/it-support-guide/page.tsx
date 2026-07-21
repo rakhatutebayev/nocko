@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/it-support-guide',
       'ru-RU': '/ru/articles/it-support-guide',
+      'x-default': '/articles/it-support-guide',
     },
   },
   robots: { index: true, follow: true },

@@ -7,19 +7,26 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Cloud Migration Services UAE | Cloud Provider Dubai | AWS & Azure | NOCKO',
+  title: 'Cloud Migration Services UAE | Cloud Provider Dubai | AWS & Azure',
   description:
     'Leading cloud migration services provider in Dubai and UAE. Zero-downtime migration to AWS and Azure, cloud infrastructure setup, FinOps cost optimization, and DRaaS backup. Certified cloud architects for DIFC, DMCC, and Business Bay businesses.',
   keywords:
     'cloud migration services UAE, cloud migration provider Dubai, cloud services Dubai, cloud migration Dubai, cloud migration services in UAE, managed cloud services Dubai, AWS migration UAE, Azure migration Dubai, cloud infrastructure UAE',
   openGraph: {
-    title: 'Cloud Migration Services UAE | Cloud Provider Dubai | NOCKO',
+    title: 'Cloud Migration Services UAE | Cloud Provider Dubai',
     description: 'Zero-downtime cloud migration to AWS and Azure for UAE businesses. Certified cloud architects in Dubai.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: { canonical: '/services/cloud' },
+  alternates: {
+    canonical: '/services/cloud',
+    languages: {
+      'en-AE': '/services/cloud',
+      'ru-RU': '/ru/services/cloud',
+      'x-default': '/services/cloud',
+    },
+  },
 };
 
 export const revalidate = 3600;
@@ -129,13 +136,11 @@ export default async function CloudPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
-            { '@type': 'ListItem', position: 2, name: 'IT Services', item: 'https://nocko.com/services' },
-            { '@type': 'ListItem', position: 3, name: 'Cloud Services', item: 'https://nocko.com/services/cloud' },
-          ],
+          serviceType: 'Cloud Services',
+          name: 'Cloud & Data Services in Dubai & UAE',
+          description: 'Cloud migration, infrastructure, backup, and cost optimization on Azure, AWS, and Microsoft 365 for UAE businesses.',
         }}
       />
       <HeaderWrapper />

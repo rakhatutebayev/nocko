@@ -7,13 +7,22 @@ import Link from 'next/link';
 import staticArticlesData from '@/lib/data/staticArticles.json';
 
 export const metadata: Metadata = {
-  title: 'Blog | IT Articles & Insights | NOCKO',
+  title: 'IT Blog & Expert Guides for UAE Business',
   description:
     'Expert IT insights, guides, and articles from NOCKO. Learn about network infrastructure, cloud solutions, cybersecurity, IT support, and best practices for businesses in UAE.',
   keywords:
     'IT blog UAE, IT articles Dubai, network infrastructure blog, cloud solutions articles, cybersecurity insights UAE',
+  alternates: {
+    canonical: '/articles',
+    languages: {
+      'en-AE': '/articles',
+      'ru-RU': '/ru/articles',
+      'x-default': '/articles',
+    },
+  },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: 'Blog | IT Articles & Insights | NOCKO',
+    title: 'IT Blog & Expert Guides for UAE Business',
     description: 'Expert IT insights and guides for businesses in UAE.',
     type: 'website',
   },
@@ -30,18 +39,21 @@ export default async function ArticlesPage() {
     articles = [];
   }
 
-  // Combine with static articles to prevent them from being orphaned
+  // Combine with static articles to prevent them from being orphaned (dedupe by slug)
+  const seenSlugs = new Set(articles.map((a: any) => a.attributes?.slug));
   const combinedArticles = [
     ...articles,
-    ...staticArticlesData.map((article: any) => ({
-      id: article.id,
-      attributes: {
-        title: article.title,
-        slug: article.slug,
-        excerpt: article.excerpt,
-        publishedAt: null, // Static articles don't have this in JSON
-      }
-    }))
+    ...staticArticlesData
+      .filter((article: any) => !seenSlugs.has(article.slug))
+      .map((article: any) => ({
+        id: `static-${article.id}`,
+        attributes: {
+          title: article.title,
+          slug: article.slug,
+          excerpt: article.excerpt,
+          publishedAt: null, // Static articles don't have this in JSON
+        }
+      }))
   ];
 
   return (

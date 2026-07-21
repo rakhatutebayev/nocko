@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/services/it-support',
       'ru-RU': '/services/it-support-ru',
+      'x-default': '/services/it-support',
     },
   },
 };

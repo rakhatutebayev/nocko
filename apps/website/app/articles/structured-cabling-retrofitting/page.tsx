@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/structured-cabling-retrofitting',
       'ru-RU': '/ru/articles/structured-cabling-retrofitting',
+      'x-default': '/articles/structured-cabling-retrofitting',
     },
   },
 };

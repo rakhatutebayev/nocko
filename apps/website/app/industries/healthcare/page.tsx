@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/industries/healthcare',
       'ru-RU': '/ru/industries/healthcare',
+      'x-default': '/industries/healthcare',
     },
   },
 };

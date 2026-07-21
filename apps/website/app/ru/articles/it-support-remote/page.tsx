@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Удалённая ИТ-поддержка в Дубае | Хелпдеск L1/L2 и удалённое устранение неполадок в ОАЭ | NOCKO',
+  title: 'Удалённая ИТ-поддержка в Дубае | Хелпдеск L1/L2 и удалённое устранение неполадок в ОАЭ',
   description: 'NOCKO оказывает удалённую ИТ-поддержку L1/L2 по всему Дубаю и ОАЭ — первичное решение через TeamViewer, ConnectWise Control и удалённый доступ на базе RMM. Быстрее выезда, оплата за инцидент или ежемесячно.',
   alternates: {
     canonical: '/ru/articles/it-support-remote',
     languages: {
       'en-AE': '/articles/it-support-remote',
       'ru-RU': '/ru/articles/it-support-remote',
+      'x-default': '/articles/it-support-remote',
     },
   },
   openGraph: {

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/cybersecurity-antivirus-dead',
       'ru-RU': '/ru/articles/cybersecurity-antivirus-dead',
+      'x-default': '/articles/cybersecurity-antivirus-dead',
     },
   },
   openGraph: {

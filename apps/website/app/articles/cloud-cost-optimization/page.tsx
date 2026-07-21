@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Cloud Cost Optimization Services UAE | AWS & Azure Billing Reduction | NOCKO',
+  title: 'Cloud Cost Optimization Services UAE | AWS & Azure Billing Reduction',
   description: 'NOCKO reduces AWS and Azure bills for UAE businesses by 30–50% through Reserved Instance strategy, waste elimination, automated FinOps governance, and multi-cloud cost management. Free cloud cost audit for Dubai businesses.',
   alternates: {
     canonical: '/articles/cloud-cost-optimization',
     languages: {
       'en-AE': '/articles/cloud-cost-optimization',
       'ru-RU': '/ru/articles/cloud-cost-optimization',
+      'x-default': '/articles/cloud-cost-optimization',
     },
   },
   keywords: 'cloud cost optimization UAE, cloud cost reduction Dubai, AWS cost optimization UAE, Azure billing optimization Dubai, FinOps UAE, cloud spend management, cloud cost management services Dubai',

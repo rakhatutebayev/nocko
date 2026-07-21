@@ -7,19 +7,26 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'IT AMC Dubai | IT Annual Maintenance Contract UAE | NOCKO',
+  title: 'IT AMC Dubai | IT Annual Maintenance Contract UAE',
   description:
     'Leading IT AMC provider in Dubai and UAE. Comprehensive IT Annual Maintenance Contract covering servers, networks, workstations, and 24/7 priority support. Fixed-cost IT AMC services for DIFC, DMCC, JLT, Business Bay businesses. Free AMC assessment.',
   keywords:
     'IT AMC Dubai, IT AMC services, IT AMC services in Dubai, annual maintenance contract Dubai, it annual maintenance contract in dubai, AMC services Dubai, IT support contract Dubai, IT maintenance contract UAE, AMC company Dubai, it amc uae',
   openGraph: {
-    title: 'IT AMC Dubai | IT Annual Maintenance Contract UAE | NOCKO',
+    title: 'IT AMC Dubai | IT Annual Maintenance Contract UAE',
     description: 'Fixed-cost IT Annual Maintenance Contract for Dubai businesses. Priority support, scheduled visits, hardware lifecycle management.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: { canonical: '/services/it-amc' },
+  alternates: {
+    canonical: '/services/it-amc',
+    languages: {
+      'en-AE': '/services/it-amc',
+      'ru-RU': '/ru/services/it-amc',
+      'x-default': '/services/it-amc',
+    },
+  },
 };
 
 export const revalidate = 3600;
@@ -149,13 +156,11 @@ export default async function ItAmcPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
-            { '@type': 'ListItem', position: 2, name: 'IT Services', item: 'https://nocko.com/services' },
-            { '@type': 'ListItem', position: 3, name: 'IT AMC', item: 'https://nocko.com/services/it-amc' },
-          ],
+          serviceType: 'IT Annual Maintenance Contract',
+          name: 'IT AMC Services in Dubai & UAE',
+          description: 'Annual Maintenance Contracts covering servers, networks, and workstations with fixed pricing and guaranteed SLAs for UAE businesses.',
         }}
       />
       <HeaderWrapper />

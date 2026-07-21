@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Strategic IT Consulting in UAE: The Complete Guide | NOCKO',
+  title: 'Strategic IT Consulting in UAE: The Complete Guide',
   description: 'From IT assessment to digital transformation roadmap — NOCKO\'s complete guide to strategic IT consulting for Dubai and UAE enterprises. vCIO services, vendor selection, and ROI measurement.',
   alternates: {
     canonical: '/articles/it-consulting-guide',
     languages: {
       'en-AE': '/articles/it-consulting-guide',
       'ru-RU': '/ru/articles/it-consulting-guide',
+      'x-default': '/articles/it-consulting-guide',
     },
   },
 };

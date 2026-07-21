@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Cloud Services for Banks in the UAE | NOCKO',
+  title: 'Cloud Services for Banks in the UAE',
   description: 'How UAE banks and financial institutions adopt cloud securely: in-country data residency, CBUAE-aligned compliance, encryption, high availability, and a controlled migration approach.',
   alternates: {
     canonical: '/articles/cloud-banking-uae',
     languages: {
       'en-AE': '/articles/cloud-banking-uae',
       'ru-RU': '/ru/articles/cloud-banking-uae',
+      'x-default': '/articles/cloud-banking-uae',
     },
   },
   robots: { index: true, follow: true },

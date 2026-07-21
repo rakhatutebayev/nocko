@@ -32,13 +32,13 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'projection') {
     return {
-      title: 'How Projection Improved IT Reliability with Annual Maintenance Contract | Case Study | NOCKO',
+      title: 'How Projection Improved IT Reliability with Annual Maintenance Contract | Case Study',
       description:
         'Projection improved uptime and response times with a structured Annual Maintenance Contract and proactive support across UAE.',
       keywords:
         'Projection case study, IT AMC UAE, annual maintenance contract Dubai, IT reliability, uptime improvement',
       openGraph: {
-        title: 'How Projection Improved IT Reliability with Annual Maintenance Contract | NOCKO',
+        title: 'How Projection Improved IT Reliability with Annual Maintenance Contract',
         description:
           'Projection improved uptime and response times with a structured Annual Maintenance Contract and proactive support across UAE.',
         type: 'article',
@@ -48,13 +48,13 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'solus') {
     return {
-      title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity | Case Study | NOCKO',
+      title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity | Case Study',
       description:
         'Solus Insurance improved threat detection, reduced risk exposure, and strengthened compliance with enterprise cybersecurity services in UAE.',
       keywords:
         'Solus Insurance case study, enterprise cybersecurity UAE, threat detection, security compliance, zero trust',
       openGraph: {
-        title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity | NOCKO',
+        title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity',
         description:
           'Solus Insurance improved threat detection, reduced risk exposure, and strengthened compliance with enterprise cybersecurity services in UAE.',
         type: 'article',
@@ -64,13 +64,13 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'fh') {
     return {
-      title: 'How FH Fundamental Migrated to Cloud with Zero Downtime | Case Study | NOCKO',
+      title: 'How FH Fundamental Migrated to Cloud with Zero Downtime | Case Study',
       description:
         'FH Fundamental achieved seamless cloud migration to AWS with zero downtime, improved performance, and enhanced scalability for business growth.',
       keywords:
         'FH Fundamental case study, cloud migration UAE, AWS migration Dubai, zero downtime migration, cloud transformation',
       openGraph: {
-        title: 'How FH Fundamental Migrated to Cloud with Zero Downtime | NOCKO',
+        title: 'How FH Fundamental Migrated to Cloud with Zero Downtime',
         description:
           'FH Fundamental achieved seamless cloud migration to AWS with zero downtime, improved performance, and enhanced scalability.',
         type: 'article',
@@ -80,13 +80,13 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'scalini') {
     return {
-      title: 'How Scalini Transformed Network Infrastructure Across 5 Locations | Case Study | NOCKO',
+      title: 'How Scalini Transformed Network Infrastructure Across 5 Locations | Case Study',
       description:
         'Scalini restaurant group standardized network infrastructure across 5 UAE locations with certified Cat6A cabling, centralized management, and 99.9% uptime.',
       keywords:
         'Scalini case study, network infrastructure UAE, structured cabling Dubai, multi-site network, restaurant IT infrastructure',
       openGraph: {
-        title: 'How Scalini Transformed Network Infrastructure Across 5 Locations | NOCKO',
+        title: 'How Scalini Transformed Network Infrastructure Across 5 Locations',
         description:
           'Scalini restaurant group standardized network infrastructure across 5 UAE locations with certified Cat6A cabling and centralized management.',
         type: 'article',
@@ -96,13 +96,13 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'gss') {
     return {
-      title: 'How Global Service Solution Achieved 24/7 IT Support Excellence | Case Study | NOCKO',
+      title: 'How Global Service Solution Achieved 24/7 IT Support Excellence | Case Study',
       description:
         'Global Service Solution maintains 24/7 IT support for critical flight dispatch operations with 99.8% uptime, 30-minute response time, and zero unscheduled downtime.',
       keywords:
         'Global Service Solution case study, 24/7 IT support UAE, aviation IT support Dubai, flight dispatch IT, mission-critical support',
       openGraph: {
-        title: 'How Global Service Solution Achieved 24/7 IT Support Excellence | NOCKO',
+        title: 'How Global Service Solution Achieved 24/7 IT Support Excellence',
         description:
           'Global Service Solution maintains 24/7 IT support for critical flight dispatch operations with 99.8% uptime and 30-minute response time.',
         type: 'article',
@@ -112,13 +112,13 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'technohub') {
     return {
-      title: 'How TechnoHub Transformed IT Operations with Managed Services | Case Study | NOCKO',
+      title: 'How TechnoHub Transformed IT Operations with Managed Services | Case Study',
       description:
         'TechnoHub eliminated IT complexity with fully managed services, achieving 40% cost reduction, predictable budgets, and strategic IT alignment.',
       keywords:
         'TechnoHub case study, managed IT services UAE, IT outsourcing Dubai, managed services provider, IT transformation',
       openGraph: {
-        title: 'How TechnoHub Transformed IT Operations with Managed Services | NOCKO',
+        title: 'How TechnoHub Transformed IT Operations with Managed Services',
         description:
           'TechnoHub eliminated IT complexity with fully managed services, achieving 40% cost reduction and predictable budgets.',
         type: 'article',
@@ -128,13 +128,13 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'ransomware-recovery') {
     return {
-      title: 'How We Isolated and Defeated Ransomware in 4 Hours | Case Study | NOCKO',
+      title: 'How We Isolated and Defeated Ransomware in 4 Hours | Case Study',
       description:
         'A Dubai logistics firm saved millions in downtime when our automated EDR isolated a phishing payload within minutes of execution.',
       keywords:
         'Ransomware recovery case study, cybersecurity response UAE, EDR deployment Dubai, phishing protection, zero downtime',
       openGraph: {
-        title: 'How We Isolated and Defeated Ransomware in 4 Hours | NOCKO',
+        title: 'How We Isolated and Defeated Ransomware in 4 Hours',
         description:
           'A Dubai logistics firm saved millions in downtime when our automated EDR isolated a phishing payload within minutes.',
         type: 'article',
@@ -144,13 +144,13 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'm365-audit') {
     return {
-      title: 'How an M365 Audit Saved a Dubai Firm 40% Annually | Case Study | NOCKO',
+      title: 'How an M365 Audit Saved a Dubai Firm 40% Annually | Case Study',
       description:
         'Discover how our forensic licensing audit eliminated duplicate SaaS tools and recovered $45,000 annually for a Dubai firm.',
       keywords:
         'Microsoft 365 audit case study, IT consulting UAE, software license optimization, IT cost reduction Dubai, SaaS audit',
       openGraph: {
-        title: 'How an M365 Audit Saved a Dubai Firm 40% Annually | NOCKO',
+        title: 'How an M365 Audit Saved a Dubai Firm 40% Annually',
         description:
           'Discover how our forensic licensing audit eliminated duplicate SaaS tools and recovered $45,000 annually for a Dubai firm.',
         type: 'article',
@@ -161,13 +161,13 @@ export async function generateMetadata({
   if (!caseStudy && slug === 'it-consulting') {
     return {
       alternates: { canonical: `/ru/case-studies/${slug}` },
-      title: 'Как девелопер недвижимости в Дубае сократил ИТ-расходы на 35% благодаря ИТ-консалтингу | NOCKO',
+      title: 'Как девелопер недвижимости в Дубае сократил ИТ-расходы на 35% благодаря ИТ-консалтингу',
       description:
         'Девелопер недвижимости из Дубая устранил теневое ИТ, объединил поставщиков и снизил годовые ИТ-расходы на 35% после аудита и дорожной карты под руководством vCIO NOCKO.',
       keywords:
         'ИТ-консалтинг Дубай, ИТ-стратегия ОАЭ, услуги vCIO Дубай, снижение ИТ-расходов, ИТ дорожная карта ОАЭ, ИТ-консалтинг для недвижимости',
       openGraph: {
-        title: 'Как девелопер недвижимости в Дубае сократил ИТ-расходы на 35% благодаря ИТ-консалтингу | NOCKO',
+        title: 'Как девелопер недвижимости в Дубае сократил ИТ-расходы на 35% благодаря ИТ-консалтингу',
         description:
           'Девелопер недвижимости из Дубая устранил теневое ИТ и снизил годовые ИТ-расходы на 35% благодаря стратегии под руководством vCIO NOCKO.',
         type: 'article',
@@ -178,13 +178,13 @@ export async function generateMetadata({
   if (!caseStudy && slug === 'enterprise') {
     return {
       alternates: { canonical: `/ru/case-studies/${slug}` },
-      title: 'Как предприятие на 300 сотрудников объединило ИТ-инфраструктуру по всем ОАЭ | Кейс | NOCKO',
+      title: 'Как предприятие на 300 сотрудников объединило ИТ-инфраструктуру по всем ОАЭ | Кейс',
       description:
         'Логистическое предприятие из ОАЭ с 300 рабочими местами в 4 офисах объединило разрозненную ИТ-инфраструктуру, заменило 6 поставщиков и достигло аптайма 99,95% с Managed IT от NOCKO.',
       keywords:
         'корпоративное ИТ ОАЭ, управляемые ИТ-услуги Дубай, консолидация ИТ-инфраструктуры, ИТ-поддержка нескольких офисов ОАЭ, ИТ-аутсорсинг для предприятий',
       openGraph: {
-        title: 'Как предприятие на 300 сотрудников объединило ИТ-инфраструктуру по всем ОАЭ | NOCKO',
+        title: 'Как предприятие на 300 сотрудников объединило ИТ-инфраструктуру по всем ОАЭ',
         description:
           'Логистическое предприятие ОАЭ объединило разрозненное ИТ в 4 офисах, заменило 6 поставщиков, достигло аптайма 99,95%.',
         type: 'article',
@@ -195,13 +195,13 @@ export async function generateMetadata({
   if (!caseStudy && slug === 'cybersecurity') {
     return {
       alternates: { canonical: `/ru/case-studies/${slug}` },
-      title: 'Как медицинская группа в ОАЭ прошла аудит HAAD без единого замечания | Кейс | NOCKO',
+      title: 'Как медицинская группа в ОАЭ прошла аудит HAAD без единого замечания | Кейс',
       description:
         'Медицинская группа из ОАЭ с 3 клиниками достигла полного соответствия требованиям кибербезопасности HAAD, устранила 7 критических уязвимостей и прошла регуляторный аудит без замечаний.',
       keywords:
         'кибербезопасность в здравоохранении ОАЭ, соответствие HAAD, защита медицинских данных Дубай, аудит кибербезопасности ОАЭ, ИТ-безопасность в медицине',
       openGraph: {
-        title: 'Как медицинская группа в ОАЭ прошла аудит HAAD без единого замечания | NOCKO',
+        title: 'Как медицинская группа в ОАЭ прошла аудит HAAD без единого замечания',
         description:
           'Медицинская группа ОАЭ достигла полного соответствия HAAD, устранила 7 критических уязвимостей и прошла аудит без замечаний.',
         type: 'article',
@@ -212,13 +212,13 @@ export async function generateMetadata({
   if (!caseStudy && slug === 'network-segmentation') {
     return {
       alternates: { canonical: `/ru/case-studies/${slug}` },
-      title: 'Как мультиформатная группа в Дубае защитила сеть с помощью сегментации и FortiGate | Кейс | NOCKO',
+      title: 'Как мультиформатная группа в Дубае защитила сеть с помощью сегментации и FortiGate | Кейс',
       description:
         'Мультиформатная F&B-группа в Дубае заменила плоскую недокументированную сеть на сегментированную архитектуру с FortiGate и ядром Cisco — изолировав трафик POS, гостевой и офисной сети и защитив удалённый доступ.',
       keywords:
         'сегментация сети Дубай, межсетевой экран FortiGate ОАЭ, сегментация VLAN, аудит сети Дубай, структурированная сеть ОАЭ, IPsec VPN ОАЭ',
       openGraph: {
-        title: 'Как мультиформатная группа в Дубае защитила сеть с помощью сегментации и FortiGate | Кейс | NOCKO',
+        title: 'Как мультиформатная группа в Дубае защитила сеть с помощью сегментации и FortiGate | Кейс',
         description:
           'Группа из Дубая заменила плоскую сеть на сегментированную архитектуру с FortiGate и ядром Cisco, изолировав POS, гостевой и офисный трафик и защитив удалённый доступ.',
         type: 'article',
@@ -229,13 +229,13 @@ export async function generateMetadata({
   if (!caseStudy && slug === 'emr-backup') {
     return {
       alternates: { canonical: `/ru/case-studies/${slug}` },
-      title: 'Как медицинская клиника в ОАЭ автоматизировала резервное копирование EMR и отчётность о комплаенсе | Кейс | NOCKO',
+      title: 'Как медицинская клиника в ОАЭ автоматизировала резервное копирование EMR и отчётность о комплаенсе | Кейс',
       description:
         'Медицинская клиника в ОАЭ защитила системы EMR, диагностической визуализации и бухгалтерии с помощью автоматических ежедневных резервных копий на Synology Active Backup for Business и самоформирующегося ежедневного отчёта о соответствии.',
       keywords:
         'резервное копирование EMR ОАЭ, резервное копирование медицинских данных Дубай, аварийное восстановление в здравоохранении ОАЭ, Synology Active Backup, отчётность о комплаенсе резервного копирования, ИТ-бэкап для клиники',
       openGraph: {
-        title: 'Как медицинская клиника в ОАЭ автоматизировала резервное копирование EMR и отчётность о комплаенсе | Кейс | NOCKO',
+        title: 'Как медицинская клиника в ОАЭ автоматизировала резервное копирование EMR и отчётность о комплаенсе | Кейс',
         description:
           'Клиника в ОАЭ защитила данные EMR, визуализации и бухгалтерии автоматическими ежедневными резервными копиями и самоформирующимися отчётами о соответствии.',
         type: 'article',
@@ -246,13 +246,13 @@ export async function generateMetadata({
   if (!caseStudy && slug === 'workspace-migration') {
     return {
       alternates: { canonical: `/ru/case-studies/${slug}` },
-      title: 'Как гостиничная группа в Дубае перенесла Google Workspace во время ребрендинга без простоев | Кейс | NOCKO',
+      title: 'Как гостиничная группа в Дубае перенесла Google Workspace во время ребрендинга без простоев | Кейс',
       description:
         'Во время корпоративного ребрендинга гостиничная группа из Дубая перенесла все почтовые ящики в новый домен Google Workspace без простоев и без потери истории переписки.',
       keywords:
         'миграция Google Workspace Дубай, миграция почты ОАЭ, миграция домена, миграция workspace ОАЭ, миграция почты без простоев, облачная миграция Дубай',
       openGraph: {
-        title: 'Как гостиничная группа в Дубае перенесла Google Workspace во время ребрендинга без простоев | Кейс | NOCKO',
+        title: 'Как гостиничная группа в Дубае перенесла Google Workspace во время ребрендинга без простоев | Кейс',
         description:
           'Гостиничная группа из Дубая перенесла все почтовые ящики в новый домен Google Workspace во время ребрендинга — без простоев и потери истории.',
         type: 'article',

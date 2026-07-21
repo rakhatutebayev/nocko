@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/it-support-monitoring',
       'ru-RU': '/ru/articles/it-support-monitoring',
+      'x-default': '/articles/it-support-monitoring',
     },
   },
   openGraph: {

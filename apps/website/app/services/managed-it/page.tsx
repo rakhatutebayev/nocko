@@ -7,19 +7,26 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Managed IT Services Dubai | Managed Service Provider UAE | NOCKO',
+  title: 'Managed IT Services Dubai | Managed Service Provider UAE',
   description:
     'Leading managed IT services provider in Dubai and UAE. 24/7 NOC monitoring, complete infrastructure management, managed security, and helpdesk for businesses in DIFC, DMCC, Business Bay and across UAE. Predictable monthly pricing from AED 2,500.',
   keywords:
     'managed IT services Dubai, managed IT services UAE, managed service provider Dubai, managed services providers UAE, IT managed services Dubai, managed IT services in Dubai, managed service providers in Dubai, IT outsourcing Dubai, managed IT infrastructure UAE',
   openGraph: {
-    title: 'Managed IT Services Dubai | Managed Service Provider UAE | NOCKO',
+    title: 'Managed IT Services Dubai | Managed Service Provider UAE',
     description: 'Dubai-based managed IT services provider. 24/7 NOC, complete infrastructure management, managed security for UAE businesses.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: { canonical: '/services/managed-it' },
+  alternates: {
+    canonical: '/services/managed-it',
+    languages: {
+      'en-AE': '/services/managed-it',
+      'ru-RU': '/ru/services/managed-it',
+      'x-default': '/services/managed-it',
+    },
+  },
 };
 
 export const revalidate = 3600;
@@ -157,13 +164,11 @@ export default async function ManagedItPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
-            { '@type': 'ListItem', position: 2, name: 'IT Services', item: 'https://nocko.com/services' },
-            { '@type': 'ListItem', position: 3, name: 'Managed IT Services', item: 'https://nocko.com/services/managed-it' },
-          ],
+          serviceType: 'Managed IT Services',
+          name: 'Managed IT Services in Dubai & UAE',
+          description: 'Fully managed IT operations: helpdesk, monitoring, security, and infrastructure management for a fixed monthly fee.',
         }}
       />
       <HeaderWrapper />

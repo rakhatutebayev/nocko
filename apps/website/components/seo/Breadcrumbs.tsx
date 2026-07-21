@@ -27,20 +27,14 @@ export default function Breadcrumbs({
     ...items,
   ];
 
-  // Генерируем Schema.org структуру для Google
-  const getCurrentPath = () => {
-    if (typeof window !== 'undefined') {
-      return window.location.pathname;
-    }
-    return '/';
-  };
-
+  // Schema.org allows omitting `item` on the final breadcrumb; window.location is
+  // unavailable during SSR, so items without a url must not fall back to it.
   const breadcrumbSchema = {
     itemListElement: allItems.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url ? `${baseUrl}${item.url}` : `${baseUrl}${getCurrentPath()}`,
+      ...(item.url ? { item: `${baseUrl}${item.url}` } : {}),
     })),
   };
 

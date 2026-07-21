@@ -8,19 +8,26 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Облачные Услуги в Дубае | Миграция и Управление | NOCKO',
+  title: 'Облачные Услуги в Дубае | Миграция и Управление',
   description:
     'Профессиональные облачные услуги в Дубае и ОАЭ. Миграция в облако, настройка инфраструктуры, управление данными и решения для резервного копирования для бизнеса.',
   keywords:
     'облачные услуги Дубай, миграция в облако ОАЭ, облачный хостинг Дубай, управление данными ОАЭ, облачное резервное копирование Дубай, управляемые облачные услуги Дубай, облачная инфраструктура ОАЭ',
   openGraph: {
-    title: 'Облачные Услуги в Дубае | Миграция и Управление | NOCKO',
+    title: 'Облачные Услуги в Дубае | Миграция и Управление',
     description: 'Надежные и масштабируемые облачные решения для бизнеса в Дубае и по всему ОАЭ.',
     type: 'website',
     locale: 'ru_RU',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: { canonical: '/ru/services/cloud' },
+  alternates: {
+    canonical: '/ru/services/cloud',
+    languages: {
+      'en-AE': '/services/cloud',
+      'ru-RU': '/ru/services/cloud',
+      'x-default': '/services/cloud',
+    },
+  },
 };
 
 export const revalidate = 3600;
@@ -139,13 +146,11 @@ export default async function CloudPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://nocko.com/ru' },
-            { '@type': 'ListItem', position: 2, name: 'Услуги', item: 'https://nocko.com/ru/services' },
-            { '@type': 'ListItem', position: 3, name: 'Облачные Решения', item: 'https://nocko.com/ru/services/cloud' },
-          ],
+          serviceType: 'Cloud Services',
+          name: 'Cloud & Data Services in Dubai & UAE',
+          description: 'Cloud migration, infrastructure, backup, and cost optimization on Azure, AWS, and Microsoft 365 for UAE businesses.',
         }}
       />
       <HeaderWrapper />

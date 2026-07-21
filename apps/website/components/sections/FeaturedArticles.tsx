@@ -2,40 +2,52 @@ import Link from 'next/link';
 
 const articles = [
   {
-    slug: 'it-consulting-guide',
-    title: 'Strategic IT Consulting & Digital Transformation',
-    excerpt: 'How to build a technology roadmap, negotiate with vendors, and drive ROI-positive IT decisions in UAE organizations.',
-    category: 'IT Consulting',
+    slug: 'it-amc-guide',
+    title: 'IT AMC in UAE: The Complete Guide',
+    excerpt: 'What an Annual Maintenance Contract covers, AED pricing tiers, SLA levels, and how to choose an AMC provider in Dubai.',
+    category: 'IT AMC',
+  },
+  {
+    slug: 'cybersecurity-guide',
+    title: 'Cybersecurity for UAE Business: Complete Guide',
+    excerpt: 'Threats, firewalls, endpoint protection, NESA and PDPL compliance, and an incident-response checklist for UAE companies.',
+    category: 'Cybersecurity',
+  },
+  {
+    slug: 'managed-it-services-guide',
+    title: 'Managed IT Services in UAE: Complete Guide',
+    excerpt: 'What managed IT includes, per-user AED pricing, security and scaling, and how to choose an MSP in Dubai.',
+    category: 'Managed IT',
+  },
+  {
+    slug: 'it-support-guide',
+    title: 'IT Support in UAE: Complete Guide',
+    excerpt: 'Helpdesk, remote and on-site support models, 24/7 SLAs, and in-house vs outsourced economics for UAE businesses.',
+    category: 'IT Support',
   },
   {
     slug: 'cloud-infrastructure-guide',
     title: 'Enterprise Cloud Infrastructure Guide',
-    excerpt: 'Planning, executing, and optimizing cloud migrations for UAE businesses — from hybrid architectures to cost management.',
+    excerpt: 'Planning, securing, and optimizing cloud infrastructure for UAE businesses — data management, compliance, and FinOps.',
     category: 'Cloud',
   },
   {
-    slug: 'structured-cabling-guide',
-    title: 'Network Infrastructure & Structured Cabling',
-    excerpt: 'Complete guide to Cat6A, fibre optic, and EIA/TIA 568-C certification for Dubai free zone and mainland offices.',
-    category: 'Infrastructure',
+    slug: 'cloud-migration',
+    title: 'Cloud Migration for UAE Business',
+    excerpt: 'Single vs multi-cloud vs hybrid, phased migration paths, secure connectivity, and common pitfalls to avoid.',
+    category: 'Cloud',
   },
   {
-    slug: 'it-consulting-assessment',
-    title: 'Forensic IT Audits & RAG Health Checks',
-    excerpt: 'How a Red/Amber/Green infrastructure audit exposes hidden tech debt, security gaps, and wasted licensing in UAE businesses.',
+    slug: 'it-consulting-strategy',
+    title: 'IT Strategy, Assessment & Roadmap',
+    excerpt: 'How an IT assessment, strategy, and phased roadmap cut waste and de-risk growth for UAE companies.',
     category: 'IT Consulting',
   },
   {
     slug: 'it-support-monitoring',
-    title: 'Proactive Endpoint Management (MDM)',
-    excerpt: 'Using Microsoft Intune and MDM to enforce security policies across hybrid workforces in Dubai — and remotely wipe lost devices.',
+    title: '24/7 IT Monitoring Services in UAE',
+    excerpt: 'NOC and SOC monitoring, endpoint thresholds, alert escalation, and the economics of proactive coverage.',
     category: 'IT Support',
-  },
-  {
-    slug: 'it-consulting-roi',
-    title: 'Microsoft 365 Licensing Optimization',
-    excerpt: 'Dubai enterprises routinely overpay by 40% on M365. Here is how a licensing audit recovers AED 30,000–80,000 annually.',
-    category: 'IT Consulting',
   },
 ];
 

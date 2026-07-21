@@ -8,19 +8,26 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Кибербезопасность в Дубае | Защита Данных ОАЭ | NOCKO',
+  title: 'Кибербезопасность в Дубае | Защита Данных ОАЭ',
   description:
     'Передовые услуги кибербезопасности в Дубае и ОАЭ. Управление межсетевыми экранами, обнаружение угроз, шифрование данных и соответствие стандартам безопасности для бизнеса.',
   keywords:
     'кибербезопасность Дубай, защита данных ОАЭ, услуги ИТ-безопасности Дубай, сетевая безопасность ОАЭ, соответствие безопасности Дубай, обнаружение угроз ОАЭ',
   openGraph: {
-    title: 'Кибербезопасность в Дубае | Защита Данных ОАЭ | NOCKO',
+    title: 'Кибербезопасность в Дубае | Защита Данных ОАЭ',
     description: 'Корпоративная кибербезопасность и защита данных для бизнеса в Дубае и по всему ОАЭ.',
     type: 'website',
     locale: 'ru_RU',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: { canonical: '/ru/services/cybersecurity' },
+  alternates: {
+    canonical: '/ru/services/cybersecurity',
+    languages: {
+      'en-AE': '/services/cybersecurity',
+      'ru-RU': '/ru/services/cybersecurity',
+      'x-default': '/services/cybersecurity',
+    },
+  },
 };
 
 export const revalidate = 3600;
@@ -124,13 +131,11 @@ export default async function CybersecurityPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://nocko.com/ru' },
-            { '@type': 'ListItem', position: 2, name: 'Услуги', item: 'https://nocko.com/ru/services' },
-            { '@type': 'ListItem', position: 3, name: 'Кибербезопасность', item: 'https://nocko.com/ru/services/cybersecurity' },
-          ],
+          serviceType: 'Cybersecurity Services',
+          name: 'Cybersecurity Services in Dubai & UAE',
+          description: 'Firewall, endpoint protection, security monitoring, and NESA/PDPL compliance support for UAE businesses.',
         }}
       />
       <HeaderWrapper />

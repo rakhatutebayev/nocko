@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/structured-cabling-physical-security',
       'ru-RU': '/ru/articles/structured-cabling-physical-security',
+      'x-default': '/articles/structured-cabling-physical-security',
     },
   },
 };

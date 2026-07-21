@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT-интеграция при слияниях и поглощениях в ОАЭ | NOCKO',
+  title: 'IT-интеграция при слияниях и поглощениях в ОАЭ',
   description: 'Безупречная интеграция IT-инфраструктуры при слияниях и поглощениях (M&A). Предотвращение технических сбоев в период корпоративной реструктуризации.',
   alternates: {
     canonical: '/ru/articles/it-consulting-infrastructure-design',
     languages: {
       'en-AE': '/articles/it-consulting-infrastructure-design',
       'ru-RU': '/ru/articles/it-consulting-infrastructure-design',
+      'x-default': '/articles/it-consulting-infrastructure-design',
     },
   },
   openGraph: {

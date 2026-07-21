@@ -6,7 +6,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Company in Sharjah | IT Support Services Sharjah | NOCKO',
+  title: 'IT Company in Sharjah | IT Support Services Sharjah',
   description:
     'Professional IT services in Sharjah — IT support, network infrastructure, cloud solutions, cybersecurity, and managed IT services. NOCKO serves SAIF Zone, Al Majaz, Industrial Area, and all Sharjah businesses with 24/7 support.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'IT company UAE',
   ],
   openGraph: {
-    title: 'IT Company in Sharjah | IT Support Services | NOCKO',
+    title: 'IT Company in Sharjah | IT Support Services',
     description:
       'Professional IT services in Sharjah — network, cloud, cybersecurity, and 24/7 managed IT support for businesses in SAIF Zone, Al Majaz, and Industrial Area.',
     type: 'website',
@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/locations/sharjah',
       'ru-RU': '/ru/locations/sharjah',
+      'x-default': '/locations/sharjah',
     },
   },
 };
@@ -143,16 +144,6 @@ export default function SharjahPage() {
               opens: '09:00',
               closes: '18:00',
             },
-          ],
-        }}
-      />
-      <StructuredData
-        type="BreadcrumbList"
-        data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
-            { '@type': 'ListItem', position: 2, name: 'Locations', item: `${baseUrl}/locations` },
-            { '@type': 'ListItem', position: 3, name: 'Sharjah', item: `${baseUrl}/locations/sharjah` },
           ],
         }}
       />

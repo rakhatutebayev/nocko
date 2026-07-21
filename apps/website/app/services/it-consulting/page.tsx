@@ -7,19 +7,26 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'IT Consulting Services in Dubai | Technology Strategy & IT Consulting UAE | NOCKO',
+  title: 'IT Consulting Services in Dubai | Technology Strategy & IT Consulting UAE',
   description:
     'Strategic IT consulting services in Dubai and UAE. Technology assessment, digital transformation, and infrastructure planning for businesses. Expert IT advisors for DIFC, JLT and Business Bay.',
   keywords:
     'IT consulting Dubai, IT strategy UAE, technology consulting Dubai, IT planning UAE, digital transformation Dubai, IT assessment UAE, best IT consulting Dubai',
   openGraph: {
-    title: 'IT Consulting Services in Dubai | Technology Strategy & IT Consulting UAE | NOCKO',
+    title: 'IT Consulting Services in Dubai | Technology Strategy & IT Consulting UAE',
     description: 'Expert IT strategy and technology consulting for businesses in Dubai and across the UAE.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
   },
-  alternates: { canonical: '/services/it-consulting' },
+  alternates: {
+    canonical: '/services/it-consulting',
+    languages: {
+      'en-AE': '/services/it-consulting',
+      'ru-RU': '/ru/services/it-consulting',
+      'x-default': '/services/it-consulting',
+    },
+  },
 };
 
 export const revalidate = 3600;
@@ -116,13 +123,11 @@ export default async function ItConsultingPage() {
   return (
     <>
       <StructuredData
-        type="BreadcrumbList"
+        type="Service"
         data={{
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nocko.com' },
-            { '@type': 'ListItem', position: 2, name: 'IT Services', item: 'https://nocko.com/services' },
-            { '@type': 'ListItem', position: 3, name: 'IT Consulting', item: 'https://nocko.com/services/it-consulting' },
-          ],
+          serviceType: 'IT Consulting',
+          name: 'IT Consulting Services in Dubai & UAE',
+          description: 'IT strategy, infrastructure assessment, roadmaps, and digital transformation consulting for UAE companies.',
         }}
       />
       <HeaderWrapper />

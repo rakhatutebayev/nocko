@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/industries/government',
       'ru-RU': '/ru/industries/government',
+      'x-default': '/industries/government',
     },
   },
 };

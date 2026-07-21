@@ -89,7 +89,42 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={montserrat.variable}>
-      <head></head>
+      <head>
+        {/* Hero background is applied via CSS image-set, so the preload scanner
+            can't discover it from the HTML — preload the LCP image explicitly. */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-bg.webp"
+          type="image/webp"
+          media="(min-width: 993px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-bg-mobile.webp"
+          type="image/webp"
+          media="(min-width: 769px) and (max-width: 992px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-bg-small.webp"
+          type="image/webp"
+          media="(min-width: 481px) and (max-width: 768px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-bg-xs.webp"
+          type="image/webp"
+          media="(max-width: 480px)"
+          fetchPriority="high"
+        />
+      </head>
       <body className={montserrat.className}>
         <div id="root">
           {children}

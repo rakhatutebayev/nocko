@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       'en-AE': '/articles/managed-it-infrastructure',
       'ru-RU': '/ru/articles/managed-it-infrastructure',
+      'x-default': '/articles/managed-it-infrastructure',
     },
   },
   openGraph: {

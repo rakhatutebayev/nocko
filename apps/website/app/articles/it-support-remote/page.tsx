@@ -8,13 +8,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Remote IT Support Dubai | L1/L2 Helpdesk & Remote Troubleshooting UAE | NOCKO',
+  title: 'Remote IT Support Dubai | L1/L2 Helpdesk & Remote Troubleshooting UAE',
   description: 'NOCKO delivers L1/L2 remote IT support across Dubai and UAE — first-call resolution via TeamViewer, ConnectWise Control, and RMM-based remote access. Faster than on-site, billed per incident or monthly.',
   alternates: {
     canonical: '/articles/it-support-remote',
     languages: {
       'en-AE': '/articles/it-support-remote',
       'ru-RU': '/ru/articles/it-support-remote',
+      'x-default': '/articles/it-support-remote',
     },
   },
   keywords: 'remote IT support dubai, remote IT support UAE, IT helpdesk dubai, L1 L2 support dubai, remote troubleshooting UAE, managed helpdesk dubai, IT support remote access UAE',
