@@ -39,6 +39,18 @@
 }
 
 // Fixed bottom-left, never moves on scroll (like cubezix.com)
+// The fab is viewport-fixed, so it can cover a form's submit button while the
+// user types (browser scrolls the field into view) or when the modal is open.
+// Hide it in those moments — a user mid-form doesn't need a WhatsApp shortcut.
+body:has(.contact-modal) .whatsapp-fab,
+body:has(.contact-modal) .cookie-consent-fab,
+body:has(.contact-form input:focus, .contact-form textarea:focus) .whatsapp-fab,
+body:has(.contact-form input:focus, .contact-form textarea:focus) .cookie-consent-fab {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
 .whatsapp-fab {
   position: fixed;
   left: max(15px, env(safe-area-inset-left));
