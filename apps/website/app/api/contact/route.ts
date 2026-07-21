@@ -145,7 +145,7 @@ export async function POST(request: NextRequest) {
       from: SMTP_FROM,
       to: recipients.join(', '),
       replyTo: email,
-      subject: `[nocko.com] Заявка с сайта — ${name}`,
+      subject: `[nocko.com] New website enquiry — ${name}`,
       text: [
         'New contact form submission:',
         '',
