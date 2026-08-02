@@ -108,6 +108,7 @@ const fallback: MappedServiceContent = {
     ctaUrl: '#contact',
   },
   relatedServices: [
+    { title: 'Русскоговорящие ИТ Специалисты', url: '/services/it-support-ru', description: 'Русскоговорящая ИТ-компания в Дубае: поддержка и аутсорсинг на русском языке.' },
     { title: 'Контракты IT AMC', url: '/ru/services/it-amc', description: 'Комплексное обслуживание оборудования в рамках Helpdesk.' },
     { title: 'Кибербезопасность', url: '/ru/services/cybersecurity', description: 'Защита ваших конечных точек с помощью активного SOC и EDR.' },
     { title: 'Стратегический ИТ Консалтинг', url: '/ru/services/it-consulting', description: 'Оптимизация программных лицензий, которые ваша команда использует ежедневно.' },

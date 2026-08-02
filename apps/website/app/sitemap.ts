@@ -152,6 +152,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   const staticServicePages: MetadataRoute.Sitemap = [
+    // RU landing outside /ru prefix — must be listed explicitly
+    {
+      url: `${baseUrl}/services/it-support-ru`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
     ...serviceSlugs.map((slug) => ({
       url: `${baseUrl}/services/${slug}`,
       lastModified: new Date(),
