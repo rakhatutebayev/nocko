@@ -130,9 +130,9 @@ export default function Hero({
               </h1>
             )}
             {subtitle && (
-              <h2 className="hero__subtitle" itemProp="description">
+              <p className="hero__subtitle" itemProp="description">
                 {subtitle}
-              </h2>
+              </p>
             )}
             {description && (
               <p className="hero__description" itemProp="description" style={{ marginTop: '1rem', opacity: 0.9 }}>
@@ -165,9 +165,9 @@ export default function Hero({
               </h1>
             )}
             {subtitle && (
-              <h2 className="hero__subtitle" itemProp="description">
+              <p className="hero__subtitle" itemProp="description">
                 {subtitle}
-              </h2>
+              </p>
             )}
             {description && (
               <p className="hero__description" itemProp="description">

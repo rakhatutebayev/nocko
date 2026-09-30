@@ -1,7 +1,11 @@
 // Service Values Section
 .service-values {
   position: relative;
-  padding: 20px 0 0 0;
+  padding: $spacing-xl 0 0 0;
+
+  @include desktop {
+    padding-top: $spacing-xxl;
+  }
   background-image: url('/images/services/our-value-bg.jpg');
   background-size: cover;
   background-position: center;

@@ -23,6 +23,15 @@
   }
 }
 
+// Единый вертикальный ритм секций: 40px на мобильных, 56px на десктопе
+@mixin section-padding {
+  padding: $spacing-xl 0;
+
+  @include desktop {
+    padding: $spacing-xxl 0;
+  }
+}
+
 // Container
 @mixin container {
   max-width: $container-max-width;

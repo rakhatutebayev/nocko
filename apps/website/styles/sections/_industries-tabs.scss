@@ -4,7 +4,7 @@ $tabs-open-duration: 0.45s;
 $tabs-close-duration: 0.75s;
 
 .industries-tabs {
-  padding: 20px 0;
+  @include section-padding;
 
   &__header {
     text-align: center;

@@ -1,6 +1,6 @@
 .services {
   background-color: $color-light;
-  padding: 20px 0;
+  @include section-padding;
   
   &__header {
     text-align: center;

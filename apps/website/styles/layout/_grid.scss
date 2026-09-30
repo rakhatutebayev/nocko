@@ -46,7 +46,7 @@
 }
 
 .section {
-  padding: 20px 0;
+  @include section-padding;
   
   &__title {
     text-align: center;

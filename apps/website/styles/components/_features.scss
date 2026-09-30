@@ -1,7 +1,7 @@
 // Features Section
 .features {
   background-color: #e0e7ef;
-  padding: 20px 0;
+  @include section-padding;
 }
 
 .features__title {
@@ -17,6 +17,11 @@
   font-size: 1rem;
   line-height: 1.5;
   color: $color-gray;
+}
+
+.features__intro-link {
+  color: $color-primary;
+  text-decoration: underline;
 }
 
 .features__grid {

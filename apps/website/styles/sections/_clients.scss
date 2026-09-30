@@ -1,6 +1,6 @@
 .clients {
   background-color: #3474ff;
-  padding: 20px 0;
+  @include section-padding;
 
   &__container {
     padding-left: 20px;

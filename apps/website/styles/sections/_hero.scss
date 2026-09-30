@@ -3,10 +3,11 @@
   display: flex;
   align-items: center;
   min-height: 471px;
-  padding: 30px 0;
+  // Единые отступы всех hero: сверху под фиксированный header, снизу 40px
+  padding: 90px 0 $spacing-xl;
   background-color: #5F5F5F;
   background-image: url('/images/hero-bg.jpg');
-  background-size: 100% 100%;
+  background-size: cover; // пропорции фона сохраняются на любой ширине
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -51,10 +52,15 @@
     );
   }
   
+  @include tablet {
+    padding-top: 120px;
+  }
+
   @include desktop {
-    padding: 40px 0;
+    padding-top: 160px;
   }
   
+  // Единое затемнение для читаемости текста на всех hero
   &::before {
     content: '';
     position: absolute;
@@ -62,7 +68,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
   }
   
   .container {
@@ -71,11 +78,7 @@
   }
   
   &__wrapper {
-    padding-top: 70px;
-    
-    @include desktop {
-      padding-top: 100px;
-    }
+    padding-top: 0;
   }
   
   &__content {
@@ -84,43 +87,41 @@
     text-align: left;
   }
   
+  // Единая типографика hero (главная, услуги, «О нас», статьи)
   &__title {
     color: $color-white;
-    margin-bottom: $spacing-sm;
-    font-size: 28px;
+    margin-bottom: $spacing-md;
+    font-size: 1.75rem;
     line-height: 1.3;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 300;
 
-    @include laptop {
-      font-size: 1.75em;
-      line-height: 1.3;
-    }
-    
     @include desktop {
-      font-size: 32px;
+      font-size: 2rem;
+      line-height: 1.25;
     }
   }
   
   &__subtitle {
-    color: rgba(255, 255, 255, 0.95);
-    margin-bottom: $spacing-sm;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: $spacing-md;
     font-weight: 400;
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.5;
     
     @include desktop {
-      font-size: 0.95rem;
+      font-size: 1.125rem;
     }
   }
   
   &__description {
-    color: $color-white;
-    margin-bottom: $spacing-sm;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: $spacing-md;
+    font-size: 1rem;
+    line-height: 1.6;
     
     @include desktop {
-      font-size: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
   }
   

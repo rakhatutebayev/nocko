@@ -1,6 +1,6 @@
 // Services Section
 .services {
-  padding: 20px 0;
+  @include section-padding;
 }
 
 .services__header {
