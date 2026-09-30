@@ -36,6 +36,7 @@ export default async function CaseStudiesPageRu() {
       <HeaderWrapper />
       <main role="main">
         <Hero
+          variant="article"
           title="Кейсы"
           subtitle="Реальные Результаты для Бизнеса в ОАЭ"
           description="Узнайте, как компании по всему ОАЭ модернизировали свою ИТ-инфраструктуру с помощью наших решений. От обновления сетей до миграции в облако — ознакомьтесь с измеримыми результатами, которых мы достигли."

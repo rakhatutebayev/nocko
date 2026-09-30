@@ -76,6 +76,13 @@
     position: relative;
     z-index: 1;
   }
+
+  // Внутренние страницы: hero ниже, чем на главной (там кнопки и статистика)
+  &--service,
+  &--article,
+  &--service-enhanced {
+    min-height: 300px;
+  }
   
   &__wrapper {
     padding-top: 0;

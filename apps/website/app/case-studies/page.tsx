@@ -35,6 +35,7 @@ export default async function CaseStudiesPage() {
       <HeaderWrapper />
       <main role="main">
         <Hero
+          variant="article"
           title="Case Studies"
           subtitle="Real Results from Real Businesses in UAE"
           description="See how businesses across UAE have transformed their IT infrastructure with our solutions. From network upgrades to cloud migration, discover the measurable results we've delivered."

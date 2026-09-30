@@ -175,7 +175,7 @@ export default function Hero({
               </p>
             )}
 
-            {(ctaPrimary || ctaSecondary) && (
+            {variant === 'default' && (ctaPrimary || ctaSecondary) && (
               <div className="hero__cta-wrapper">
                 {ctaPrimary && (
                   ctaPrimary.href.startsWith('#') ? (

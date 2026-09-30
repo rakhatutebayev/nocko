@@ -42,8 +42,10 @@
 // The fab is viewport-fixed, so it can cover a form's submit button while the
 // user types (browser scrolls the field into view) or when the modal is open.
 // Hide it in those moments — a user mid-form doesn't need a WhatsApp shortcut.
+// Also hidden while the cookie banner is open: the fab overlapped its corner.
 body:has(.contact-modal) .whatsapp-fab,
 body:has(.contact-modal) .cookie-consent-fab,
+body:has(.cookie-consent) .whatsapp-fab,
 body:has(.contact-form input:focus, .contact-form textarea:focus) .whatsapp-fab,
 body:has(.contact-form input:focus, .contact-form textarea:focus) .cookie-consent-fab {
   // animation:none — both fabs have entry animations with fill-mode:forwards,

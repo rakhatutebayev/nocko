@@ -393,13 +393,48 @@
 }
 
 @include mobile {
+  // Компактный баннер: без большого значка, заголовок в строку, короткий текст,
+  // кнопки в одну строку — занимает ~25% экрана вместо 40%.
+  .cookie-consent {
+    padding-top: 12px;
+  }
+
   .cookie-consent__inner {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
+  }
+
+  .cookie-consent__icon {
+    display: none;
+  }
+
+  .cookie-consent__title {
+    display: inline;
+    margin: 0 4px 0 0;
+    font-size: 0.875rem;
+  }
+
+  .cookie-consent__desc {
+    display: inline;
+    font-size: 0.8125rem;
+    line-height: 1.45;
   }
 
   .cookie-consent__actions {
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .cookie-consent__btn {
+    padding: 10px 8px;
+    font-size: 0.8125rem;
+    white-space: nowrap;
+
+    &--primary {
+      grid-column: 1 / -1;
+    }
   }
 
   .cookie-consent-modal {

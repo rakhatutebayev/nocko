@@ -34,6 +34,7 @@ export default function ArticlesPageRu() {
       <HeaderWrapperRu />
       <main role="main">
         <Hero
+          variant="article"
           title="Блог"
           subtitle="ИТ-инсайты и экспертные руководства"
           description="Последние ИТ-тренды, лучшие практики и экспертные материалы: сетевая инфраструктура, облачные решения, кибербезопасность и стратегии ИТ-поддержки для бизнеса в ОАЭ."

@@ -61,6 +61,7 @@ export default async function ArticlesPage() {
       <HeaderWrapper />
       <main role="main">
         <Hero
+          variant="article"
           title="Blog"
           subtitle="IT Insights & Expert Guides"
           description="Stay updated with the latest IT trends, best practices, and expert insights. Learn about network infrastructure, cloud solutions, cybersecurity, and IT support strategies for businesses in UAE."
