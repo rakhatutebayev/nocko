@@ -849,3 +849,9 @@ main {
 
 // Глобальные стили для header__right и header__menu-cta удалены,
 // так как они уже определены внутри .header с правильной специфичностью
+
+// Кнопки в шапке: тонкая рамка 1px вместо базовых 2px у .btn
+.header .header__right .header__menu-cta,
+.header .header__right .header__lang {
+  border-width: 1px;
+}
