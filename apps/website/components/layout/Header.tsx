@@ -294,15 +294,6 @@ export default function Header({ menu }: HeaderProps) {
 
         {menu.attributes?.ctaText && (
           <div className="header__right">
-            {!isMobile && (
-              <Link
-                href={langSwitchUrl(pathname)}
-                className="btn btn--secondary btn--sm header__lang"
-                aria-label="Switch language"
-              >
-                {pathname.startsWith('/ru') ? 'EN' : 'RU'}
-              </Link>
-            )}
             <a
               href="tel:+971542448888"
               className="header__phone"
@@ -349,6 +340,15 @@ export default function Header({ menu }: HeaderProps) {
               </svg>
               <span className="header__menu-cta-label">{menu.attributes.ctaText}</span>
             </button>
+            {!isMobile && (
+              <Link
+                href={langSwitchUrl(pathname)}
+                className="btn btn--secondary btn--sm header__lang"
+                aria-label="Switch language"
+              >
+                {pathname.startsWith('/ru') ? 'EN' : 'RU'}
+              </Link>
+            )}
           </div>
         )}
       </div>
