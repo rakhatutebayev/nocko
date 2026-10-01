@@ -44,9 +44,12 @@ function rateLimit(ip: string, max = 5, windowMs = 3600_000): boolean {
 }
 
 export async function POST(request: NextRequest) {
+  let name = '', email = '', phone = '', message = '';
   try {
     const body = await request.json();
-    const { name, email, phone, message, website, recaptchaToken, formStartedAt } = body.data || body;
+    const data = body.data || body;
+    ({ name, email, phone, message } = data);
+    const { website, recaptchaToken, formStartedAt } = data;
 
     if (website?.trim()) {
       return NextResponse.json({ success: false, message: 'Spam detected' }, { status: 400 });
@@ -173,12 +176,14 @@ export async function POST(request: NextRequest) {
     console.log(`[api/contact] Email sent to: ${recipients.join(', ')}`);
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('[api/contact]', error);
+    // Полный текст заявки в лог: если почта не ушла, лид можно восстановить из логов Vercel.
+    console.error('[api/contact] SEND FAILED', {
+      error: error instanceof Error ? error.message : String(error),
+      lead: { name, email, phone, message },
+    });
+    // Наружу только общий текст: детали SMTP (логин, коды Gmail) посетителю не показываем.
     return NextResponse.json(
-      {
-        success: false,
-        message: error instanceof Error ? error.message : 'Failed to send message',
-      },
+      { success: false, message: 'Failed to send message' },
       { status: 500 }
     );
   }
