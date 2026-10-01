@@ -106,6 +106,13 @@ const fallback: MappedServiceContent = {
       url: '/ru/case-studies/emr-backup',
       ctaText: 'Читать кейс',
     },
+    {
+      type: 'Статья',
+      title: 'ИТ аутсорсинг в Дубае: цены и модели оплаты',
+      description: 'Почасовая оплата, цена за пользователя и устройство, годовой AMC в дирхамах, что входит в договор, SLA и выбор подрядчика в ОАЭ.',
+      url: '/ru/articles/it-outsourcing-dubai-cost',
+      ctaText: 'Читать статью',
+    },
   ],
   cta: {
     title: 'Готовы перестать беспокоиться об ИТ?',

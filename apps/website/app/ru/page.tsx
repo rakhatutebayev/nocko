@@ -69,8 +69,8 @@ const ruFeatures = [
     description: 'Русскоговорящая ИТ-компания с экспертами по сетевой архитектуре и кибербезопасности. Сертификации Microsoft, Cisco, AWS.',
     iconId: 'expertise-15-years',
     link: '/services/it-support-ru',
-    linkText: 'ИТ поддержка на русском',
-    linkAriaLabel: 'Русскоговорящие ИТ специалисты в Дубае',
+    linkText: 'ИТ поддержка на русском языке',
+    linkAriaLabel: 'Русскоязычный системный администратор в Дубае',
     serviceType: 'ИТ Консалтинг',
   },
   {

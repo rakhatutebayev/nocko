@@ -76,6 +76,7 @@ export const articleSlugs = [
   'cloud-banking-uae',
   'google-workspace-vs-microsoft-365',
   'healthcare-it-backup-uae',
+  'it-outsourcing-dubai-cost',
 ];
 
 export const industrySlugs = [

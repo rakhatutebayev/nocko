@@ -105,6 +105,13 @@ const fallback: MappedServiceContent = {
       url: '/case-studies/emr-backup',
       ctaText: 'Read the case study',
     },
+    {
+      type: 'ARTICLE',
+      title: 'IT Outsourcing in Dubai: Cost and Pricing Models',
+      description: 'Hourly, per user, per device and annual AMC pricing in AED, what is included, SLA terms and how to choose a provider in the UAE.',
+      url: '/articles/it-outsourcing-dubai-cost',
+      ctaText: 'Read the article',
+    },
   ],
   cta: {
     title: 'Ready to Outsource Your IT?',
