@@ -6,7 +6,6 @@ import AboutStats from '@/components/sections/AboutStats';
 import AboutVisionMission from '@/components/sections/AboutVisionMission';
 import AboutStory from '@/components/sections/AboutStory';
 import FAQAccordion from '@/components/sections/FAQAccordion';
-import AboutTeam from '@/components/sections/AboutTeam';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
@@ -74,23 +73,6 @@ export default function AboutPage() {
           ],
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ItemList',
-            name: 'NOCKO Engineering Team',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, item: { '@type': 'Person', name: 'Alex Petrov', jobTitle: 'Head of Infrastructure', worksFor: { '@type': 'Organization', name: 'NOCKO Information Technology' }, hasCredential: [{ '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'CCNP Enterprise' }, { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'Microsoft MCSE' }] } },
-              { '@type': 'ListItem', position: 2, item: { '@type': 'Person', name: 'Maria Smirnova', jobTitle: 'Cybersecurity Lead', worksFor: { '@type': 'Organization', name: 'NOCKO Information Technology' }, hasCredential: [{ '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'CISSP' }, { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'CEH' }] } },
-              { '@type': 'ListItem', position: 3, item: { '@type': 'Person', name: 'Denis Kovalev', jobTitle: 'Cloud & Microsoft 365 Architect', worksFor: { '@type': 'Organization', name: 'NOCKO Information Technology' }, hasCredential: [{ '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'Microsoft Azure Solutions Architect' }] } },
-              { '@type': 'ListItem', position: 4, item: { '@type': 'Person', name: 'Aisha Al Mansoori', jobTitle: 'Client Success Manager', worksFor: { '@type': 'Organization', name: 'NOCKO Information Technology' }, hasCredential: [{ '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'ITIL v4 Foundation' }, { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'PMP' }] } },
-            ],
-          }),
-        }}
-        suppressHydrationWarning
-      />
       <HeaderWrapper />
       <main role="main">
         <Hero
@@ -101,7 +83,6 @@ export default function AboutPage() {
         <AboutStats />
         <AboutVisionMission />
         <AboutStory />
-        <AboutTeam />
         <FAQAccordion title={aboutFAQ.title} items={aboutFAQ.items} />
       </main>
       <Footer />
