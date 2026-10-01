@@ -62,6 +62,7 @@ export default function ServiceContentEnhanced({
                   alt={blocks[0].imageAlt || 'Service illustration'}
                   width={640}
                   height={400}
+                  sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 400px"
                   loading="lazy"
                   unoptimized={blocks[0].image!.startsWith('http')}
                 />

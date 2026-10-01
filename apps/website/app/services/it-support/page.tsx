@@ -87,11 +87,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Dubai-based engineers on-call 24/7' },
-    { icon: '/images/benefits/time.png', text: '15-min first response SLA' },
-    { icon: '/images/benefits/team.png', text: 'Multi-lingual support team' },
-    { icon: '/images/benefits/pricing.png', text: 'Transparent per-ticket pricing' },
-    { icon: '/images/benefits/communication.png', text: 'Monthly SLA reports' },
+    { icon: '/images/benefits/global.webp', text: 'Dubai-based engineers on-call 24/7' },
+    { icon: '/images/benefits/time.webp', text: '15-min first response SLA' },
+    { icon: '/images/benefits/team.webp', text: 'Multi-lingual support team' },
+    { icon: '/images/benefits/pricing.webp', text: 'Transparent per-ticket pricing' },
+    { icon: '/images/benefits/communication.webp', text: 'Monthly SLA reports' },
   ],
   resources: [],
   cta: {

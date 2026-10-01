@@ -91,11 +91,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Certified cloud architects in Dubai' },
-    { icon: '/images/benefits/time.png', text: 'Zero-downtime migrations' },
-    { icon: '/images/benefits/team.png', text: 'TRA / NESA data compliance' },
-    { icon: '/images/benefits/pricing.png', text: 'Aggressive cost optimization' },
-    { icon: '/images/benefits/communication.png', text: 'Transparent dashboard metrics' },
+    { icon: '/images/benefits/global.webp', text: 'Certified cloud architects in Dubai' },
+    { icon: '/images/benefits/time.webp', text: 'Zero-downtime migrations' },
+    { icon: '/images/benefits/team.webp', text: 'TRA / NESA data compliance' },
+    { icon: '/images/benefits/pricing.webp', text: 'Aggressive cost optimization' },
+    { icon: '/images/benefits/communication.webp', text: 'Transparent dashboard metrics' },
   ],
   resources: [
     {

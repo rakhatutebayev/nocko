@@ -81,6 +81,7 @@ export default function ServiceArticleCards({
                       alt={card.cardIcon?.data?.attributes?.alternativeText || 'Icon'}
                       width={48}
                       height={48}
+                      sizes="48px"
                       loading="lazy"
                     />
                   </div>

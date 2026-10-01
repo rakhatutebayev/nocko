@@ -92,11 +92,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Сертифицированные этичные хакеры и аналитики' },
-    { icon: '/images/benefits/time.png', text: 'Сортировка угроз менее чем за 15 минут' },
-    { icon: '/images/benefits/team.png', text: 'Обязательная стандартизация NESA в ОАЭ' },
-    { icon: '/images/benefits/pricing.png', text: 'Проактивная безопасность с фиксированной стоимостью' },
-    { icon: '/images/benefits/communication.png', text: 'Панели мониторинга рисков для руководителей' },
+    { icon: '/images/benefits/global.webp', text: 'Сертифицированные этичные хакеры и аналитики' },
+    { icon: '/images/benefits/time.webp', text: 'Сортировка угроз менее чем за 15 минут' },
+    { icon: '/images/benefits/team.webp', text: 'Обязательная стандартизация NESA в ОАЭ' },
+    { icon: '/images/benefits/pricing.webp', text: 'Проактивная безопасность с фиксированной стоимостью' },
+    { icon: '/images/benefits/communication.webp', text: 'Панели мониторинга рисков для руководителей' },
   ],
   resources: [],
   cta: {

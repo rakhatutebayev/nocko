@@ -2,7 +2,7 @@
 > NOCKO is a Dubai-based IT services company providing IT support, network infrastructure, cloud solutions, and cybersecurity for businesses across the UAE (Dubai, Abu Dhabi, Sharjah).
 
 ## About
-NOCKO delivers managed IT services, 24/7 IT support, structured cabling, cloud migrations, and cybersecurity solutions to businesses across the United Arab Emirates. Office located in Dubai (Office R20-42, Wavez Residence, Wadi Al Safa 2). Contact: +971542448888, info@nocko.com.
+NOCKO delivers managed IT services, 24/7 IT support, structured cabling, cloud migrations, and cybersecurity solutions to businesses across the United Arab Emirates. Office located in Dubai (Office R20-42, Wavez Residence, Wadi Al Safa 2). Contact: +971542448888, info@nocko.com. Full text of the main guides: https://nocko.com/llms-full.txt
 
 ## Key Pages
 - [Homepage](https://nocko.com): Overview of all IT services and company
@@ -20,15 +20,37 @@ NOCKO delivers managed IT services, 24/7 IT support, structured cabling, cloud m
 - [Contact](https://nocko.com/contact): Office address, phone, email
 
 ## Guides
+- [Managed IT Services in UAE: Complete Guide](https://nocko.com/articles/managed-it-services-guide): What MSPs include, AED per-user pricing, SLAs, choosing a provider
+- [Cybersecurity for UAE Business: Complete Guide](https://nocko.com/articles/cybersecurity-guide): Threats, compliance (NESA/PDPL), incident response
+- [AMC vs MSP Decision Guide](https://nocko.com/articles/it-amc-vs-msp): When an annual maintenance contract is enough and when to move to managed services
+- [Cloud Migration for UAE Business](https://nocko.com/articles/cloud-migration): Single vs multi-cloud vs hybrid, migration phases, pitfalls
+- [Structured Cabling Guide for UAE Offices](https://nocko.com/articles/structured-cabling-guide): Cat6A, fiber, Fluke certification
+- [IT Helpdesk: ITIL Ticketing and SLA Workflows](https://nocko.com/articles/it-support-helpdesk): Ticket priorities, escalation, SLA design for Dubai helpdesks
+- [Strategic IT Consulting in UAE: Complete Guide](https://nocko.com/articles/it-consulting-guide): Assessments, roadmaps, budgeting, vCIO
+- [Cloud Infrastructure Guide for UAE](https://nocko.com/articles/cloud-infrastructure-guide): Architecture, security, data residency, FinOps
 - [IT AMC in UAE: Complete Guide](https://nocko.com/articles/it-amc-guide): AMC coverage, AED pricing tiers, SLA levels
-- [Cybersecurity for UAE Business](https://nocko.com/articles/cybersecurity-guide): Threats, compliance (NESA/PDPL), incident response
-- [Managed IT Services Guide](https://nocko.com/articles/managed-it-services-guide): Scope, per-user pricing, choosing an MSP
 - [IT Support in UAE: Complete Guide](https://nocko.com/articles/it-support-guide): Support models, SLAs, in-house vs outsourced costs
 - [24/7 IT Monitoring Services](https://nocko.com/articles/it-support-monitoring): NOC/SOC monitoring, alert escalation
-- [Enterprise Cloud Infrastructure Guide](https://nocko.com/articles/cloud-infrastructure-guide): Architecture, security, data residency, FinOps
-- [Cloud Migration for UAE Business](https://nocko.com/articles/cloud-migration): Single vs multi-cloud vs hybrid, migration phases
-- [IT Strategy, Assessment & Roadmap](https://nocko.com/articles/it-consulting-strategy): Audits, roadmaps, budgeting and ROI
-- [Structured Cabling Guide](https://nocko.com/articles/structured-cabling-guide): Cat6A, fiber, Fluke certification
+- [IT Strategy, Assessment and Roadmap](https://nocko.com/articles/it-consulting-strategy): Audits, roadmaps, budgeting and ROI
+
+## Russian (ru)
+- [Главная (RU)](https://nocko.com/ru): ИТ-компания в Дубае, аутсорсинг и поддержка 24/7
+- [ИТ-поддержка](https://nocko.com/ru/services/it-support): Helpdesk и обслуживание 24/7 в Дубае
+- [Управляемые ИТ-услуги](https://nocko.com/ru/services/managed-it): ИТ-аутсорсинг для бизнеса в ОАЭ
+- [Облачные услуги](https://nocko.com/ru/services/cloud): Миграция в облако и управление инфраструктурой
+- [Кибербезопасность](https://nocko.com/ru/services/cybersecurity): Защита данных и сетей в Дубае
+- [Контракты IT AMC](https://nocko.com/ru/services/it-amc): Абонентское ИТ-обслуживание в Дубае
+- [ИТ-консалтинг](https://nocko.com/ru/services/it-consulting): Технологическая стратегия и аудит
+- [СКС и монтаж сетей](https://nocko.com/ru/services/structured-cabling): Структурированные кабельные системы в ОАЭ
+- [Русскоговорящая ИТ-компания](https://nocko.com/services/it-support-ru): ИТ-аутсорсинг в Дубае на русском языке
+- [Управляемые ИТ-услуги в ОАЭ: полное руководство](https://nocko.com/ru/articles/managed-it-services-guide): Состав услуг MSP, цены в AED, SLA, выбор провайдера
+- [Кибербезопасность для бизнеса в ОАЭ](https://nocko.com/ru/articles/cybersecurity-guide): Угрозы, соответствие NESA/PDPL, реагирование на инциденты
+- [AMC vs MSP: выбор контракта](https://nocko.com/ru/articles/it-amc-vs-msp): Когда достаточно AMC, а когда нужны управляемые услуги
+- [Облачная миграция для бизнеса в ОАЭ](https://nocko.com/ru/articles/cloud-migration): Стратегия, фазы миграции, типичные ошибки
+- [Руководство по СКС в ОАЭ](https://nocko.com/ru/articles/structured-cabling-guide): Cat6A, оптика, сертификация Fluke
+- [ITIL-тикеты и SLA-процессы хелпдеска](https://nocko.com/ru/articles/it-support-helpdesk): Приоритеты заявок, эскалация, проектирование SLA
+- [Стратегический IT-консалтинг в ОАЭ](https://nocko.com/ru/articles/it-consulting-guide): Аудит, дорожная карта, бюджетирование, vCIO
+- [Облачная инфраструктура в ОАЭ: полное руководство](https://nocko.com/ru/articles/cloud-infrastructure-guide): Архитектура, безопасность, резидентность данных, FinOps
 
 ## Licensing
-Content on this site may be cited for informational and research purposes. Use for AI model training requires written consent from NOCKO Information Technology.
+Content on this site may be crawled and indexed by search engines, and may be cited, quoted and summarized by AI search and answer engines with attribution and a link to the source page on nocko.com. Use of this content for AI model training requires prior written consent from NOCKO Information Technology (info@nocko.com). Machine-readable licence: https://nocko.com/.well-known/rsl.xml

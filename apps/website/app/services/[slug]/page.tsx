@@ -130,23 +130,23 @@ const structuredCablingContent = {
   ],
   benefits: [
     {
-      icon: '/images/benefits/global.png',
+      icon: '/images/benefits/global.webp',
       text: 'Dubai-based with <br> global coverage',
     },
     {
-      icon: '/images/benefits/time.png',
+      icon: '/images/benefits/time.webp',
       text: '24/7 availability with <br> fastest SLA',
     },
     {
-      icon: '/images/benefits/team.png',
+      icon: '/images/benefits/team.webp',
       text: 'Highly-qualified <br> IT professionals',
     },
     {
-      icon: '/images/benefits/pricing.png',
+      icon: '/images/benefits/pricing.webp',
       text: 'Affordable pricing <br> & cost efficiency',
     },
     {
-      icon: '/images/benefits/communication.png',
+      icon: '/images/benefits/communication.webp',
       text: 'Clear and transparent <br> communication',
     },
   ],

@@ -53,6 +53,8 @@ const nextConfig: NextConfig = {
   // Experimental features for better performance
   experimental: {
     optimizePackageImports: ['@nocko/ui', '@nocko/shared'],
+    // Inline critical CSS into the HTML to remove render-blocking stylesheet requests
+    inlineCss: true,
   },
 
   

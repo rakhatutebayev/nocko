@@ -598,12 +598,6 @@
       opacity: 1;
     }
 
-    @media (max-width: 480px) {
-      font-size: 10px;
-      padding: 5px 8px;
-      min-height: 30px;
-    }
-
     &:hover,
     &:focus {
       color: $color-white;
@@ -627,6 +621,81 @@
       gap: 6px;
     }
   }
+
+  // Clickable phone next to the CONTACT button.
+  // Desktop (transparent header over the hero): white text like the nav links.
+  // Scrolled / mobile (white header): #2b5fd9 like the CTA (5.5:1 on white).
+  &__phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 0 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    color: $color-white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: color $transition-base, background-color $transition-base;
+    flex-shrink: 0;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+      background-color: rgba(43, 95, 217, 0.85);
+    }
+
+    &:focus-visible {
+      outline: 2px solid #3474ff;
+      outline-offset: 2px;
+    }
+
+    @include laptop {
+      width: 44px;
+      height: 44px;
+      min-height: 44px;
+      padding: 0;
+      justify-content: center;
+      color: #2b5fd9;
+
+      &:hover,
+      &:focus {
+        color: $color-white;
+        background-color: #2b5fd9;
+      }
+    }
+  }
+
+  &__phone-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+
+    @include laptop {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__phone-label {
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &.scrolled &__phone {
+    color: #2b5fd9;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+      background-color: #2b5fd9;
+    }
+  }
+
 
   &__lang {
     text-decoration: none;
@@ -663,15 +732,54 @@
   // This selector increases specificity to guarantee mobile "before scroll" colors.
   @include laptop {
     &:not(.scrolled) .header__menu-cta {
-      border-color: #3474ff;
-      color: #3474ff;
+      border-color: #2b5fd9;
+      color: #2b5fd9;
     }
   }
-  
-  // Keep this selector for compatibility, but CTA style is now the same always.
+
+  // Mobile/tablet: `.header .header__right .header__menu-cta` (0,3,0) beats the generic
+  // `.btn--sm` (0,1,0) that is imported later, so the compact size actually applies.
+  @include laptop {
+    .header__right .header__menu-cta {
+      font-size: 11px;
+      padding: 6px 10px;
+      min-height: 44px;
+      min-width: 44px;
+      gap: 6px;
+      border-color: #2b5fd9;
+      color: #2b5fd9;
+    }
+  }
+
+  // Icon-only CONTACT at very narrow widths (<= 360px) so burger, logo, phone and
+  // CONTACT stay on one row at 320px. The button keeps its aria-label.
+  &__menu-cta-icon {
+    display: none;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 360px) {
+    .header__right .header__menu-cta {
+      width: 44px;
+      padding: 0;
+      gap: 0;
+    }
+
+    &__menu-cta-icon {
+      display: block;
+    }
+
+    &__menu-cta-label {
+      display: none;
+    }
+  }
+
+  // Scrolled (white) header: #2b5fd9 on white is 5.6:1 (#3474ff was 4.1:1).
   &.scrolled &__menu-cta {
-    border-color: #3474ff;
-    color: #3474ff;
+    border-color: #2b5fd9;
+    color: #2b5fd9;
     background-color: transparent;
   }
   

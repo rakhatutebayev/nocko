@@ -92,11 +92,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Локальный NOC & Helpdesk в ОАЭ' },
-    { icon: '/images/benefits/time.png', text: 'Финансовые гарантии аптайма SLA' },
-    { icon: '/images/benefits/team.png', text: 'MSP-архитектура корпоративного уровня' },
-    { icon: '/images/benefits/pricing.png', text: 'Предсказуемые счета (OPEX)' },
-    { icon: '/images/benefits/communication.png', text: 'Полное управление контрагентами' },
+    { icon: '/images/benefits/global.webp', text: 'Локальный NOC & Helpdesk в ОАЭ' },
+    { icon: '/images/benefits/time.webp', text: 'Финансовые гарантии аптайма SLA' },
+    { icon: '/images/benefits/team.webp', text: 'MSP-архитектура корпоративного уровня' },
+    { icon: '/images/benefits/pricing.webp', text: 'Предсказуемые счета (OPEX)' },
+    { icon: '/images/benefits/communication.webp', text: 'Полное управление контрагентами' },
   ],
   resources: [
     {

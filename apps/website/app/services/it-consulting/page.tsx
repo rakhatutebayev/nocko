@@ -91,11 +91,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Senior consultants with UAE market expertise' },
-    { icon: '/images/benefits/time.png', text: 'Rapid assessment turnaround' },
-    { icon: '/images/benefits/team.png', text: 'Vendor-neutral recommendations' },
-    { icon: '/images/benefits/pricing.png', text: 'ROI-focused engagements' },
-    { icon: '/images/benefits/communication.png', text: 'Executive-ready deliverables' },
+    { icon: '/images/benefits/global.webp', text: 'Senior consultants with UAE market expertise' },
+    { icon: '/images/benefits/time.webp', text: 'Rapid assessment turnaround' },
+    { icon: '/images/benefits/team.webp', text: 'Vendor-neutral recommendations' },
+    { icon: '/images/benefits/pricing.webp', text: 'ROI-focused engagements' },
+    { icon: '/images/benefits/communication.webp', text: 'Executive-ready deliverables' },
   ],
   resources: [],
   cta: {

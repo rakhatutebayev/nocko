@@ -92,11 +92,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Инженерный центр в Дубае' },
-    { icon: '/images/benefits/time.png', text: 'Юридически обязывающие SLA восстановления' },
-    { icon: '/images/benefits/team.png', text: 'Сертифицированные специалисты Microsoft' },
-    { icon: '/images/benefits/pricing.png', text: 'Отсутствие скрытых затрат (Комплексное покрытие)' },
-    { icon: '/images/benefits/communication.png', text: 'Выделенное управление аккаунтом' },
+    { icon: '/images/benefits/global.webp', text: 'Инженерный центр в Дубае' },
+    { icon: '/images/benefits/time.webp', text: 'Юридически обязывающие SLA восстановления' },
+    { icon: '/images/benefits/team.webp', text: 'Сертифицированные специалисты Microsoft' },
+    { icon: '/images/benefits/pricing.webp', text: 'Отсутствие скрытых затрат (Комплексное покрытие)' },
+    { icon: '/images/benefits/communication.webp', text: 'Выделенное управление аккаунтом' },
   ],
   resources: [],
   cta: {

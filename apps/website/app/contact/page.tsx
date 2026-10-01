@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ContactForm from '@/components/sections/ContactForm';
 import StructuredData from '@/components/seo/StructuredData';
+import ContactMap from './ContactMap';
 
 export const metadata: Metadata = {
   title: 'Contact NOCKO | IT Support Dubai & UAE',
@@ -91,18 +92,11 @@ export default function ContactPage() {
                 </ul>
                 <p className="contact-info__hours">Mon–Fri: 09:00–18:00 (GST)</p>
               </div>
-              <div className="contact-info__map">
-                <iframe
-                  title="NOCKO Office - Wavez Residence, Dubai"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.5!2d55.2708!3d25.0785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zV2F2ZXogUmVzaWRlbmNlLCBXYWRpIEFsIFNhZmEgMiwgRHViYWk!5e0!3m2!1sen!2sae!4v1"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+              <ContactMap
+                title="NOCKO Office - Wavez Residence, Dubai"
+                address="Wavez Residence, Wadi Al Safa 2, Dubai, UAE"
+                buttonLabel="Show map"
+              />
             </div>
           </div>
         </section>

@@ -113,23 +113,23 @@ const itSupportRuContent = {
   ],
   benefits: [
     {
-      icon: '/images/benefits/global.png',
+      icon: '/images/benefits/global.webp',
       text: 'Локальная экспертиза <br> в Дубае',
     },
     {
-      icon: '/images/benefits/time.png',
+      icon: '/images/benefits/time.webp',
       text: '15 Минут на <br> Реакцию',
     },
     {
-      icon: '/images/benefits/team.png',
+      icon: '/images/benefits/team.webp',
       text: 'Инженеры от L1 <br> до Архитекторов',
     },
     {
-      icon: '/images/benefits/pricing.png',
+      icon: '/images/benefits/pricing.webp',
       text: 'Предсказуемая цена <br> за сотрудника',
     },
     {
-      icon: '/images/benefits/communication.png',
+      icon: '/images/benefits/communication.webp',
       text: 'Работаем по <br> регламентам ITIL',
     },
   ],

@@ -92,11 +92,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Сертифицированные облачные архитекторы в Дубае' },
-    { icon: '/images/benefits/time.png', text: 'Миграция без простоев' },
-    { icon: '/images/benefits/team.png', text: 'Соответствие данным TRA / NESA' },
-    { icon: '/images/benefits/pricing.png', text: 'Агрессивная оптимизация затрат' },
-    { icon: '/images/benefits/communication.png', text: 'Прозрачные метрики в дашборде' },
+    { icon: '/images/benefits/global.webp', text: 'Сертифицированные облачные архитекторы в Дубае' },
+    { icon: '/images/benefits/time.webp', text: 'Миграция без простоев' },
+    { icon: '/images/benefits/team.webp', text: 'Соответствие данным TRA / NESA' },
+    { icon: '/images/benefits/pricing.webp', text: 'Агрессивная оптимизация затрат' },
+    { icon: '/images/benefits/communication.webp', text: 'Прозрачные метрики в дашборде' },
   ],
   resources: [
     {

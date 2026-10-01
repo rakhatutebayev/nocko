@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import StructuredData from '@/components/seo/StructuredData';
+import ServiceCTA from '@/components/services/ServiceCTA';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
@@ -251,6 +252,12 @@ export default function DubaiPage() {
             </div>
           </div>
         </section>
+        <ServiceCTA
+          title="Need help choosing?"
+          text="Talk to an engineer."
+          ctaText="Request a Free Consultation"
+          ctaUrl="#contact"
+        />
       </main>
       <Footer />
     </>

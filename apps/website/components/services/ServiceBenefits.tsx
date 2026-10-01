@@ -30,6 +30,7 @@ export default function ServiceBenefits({
                   className="benefits__icon"
                   width={50}
                   height={50}
+                  sizes="50px"
                   loading="lazy"
                   unoptimized={true}
                 />

@@ -91,11 +91,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Certified security experts in Dubai' },
-    { icon: '/images/benefits/time.png', text: '24/7 SOC monitoring' },
-    { icon: '/images/benefits/team.png', text: 'NESA & ISO 27001 compliance' },
-    { icon: '/images/benefits/pricing.png', text: 'Predictable security costs' },
-    { icon: '/images/benefits/communication.png', text: 'Regular security reports' },
+    { icon: '/images/benefits/global.webp', text: 'Certified security experts in Dubai' },
+    { icon: '/images/benefits/time.webp', text: '24/7 SOC monitoring' },
+    { icon: '/images/benefits/team.webp', text: 'NESA & ISO 27001 compliance' },
+    { icon: '/images/benefits/pricing.webp', text: 'Predictable security costs' },
+    { icon: '/images/benefits/communication.webp', text: 'Regular security reports' },
   ],
   resources: [
     {

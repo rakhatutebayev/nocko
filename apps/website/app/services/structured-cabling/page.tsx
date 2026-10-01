@@ -91,11 +91,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Dubai-based certified cabling engineers' },
-    { icon: '/images/benefits/time.png', text: 'Fast deployment across all UAE' },
-    { icon: '/images/benefits/team.png', text: 'Fluke certified testing' },
-    { icon: '/images/benefits/pricing.png', text: 'Competitive project pricing' },
-    { icon: '/images/benefits/communication.png', text: 'Full documentation provided' },
+    { icon: '/images/benefits/global.webp', text: 'Dubai-based certified cabling engineers' },
+    { icon: '/images/benefits/time.webp', text: 'Fast deployment across all UAE' },
+    { icon: '/images/benefits/team.webp', text: 'Fluke certified testing' },
+    { icon: '/images/benefits/pricing.webp', text: 'Competitive project pricing' },
+    { icon: '/images/benefits/communication.webp', text: 'Full documentation provided' },
   ],
   resources: [
     {

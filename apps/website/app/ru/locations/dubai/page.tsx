@@ -3,6 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
 import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
 import StructuredData from '@/components/seo/StructuredData';
+import ServiceCTA from '@/components/services/ServiceCTA';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
@@ -247,6 +248,12 @@ export default function DubaiRuPage() {
             </div>
           </div>
         </section>
+        <ServiceCTA
+          title="Нужна помощь с выбором?"
+          text="Поговорите с инженером."
+          ctaText="Получить консультацию"
+          ctaUrl="#contact"
+        />
       </main>
       <Footer />
     </>

@@ -91,11 +91,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Dubai-based managed services team' },
-    { icon: '/images/benefits/time.png', text: '24/7 NOC and helpdesk' },
-    { icon: '/images/benefits/team.png', text: 'Dedicated account manager' },
-    { icon: '/images/benefits/pricing.png', text: 'Predictable monthly costs' },
-    { icon: '/images/benefits/communication.png', text: 'Monthly performance reports' },
+    { icon: '/images/benefits/global.webp', text: 'Dubai-based managed services team' },
+    { icon: '/images/benefits/time.webp', text: '24/7 NOC and helpdesk' },
+    { icon: '/images/benefits/team.webp', text: 'Dedicated account manager' },
+    { icon: '/images/benefits/pricing.webp', text: 'Predictable monthly costs' },
+    { icon: '/images/benefits/communication.webp', text: 'Monthly performance reports' },
   ],
   resources: [
     {

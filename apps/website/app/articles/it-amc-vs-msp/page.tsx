@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
 import StructuredData from '@/components/seo/StructuredData';
+import ServiceCTA from '@/components/services/ServiceCTA';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
@@ -69,6 +70,12 @@ export default function ItAmcVsMspPage() {
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
+        <ServiceCTA
+          title="Need help choosing?"
+          text="Talk to an engineer."
+          ctaText="Request a Free Consultation"
+          ctaUrl="#contact"
+        />
       </main>
       <Footer />
     </>

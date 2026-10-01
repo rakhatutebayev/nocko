@@ -91,11 +91,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Certified IT engineers in Dubai' },
-    { icon: '/images/benefits/time.png', text: 'Guaranteed SLA response times' },
-    { icon: '/images/benefits/team.png', text: 'Dedicated account manager' },
-    { icon: '/images/benefits/pricing.png', text: 'Fixed annual IT costs' },
-    { icon: '/images/benefits/communication.png', text: 'Monthly health reports' },
+    { icon: '/images/benefits/global.webp', text: 'Certified IT engineers in Dubai' },
+    { icon: '/images/benefits/time.webp', text: 'Guaranteed SLA response times' },
+    { icon: '/images/benefits/team.webp', text: 'Dedicated account manager' },
+    { icon: '/images/benefits/pricing.webp', text: 'Fixed annual IT costs' },
+    { icon: '/images/benefits/communication.webp', text: 'Monthly health reports' },
   ],
   resources: [],
   cta: {

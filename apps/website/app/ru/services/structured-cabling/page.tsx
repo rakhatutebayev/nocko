@@ -92,11 +92,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Сертифицированное тестирование Fluke' },
-    { icon: '/images/benefits/time.png', text: 'Очистка стоек без простоя' },
-    { icon: '/images/benefits/team.png', text: 'Сварка оптоволокна' },
-    { icon: '/images/benefits/pricing.png', text: '25-летняя гарантия на оборудование' },
-    { icon: '/images/benefits/communication.png', text: 'Исчерпывающая документация' },
+    { icon: '/images/benefits/global.webp', text: 'Сертифицированное тестирование Fluke' },
+    { icon: '/images/benefits/time.webp', text: 'Очистка стоек без простоя' },
+    { icon: '/images/benefits/team.webp', text: 'Сварка оптоволокна' },
+    { icon: '/images/benefits/pricing.webp', text: '25-летняя гарантия на оборудование' },
+    { icon: '/images/benefits/communication.webp', text: 'Исчерпывающая документация' },
   ],
   resources: [
     {

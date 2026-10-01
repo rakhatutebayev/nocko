@@ -234,7 +234,13 @@
 // Enhanced Service Hero
 .hero--service-enhanced {
   background-color: #2c3e50;
-  background-image: url('/images/services/structured-cabling-header-bg.jpg');
+  background-image: url('/images/services/services-header-bg.jpg');
+  // WebP via image-set — browser picks webp, jpg above is the fallback
+  background-image: -webkit-image-set(url('/images/services/services-header-bg.webp') 1x);
+  background-image: image-set(
+    url('/images/services/services-header-bg.webp') type('image/webp'),
+    url('/images/services/services-header-bg.jpg') type('image/jpeg')
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -243,18 +249,14 @@
   position: relative;
   overflow: hidden;
   
-  // WebP support
-  .webp & {
-    background-image: url('/images/services/structured-cabling-header-bg.webp');
-  }
-  
   // IT AMC specific background with gradient overlay
   &.hero--it-amc {
     background-image: url('/images/services/services-hero-bg.jpg');
-    
-    .webp & {
-      background-image: url('/images/services/services-hero-bg.webp');
-    }
+    background-image: -webkit-image-set(url('/images/services/services-hero-bg.webp') 1x);
+    background-image: image-set(
+      url('/images/services/services-hero-bg.webp') type('image/webp'),
+      url('/images/services/services-hero-bg.jpg') type('image/jpeg')
+    );
     
     // Градиентный затемнитель: центр темнее, края светлее (переопределяет общий ::before)
     &::before {

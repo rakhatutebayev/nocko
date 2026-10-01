@@ -24,6 +24,7 @@ export default function ServiceFeatures({ features }: ServiceFeaturesProps) {
                   alt={feature.title}
                   width={130}
                   height={130}
+                  sizes="130px"
                   loading="lazy"
                 />
               </div>

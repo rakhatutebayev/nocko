@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsl xmlns="https://rslstandard.org/rsl">
+  <content url="https://nocko.com/">
+    <!-- Search indexing and AI search, summarization and citation: free, with attribution to nocko.com -->
+    <license>
+      <permits type="usage">search</permits>
+      <permits type="usage">ai-use</permits>
+      <permits type="usage">ai-summarize</permits>
+      <permits type="user">commercial</permits>
+      <permits type="user">non-commercial</permits>
+      <prohibits type="usage">train-ai</prohibits>
+      <prohibits type="usage">train-genai</prohibits>
+      <payment type="attribution"/>
+    </license>
+    <!-- AI model training: only with prior written permission from NOCKO (info@nocko.com) -->
+    <license>
+      <permits type="usage">train-ai</permits>
+      <permits type="usage">train-genai</permits>
+      <payment type="per-use">
+        <custom>https://nocko.com/contact</custom>
+      </payment>
+    </license>
+    <copyright type="organization" contactEmail="info@nocko.com" contactUrl="https://nocko.com/contact">NOCKO Information Technology</copyright>
+    <terms>https://nocko.com/llms.txt</terms>
+  </content>
+</rsl>

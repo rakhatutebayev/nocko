@@ -4,6 +4,7 @@ import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
 import ArticleContent from '@/components/articles/ArticleContent';
 import StructuredData from '@/components/seo/StructuredData';
+import ServiceCTA from '@/components/services/ServiceCTA';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
@@ -137,6 +138,12 @@ export default function StructuredCablingGuidePage() {
             ]}/>
           </div>
         </div>
+        <ServiceCTA
+          title="Нужна помощь с выбором?"
+          text="Поговорите с инженером."
+          ctaText="Получить консультацию"
+          ctaUrl="#contact"
+        />
       </main>
       <Footer />
     </>

@@ -88,11 +88,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Выездные инженеры в Дубае' },
-    { icon: '/images/benefits/time.png', text: '15-минутная удаленная диагностика' },
-    { icon: '/images/benefits/team.png', text: 'Инженеры эскалации от L1 до L3' },
-    { icon: '/images/benefits/pricing.png', text: 'Прогнозируемая оплата за пользователя' },
-    { icon: '/images/benefits/communication.png', text: 'Обслуживание по стандартам ITIL' },
+    { icon: '/images/benefits/global.webp', text: 'Выездные инженеры в Дубае' },
+    { icon: '/images/benefits/time.webp', text: '15-минутная удаленная диагностика' },
+    { icon: '/images/benefits/team.webp', text: 'Инженеры эскалации от L1 до L3' },
+    { icon: '/images/benefits/pricing.webp', text: 'Прогнозируемая оплата за пользователя' },
+    { icon: '/images/benefits/communication.webp', text: 'Обслуживание по стандартам ITIL' },
   ],
   resources: [],
   faq: [

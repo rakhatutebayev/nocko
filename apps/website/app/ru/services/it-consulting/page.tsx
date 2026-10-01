@@ -92,11 +92,11 @@ const fallback: MappedServiceContent = {
     },
   ],
   benefits: [
-    { icon: '/images/benefits/global.png', text: 'Опытные технологические архитекторы в GCC' },
-    { icon: '/images/benefits/time.png', text: 'Независимые советы, не привязанные к вендорам' },
-    { icon: '/images/benefits/team.png', text: 'Отчетность KPI для руководителей' },
-    { icon: '/images/benefits/pricing.png', text: 'Мгновенный ROI за счет сокращения лицензий' },
-    { icon: '/images/benefits/communication.png', text: 'Прямое общение на уровне руководства' },
+    { icon: '/images/benefits/global.webp', text: 'Опытные технологические архитекторы в GCC' },
+    { icon: '/images/benefits/time.webp', text: 'Независимые советы, не привязанные к вендорам' },
+    { icon: '/images/benefits/team.webp', text: 'Отчетность KPI для руководителей' },
+    { icon: '/images/benefits/pricing.webp', text: 'Мгновенный ROI за счет сокращения лицензий' },
+    { icon: '/images/benefits/communication.webp', text: 'Прямое общение на уровне руководства' },
   ],
   resources: [],
   cta: {

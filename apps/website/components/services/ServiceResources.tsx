@@ -52,6 +52,7 @@ export default function ServiceResources({
                         className="service-resources__image"
                         width={200}
                         height={200}
+                        sizes="200px"
                         loading="lazy"
                       />
                     </div>
