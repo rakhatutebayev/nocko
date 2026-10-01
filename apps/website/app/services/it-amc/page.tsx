@@ -45,7 +45,7 @@ const fallback: MappedServiceContent = {
       text: 'Our AMC covers your entire IT infrastructure - servers, network equipment, workstations, and peripherals. Regular preventive maintenance visits ensure optimal performance and identify potential issues before they cause costly downtime.',
       link: '/articles/it-amc-guide',
       linkText: 'AMC coverage details',
-      image: '/images/services/amc-maintenance.png',
+      image: '/images/services/it-amc-maintenance.png',
       imageAlt: 'IT maintenance contract services Dubai',
     },
     {
