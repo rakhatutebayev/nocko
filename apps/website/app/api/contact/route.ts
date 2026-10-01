@@ -13,6 +13,35 @@ const CONTACT_RECIPIENTS = (process.env.CONTACT_RECIPIENTS || 'Nocko.it@gmail.co
 
 const RECAPTCHA_SECRET = process.env.RECAPTCHA_SECRET_KEY || '';
 
+// Основной канал: Resend (HTTP API, отправка с домена nocko.com).
+// Запасной: SMTP (Gmail), если RESEND_API_KEY не задан.
+const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
+const MAIL_FROM = process.env.MAIL_FROM || 'NOCKO Website <website@nocko.com>';
+
+function escapeHtml(v: string): string {
+  return v.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+async function sendViaResend(mail: { to: string[]; replyTo: string; subject: string; text: string; html: string }) {
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from: MAIL_FROM,
+      to: mail.to,
+      reply_to: mail.replyTo,
+      subject: mail.subject,
+      text: mail.text,
+      html: mail.html,
+    }),
+  });
+  if (!res.ok) {
+    const detail = await res.text().catch(() => '');
+    throw new Error(`Resend ${res.status}: ${detail.slice(0, 300)}`);
+  }
+  return (await res.json()) as { id?: string };
+}
+
 const SPAM_KEYWORDS = [
   'viagra', 'cialis', 'casino', 'poker', 'lottery', 'winner',
   'click here', 'buy now', 'limited time', 'act now',
@@ -118,8 +147,8 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    if (!SMTP_PASS) {
-      console.error('[api/contact] SMTP_PASS is not set — cannot send email');
+    if (!RESEND_API_KEY && !SMTP_PASS) {
+      console.error('[api/contact] Neither RESEND_API_KEY nor SMTP_PASS is set');
       return NextResponse.json(
         { success: false, message: 'Mail service is not configured' },
         { status: 503 }
@@ -137,18 +166,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: SMTP_PORT,
-      secure: SMTP_PORT === 465,
-      auth: { user: SMTP_USER, pass: SMTP_PASS },
-    });
-
-    await transporter.sendMail({
-      from: SMTP_FROM,
-      to: recipients.join(', '),
+    const safe = { name: escapeHtml(name), email: escapeHtml(email), phone: escapeHtml(phone || ''), message: escapeHtml(message) };
+    const mail = {
+      to: recipients,
       replyTo: email,
-      subject: `[nocko.com] New website enquiry — ${name}`,
+      subject: `[nocko.com] New website enquiry - ${name}`,
       text: [
         'New contact form submission:',
         '',
@@ -163,15 +185,29 @@ export async function POST(request: NextRequest) {
       ].join('\n'),
       html: [
         '<h2>New Contact Form Submission</h2>',
-        `<p><strong>Name:</strong> ${name}</p>`,
-        `<p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>`,
-        phone ? `<p><strong>Phone:</strong> <a href="tel:${phone}">${phone}</a></p>` : '',
+        `<p><strong>Name:</strong> ${safe.name}</p>`,
+        `<p><strong>Email:</strong> <a href="mailto:${safe.email}">${safe.email}</a></p>`,
+        phone ? `<p><strong>Phone:</strong> <a href="tel:${safe.phone}">${safe.phone}</a></p>` : '',
         '<p><strong>Message:</strong></p>',
-        `<p>${message.replace(/\n/g, '<br>')}</p>`,
+        `<p>${safe.message.replace(/\n/g, '<br>')}</p>`,
         '<hr>',
         '<p><em>Sent from the NOCKO website contact form.</em></p>',
-      ].join('\n'),
+      ].join(''),
+    };
+
+    if (RESEND_API_KEY) {
+      const r = await sendViaResend(mail);
+      console.log(`[api/contact] Sent via Resend id=${r.id ?? '?'} to: ${recipients.join(', ')}`);
+      return NextResponse.json({ success: true });
+    }
+
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port: SMTP_PORT,
+      secure: SMTP_PORT === 465,
+      auth: { user: SMTP_USER, pass: SMTP_PASS },
     });
+    await transporter.sendMail({ from: SMTP_FROM, to: recipients.join(', '), replyTo: mail.replyTo, subject: mail.subject, text: mail.text, html: mail.html });
 
     console.log(`[api/contact] Email sent to: ${recipients.join(', ')}`);
     return NextResponse.json({ success: true });
