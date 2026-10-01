@@ -6,6 +6,7 @@ import Features from '@/components/sections/Features';
 import Services from '@/components/sections/Services';
 import Clients from '@/components/sections/Clients';
 import IndustriesDynamic from '@/components/sections/IndustriesDynamic';
+import { industriesRu } from '@/lib/data/industriesRu';
 
 export const metadata: Metadata = {
   title: 'ИТ-компания в Дубае, аутсорсинг и поддержка 24/7',
@@ -139,14 +140,31 @@ export default function RuHomePage() {
           title="Почему выбирают NOCKO"
           intro="Ваш надежный ИТ-партнер, предоставляющий корпоративные решения на всей территории ОАЭ."
           features={ruFeatures}
+          introLink={{
+            before: 'Как ',
+            text: 'ИТ-компания в Дубае',
+            href: '/ru/locations/dubai',
+            after: ', мы обслуживаем бизнес во всех эмиратах ОАЭ.',
+          }}
+          hiddenSuffix=" в ОАЭ"
         />
         <Services 
+          hiddenSuffix=" в ОАЭ"
           title="Наши ИТ Услуги в ОАЭ: Сети, Облако, Безопасность и Поддержка"
           subtitle="Мы проектируем, запускаем и обслуживаем безопасную технологическую инфраструктуру для бизнеса."
           services={ruServices}
         />
-        <Clients />
-        <IndustriesDynamic />
+        <Clients
+          title="ИТ-партнёр для бизнеса в ОАЭ"
+          subtitle="Компании из разных отраслей ОАЭ доверяют NOCKO свою ИТ-инфраструктуру и поддержку. Мы работаем с медициной, финансами, ритейлом, образованием и ещё несколькими отраслями."
+          ctaText="Стать клиентом"
+        />
+        <IndustriesDynamic
+          title="ИТ-решения для отраслей в ОАЭ: медицина, финансы, ритейл и другие"
+          subtitle="NOCKO строит и поддерживает ИТ-инфраструктуру для компаний из восьми отраслей ОАЭ с учётом требований каждой из них."
+          industries={industriesRu}
+          headingSuffix={{ hidden: ': ИТ', visible: '-решения', tail: ' в ОАЭ' }}
+        />
       </main>
       <Footer />
     </>

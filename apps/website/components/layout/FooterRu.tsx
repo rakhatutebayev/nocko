@@ -93,6 +93,9 @@ export default function FooterRu() {
                 <Link href="/ru/services/it-support">ИТ Поддержка и Обслуживание</Link>
               </li>
               <li>
+                <Link href="/services/it-support-ru">Русскоговорящая ИТ компания</Link>
+              </li>
+              <li>
                 <Link href="/ru/services/structured-cabling">Сети и СКС</Link>
               </li>
               <li>

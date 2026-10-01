@@ -18,6 +18,8 @@ interface IndustriesProps {
   title?: string;
   subtitle?: string;
   industries?: Industry[];
+  /** Текст после названия отрасли в h3, по умолчанию ' IT Solutions' (часть скрыта визуально) */
+  headingSuffix?: { hidden: string; visible: string; tail: string };
 }
 
 const defaultIndustries: Industry[] = [
@@ -107,6 +109,7 @@ export default function Industries({
   title = 'IT Solutions for Industries in UAE: Healthcare, Finance, Retail & More',
   subtitle = 'NOCKO provides specialized IT solutions for businesses across 8+ industries in UAE. Industry-specific IT infrastructure and support tailored to your sector\'s requirements.',
   industries = defaultIndustries,
+  headingSuffix = { hidden: ' IT', visible: ' Solutions', tail: ' in UAE' },
 }: IndustriesProps) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
@@ -174,8 +177,8 @@ export default function Industries({
                   <div className="tab-content__text" itemScope itemType="https://schema.org/Service">
                     <h3 itemProp="name">
                       {activeIndustry.name}
-                      <span className="visually-hidden"> IT</span> Solutions
-                      <span className="visually-hidden"> in UAE</span>
+                      <span className="visually-hidden">{headingSuffix.hidden}</span>{headingSuffix.visible}
+                      <span className="visually-hidden">{headingSuffix.tail}</span>
                     </h3>
                     <p itemProp="description">{activeIndustry.description}</p>
                     <p>{activeIndustry.fullDescription}</p>
@@ -272,8 +275,8 @@ export default function Industries({
                         <div className="tab-content__text">
                           <h3 itemProp="name">
                             {industry.name}
-                            <span className="visually-hidden"> IT</span> Solutions
-                            <span className="visually-hidden"> in UAE</span>
+                            <span className="visually-hidden">{headingSuffix.hidden}</span>{headingSuffix.visible}
+                            <span className="visually-hidden">{headingSuffix.tail}</span>
                           </h3>
                           <p itemProp="description">{industry.description}</p>
                           <p>{industry.fullDescription}</p>

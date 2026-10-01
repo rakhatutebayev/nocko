@@ -16,6 +16,10 @@ interface FeaturesProps {
   title?: string;
   intro?: string;
   features?: Feature[];
+  /** Локализуемая строка со ссылкой под интро; по умолчанию английская */
+  introLink?: { before: string; text: string; href: string; after: string };
+  /** Скрытый SEO-суффикс к заголовкам карточек; по умолчанию " in UAE" */
+  hiddenSuffix?: string;
 }
 
 const defaultFeatures: Feature[] = [
@@ -61,6 +65,13 @@ export default function Features({
   title = 'Why Choose NOCKO',
   intro = 'Trusted IT partner delivering enterprise-grade solutions across UAE with proven expertise.',
   features = defaultFeatures,
+  introLink = {
+    before: 'As a leading ',
+    text: 'IT company in Dubai',
+    href: '/locations/dubai',
+    after: ', we serve businesses across all Emirates with expert IT solutions.',
+  },
+  hiddenSuffix = ' in UAE',
 }: FeaturesProps) {
   return (
     <section className="features" id="features" suppressHydrationWarning>
@@ -68,8 +79,9 @@ export default function Features({
         <h2 className="features__title">{title}</h2>
         <p className="features__intro">
           {intro && <>{intro} </>}
-          As a leading <Link href="/locations/dubai" className="features__intro-link">IT company in Dubai</Link>,
-          we serve businesses across all Emirates with expert IT solutions.
+          {introLink.before}
+          <Link href={introLink.href} className="features__intro-link">{introLink.text}</Link>
+          {introLink.after}
         </p>
         <div className="features__grid">
           {features.map((feature, index) => (
@@ -81,9 +93,14 @@ export default function Features({
               </div>
               <h3 className="feature-card__title">
                 {feature.title}
-                <span className="visually-hidden"> in UAE</span>
+                <span className="visually-hidden">{hiddenSuffix}</span>
               </h3>
               <p className="feature-card__description">{feature.description}</p>
+              {feature.link && !feature.link.startsWith('#') && (
+                <Link href={feature.link} className="feature-card__link" aria-label={feature.linkAriaLabel}>
+                  {feature.linkText}
+                </Link>
+              )}
             </article>
           ))}
         </div>

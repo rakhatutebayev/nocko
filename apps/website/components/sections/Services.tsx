@@ -11,6 +11,7 @@ interface Service {
 }
 
 interface ServicesProps {
+  hiddenSuffix?: string;
   title?: string;
   subtitle?: string;
   services?: Service[];
@@ -71,6 +72,7 @@ export default function Services({
   title = 'IT Services in UAE: Network, Cloud, Security & Support',
   subtitle = 'Comprehensive IT solutions for businesses across UAE. We design, build, and maintain secure, scalable technology infrastructure that drives business growth. Serving 8+ industries with experienced IT professionals.',
   services = defaultServices,
+  hiddenSuffix = ' in UAE',
 }: ServicesProps) {
   return (
     <section className="services" id="services" itemScope itemType="https://schema.org/Service" suppressHydrationWarning>
@@ -92,7 +94,7 @@ export default function Services({
               <h3 className="service-card__title" itemProp="name">
                 <Link href={service.href} className="service-card__link" itemProp="url">
                   {service.title}
-                  <span className="visually-hidden"> in UAE</span>
+                  <span className="visually-hidden">{hiddenSuffix}</span>
                 </Link>
               </h3>
               <p className="service-card__description" itemProp="description">
