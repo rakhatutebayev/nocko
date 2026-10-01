@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
 import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
+import ArticleByline from '@/components/articles/ArticleByline';
 import ArticleContent from '@/components/articles/ArticleContent';
 import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
@@ -83,6 +84,7 @@ export default function ManageditinfrastructurePage() {
           subtitle={articleData.hero.subtitle}
           description={articleData.hero.description}
         />
+        <ArticleByline locale="ru" published="2025-01-15" />
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'Управляемые ИТ', href: '/ru/services/managed-it' }, { label: 'Статья' }]} />
           <div className="article">

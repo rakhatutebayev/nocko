@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
+import ArticleByline from '@/components/articles/ArticleByline';
 import ArticleContent from '@/components/articles/ArticleContent';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
@@ -63,6 +64,7 @@ export default function ItConsultingRansomwareSurvivalPage() {
           subtitle={articleData.hero.subtitle}
           description={articleData.hero.description}
         />
+        <ArticleByline locale="en" published="2025-10-08" />
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Consulting', href: '/services/it-consulting' }, { label: 'Article Details' }]} />
           <div className="article">

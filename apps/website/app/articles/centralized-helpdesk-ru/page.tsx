@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
+import ArticleByline from '@/components/articles/ArticleByline';
 import ArticleContent from '@/components/articles/ArticleContent';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
@@ -88,6 +89,7 @@ export default function CentralizedHelpdeskRuPage() {
       <HeaderWrapper />
       <main className="main">
         <Hero variant="article" title={articleData.hero.title} subtitle={articleData.hero.subtitle} />
+        <ArticleByline locale="en" published="2025-01-20" modified="2026-05-24" />
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Централизованный Helpdesk 24/7' }]} />
           <div className="article">

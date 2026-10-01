@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
 import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
+import ArticleByline from '@/components/articles/ArticleByline';
 import ArticleContent from '@/components/articles/ArticleContent';
 import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
@@ -120,6 +121,7 @@ export default function ITConsultingStrategyPage() {
           subtitle={articleData.hero.subtitle}
           description={articleData.hero.description}
         />
+        <ArticleByline locale="ru" published="2025-03-25" modified="2026-07-21" />
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'ИТ Консалтинг', href: '/ru/services/it-consulting' }, { label: 'IT-стратегия, оценка и дорожная карта' }]} />
           <div className="article">

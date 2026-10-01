@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
 import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
+import ArticleByline from '@/components/articles/ArticleByline';
 import ArticleContent from '@/components/articles/ArticleContent';
 import FAQAccordion from '@/components/sections/FAQAccordion';
 import StructuredData from '@/components/seo/StructuredData';
@@ -141,6 +142,7 @@ export default function CloudGuidePage() {
       <HeaderWrapper />
       <main className="main">
         <Hero variant="article" title={articleData.hero.title} subtitle={articleData.hero.subtitle} />
+        <ArticleByline locale="ru" published="2025-02-05" modified="2026-07-21" />
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'Облачные Решения', href: '/ru/services/cloud' }, { label: 'Руководство по облачной инфраструктуре' }]} />
           <div className="article">

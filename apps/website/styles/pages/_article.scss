@@ -386,3 +386,23 @@ main:has(.hero--service-enhanced) > .breadcrumbs {
 
 
 
+
+// Подпись статьи под hero: автор и даты
+.article__byline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin: $spacing-md 0 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666666;
+
+  &-author {
+    color: #293443;
+    font-weight: 500;
+  }
+
+  &-sep {
+    color: #b0b7c3;
+  }
+}
