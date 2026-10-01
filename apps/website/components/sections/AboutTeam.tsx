@@ -5,7 +5,6 @@ interface TeamMember {
   certifications: string[];
   bio: string;
   photo: string;
-  borderColor: string;
 }
 
 // photo: путь к реальной фотографии в public/images/team/ (пусто = аватар с инициалами).
@@ -17,7 +16,6 @@ const teamMembers: TeamMember[] = [
     certifications: ['CCNP Enterprise', 'Microsoft MCSE', 'CompTIA Network+'],
     bio: '12 years engineering enterprise networks across DIFC, DMCC, and Abu Dhabi. Led 30+ structured cabling projects and data center migrations in the UAE.',
     photo: '',
-    borderColor: '#3474ff',
   },
   {
     name: 'Maria Smirnova',
@@ -25,7 +23,6 @@ const teamMembers: TeamMember[] = [
     certifications: ['CISSP', 'CEH', 'Fortinet NSE 7'],
     bio: 'Specialist in Zero Trust architecture and SOC operations. Designed security frameworks for DFSA-regulated firms and UAE DHA compliance requirements.',
     photo: '',
-    borderColor: '#583bec',
   },
   {
     name: 'Denis Kovalev',
@@ -33,7 +30,6 @@ const teamMembers: TeamMember[] = [
     certifications: ['Azure Solutions Architect', 'MS-700', 'AZ-104'],
     bio: '8 years designing hybrid cloud infrastructure for UAE enterprises. Delivered 15+ Microsoft 365 tenant migrations with Entra ID, Intune, and Azure Virtual Desktop.',
     photo: '',
-    borderColor: '#3474ff',
   },
   {
     name: 'Aisha Al Mansoori',
@@ -41,7 +37,6 @@ const teamMembers: TeamMember[] = [
     certifications: ['ITIL v4 Foundation', 'PMP', 'ServiceNow CSA'],
     bio: 'Manages enterprise AMC and managed IT accounts across Dubai and Abu Dhabi. Oversees SLA compliance and quarterly business reviews for 20+ active contracts.',
     photo: '',
-    borderColor: '#583bec',
   },
 ];
 
@@ -62,14 +57,13 @@ export default function AboutTeam() {
             <article
               key={member.name}
               className="about-team__card"
-              style={{ borderTop: `3px solid ${member.borderColor}` }}
             >
-              <div className="about-team__photo-wrap" style={{ background: `linear-gradient(135deg, ${member.borderColor}1a, ${member.borderColor}40)` }}>
+              <div className="about-team__photo-wrap">
                 {member.photo ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={member.photo} alt={`${member.name}, ${member.role}`} className="about-team__photo" loading="lazy" />
                 ) : (
-                  <span className="about-team__avatar" style={{ backgroundColor: member.borderColor }} aria-hidden="true">
+                  <span className="about-team__avatar" aria-hidden="true">
                     {member.name.split(' ').slice(0, 2).map((w) => w[0]).join('')}
                   </span>
                 )}
@@ -77,7 +71,7 @@ export default function AboutTeam() {
 
               <div className="about-team__body">
                 <h3 className="about-team__name">{member.name}</h3>
-                <p className="about-team__role" style={{ color: member.borderColor }}>
+                <p className="about-team__role">
                   {member.role}
                 </p>
                 <p className="about-team__bio">{member.bio}</p>
