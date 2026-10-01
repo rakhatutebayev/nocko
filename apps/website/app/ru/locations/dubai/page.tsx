@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     'ИТ поддержка Business Bay',
   ],
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'ИТ Поддержка в Дубае | Управляемые ИТ Услуги',
     description:
       'NOCKO предоставляет ИТ поддержку, сетевую инфраструктуру, облачные решения и кибербезопасность для бизнеса в Дубае и ОАЭ.',
@@ -139,8 +140,10 @@ export default function DubaiRuPage() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
+    '@id': `${baseUrl}/ru/locations/dubai#localbusiness`,
+    parentOrganization: { '@id': `${baseUrl}/#organization` },
     name: 'NOCKO Information Technology',
-    image: `${baseUrl}/images/logo-white.svg`,
+    image: `${baseUrl}/og-image.jpg`,
     description: 'Управляемые ИТ услуги, ИТ поддержка, облачные решения и кибербезопасность для бизнеса в Дубае и по всему ОАЭ.',
     url: `${baseUrl}/ru/locations/dubai`,
     telephone: '+971542448888',
@@ -154,8 +157,8 @@ export default function DubaiRuPage() {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '25.2048',
-      longitude: '55.2708',
+      latitude: 25.2048,
+      longitude: 55.2708,
     },
     areaServed: {
       '@type': 'City',
@@ -180,7 +183,7 @@ export default function DubaiRuPage() {
         <Breadcrumbs
           hidden={true}
           items={[
-            { name: 'Локации', url: '/ru/locations' },
+            { name: 'Локации' },
             { name: 'Дубай' },
           ]}
         />

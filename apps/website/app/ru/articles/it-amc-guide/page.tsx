@@ -20,7 +20,8 @@ export const metadata: Metadata = {
     },
   },
   robots: { index: true, follow: true },
-  openGraph: { locale: 'ru_RU' },
+  openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }], locale: 'ru_RU' },
 };
 
 const articleData = {

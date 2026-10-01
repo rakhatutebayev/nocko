@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'AMC vs MSP: руководство по выбору | NOCKO ОАЭ',
+  title: 'AMC vs MSP: руководство по выбору в ОАЭ',
   description: 'Разберитесь в принципиальной разнице между включёнными объёмами работ и капитальными затратами на оборудование, выходящими за рамки контракта. Выберите подходящий тип договора для вашего бизнеса.',
   alternates: {
     canonical: '/ru/articles/it-amc-vs-msp',
@@ -18,7 +18,8 @@ export const metadata: Metadata = {
     },
   },
   robots: { index: true, follow: true },
-  openGraph: { locale: 'ru_RU' },
+  openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }], locale: 'ru_RU' },
 };
 
 const articleData = {

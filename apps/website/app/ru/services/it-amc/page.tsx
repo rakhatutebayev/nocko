@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   keywords:
     'IT AMC Дубай, годовой контракт на обслуживание ОАЭ, контракт на ИТ-обслуживание Дубай, услуги AMC ОАЭ, поддержка ИТ Дубай, лучшие IT AMC Дубай',
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'Контракты IT AMC в Дубае | Абонентское обслуживание',
     description: 'Предсказуемое ИТ-обслуживание с годовым контрактом (AMC) в Дубае и ОАЭ.',
     type: 'website',

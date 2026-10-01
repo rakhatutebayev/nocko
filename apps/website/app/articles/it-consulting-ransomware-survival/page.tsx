@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Surviving a Ransomware Strike | NOCKO UAE',
+  title: 'Surviving a Ransomware Strike in UAE',
   description: 'Understand exactly what RTO and RPO mean, and how to architect a Disaster Recovery plan that actually works under the pressure of a real-world breach.',
   alternates: {
     canonical: '/articles/it-consulting-ransomware-survival',

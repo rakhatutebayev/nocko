@@ -12,10 +12,16 @@ export const metadata: Metadata = {
   keywords:
     'IT case studies UAE, success stories Dubai, IT transformation UAE, network infrastructure case studies, cloud migration success',
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'Case Studies | IT Success Stories in UAE',
     description: 'Real results from real businesses in UAE.',
     type: 'website',
   },
+  alternates: {
+    canonical: '/case-studies',
+    languages: { 'en-AE': '/case-studies', 'ru-RU': '/ru/case-studies', 'x-default': '/case-studies' },
+  },
+  robots: { index: true, follow: true },
 };
 
 export const revalidate = 3600; // ISR: revalidate every hour

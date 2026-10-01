@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Defending Your Cloud with Zero Trust | NOCKO UAE',
+  title: 'Defending Your Cloud with Zero Trust in UAE',
   description: 'Understand the shared responsibility model and why IAM security is critical for your Azure deployment. Do not leave your cloud endpoints exposed.',
   alternates: {
     canonical: '/articles/cloud-zero-trust',

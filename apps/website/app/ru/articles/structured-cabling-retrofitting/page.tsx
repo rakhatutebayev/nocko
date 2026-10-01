@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Модернизация серверных помещений и узловых шкафов | NOCKO ОАЭ',
+  title: 'Модернизация серверных помещений и узловых шкафов в ОАЭ',
   description: 'Получили в наследство хаотичное серверное помещение в новом офисе? Мы специализируемся на модернизации активных шкафов и устранении «кабельного спагетти». Трассируем, маркируем и перекоммутируем всю серверную стойку с установкой кабельных органайзеров, восстанавливая воздушный поток через коммутаторы и превращая пожароопасный беспорядок в упорядоченную, удобную в обслуживании IT-среду.',
   alternates: {
     canonical: '/ru/articles/structured-cabling-retrofitting',
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
 };

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   keywords:
     'managed IT services Dubai, managed IT services UAE, managed service provider Dubai, managed services providers UAE, IT managed services Dubai, managed IT services in Dubai, managed service providers in Dubai, IT outsourcing Dubai, managed IT infrastructure UAE',
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'Managed IT Services Dubai | Managed Service Provider UAE',
     description: 'Dubai-based managed IT services provider. 24/7 NOC, complete infrastructure management, managed security for UAE businesses.',
     type: 'website',

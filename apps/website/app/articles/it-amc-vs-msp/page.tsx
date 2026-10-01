@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'The AMC vs MSP Decision Guide | NOCKO UAE',
+  title: 'The AMC vs MSP Decision Guide in UAE',
   description: 'Understand the critical difference between inclusive scopes and exclusive out-of-scope hardware capital expenditures. Choose the right contract for your business.',
   alternates: {
     canonical: '/articles/it-amc-vs-msp',

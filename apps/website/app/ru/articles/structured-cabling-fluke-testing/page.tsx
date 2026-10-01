@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Тестирование Fluke и гарантия 25 лет | NOCKO ОАЭ',
+  title: 'Тестирование Fluke и гарантия 25 лет в ОАЭ',
   description: 'Мы не полагаемся на догадки при оценке целостности кабельной системы. Каждый узел, который мы вводим в эксплуатацию, проходит строгую проверку анализатором Fluke DSX CableAnalyzer. Это эмпирическое подтверждение гарантирует пропускную способность сети 10 Гбит/с без потери пакетов и позволяет нам предоставлять подкреплённые производителем гарантии сроком 25 лет.',
   alternates: {
     canonical: '/ru/articles/structured-cabling-fluke-testing',
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
 };

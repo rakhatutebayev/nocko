@@ -44,6 +44,17 @@ interface HeaderProps {
   menu: Menu;
 }
 
+// RU-страница ИТ-поддержки живёт вне /ru/ — у неё свой партнёр в языковом переключателе
+const LANG_PAIRS: Record<string, string> = {
+  '/services/it-support-ru': '/ru/services/it-support',
+};
+function langSwitchUrl(pathname: string): string {
+  if (LANG_PAIRS[pathname]) return LANG_PAIRS[pathname];
+  if (pathname === '/') return '/ru';
+  if (pathname.startsWith('/ru')) return pathname.replace('/ru', '') || '/';
+  return `/ru${pathname}`;
+}
+
 export default function Header({ menu }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -276,7 +287,7 @@ export default function Header({ menu }: HeaderProps) {
             isMenuOpen={isMenuOpen}
             isMobile={isMobile}
             navRef={navRef}
-            langUrl={pathname === '/' ? '/ru' : pathname.startsWith('/ru') ? (pathname.replace('/ru', '') || '/') : `/ru${pathname}`}
+            langUrl={langSwitchUrl(pathname)}
             langLabel={pathname.startsWith('/ru') ? 'EN' : 'RU'}
           />
         </div>
@@ -285,7 +296,7 @@ export default function Header({ menu }: HeaderProps) {
           <div className="header__right">
             {!isMobile && (
               <Link
-                href={pathname === '/' ? '/ru' : pathname.startsWith('/ru') ? (pathname.replace('/ru', '') || '/') : `/ru${pathname}`}
+                href={langSwitchUrl(pathname)}
                 className="btn btn--secondary btn--sm header__lang"
                 aria-label="Switch language"
               >

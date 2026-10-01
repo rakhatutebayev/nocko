@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'The Guide to Cat6A vs Fiber Optic | NOCKO UAE',
+  title: 'The Guide to Cat6A vs Fiber Optic in UAE',
   description: 'A deep dive into Cat6 vs Cat6A, the necessity of Fluke certification, and managing physical layer deployments for modern smart offices.',
   alternates: {
     canonical: '/articles/structured-cabling-fiber-vs-cat6a',

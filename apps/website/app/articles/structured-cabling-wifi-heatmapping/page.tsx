@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Enterprise Wi-Fi Heatmapping Solutions | NOCKO UAE',
+  title: 'Enterprise Wi-Fi Heatmapping Solutions in UAE',
   description: 'Stop guessing where to place access points. Using industry-standard Ekahau mapping software, we conduct predictive and physical RF heatmapping of your floorplan. We account for glass partitions in Business Bay and concrete pillars in Mussafah, guaranteeing absolute zero Wi-Fi dead zones across your enterprise.',
   alternates: {
     canonical: '/articles/structured-cabling-wifi-heatmapping',

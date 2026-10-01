@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Сертифицированный монтаж Cat6A и оптоволокна | NOCKO ОАЭ',
+  title: 'Сертифицированный монтаж Cat6A и оптоволокна в ОАЭ',
   description: 'Физическая кабельная инфраструктура — абсолютная основа корпоративной сети. Один некачественно обжатый разъём способен вывести из строя целый отдел. Наши сертифицированные инженеры проектируют и монтируют высокоплотную инфраструктуру Cat6, Cat6A и оптоволоконные кабели OM3/OM4, адаптированные к экстремальным температурам промышленных зон ОАЭ и эстетическим требованиям современных офисов Дубая.',
   alternates: {
     canonical: '/ru/articles/structured-cabling-fiber-optic',
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
 };

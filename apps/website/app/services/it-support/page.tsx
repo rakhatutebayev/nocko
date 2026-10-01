@@ -7,13 +7,14 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'IT Support Dubai | IT Support Companies in Dubai | NOCKO UAE',
+  title: 'IT Support Dubai | IT Support Companies in Dubai in UAE',
   description:
     'Top-rated IT support company in Dubai. 24/7 helpdesk, 2-hour on-site response, proactive monitoring, and managed IT support services for businesses in DIFC, DMCC, Business Bay, and across UAE. Free IT support assessment.',
   keywords:
     'IT support Dubai, IT support companies in Dubai, IT support services Dubai, IT support company Dubai, IT services Dubai, managed IT support UAE, 24/7 IT support Dubai, helpdesk Dubai, IT services company Dubai, IT solutions provider Dubai',
   openGraph: {
-    title: 'IT Support Dubai | IT Support Companies in Dubai | NOCKO UAE',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    title: 'IT Support Dubai | IT Support Companies in Dubai in UAE',
     description: 'Dubai-based IT support company. 24/7 helpdesk, 2-hour on-site response, and proactive monitoring for UAE businesses.',
     type: 'website',
     locale: 'en_AE',

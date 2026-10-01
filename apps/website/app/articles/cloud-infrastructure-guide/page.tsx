@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   keywords:
     'cloud infrastructure UAE, cloud migration Dubai, cloud cost optimization, hybrid cloud UAE, cloud data management, cloud security compliance, AWS deployment Dubai',
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'The Ultimate Guide to Cloud Infrastructure in UAE',
     description:
       'Complete guide to cloud infrastructure for UAE businesses: migration strategy, storage tiers, data residency, NESA security, hybrid architecture and FinOps.',

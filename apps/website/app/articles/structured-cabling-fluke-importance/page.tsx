@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Why Fluke Testing is Non-Negotiable | NOCKO UAE',
+  title: 'Why Fluke Testing is Non-Negotiable in UAE',
   description: 'Understand how RF interference and physical materials block consumer routers, and why Ekahau heatmapping and Fluke testing is mandatory.',
   alternates: {
     canonical: '/articles/structured-cabling-fluke-importance',

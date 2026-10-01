@@ -32,13 +32,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'projection') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How Projection Improved IT Reliability with Annual Maintenance Contract | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How Projection Improved IT Reliability with Annual Maintenance Contract',
       description:
         'Projection improved uptime and response times with a structured Annual Maintenance Contract and proactive support across UAE.',
       keywords:
         'Projection case study, IT AMC UAE, annual maintenance contract Dubai, IT reliability, uptime improvement',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How Projection Improved IT Reliability with Annual Maintenance Contract',
         description:
           'Projection improved uptime and response times with a structured Annual Maintenance Contract and proactive support across UAE.',
@@ -49,13 +57,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'solus') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity',
       description:
         'Solus Insurance improved threat detection, reduced risk exposure, and strengthened compliance with enterprise cybersecurity services in UAE.',
       keywords:
         'Solus Insurance case study, enterprise cybersecurity UAE, threat detection, security compliance, zero trust',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity',
         description:
           'Solus Insurance improved threat detection, reduced risk exposure, and strengthened compliance with enterprise cybersecurity services in UAE.',
@@ -66,13 +82,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'fh') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How FH Fundamental Migrated to Cloud with Zero Downtime | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How FH Fundamental Migrated to Cloud with Zero Downtime',
       description:
         'FH Fundamental achieved seamless cloud migration to AWS with zero downtime, improved performance, and enhanced scalability for business growth.',
       keywords:
         'FH Fundamental case study, cloud migration UAE, AWS migration Dubai, zero downtime migration, cloud transformation',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How FH Fundamental Migrated to Cloud with Zero Downtime',
         description:
           'FH Fundamental achieved seamless cloud migration to AWS with zero downtime, improved performance, and enhanced scalability.',
@@ -83,13 +107,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'scalini') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How Scalini Transformed Network Infrastructure Across 5 Locations | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How Scalini Transformed Network Infrastructure Across 5 Locations',
       description:
         'Scalini restaurant group standardized network infrastructure across 5 UAE locations with certified Cat6A cabling, centralized management, and 99.9% uptime.',
       keywords:
         'Scalini case study, network infrastructure UAE, structured cabling Dubai, multi-site network, restaurant IT infrastructure',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How Scalini Transformed Network Infrastructure Across 5 Locations',
         description:
           'Scalini restaurant group standardized network infrastructure across 5 UAE locations with certified Cat6A cabling and centralized management.',
@@ -100,13 +132,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'gss') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How Global Service Solution Achieved 24/7 IT Support Excellence | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How Global Service Solution Achieved 24/7 IT Support Excellence',
       description:
         'Global Service Solution maintains 24/7 IT support for critical flight dispatch operations with 99.8% uptime, 30-minute response time, and zero unscheduled downtime.',
       keywords:
         'Global Service Solution case study, 24/7 IT support UAE, aviation IT support Dubai, flight dispatch IT, mission-critical support',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How Global Service Solution Achieved 24/7 IT Support Excellence',
         description:
           'Global Service Solution maintains 24/7 IT support for critical flight dispatch operations with 99.8% uptime and 30-minute response time.',
@@ -117,13 +157,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'technohub') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How TechnoHub Transformed IT Operations with Managed Services | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How TechnoHub Transformed IT Operations with Managed Services',
       description:
         'TechnoHub eliminated IT complexity with fully managed services, achieving 40% cost reduction, predictable budgets, and strategic IT alignment.',
       keywords:
         'TechnoHub case study, managed IT services UAE, IT outsourcing Dubai, managed services provider, IT transformation',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How TechnoHub Transformed IT Operations with Managed Services',
         description:
           'TechnoHub eliminated IT complexity with fully managed services, achieving 40% cost reduction and predictable budgets.',
@@ -134,13 +182,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'ransomware-recovery') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How We Isolated and Defeated Ransomware in 4 Hours | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How We Isolated and Defeated Ransomware in 4 Hours',
       description:
         'A Dubai logistics firm saved millions in downtime when our automated EDR isolated a phishing payload within minutes of execution.',
       keywords:
         'Ransomware recovery case study, cybersecurity response UAE, EDR deployment Dubai, phishing protection, zero downtime',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How We Isolated and Defeated Ransomware in 4 Hours',
         description:
           'A Dubai logistics firm saved millions in downtime when our automated EDR isolated a phishing payload within minutes.',
@@ -151,13 +207,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'm365-audit') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How an M365 Audit Saved a Dubai Firm 40% Annually | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How an M365 Audit Saved a Dubai Firm 40% Annually',
       description:
         'Discover how our forensic licensing audit eliminated duplicate SaaS tools and recovered $45,000 annually for a Dubai firm.',
       keywords:
         'Microsoft 365 audit case study, IT consulting UAE, software license optimization, IT cost reduction Dubai, SaaS audit',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How an M365 Audit Saved a Dubai Firm 40% Annually',
         description:
           'Discover how our forensic licensing audit eliminated duplicate SaaS tools and recovered $45,000 annually for a Dubai firm.',
@@ -168,13 +232,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'it-consulting') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
       title: 'How a Dubai Real Estate Firm Cut IT Costs 35% with Strategic IT Consulting',
       description:
         'A Dubai real estate developer eliminated Shadow IT, unified vendors, and reduced annual IT spend by 35% after a NOCKO vCIO-led IT strategy audit and roadmap.',
       keywords:
         'IT consulting Dubai, IT strategy UAE, vCIO services Dubai, IT cost reduction, IT roadmap UAE, real estate IT consulting',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How a Dubai Real Estate Firm Cut IT Costs 35% with Strategic IT Consulting',
         description:
           'A Dubai real estate developer eliminated Shadow IT and reduced annual IT spend by 35% with a NOCKO vCIO-led strategy.',
@@ -185,13 +257,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'enterprise') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How a 300-Seat Enterprise Unified IT Infrastructure Across UAE | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How a 300-Seat Enterprise Unified IT Infrastructure Across UAE',
       description:
         'A UAE logistics enterprise with 300 seats across 4 offices unified fragmented IT infrastructure, eliminated 6 separate vendors, and achieved 99.95% uptime with NOCKO Managed IT.',
       keywords:
         'enterprise IT UAE, managed IT services Dubai, IT infrastructure consolidation, multi-site IT support UAE, enterprise IT outsourcing',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How a 300-Seat Enterprise Unified IT Infrastructure Across UAE',
         description:
           'UAE logistics enterprise unified fragmented IT across 4 offices, eliminated 6 vendors, achieved 99.95% uptime.',
@@ -202,13 +282,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'cybersecurity') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How a UAE Healthcare Group Passed HAAD Audit with Zero Findings | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How a UAE Healthcare Group Passed HAAD Audit with Zero Findings',
       description:
         'A UAE healthcare group serving 3 clinics achieved full HAAD cybersecurity compliance, eliminated 7 critical vulnerabilities, and passed their regulatory audit with zero findings.',
       keywords:
         'healthcare cybersecurity UAE, HAAD compliance, medical data security Dubai, cybersecurity audit UAE, healthcare IT security',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How a UAE Healthcare Group Passed HAAD Audit with Zero Findings',
         description:
           'UAE healthcare group achieved full HAAD compliance, eliminated 7 critical vulnerabilities, passed regulatory audit with zero findings.',
@@ -219,13 +307,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'network-segmentation') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How a Multi-Site Dubai Group Secured Its Network with Segmentation & FortiGate | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How a Multi-Site Dubai Group Secured Its Network with Segmentation & FortiGate',
       description:
         'A multi-site F&B group in Dubai replaced a flat, undocumented network with a segmented FortiGate + Cisco core architecture — isolating POS, guest and back-office traffic and securing remote access.',
       keywords:
         'network segmentation Dubai, FortiGate firewall UAE, VLAN segmentation, network audit Dubai, structured network UAE, IPsec VPN UAE',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How a Multi-Site Dubai Group Secured Its Network with Segmentation & FortiGate',
         description:
           'A Dubai group replaced a flat network with a segmented FortiGate + Cisco core, isolating POS/guest/back-office and securing remote access.',
@@ -236,13 +332,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'emr-backup') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How a UAE Medical Clinic Automated EMR Backup & Compliance Reporting | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How a UAE Medical Clinic Automated EMR Backup & Compliance Reporting',
       description:
         'A UAE medical clinic protected its EMR, imaging and accounting systems with automated daily backups on Synology Active Backup for Business and a self-generating daily compliance report.',
       keywords:
         'EMR backup UAE, medical data backup Dubai, healthcare disaster recovery UAE, Synology Active Backup, backup compliance reporting, clinic IT backup',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How a UAE Medical Clinic Automated EMR Backup & Compliance Reporting',
         description:
           'A UAE clinic protected EMR, imaging and accounting data with automated daily backups and self-generating compliance reports.',
@@ -253,13 +357,21 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'workspace-migration') {
     return {
-      alternates: { canonical: `/case-studies/${slug}` },
-      title: 'How a Dubai Hospitality Group Migrated Google Workspace During a Rebrand with Zero Downtime | Case Study',
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      title: 'How a Dubai Hospitality Group Migrated Google Workspace During a Rebrand with Zero Downtime',
       description:
         'During a corporate rebrand, a Dubai hospitality group moved every mailbox to a new Google Workspace domain with zero downtime and no lost email history.',
       keywords:
         'Google Workspace migration Dubai, email migration UAE, domain migration, workspace migration UAE, zero downtime email migration, cloud migration Dubai',
       openGraph: {
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How a Dubai Hospitality Group Migrated Google Workspace During a Rebrand with Zero Downtime',
         description:
           'A Dubai hospitality group moved every mailbox to a new Google Workspace domain during a rebrand — zero downtime, no lost history.',
@@ -273,11 +385,19 @@ export async function generateMetadata({
   }
 
   return {
-      alternates: { canonical: `/case-studies/${slug}` },
-    title: `${caseStudy.attributes.title} | Case Study | NOCKO`,
+      alternates: {
+        canonical: `/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+    title: caseStudy.attributes.title,
     description: caseStudy.attributes.testimonial || `Case study: ${caseStudy.attributes.title}`,
     keywords: `${caseStudy.attributes.title}, case study, IT success story UAE, ${caseStudy.attributes.industry}`,
     openGraph: {
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
       title: `${caseStudy.attributes.title} | NOCKO`,
       description: caseStudy.attributes.testimonial || `Case study: ${caseStudy.attributes.title}`,
       type: 'article',
@@ -727,7 +847,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             name: 'NOCKO Information Technology',
             logo: {
               '@type': 'ImageObject',
-              url: `${baseUrl}/images/logo-white.svg`,
+              url: `${baseUrl}/images/logo-512.png`,
             },
           },
         }}

@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Co-Managed IT: The Best of Both Worlds | NOCKO UAE',
+  title: 'Co-Managed IT: The Best of Both Worlds in UAE',
   description: 'A guide for IT Directors on how to effectively outsource tedious NOC alerts while maintaining control of corporate strategy. We integrate directly with your internal team.',
   alternates: {
     canonical: '/articles/managed-it-co-managed',

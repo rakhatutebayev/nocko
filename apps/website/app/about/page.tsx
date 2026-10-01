@@ -66,19 +66,6 @@ export default function AboutPage() {
   return (
     <>
       <StructuredData
-        type="FAQPage"
-        data={{
-          mainEntity: aboutFAQ.items.map((item) => ({
-            '@type': 'Question',
-            name: item.question,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: item.answer,
-            },
-          })),
-        }}
-      />
-      <StructuredData
         type="BreadcrumbList"
         data={{
           itemListElement: [

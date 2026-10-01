@@ -32,15 +32,25 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'projection') {
     return {
-      title: 'How Projection Improved IT Reliability with Annual Maintenance Contract | Case Study',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'Projection: надёжная ИТ-инфраструктура по AMC',
       description:
-        'Projection improved uptime and response times with a structured Annual Maintenance Contract and proactive support across UAE.',
+        'Projection повысила аптайм и скорость реакции ИТ благодаря годовому договору обслуживания (AMC) и проактивной поддержке NOCKO в Дубае и Абу-Даби.',
       keywords:
-        'Projection case study, IT AMC UAE, annual maintenance contract Dubai, IT reliability, uptime improvement',
+        'кейс Projection, ИТ AMC ОАЭ, годовой договор обслуживания Дубай, надёжность ИТ, повышение аптайма',
       openGraph: {
-        title: 'How Projection Improved IT Reliability with Annual Maintenance Contract',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'Projection: надёжная ИТ-инфраструктура по AMC',
         description:
-          'Projection improved uptime and response times with a structured Annual Maintenance Contract and proactive support across UAE.',
+          'Projection повысила аптайм и скорость реакции ИТ благодаря годовому договору обслуживания (AMC) и проактивной поддержке NOCKO в Дубае и Абу-Даби.',
         type: 'article',
       },
     };
@@ -48,15 +58,25 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'solus') {
     return {
-      title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity | Case Study',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'Solus Insurance: корпоративная кибербезопасность',
       description:
-        'Solus Insurance improved threat detection, reduced risk exposure, and strengthened compliance with enterprise cybersecurity services in UAE.',
+        'Solus Insurance улучшила обнаружение угроз, снизила риски и усилила комплаенс DFSA с корпоративной кибербезопасностью Zero Trust от NOCKO в ОАЭ.',
       keywords:
-        'Solus Insurance case study, enterprise cybersecurity UAE, threat detection, security compliance, zero trust',
+        'кейс Solus Insurance, корпоративная кибербезопасность ОАЭ, обнаружение угроз, комплаенс безопасности, Zero Trust',
       openGraph: {
-        title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'Solus Insurance: корпоративная кибербезопасность',
         description:
-          'Solus Insurance improved threat detection, reduced risk exposure, and strengthened compliance with enterprise cybersecurity services in UAE.',
+          'Solus Insurance улучшила обнаружение угроз, снизила риски и усилила комплаенс DFSA с корпоративной кибербезопасностью Zero Trust от NOCKO в ОАЭ.',
         type: 'article',
       },
     };
@@ -64,15 +84,25 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'fh') {
     return {
-      title: 'How FH Fundamental Migrated to Cloud with Zero Downtime | Case Study',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'FH Fundamental: миграция в AWS без простоев',
       description:
-        'FH Fundamental achieved seamless cloud migration to AWS with zero downtime, improved performance, and enhanced scalability for business growth.',
+        'FH Fundamental перенесла инфраструктуру в регион AWS Middle East (UAE) без единой минуты простоя, повысив производительность и масштабируемость бизнеса.',
       keywords:
-        'FH Fundamental case study, cloud migration UAE, AWS migration Dubai, zero downtime migration, cloud transformation',
+        'кейс FH Fundamental, облачная миграция ОАЭ, миграция в AWS Дубай, миграция без простоев, облачная трансформация',
       openGraph: {
-        title: 'How FH Fundamental Migrated to Cloud with Zero Downtime',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'FH Fundamental: миграция в AWS без простоев',
         description:
-          'FH Fundamental achieved seamless cloud migration to AWS with zero downtime, improved performance, and enhanced scalability.',
+          'FH Fundamental перенесла инфраструктуру в регион AWS Middle East (UAE) без единой минуты простоя, повысив производительность и масштабируемость бизнеса.',
         type: 'article',
       },
     };
@@ -80,15 +110,25 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'scalini') {
     return {
-      title: 'How Scalini Transformed Network Infrastructure Across 5 Locations | Case Study',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'Scalini: единая сеть в 5 ресторанах',
       description:
-        'Scalini restaurant group standardized network infrastructure across 5 UAE locations with certified Cat6A cabling, centralized management, and 99.9% uptime.',
+        'Ресторанная группа Scalini стандартизировала сеть в 5 локациях ОАЭ: сертифицированная кабельная система Cat6A, централизованное управление, аптайм 99,9%.',
       keywords:
-        'Scalini case study, network infrastructure UAE, structured cabling Dubai, multi-site network, restaurant IT infrastructure',
+        'кейс Scalini, сетевая инфраструктура ОАЭ, структурированные кабельные системы Дубай, сеть для нескольких площадок, ИТ-инфраструктура ресторанов',
       openGraph: {
-        title: 'How Scalini Transformed Network Infrastructure Across 5 Locations',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'Scalini: единая сеть в 5 ресторанах',
         description:
-          'Scalini restaurant group standardized network infrastructure across 5 UAE locations with certified Cat6A cabling and centralized management.',
+          'Ресторанная группа Scalini стандартизировала сеть в 5 локациях ОАЭ: сертифицированная кабельная система Cat6A, централизованное управление, аптайм 99,9%.',
         type: 'article',
       },
     };
@@ -96,15 +136,25 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'gss') {
     return {
-      title: 'How Global Service Solution Achieved 24/7 IT Support Excellence | Case Study',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'Global Service Solution: ИТ-поддержка 24/7',
       description:
-        'Global Service Solution maintains 24/7 IT support for critical flight dispatch operations with 99.8% uptime, 30-minute response time, and zero unscheduled downtime.',
+        'Global Service Solution получила ИТ-поддержку 24/7 для диспетчеризации полётов: аптайм 99,8%, реакция за 30 минут и ноль внеплановых простоев.',
       keywords:
-        'Global Service Solution case study, 24/7 IT support UAE, aviation IT support Dubai, flight dispatch IT, mission-critical support',
+        'кейс Global Service Solution, ИТ-поддержка 24/7 ОАЭ, ИТ-поддержка авиации Дубай, ИТ для диспетчеризации полётов, поддержка критичных систем',
       openGraph: {
-        title: 'How Global Service Solution Achieved 24/7 IT Support Excellence',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'Global Service Solution: ИТ-поддержка 24/7',
         description:
-          'Global Service Solution maintains 24/7 IT support for critical flight dispatch operations with 99.8% uptime and 30-minute response time.',
+          'Global Service Solution получила ИТ-поддержку 24/7 для диспетчеризации полётов: аптайм 99,8%, реакция за 30 минут и ноль внеплановых простоев.',
         type: 'article',
       },
     };
@@ -112,15 +162,25 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'technohub') {
     return {
-      title: 'How TechnoHub Transformed IT Operations with Managed Services | Case Study',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'TechnoHub: управляемые ИТ-услуги, затраты −40%',
       description:
-        'TechnoHub eliminated IT complexity with fully managed services, achieving 40% cost reduction, predictable budgets, and strategic IT alignment.',
+        'TechnoHub избавилась от ИТ-сложности с полностью управляемыми услугами NOCKO: снижение затрат на 40%, предсказуемый бюджет и ИТ-стратегия под цели бизнеса.',
       keywords:
-        'TechnoHub case study, managed IT services UAE, IT outsourcing Dubai, managed services provider, IT transformation',
+        'кейс TechnoHub, управляемые ИТ-услуги ОАЭ, ИТ-аутсорсинг Дубай, поставщик управляемых услуг, ИТ-трансформация',
       openGraph: {
-        title: 'How TechnoHub Transformed IT Operations with Managed Services',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'TechnoHub: управляемые ИТ-услуги, затраты −40%',
         description:
-          'TechnoHub eliminated IT complexity with fully managed services, achieving 40% cost reduction and predictable budgets.',
+          'TechnoHub избавилась от ИТ-сложности с полностью управляемыми услугами NOCKO: снижение затрат на 40%, предсказуемый бюджет и ИТ-стратегия под цели бизнеса.',
         type: 'article',
       },
     };
@@ -128,15 +188,25 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'ransomware-recovery') {
     return {
-      title: 'How We Isolated and Defeated Ransomware in 4 Hours | Case Study',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'Логистика Дубая: ransomware отражён за 4 часа',
       description:
-        'A Dubai logistics firm saved millions in downtime when our automated EDR isolated a phishing payload within minutes of execution.',
+        'Логистическая компания из Дубая избежала многомиллионных потерь: автоматизированный EDR от NOCKO изолировал фишинговую нагрузку за минуты после запуска.',
       keywords:
-        'Ransomware recovery case study, cybersecurity response UAE, EDR deployment Dubai, phishing protection, zero downtime',
+        'кейс восстановления после ransomware, реагирование на киберинциденты ОАЭ, внедрение EDR Дубай, защита от фишинга, нулевой простой',
       openGraph: {
-        title: 'How We Isolated and Defeated Ransomware in 4 Hours',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'Логистика Дубая: ransomware отражён за 4 часа',
         description:
-          'A Dubai logistics firm saved millions in downtime when our automated EDR isolated a phishing payload within minutes.',
+          'Логистическая компания из Дубая избежала многомиллионных потерь: автоматизированный EDR от NOCKO изолировал фишинговую нагрузку за минуты после запуска.',
         type: 'article',
       },
     };
@@ -144,15 +214,25 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'm365-audit') {
     return {
-      title: 'How an M365 Audit Saved a Dubai Firm 40% Annually | Case Study',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'Аудит Microsoft 365: экономия 40% в год',
       description:
-        'Discover how our forensic licensing audit eliminated duplicate SaaS tools and recovered $45,000 annually for a Dubai firm.',
+        'Форензик-аудит лицензий Microsoft 365 от NOCKO устранил дублирующие SaaS-инструменты и вернул компании из Дубая $45 000 в год (−40% на лицензии).',
       keywords:
-        'Microsoft 365 audit case study, IT consulting UAE, software license optimization, IT cost reduction Dubai, SaaS audit',
+        'кейс аудита Microsoft 365, ИТ-консалтинг ОАЭ, оптимизация лицензий ПО, снижение ИТ-расходов Дубай, аудит SaaS',
       openGraph: {
-        title: 'How an M365 Audit Saved a Dubai Firm 40% Annually',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'Аудит Microsoft 365: экономия 40% в год',
         description:
-          'Discover how our forensic licensing audit eliminated duplicate SaaS tools and recovered $45,000 annually for a Dubai firm.',
+          'Форензик-аудит лицензий Microsoft 365 от NOCKO устранил дублирующие SaaS-инструменты и вернул компании из Дубая $45 000 в год (−40% на лицензии).',
         type: 'article',
       },
     };
@@ -160,14 +240,23 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'it-consulting') {
     return {
-      alternates: { canonical: `/ru/case-studies/${slug}` },
-      title: 'Как девелопер недвижимости в Дубае сократил ИТ-расходы на 35% благодаря ИТ-консалтингу',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'Девелопер в Дубае: ИТ-расходы −35% после аудита',
       description:
-        'Девелопер недвижимости из Дубая устранил теневое ИТ, объединил поставщиков и снизил годовые ИТ-расходы на 35% после аудита и дорожной карты под руководством vCIO NOCKO.',
+        'Девелопер недвижимости из Дубая устранил теневое ИТ, объединил поставщиков и снизил годовые ИТ-расходы на 35% после аудита и дорожной карты vCIO NOCKO.',
       keywords:
         'ИТ-консалтинг Дубай, ИТ-стратегия ОАЭ, услуги vCIO Дубай, снижение ИТ-расходов, ИТ дорожная карта ОАЭ, ИТ-консалтинг для недвижимости',
       openGraph: {
-        title: 'Как девелопер недвижимости в Дубае сократил ИТ-расходы на 35% благодаря ИТ-консалтингу',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'Девелопер в Дубае: ИТ-расходы −35% после аудита',
         description:
           'Девелопер недвижимости из Дубая устранил теневое ИТ и снизил годовые ИТ-расходы на 35% благодаря стратегии под руководством vCIO NOCKO.',
         type: 'article',
@@ -177,14 +266,23 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'enterprise') {
     return {
-      alternates: { canonical: `/ru/case-studies/${slug}` },
-      title: 'Как предприятие на 300 сотрудников объединило ИТ-инфраструктуру по всем ОАЭ | Кейс',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'Логистика ОАЭ: единое ИТ в 4 офисах, аптайм 99,95%',
       description:
-        'Логистическое предприятие из ОАЭ с 300 рабочими местами в 4 офисах объединило разрозненную ИТ-инфраструктуру, заменило 6 поставщиков и достигло аптайма 99,95% с Managed IT от NOCKO.',
+        'Логистическое предприятие ОАЭ на 300 сотрудников объединило ИТ в 4 офисах, заменило 6 поставщиков и достигло аптайма 99,95% с Managed IT NOCKO.',
       keywords:
         'корпоративное ИТ ОАЭ, управляемые ИТ-услуги Дубай, консолидация ИТ-инфраструктуры, ИТ-поддержка нескольких офисов ОАЭ, ИТ-аутсорсинг для предприятий',
       openGraph: {
-        title: 'Как предприятие на 300 сотрудников объединило ИТ-инфраструктуру по всем ОАЭ',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'Логистика ОАЭ: единое ИТ в 4 офисах, аптайм 99,95%',
         description:
           'Логистическое предприятие ОАЭ объединило разрозненное ИТ в 4 офисах, заменило 6 поставщиков, достигло аптайма 99,95%.',
         type: 'article',
@@ -194,14 +292,23 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'cybersecurity') {
     return {
-      alternates: { canonical: `/ru/case-studies/${slug}` },
-      title: 'Как медицинская группа в ОАЭ прошла аудит HAAD без единого замечания | Кейс',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'Медицинская группа: аудит HAAD без замечаний',
       description:
-        'Медицинская группа из ОАЭ с 3 клиниками достигла полного соответствия требованиям кибербезопасности HAAD, устранила 7 критических уязвимостей и прошла регуляторный аудит без замечаний.',
+        'Медицинская группа ОАЭ с 3 клиниками достигла соответствия требованиям HAAD, устранила 7 критических уязвимостей и прошла аудит без замечаний.',
       keywords:
         'кибербезопасность в здравоохранении ОАЭ, соответствие HAAD, защита медицинских данных Дубай, аудит кибербезопасности ОАЭ, ИТ-безопасность в медицине',
       openGraph: {
-        title: 'Как медицинская группа в ОАЭ прошла аудит HAAD без единого замечания',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'Медицинская группа: аудит HAAD без замечаний',
         description:
           'Медицинская группа ОАЭ достигла полного соответствия HAAD, устранила 7 критических уязвимостей и прошла аудит без замечаний.',
         type: 'article',
@@ -211,14 +318,23 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'network-segmentation') {
     return {
-      alternates: { canonical: `/ru/case-studies/${slug}` },
-      title: 'Как мультиформатная группа в Дубае защитила сеть с помощью сегментации и FortiGate | Кейс',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'F&B-группа в Дубае: сегментация сети и FortiGate',
       description:
-        'Мультиформатная F&B-группа в Дубае заменила плоскую недокументированную сеть на сегментированную архитектуру с FortiGate и ядром Cisco — изолировав трафик POS, гостевой и офисной сети и защитив удалённый доступ.',
+        'F&B-группа из Дубая заменила плоскую сеть на сегментированную архитектуру с FortiGate и ядром Cisco, изолировав POS, гостевой и офисный трафик.',
       keywords:
         'сегментация сети Дубай, межсетевой экран FortiGate ОАЭ, сегментация VLAN, аудит сети Дубай, структурированная сеть ОАЭ, IPsec VPN ОАЭ',
       openGraph: {
-        title: 'Как мультиформатная группа в Дубае защитила сеть с помощью сегментации и FortiGate | Кейс',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'F&B-группа в Дубае: сегментация сети и FortiGate',
         description:
           'Группа из Дубая заменила плоскую сеть на сегментированную архитектуру с FortiGate и ядром Cisco, изолировав POS, гостевой и офисный трафик и защитив удалённый доступ.',
         type: 'article',
@@ -228,14 +344,23 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'emr-backup') {
     return {
-      alternates: { canonical: `/ru/case-studies/${slug}` },
-      title: 'Как медицинская клиника в ОАЭ автоматизировала резервное копирование EMR и отчётность о комплаенсе | Кейс',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'Клиника в ОАЭ: автоматический бэкап EMR и отчётность',
       description:
-        'Медицинская клиника в ОАЭ защитила системы EMR, диагностической визуализации и бухгалтерии с помощью автоматических ежедневных резервных копий на Synology Active Backup for Business и самоформирующегося ежедневного отчёта о соответствии.',
+        'Клиника в ОАЭ защитила данные EMR, визуализации и бухгалтерии ежедневными бэкапами Synology Active Backup и самоформирующимися отчётами о комплаенсе.',
       keywords:
         'резервное копирование EMR ОАЭ, резервное копирование медицинских данных Дубай, аварийное восстановление в здравоохранении ОАЭ, Synology Active Backup, отчётность о комплаенсе резервного копирования, ИТ-бэкап для клиники',
       openGraph: {
-        title: 'Как медицинская клиника в ОАЭ автоматизировала резервное копирование EMR и отчётность о комплаенсе | Кейс',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'Клиника в ОАЭ: автоматический бэкап EMR и отчётность',
         description:
           'Клиника в ОАЭ защитила данные EMR, визуализации и бухгалтерии автоматическими ежедневными резервными копиями и самоформирующимися отчётами о соответствии.',
         type: 'article',
@@ -245,14 +370,23 @@ export async function generateMetadata({
 
   if (!caseStudy && slug === 'workspace-migration') {
     return {
-      alternates: { canonical: `/ru/case-studies/${slug}` },
-      title: 'Как гостиничная группа в Дубае перенесла Google Workspace во время ребрендинга без простоев | Кейс',
+      alternates: {
+        canonical: `/ru/case-studies/${slug}`,
+        languages: {
+          'en-AE': `/case-studies/${slug}`,
+          'ru-RU': `/ru/case-studies/${slug}`,
+          'x-default': `/case-studies/${slug}`,
+        },
+      },
+      robots: { index: true, follow: true },
+      title: 'Отели Дубая: миграция Google Workspace без простоев',
       description:
-        'Во время корпоративного ребрендинга гостиничная группа из Дубая перенесла все почтовые ящики в новый домен Google Workspace без простоев и без потери истории переписки.',
+        'Гостиничная группа из Дубая перенесла все почтовые ящики в новый домен Google Workspace во время ребрендинга — без простоев и потери истории переписки.',
       keywords:
         'миграция Google Workspace Дубай, миграция почты ОАЭ, миграция домена, миграция workspace ОАЭ, миграция почты без простоев, облачная миграция Дубай',
       openGraph: {
-        title: 'Как гостиничная группа в Дубае перенесла Google Workspace во время ребрендинга без простоев | Кейс',
+        images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+        title: 'Отели Дубая: миграция Google Workspace без простоев',
         description:
           'Гостиничная группа из Дубая перенесла все почтовые ящики в новый домен Google Workspace во время ребрендинга — без простоев и потери истории.',
         type: 'article',
@@ -265,10 +399,20 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${caseStudy.attributes.title} | Case Study | NOCKO`,
+    alternates: {
+      canonical: `/ru/case-studies/${slug}`,
+      languages: {
+        'en-AE': `/case-studies/${slug}`,
+        'ru-RU': `/ru/case-studies/${slug}`,
+        'x-default': `/case-studies/${slug}`,
+      },
+    },
+    robots: { index: true, follow: true },
+    title: caseStudy.attributes.title,
     description: caseStudy.attributes.testimonial || `Case study: ${caseStudy.attributes.title}`,
     keywords: `${caseStudy.attributes.title}, case study, IT success story UAE, ${caseStudy.attributes.industry}`,
     openGraph: {
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
       title: `${caseStudy.attributes.title} | NOCKO`,
       description: caseStudy.attributes.testimonial || `Case study: ${caseStudy.attributes.title}`,
       type: 'article',
@@ -283,22 +427,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'projection') {
     caseStudy = {
       attributes: {
-        title: 'How Projection Improved IT Reliability with a Dedicated AMC',
-        client: 'Projection (Dubai & Abu Dhabi)',
-        industry: 'IT AMC & Maintenance',
+        title: 'Как Projection повысила надёжность ИТ благодаря выделенному AMC',
+        client: 'Projection (Дубай и Абу-Даби)',
+        industry: 'ИТ AMC и техническое обслуживание',
         challenge:
-          '<p>Projection is a UAE-based company with three major offices across Dubai and Abu Dhabi, managing over 80 endpoints. Their legacy IT stack included aging switches, disorganized cabling, and unmanaged Wi-Fi. Support was purely reactive: employees wasted hours waiting for ad-hoc IT freelancers, and recurring incidents crippled productivity.</p><p>leadership required guaranteed response times (SLAs), physical hardware reliability across multiple Emirates, and a unified upgrade roadmap that wouldn\'t disrupt ongoing operations.</p>',
+          '<p>Projection — компания из ОАЭ с тремя крупными офисами в Дубае и Абу-Даби и более чем 80 конечными устройствами. Унаследованный ИТ-стек включал изношенные коммутаторы, неупорядоченную кабельную инфраструктуру и неуправляемый Wi-Fi. Поддержка была сугубо реактивной: сотрудники часами ждали ИТ-фрилансеров, а повторяющиеся инциденты парализовали работу.</p><p>Руководству требовались гарантированное время реакции (SLA), надёжность физического оборудования в нескольких эмиратах и единая дорожная карта модернизации, которая не нарушила бы текущую работу компании.</p>',
         solution:
-          '<p>NOCKO introduced a strict Annual Maintenance Contract (AMC) combining 24/7 proactive NOC monitoring, quarterly physical preventive maintenance (PM) visits, and financially backed SLAs. The first 30 days were dedicated to complete IT asset discovery and network risk scoring.</p><p>We replaced failing patch panels, labeled all IDFs, and standardized switch configurations. A priority-based ServiceNow ticketing workflow provided transparent escalation, placing a dedicated Level-2 onsite engineer at their highest-traffic Business Bay office.</p>',
+          '<p>NOCKO внедрил строгий договор годового технического обслуживания (AMC), объединяющий круглосуточный проактивный мониторинг NOC, ежеквартальные выезды для планового профилактического обслуживания (PM) и финансово обеспеченные SLA. Первые 30 дней были посвящены полной инвентаризации ИТ-активов и оценке рисков сети.</p><p>Мы заменили неисправные патч-панели, промаркировали все IDF и стандартизировали конфигурации коммутаторов. Процесс обработки заявок в ServiceNow с приоритизацией обеспечил прозрачную эскалацию, а в самом загруженном офисе в Business Bay был размещён выделенный инженер второй линии.</p>',
         results: {
-          uptime: 'Achieved 99.9% uptime across core branch network services',
-          responseTime: 'Average physical response time improved from 6 hours to under 2 hours (Dubai)',
-          incidents: 'Critical Priority-1 incident volume reduced by 48% within 4 months',
-          rollout: 'Completed phased Wi-Fi upgrades without downtime for client-facing systems',
-          satisfaction: 'Internal Helpdesk satisfaction score increased from 3.6 to 4.7/5',
+          uptime: 'Достигли аптайма 99,9% для ключевых сетевых сервисов филиалов',
+          responseTime: 'Среднее время физического реагирования сокращено с 6 часов до менее чем 2 часов (Дубай)',
+          incidents: 'Число критических инцидентов приоритета P1 снижено на 48% за 4 месяца',
+          rollout: 'Поэтапная модернизация Wi-Fi выполнена без простоев клиентских систем',
+          satisfaction: 'Оценка удовлетворённости внутренним Helpdesk выросла с 3,6 до 4,7/5',
         },
         testimonial:
-          '“We now have predictable costs, faster response, and a clear upgrade roadmap. The NOCKO AMC program completely removed the chaos from our multi-branch IT operations.”',
+          '«Теперь у нас предсказуемые расходы, быстрая реакция и понятная дорожная карта модернизации. Программа AMC от NOCKO полностью избавила наши ИТ-операции в нескольких филиалах от хаоса.»',
       },
     } as any;
   }
@@ -306,22 +450,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'solus') {
     caseStudy = {
       attributes: {
-        title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity',
+        title: 'Как Solus Insurance усилила защиту с помощью корпоративной кибербезопасности',
         client: 'Solus Insurance (DIFC)',
-        industry: 'Cybersecurity & Compliance',
+        industry: 'Кибербезопасность и комплаенс',
         challenge:
-          '<p>Solus Insurance manages highly sensitive financial and customer data within the Dubai International Financial Centre (DIFC). Their legacy security stack had grown organically, leaving blind spots across remote endpoints and Azure cloud workloads.</p><p>Facing strict new compliance requirements from the UAE NESA and DFSA frameworks, Solus needed enterprise-grade threat detection, instant incident response, and a Zero Trust posture without slowing down their brokers.</p>',
+          '<p>Solus Insurance работает с высокочувствительными финансовыми и клиентскими данными в Дубайском международном финансовом центре (DIFC). Унаследованный стек безопасности рос стихийно, оставляя слепые зоны на удалённых конечных устройствах и в облачных нагрузках Azure.</p><p>Столкнувшись с новыми строгими требованиями комплаенса в рамках UAE NESA и DFSA, Solus нуждалась в корпоративном обнаружении угроз, мгновенном реагировании на инциденты и модели Zero Trust — без замедления работы брокеров.</p>',
         solution:
-          '<p>We deployed a comprehensive Zero Trust cybersecurity architecture featuring centralized 24/7 SOC monitoring, EDR (Endpoint Detection and Response) hardening, and micro-segmented network access.</p><p>The deployment included firewall policy optimization, automated phishing simulation for brokers, and a structured Incident Response payload entirely aligned to DFSA regulatory compliance standards.</p>',
+          '<p>Мы развернули комплексную архитектуру кибербезопасности Zero Trust с централизованным круглосуточным мониторингом SOC, усилением защиты конечных устройств на базе EDR (Endpoint Detection and Response) и микросегментированным доступом к сети.</p><p>Внедрение включало оптимизацию политик межсетевого экрана, автоматизированные фишинговые симуляции для брокеров и структурированный план реагирования на инциденты, полностью согласованный с регуляторными требованиями DFSA.</p>',
         results: {
-          detection: 'Reduced average ransomware/threat detection time from hours to under 4 minutes',
-          coverage: '100% EDR visibility across all DIFC offices and remote broker laptops',
-          incidents: 'False-positive security alerts reduced by 42% within 90 days',
-          compliance: 'Successfully passed annual DFSA IT audits with zero critical findings',
-          response: 'Automated containment isolates infected endpoints in seconds',
+          detection: 'Среднее время обнаружения ransomware и других угроз сокращено с часов до менее чем 4 минут',
+          coverage: '100% покрытие EDR во всех офисах DIFC и на ноутбуках удалённых брокеров',
+          incidents: 'Число ложных срабатываний систем безопасности снижено на 42% за 90 дней',
+          compliance: 'Ежегодный ИТ-аудит DFSA пройден без единого критического замечания',
+          response: 'Автоматическое сдерживание изолирует заражённые устройства за секунды',
         },
         testimonial:
-          '“We gained visibility across our entire multi-cloud environment and a clear response plan. Security is now an automated compliance asset, not a daily IT headache.”',
+          '«Мы получили прозрачность во всей мультиоблачной среде и чёткий план реагирования. Безопасность стала автоматизированным активом комплаенса, а не ежедневной ИТ-головной болью.»',
       },
     } as any;
   }
@@ -329,22 +473,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'fh') {
     caseStudy = {
       attributes: {
-        title: 'How FH Fundamental Migrated to AWS UAE with Zero Downtime',
+        title: 'Как FH Fundamental мигрировала в AWS UAE без простоев',
         client: 'FH Fundamental',
-        industry: 'Cloud & Data Services',
+        industry: 'Облачные сервисы и данные',
         challenge:
-          '<p>FH Fundamental operated entirely on aging on-premises infrastructure located in a local server room. The physical hardware constrained their scalability, required heavy CapEx for upgrades, and posed a significant disaster recovery risk during power fluctuations.</p><p>They needed a seamless migration path to the cloud that ensured absolute zero downtime, strictly adhered to UAE TRA data residency requirements, and allowed for rapid deployment of new web services.</p>',
+          '<p>FH Fundamental полностью работала на устаревшей локальной инфраструктуре в собственной серверной. Физическое оборудование ограничивало масштабирование, требовало крупных капитальных затрат на модернизацию и создавало серьёзный риск для аварийного восстановления при перепадах электропитания.</p><p>Компании требовался плавный путь миграции в облако с абсолютно нулевым простоем, строгим соблюдением требований UAE TRA к резидентности данных и возможностью быстро развёртывать новые веб-сервисы.</p>',
         solution:
-          '<p>NOCKO engineered a phased cloud migration targeting the AWS Middle East (UAE) Region, utilizing parallel-run capabilities to validate workloads before final DNS cutover. We utilized a strategic mix of Lift-and-Shift for legacy ERPs and selective re-platforming (Docker) for high-traffic web applications.</p><p>Pre-migration ekahau testing, synchronized block-level data replication, and strict rollback plans guaranteed safety. Production cutovers were executed during predetermined 3 AM maintenance windows.</p>',
+          '<p>NOCKO спроектировал поэтапную миграцию в регион AWS Middle East (UAE), используя параллельный запуск для проверки нагрузок до финального переключения DNS. Мы применили стратегическое сочетание Lift-and-Shift для унаследованных ERP-систем и выборочного перевода на новую платформу (Docker) для высоконагруженных веб-приложений.</p><p>Предварительное тестирование Ekahau, синхронная репликация данных на блочном уровне и строгие планы отката гарантировали безопасность. Переключение продуктивных систем выполнялось в заранее согласованные окна обслуживания в 3 часа ночи.</p>',
         results: {
-          uptime: 'Achieved 100% zero downtime during the live migration of 12 production databases',
-          performance: 'Database query response times improved by 35% utilizing AWS NVMe instances',
-          scalability: 'Auto-scaling enabled for peak ramadan traffic periods without manual intervention',
-          residency: '100% Compliance with UAE TRA data residency regulations',
-          reliability: 'Total infrastructure uptime improved from 98.2% to 99.99%',
+          uptime: 'Живая миграция 12 продуктивных баз данных выполнена с нулевым простоем (100%)',
+          performance: 'Время отклика запросов к базам данных улучшено на 35% благодаря инстансам AWS с NVMe',
+          scalability: 'Автомасштабирование под пиковый трафик в Рамадан без ручного вмешательства',
+          residency: '100% соответствие требованиям UAE TRA к резидентности данных',
+          reliability: 'Общий аптайм инфраструктуры вырос с 98,2% до 99,99%',
         },
         testimonial:
-          '"The AWS migration was completely invisible to our users. Our teams kept working without interruption, and we instantly gained the enterprise speed and reliability we could never afford on-premise."',
+          '«Миграция в AWS прошла совершенно незаметно для наших пользователей. Команды продолжали работать без перерывов, а мы мгновенно получили корпоративную скорость и надёжность, которые никогда не могли себе позволить на локальной инфраструктуре.»',
       },
     } as any;
   }
@@ -352,22 +496,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'scalini') {
     caseStudy = {
       attributes: {
-        title: 'How Scalini Standardized Network Infrastructure Across 5 Locations',
+        title: 'Как Scalini стандартизировала сетевую инфраструктуру в 5 ресторанах',
         client: 'Scalini Restaurant Group',
-        industry: 'Structured Cabling',
+        industry: 'Структурированные кабельные системы',
         challenge:
-          '<p>Scalini operates 5 high-end restaurant locations across Dubai and Abu Dhabi. Each site was cabled independently by different contractors, resulting in uncertified cabling patches, unlabeled IDFs, and massive Wi-Fi dead zones. Constant POS drops during peak dining hours led directly to lost revenue.</p><p>Their IT team demanded a standardized physical layer capable of unified reservation systems, 4K security cameras, and uninterrupted guest Wi-Fi across all Emirates.</p>',
+          '<p>Scalini управляет 5 ресторанами премиум-класса в Дубае и Абу-Даби. Каждая площадка прокладывалась независимо разными подрядчиками, что привело к несертифицированным кабельным соединениям, немаркированным IDF и обширным мёртвым зонам Wi-Fi. Постоянные обрывы POS-терминалов в часы пик напрямую оборачивались потерей выручки.</p><p>ИТ-команда требовала стандартизированный физический уровень, способный поддерживать единые системы бронирования, камеры видеонаблюдения 4K и бесперебойный гостевой Wi-Fi во всех эмиратах.</p>',
         solution:
-          '<p>NOCKO executed a unified Structured Cabling overhaul across all 5 properties. Each site received certified Cat6A runs to support 10Gbps backbone links, meticulously labeled patch panels, and 25-year manufacturer warranties. </p><p>Utilizing Ekahau predictive heatmapping, we strategically placed enterprise access points to eliminate concrete and kitchen interference. All installations were strictly validated with Fluke DSX CableAnalyzers, and complete as-built CAD documentation was handed over.</p>',
+          '<p>NOCKO выполнил единую модернизацию структурированной кабельной системы на всех 5 объектах. Каждая площадка получила сертифицированные линии Cat6A для магистральных каналов 10 Гбит/с, тщательно промаркированные патч-панели и 25-летнюю гарантию производителя.</p><p>С помощью предиктивных тепловых карт Ekahau мы стратегически разместили корпоративные точки доступа, устранив помехи от бетонных стен и кухонного оборудования. Все инсталляции были строго проверены анализаторами Fluke DSX CableAnalyzer, а заказчику передана полная исполнительная документация в CAD.</p>',
         results: {
-          coverage: '100% Enterprise Wi-Fi coverage across all VIP dining and kitchen areas',
-          uptime: 'Achieved 99.99% network uptime for mission-critical POS systems',
-          deployment: 'Completed night-shift physical rollouts across 5 locations without disrupting daytime operations',
-          standardization: 'Single flawless Fluke-certified cabling standard across all restaurants',
-          scalability: 'Fully documented physical backbone ready for their next 3 location expansions',
+          coverage: '100% покрытие корпоративным Wi-Fi всех VIP-залов и кухонных зон',
+          uptime: 'Аптайм сети 99,99% для критически важных POS-систем',
+          deployment: 'Физический монтаж на 5 площадках выполнен в ночные смены без нарушения дневной работы',
+          standardization: 'Единый безупречный стандарт кабельной системы с сертификацией Fluke во всех ресторанах',
+          scalability: 'Полностью задокументированная физическая магистраль готова к открытию следующих 3 ресторанов',
         },
         testimonial:
-          '"Our restaurant networks used to be a terrifying black box. Now, every location has the exact same Fluke-certified setup, and we can finally focus on VIP guest experiences instead of apologizing for dropped Wi-Fi."',
+          '«Сети наших ресторанов раньше были пугающим чёрным ящиком. Теперь в каждой локации абсолютно одинаковая конфигурация с сертификацией Fluke, и мы наконец можем сосредоточиться на VIP-гостях вместо извинений за отвалившийся Wi-Fi.»',
       },
     } as any;
   }
@@ -375,22 +519,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'gss') {
     caseStudy = {
       attributes: {
-        title: 'How Global Service Solution Achieved 24/7 Flight IT Support',
-        client: 'Global Service Solution (Aviation Hub)',
-        industry: 'IT Support & Helpdesk',
+        title: 'Как Global Service Solution обеспечила ИТ-поддержку полётов 24/7',
+        client: 'Global Service Solution (авиационный хаб)',
+        industry: 'ИТ-поддержка и Helpdesk',
         challenge:
-          '<p>Global Service Solution operates a hyper-critical 24/7 flight dispatch center coordinating aircraft across the Middle East. Their dispatchers rely entirely on real-time weather software, secure VPNs, and compliance-heavy flight planning systems.</p><p>Standard "9-to-5" IT contractors were failing them. Any overnight IT downtime directly grounded flights. They demanded a guaranteed 24/7 Helpdesk with instant remote diagnostics and zero tolerance for missed SLAs.</p>',
+          '<p>Global Service Solution управляет сверхкритичным круглосуточным центром диспетчеризации полётов, координирующим воздушные суда по всему Ближнему Востоку. Диспетчеры полностью зависят от метеосистем реального времени, защищённых VPN и систем планирования полётов с жёсткими требованиями комплаенса.</p><p>Стандартные ИТ-подрядчики «с 9 до 18» их подводили. Любой ночной простой ИТ напрямую задерживал рейсы. Компании требовался гарантированный Helpdesk 24/7 с мгновенной удалённой диагностикой и нулевой терпимостью к нарушениям SLA.</p>',
         solution:
-          '<p>NOCKO implemented an aviation-grade 24/7 IT Support workflow. We assigned dedicated onsite engineers during peak dispatch hours and seamlessly handed over to our remote NOC (Network Operations Center) for overnight coverage.</p><p>Our L2 engineers integrated ServiceNow ticketing with VIP escalation paths to ensure any dispatcher issue was addressed instantly within 15 minutes. Proactive MDM endpoint monitoring detects laptop failures before dispatchers even report them.</p>',
+          '<p>NOCKO внедрил процесс ИТ-поддержки 24/7 авиационного уровня. Мы закрепили выделенных инженеров на площадке в пиковые часы диспетчеризации с бесшовной передачей смены нашему удалённому NOC (центру управления сетью) на ночное время.</p><p>Наши инженеры L2 интегрировали систему заявок ServiceNow с VIP-маршрутами эскалации, чтобы любая проблема диспетчера решалась в течение 15 минут. Проактивный мониторинг конечных устройств через MDM выявляет сбои ноутбуков ещё до того, как диспетчеры о них сообщат.</p>',
         results: {
-          uptime: 'Achieved 99.9% availability for dispatch terminals with zero unscheduled downtime',
-          response: 'Average Helpdesk remote triage time of under 10 minutes for Priority-1 incidents',
-          availability: 'True 24/7/365 coverage with continuous holiday rotations',
-          incidents: 'Avoidable hardware crashes reduced by 62% via proactive MDM monitoring',
-          satisfaction: 'Flight Dispatch team satisfaction rating hit 4.9/5',
+          uptime: 'Доступность диспетчерских терминалов 99,9% без единого внепланового простоя',
+          response: 'Среднее время удалённой диагностики инцидентов приоритета P1 — менее 10 минут',
+          availability: 'Настоящее покрытие 24/7/365 с непрерывными ротациями в праздничные дни',
+          incidents: 'Число предотвратимых отказов оборудования снижено на 62% благодаря проактивному мониторингу MDM',
+          satisfaction: 'Оценка удовлетворённости команды диспетчеров достигла 4,9/5',
         },
         testimonial:
-          '"Aviation never sleeps, and now our IT support doesn\'t either. NOCKO is always online, instantly fixing VPN drops before they can delay our flight schedules."',
+          '«Авиация никогда не спит — и теперь наша ИТ-поддержка тоже. NOCKO всегда на связи и мгновенно устраняет обрывы VPN, прежде чем они успеют задержать наши рейсы.»',
       },
     } as any;
   }
@@ -398,22 +542,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'technohub') {
     caseStudy = {
       attributes: {
-        title: 'How TechnoHub Transformed Operations with Full Managed IT (MSP)',
+        title: 'Как TechnoHub перестроила ИТ-операции с полным Managed IT (MSP)',
         client: 'TechnoHub',
-        industry: 'Managed Services (MSP)',
+        industry: 'Управляемые ИТ-услуги (MSP)',
         challenge:
-          '<p>TechnoHub, a growing consultancy in Dubai Media City, was bleeding money on fragmented IT contractors. Their solo internal IT manager was overwhelmed by reactive password resets, disjointed vendor management (Du/Etisalat), and manual laptop setups for new hires.</p><p>The lack of strategic IT leadership led to massive Shadow IT spending. They needed a Managed Service Provider (MSP) to completely take over daily operations while providing executive-level guidance.</p>',
+          '<p>TechnoHub, растущая консалтинговая компания в Dubai Media City, теряла деньги на разрозненных ИТ-подрядчиках. Единственный штатный ИТ-менеджер был перегружен реактивными сбросами паролей, несогласованной работой с провайдерами (Du/Etisalat) и ручной настройкой ноутбуков для новых сотрудников.</p><p>Отсутствие стратегического ИТ-руководства привело к огромным расходам на теневое ИТ. Компании требовался поставщик управляемых услуг (MSP), который полностью возьмёт на себя ежедневные операции и одновременно обеспечит консультирование на уровне топ-менеджмента.</p>',
         solution:
-          '<p>We transitioned TechnoHub to a comprehensive NOCKO Managed Services agreement (MSP). We became their entire IT department overnight, absorbing all Helpdesk requests, SOC security monitoring, and hardware lifecycle procurement.</p><p>Through our embedded Virtual CTO (vCTO) program, we consolidated their SaaS vendors, audited Microsoft 365 licenses to eliminate bloat, and shifted their erratic IT spending into a predictable, flat-rate monthly OPEX model.</p>',
+          '<p>Мы перевели TechnoHub на комплексный договор управляемых услуг NOCKO (MSP). Мы стали их полноценным ИТ-отделом буквально за одну ночь, приняв на себя все обращения в Helpdesk, мониторинг безопасности SOC и закупку оборудования на протяжении всего его жизненного цикла.</p><p>В рамках программы встроенного виртуального CTO (vCTO) мы консолидировали SaaS-поставщиков, провели аудит лицензий Microsoft 365 для устранения избыточности и перевели хаотичные ИТ-расходы в предсказуемую модель OPEX с фиксированной ежемесячной ставкой.</p>',
         results: {
-          cost: 'Total IT operational costs dropped by 40% purely through SaaS vendor consolidation',
-          predictability: 'Transitioned to a flat-rate monthly per-user OPEX with zero hidden invoices',
-          focus: 'Internal management freed entirely from daily IT firefighting',
-          security: 'Achieved Zero Trust security posture with 24/7 automated patching',
-          alignment: 'Quarterly vCTO roadmap meetings ensure IT strictly supports their revenue goals',
+          cost: 'Общие операционные ИТ-затраты снижены на 40% исключительно за счёт консолидации SaaS-поставщиков',
+          predictability: 'Переход на фиксированную ежемесячную ставку OPEX за пользователя без скрытых счетов',
+          focus: 'Руководство полностью освобождено от ежедневного «тушения пожаров» в ИТ',
+          security: 'Достигнута модель безопасности Zero Trust с круглосуточным автоматическим патчингом',
+          alignment: 'Ежеквартальные встречи по дорожной карте с vCTO гарантируют, что ИТ строго работает на цели по выручке',
         },
         testimonial:
-          '"NOCKO\'s Managed Services removed every ounce of IT friction. We finally have a predictable budget, bulletproof security, and a vCTO who understands our growth. They aren\'t contractors; they are our IT department."',
+          '«Управляемые услуги NOCKO устранили любое трение в ИТ. У нас наконец есть предсказуемый бюджет, надёжная защита и vCTO, который понимает наш рост. Это не подрядчики — это наш ИТ-отдел.»',
       },
     } as any;
   }
@@ -421,22 +565,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'ransomware-recovery') {
     caseStudy = {
       attributes: {
-        title: 'Defeating Ransomware: A 4-Hour Recovery',
-        client: 'Global Logistics Firm (Dubai)',
-        industry: 'Cybersecurity Incident Response',
+        title: 'Победа над ransomware: восстановление за 4 часа',
+        client: 'Международная логистическая компания (Дубай)',
+        industry: 'Реагирование на киберинциденты',
         challenge:
-          '<p>A leading Dubai-based logistics firm faced a critical security incident when an employee unknowingly clicked a malicious phishing link hidden within a forged vendor invoice. The payload, a sophisticated zero-day ransomware variant, immediately attempted to establish lateral movement across their internal network, aiming to encrypt mission-critical shipping manifest databases.</p><p>With hundreds of containers actively moving through Jebel Ali Port, even a single day of database downtime would result in millions of dirhams in SLA penalties and supply chain chaos.</p>',
+          '<p>Ведущая логистическая компания из Дубая столкнулась с критическим инцидентом безопасности: сотрудник, не подозревая об угрозе, перешёл по вредоносной фишинговой ссылке, скрытой в поддельном счёте от поставщика. Полезная нагрузка — сложный ransomware нулевого дня — немедленно попыталась распространиться по внутренней сети, нацелившись на шифрование критически важных баз данных грузовых манифестов.</p><p>Когда через порт Джебель-Али активно проходят сотни контейнеров, даже один день простоя баз данных обернулся бы миллионами дирхамов штрафов по SLA и хаосом в цепочке поставок.</p>',
         solution:
-          '<p>Fortunately, NOCKO had recently deployed an advanced Endpoint Detection and Response (EDR) agent across their entire fleet. Within milliseconds of the payload executing, the EDR’s behavioral AI flagged the anomalous encryption attempt.</p><p>The system automatically severed the infected machine’s connection to the corporate network, containing the "blast radius" to a single laptop. NOCKO\'s 24/7 SOC analysts were immediately alerted, allowing our Incident Response team to remotely wipe the compromised device and restore it from an immutable cloud backup.</p>',
+          '<p>К счастью, NOCKO незадолго до этого развернул продвинутый агент Endpoint Detection and Response (EDR) на всём парке устройств компании. Через миллисекунды после запуска полезной нагрузки поведенческий ИИ EDR зафиксировал аномальную попытку шифрования.</p><p>Система автоматически отключила заражённую машину от корпоративной сети, ограничив «радиус поражения» одним ноутбуком. Аналитики круглосуточного SOC NOCKO были немедленно оповещены, что позволило нашей команде реагирования удалённо очистить скомпрометированное устройство и восстановить его из неизменяемой облачной резервной копии.</p>',
         results: {
-          containment: 'Threat isolated within 4 minutes of initial execution',
-          downtime: 'Zero impact on core shipping manifest databases or port operations',
-          recovery: 'Compromised laptop fully wiped and restored via Windows Autopilot in under 4 hours',
-          compliance: 'Full forensic report generated to satisfy UAE federal data breach notification laws',
-          roi: 'Prevented an estimated $2.4M in potential downtime and ransomware extortion fees',
+          containment: 'Угроза изолирована в течение 4 минут после первоначального запуска',
+          downtime: 'Нулевое влияние на основные базы данных грузовых манифестов и портовые операции',
+          recovery: 'Скомпрометированный ноутбук полностью очищен и восстановлен через Windows Autopilot менее чем за 4 часа',
+          compliance: 'Подготовлен полный форензик-отчёт в соответствии с федеральными законами ОАЭ об уведомлении об утечках данных',
+          roi: 'Предотвращены потенциальные потери на сумму около $2,4 млн от простоя и выплат вымогателям',
         },
         testimonial:
-          '"We watched the attack happen in real-time on the NOCKO dashboard. Their EDR stopped the encryption instantly. Without them, our entire fleet operation would have been grounded for weeks."',
+          '«Мы наблюдали за атакой в реальном времени на дашборде NOCKO. Их EDR мгновенно остановил шифрование. Без них вся наша логистика встала бы на недели.»',
       },
     } as any;
   }
@@ -444,22 +588,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'm365-audit') {
     caseStudy = {
       attributes: {
-        title: 'M365 Audit Saves 40% Annually',
-        client: 'Regional Investment Firm (DIFC)',
-        industry: 'Strategic IT Consulting',
+        title: 'Аудит M365: экономия 40% в год',
+        client: 'Региональная инвестиционная компания (DIFC)',
+        industry: 'Стратегический ИТ-консалтинг',
         challenge:
-          '<p>A fast-growing investment firm in the DIFC was experiencing uncontrolled "Shadow IT" sprawl. Different departments were independently expensing overlapping SaaS tools like Zoom, Dropbox, and Slack, completely ignoring their existing Microsoft 365 enterprise licenses.</p><p>Furthermore, they were paying for premium Microsoft E5 licenses for all 150 employees, despite 80% of the workforce only requiring basic webmail and Teams access. The CFO required an immediate forensic audit to halt the bleeding.</p>',
+          '<p>Быстрорастущая инвестиционная компания из DIFC столкнулась с неконтролируемым разрастанием теневого ИТ. Разные отделы независимо друг от друга оплачивали дублирующие SaaS-инструменты — Zoom, Dropbox и Slack, полностью игнорируя уже имеющиеся корпоративные лицензии Microsoft 365.</p><p>Кроме того, компания платила за премиальные лицензии Microsoft E5 для всех 150 сотрудников, хотя 80% персонала требовались лишь базовая веб-почта и доступ к Teams. Финансовый директор потребовал немедленный форензик-аудит, чтобы остановить утечку средств.</p>',
         solution:
-          '<p>NOCKO’s vCIO conducted a comprehensive forensic licensing audit. We analyzed active usage telemetry across their entire tenant. We identified that the firm was paying for $45,000 worth of redundant third-party applications that were natively included in their Microsoft subscription.</p><p>We executed a strict consolidation roadmap. We migrated all data from Dropbox to SharePoint, transitioned video conferencing to Teams, and right-sized their Microsoft licensing—downgrading non-essential staff to Business Basic while reserving E5 licenses solely for executives handling highly classified financial models.</p>',
+          '<p>vCIO от NOCKO провёл комплексный форензик-аудит лицензий. Мы проанализировали телеметрию фактического использования по всему тенанту и выявили, что компания платила $45 000 за избыточные сторонние приложения, функции которых уже входили в её подписку Microsoft.</p><p>Мы реализовали строгую дорожную карту консолидации: перенесли все данные из Dropbox в SharePoint, перевели видеоконференции в Teams и оптимизировали лицензирование Microsoft — понизив неключевой персонал до Business Basic и оставив лицензии E5 только руководителям, работающим с конфиденциальными финансовыми моделями.</p>',
         results: {
-          savings: 'Recovered $45,000 annually by eliminating duplicate SaaS subscriptions',
-          optimization: 'Reduced monthly Microsoft 365 licensing costs by 40%',
-          security: 'Eliminated 12 unauthorized "Shadow IT" applications, closing major compliance gaps',
-          adoption: 'Conducted targeted staff training, increasing Microsoft Teams utilization by 300%',
-          governance: 'Implemented centralized approval workflows for any future software purchases',
+          savings: 'Возвращены $45 000 в год за счёт устранения дублирующих SaaS-подписок',
+          optimization: 'Ежемесячные расходы на лицензии Microsoft 365 снижены на 40%',
+          security: 'Устранены 12 несанкционированных приложений теневого ИТ, закрыты серьёзные пробелы в комплаенсе',
+          adoption: 'Проведено целевое обучение сотрудников — использование Microsoft Teams выросло на 300%',
+          governance: 'Внедрены централизованные процессы согласования любых будущих закупок ПО',
         },
         testimonial:
-          '"NOCKO didn\'t just save us money; they forced us to actually use the enterprise tools we were already paying for. The audit paid for itself in the first month."',
+          '«NOCKO не просто сэкономил нам деньги — они заставили нас реально использовать корпоративные инструменты, за которые мы уже платили. Аудит окупился в первый же месяц.»',
       },
     } as any;
   }
@@ -638,7 +782,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             name: 'NOCKO Information Technology',
             logo: {
               '@type': 'ImageObject',
-              url: `${baseUrl}/images/logo-white.svg`,
+              url: `${baseUrl}/images/logo-512.png`,
             },
           },
         }}
@@ -654,7 +798,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           <div className="container">
             {caseStudy.attributes.challenge && (
               <div className="case-study__section">
-                <h2>Challenge</h2>
+                <h2>Задача</h2>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: caseStudy.attributes.challenge,
@@ -664,7 +808,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             )}
             {caseStudy.attributes.solution && (
               <div className="case-study__section">
-                <h2>Solution</h2>
+                <h2>Решение</h2>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: caseStudy.attributes.solution,
@@ -674,7 +818,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             )}
             {caseStudy.attributes.results && (
               <div className="case-study__section">
-                <h2>Results</h2>
+                <h2>Результаты</h2>
                 <div className="case-study__results-grid" style={{
                   display: 'flex',
                   flexDirection: 'column',

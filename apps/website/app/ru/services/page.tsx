@@ -12,10 +12,16 @@ export const metadata: Metadata = {
   keywords:
     'ИТ услуги ОАЭ, сетевая инфраструктура Дубай, облачные решения Абу-Даби, кибербезопасность ОАЭ, ИТ поддержка Дубай',
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'ИТ-услуги в ОАЭ',
     description: 'Комплексные ИТ-решения для бизнеса по всей территории ОАЭ.',
     type: 'website',
   },
+  alternates: {
+    canonical: '/ru/services',
+    languages: { 'en-AE': '/services', 'ru-RU': '/ru/services', 'x-default': '/services' },
+  },
+  robots: { index: true, follow: true },
 };
 
 export const revalidate = 3600; // ISR: revalidate every hour

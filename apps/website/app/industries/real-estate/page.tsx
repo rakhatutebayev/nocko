@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Real Estate | NOCKO UAE',
+  title: 'IT Solutions for Real Estate in UAE',
   description:
     'Modern IT solutions for real estate companies in UAE. Property management systems, network infrastructure, cloud services, and 24/7 support for developers and agencies.',
   keywords:
     'IT solutions real estate UAE, property management IT Dubai, real estate network infrastructure, property technology UAE, real estate IT support',
   openGraph: {
-    title: 'IT Solutions for Real Estate | NOCKO UAE',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    title: 'IT Solutions for Real Estate in UAE',
     description:
       'Modern IT solutions for real estate companies in UAE. Property management systems, network infrastructure, and cloud services.',
     type: 'article',
@@ -84,24 +85,12 @@ export default function RealEstatePage() {
   return (
     <>
       <StructuredData
-        type="Article"
+        type="WebPage"
         data={{
-          headline: industryData.hero.title,
+          name: industryData.hero.title,
           description: metadata.description,
-          datePublished: '2026-01-23',
-          dateModified: '2026-01-23',
-          author: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-            logo: {
-              '@type': 'ImageObject',
-              url: `${baseUrl}/images/logo-white.svg`,
-            },
-          },
+          isPartOf: { '@id': 'https://nocko.com/#website' },
+          about: { '@id': 'https://nocko.com/#organization' },
         }}
       />
       <Breadcrumbs

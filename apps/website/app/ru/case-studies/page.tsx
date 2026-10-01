@@ -13,10 +13,16 @@ export const metadata: Metadata = {
   keywords:
     'ИТ кейсы ОАЭ, истории успеха Дубай, ИТ трансформация ОАЭ, кейсы сетевая инфраструктура, успешная миграция в облако',
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'Кейсы | Успешные ИТ Проекты в ОАЭ',
     description: 'Реальные результаты реальных компаний в ОАЭ.',
     type: 'website',
   },
+  alternates: {
+    canonical: '/ru/case-studies',
+    languages: { 'en-AE': '/case-studies', 'ru-RU': '/ru/case-studies', 'x-default': '/case-studies' },
+  },
+  robots: { index: true, follow: true },
 };
 
 export const revalidate = 3600; // ISR: revalidate every hour

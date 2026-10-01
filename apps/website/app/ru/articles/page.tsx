@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'Блог | ИТ-статьи и руководства для бизнеса в ОАЭ',
     description: 'Экспертные ИТ-статьи и руководства для бизнеса в ОАЭ.',
     type: 'website',

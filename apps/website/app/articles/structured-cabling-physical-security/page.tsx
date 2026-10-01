@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Access Control and physical Security | NOCKO UAE',
+  title: 'Access Control and physical Security in UAE',
   description: 'Structured cabling extends beyond computers. We deploy the Unified Physical Layer for your office, running dedicated PoE (Power over Ethernet) infrastructure for high-resolution CCTV IP cameras, biometric Access Control Systems, and VoIP telephony grids on a single, seamlessly integrated network.',
   alternates: {
     canonical: '/articles/structured-cabling-physical-security',

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   keywords:
     'cybersecurity Dubai, data protection UAE, IT security services Dubai, network security UAE, security compliance Dubai, threat detection UAE, cybersecurity company Dubai',
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'Cybersecurity Services in Dubai | Data Protection & Cybersecurity UAE',
     description: 'Enterprise cybersecurity and data protection for businesses in Dubai and across the UAE.',
     type: 'website',

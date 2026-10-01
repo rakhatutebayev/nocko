@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'IT Blog & Expert Guides for UAE Business',
     description: 'Expert IT insights and guides for businesses in UAE.',
     type: 'website',

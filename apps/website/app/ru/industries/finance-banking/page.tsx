@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT-решения для финансов и банкинга | NOCKO ОАЭ',
+  title: 'IT-решения для финансов и банкинга в ОАЭ',
   description:
     'Безопасные IT-решения для финансовых организаций в ОАЭ. Сетевая инфраструктура, кибербезопасность, соответствие требованиям, защита данных и поддержка 24/7 для банков и финансовых компаний.',
   keywords:
     'IT-решения для финансов ОАЭ, банковские IT-услуги Дубай, финансовая кибербезопасность, сетевая инфраструктура для банков, IT-соответствие требованиям в финансах',
   openGraph: {
-    title: 'IT-решения для финансов и банкинга | NOCKO ОАЭ',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    title: 'IT-решения для финансов и банкинга в ОАЭ',
     description:
       'Безопасные IT-решения для финансовых организаций в ОАЭ. Сетевая инфраструктура, кибербезопасность, соответствие требованиям и поддержка 24/7.',
     type: 'article',
@@ -84,24 +85,12 @@ export default function FinanceBankingPage() {
   return (
     <>
       <StructuredData
-        type="Article"
+        type="WebPage"
         data={{
-          headline: industryData.hero.title,
+          name: industryData.hero.title,
           description: metadata.description,
-          datePublished: '2026-01-23',
-          dateModified: '2026-01-23',
-          author: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-            logo: {
-              '@type': 'ImageObject',
-              url: `${baseUrl}/images/logo-white.svg`,
-            },
-          },
+          isPartOf: { '@id': 'https://nocko.com/#website' },
+          about: { '@id': 'https://nocko.com/#organization' },
         }}
       />
       <Breadcrumbs

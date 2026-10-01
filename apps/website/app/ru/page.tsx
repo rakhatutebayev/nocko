@@ -6,7 +6,6 @@ import Features from '@/components/sections/Features';
 import Services from '@/components/sections/Services';
 import Clients from '@/components/sections/Clients';
 import IndustriesDynamic from '@/components/sections/IndustriesDynamic';
-import LayoutScripts from '@/app/layout-scripts';
 
 export const metadata: Metadata = {
   title: 'ИТ-компания в Дубае — аутсорсинг и поддержка 24/7',
@@ -23,6 +22,7 @@ export const metadata: Metadata = {
     'приходящий системный администратор',
   ],
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'ИТ-компания в Дубае — аутсорсинг и поддержка 24/7',
     description:
       'Ведущая русскоязычная ИТ-компания в Дубае: сетевые технологии, облачные решения, кибербезопасность и абонентское обслуживание (AMC).',
@@ -126,7 +126,6 @@ const ruServices = [
 export default function RuHomePage() {
   return (
     <>
-      <LayoutScripts />
       <HeaderWrapper />
       <main className="main" role="main">
         <Hero 

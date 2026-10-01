@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Контроль доступа и физическая безопасность | NOCKO ОАЭ',
+  title: 'Контроль доступа и физическая безопасность в ОАЭ',
   description: 'Структурированные кабельные системы выходят за рамки компьютерных сетей. Мы развёртываем единый физический уровень для вашего офиса: выделенная инфраструктура PoE для IP-камер видеонаблюдения высокого разрешения, биометрических систем контроля доступа и сетей VoIP-телефонии — всё это в рамках единой интегрированной сети.',
   alternates: {
     canonical: '/ru/articles/structured-cabling-physical-security',
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
 };

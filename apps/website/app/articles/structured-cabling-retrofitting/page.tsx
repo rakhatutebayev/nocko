@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Server Room & IDFs Retrofitting | NOCKO UAE',
+  title: 'Server Room & IDFs Retrofitting in UAE',
   description: 'Inherited a disastrous, disorganized server room in your new office? We specialize in live cabinet retrofitting and "spaghetti" cleanups. We trace, label, and re-patch your entire server rack with precise cable management channels, restoring airflow to your switches and transforming a fire hazard into an organized, maintainable IT environment.',
   alternates: {
     canonical: '/articles/structured-cabling-retrofitting',

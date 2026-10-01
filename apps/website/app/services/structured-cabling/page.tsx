@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   keywords:
     'structured cabling companies in dubai, network cabling company in dubai, structured cabling dubai, structured cabling solutions dubai, structured cabling uae, structured cabling companies in uae, network cabling companies, networking companies in uae, cabling installation dubai',
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'Structured Cabling Companies Dubai | Network Cabling UAE',
     description: 'Top-rated structured cabling company in Dubai. Cat6, Cat6A, and fiber optic cabling with Fluke certification across UAE.',
     type: 'website',

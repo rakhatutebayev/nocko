@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   keywords:
     'IT consulting Dubai, IT strategy UAE, technology consulting Dubai, IT planning UAE, digital transformation Dubai, IT assessment UAE, best IT consulting Dubai',
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'IT Consulting Services in Dubai | Technology Strategy & IT Consulting UAE',
     description: 'Expert IT strategy and technology consulting for businesses in Dubai and across the UAE.',
     type: 'website',

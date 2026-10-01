@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Retail & Hospitality | NOCKO UAE',
+  title: 'IT Solutions for Retail & Hospitality in UAE',
   description:
     'Reliable IT solutions for retail and hospitality businesses in UAE. POS systems, guest Wi-Fi, network infrastructure, digital signage, and 24/7 support for stores, restaurants, and hotels.',
   keywords:
     'IT solutions retail UAE, hospitality IT services Dubai, POS systems UAE, restaurant IT infrastructure, hotel network infrastructure',
   openGraph: {
-    title: 'IT Solutions for Retail & Hospitality | NOCKO UAE',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    title: 'IT Solutions for Retail & Hospitality in UAE',
     description:
       'Reliable IT solutions for retail and hospitality businesses in UAE. POS systems, guest Wi-Fi, and 24/7 support.',
     type: 'article',
@@ -84,24 +85,12 @@ export default function RetailHospitalityPage() {
   return (
     <>
       <StructuredData
-        type="Article"
+        type="WebPage"
         data={{
-          headline: industryData.hero.title,
+          name: industryData.hero.title,
           description: metadata.description,
-          datePublished: '2026-01-23',
-          dateModified: '2026-01-23',
-          author: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-            logo: {
-              '@type': 'ImageObject',
-              url: `${baseUrl}/images/logo-white.svg`,
-            },
-          },
+          isPartOf: { '@id': 'https://nocko.com/#website' },
+          about: { '@id': 'https://nocko.com/#organization' },
         }}
       />
       <Breadcrumbs

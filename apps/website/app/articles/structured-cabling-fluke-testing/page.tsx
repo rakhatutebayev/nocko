@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Fluke Testing and 25-Year Warranties | NOCKO UAE',
+  title: 'Fluke Testing and 25-Year Warranties in UAE',
   description: 'We do not guess on cable integrity. Every single node we deploy is rigorously tested and validated using Fluke DSX CableAnalyzers. This empirical verification guarantees that your internal network can handle 10Gbps throughput without packet loss, allowing us to provide manufacturer-backed 25-year performance warranties on our corporate installations.',
   alternates: {
     canonical: '/articles/structured-cabling-fluke-testing',

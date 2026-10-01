@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Cloud FinOps и оптимизация облачных расходов | NOCKO ОАЭ',
+  title: 'Cloud FinOps и оптимизация облачных расходов в ОАЭ',
   description: 'NOCKO сокращает расходы на AWS и Azure для бизнеса в ОАЭ на 30–50% за счёт Reserved Instances, устранения брошенных ресурсов и внедрения FinOps-политик тегирования — без потери производительности.',
   alternates: {
     canonical: '/ru/articles/cloud-cost-optimization',
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
   robots: { index: true, follow: true },

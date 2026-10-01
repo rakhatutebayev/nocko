@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     'ADGM ИТ поддержка',
   ],
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'ИТ Компания в Абу-Даби | ИТ Поддержка',
     description:
       'Профессиональные ИТ услуги в Абу-Даби — сети, облако, кибербезопасность и управляемая ИТ поддержка 24/7 для бизнеса в ADGM, Khalifa City и Mussafah.',
@@ -117,7 +118,7 @@ export default function AbuDhabiRuPage() {
       <StructuredData
         type="LocalBusiness"
         data={{
-          '@id': 'https://nocko.com/#localbusiness',
+          '@id': `${baseUrl}/ru/locations/abu-dhabi#localbusiness`,
           name: 'NOCKO Information Technology',
           image: `${baseUrl}/og-image.jpg`,
           description: 'ИТ компания, предоставляющая ИТ поддержку, сетевую инфраструктуру, облако и кибербезопасность в Абу-Даби, ОАЭ.',
@@ -151,7 +152,7 @@ export default function AbuDhabiRuPage() {
         <Breadcrumbs
           hidden={true}
           items={[
-            { name: 'Локации', url: '/ru/locations' },
+            { name: 'Локации' },
             { name: 'Абу-Даби' },
           ]}
         />

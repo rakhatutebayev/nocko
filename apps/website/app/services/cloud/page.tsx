@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   keywords:
     'cloud migration services UAE, cloud migration provider Dubai, cloud services Dubai, cloud migration Dubai, cloud migration services in UAE, managed cloud services Dubai, AWS migration UAE, Azure migration Dubai, cloud infrastructure UAE',
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'Cloud Migration Services UAE | Cloud Provider Dubai',
     description: 'Zero-downtime cloud migration to AWS and Azure for UAE businesses. Certified cloud architects in Dubai.',
     type: 'website',

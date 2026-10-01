@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Complete NOC Remote Integration | NOCKO UAE',
+  title: 'Complete NOC Remote Integration in UAE',
   description: 'NOCKO connects UAE businesses to a Dubai-based Network Operations Center via lightweight RMM agents — monitoring CPU, temperature, disk health, and network events in real time, with automated remediation for known issue patterns before they cause downtime.',
   alternates: {
     canonical: '/articles/managed-it-infrastructure',

@@ -21,34 +21,34 @@
   
   // Варианты цветов
   &--primary {
-    background-color: #11c979;
+    background-color: #0b7d4f;
     color: $color-white;
-    border-color: #11c979;
+    border-color: #0b7d4f;
     
     &:hover {
-      background-color: color.adjust(#11c979, $lightness: -10%);
-      border-color: color.adjust(#11c979, $lightness: -10%);
+      background-color: color.adjust(#0b7d4f, $lightness: -10%);
+      border-color: color.adjust(#0b7d4f, $lightness: -10%);
       color: $color-white;
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(17, 201, 121, 0.3);
     }
     
     &:focus {
-      background-color: color.adjust(#11c979, $lightness: -10%);
-      border-color: color.adjust(#11c979, $lightness: -10%);
+      background-color: color.adjust(#0b7d4f, $lightness: -10%);
+      border-color: color.adjust(#0b7d4f, $lightness: -10%);
       color: $color-white;
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(17, 201, 121, 0.3);
     }
     
     &:focus-visible {
-      outline: 2px solid #11c979;
+      outline: 2px solid #0b7d4f;
       outline-offset: 2px;
     }
     
     &:active {
-      background-color: color.adjust(#11c979, $lightness: -15%);
-      border-color: color.adjust(#11c979, $lightness: -15%);
+      background-color: color.adjust(#0b7d4f, $lightness: -15%);
+      border-color: color.adjust(#0b7d4f, $lightness: -15%);
       transform: translateY(0);
       color: $color-white;
       box-shadow: 0 2px 6px rgba(17, 201, 121, 0.2);
@@ -56,8 +56,8 @@
     
     &:disabled,
     &.btn--disabled {
-      background-color: #11c979;
-      border-color: #11c979;
+      background-color: #0b7d4f;
+      border-color: #0b7d4f;
       color: $color-white;
       opacity: 0.5;
       cursor: not-allowed;
@@ -73,29 +73,29 @@
     border-color: $color-white;
     
     &:hover {
-      background-color: #3474ff;
-      border-color: #3474ff;
+      background-color: #2b5fd9;
+      border-color: #2b5fd9;
       color: $color-white;
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(52, 116, 255, 0.3);
     }
     
     &:focus {
-      background-color: #3474ff;
-      border-color: #3474ff;
+      background-color: #2b5fd9;
+      border-color: #2b5fd9;
       color: $color-white;
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(52, 116, 255, 0.3);
     }
     
     &:focus-visible {
-      outline: 2px solid #3474ff;
+      outline: 2px solid #2b5fd9;
       outline-offset: 2px;
     }
     
     &:active {
-      background-color: color.adjust(#3474ff, $lightness: -10%);
-      border-color: color.adjust(#3474ff, $lightness: -10%);
+      background-color: color.adjust(#2b5fd9, $lightness: -10%);
+      border-color: color.adjust(#2b5fd9, $lightness: -10%);
       transform: translateY(0);
       color: $color-white;
       box-shadow: 0 2px 6px rgba(52, 116, 255, 0.2);

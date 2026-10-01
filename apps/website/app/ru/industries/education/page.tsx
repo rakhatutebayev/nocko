@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT-решения для образования | NOCKO ОАЭ',
+  title: 'IT-решения для образования в ОАЭ',
   description:
     'Современные IT-решения для образовательных учреждений в ОАЭ. Умные классы, системы управления учащимися, кампусные сети, платформы электронного обучения и поддержка 24/7 для школ и университетов.',
   keywords:
     'IT-решения для образования ОАЭ, IT-услуги для школ Дубай, сетевая инфраструктура университета, платформы электронного обучения ОАЭ, образовательные технологии',
   openGraph: {
-    title: 'IT-решения для образования | NOCKO ОАЭ',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    title: 'IT-решения для образования в ОАЭ',
     description:
       'Современные IT-решения для образовательных учреждений в ОАЭ. Умные классы, кампусные сети, платформы электронного обучения и поддержка 24/7.',
     type: 'article',
@@ -84,24 +85,12 @@ export default function EducationPage() {
   return (
     <>
       <StructuredData
-        type="Article"
+        type="WebPage"
         data={{
-          headline: industryData.hero.title,
+          name: industryData.hero.title,
           description: metadata.description,
-          datePublished: '2026-01-23',
-          dateModified: '2026-01-23',
-          author: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-            logo: {
-              '@type': 'ImageObject',
-              url: `${baseUrl}/images/logo-white.svg`,
-            },
-          },
+          isPartOf: { '@id': 'https://nocko.com/#website' },
+          about: { '@id': 'https://nocko.com/#organization' },
         }}
       />
       <Breadcrumbs

@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Hardware Lifecycle Management | NOCKO UAE',
+  title: 'Hardware Lifecycle Management in UAE',
   description: 'An executive breakdown of why saving $500 on a cheap AMC contract will cost you $50,000 during a 3-day server outage due to aging hardware.',
   alternates: {
     canonical: '/articles/it-amc-hardware-lifecycle',

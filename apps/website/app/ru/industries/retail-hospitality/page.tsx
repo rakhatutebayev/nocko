@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT-решения для ритейла и гостеприимства | NOCKO ОАЭ',
+  title: 'IT-решения для ритейла и гостеприимства в ОАЭ',
   description:
     'Надежные IT-решения для предприятий розничной торговли и гостеприимства в ОАЭ. POS-системы, гостевой Wi-Fi, сетевая инфраструктура, цифровые вывески и круглосуточная поддержка для магазинов, ресторанов и отелей.',
   keywords:
     'IT-решения для ритейла ОАЭ, IT-услуги для гостеприимства Дубай, POS-системы ОАЭ, IT-инфраструктура для ресторанов, сетевая инфраструктура для отелей',
   openGraph: {
-    title: 'IT-решения для ритейла и гостеприимства | NOCKO ОАЭ',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    title: 'IT-решения для ритейла и гостеприимства в ОАЭ',
     description:
       'Надежные IT-решения для предприятий розничной торговли и гостеприимства в ОАЭ. POS-системы, гостевой Wi-Fi и круглосуточная поддержка.',
     type: 'article',
@@ -84,24 +85,12 @@ export default function RetailHospitalityPage() {
   return (
     <>
       <StructuredData
-        type="Article"
+        type="WebPage"
         data={{
-          headline: industryData.hero.title,
+          name: industryData.hero.title,
           description: metadata.description,
-          datePublished: '2026-01-23',
-          dateModified: '2026-01-23',
-          author: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-            logo: {
-              '@type': 'ImageObject',
-              url: `${baseUrl}/images/logo-white.svg`,
-            },
-          },
+          isPartOf: { '@id': 'https://nocko.com/#website' },
+          about: { '@id': 'https://nocko.com/#organization' },
         }}
       />
       <Breadcrumbs

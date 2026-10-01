@@ -7,7 +7,6 @@ import Services from '@/components/sections/Services';
 import Clients from '@/components/sections/Clients';
 import IndustriesDynamic from '@/components/sections/IndustriesDynamic';
 import FeaturedArticles from '@/components/sections/FeaturedArticles';
-import LayoutScripts from '@/app/layout-scripts';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
@@ -30,6 +29,7 @@ export const metadata: Metadata = {
     'technical support Dubai',
   ],
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'IT Company in Dubai | IT Support & Solutions UAE',
     description:
       'Leading IT company in Dubai providing IT support, network infrastructure, cloud solutions, and cybersecurity services for businesses across UAE.',
@@ -50,49 +50,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <LayoutScripts />
-      <StructuredData
-        type="WebSite"
-        data={{
-          '@id': 'https://nocko.com/#website',
-          name: 'NOCKO Information Technology',
-          url: 'https://nocko.com',
-        }}
-      />
-      <StructuredData
-        type="LocalBusiness"
-        data={{
-          '@id': 'https://nocko.com/#localbusiness',
-          name: 'NOCKO Information Technology',
-          url: 'https://nocko.com',
-          telephone: '+971542448888',
-          email: 'info@nocko.com',
-          image: 'https://nocko.com/og-image.jpg',
-          streetAddress: 'Office R20-42, Wavez Residence, Wadi Al Safa 2',
-          addressLocality: 'Dubai',
-          addressRegion: 'Dubai',
-          addressCountry: 'AE',
-          latitude: '25.07850',
-          longitude: '55.27080',
-          priceRange: '$$',
-          areaServed: [
-            { '@type': 'City', name: 'Dubai' },
-            { '@type': 'City', name: 'Abu Dhabi' },
-            { '@type': 'City', name: 'Sharjah' },
-          ],
-          sameAs: [
-            'https://www.linkedin.com/company/it-nocko/',
-          ],
-          openingHoursSpecification: [
-            {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-              opens: '09:00',
-              closes: '18:00',
-            },
-          ],
-        }}
-      />
               <HeaderWrapper />
       <main className="main" role="main">
         <Hero />

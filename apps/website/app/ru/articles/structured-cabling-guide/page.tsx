@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Руководство по сетевой инфраструктуре и СКС | NOCKO ОАЭ',
+  title: 'Руководство по сетевой инфраструктуре и СКС в ОАЭ',
   description:
     'Полное руководство по структурированным кабельным системам, развёртыванию сетевой инфраструктуры, управлению жизненным циклом и оптимизации производительности для бизнеса в Дубае и ОАЭ.',
   keywords:
     'структурированная кабельная система Дубай, сетевая инфраструктура ОАЭ, монтаж Cat6A, управление жизненным циклом сети, IT AMC оборудование',
   openGraph: {
-    title: 'Руководство по сетевой инфраструктуре и СКС | NOCKO ОАЭ',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    title: 'Руководство по сетевой инфраструктуре и СКС в ОАЭ',
     description:
       'Полное руководство по структурированным кабельным системам, развёртыванию и оптимизации производительности для бизнеса в ОАЭ.',
     type: 'article',
@@ -107,7 +108,7 @@ export default function StructuredCablingGuidePage() {
             name: 'NOCKO Information Technology',
             logo: {
               '@type': 'ImageObject',
-              url: `${baseUrl}/images/logo-white.svg`,
+              url: `${baseUrl}/images/logo-512.png`,
             },
           },
         }}

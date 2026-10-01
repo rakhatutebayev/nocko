@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Certified Cat6A & Fiber Optic Engineering | NOCKO UAE',
+  title: 'Certified Cat6A & Fiber Optic Engineering in UAE',
   description: 'Physical cabling is the absolute foundation of your corporate network; a single faulty termination can cripple an entire department. Our certified engineers design and pull high-density Cat6, Cat6A, and OM3/OM4 Fiber Optic infrastructure specifically rated for the extreme temperatures of UAE industrial zones and the aesthetic requirements of modern Dubai offices.',
   alternates: {
     canonical: '/articles/structured-cabling-fiber-optic',

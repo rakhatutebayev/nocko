@@ -118,7 +118,7 @@ export default function AbuDhabiPage() {
       <StructuredData
         type="LocalBusiness"
         data={{
-          '@id': 'https://nocko.com/#localbusiness',
+          '@id': `${baseUrl}/locations/abu-dhabi#localbusiness`,
           name: 'NOCKO Information Technology',
           image: `${baseUrl}/og-image.jpg`,
           description: 'IT services company providing IT support, network infrastructure, cloud, and cybersecurity in Abu Dhabi, UAE.',
@@ -152,7 +152,7 @@ export default function AbuDhabiPage() {
         <Breadcrumbs
           hidden={true}
           items={[
-            { name: 'Locations', url: '/locations' },
+            { name: 'Locations' },
             { name: 'Abu Dhabi' },
           ]}
         />

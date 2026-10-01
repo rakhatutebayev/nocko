@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Why standard Antivirus is dead in 2024 | NOCKO UAE',
+  title: 'Why standard Antivirus is dead in 2024 in UAE',
   description: 'Understand the stark technical difference between legacy signature-based Antivirus and behavioral AI-driven EDR platforms like CrowdStrike.',
   alternates: {
     canonical: '/articles/cybersecurity-antivirus-dead',

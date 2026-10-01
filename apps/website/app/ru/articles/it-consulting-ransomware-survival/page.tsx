@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Выживание после атаки программы-вымогателя | NOCKO ОАЭ',
+  title: 'Выживание после атаки программы-вымогателя в ОАЭ',
   description: 'Узнайте, что реально означают RTO и RPO, и как выстроить план аварийного восстановления, который работает под давлением реальной атаки.',
   alternates: {
     canonical: '/ru/articles/it-consulting-ransomware-survival',
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
 };

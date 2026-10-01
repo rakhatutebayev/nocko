@@ -1,5 +1,5 @@
 .clients {
-  background-color: #3474ff;
+  background-color: #2b5fd9; // был #3474ff — контраст с текстом 3.6:1
   @include section-padding;
 
   &__container {

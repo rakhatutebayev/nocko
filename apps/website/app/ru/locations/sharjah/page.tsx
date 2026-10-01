@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     'ИТ компания ОАЭ',
   ],
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'ИТ Компания в Шардже | ИТ Поддержка',
     description:
       'Профессиональные ИТ услуги в Шардже — сети, облако, кибербезопасность и управляемая ИТ поддержка 24/7 для бизнеса в SAIF Zone, Al Majaz и Промышленном районе.',
@@ -117,7 +118,7 @@ export default function SharjahRuPage() {
       <StructuredData
         type="LocalBusiness"
         data={{
-          '@id': 'https://nocko.com/#localbusiness',
+          '@id': `${baseUrl}/ru/locations/sharjah#localbusiness`,
           name: 'NOCKO Information Technology',
           image: `${baseUrl}/og-image.jpg`,
           description: 'ИТ компания, предоставляющая ИТ поддержку, сетевую инфраструктуру, облако и кибербезопасность в Шардже, ОАЭ.',
@@ -151,7 +152,7 @@ export default function SharjahRuPage() {
         <Breadcrumbs
           hidden={true}
           items={[
-            { name: 'Локации', url: '/ru/locations' },
+            { name: 'Локации' },
             { name: 'Шарджа' },
           ]}
         />

@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Education | NOCKO UAE',
+  title: 'IT Solutions for Education in UAE',
   description:
     'Modern IT solutions for educational institutions in UAE. Smart classrooms, student management systems, campus networks, e-learning platforms, and 24/7 support for schools and universities.',
   keywords:
     'IT solutions education UAE, school IT services Dubai, university network infrastructure, e-learning platforms UAE, educational technology',
   openGraph: {
-    title: 'IT Solutions for Education | NOCKO UAE',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    title: 'IT Solutions for Education in UAE',
     description:
       'Modern IT solutions for educational institutions in UAE. Smart classrooms, campus networks, e-learning platforms, and 24/7 support.',
     type: 'article',
@@ -84,24 +85,12 @@ export default function EducationPage() {
   return (
     <>
       <StructuredData
-        type="Article"
+        type="WebPage"
         data={{
-          headline: industryData.hero.title,
+          name: industryData.hero.title,
           description: metadata.description,
-          datePublished: '2026-01-23',
-          dateModified: '2026-01-23',
-          author: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-            logo: {
-              '@type': 'ImageObject',
-              url: `${baseUrl}/images/logo-white.svg`,
-            },
-          },
+          isPartOf: { '@id': 'https://nocko.com/#website' },
+          about: { '@id': 'https://nocko.com/#organization' },
         }}
       />
       <Breadcrumbs

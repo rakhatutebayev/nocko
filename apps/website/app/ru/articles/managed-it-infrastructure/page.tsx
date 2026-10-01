@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Полная удалённая интеграция NOC | NOCKO ОАЭ',
+  title: 'Полная удалённая интеграция NOC в ОАЭ',
   description: 'NOCKO подключает бизнес в ОАЭ к дубайскому Центру управления сетью через лёгкие RMM-агенты — мониторинг CPU, температуры, состояния дисков и сетевых событий в реальном времени с автоматическим устранением типовых проблем до возникновения простоя.',
   alternates: {
     canonical: '/ru/articles/managed-it-infrastructure',
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
   robots: { index: true, follow: true },

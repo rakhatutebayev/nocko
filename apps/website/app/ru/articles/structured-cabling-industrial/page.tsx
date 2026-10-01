@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'От логистических складов до корпоративных офисов | NOCKO ОАЭ',
+  title: 'От логистических складов до корпоративных офисов в ОАЭ',
   description: 'Крупный логистический комплекс в JAFZA требует принципиально иного физического уровня, чем финансовый офис со стеклянными стенами в DIFC. Мы проектируем инфраструктуру под конкретную среду: бронированное оптоволокно для обширных промышленных площадей и эстетичная скрытая проводка под фальшполом для представительских переговорных.',
   alternates: {
     canonical: '/ru/articles/structured-cabling-industrial',
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
 };

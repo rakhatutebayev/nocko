@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Logistics Warehouses to Corporate Hubs | NOCKO UAE',
+  title: 'Logistics Warehouses to Corporate Hubs in UAE',
   description: 'A massive logistics facility in JAFZA requires a vastly different physical layer than a glass-walled financial office in DIFC. We engineer tailored environments: deploying armored fiber for sprawling industrial floors, and aesthetic, under-floor plenum cabling for high-end corporate boardrooms.',
   alternates: {
     canonical: '/articles/structured-cabling-industrial',

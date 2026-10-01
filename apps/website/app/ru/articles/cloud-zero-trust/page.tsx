@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Защита облака на основе Zero Trust | NOCKO ОАЭ',
+  title: 'Защита облака на основе Zero Trust в ОАЭ',
   description: 'Поймите модель разделённой ответственности и узнайте, почему безопасность IAM критически важна для вашего развёртывания Azure. Не оставляйте облачные эндпоинты незащищёнными.',
   alternates: {
     canonical: '/ru/articles/cloud-zero-trust',
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
   robots: { index: true, follow: true },

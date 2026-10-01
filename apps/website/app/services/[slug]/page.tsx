@@ -52,6 +52,7 @@ export async function generateMetadata({
     description: `Professional ${service.attributes.title} services in UAE.`,
     keywords: `${service.attributes.title}, IT services UAE, Dubai, Abu Dhabi`,
     openGraph: {
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
       title: `${service.attributes.title} | NOCKO`,
       description: `Professional ${service.attributes.title} services in UAE.`,
       type: 'website',

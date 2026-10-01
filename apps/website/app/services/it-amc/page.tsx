@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   keywords:
     'IT AMC Dubai, IT AMC services, IT AMC services in Dubai, annual maintenance contract Dubai, it annual maintenance contract in dubai, AMC services Dubai, IT support contract Dubai, IT maintenance contract UAE, AMC company Dubai, it amc uae',
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'IT AMC Dubai | IT Annual Maintenance Contract UAE',
     description: 'Fixed-cost IT Annual Maintenance Contract for Dubai businesses. Priority support, scheduled visits, hardware lifecycle management.',
     type: 'website',

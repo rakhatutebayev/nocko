@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Co-Managed IT: лучшее из двух миров | NOCKO ОАЭ',
+  title: 'Co-Managed IT: лучшее из двух миров в ОАЭ',
   description: 'Руководство для ИТ-директоров: как эффективно передать рутинные задачи NOC на аутсорсинг, сохранив контроль над корпоративной стратегией. Мы интегрируемся напрямую с вашей внутренней командой.',
   alternates: {
     canonical: '/ru/articles/managed-it-co-managed',
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
   robots: { index: true, follow: true },

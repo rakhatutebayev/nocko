@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Network Infrastructure & Structured Cabling Guide | NOCKO UAE',
+  title: 'Network Infrastructure & Structured Cabling Guide in UAE',
   description:
     'A complete guide to structured cabling, network infrastructure deployment, lifecycle management, and performance optimization for businesses in Dubai and the UAE.',
   keywords:
     'structured cabling Dubai, network infrastructure UAE, Cat6A deployment, network lifecycle management, IT AMC hardware',
   openGraph: {
-    title: 'Network Infrastructure & Structured Cabling Guide | NOCKO UAE',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    title: 'Network Infrastructure & Structured Cabling Guide in UAE',
     description:
       'A complete guide to structured cabling, deployment, and performance optimization for businesses in the UAE.',
     type: 'article',
@@ -107,7 +108,7 @@ export default function StructuredCablingGuidePage() {
             name: 'NOCKO Information Technology',
             logo: {
               '@type': 'ImageObject',
-              url: `${baseUrl}/images/logo-white.svg`,
+              url: `${baseUrl}/images/logo-512.png`,
             },
           },
         }}

@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Управление жизненным циклом оборудования | NOCKO ОАЭ',
+  title: 'Управление жизненным циклом оборудования в ОАЭ',
   description: 'Разбор для руководителей: почему экономия на дешёвом AMC-контракте обернётся потерями в $50 000 при трёхдневном простое из-за устаревшего сервера.',
   alternates: {
     canonical: '/ru/articles/it-amc-hardware-lifecycle',
@@ -18,7 +18,8 @@ export const metadata: Metadata = {
     },
   },
   robots: { index: true, follow: true },
-  openGraph: { locale: 'ru_RU' },
+  openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }], locale: 'ru_RU' },
 };
 
 const articleData = {

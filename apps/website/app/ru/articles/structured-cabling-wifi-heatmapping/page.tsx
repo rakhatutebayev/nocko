@@ -8,7 +8,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Тепловое картирование корпоративного Wi-Fi | NOCKO ОАЭ',
+  title: 'Тепловое картирование корпоративного Wi-Fi в ОАЭ',
   description: 'Хватит размещать точки доступа наугад. С помощью профессионального ПО Ekahau мы проводим предиктивное и физическое RF-картирование вашего плана этажа. Учитываем стеклянные перегородки в Business Bay и бетонные колонны в Муссафахе, гарантируя полное отсутствие мёртвых зон Wi-Fi на всём предприятии.',
   alternates: {
     canonical: '/ru/articles/structured-cabling-wifi-heatmapping',
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
 };

@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     'IT support Business Bay',
   ],
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'IT Support & Managed IT Services in Dubai',
     description:
       'NOCKO provides IT support, network infrastructure, cloud solutions, and cybersecurity for businesses across Dubai and the UAE.',
@@ -139,8 +140,10 @@ export default function DubaiPage() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
+    '@id': `${baseUrl}/locations/dubai#localbusiness`,
+    parentOrganization: { '@id': `${baseUrl}/#organization` },
     name: 'NOCKO Information Technology',
-    image: `${baseUrl}/images/logo-white.svg`,
+    image: `${baseUrl}/og-image.jpg`,
     description: 'Managed IT services, IT support, cloud solutions, and cybersecurity for businesses in Dubai and across the UAE.',
     url: `${baseUrl}/locations/dubai`,
     telephone: '+971542448888',
@@ -154,8 +157,8 @@ export default function DubaiPage() {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '25.2048',
-      longitude: '55.2708',
+      latitude: 25.2048,
+      longitude: 55.2708,
     },
     areaServed: {
       '@type': 'City',
@@ -184,7 +187,7 @@ export default function DubaiPage() {
         <Breadcrumbs
           hidden={true}
           items={[
-            { name: 'Locations', url: '/locations' },
+            { name: 'Locations' },
             { name: 'Dubai' },
           ]}
         />

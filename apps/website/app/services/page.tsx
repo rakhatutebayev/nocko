@@ -18,7 +18,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'IT Services UAE — NOCKO' }],
   },
-  alternates: { canonical: '/services' },
+  alternates: {
+    canonical: '/services',
+    languages: { 'en-AE': '/services', 'ru-RU': '/ru/services', 'x-default': '/services' },
+  },
 };
 
 export const revalidate = 3600; // ISR: revalidate every hour

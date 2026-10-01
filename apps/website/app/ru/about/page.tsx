@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     'NOCKO Information Technology - Экспертный поставщик ИТ-решений в Дубае, ОАЭ. Работаем с 2025 года, обслуживаем бизнес в более чем 8 отраслях с командой, имеющей более 10 лет опыта.',
   keywords: 'о нас NOCKO, ИТ компания Дубай, ИТ услуги ОАЭ, технологические решения Дубай',
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     title: 'О нас | Поставщик ИТ-решений в Дубае, ОАЭ',
     description: 'NOCKO Information Technology - Экспертный поставщик ИТ-решений в Дубае, ОАЭ.',
     type: 'website',

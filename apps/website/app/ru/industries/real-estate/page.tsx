@@ -7,13 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT-решения для недвижимости | NOCKO ОАЭ',
+  title: 'IT-решения для недвижимости в ОАЭ',
   description:
     'Современные IT-решения для компаний в сфере недвижимости в ОАЭ. Системы управления объектами, сетевая инфраструктура, облачные сервисы и круглосуточная поддержка для застройщиков и агентств.',
   keywords:
     'IT-решения для недвижимости ОАЭ, IT для управления недвижимостью Дубай, сетевая инфраструктура для недвижимости, технологии для недвижимости ОАЭ, IT-поддержка недвижимости',
   openGraph: {
-    title: 'IT-решения для недвижимости | NOCKO ОАЭ',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    title: 'IT-решения для недвижимости в ОАЭ',
     description:
       'Современные IT-решения для компаний в сфере недвижимости в ОАЭ. Системы управления объектами, сетевая инфраструктура и облачные сервисы.',
     type: 'article',
@@ -84,24 +85,12 @@ export default function RealEstatePage() {
   return (
     <>
       <StructuredData
-        type="Article"
+        type="WebPage"
         data={{
-          headline: industryData.hero.title,
+          name: industryData.hero.title,
           description: metadata.description,
-          datePublished: '2026-01-23',
-          dateModified: '2026-01-23',
-          author: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'NOCKO Information Technology',
-            logo: {
-              '@type': 'ImageObject',
-              url: `${baseUrl}/images/logo-white.svg`,
-            },
-          },
+          isPartOf: { '@id': 'https://nocko.com/#website' },
+          about: { '@id': 'https://nocko.com/#organization' },
         }}
       />
       <Breadcrumbs

@@ -118,7 +118,7 @@ export default function SharjahPage() {
       <StructuredData
         type="LocalBusiness"
         data={{
-          '@id': 'https://nocko.com/#localbusiness',
+          '@id': `${baseUrl}/locations/sharjah#localbusiness`,
           name: 'NOCKO Information Technology',
           image: `${baseUrl}/og-image.jpg`,
           description: 'IT services company providing IT support, network infrastructure, cloud, and cybersecurity in Sharjah, UAE.',
@@ -152,7 +152,7 @@ export default function SharjahPage() {
         <Breadcrumbs
           hidden={true}
           items={[
-            { name: 'Locations', url: '/locations' },
+            { name: 'Locations' },
             { name: 'Sharjah' },
           ]}
         />

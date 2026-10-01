@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Почему обычный антивирус устарел в 2024 году | NOCKO UAE',
+  title: 'Почему обычный антивирус устарел в 2024 году in UAE',
   description: 'Разбираем принципиальную техническую разницу между устаревшей сигнатурной антивирусной защитой и современными поведенческими EDR-платформами на базе ИИ — такими как CrowdStrike.',
   alternates: {
     canonical: '/ru/articles/cybersecurity-antivirus-dead',
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
   robots: { index: true, follow: true },

@@ -7,7 +7,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Почему тестирование Fluke обязательно | NOCKO ОАЭ',
+  title: 'Почему тестирование Fluke обязательно в ОАЭ',
   description: 'Разбираемся, как радиопомехи и строительные материалы блокируют потребительские роутеры, и почему тепловое картирование Ekahau и тестирование Fluke являются обязательными.',
   alternates: {
     canonical: '/ru/articles/structured-cabling-fluke-importance',
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   openGraph: {
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ru_RU',
   },
 };

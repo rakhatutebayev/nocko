@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.scss";
 import WhatsAppFloatingButton from "@/components/common/WhatsAppFloatingButton";
 import CookieConsent from "@/components/common/CookieConsent";
+import LayoutScripts from "@/app/layout-scripts";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -15,7 +16,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: {
     default: "NOCKO IT Support UAE",
-    template: "%s | NOCKO Information Technology",
+    template: "%s | NOCKO",
   },
   description: "Professional IT support and infrastructure services in UAE. Network setup, cloud solutions, cybersecurity, and 24/7 support for businesses in Dubai, Abu Dhabi, Sharjah.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://nocko.com"),
@@ -126,6 +127,7 @@ export default function RootLayout({
         />
       </head>
       <body className={montserrat.className}>
+        <LayoutScripts />
         <div id="root">
           {children}
           <WhatsAppFloatingButton phoneE164Digits="971542448888" />
