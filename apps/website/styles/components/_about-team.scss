@@ -45,8 +45,8 @@
   display: flex;
   flex-direction: column;
   background-color: $color-white;
-  border-radius: 10px;
-  border-top: 3px solid #3474ff; // фирменный синий, как у service-card--blue
+  border-radius: 8px;
+  border-left: 3px solid #3474ff; // та же тонкая линия, что у .service-card
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: box-shadow $transition-base, transform $transition-base;
@@ -55,6 +55,12 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
     transform: translateY(-2px);
   }
+
+  // Палитра карточек услуг, только на линии слева
+  &--blue { border-left-color: #3474ff; }
+  &--yellow { border-left-color: #ffcc2a; }
+  &--green { border-left-color: #11c979; }
+  &--cyan { border-left-color: #00aeff; }
 }
 
 // Photo full-width at top of card
@@ -62,7 +68,7 @@
   width: 100%;
   height: 160px;
   overflow: hidden;
-  background: linear-gradient(180deg, #eef2f8 0%, #e0e7ef 100%); // светлая подложка сайта
+  background-color: #f8f9fa; // нейтральная подложка, без цветных заливок
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -116,7 +122,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #2b5fd9; // синий ссылок и CTA
+  color: #666666; // нейтральный, цвет только на линии слева
   margin: 0 0 $spacing-sm;
 }
 

@@ -1,5 +1,6 @@
 
 interface TeamMember {
+  accent: 'blue' | 'yellow' | 'green' | 'cyan';
   name: string;
   role: string;
   certifications: string[];
@@ -11,6 +12,7 @@ interface TeamMember {
 // Стоковые лица с randomuser.me убраны: на странице «О нас» это подрывает доверие.
 const teamMembers: TeamMember[] = [
   {
+    accent: 'blue',
     name: 'Alex Petrov',
     role: 'Head of Infrastructure',
     certifications: ['CCNP Enterprise', 'Microsoft MCSE', 'CompTIA Network+'],
@@ -18,6 +20,7 @@ const teamMembers: TeamMember[] = [
     photo: '',
   },
   {
+    accent: 'green',
     name: 'Maria Smirnova',
     role: 'Cybersecurity Lead',
     certifications: ['CISSP', 'CEH', 'Fortinet NSE 7'],
@@ -25,6 +28,7 @@ const teamMembers: TeamMember[] = [
     photo: '',
   },
   {
+    accent: 'cyan',
     name: 'Denis Kovalev',
     role: 'Cloud & M365 Architect',
     certifications: ['Azure Solutions Architect', 'MS-700', 'AZ-104'],
@@ -32,6 +36,7 @@ const teamMembers: TeamMember[] = [
     photo: '',
   },
   {
+    accent: 'yellow',
     name: 'Aisha Al Mansoori',
     role: 'Client Success Manager',
     certifications: ['ITIL v4 Foundation', 'PMP', 'ServiceNow CSA'],
@@ -56,7 +61,7 @@ export default function AboutTeam() {
           {teamMembers.map((member) => (
             <article
               key={member.name}
-              className="about-team__card"
+              className={`about-team__card about-team__card--${member.accent}`}
             >
               <div className="about-team__photo-wrap">
                 {member.photo ? (
