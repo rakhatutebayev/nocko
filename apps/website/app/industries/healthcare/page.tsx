@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 const industryData = {
   hero: {
     title: 'IT Solutions for Healthcare Providers in the UAE',
-    subtitle: 'IT infrastructure for clinics and hospitals in Dubai and Abu Dhabi, designed around DoH, DHA and UAE health data rules',
+    subtitle: 'IT infrastructure for clinics and hospitals in Dubai and Abu Dhabi, built for DoH and DHA requirements',
     description:
       'EMR and EHR uptime, PACS storage, NABIDH and Malaffi connectivity, encrypted backups kept inside the UAE, and 24/7 support with a 15-minute remote response.',
   },

@@ -98,6 +98,7 @@
   &__title {
     color: $color-white;
     margin-bottom: $spacing-md;
+    text-wrap: balance; // ровные строки без одинокого слова в конце
     font-size: 1.75rem;
     line-height: 1.3;
     font-weight: 300;
@@ -109,6 +110,7 @@
   }
   
   &__subtitle {
+    text-wrap: balance;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: $spacing-md;
     font-weight: 400;
