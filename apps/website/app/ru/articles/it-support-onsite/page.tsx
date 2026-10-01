@@ -121,7 +121,7 @@ export default function ITSupportOnsitePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'ИТ Поддержка', href: '/ru/services/it-support' }, { label: 'Статья' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
               { href: '/ru/articles/it-support-remote', title: 'Удалённая ИТ-поддержка', description: 'Как NOCKO решает инциденты без выезда на объект.' },
               { href: '/ru/articles/it-support-monitoring', title: 'Мониторинг ИТ-инфраструктуры', description: 'Проактивный RMM-мониторинг для предотвращения сбоев.' },
               { href: '/ru/services/it-support', title: 'Услуги ИТ-поддержки', description: 'Полный спектр ИТ-поддержки по Дубаю и ОАЭ.' }

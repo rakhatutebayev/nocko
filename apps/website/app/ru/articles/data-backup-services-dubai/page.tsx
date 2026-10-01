@@ -151,7 +151,7 @@ export default function DataBackupServicesDubaiRuPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'Managed IT', href: '/ru/services/managed-it' }, { label: 'Резервное копирование данных' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
         <FAQAccordion

@@ -89,7 +89,7 @@ export default function CentralizedHelpdeskRuPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'ИТ Поддержка', href: '/ru/services/it-support' }, { label: 'Статья' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
               { href: '/ru/services/it-support', title: 'ИТ Поддержка', description: 'Комплексная ИТ-поддержка для бизнеса в ОАЭ.' },
               { href: '/ru/services/managed-it', title: 'Управляемые ИТ Услуги', description: 'Полностью управляемая ИТ-инфраструктура.' },
               { href: '/ru/services/cybersecurity', title: 'Кибербезопасность', description: 'Защита бизнеса от киберугроз в ОАЭ.' },

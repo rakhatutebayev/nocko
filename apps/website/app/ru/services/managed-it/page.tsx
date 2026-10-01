@@ -156,6 +156,7 @@ export default async function ManagedItPage() {
       />
       <HeaderWrapper />
       <ServicePageTemplate
+        locale="ru"
         content={content}
         breadcrumbs={[{ name: 'Услуги', url: '/ru/services' }, { name: 'Управляемые ИТ Услуги' }]}
         articleBlocks={service?.attributes.articleBlocks}

@@ -229,7 +229,7 @@ export default function ITSupportRuPage() {
           ctaText="Получить консультацию"
           ctaUrl="#contact"
         />
-        <RelatedServices services={[
+        <RelatedServices title="Смежные услуги" subtitle="Другие ИТ-услуги NOCKO для вашей инфраструктуры" services={[
           {
             title: 'ИТ поддержка в Дубае',
             url: '/ru/services/it-support',

@@ -141,6 +141,7 @@ export default async function CybersecurityPage() {
       />
       <HeaderWrapper />
       <ServicePageTemplate
+        locale="ru"
         content={content}
         breadcrumbs={[{ name: 'Услуги', url: '/ru/services' }, { name: 'Кибербезопасность' }]}
         articleBlocks={service?.attributes.articleBlocks}

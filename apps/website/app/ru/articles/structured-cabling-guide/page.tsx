@@ -131,7 +131,7 @@ export default function StructuredCablingGuidePage() {
             ]}
           />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
               { href: '/ru/articles/structured-cabling-fiber-optic', title: 'Оптоволоконные кабельные системы', description: 'Монтаж одномодового и многомодового оптоволокна в ОАЭ.' },
               { href: '/ru/articles/structured-cabling-retrofitting', title: 'Модернизация кабельной системы', description: 'Обновление устаревшей проводки в действующих офисных зданиях.' },
               { href: '/ru/services/structured-cabling', title: 'Услуги по СКС', description: 'Сертифицированный монтаж СКС по стандарту EIA/TIA 568-C в Дубае и ОАЭ.' }

@@ -134,7 +134,7 @@ export default function ItAmcGuidePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'IT AMC', href: '/ru/services/it-amc' }, { label: 'Руководство по IT AMC' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
 

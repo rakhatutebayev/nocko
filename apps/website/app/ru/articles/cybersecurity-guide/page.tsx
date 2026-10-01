@@ -139,7 +139,7 @@ export default function CybersecurityGuidePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'Кибербезопасность', href: '/ru/services/cybersecurity' }, { label: 'Полное руководство' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
 

@@ -143,7 +143,7 @@ export default function ITSupportGuidePageRu() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'ИТ Поддержка', href: '/ru/services/it-support' }, { label: 'Полное руководство' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
               { href: '/ru/articles/it-support-helpdesk', title: 'ITIL-тикетинг и SLA-процессы', description: 'Приоритеты P1–P4, метрика FCR и отчётность для руководства.' },
               { href: '/ru/articles/it-support-24-7', title: 'ИТ-поддержка 24/7', description: 'Что на самом деле означает круглосуточное покрытие в Дубае.' },
               { href: '/ru/services/it-support', title: 'Услуги ИТ-поддержки', description: 'Полный спектр ИТ-поддержки в Дубае и ОАЭ.' },

@@ -104,7 +104,7 @@ export default function CloudbankinguaePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'Облачные решения', href: '/ru/services/cloud' }, { label: 'Облако для банков в ОАЭ' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
 

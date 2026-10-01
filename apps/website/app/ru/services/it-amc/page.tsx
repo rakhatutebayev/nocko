@@ -137,6 +137,7 @@ export default async function ItAmcPage() {
       />
       <HeaderWrapper />
       <ServicePageTemplate
+        locale="ru"
         content={content}
         breadcrumbs={[{ name: 'Услуги', url: '/ru/services' }, { name: 'IT AMC' }]}
         articleBlocks={service?.attributes.articleBlocks}

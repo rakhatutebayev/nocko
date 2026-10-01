@@ -106,7 +106,7 @@ export default function ITSupportHelpdeskPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'ИТ Поддержка', href: '/ru/services/it-support' }, { label: 'Статья' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} relatedArticles={[
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} relatedArticles={[
               { href: '/ru/articles/it-support-remote', title: 'Удалённая ИТ-поддержка', description: 'Удалённое решение программных и сетевых проблем.' },
               { href: '/ru/articles/it-support-onsite', title: 'Выездная ИТ-поддержка', description: 'Инженеры выезжают в ваш офис в Дубае.' },
               { href: '/ru/services/it-support', title: 'Услуги ИТ-поддержки', description: 'Полный спектр ИТ-поддержки по Дубаю и ОАЭ.' }

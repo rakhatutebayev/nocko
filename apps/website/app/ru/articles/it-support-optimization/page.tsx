@@ -121,7 +121,7 @@ export default function ITSupportOptimizationPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'ИТ Поддержка', href: '/ru/services/it-support' }, { label: 'Статья' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
               { href: '/ru/articles/it-support-monitoring', title: 'Мониторинг ИТ-инфраструктуры', description: 'Проактивный RMM-мониторинг для бизнеса в Дубае.' },
               { href: '/ru/articles/it-support-helpdesk', title: 'Услуги ИТ-хелпдеска', description: 'Централизованный хелпдеск для обращений пользователей.' },
               { href: '/ru/services/it-support', title: 'Услуги ИТ-поддержки', description: 'Полный спектр ИТ-поддержки по Дубаю и ОАЭ.' }

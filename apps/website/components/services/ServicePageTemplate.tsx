@@ -23,7 +23,14 @@ interface ServicePageTemplateProps {
   articleBlocks?: any[];
   articleCards?: any[];
   geoSection?: ReactNode;
+  /** Язык служебных заголовков секций; по умолчанию английский */
+  locale?: 'en' | 'ru';
 }
+
+const SECTION_LABELS = {
+  en: { benefits: 'Reasons to Choose Us', resources: 'Check Out These Resources to Learn More', related: 'Related Services', relatedSub: 'Explore other IT infrastructure services we offer' },
+  ru: { benefits: 'Почему выбирают нас', resources: 'Полезные материалы по теме', related: 'Смежные услуги', relatedSub: 'Другие ИТ-услуги NOCKO для вашей инфраструктуры' },
+};
 
 export default function ServicePageTemplate({
   content,
@@ -31,7 +38,9 @@ export default function ServicePageTemplate({
   articleBlocks,
   articleCards,
   geoSection,
+  locale = 'en',
 }: ServicePageTemplateProps) {
+  const labels = SECTION_LABELS[locale];
   return (
     <main className="main" role="main">
       <Breadcrumbs hidden={true} items={breadcrumbs} />
@@ -56,13 +65,13 @@ export default function ServicePageTemplate({
       )}
 
       {content.benefits.length > 0 && (
-        <ServiceBenefits benefits={content.benefits} />
+        <ServiceBenefits title={labels.benefits} benefits={content.benefits} />
       )}
 
       {geoSection}
 
       {content.resources.length > 0 && (
-        <ServiceResources resources={content.resources} />
+        <ServiceResources title={labels.resources} resources={content.resources} />
       )}
 
       {content.faq && content.faq.length > 0 && (
@@ -82,7 +91,7 @@ export default function ServicePageTemplate({
       )}
 
       {content.relatedServices.length > 0 && (
-        <RelatedServices services={content.relatedServices} />
+        <RelatedServices title={labels.related} subtitle={labels.relatedSub} services={content.relatedServices} />
       )}
 
       {articleBlocks && articleBlocks.length > 0 && (

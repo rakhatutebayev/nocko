@@ -109,7 +109,7 @@ export default function ITConsultingGuidePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'ИТ Консалтинг', href: '/ru/services/it-consulting' }, { label: 'Полное руководство' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} relatedArticles={[
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} relatedArticles={[
     { href: '/ru/articles/it-consulting-strategy', title: 'IT-оценка', description: 'Отправная точка для любого IT-консалтингового проекта.' },
     { href: '/ru/articles/it-consulting-strategy', title: 'IT-стратегический консалтинг', description: 'IT-дорожные карты для организаций ОАЭ, согласованные с бизнесом.' },
     { href: '/ru/services/it-consulting', title: 'Услуги IT-консалтинга', description: 'Консультационный и архитектурный консалтинг для организаций ОАЭ.' }

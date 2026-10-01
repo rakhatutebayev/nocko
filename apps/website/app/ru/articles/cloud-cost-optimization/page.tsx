@@ -91,7 +91,7 @@ export default function CloudcostoptimizationPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'Облачные Решения', href: '/ru/services/cloud' }, { label: 'Статья' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
 

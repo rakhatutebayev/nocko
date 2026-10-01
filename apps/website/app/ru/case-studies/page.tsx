@@ -3,7 +3,7 @@ import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
 import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
 import CaseStudies from '@/components/sections/CaseStudies';
-import { defaultCaseStudies } from '@/lib/data/caseStudies';
+import { defaultCaseStudiesRu } from '@/lib/data/caseStudies';
 import { getCaseStudies } from '@/lib/api/strapi';
 
 export const metadata: Metadata = {
@@ -60,10 +60,7 @@ export default async function CaseStudiesPageRu() {
                   href: `/ru/case-studies/${cs.attributes.slug}`,
                   color: 'blue' as const,
                 }))
-              : defaultCaseStudies.map((cs) => ({
-                  ...cs,
-                  href: cs.href.replace('/case-studies/', '/ru/case-studies/'),
-                }))
+              : defaultCaseStudiesRu
           }
         />
       </main>

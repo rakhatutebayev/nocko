@@ -110,7 +110,7 @@ export default function FinanceBankingPage() {
         />
         <div className="container">
           <div className="article">
-            <ArticleContent intro={industryData.intro} blocks={industryData.blocks} />
+            <ArticleContent locale="ru" intro={industryData.intro} blocks={industryData.blocks} />
           </div>
         </div>
       </main>

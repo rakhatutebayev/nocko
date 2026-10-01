@@ -2,12 +2,26 @@
 
 import Image from 'next/image';
 
-export default function AboutVisionMission() {
+interface AboutVisionMissionProps {
+  title?: string;
+  quoteLine1?: string;
+  quoteLine2?: string;
+  description?: string;
+  tagline?: string;
+}
+
+export default function AboutVisionMission({
+  title = 'Our Vision & Mission',
+  quoteLine1 = 'We turn complexity into clarity.',
+  quoteLine2 = 'We make IT predictable, secure, and effortlessly reliable.',
+  description = 'Wherever your business operates, we ensure your systems stay stable, protected, and ready - without noise, without uncertainty, without interruptions.',
+  tagline = 'BUILT FOR TODAY. READY FOR TOMORROW',
+}: AboutVisionMissionProps) {
   return (
     <section className="about-vision-mission">
       <div className="container">
         <div className="about-vision-mission__content">
-          <h2 className="about-vision-mission__title">Our Vision & Mission</h2>
+          <h2 className="about-vision-mission__title">{title}</h2>
 
           <div className="about-vision-mission__quote-icon">
             <Image
@@ -22,20 +36,18 @@ export default function AboutVisionMission() {
           <div className="about-vision-mission__quote-block">
             <div className="about-vision-mission__quote-content">
               <h4 className="about-vision-mission__quote-text">
-                We turn complexity into clarity.
+                {quoteLine1}
                 <br />
-                We make IT predictable, secure, and effortlessly reliable.
+                {quoteLine2}
               </h4>
               <p className="about-vision-mission__quote-description">
-                Wherever your business operates, we ensure your systems stay stable,
-                protected, and ready — without noise, without uncertainty, without
-                interruptions.
+                {description}
               </p>
             </div>
           </div>
 
           <p className="about-vision-mission__subtitle">
-            BUILT FOR TODAY. READY FOR TOMORROW
+            {tagline}
           </p>
         </div>
       </div>

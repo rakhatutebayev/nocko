@@ -125,7 +125,7 @@ export default function HealthcarePage() {
         />
         <div className="container">
           <div className="article">
-            <ArticleContent intro={industryData.intro} blocks={industryData.blocks} />
+            <ArticleContent locale="ru" intro={industryData.intro} blocks={industryData.blocks} />
           </div>
         </div>
         <ServiceCTA

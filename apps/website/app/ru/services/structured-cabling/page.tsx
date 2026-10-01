@@ -149,6 +149,7 @@ export default async function StructuredCablingPage() {
       />
       <HeaderWrapper />
       <ServicePageTemplate
+        locale="ru"
         content={content}
         breadcrumbs={[{ name: 'Услуги', url: '/ru/services' }, { name: 'СКС и Монтаж Сетей' }]}
         articleBlocks={service?.attributes.articleBlocks}

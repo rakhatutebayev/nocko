@@ -2,14 +2,47 @@
 
 import { FormEvent, useState } from 'react';
 
+interface ContactFormLabels {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  submit: string;
+  sending: string;
+  success: string;
+  error: string;
+}
+
+export const CONTACT_FORM_LABELS_RU: ContactFormLabels = {
+  name: 'Имя *',
+  email: 'Email *',
+  phone: 'Телефон',
+  message: 'Сообщение *',
+  submit: 'Отправить',
+  sending: 'Отправляем...',
+  success: 'Спасибо, ваше сообщение отправлено. Мы ответим в рабочее время.',
+  error: 'Не удалось отправить сообщение. Попробуйте ещё раз или напишите в WhatsApp.',
+};
+
 interface ContactFormProps {
   title?: string;
   subtitle?: string;
+  labels?: ContactFormLabels;
 }
 
 export default function ContactForm({
   title = 'Get in Touch',
-  subtitle = "Ready to transform your business? Let's talk.",
+  subtitle = "Ready to talk about your IT? Leave a message and we will reply within one business day.",
+  labels = {
+    name: 'Name *',
+    email: 'Email *',
+    phone: 'Phone',
+    message: 'Message *',
+    submit: 'Send Message',
+    sending: 'Sending...',
+    success: 'Thank you! Your message has been sent successfully.',
+    error: 'Sorry, there was an error sending your message. Please try again.',
+  },
 }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: '',
@@ -65,7 +98,7 @@ export default function ContactForm({
         <form className="form" onSubmit={handleSubmit}>
           <div className="form__group">
             <label htmlFor="name" className="form__label">
-              Name *
+              {labels.name}
             </label>
             <input
               type="text"
@@ -82,7 +115,7 @@ export default function ContactForm({
 
           <div className="form__group">
             <label htmlFor="email" className="form__label">
-              Email *
+              {labels.email}
             </label>
             <input
               type="email"
@@ -99,7 +132,7 @@ export default function ContactForm({
 
           <div className="form__group">
             <label htmlFor="phone" className="form__label">
-              Phone
+              {labels.phone}
             </label>
             <input
               type="tel"
@@ -114,7 +147,7 @@ export default function ContactForm({
 
           <div className="form__group">
             <label htmlFor="message" className="form__label">
-              Message *
+              {labels.message}
             </label>
             <textarea
               id="message"
@@ -130,13 +163,13 @@ export default function ContactForm({
 
           {submitStatus === 'success' && (
             <div className="form__message form__message--success">
-              Thank you! Your message has been sent successfully.
+              {labels.success}
             </div>
           )}
 
           {submitStatus === 'error' && (
             <div className="form__message form__message--error">
-              Sorry, there was an error sending your message. Please try again.
+              {labels.error}
             </div>
           )}
 
@@ -145,7 +178,7 @@ export default function ContactForm({
             className="form__submit btn btn--primary"
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Sending...' : 'Send Message'}
+            {isSubmitting ? labels.sending : labels.submit}
           </button>
         </form>
       </div>

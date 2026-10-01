@@ -100,7 +100,7 @@ export default function HealthcareitbackupuaePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'Управляемые ИТ-услуги', href: '/ru/services/managed-it' }, { label: 'Резервное копирование данных в здравоохранении ОАЭ' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} />
           </div>
         </div>
 

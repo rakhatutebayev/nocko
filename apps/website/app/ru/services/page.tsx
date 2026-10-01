@@ -45,12 +45,16 @@ export default async function ServicesPageRu() {
         serviceType: service.attributes.title,
         color: 'blue' as const,
       }))
-    : undefined;
+    : [
+        { title: 'ИТ поддержка и обслуживание', description: 'Helpdesk 24/7, выезд инженера за 2 часа по Дубаю, абонентское обслуживание офисов.', href: '/ru/services/it-support', serviceType: 'ИТ поддержка', color: 'blue' as const },
+        { title: 'Управляемые ИТ-услуги', description: 'Полное ведение ИТ-инфраструктуры: мониторинг, NOC, безопасность и helpdesk по фиксированной цене.', href: '/ru/services/managed-it', serviceType: 'Управляемые ИТ-услуги', color: 'cyan' as const },
+        { title: 'Сети и СКС', description: 'Проектирование и монтаж корпоративных сетей, Cat6A и оптоволокно, тестирование Fluke.', href: '/ru/services/structured-cabling', serviceType: 'Сетевая инфраструктура', color: 'yellow' as const },
+        { title: 'Кибербезопасность', description: 'Межсетевые экраны, защита рабочих мест, резервное копирование и аудит безопасности.', href: '/ru/services/cybersecurity', serviceType: 'Кибербезопасность', color: 'red' as const },
+        { title: 'Облачные решения', description: 'Миграция в AWS и Azure, Microsoft 365, гибридная инфраструктура и резервное копирование.', href: '/ru/services/cloud', serviceType: 'Облачные решения', color: 'lightblue' as const },
+        { title: 'ИТ консалтинг', description: 'Аудит инфраструктуры, ИТ-стратегия, план модернизации и контроль бюджета.', href: '/ru/services/it-consulting', serviceType: 'ИТ консалтинг', color: 'green' as const },
+        { title: 'IT AMC', description: 'Годовой контракт на обслуживание серверов, сетей и рабочих станций с приоритетной поддержкой.', href: '/ru/services/it-amc', serviceType: 'IT AMC', color: 'blue' as const },
+      ];
 
-  // We could also pass a pre-translated static list if strapi fails, 
-  // but Services component already has default static Russian content?
-  // Let's assume Services component renders default English if undefined is passed.
-  // Wait, does Services component have Russian support? We'll see.
 
   return (
     <>
@@ -61,8 +65,12 @@ export default async function ServicesPageRu() {
           title="ИТ-услуги в ОАЭ: Сети, Облако, Безопасность и Поддержка"
           subtitle="Комплексные ИТ-решения для бизнеса по всей территории ОАЭ. Мы проектируем, строим и поддерживаем безопасную масштабируемую технологическую инфраструктуру, которая способствует росту бизнеса."
         />
-        {/* We might need to make Services component support ru prop if it uses hardcoded English data. */}
-        <Services services={services} />
+        <Services
+          title="ИТ-услуги NOCKO в ОАЭ"
+          subtitle="Проектируем, запускаем и обслуживаем ИТ-инфраструктуру компаний в Дубае, Абу-Даби и Шардже."
+          hiddenSuffix=" в ОАЭ"
+          services={services}
+        />
       </main>
       <Footer />
     </>

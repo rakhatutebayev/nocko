@@ -106,7 +106,7 @@ export default function ITConsultingBCDRePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'ИТ Консалтинг', href: '/ru/services/it-consulting' }, { label: 'Аварийное восстановление' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} relatedArticles={[
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} relatedArticles={[
     { href: '/ru/articles/it-consulting-strategy', title: 'IT-стратегический консалтинг', description: 'Стратегическое IT-планирование для обеспечения цифровых изменений.' },
     { href: '/ru/articles/it-consulting-roi', title: 'ROI IT-инвестиций', description: 'Измерение и обоснование возврата на вложения в технологии.' },
     { href: '/ru/services/cloud', title: 'Облачные услуги', description: 'Миграция в облако и инфраструктура для компаний ОАЭ.' }

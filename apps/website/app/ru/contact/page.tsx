@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
 import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
-import ContactForm from '@/components/sections/ContactForm';
+import ContactForm, { CONTACT_FORM_LABELS_RU } from '@/components/sections/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Контакты NOCKO, ИТ поддержка и решения в ОАЭ',
@@ -36,7 +36,11 @@ export default function ContactPageRu() {
           subtitle="Свяжитесь с NOCKO для получения ИТ-поддержки и консультаций в ОАЭ"
         />
         {/* ContactForm handles the actual form, we can just render the existing one */}
-        <ContactForm />
+        <ContactForm
+          title="Свяжитесь с нами"
+          subtitle="Расскажите о задаче, и мы ответим в течение одного рабочего дня."
+          labels={CONTACT_FORM_LABELS_RU}
+        />
       </main>
       <Footer />
     </>

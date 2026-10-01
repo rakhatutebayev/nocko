@@ -22,16 +22,31 @@ interface ArticleContentProps {
   blocks: ArticleBlock[];
   faq?: ArticleFAQItem[];
   relatedArticles?: RelatedArticle[];
+  /** Язык служебных подписей и блока «Смежные услуги»; по умолчанию английский */
+  locale?: 'en' | 'ru';
 }
 
-const DEFAULT_RELATED: RelatedArticle[] = [
-  { href: '/services/it-support', title: 'IT Support Services', description: 'Comprehensive IT support for UAE businesses.' },
-  { href: '/services/managed-it', title: 'Managed IT', description: 'Fully managed IT infrastructure and operations.' },
-  { href: '/services/cybersecurity', title: 'Cybersecurity', description: 'Multi-layered defenses against cyber threats.' },
-];
+const DEFAULT_RELATED: Record<'en' | 'ru', RelatedArticle[]> = {
+  en: [
+    { href: '/services/it-support', title: 'IT Support Services', description: 'IT support and helpdesk for UAE businesses.' },
+    { href: '/services/managed-it', title: 'Managed IT', description: 'Fully managed IT infrastructure and operations.' },
+    { href: '/services/cybersecurity', title: 'Cybersecurity', description: 'Multi-layered defenses against cyber threats.' },
+  ],
+  ru: [
+    { href: '/ru/services/it-support', title: 'ИТ поддержка', description: 'ИТ поддержка и helpdesk для бизнеса в ОАЭ.' },
+    { href: '/ru/services/managed-it', title: 'Управляемые ИТ-услуги', description: 'Полное обслуживание ИТ-инфраструктуры и операций.' },
+    { href: '/ru/services/cybersecurity', title: 'Кибербезопасность', description: 'Многоуровневая защита от киберугроз.' },
+  ],
+};
 
-export default function ArticleContent({ intro, blocks, faq, relatedArticles }: ArticleContentProps) {
-  const related = relatedArticles ?? DEFAULT_RELATED;
+const LABELS = {
+  en: { faq: 'Frequently Asked Questions', related: 'Related Services & Resources' },
+  ru: { faq: 'Частые вопросы', related: 'Смежные услуги и материалы' },
+};
+
+export default function ArticleContent({ intro, blocks, faq, relatedArticles, locale = 'en' }: ArticleContentProps) {
+  const related = relatedArticles ?? DEFAULT_RELATED[locale];
+  const labels = LABELS[locale];
   return (
     <article className="article section" itemScope itemType="https://schema.org/Article" itemProp="articleBody">
       <div className="container">
@@ -73,7 +88,7 @@ export default function ArticleContent({ intro, blocks, faq, relatedArticles }: 
       {faq && faq.length > 0 && (
         <div className="container">
           <div className="article__faq">
-            <h2 className="article__faq-title">Frequently Asked Questions</h2>
+            <h2 className="article__faq-title">{labels.faq}</h2>
             <dl className="article__faq-list">
               {faq.map((item, i) => (
                 <div key={i} className="article__faq-item">
@@ -88,7 +103,7 @@ export default function ArticleContent({ intro, blocks, faq, relatedArticles }: 
 
       {/* Related Articles for SEO Interlinking */}
       <div className="container" style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid #eaeaea' }}>
-        <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>Related Services & Resources</h3>
+        <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>{labels.related}</h3>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
           {related.map((item) => (
             <a key={item.href} href={item.href} style={{ display: 'block', padding: '1.5rem', border: '1px solid #e2e8f0', borderRadius: '8px', textDecoration: 'none', color: 'inherit', transition: 'box-shadow 0.2s' }}>

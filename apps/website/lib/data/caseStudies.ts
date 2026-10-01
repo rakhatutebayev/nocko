@@ -136,3 +136,47 @@ export const defaultCaseStudies: CaseStudy[] = [
     color: 'blue',
   },
 ];
+
+/** Русские заголовки для хаба /ru/case-studies (те же id, href и картинки). */
+const CASE_TITLES_RU: Record<string, string> = {
+  "projection": "Как Projection повысила надёжность ИТ благодаря выделенному AMC",
+  "solus": "Как Solus Insurance усилила защиту с помощью корпоративной кибербезопасности",
+  "fh": "Как FH Fundamental мигрировала в AWS UAE без простоев",
+  "scalini": "Как Scalini стандартизировала сетевую инфраструктуру в 5 ресторанах",
+  "gss": "Как Global Service Solution обеспечила ИТ-поддержку полётов 24/7",
+  "technohub": "Как TechnoHub перестроила ИТ-операции с полным Managed IT (MSP)",
+  "ransomware-recovery": "Победа над ransomware: восстановление за 4 часа",
+  "m365-audit": "Аудит M365: экономия 40% в год",
+  "it-consulting": "Как девелопер недвижимости в Дубае сократил ИТ-расходы на 35% благодаря ИТ-консалтингу",
+  "enterprise": "Как логистическое предприятие на 300 сотрудников объединило ИТ в 4 офисах ОАЭ",
+  "cybersecurity": "Как медицинская группа в ОАЭ прошла аудит HAAD без единого замечания",
+  "network-segmentation": "Как мультиформатная группа в Дубае защитила сеть с помощью сегментации и FortiGate",
+  "emr-backup": "Как клиника в ОАЭ автоматизировала резервное копирование EMR и отчётность",
+  "workspace-migration": "Как гостиничная группа в Дубае перенесла Google Workspace во время ребрендинга без простоев"
+};
+
+const CASE_TYPES_RU: Record<string, string> = {
+  "Structured Cabling": "СКС и сети",
+  "IT Support": "ИТ поддержка",
+  "Managed IT": "Управляемые ИТ-услуги",
+  "IT AMC": "IT AMC",
+  "Cybersecurity": "Кибербезопасность",
+  "Cloud": "Облако",
+  "Cloud Migration": "Миграция в облако",
+  "IT Consulting": "ИТ консалтинг",
+  "Healthcare IT": "ИТ для медицины",
+  "Network Security": "Сетевая безопасность",
+  "Data Backup": "Резервное копирование",
+  "Google Workspace": "Google Workspace",
+  "Microsoft 365": "Microsoft 365",
+  "Enterprise IT": "Корпоративные ИТ",
+  "Case Study": "Кейс"
+};
+
+export const defaultCaseStudiesRu: CaseStudy[] = defaultCaseStudies.map((cs) => ({
+  ...cs,
+  title: CASE_TITLES_RU[cs.id] ?? cs.title,
+  type: CASE_TYPES_RU[cs.type] ?? cs.type,
+  alt: CASE_TITLES_RU[cs.id] ?? cs.alt,
+  href: cs.href.replace('/case-studies/', '/ru/case-studies/'),
+}));

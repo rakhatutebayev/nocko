@@ -107,7 +107,7 @@ export default function ITConsultingROIPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'ИТ Консалтинг', href: '/ru/services/it-consulting' }, { label: 'ROI лицензирования' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} relatedArticles={[
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} relatedArticles={[
     { href: '/ru/articles/it-consulting-strategy', title: 'IT-стратегический консалтинг', description: 'IT-планирование для компаний ОАЭ с фокусом на ROI.' },
     { href: '/ru/articles/it-consulting-digital-transformation', title: 'Цифровая трансформация', description: 'Облачные и автоматизационные инвестиции с измеримым возвратом.' },
     { href: '/ru/services/it-consulting', title: 'Услуги IT-консалтинга', description: 'Консультационный и архитектурный консалтинг для организаций ОАЭ.' }

@@ -85,7 +85,7 @@ export default function StructuredcablingfiberopticPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'СКС', href: '/ru/services/structured-cabling' }, { label: 'Статья' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
               { href: '/ru/articles/structured-cabling-guide', title: 'Руководство по СКС', description: 'Полное руководство по структурированным кабельным системам для офисов ОАЭ.' },
               { href: '/ru/articles/structured-cabling-retrofitting', title: 'Модернизация кабельной системы', description: 'Обновление устаревшей инфраструктуры в работающих офисах.' },
               { href: '/ru/services/structured-cabling', title: 'Услуги по СКС', description: 'Сертифицированный монтаж СКС по стандарту EIA/TIA 568-C в Дубае и ОАЭ.' }

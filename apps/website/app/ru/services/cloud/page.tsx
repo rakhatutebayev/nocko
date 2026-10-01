@@ -156,6 +156,7 @@ export default async function CloudPage() {
       />
       <HeaderWrapper />
       <ServicePageTemplate
+        locale="ru"
         content={content}
         breadcrumbs={[{ name: 'Услуги', url: '/ru/services' }, { name: 'Облачные Решения' }]}
         articleBlocks={service?.attributes.articleBlocks}
