@@ -45,21 +45,43 @@
   display: flex;
   flex-direction: column;
   background-color: $color-white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow $transition-base;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow $transition-base, transform $transition-base;
 
   &:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+    transform: translateY(-2px);
   }
 }
 
 // Photo full-width at top of card
 .about-team__photo-wrap {
   width: 100%;
-  height: 200px;
+  height: 160px;
   overflow: hidden;
   background-color: #e0e7ef;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Аватар с инициалами, пока нет реальной фотографии
+.about-team__avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
+  font-family: $font-primary;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .about-team__photo {

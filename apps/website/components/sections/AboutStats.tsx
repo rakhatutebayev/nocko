@@ -30,8 +30,8 @@ const defaultStats: Stat[] = [
   },
   {
     icon: '/images/about/icon/response.svg',
-    text: 'Minutes to Respond',
-    alt: 'Minutes to Respond',
+    text: '15-Minute Remote Response',
+    alt: '15-minute remote response',
   },
 ];
 

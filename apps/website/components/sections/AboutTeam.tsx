@@ -1,4 +1,3 @@
-import Image from 'next/image';
 
 interface TeamMember {
   name: string;
@@ -9,16 +8,15 @@ interface TeamMember {
   borderColor: string;
 }
 
-// Фото получены через randomuser.me API с параметрами nat + gender:
-// Alex, Maria, Denis → nat=rs (Serbian/Slavic appearance)
-// Aisha → nat=ir (Iranian/Middle Eastern appearance)
+// photo: путь к реальной фотографии в public/images/team/ (пусто = аватар с инициалами).
+// Стоковые лица с randomuser.me убраны: на странице «О нас» это подрывает доверие.
 const teamMembers: TeamMember[] = [
   {
     name: 'Alex Petrov',
     role: 'Head of Infrastructure',
     certifications: ['CCNP Enterprise', 'Microsoft MCSE', 'CompTIA Network+'],
     bio: '12 years engineering enterprise networks across DIFC, DMCC, and Abu Dhabi. Led 30+ structured cabling projects and data center migrations in the UAE.',
-    photo: 'https://randomuser.me/api/portraits/men/43.jpg',
+    photo: '',
     borderColor: '#3474ff',
   },
   {
@@ -26,7 +24,7 @@ const teamMembers: TeamMember[] = [
     role: 'Cybersecurity Lead',
     certifications: ['CISSP', 'CEH', 'Fortinet NSE 7'],
     bio: 'Specialist in Zero Trust architecture and SOC operations. Designed security frameworks for DFSA-regulated firms and UAE DHA compliance requirements.',
-    photo: 'https://randomuser.me/api/portraits/women/84.jpg',
+    photo: '',
     borderColor: '#583bec',
   },
   {
@@ -34,7 +32,7 @@ const teamMembers: TeamMember[] = [
     role: 'Cloud & M365 Architect',
     certifications: ['Azure Solutions Architect', 'MS-700', 'AZ-104'],
     bio: '8 years designing hybrid cloud infrastructure for UAE enterprises. Delivered 15+ Microsoft 365 tenant migrations with Entra ID, Intune, and Azure Virtual Desktop.',
-    photo: 'https://randomuser.me/api/portraits/men/52.jpg',
+    photo: '',
     borderColor: '#3474ff',
   },
   {
@@ -42,7 +40,7 @@ const teamMembers: TeamMember[] = [
     role: 'Client Success Manager',
     certifications: ['ITIL v4 Foundation', 'PMP', 'ServiceNow CSA'],
     bio: 'Manages enterprise AMC and managed IT accounts across Dubai and Abu Dhabi. Oversees SLA compliance and quarterly business reviews for 20+ active contracts.',
-    photo: 'https://images.unsplash.com/photo-1622925492533-67508d80cc66?w=400&h=400&fit=crop&crop=face',
+    photo: '',
     borderColor: '#583bec',
   },
 ];
@@ -55,7 +53,7 @@ export default function AboutTeam() {
         <div className="about-team__header">
           <h2 className="about-team__title">Our Team</h2>
           <p className="about-team__subtitle">
-            Certified specialists with deep UAE market expertise — not generalists reading from scripts.
+            Certified engineers who know the UAE market, not generalists reading from scripts.
           </p>
         </div>
 
@@ -66,15 +64,15 @@ export default function AboutTeam() {
               className="about-team__card"
               style={{ borderTop: `3px solid ${member.borderColor}` }}
             >
-              <div className="about-team__photo-wrap">
-                <Image
-                  src={member.photo}
-                  alt={`${member.name} — ${member.role}`}
-                  width={120}
-                  height={120}
-                  className="about-team__photo"
-                  unoptimized
-                />
+              <div className="about-team__photo-wrap" style={{ background: `linear-gradient(135deg, ${member.borderColor}1a, ${member.borderColor}40)` }}>
+                {member.photo ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={member.photo} alt={`${member.name}, ${member.role}`} className="about-team__photo" loading="lazy" />
+                ) : (
+                  <span className="about-team__avatar" style={{ backgroundColor: member.borderColor }} aria-hidden="true">
+                    {member.name.split(' ').slice(0, 2).map((w) => w[0]).join('')}
+                  </span>
+                )}
               </div>
 
               <div className="about-team__body">

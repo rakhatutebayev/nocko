@@ -70,7 +70,14 @@ export default function AboutPageRu() {
           description="Мы присутствуем везде, где работает ваш бизнес — в каждой сети, каждом офисе, каждом процессе. Независимо от того, где вы находитесь и как быстро растете. Мы делаем ИТ-инфраструктуру предсказуемой и безопасной. Мы упрощаем сложные системы, наводим порядок и создаем основу, на которой компании могут работать быстрее, стабильнее и безопаснее."
         />
         {/* Placeholder translations for components can be implemented within the components or passed as props if designed for it */}
-        <AboutStats />
+        <AboutStats
+          stats={[
+            { icon: '/images/about/icon/plased.svg', text: '50+ клиентов в ОАЭ', alt: '50+ клиентов в ОАЭ' },
+            { icon: '/images/about/icon/99.svg', text: '99,9% SLA по доступности', alt: '99,9% SLA по доступности' },
+            { icon: '/images/about/icon/expertise.svg', text: '10+ лет опыта команды', alt: '10+ лет опыта команды' },
+            { icon: '/images/about/icon/response.svg', text: 'Удалённая реакция за 15 минут', alt: 'Удалённая реакция за 15 минут' },
+          ]}
+        />
         <AboutVisionMission
           title="Наша миссия"
           quoteLine1="Мы превращаем сложное в понятное."
