@@ -6,9 +6,9 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'ИТ Поддержка в Дубае | Управляемые ИТ Услуги Дубай',
+  title: 'ИТ Поддержка в Дубае, управляемые ИТ услуги',
   description:
-    'NOCKO предоставляет ИТ поддержку, сетевую инфраструктуру, облачные решения и кибербезопасность для бизнеса в Дубае — DIFC, Business Bay, DMCC, JAFZA и по всему ОАЭ.',
+    'ИТ поддержка, сетевая инфраструктура, облачные решения и кибербезопасность для бизнеса в Дубае, включая DIFC, Business Bay, DMCC и JAFZA.',
   keywords: [
     'ИТ поддержка Дубай',
     'управляемые ИТ услуги Дубай',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'ИТ Поддержка в Дубае | Управляемые ИТ Услуги',
+    title: 'ИТ Поддержка в Дубае, управляемые ИТ услуги',
     description:
       'NOCKO предоставляет ИТ поддержку, сетевую инфраструктуру, облачные решения и кибербезопасность для бизнеса в Дубае и ОАЭ.',
     type: 'website',

@@ -7,14 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Real Estate in UAE',
+  title: 'IT Solutions for Real Estate Companies in the UAE',
   description:
-    'Modern IT solutions for real estate companies in UAE. Property management systems, network infrastructure, cloud services, and 24/7 support for developers and agencies.',
+    'IT solutions for real estate companies in the UAE. Property management systems, network infrastructure, cloud services and 24/7 support for developers.',
   keywords:
     'IT solutions real estate UAE, property management IT Dubai, real estate network infrastructure, property technology UAE, real estate IT support',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'IT Solutions for Real Estate in UAE',
+    title: 'IT Solutions for Real Estate Companies in the UAE',
     description:
       'Modern IT solutions for real estate companies in UAE. Property management systems, network infrastructure, and cloud services.',
     type: 'article',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 const industryData = {
   hero: {
-    title: 'IT Solutions for Real Estate',
+    title: 'IT Solutions for Real Estate Companies in the UAE',
     subtitle: 'Technology Infrastructure for Property Developers, Agencies, and Management Companies',
     description: '',
   },

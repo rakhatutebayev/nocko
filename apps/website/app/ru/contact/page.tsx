@@ -5,13 +5,13 @@ import Hero from '@/components/sections/Hero';
 import ContactForm from '@/components/sections/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Контакты | ИТ Поддержка в ОАЭ',
+  title: 'Контакты NOCKO, ИТ поддержка и решения в ОАЭ',
   description:
-    'Свяжитесь с NOCKO для ИТ поддержки и решений в ОАЭ. Обращайтесь к нам по вопросам настройки сети, миграции в облако, кибербезопасности и круглосуточной технической поддержки 24/7.',
+    'Свяжитесь с NOCKO по вопросам ИТ поддержки в ОАЭ. Поможем с настройкой сети, миграцией в облако, кибербезопасностью и технической поддержкой 24/7.',
   keywords: 'контакты NOCKO, ИТ поддержка ОАЭ, Дубай, Абу-Даби, Шарджа',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'Контакты | ИТ Поддержка в ОАЭ',
+    title: 'Контакты NOCKO, ИТ поддержка и решения в ОАЭ',
     description: 'Свяжитесь с NOCKO для ИТ поддержки и решений в ОАЭ.',
     type: 'website',
   },

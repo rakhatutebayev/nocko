@@ -6,9 +6,9 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Company in Abu Dhabi | IT Support Services Abu Dhabi',
+  title: 'IT Company in Abu Dhabi | IT Support Services',
   description:
-    'Professional IT services in Abu Dhabi — IT support, network infrastructure, cloud solutions, cybersecurity, and managed IT services. NOCKO serves ADGM, Khalifa City, Mussafah, and all Abu Dhabi zones with 24/7 support.',
+    'IT company in Abu Dhabi offering IT support, network infrastructure, cloud and cybersecurity. NOCKO serves ADGM, Khalifa City and Mussafah day and night.',
   keywords: [
     'IT company Abu Dhabi',
     'IT support Abu Dhabi',
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IT Company in Abu Dhabi | IT Support Services',
     description:
-      'Professional IT services in Abu Dhabi — network, cloud, cybersecurity, and 24/7 managed IT support for businesses in ADGM, Khalifa City, and Mussafah.',
+      'Professional IT services in Abu Dhabi - network, cloud, cybersecurity, and 24/7 managed IT support for businesses in ADGM, Khalifa City, and Mussafah.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'IT Company in Abu Dhabi — NOCKO' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'IT Company in Abu Dhabi - NOCKO' }],
   },
   alternates: {
     canonical: '/locations/abu-dhabi',
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
 const abuDhabiContent = {
   hero: {
     title: 'IT Company in Abu Dhabi | IT Support & Solutions',
-    subtitle: 'Expert IT Services for Abu Dhabi Businesses — ADGM, Khalifa City & Mussafah',
+    subtitle: 'Expert IT Services for Abu Dhabi Businesses - ADGM, Khalifa City & Mussafah',
     description:
       'NOCKO provides professional IT support, network infrastructure, cloud solutions, and cybersecurity for businesses across Abu Dhabi. Fast response times, 24/7 availability, and UAE-qualified engineers.',
   },
   intro: {
     title: 'Why Abu Dhabi Businesses Choose NOCKO',
-    text: 'Abu Dhabi\'s business environment — from ADGM financial firms to Mussafah industrial companies and Khalifa City enterprises — demands IT infrastructure that is reliable, compliant, and scalable. NOCKO delivers managed IT services tailored to the Abu Dhabi regulatory landscape, including Central Bank of the UAE (CBUAE) IT governance requirements and ADGM operational standards. Our engineers are familiar with the specific connectivity, licensing, and data residency requirements that Abu Dhabi businesses face.',
+    text: 'Abu Dhabi\'s business environment - from ADGM financial firms to Mussafah industrial companies and Khalifa City enterprises - demands IT infrastructure that is reliable, compliant, and scalable. NOCKO delivers managed IT services tailored to the Abu Dhabi regulatory landscape, including Central Bank of the UAE (CBUAE) IT governance requirements and ADGM operational standards. Our engineers are familiar with the specific connectivity, licensing, and data residency requirements that Abu Dhabi businesses face.',
   },
   services: {
     title: 'IT Services for Abu Dhabi Businesses',
@@ -88,7 +88,7 @@ const abuDhabiContent = {
       {
         title: 'IT AMC',
         description:
-          'Annual maintenance contracts for Abu Dhabi businesses. Fixed-cost IT support, hardware maintenance, and priority response — no surprise invoices, no reactive-only firefighting.',
+          'Annual maintenance contracts for Abu Dhabi businesses. Fixed-cost IT support, hardware maintenance, and priority response - no surprise invoices, no reactive-only firefighting.',
         link: '/services/it-amc',
       },
     ],

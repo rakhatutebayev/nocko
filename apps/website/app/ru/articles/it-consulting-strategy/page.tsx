@@ -8,8 +8,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT-стратегия, оценка и дорожная карта для компаний ОАЭ',
-  description: 'Как компании ОАЭ строят IT-стратегию: структурированная оценка, консолидация вендоров, поэтапная дорожная карта с бюджетами в AED и управление для защиты ROI.',
+  title: 'IT-стратегия и дорожная карта для компаний ОАЭ',
+  description: 'Как компании ОАЭ строят IT-стратегию. Структурированная оценка, консолидация вендоров, поэтапная дорожная карта с бюджетами в AED и защита ROI.',
   robots: { index: true, follow: true },
   alternates: {
     canonical: '/ru/articles/it-consulting-strategy',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 const articleData = {
   hero: {
-    title: 'IT-стратегия, оценка и дорожная карта для компаний ОАЭ',
+    title: 'IT-стратегия и дорожная карта для компаний ОАЭ',
     subtitle: 'От задокументированного базового состояния до утверждённого советом директоров технологического плана',
     description: 'Полный алгоритм: аудит того, что у вас есть, определение направления развития IT и превращение стратегии в поэтапную дорожную карту с бюджетами в AED и реальным управлением.',
   },

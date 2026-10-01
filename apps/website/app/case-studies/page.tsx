@@ -8,7 +8,7 @@ import { getCaseStudies } from '@/lib/api/strapi';
 export const metadata: Metadata = {
   title: 'Case Studies | IT Success Stories in UAE',
   description:
-    'Real results from real businesses in UAE. See how companies have transformed their IT infrastructure with NOCKO solutions. Network upgrades, cloud migration, and IT support success stories.',
+    'Real results from businesses in the UAE. See how companies improved their IT with NOCKO, from network upgrades to cloud migration and IT support.',
   keywords:
     'IT case studies UAE, success stories Dubai, IT transformation UAE, network infrastructure case studies, cloud migration success',
   openGraph: {

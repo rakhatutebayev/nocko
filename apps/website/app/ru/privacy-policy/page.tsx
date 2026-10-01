@@ -4,8 +4,8 @@ import Footer from '@/components/layout/FooterRu';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Политика конфиденциальности',
-  description: 'Политика конфиденциальности NOCKO Information Technology. Узнайте, как мы собираем, используем и защищаем ваши персональные данные в соответствии с законодательством ОАЭ о защите данных.',
+  title: 'Политика конфиденциальности и защита данных',
+  description: 'Политика конфиденциальности NOCKO Information Technology. Как мы собираем, используем и защищаем ваши персональные данные по законодательству ОАЭ.',
   alternates: {
     canonical: '/ru/privacy-policy',
     languages: {
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
         data={{
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Главная', item: `${baseUrl}/ru` },
-            { '@type': 'ListItem', position: 2, name: 'Политика конфиденциальности', item: `${baseUrl}/ru/privacy-policy` },
+            { '@type': 'ListItem', position: 2, name: 'Политика конфиденциальности и защита данных', item: `${baseUrl}/ru/privacy-policy` },
           ],
         }}
       />
@@ -39,13 +39,13 @@ export default function PrivacyPolicyPage() {
         <section className="section section--light" style={{ paddingTop: '6rem' }}>
           <div className="container">
             <div className="section__content" style={{ maxWidth: '800px', margin: '0 auto' }}>
-              <h1 className="section__title">Политика конфиденциальности</h1>
+              <h1 className="section__title">Политика конфиденциальности и защита данных</h1>
               <p className="section__text" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
                 Последнее обновление: январь 2025
               </p>
 
               <h2>1. Введение</h2>
-              <p>NOCKO Information Technology LLC (&laquo;NOCKO&raquo;, &laquo;мы&raquo;, &laquo;нас&raquo; или &laquo;наш&raquo;) стремится защищать ваши персональные данные. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем и обеспечиваем безопасность информации при использовании вами нашего веб-сайта nocko.com или при обращении к нашим ИТ-услугам.</p>
+              <p>NOCKO Information Technology LLC (&laquo;NOCKO&raquo;, &laquo;мы&raquo;, &laquo;нас&raquo; или &laquo;наш&raquo;) стремится защищать ваши персональные данные. Настоящая Политика конфиденциальности и защита данных объясняет, как мы собираем, используем и обеспечиваем безопасность информации при использовании вами нашего веб-сайта nocko.com или при обращении к нашим ИТ-услугам.</p>
 
               <h2>2. Собираемые данные</h2>
               <p>Мы можем собирать следующие категории персональных данных:</p>

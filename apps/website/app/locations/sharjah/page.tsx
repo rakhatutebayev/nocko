@@ -6,9 +6,9 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Company in Sharjah | IT Support Services Sharjah',
+  title: 'IT Company in Sharjah | IT Support Services',
   description:
-    'Professional IT services in Sharjah — IT support, network infrastructure, cloud solutions, cybersecurity, and managed IT services. NOCKO serves SAIF Zone, Al Majaz, Industrial Area, and all Sharjah businesses with 24/7 support.',
+    'IT company in Sharjah offering IT support, network infrastructure, cloud and cybersecurity. NOCKO serves SAIF Zone, Al Majaz and Industrial Area 24/7.',
   keywords: [
     'IT company Sharjah',
     'IT support Sharjah',
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IT Company in Sharjah | IT Support Services',
     description:
-      'Professional IT services in Sharjah — network, cloud, cybersecurity, and 24/7 managed IT support for businesses in SAIF Zone, Al Majaz, and Industrial Area.',
+      'Professional IT services in Sharjah - network, cloud, cybersecurity, and 24/7 managed IT support for businesses in SAIF Zone, Al Majaz, and Industrial Area.',
     type: 'website',
     locale: 'en_AE',
     siteName: 'NOCKO Information Technology',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'IT Company in Sharjah — NOCKO' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'IT Company in Sharjah - NOCKO' }],
   },
   alternates: {
     canonical: '/locations/sharjah',
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
 const sharjahContent = {
   hero: {
     title: 'IT Company in Sharjah | IT Support & Solutions',
-    subtitle: 'Expert IT Services for Sharjah Businesses — SAIF Zone, Industrial Area & Al Majaz',
+    subtitle: 'Expert IT Services for Sharjah Businesses - SAIF Zone, Industrial Area & Al Majaz',
     description:
       'NOCKO provides professional IT support, network infrastructure, cloud solutions, and cybersecurity for businesses across Sharjah. Proximity to Dubai means fast on-site response, competitive pricing, and UAE-qualified engineers.',
   },
   intro: {
     title: 'IT Services Tailored for Sharjah\'s Business Environment',
-    text: 'Sharjah is home to one of the UAE\'s most diverse business ecosystems — from SAIF Zone\'s logistics and manufacturing companies to Al Majaz\'s professional services firms and Sharjah Media City\'s (Shams) creative businesses. Each sector has distinct IT infrastructure needs. NOCKO\'s experience across Sharjah\'s industrial, free zone, and commercial zones means we understand the specific connectivity, compliance, and operational requirements your business faces. Our Dubai base means we can reach any Sharjah location with an average 2-3 hour on-site response time.',
+    text: 'Sharjah is home to one of the UAE\'s most diverse business ecosystems - from SAIF Zone\'s logistics and manufacturing companies to Al Majaz\'s professional services firms and Sharjah Media City\'s (Shams) creative businesses. Each sector has distinct IT infrastructure needs. NOCKO\'s experience across Sharjah\'s industrial, free zone, and commercial zones means we understand the specific connectivity, compliance, and operational requirements your business faces. Our Dubai base means we can reach any Sharjah location with an average 2-3 hour on-site response time.',
   },
   services: {
     title: 'IT Services for Sharjah Businesses',

@@ -7,8 +7,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'The Guide to Cat6A vs Fiber Optic in UAE',
-  description: 'A deep dive into Cat6 vs Cat6A, the necessity of Fluke certification, and managing physical layer deployments for modern smart offices.',
+  title: 'The Guide to Cat6A vs Fiber Optic for UAE Offices',
+  description: 'A deep dive into Cat6 vs Cat6A, the need for Fluke certification, and managing physical layer deployments for modern smart offices in the UAE.',
   alternates: {
     canonical: '/articles/structured-cabling-fiber-vs-cat6a',
     languages: {
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
 
 const articleData = {
   hero: {
-    title: 'The Guide to Cat6A vs Fiber Optic',
+    title: 'The Guide to Cat6A vs Fiber Optic for UAE Offices',
     subtitle: 'Managing physical layer deployments',
-    description: 'A deep dive into Cat6 vs Cat6A, the necessity of Fluke certification, and managing physical layer deployments for modern smart offices.',
+    description: 'A deep dive into Cat6 vs Cat6A, the need for Fluke certification, and managing physical layer deployments for modern smart offices in the UAE.',
   },
-  intro: `The physical cabling layer is the absolute foundation of your entire IT infrastructure. A million-dirham Cisco server deployment and enterprise Wi-Fi 6E access points are completely useless if the underlying Ethernet cables suffer from severe packet loss, attenuation, or crosstalk. When designing a new corporate headquarters in Dubai or a massive industrial logistics facility in JAFZA, selecting the correct backbone transmission medium—Copper vs Fiber—is the most critical decision an IT Director will make.`,
+  intro: `The physical cabling layer is the absolute foundation of your entire IT infrastructure. A million-dirham Cisco server deployment and enterprise Wi-Fi 6E access points are completely useless if the underlying Ethernet cables suffer from severe packet loss, attenuation, or crosstalk. When designing a new corporate headquarters in Dubai or a massive industrial logistics facility in JAFZA, selecting the correct backbone transmission medium - Copper vs Fiber - is the most critical decision an IT Director will make.`,
   blocks: [
     {
       title: `The Limits of Copper: Why Cat6 is Obsolete for Backbones`,

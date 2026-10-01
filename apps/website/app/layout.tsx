@@ -92,7 +92,7 @@ export default function RootLayout({
     <html lang="en" className={montserrat.variable}>
       <head>
         {/* Hero background is applied via CSS image-set, so the preload scanner
-            can't discover it from the HTML — preload the LCP image explicitly. */}
+            can't discover it from the HTML - preload the LCP image explicitly. */}
         <link
           rel="preload"
           as="image"

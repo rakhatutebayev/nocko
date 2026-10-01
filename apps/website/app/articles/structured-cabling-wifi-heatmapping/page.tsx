@@ -9,7 +9,7 @@ import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Enterprise Wi-Fi Heatmapping Solutions in UAE',
-  description: 'Stop guessing where to place access points. Using industry-standard Ekahau mapping software, we conduct predictive and physical RF heatmapping of your floorplan. We account for glass partitions in Business Bay and concrete pillars in Mussafah, guaranteeing absolute zero Wi-Fi dead zones across your enterprise.',
+  description: 'Enterprise Wi-Fi heatmapping with Ekahau for Dubai and UAE offices. We run predictive and on-site RF surveys so your floorplan has no Wi-Fi dead zones.',
   alternates: {
     canonical: '/articles/structured-cabling-wifi-heatmapping',
     languages: {
@@ -25,13 +25,13 @@ const articleData = {
   hero: {
     title: 'Enterprise Wi-Fi Heatmapping Solutions',
     subtitle: 'Stop guessing where to place access points.',
-    description: 'Stop guessing where to place access points. Using industry-standard Ekahau mapping software, we conduct predictive and physical RF heatmapping of your floorplan. We account for glass partitions in Business Bay and concrete pillars in Mussafah, guaranteeing absolute zero Wi-Fi dead zones across your enterprise.',
+    description: 'Enterprise Wi-Fi heatmapping with Ekahau for Dubai and UAE offices. We run predictive and on-site RF surveys so your floorplan has no Wi-Fi dead zones.',
   },
-  intro: 'Stop guessing where to place access points. Using industry-standard Ekahau mapping software, we conduct predictive and physical RF heatmapping of your floorplan. We account for glass partitions in Business Bay and concrete pillars in Mussafah, guaranteeing absolute zero Wi-Fi dead zones across your enterprise.',
+  intro: 'Enterprise Wi-Fi heatmapping with Ekahau for Dubai and UAE offices. We run predictive and on-site RF surveys so your floorplan has no Wi-Fi dead zones.',
   blocks: [
     {
       title: 'Predictive Survey Before Installation',
-      text: '<p>Before installing a single access point, we import your architectural floor plan into Ekahau Site Survey and run a predictive RF simulation modelling signal propagation through your specific materials — glass partition attenuation (typically 3dB), concrete pillar blockage, and metal ceiling tracks common in Business Bay and DIFC fit-outs. This produces an optimal access point placement map with predicted signal strength at every desk position.</p><p>For large open-plan floors common in Dubai tech parks and co-working spaces, the simulation also models channel contention between adjacent APs, spacing placements to minimise co-channel interference that causes slow Wi-Fi even in areas with strong signal.</p>',
+      text: '<p>Before installing a single access point, we import your architectural floor plan into Ekahau Site Survey and run a predictive RF simulation modelling signal propagation through your specific materials - glass partition attenuation (typically 3dB), concrete pillar blockage, and metal ceiling tracks common in Business Bay and DIFC fit-outs. This produces an optimal access point placement map with predicted signal strength at every desk position.</p><p>For large open-plan floors common in Dubai tech parks and co-working spaces, the simulation also models channel contention between adjacent APs, spacing placements to minimise co-channel interference that causes slow Wi-Fi even in areas with strong signal.</p>',
       list: [
         'Floor plan import and Ekahau predictive RF simulation',
         'Material attenuation modelling: glass, concrete, metal, drywall',
@@ -42,11 +42,11 @@ const articleData = {
     },
     {
       title: 'Physical Validation Survey',
-      text: '<p>After installation, we conduct a physical walk survey with a Wi-Fi adapter and Ekahau Sidekick, walking every square metre of the floor plan to record actual signal strength, channel utilisation, and data rates. The resulting heatmap is overlaid on the floor plan and delivered to you as a PDF, documenting coverage quality down to individual meeting rooms and corner desks.</p><p>Any areas falling below the -65dBm minimum for corporate use (the threshold required for reliable 802.11ac voice calls and video conferencing) are flagged immediately and remediated by adjusting AP transmit power or adding an additional AP — included within the project scope.</p>',
+      text: '<p>After installation, we conduct a physical walk survey with a Wi-Fi adapter and Ekahau Sidekick, walking every square metre of the floor plan to record actual signal strength, channel utilisation, and data rates. The resulting heatmap is overlaid on the floor plan and delivered to you as a PDF, documenting coverage quality down to individual meeting rooms and corner desks.</p><p>Any areas falling below the -65dBm minimum for corporate use (the threshold required for reliable 802.11ac voice calls and video conferencing) are flagged immediately and remediated by adjusting AP transmit power or adding an additional AP - included within the project scope.</p>',
     },
     {
       title: 'Access Point Selection and Configuration',
-      text: '<p>Not all access points are suitable for UAE office environments. Consumer-grade APs (TP-Link, Netgear home units) lack the radio management capabilities needed for multi-AP deployments — they do not enforce client band steering, do not support 802.11r fast roaming for VoIP users walking between floors, and cannot report per-client association data needed for troubleshooting. We deploy Cisco Catalyst (Meraki), Aruba, or Ubiquiti UniFi enterprise APs sized to your client density, with centralised management for policy and firmware updates.</p>',
+      text: '<p>Not all access points are suitable for UAE office environments. Consumer-grade APs (TP-Link, Netgear home units) lack the radio management capabilities needed for multi-AP deployments - they do not enforce client band steering, do not support 802.11r fast roaming for VoIP users walking between floors, and cannot report per-client association data needed for troubleshooting. We deploy Cisco Catalyst (Meraki), Aruba, or Ubiquiti UniFi enterprise APs sized to your client density, with centralised management for policy and firmware updates.</p>',
     },
     
   ],
@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: "Why does our current Wi-Fi have dead zones even though we have many APs?",
-    answer: "More APs does not mean better Wi-Fi — poorly placed or misconfigured APs cause co-channel interference that degrades performance. The heatmap survey identifies exactly which APs need repositioning or reconfiguration.",
+    answer: "More APs does not mean better Wi-Fi - poorly placed or misconfigured APs cause co-channel interference that degrades performance. The heatmap survey identifies exactly which APs need repositioning or reconfiguration.",
   },
 ];
 

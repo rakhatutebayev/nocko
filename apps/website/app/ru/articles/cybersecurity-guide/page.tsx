@@ -8,8 +8,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Кибербезопасность для бизнеса в ОАЭ: полное руководство',
-  description: 'Полное руководство по кибербезопасности для бизнеса в ОАЭ: межсетевые экраны, защита конечных точек, шифрование, NESA и PDPL, реагирование на инциденты.',
+  title: 'Кибербезопасность для бизнеса в ОАЭ, руководство',
+  description: 'Руководство по кибербезопасности для бизнеса в ОАЭ. Межсетевые экраны, защита конечных точек, шифрование, требования NESA и PDPL, реакция на инциденты.',
   alternates: {
     canonical: '/ru/articles/cybersecurity-guide',
     languages: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 const articleData = {
   hero: {
-    title: 'Кибербезопасность для бизнеса в ОАЭ: полное руководство',
+    title: 'Кибербезопасность для бизнеса в ОАЭ, руководство',
     subtitle: 'Межсетевые экраны, защита конечных точек, шифрование данных, комплаенс ОАЭ, реагирование на инциденты и Zero Trust — всё в одном месте',
     description: 'Практичный многоуровневый план защиты для компаний Дубая и Абу-Даби любого масштаба.',
   },

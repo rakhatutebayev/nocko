@@ -9,7 +9,7 @@ import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Certified Cat6A & Fiber Optic Engineering in UAE',
-  description: 'Physical cabling is the absolute foundation of your corporate network; a single faulty termination can cripple an entire department. Our certified engineers design and pull high-density Cat6, Cat6A, and OM3/OM4 Fiber Optic infrastructure specifically rated for the extreme temperatures of UAE industrial zones and the aesthetic requirements of modern Dubai offices.',
+  description: 'Certified Cat6A and fiber optic cabling for UAE offices and industrial zones. We design and install Cat6, Cat6A and OM3/OM4 fiber for Dubai sites.',
   alternates: {
     canonical: '/articles/structured-cabling-fiber-optic',
     languages: {
@@ -24,15 +24,15 @@ const articleData = {
   hero: {
     title: 'Certified Cat6A & Fiber Optic Engineering',
     subtitle: 'Physical cabling is the absolute foundation of your corporate network',
-    description: 'Physical cabling is the absolute foundation of your corporate network; a single faulty termination can cripple an entire department. Our certified engineers design and pull high-density Cat6, Cat6A, and OM3/OM4 Fiber Optic infrastructure specifically rated for the extreme temperatures of UAE industrial zones and the aesthetic requirements of modern Dubai offices.',
+    description: 'Certified Cat6A and fiber optic cabling for UAE offices and industrial zones. We design and install Cat6, Cat6A and OM3/OM4 fiber for Dubai sites.',
   },
-  intro: 'Physical cabling is the absolute foundation of your corporate network; a single faulty termination can cripple an entire department. Our certified engineers design and pull high-density Cat6, Cat6A, and OM3/OM4 Fiber Optic infrastructure specifically rated for the extreme temperatures of UAE industrial zones and the aesthetic requirements of modern Dubai offices.',
+  intro: 'Certified Cat6A and fiber optic cabling for UAE offices and industrial zones. We design and install Cat6, Cat6A and OM3/OM4 fiber for Dubai sites.',
   blocks: [
     {
       title: 'Cat6A for High-Density Office Environments',
-      text: '<p>Cat6A supports 10Gbps throughput up to 100 metres, making it the current standard for new commercial fit-outs in Dubai where 10G desktop and PoE++ (90W) requirements are increasingly common. The augmented specification requires tighter cable construction tolerances — particularly alien crosstalk (ANEXT) rejection — which makes installation technique critical. Poorly installed Cat6A that is kinked, over-bent, or terminated without maintaining twist right to the connector fails ANEXT testing.</p><p>For UAE industrial environments (Mussafah, JAFZA, KIZAD), we specify Cat6A in low-smoke zero-halogen (LSZH) jackets rated to 75°C continuous operation, as standard PVC-jacketed cable degrades in the temperatures found inside enclosed industrial ducts during UAE summer months.</p>',
+      text: '<p>Cat6A supports 10Gbps throughput up to 100 metres, making it the current standard for new commercial fit-outs in Dubai where 10G desktop and PoE++ (90W) requirements are increasingly common. The augmented specification requires tighter cable construction tolerances - particularly alien crosstalk (ANEXT) rejection - which makes installation technique critical. Poorly installed Cat6A that is kinked, over-bent, or terminated without maintaining twist right to the connector fails ANEXT testing.</p><p>For UAE industrial environments (Mussafah, JAFZA, KIZAD), we specify Cat6A in low-smoke zero-halogen (LSZH) jackets rated to 75°C continuous operation, as standard PVC-jacketed cable degrades in the temperatures found inside enclosed industrial ducts during UAE summer months.</p>',
       list: [
-        'Cat6A supporting 10Gbps at 100 metres — future-proof for dense offices',
+        'Cat6A supporting 10Gbps at 100 metres - future-proof for dense offices',
         'LSZH-jacketed cable for UAE industrial zones and high-temperature environments',
         'All terminations maintaining cable twist right to keystone jack',
         'PoE++ (802.3bt) rated infrastructure for high-power devices',
@@ -41,11 +41,11 @@ const articleData = {
     },
     {
       title: 'Fibre Optic for Building Backbone and Long Runs',
-      text: '<p>Copper Cat6A reaches its limit at 100 metres — for backbone runs between IDF (Intermediate Distribution Frame) closets and the MDF (Main Distribution Frame), or between buildings in a campus environment, fibre is the only practical solution. We install OM3 and OM4 multimode fibre for intra-building runs (supporting 40G and 100G over distances up to 150 metres on OM4) and OS2 single-mode for inter-building or campus runs over 300 metres.</p><p>All fibre is terminated with LC connectors and fusion-spliced at any mid-run join points — mechanical splices are not used on new installations as their higher insertion loss degrades available link budget. Terminations are tested with an insertion loss metre and verified against the ANSI/TIA-568 maximum channel loss specification.</p>',
+      text: '<p>Copper Cat6A reaches its limit at 100 metres - for backbone runs between IDF (Intermediate Distribution Frame) closets and the MDF (Main Distribution Frame), or between buildings in a campus environment, fibre is the only practical solution. We install OM3 and OM4 multimode fibre for intra-building runs (supporting 40G and 100G over distances up to 150 metres on OM4) and OS2 single-mode for inter-building or campus runs over 300 metres.</p><p>All fibre is terminated with LC connectors and fusion-spliced at any mid-run join points - mechanical splices are not used on new installations as their higher insertion loss degrades available link budget. Terminations are tested with an insertion loss metre and verified against the ANSI/TIA-568 maximum channel loss specification.</p>',
     },
     {
       title: 'Cable Management and Labelling Standards',
-      text: '<p>A cable installation without disciplined management and labelling creates an operational liability — the next engineer who needs to trace a fault wastes hours rather than minutes, and untidy server rooms in Dubai accumulate the dust that kills fans and drives faster in UAE conditions. We install D-ring cable managers on all patch panels, route cables in dedicated trays separated from power runs, and apply TIA-606 compliant machine-printed labels at both ends of every run, matching the as-built documentation delivered at project handover.</p>',
+      text: '<p>A cable installation without disciplined management and labelling creates an operational liability - the next engineer who needs to trace a fault wastes hours rather than minutes, and untidy server rooms in Dubai accumulate the dust that kills fans and drives faster in UAE conditions. We install D-ring cable managers on all patch panels, route cables in dedicated trays separated from power runs, and apply TIA-606 compliant machine-printed labels at both ends of every run, matching the as-built documentation delivered at project handover.</p>',
     },
     
   ],
@@ -62,7 +62,7 @@ const faqItems = [
   },
   {
     question: "What is the difference between OM3 and OM4 fibre?",
-    answer: "OM4 supports higher bandwidth over longer distances — 40G up to 150 metres versus 100 metres for OM3. For intra-building runs in most Dubai offices, OM3 is sufficient. For distances over 100 metres or future 100G requirements, OM4 is the correct specification.",
+    answer: "OM4 supports higher bandwidth over longer distances - 40G up to 150 metres versus 100 metres for OM3. For intra-building runs in most Dubai offices, OM3 is sufficient. For distances over 100 metres or future 100G requirements, OM4 is the correct specification.",
   },
 ];
 

@@ -9,7 +9,7 @@ import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Logistics Warehouses to Corporate Hubs in UAE',
-  description: 'A massive logistics facility in JAFZA requires a vastly different physical layer than a glass-walled financial office in DIFC. We engineer tailored environments: deploying armored fiber for sprawling industrial floors, and aesthetic, under-floor plenum cabling for high-end corporate boardrooms.',
+  description: 'A JAFZA logistics warehouse in Dubai needs a different physical layer than a DIFC office. We install armored fiber for industrial floors and plenum cable.',
   alternates: {
     canonical: '/articles/structured-cabling-industrial',
     languages: {
@@ -25,9 +25,9 @@ const articleData = {
   hero: {
     title: 'Logistics Warehouses to Corporate Hubs',
     subtitle: 'Tailored infrastructure environments across all industries.',
-    description: 'A massive logistics facility in JAFZA requires a vastly different physical layer than a glass-walled financial office in DIFC. We engineer tailored environments: deploying armored fiber for sprawling industrial floors, and aesthetic, under-floor plenum cabling for high-end corporate boardrooms.',
+    description: 'A JAFZA logistics warehouse in Dubai needs a different physical layer than a DIFC office. We install armored fiber for industrial floors and plenum cable.',
   },
-  intro: 'A massive logistics facility in JAFZA requires a vastly different physical layer than a glass-walled financial office in DIFC. We engineer tailored environments: deploying armored fiber for sprawling industrial floors, and aesthetic, under-floor plenum cabling for high-end corporate boardrooms.',
+  intro: 'A JAFZA logistics warehouse in Dubai needs a different physical layer than a DIFC office. We install armored fiber for industrial floors and plenum cable.',
   blocks: [
     {
       title: 'Industrial Environments: JAFZA, KIZAD, and Mussafah',
@@ -42,7 +42,7 @@ const articleData = {
     },
     {
       title: 'Corporate and Financial Office Environments',
-      text: '<p>DIFC and ADGM offices require a very different approach — concealed infrastructure, aesthetic cable management, and minimal visible disruption to finished interiors. We install under-raised-floor plenum cabling in buildings with access floors, route cables through ceiling voids with professional fire-stopping at all penetration points, and use slim-profile surface trunking matched to the office interior finish where concealment is not possible.</p><p>Server room buildouts in corporate offices follow the TIA-942 data centre standards with hot/cold aisle separation for racks, dedicated cooling supply air through raised floor tiles, and structured labelling of all patch connections that allows any engineer to trace any connection in under 60 seconds.</p>',
+      text: '<p>DIFC and ADGM offices require a very different approach - concealed infrastructure, aesthetic cable management, and minimal visible disruption to finished interiors. We install under-raised-floor plenum cabling in buildings with access floors, route cables through ceiling voids with professional fire-stopping at all penetration points, and use slim-profile surface trunking matched to the office interior finish where concealment is not possible.</p><p>Server room buildouts in corporate offices follow the TIA-942 data centre standards with hot/cold aisle separation for racks, dedicated cooling supply air through raised floor tiles, and structured labelling of all patch connections that allows any engineer to trace any connection in under 60 seconds.</p>',
     },
     {
       title: 'Hospitality and Retail Environments',

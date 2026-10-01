@@ -9,7 +9,7 @@ import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Cloud FinOps и оптимизация облачных расходов в ОАЭ',
-  description: 'NOCKO сокращает расходы на AWS и Azure для бизнеса в ОАЭ на 30–50% за счёт Reserved Instances, устранения брошенных ресурсов и внедрения FinOps-политик тегирования — без потери производительности.',
+  description: 'NOCKO сокращает расходы на AWS и Azure для бизнеса в ОАЭ на 30-50% за счёт Reserved Instances, удаления брошенных ресурсов и FinOps-политик тегирования.',
   alternates: {
     canonical: '/ru/articles/cloud-cost-optimization',
     languages: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 const articleData = {
   hero: {
-    title: 'Cloud FinOps и оптимизация облачных расходов',
+    title: 'Cloud FinOps и оптимизация облачных расходов в ОАЭ',
     subtitle: 'Прекратите переплачивать за простаивающие AWS-серверы',
     description: 'Сокращение операционных затрат на вычисления на 30–50% с помощью Reserved Instances и автоматического масштабирования.',
   },

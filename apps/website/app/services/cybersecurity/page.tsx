@@ -7,14 +7,14 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity Services in Dubai | Data Protection & Cybersecurity UAE',
+  title: 'Cybersecurity Services Dubai | Data Protection UAE',
   description:
-    'Advanced cybersecurity services in Dubai and UAE. Firewall management, threat detection, data encryption, and security compliance for businesses. Expert security solutions for DIFC, JLT and Business Bay.',
+    'Cybersecurity services in Dubai and the UAE. Firewall management, threat detection, data encryption and security compliance for businesses in DIFC and JLT.',
   keywords:
     'cybersecurity Dubai, data protection UAE, IT security services Dubai, network security UAE, security compliance Dubai, threat detection UAE, cybersecurity company Dubai',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'Cybersecurity Services in Dubai | Data Protection & Cybersecurity UAE',
+    title: 'Cybersecurity Services Dubai | Data Protection UAE',
     description: 'Enterprise cybersecurity and data protection for businesses in Dubai and across the UAE.',
     type: 'website',
     locale: 'en_AE',

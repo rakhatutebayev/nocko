@@ -8,9 +8,9 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT AMC в ОАЭ: полное руководство',
+  title: 'IT AMC в ОАЭ, полное руководство по контрактам',
   description:
-    'Полное руководство по контрактам ИТ-обслуживания (AMC) в ОАЭ: цены в AED за пользователя и устройство, уровни SLA, покрытие оборудования, выбор подрядчика.',
+    'Полное руководство по контрактам ИТ-обслуживания (AMC) в ОАЭ. Цены в AED за пользователя и устройство, уровни SLA, покрытие оборудования, выбор подрядчика.',
   alternates: {
     canonical: '/ru/articles/it-amc-guide',
     languages: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 const articleData = {
   hero: {
-    title: 'IT AMC в ОАЭ: полное руководство',
+    title: 'IT AMC в ОАЭ, полное руководство по контрактам',
     subtitle: 'Цены в AED, уровни SLA, покрытие оборудования и структура контракта',
     description:
       'Всё, что нужно знать бизнесу в ОАЭ перед подписанием годового контракта технического обслуживания: что он покрывает, сколько стоит и как выбрать подрядчика.',

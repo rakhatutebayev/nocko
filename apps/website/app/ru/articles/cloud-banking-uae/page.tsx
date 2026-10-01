@@ -8,8 +8,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Облачные решения для банков в ОАЭ',
-  description: 'Как банки и финансовые организации ОАЭ безопасно переходят в облако: резидентность данных внутри ОАЭ, соответствие требованиям CBUAE, шифрование, высокая доступность и контролируемая миграция.',
+  title: 'Облачные решения для банков и финансов в ОАЭ',
+  description: 'Как банки и финансовые организации ОАЭ безопасно переходят в облако. Резидентность данных внутри ОАЭ, требования CBUAE, шифрование и контроль миграции.',
   alternates: {
     canonical: '/ru/articles/cloud-banking-uae',
     languages: {

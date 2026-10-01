@@ -7,14 +7,14 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Managed IT Services Dubai | Managed Service Provider UAE',
+  title: 'Managed IT Services Dubai | Managed Services UAE',
   description:
-    'Leading managed IT services provider in Dubai and UAE. 24/7 NOC monitoring, complete infrastructure management, managed security, and helpdesk for businesses in DIFC, DMCC, Business Bay and across UAE. Predictable monthly pricing from AED 2,500.',
+    'Managed IT services in Dubai and the UAE. 24/7 NOC monitoring, infrastructure management, managed security and helpdesk from AED 2,500 a month.',
   keywords:
     'managed IT services Dubai, managed IT services UAE, managed service provider Dubai, managed services providers UAE, IT managed services Dubai, managed IT services in Dubai, managed service providers in Dubai, IT outsourcing Dubai, managed IT infrastructure UAE',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'Managed IT Services Dubai | Managed Service Provider UAE',
+    title: 'Managed IT Services Dubai | Managed Services UAE',
     description: 'Dubai-based managed IT services provider. 24/7 NOC, complete infrastructure management, managed security for UAE businesses.',
     type: 'website',
     locale: 'en_AE',
@@ -35,14 +35,14 @@ export const revalidate = 3600;
 const fallback: MappedServiceContent = {
   hero: {
     title: 'Managed IT Services in Dubai & UAE',
-    subtitle: 'Trusted Managed Service Provider for Dubai Businesses — 24/7 NOC, Helpdesk & Complete IT Management',
+    subtitle: 'Trusted Managed Service Provider for Dubai Businesses - 24/7 NOC, Helpdesk & Complete IT Management',
     description:
-      'NOCKO is a Dubai-based managed IT services provider serving businesses across UAE free zones — DIFC, DMCC, DAFZA, JAFZA, Business Bay, and Abu Dhabi. We take full ownership of your IT infrastructure, monitoring, security, and support so your team can focus on growing your business.',
+      'NOCKO is a Dubai-based managed IT services provider serving businesses across UAE free zones - DIFC, DMCC, DAFZA, JAFZA, Business Bay, and Abu Dhabi. We take full ownership of your IT infrastructure, monitoring, security, and support so your team can focus on growing your business.',
   },
   firstSection: [
     {
       title: 'Complete IT Infrastructure Management',
-      text: 'We take ownership of your entire IT infrastructure — servers, networks, cloud services, and endpoints. Our team manages day-to-day operations, performs regular maintenance, and handles all hardware and software updates.',
+      text: 'We take ownership of your entire IT infrastructure - servers, networks, cloud services, and endpoints. Our team manages day-to-day operations, performs regular maintenance, and handles all hardware and software updates.',
       link: '/articles/managed-it-infrastructure',
       linkText: 'Infrastructure management details',
       image: '/images/services/managed-it-infrastructure.png',
@@ -50,7 +50,7 @@ const fallback: MappedServiceContent = {
     },
     {
       title: '24/7 NOC Monitoring & Alerting',
-      text: 'Our Network Operations Center monitors your systems around the clock. Intelligent alerting catches performance degradation, security threats, and hardware failures before they impact your business — often resolving issues before you know they exist.',
+      text: 'Our Network Operations Center monitors your systems around the clock. Intelligent alerting catches performance degradation, security threats, and hardware failures before they impact your business - often resolving issues before you know they exist.',
       link: '/articles/it-support-monitoring',
       linkText: 'NOC monitoring capabilities',
     },
@@ -71,7 +71,7 @@ const fallback: MappedServiceContent = {
   secondSection: [
     {
       title: 'Managed Backup & Disaster Recovery',
-      text: 'Business continuity starts with reliable backups. We design, implement, and continuously test your backup strategy — ensuring rapid recovery from ransomware, hardware failures, or natural disasters with defined RTOs and RPOs.',
+      text: 'Business continuity starts with reliable backups. We design, implement, and continuously test your backup strategy - ensuring rapid recovery from ransomware, hardware failures, or natural disasters with defined RTOs and RPOs.',
       link: '/articles/data-backup-services-dubai',
       linkText: 'Backup and DR planning',
       image: '/images/services/managed-it-security.png',
@@ -79,13 +79,13 @@ const fallback: MappedServiceContent = {
     },
     {
       title: 'Scalable IT That Grows With You',
-      text: 'Our managed services scale seamlessly with your business. Whether you\'re adding 10 users or opening a new office, we provision and configure infrastructure quickly — ensuring your IT always matches your business needs.',
+      text: 'Our managed services scale seamlessly with your business. Whether you\'re adding 10 users or opening a new office, we provision and configure infrastructure quickly - ensuring your IT always matches your business needs.',
       link: '/articles/managed-it-services-guide',
       linkText: 'Scalability approach',
     },
     {
       title: 'Co-Managed IT for Internal Teams',
-      text: 'Have an internal IT team? Our co-managed services supplement your team with additional expertise, specialized skills, and after-hours coverage — giving your IT staff the backup they need for complex projects.',
+      text: 'Have an internal IT team? Our co-managed services supplement your team with additional expertise, specialized skills, and after-hours coverage - giving your IT staff the backup they need for complex projects.',
       link: '/articles/managed-it-co-managed',
       linkText: 'Co-managed IT model',
     },
@@ -120,15 +120,15 @@ const fallback: MappedServiceContent = {
   faq: [
     {
       question: 'What are managed IT services and how do they work in Dubai?',
-      answer: 'Managed IT services means outsourcing your complete IT operation to a local provider like NOCKO. We install monitoring agents on your servers and devices, provide 24/7 NOC oversight, handle helpdesk requests, manage security, apply patches, and maintain your infrastructure — all for a fixed monthly fee. For Dubai businesses, this replaces the cost and hassle of hiring an in-house IT team.',
+      answer: 'Managed IT services means outsourcing your complete IT operation to a local provider like NOCKO. We install monitoring agents on your servers and devices, provide 24/7 NOC oversight, handle helpdesk requests, manage security, apply patches, and maintain your infrastructure - all for a fixed monthly fee. For Dubai businesses, this replaces the cost and hassle of hiring an in-house IT team.',
     },
     {
       question: 'What is the difference between managed IT services and IT support?',
-      answer: 'IT support is reactive — you call when something breaks. Managed IT services are proactive — we monitor your systems 24/7, detect and fix issues before they become outages, and manage your infrastructure continuously. A managed service agreement (MSA) covers everything for a predictable monthly fee, while break-fix IT support charges per incident.',
+      answer: 'IT support is reactive - you call when something breaks. Managed IT services are proactive - we monitor your systems 24/7, detect and fix issues before they become outages, and manage your infrastructure continuously. A managed service agreement (MSA) covers everything for a predictable monthly fee, while break-fix IT support charges per incident.',
     },
     {
       question: 'How much do managed IT services cost in Dubai?',
-      answer: 'Managed IT services pricing in Dubai depends on company size and scope. For a 20–50 user business, managed IT services typically start from AED 2,500–6,000 per month — covering 24/7 monitoring, helpdesk, patch management, and security. This is substantially less than the AED 12,000–18,000/month cost of a single in-house IT engineer in Dubai, and includes a full team with specialist expertise.',
+      answer: 'Managed IT services pricing in Dubai depends on company size and scope. For a 20–50 user business, managed IT services typically start from AED 2,500–6,000 per month - covering 24/7 monitoring, helpdesk, patch management, and security. This is substantially less than the AED 12,000–18,000/month cost of a single in-house IT engineer in Dubai, and includes a full team with specialist expertise.',
     },
     {
       question: 'Which UAE free zones do you serve as a managed IT provider?',
@@ -144,18 +144,18 @@ const fallback: MappedServiceContent = {
     },
     {
       question: 'Can you manage our cloud infrastructure alongside on-premise IT?',
-      answer: 'Yes. We manage hybrid environments as a single unified service — on-premise servers, cloud workloads (AWS, Azure, Google Cloud), SaaS platforms (Microsoft 365, Google Workspace), and network infrastructure. Your account manager has visibility across all environments through a single dashboard.',
+      answer: 'Yes. We manage hybrid environments as a single unified service - on-premise servers, cloud workloads (AWS, Azure, Google Cloud), SaaS platforms (Microsoft 365, Google Workspace), and network infrastructure. Your account manager has visibility across all environments through a single dashboard.',
     },
     {
       question: 'Do you offer co-managed IT for companies that have an internal IT team?',
-      answer: 'Yes. Co-managed IT is ideal for companies with 1–3 internal IT staff who need additional coverage, specialist expertise, or after-hours support. We work alongside your team, handling overflow tickets, complex projects, and 24/7 monitoring — without replacing your existing staff.',
+      answer: 'Yes. Co-managed IT is ideal for companies with 1–3 internal IT staff who need additional coverage, specialist expertise, or after-hours support. We work alongside your team, handling overflow tickets, complex projects, and 24/7 monitoring - without replacing your existing staff.',
     },
     {
       question: 'What SLAs do you offer for managed IT services in UAE?',
       answer: 'Our SLAs are tiered by severity. Critical incidents (network down, server failure) receive a 15-minute remote response and 2-hour on-site response for Dubai mainland locations. High severity incidents (single system failure, security alert) receive a 1-hour remote response. Standard requests are handled within 4 business hours. All SLAs are contractually guaranteed with financial penalties for non-compliance.',
     },
   ],
-  faqTitle: 'Managed IT Services Dubai — Frequently Asked Questions',
+  faqTitle: 'Managed IT Services Dubai - Frequently Asked Questions',
 };
 
 export default async function ManagedItPage() {

@@ -6,9 +6,9 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'ИТ Компания в Абу-Даби | ИТ Поддержка Абу-Даби',
+  title: 'ИТ Компания в Абу-Даби, ИТ поддержка и решения',
   description:
-    'Профессиональные ИТ услуги в Абу-Даби — ИТ поддержка, сетевая инфраструктура, облачные решения, кибербезопасность и управляемые ИТ услуги. NOCKO обслуживает ADGM, Khalifa City, Mussafah и все районы Абу-Даби с поддержкой 24/7.',
+    'ИТ компания в Абу-Даби с поддержкой 24/7. Сетевая инфраструктура, облако, кибербезопасность и управляемые ИТ услуги для ADGM, Khalifa City и Mussafah.',
   keywords: [
     'ИТ компания Абу-Даби',
     'ИТ поддержка Абу-Даби',

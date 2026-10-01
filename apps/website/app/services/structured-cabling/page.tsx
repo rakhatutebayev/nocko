@@ -7,14 +7,14 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Structured Cabling Companies Dubai | Network Cabling UAE',
+  title: 'Structured Cabling Companies Dubai | Cabling UAE',
   description:
-    'Leading structured cabling company in Dubai and UAE. Cat6, Cat6A, and fiber optic installation with Fluke certification. Network cabling for offices, data centers, and warehouses across DIFC, DMCC, JLT, Business Bay, and all UAE emirates.',
+    'Structured cabling company in Dubai and the UAE. Cat6, Cat6A and fiber optic installation with Fluke certification for offices, data centers and sites.',
   keywords:
     'structured cabling companies in dubai, network cabling company in dubai, structured cabling dubai, structured cabling solutions dubai, structured cabling uae, structured cabling companies in uae, network cabling companies, networking companies in uae, cabling installation dubai',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'Structured Cabling Companies Dubai | Network Cabling UAE',
+    title: 'Structured Cabling Companies Dubai | Cabling UAE',
     description: 'Top-rated structured cabling company in Dubai. Cat6, Cat6A, and fiber optic cabling with Fluke certification across UAE.',
     type: 'website',
     locale: 'en_AE',
@@ -35,9 +35,9 @@ export const revalidate = 3600;
 const fallback: MappedServiceContent = {
   hero: {
     title: 'Structured Cabling Companies in Dubai & UAE',
-    subtitle: 'Cat6, Cat6A & Fiber Optic Installation with Fluke Certification — UAE Network Cabling Specialists',
+    subtitle: 'Cat6, Cat6A & Fiber Optic Installation with Fluke Certification - UAE Network Cabling Specialists',
     description:
-      'NOCKO is a trusted structured cabling company in Dubai serving businesses, data centers, warehouses, and campuses across all UAE emirates. Our certified cabling engineers design, install, and certify Cat6, Cat6A, and fiber optic network infrastructure — every job backed by Fluke DSX-8000 testing and full documentation.',
+      'NOCKO is a trusted structured cabling company in Dubai serving businesses, data centers, warehouses, and campuses across all UAE emirates. Our certified cabling engineers design, install, and certify Cat6, Cat6A, and fiber optic network infrastructure - every job backed by Fluke DSX-8000 testing and full documentation.',
   },
   firstSection: [
     {
@@ -85,7 +85,7 @@ const fallback: MappedServiceContent = {
     },
     {
       title: 'Physical Security Integration',
-      text: 'Modern cabling infrastructure supports more than data. We integrate CCTV, access control, and intercom systems into your structured cabling framework — creating a unified physical security and data network.',
+      text: 'Modern cabling infrastructure supports more than data. We integrate CCTV, access control, and intercom systems into your structured cabling framework - creating a unified physical security and data network.',
       link: '/articles/structured-cabling-physical-security',
       linkText: 'Security system integration',
     },
@@ -101,14 +101,14 @@ const fallback: MappedServiceContent = {
     {
       type: 'CASE STUDY',
       title: 'Network Segmentation & FortiGate for a Dubai Group',
-      description: 'How we re-architected a flat network into segmented VLANs with a FortiGate edge and Cisco core — isolating POS, guest and back-office traffic.',
+      description: 'How we re-architected a flat network into segmented VLANs with a FortiGate edge and Cisco core - isolating POS, guest and back-office traffic.',
       image: '/images/services/cards/book.png',
       url: '/case-studies/network-segmentation',
       ctaText: 'Read the case study',
     },
     {
       type: 'CASE STUDY',
-      title: 'How Scalini Transformed Network Infrastructure Across 5 Locations',
+      title: 'How Scalini Standardized Its Network Across 5 Sites',
       description: 'Learn how Scalini restaurant chain upgraded their network infrastructure across 5 Dubai locations, reducing downtime by 95%.',
       image: '/images/services/cards/book.png',
       url: '/case-studies/scalini',
@@ -149,7 +149,7 @@ const fallback: MappedServiceContent = {
     },
     {
       question: 'How much does structured cabling cost in Dubai?',
-      answer: 'Structured cabling pricing in Dubai depends on the number of data points, cable type, building access complexity, and conduit requirements. As a rough guide: Cat6 cabling for a standard office floor (50 data points) typically ranges from AED 8,000–18,000 including materials, installation, and Fluke testing. Fiber optic backbone runs and data center cabling are scoped individually. NOCKO provides free site surveys and detailed proposals — contact us for a quote.',
+      answer: 'Structured cabling pricing in Dubai depends on the number of data points, cable type, building access complexity, and conduit requirements. As a rough guide: Cat6 cabling for a standard office floor (50 data points) typically ranges from AED 8,000–18,000 including materials, installation, and Fluke testing. Fiber optic backbone runs and data center cabling are scoped individually. NOCKO provides free site surveys and detailed proposals - contact us for a quote.',
     },
     {
       question: 'Do you provide network cabling for data centers in UAE?',
@@ -157,7 +157,7 @@ const fallback: MappedServiceContent = {
     },
     {
       question: 'How long does a structured cabling project take?',
-      answer: 'A standard office floor with 50 data points typically takes 2–3 working days including installation, testing, and documentation. A full floor of 150+ points takes 5–7 days. We plan all cabling projects around your business hours — most installation work can be done during weekends or evenings to minimize disruption. Cabling for a full office fit-out (500–1,000 points) is scoped as a multi-week project.',
+      answer: 'A standard office floor with 50 data points typically takes 2–3 working days including installation, testing, and documentation. A full floor of 150+ points takes 5–7 days. We plan all cabling projects around your business hours - most installation work can be done during weekends or evenings to minimize disruption. Cabling for a full office fit-out (500–1,000 points) is scoped as a multi-week project.',
     },
     {
       question: 'Can you cable buildings already occupied or during a live office renovation?',
@@ -165,14 +165,14 @@ const fallback: MappedServiceContent = {
     },
     {
       question: 'Do you cover all UAE emirates for structured cabling projects?',
-      answer: 'Yes. NOCKO provides structured cabling installation across all UAE emirates — Dubai (including all free zones: DIFC, DMCC, DAFZA, JAFZA, DIC, DMC), Abu Dhabi (ADGM, Khalifa Industrial Zone, Masdar City), Sharjah, Ajman, Ras Al Khaimah, and Fujairah. For large projects in northern emirates, our teams are mobilized from our Dubai base.',
+      answer: 'Yes. NOCKO provides structured cabling installation across all UAE emirates - Dubai (including all free zones: DIFC, DMCC, DAFZA, JAFZA, DIC, DMC), Abu Dhabi (ADGM, Khalifa Industrial Zone, Masdar City), Sharjah, Ajman, Ras Al Khaimah, and Fujairah. For large projects in northern emirates, our teams are mobilized from our Dubai base.',
     },
     {
       question: 'What is included in your structured cabling warranty?',
       answer: 'All NOCKO structured cabling installations come with a 15-year system warranty on Cat6A installations when using approved manufacturer components (Panduit, Belden, or CommScope). This warranty covers cabling performance and component defects. The warranty is voided if third-party contractors modify the cabling without authorization. Fluke DSX-8000 certification reports are provided as warranty documentation.',
     },
   ],
-  faqTitle: 'Structured Cabling Dubai — Frequently Asked Questions',
+  faqTitle: 'Structured Cabling Dubai - Frequently Asked Questions',
 };
 
 export default async function StructuredCablingPage() {

@@ -7,14 +7,14 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'IT Support Dubai | IT Support Companies in Dubai in UAE',
+  title: 'IT Support Dubai | IT Support Companies in Dubai',
   description:
-    'Top-rated IT support company in Dubai. 24/7 helpdesk, 2-hour on-site response, proactive monitoring, and managed IT support services for businesses in DIFC, DMCC, Business Bay, and across UAE. Free IT support assessment.',
+    'IT support company in Dubai with a 24/7 helpdesk, 2-hour on-site response and proactive monitoring for businesses in DIFC, DMCC and Business Bay.',
   keywords:
     'IT support Dubai, IT support companies in Dubai, IT support services Dubai, IT support company Dubai, IT services Dubai, managed IT support UAE, 24/7 IT support Dubai, helpdesk Dubai, IT services company Dubai, IT solutions provider Dubai',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'IT Support Dubai | IT Support Companies in Dubai in UAE',
+    title: 'IT Support Dubai | IT Support Companies in Dubai',
     description: 'Dubai-based IT support company. 24/7 helpdesk, 2-hour on-site response, and proactive monitoring for UAE businesses.',
     type: 'website',
     locale: 'en_AE',
@@ -31,9 +31,9 @@ export const revalidate = 3600;
 const fallback: MappedServiceContent = {
   hero: {
     title: 'IT Support Services in Dubai & UAE',
-    subtitle: 'Trusted IT Support Company for Dubai Businesses — 24/7 Helpdesk, 2-Hour On-Site Response',
+    subtitle: 'Trusted IT Support Company for Dubai Businesses - 24/7 Helpdesk, 2-Hour On-Site Response',
     description:
-      'NOCKO is a Dubai-based IT support company serving businesses across UAE free zones and business districts. We provide 24/7 remote helpdesk, on-site IT support across Dubai, Abu Dhabi, and Sharjah, proactive endpoint monitoring, and structured IT management — so your team stays productive and your IT stays running.',
+      'NOCKO is a Dubai-based IT support company serving businesses across UAE free zones and business districts. We provide 24/7 remote helpdesk, on-site IT support across Dubai, Abu Dhabi, and Sharjah, proactive endpoint monitoring, and structured IT management - so your team stays productive and your IT stays running.',
   },
   firstSection: [
     {
@@ -75,7 +75,7 @@ const fallback: MappedServiceContent = {
     },
     {
       title: 'IT Onboarding & Offboarding',
-      text: 'Streamline employee IT lifecycle management. We handle new hire setups, device provisioning, account creation, and secure offboarding — ensuring productivity from day one and security at departure.',
+      text: 'Streamline employee IT lifecycle management. We handle new hire setups, device provisioning, account creation, and secure offboarding - ensuring productivity from day one and security at departure.',
       link: '/articles/it-support-onboarding',
       linkText: 'Onboarding process',
     },
@@ -108,7 +108,7 @@ const fallback: MappedServiceContent = {
   faq: [
     {
       question: 'What IT support response times do you guarantee in Dubai?',
-      answer: 'Our SLA tiers: Critical (server down, network failure) — 15-minute remote response, 2-hour on-site in Dubai. High priority (single system failure, security incident) — 1-hour remote, 4-hour on-site. Standard requests — 4-hour remote, next business day on-site. All SLAs are contractually guaranteed. Abu Dhabi and Sharjah on-site response is typically same-day for critical issues.',
+      answer: 'Our SLA tiers: Critical (server down, network failure) - 15-minute remote response, 2-hour on-site in Dubai. High priority (single system failure, security incident) - 1-hour remote, 4-hour on-site. Standard requests - 4-hour remote, next business day on-site. All SLAs are contractually guaranteed. Abu Dhabi and Sharjah on-site response is typically same-day for critical issues.',
     },
     {
       question: 'How much does IT support cost for a business in Dubai?',
@@ -128,7 +128,7 @@ const fallback: MappedServiceContent = {
     },
     {
       question: 'Which industries do you provide IT support for in Dubai?',
-      answer: 'We provide IT support for businesses across all major sectors in the UAE: financial services (DIFC, ADGM regulated entities), real estate agencies, professional services (law firms, consulting), hospitality, healthcare clinics, logistics companies, and retail. Our team understands sector-specific compliance requirements — including DFSA technology risk guidelines for DIFC firms and NESA standards for government-adjacent entities.',
+      answer: 'We provide IT support for businesses across all major sectors in the UAE: financial services (DIFC, ADGM regulated entities), real estate agencies, professional services (law firms, consulting), hospitality, healthcare clinics, logistics companies, and retail. Our team understands sector-specific compliance requirements - including DFSA technology risk guidelines for DIFC firms and NESA standards for government-adjacent entities.',
     },
     {
       question: 'What is included in a monthly IT support contract?',
@@ -136,10 +136,10 @@ const fallback: MappedServiceContent = {
     },
     {
       question: 'How quickly can you start providing IT support for our business?',
-      answer: 'For remote helpdesk support, we can begin within 24–48 hours after contract signing. Full onboarding — including installing RMM monitoring agents, documenting your infrastructure, configuring access, and integrating your team into our ticketing system — typically takes 3–5 business days for companies with 20–100 users.',
+      answer: 'For remote helpdesk support, we can begin within 24–48 hours after contract signing. Full onboarding - including installing RMM monitoring agents, documenting your infrastructure, configuring access, and integrating your team into our ticketing system - typically takes 3–5 business days for companies with 20–100 users.',
     },
   ],
-  faqTitle: 'IT Support Dubai — Frequently Asked Questions',
+  faqTitle: 'IT Support Dubai - Frequently Asked Questions',
 };
 
 export default async function ItSupportPage() {

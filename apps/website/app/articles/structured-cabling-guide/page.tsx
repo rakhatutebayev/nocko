@@ -7,14 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Network Infrastructure & Structured Cabling Guide in UAE',
+  title: 'Structured Cabling Guide for UAE Offices',
   description:
-    'A complete guide to structured cabling, network infrastructure deployment, lifecycle management, and performance optimization for businesses in Dubai and the UAE.',
+    'A complete guide to structured cabling and network infrastructure for businesses in Dubai and the UAE, covering deployment, lifecycle and performance.',
   keywords:
     'structured cabling Dubai, network infrastructure UAE, Cat6A deployment, network lifecycle management, IT AMC hardware',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'Network Infrastructure & Structured Cabling Guide in UAE',
+    title: 'Structured Cabling Guide for UAE Offices',
     description:
       'A complete guide to structured cabling, deployment, and performance optimization for businesses in the UAE.',
     type: 'article',
@@ -42,7 +42,7 @@ const articleData = {
   blocks: [
     {
       title: '1. Industrial vs. Corporate Cabling (JAFZA vs. Business Bay)',
-      text: '<p>Deploying infrastructure in a high-rise corporate office in DIFC is fundamentally different from cabling a massive logistics warehouse in JAFZA or DIP. In corporate environments, the priority is density—running thousands of Cat6A cables tightly through raised floors to support Power over Ethernet (PoE) devices like VoIP phones and Wi-Fi 6 access points without causing cross-talk.</p><p>Conversely, industrial environments require heavy-duty deployment. Operating temperatures and electromagnetic interference (EMI) from factory equipment mean that standard Unshielded Twisted Pair (UTP) will fail. In these environments, we deploy Shielded Twisted Pair (STP) or armored OM4 fiber optics, suspended in robust hot-dip galvanized cable trays to ensure absolute longevity.</p>',
+      text: '<p>Deploying infrastructure in a high-rise corporate office in DIFC is fundamentally different from cabling a massive logistics warehouse in JAFZA or DIP. In corporate environments, the priority is density - running thousands of Cat6A cables tightly through raised floors to support Power over Ethernet (PoE) devices like VoIP phones and Wi-Fi 6 access points without causing cross-talk.</p><p>Conversely, industrial environments require heavy-duty deployment. Operating temperatures and electromagnetic interference (EMI) from factory equipment mean that standard Unshielded Twisted Pair (UTP) will fail. In these environments, we deploy Shielded Twisted Pair (STP) or armored OM4 fiber optics, suspended in robust hot-dip galvanized cable trays to ensure absolute longevity.</p>',
       list: [
         'Site surveys to document drop lengths (ensuring no copper run exceeds the strict 90-meter limit).',
         'Installation of high-density patch panels, cable management arms (CMA), and rigorous port labeling.',
@@ -66,7 +66,7 @@ const articleData = {
     },
     {
       title: '3. Datacenter Thermals and Rack Lifecycle Management',
-      text: '<p>Structured cabling and hardware constitute massive capital expenditures. Without an IT Annual Maintenance Contract (AMC), Dubai’s ubiquitous fine dust, failing server fans, and neglected software patches rapidly shorten hardware lifespans. Proper cable management directly impacts datacenter thermals—the "spaghetti" of unmanaged cables blocks server exhaust fans, causing CPUS to thermal throttle and crash.</p><p>Comprehensive AMC agreements guarantee strict physical maintenance. Quarterly physical visits check server rack thermals using infrared scanning, reorganize untidy patch cables restoring laminar airflow, and apply firmware updates to core routers before vulnerabilities are exploited.</p>',
+      text: '<p>Structured cabling and hardware constitute massive capital expenditures. Without an IT Annual Maintenance Contract (AMC), Dubai’s ubiquitous fine dust, failing server fans, and neglected software patches rapidly shorten hardware lifespans. Proper cable management directly impacts datacenter thermals - the "spaghetti" of unmanaged cables blocks server exhaust fans, causing CPUS to thermal throttle and crash.</p><p>Comprehensive AMC agreements guarantee strict physical maintenance. Quarterly physical visits check server rack thermals using infrared scanning, reorganize untidy patch cables restoring laminar airflow, and apply firmware updates to core routers before vulnerabilities are exploited.</p>',
       list: [
         'Implementation of hot-aisle/cold-aisle containment strategies in local server rooms.',
         'Routine hardware vacuuming and preventative thermal scanning on dense, high-load router racks.',

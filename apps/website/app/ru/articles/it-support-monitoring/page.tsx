@@ -8,8 +8,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Круглосуточный ИТ-мониторинг 24/7 в ОАЭ | NOC, SOC и RMM',
-  description: 'ИТ-мониторинг 24/7 в ОАЭ: NOC-мониторинг инфраструктуры, SOC-оповещения безопасности, EDR-защита конечных точек и реакция за 15 минут для бизнеса в Дубае.',
+  title: 'Круглосуточный ИТ-мониторинг 24/7 в ОАЭ, NOC и SOC',
+  description: 'ИТ-мониторинг 24/7 в ОАЭ для бизнеса в Дубае. NOC-мониторинг инфраструктуры, SOC-оповещения безопасности, EDR-защита конечных точек и реакция за 15 минут.',
   alternates: {
     canonical: '/ru/articles/it-support-monitoring',
     languages: {

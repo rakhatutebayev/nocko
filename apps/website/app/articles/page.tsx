@@ -9,7 +9,7 @@ import staticArticlesData from '@/lib/data/staticArticles.json';
 export const metadata: Metadata = {
   title: 'IT Blog & Expert Guides for UAE Business',
   description:
-    'Expert IT insights, guides, and articles from NOCKO. Learn about network infrastructure, cloud solutions, cybersecurity, IT support, and best practices for businesses in UAE.',
+    'Expert IT guides and articles from NOCKO for businesses in the UAE. Practical reading on network infrastructure, cloud, cybersecurity and IT support.',
   keywords:
     'IT blog UAE, IT articles Dubai, network infrastructure blog, cloud solutions articles, cybersecurity insights UAE',
   alternates: {

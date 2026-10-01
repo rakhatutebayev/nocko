@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Contact NOCKO | IT Support Dubai & UAE',
     description: 'Get in touch with NOCKO for IT support and solutions in UAE.',
     type: 'website',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Contact NOCKO — IT Support Dubai' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Contact NOCKO - IT Support Dubai' }],
   },
   alternates: {
     canonical: '/contact',
@@ -62,7 +62,7 @@ export default function ContactPage() {
       <main className="main" role="main">
         <Hero
           variant="service"
-          title="Contact NOCKO — IT Support in Dubai & UAE"
+          title="Contact NOCKO - IT Support in Dubai & UAE"
           subtitle="Get in touch with NOCKO for IT support and solutions in UAE"
         />
         <ContactForm />
@@ -93,7 +93,7 @@ export default function ContactPage() {
               </div>
               <div className="contact-info__map">
                 <iframe
-                  title="NOCKO Office — Wavez Residence, Dubai"
+                  title="NOCKO Office - Wavez Residence, Dubai"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.5!2d55.2708!3d25.0785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zV2F2ZXogUmVzaWRlbmNlLCBXYWRpIEFsIFNhZmEgMiwgRHViYWk!5e0!3m2!1sen!2sae!4v1"
                   width="100%"
                   height="300"

@@ -8,8 +8,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Резервное копирование данных в Дубае | Облачный бэкап и восстановление',
-  description: 'Профессиональные услуги резервного копирования данных в Дубае. Управляемый облачный бэкап, иммутабельное хранилище, disaster recovery для бизнеса в ОАЭ. Veeam, Azure Backup, AWS — с соответствием NESA и ежеквартальным тестированием восстановления.',
+  title: 'Резервное копирование данных в Дубае, облачный бэкап',
+  description: 'Резервное копирование данных в Дубае для бизнеса в ОАЭ. Управляемый облачный бэкап, иммутабельное хранилище и disaster recovery на Veeam, Azure и AWS.',
   alternates: {
     canonical: '/ru/articles/data-backup-services-dubai',
     languages: {

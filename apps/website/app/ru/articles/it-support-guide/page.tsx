@@ -8,8 +8,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'ИТ-поддержка в ОАЭ: полное руководство по моделям, SLA и ценам',
-  description: 'Полное руководство по ИТ-поддержке в ОАЭ: хелпдеск, удалённая и выездная поддержка, SLA 24/7, мониторинг, онбординг и расчёт стоимости аутсорсинга в AED.',
+  title: 'ИТ-поддержка в ОАЭ, руководство по моделям и ценам',
+  description: 'Полное руководство по ИТ-поддержке в ОАЭ. Хелпдеск, удалённая и выездная поддержка, SLA 24/7, мониторинг, онбординг и расчёт стоимости аутсорсинга в AED.',
   alternates: {
     canonical: '/ru/articles/it-support-guide',
     languages: {

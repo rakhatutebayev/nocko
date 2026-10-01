@@ -8,8 +8,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Выездная ИТ-поддержка в Дубае | Отправка инженеров по ОАЭ',
-  description: 'NOCKO отправляет сертифицированных выездных инженеров в DIFC, Business Bay, JLT, DSO и Абу-Даби в рамках оговорённых SLA. Замена оборудования, работы в стойке, структурированные кабельные системы и устранение аварий на месте.',
+  title: 'Выездная ИТ-поддержка в Дубае и по всем ОАЭ',
+  description: 'Выездная ИТ-поддержка в Дубае, DIFC, Business Bay, JLT, DSO и Абу-Даби в рамках SLA. Замена оборудования, работы в стойке и устранение аварий на месте.',
   alternates: {
     canonical: '/ru/articles/it-support-onsite',
     languages: {

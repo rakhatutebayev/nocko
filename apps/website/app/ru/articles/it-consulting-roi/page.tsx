@@ -7,8 +7,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Оптимизация лицензирования Microsoft 365 и ROI',
-  description: 'Перестаньте переплачивать за Microsoft 365 и Azure в Дубае. NOCKO проводит детальный аудит лицензирования для максимизации ROI IT и устранения дублирующихся расходов на ПО.',
+  title: 'Оптимизация лицензирования Microsoft 365 и ROI в ОАЭ',
+  description: 'Перестаньте переплачивать за Microsoft 365 и Azure в Дубае. NOCKO проводит аудит лицензирования, чтобы повысить ROI и убрать дублирующиеся расходы на ПО.',
   alternates: {
     canonical: '/ru/articles/it-consulting-roi',
     languages: {

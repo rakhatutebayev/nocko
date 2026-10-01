@@ -7,8 +7,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Hardware Lifecycle Management in UAE',
-  description: 'An executive breakdown of why saving $500 on a cheap AMC contract will cost you $50,000 during a 3-day server outage due to aging hardware.',
+  title: 'Hardware Lifecycle Management in Your IT AMC in UAE',
+  description: 'An executive breakdown of why saving $500 on a cheap AMC contract in the UAE will cost you $50,000 during a 3-day server outage caused by aging hardware.',
   alternates: {
     canonical: '/articles/it-amc-hardware-lifecycle',
     languages: {
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
 
 const articleData = {
   hero: {
-    title: 'Hardware Lifecycle Management',
+    title: 'Hardware Lifecycle Management in Your IT AMC',
     subtitle: 'Calculate your true downtime cost',
-    description: 'An executive breakdown of why saving $500 on a cheap AMC contract will cost you $50,000 during a 3-day server outage due to aging hardware.',
+    description: 'An executive breakdown of why saving $500 on a cheap AMC contract in the UAE will cost you $50,000 during a 3-day server outage caused by aging hardware.',
   },
   intro: `It is a troublingly common sight in Dubai SME server rooms: critical ERP databases and active directory domains running on dusty, 8-year-old Dell PowerEdge servers with flashing amber lights on the RAID array. Businesses often stretch the lifespan of their physical hardware well beyond manufacturer recommendations to avoid Capital Expenditure (CapEx). However, this "save money now" approach creates a ticking time bomb of unquantifiable operational risk.`,
   blocks: [
@@ -38,7 +38,7 @@ const articleData = {
     },
     {
       title: `Implementing Structured Hardware Refresh Cycles`,
-      text: `<p>Proper Hardware Lifecycle Management eliminates this uncertainty and chaos. At NOCKO, we utilize advanced RMM (Remote Monitoring and Management) tools to track the exact warranty status, CPU generation, and deployment age of every switch, firewall, and server in your environment. We implement a strict rolling 3-to-5 year replacement roadmap.</p><p>This structured approach allows CFOs to predict their IT CapEx accurately years in advance and spread the cost logically, rather than being hit with a $30,000 emergency replacement invoice on a random Tuesday when a core switch detonates.</p>`,
+      text: `<p>Proper Hardware Lifecycle Management in Your IT AMC eliminates this uncertainty and chaos. At NOCKO, we utilize advanced RMM (Remote Monitoring and Management) tools to track the exact warranty status, CPU generation, and deployment age of every switch, firewall, and server in your environment. We implement a strict rolling 3-to-5 year replacement roadmap.</p><p>This structured approach allows CFOs to predict their IT CapEx accurately years in advance and spread the cost logically, rather than being hit with a $30,000 emergency replacement invoice on a random Tuesday when a core switch detonates.</p>`,
     },
     {
       title: `The Environmental and Efficiency Factors`,

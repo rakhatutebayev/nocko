@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Co-Managed IT: The Best of Both Worlds in UAE',
-  description: 'A guide for IT Directors on how to effectively outsource tedious NOC alerts while maintaining control of corporate strategy. We integrate directly with your internal team.',
+  description: 'A guide for IT directors on handing routine NOC alerts to a co-managed IT partner while keeping control of strategy. We work with your team in the UAE.',
   alternates: {
     canonical: '/articles/managed-it-co-managed',
     languages: {
@@ -24,13 +24,13 @@ const articleData = {
   hero: {
     title: 'Co-Managed IT: The Best of Both Worlds',
     subtitle: 'Outsource tedious NOC alerts while maintaining control',
-    description: 'A guide for IT Directors on how to effectively outsource tedious NOC alerts while maintaining control of corporate strategy. We integrate directly with your internal team.',
+    description: 'A guide for IT directors on handing routine NOC alerts to a co-managed IT partner while keeping control of strategy. We work with your team in the UAE.',
   },
   intro: `For many mid-to-large enterprises in Dubai and Abu Dhabi, completely outsourcing the IT department isn\'t an option. You already have a skilled IT Director, a CIO, or a capable internal Helpdesk managing day-to-line operations. However, your high-value internal team shouldn\'t be wasting their hours on reactive password resets, midnight server patching, or monitoring firewall telemetry. This is where a Co-Managed IT (Co-MIT) strategy becomes a massive competitive advantage. By hybridizing your IT approach, you combine the institutional knowledge of your internal staff with the massive scale, 24/7 availability, and specialized cybersecurity expertise of a Managed Service Provider (MSP).`,
   blocks: [
     {
       title: `Augmenting, Not Replacing, Your Team`,
-      text: `<p>Co-Managed IT is fundamentally a partnership. We act as an extension of your existing IT department, filling in the crucial operational gaps that drain your team\'s energy. Typically, NOCKO assumes responsibility for the tedious backend operations: <strong>24/7 NOC (Network Operations Center) monitoring</strong>, automated patch management across servers and endpoints, and daily off-site backup verification.</p><p>This division of labor completely frees your internal IT Director to focus on what actually matters—strategic digital transformation, ERP software integration, analyzing workflow efficiencies, and driving direct business revenue. When your internal team stops fighting fires, they start building infrastructure.</p>`,
+      text: `<p>Co-Managed IT is fundamentally a partnership. We act as an extension of your existing IT department, filling in the crucial operational gaps that drain your team\'s energy. Typically, NOCKO assumes responsibility for the tedious backend operations: <strong>24/7 NOC (Network Operations Center) monitoring</strong>, automated patch management across servers and endpoints, and daily off-site backup verification.</p><p>This division of labor completely frees your internal IT Director to focus on what actually matters - strategic digital transformation, ERP software integration, analyzing workflow efficiencies, and driving direct business revenue. When your internal team stops fighting fires, they start building infrastructure.</p>`,
     },
     {
       title: `Solving the Level 1 Helpdesk Bottleneck`,
@@ -38,7 +38,7 @@ const articleData = {
     },
     {
       title: `Eliminating Shadow IT and Skill Gaps`,
-      text: `<p>Technology evolves faster than internal training budgets allow. When internal teams lack highly specialized knowledge—such as configuring Azure Zero Trust architectures, performing deep-packet firewall inspection, or executing forensic incident response—they often rely on expensive, unvetted ad-hoc contractors. This leads to fragmented infrastructure and dangerous "Shadow IT."</p><p>A Co-Managed agreement grants your team immediate, flat-rate access to our entire bench of Senior Cloud Architects and Cybersecurity Analysts in the UAE. You effectively close any technical skill gaps instantly without the immense cost of hiring a full-time, in-house Cloud Security Engineer.</p>`,
+      text: `<p>Technology evolves faster than internal training budgets allow. When internal teams lack highly specialized knowledge - such as configuring Azure Zero Trust architectures, performing deep-packet firewall inspection, or executing forensic incident response - they often rely on expensive, unvetted ad-hoc contractors. This leads to fragmented infrastructure and dangerous "Shadow IT."</p><p>A Co-Managed agreement grants your team immediate, flat-rate access to our entire bench of Senior Cloud Architects and Cybersecurity Analysts in the UAE. You effectively close any technical skill gaps instantly without the immense cost of hiring a full-time, in-house Cloud Security Engineer.</p>`,
     },
     {
       title: `Strategic vCIO Consulting and Roadmapping`,
@@ -46,7 +46,7 @@ const articleData = {
     },
     {
       title: `24/7/365 Coverage and Holiday Rotations`,
-      text: `<p>Internal IT staff need vacations, get sick, and go home at 6:00 PM. But cyber threats and server failures don\'t operate on Dubai business hours. Our Co-Managed model provides a seamless handover. At the end of the business day, our 24/7 Security Operations Center (SOC) takes the watch. If a critical server goes offline at 3:00 AM on a Sunday, our automated systems detect it, and our engineers begin remediation immediately—ensuring everything is online before your staff arrives on Monday morning.</p>`,
+      text: `<p>Internal IT staff need vacations, get sick, and go home at 6:00 PM. But cyber threats and server failures don\'t operate on Dubai business hours. Our Co-Managed model provides a seamless handover. At the end of the business day, our 24/7 Security Operations Center (SOC) takes the watch. If a critical server goes offline at 3:00 AM on a Sunday, our automated systems detect it, and our engineers begin remediation immediately - ensuring everything is online before your staff arrives on Monday morning.</p>`,
     }
   ],
 };

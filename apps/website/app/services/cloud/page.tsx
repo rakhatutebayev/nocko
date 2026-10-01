@@ -7,9 +7,9 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Cloud Migration Services UAE | Cloud Provider Dubai | AWS & Azure',
+  title: 'Cloud Migration Services UAE | AWS & Azure Dubai',
   description:
-    'Leading cloud migration services provider in Dubai and UAE. Zero-downtime migration to AWS and Azure, cloud infrastructure setup, FinOps cost optimization, and DRaaS backup. Certified cloud architects for DIFC, DMCC, and Business Bay businesses.',
+    'Cloud migration services in Dubai and the UAE. Zero-downtime moves to AWS and Azure, cloud setup, FinOps cost control and DRaaS backup by certified staff.',
   keywords:
     'cloud migration services UAE, cloud migration provider Dubai, cloud services Dubai, cloud migration Dubai, cloud migration services in UAE, managed cloud services Dubai, AWS migration UAE, Azure migration Dubai, cloud infrastructure UAE',
   openGraph: {
@@ -101,7 +101,7 @@ const fallback: MappedServiceContent = {
     {
       type: 'Case Study',
       title: 'Zero-Downtime Google Workspace Migration',
-      description: 'How a Dubai hospitality group moved every mailbox to a new domain during a rebrand — with zero downtime and no lost history.',
+      description: 'How a Dubai hospitality group moved every mailbox to a new domain during a rebrand - with zero downtime and no lost history.',
       url: '/case-studies/workspace-migration',
       ctaText: 'Read the case study',
     },
@@ -119,15 +119,15 @@ const fallback: MappedServiceContent = {
   ],
   faq: [
     { question: 'What cloud migration services do you provide in UAE?', answer: 'We provide end-to-end cloud migration services in UAE including infrastructure assessment, migration planning, zero-downtime execution to AWS or Azure, post-migration optimization, and ongoing managed cloud support. We serve businesses in Dubai, Abu Dhabi, and Sharjah.' },
-    { question: 'Do AWS/Azure comply with UAE data localisation laws?', answer: 'Yes. Both AWS and Microsoft Azure have dedicated local regions in UAE — AWS Middle East (UAE) Region and Azure UAE Central. All data remains in-country, complying with UAE TRA data residency mandates and NESA cybersecurity regulations.' },
+    { question: 'Do AWS/Azure comply with UAE data localisation laws?', answer: 'Yes. Both AWS and Microsoft Azure have dedicated local regions in UAE - AWS Middle East (UAE) Region and Azure UAE Central. All data remains in-country, complying with UAE TRA data residency mandates and NESA cybersecurity regulations.' },
     { question: 'How long does a cloud migration in Dubai take?', answer: 'Depending on infrastructure complexity, standard enterprise cloud migrations in UAE take 4–12 weeks. We deploy parallel environments to guarantee zero downtime throughout the process. Small business migrations (under 20 servers) typically complete in 2–3 weeks.' },
-    { question: 'Which cloud provider is better for UAE businesses — AWS or Azure?', answer: 'Both have UAE data centers. AWS Middle East Region is generally preferred for infrastructure-heavy workloads. Azure UAE Central is stronger for Microsoft-centric environments (Microsoft 365, Active Directory, SQL Server). We assess your existing stack and recommend the right provider or a hybrid approach.' },
-    { question: 'Can you migrate our on-premise servers to cloud with no downtime?', answer: 'Yes. We use parallel environment validation — your new cloud environment is fully tested before cutover. For most workloads, the actual switchover takes less than 15 minutes during a scheduled maintenance window.' },
+    { question: 'Which cloud provider is better for UAE businesses - AWS or Azure?', answer: 'Both have UAE data centers. AWS Middle East Region is generally preferred for infrastructure-heavy workloads. Azure UAE Central is stronger for Microsoft-centric environments (Microsoft 365, Active Directory, SQL Server). We assess your existing stack and recommend the right provider or a hybrid approach.' },
+    { question: 'Can you migrate our on-premise servers to cloud with no downtime?', answer: 'Yes. We use parallel environment validation - your new cloud environment is fully tested before cutover. For most workloads, the actual switchover takes less than 15 minutes during a scheduled maintenance window.' },
     { question: 'Can you reduce our current AWS or Azure bills after migration?', answer: 'Absolutely. Using Cloud FinOps strategies including Reserved Instances, right-sizing, and waste elimination, we typically reduce our clients\' monthly cloud bills by 30–50% within 90 days of taking over management.' },
     { question: 'What is hybrid cloud and does our UAE business need it?', answer: 'Hybrid cloud combines on-premise private servers with public cloud (AWS or Azure). It is essential for UAE businesses in banking, government contracting, or healthcare that must keep sensitive data on UAE soil while using cloud for scalable compute.' },
     { question: 'How much does cloud migration cost in UAE?', answer: 'Cloud migration costs in UAE depend on environment size and complexity. Small business migrations (10–30 servers) typically range from AED 15,000–40,000 as a one-time project. Enterprise migrations are scoped individually. Contact us for a free migration assessment and TCO analysis.' },
   ],
-  faqTitle: 'Cloud Migration Services UAE — Frequently Asked Questions',
+  faqTitle: 'Cloud Migration Services UAE - Frequently Asked Questions',
 };
 
 export default async function CloudPage() {

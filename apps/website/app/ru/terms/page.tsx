@@ -4,7 +4,7 @@ import Footer from '@/components/layout/FooterRu';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Условия использования',
+  title: 'Условия использования сайта и ИТ-услуг в ОАЭ',
   description: 'Условия использования NOCKO Information Technology. Условия, регулирующие использование нашего веб-сайта и ИТ-услуг в Дубае и ОАЭ.',
   alternates: {
     canonical: '/ru/terms',
@@ -30,7 +30,7 @@ export default function TermsPage() {
         data={{
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Главная', item: `${baseUrl}/ru` },
-            { '@type': 'ListItem', position: 2, name: 'Условия использования', item: `${baseUrl}/ru/terms` },
+            { '@type': 'ListItem', position: 2, name: 'Условия использования сайта и ИТ-услуг в ОАЭ', item: `${baseUrl}/ru/terms` },
           ],
         }}
       />
@@ -39,13 +39,13 @@ export default function TermsPage() {
         <section className="section section--light" style={{ paddingTop: '6rem' }}>
           <div className="container">
             <div className="section__content" style={{ maxWidth: '800px', margin: '0 auto' }}>
-              <h1 className="section__title">Условия использования</h1>
+              <h1 className="section__title">Условия использования сайта и ИТ-услуг в ОАЭ</h1>
               <p className="section__text" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
                 Последнее обновление: январь 2025
               </p>
 
               <h2>1. Принятие условий</h2>
-              <p>Получая доступ к сайту nocko.com или привлекая компанию NOCKO Information Technology LLC (&laquo;NOCKO&raquo;) для оказания ИТ-услуг, вы соглашаетесь соблюдать настоящие Условия использования. Если вы не согласны с ними, пожалуйста, не используйте наш веб-сайт и наши услуги.</p>
+              <p>Получая доступ к сайту nocko.com или привлекая компанию NOCKO Information Technology LLC (&laquo;NOCKO&raquo;) для оказания ИТ-услуг, вы соглашаетесь соблюдать настоящие Условия использования сайта и ИТ-услуг в ОАЭ. Если вы не согласны с ними, пожалуйста, не используйте наш веб-сайт и наши услуги.</p>
 
               <h2>2. Услуги</h2>
               <p>NOCKO предоставляет профессиональные ИТ-услуги, включая ИТ-поддержку, управляемые ИТ-услуги, сетевую инфраструктуру, облачные решения, кибербезопасность и ИТ-консалтинг для организаций в ОАЭ. Конкретные условия, объём и стоимость услуг определяются в отдельных договорах об оказании услуг или технических заданиях.</p>

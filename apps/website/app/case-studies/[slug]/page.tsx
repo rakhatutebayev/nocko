@@ -40,16 +40,16 @@ export async function generateMetadata({
           'x-default': `/case-studies/${slug}`,
         },
       },
-      title: 'How Projection Improved IT Reliability with Annual Maintenance Contract',
+      title: 'How Projection Improved IT Reliability with an AMC',
       description:
-        'Projection improved uptime and response times with a structured Annual Maintenance Contract and proactive support across UAE.',
+        'Projection повысила аптайм и скорость реакции на инциденты благодаря структурированному контракту AMC и проактивной поддержке по всей территории ОАЭ.',
       keywords:
         'Projection case study, IT AMC UAE, annual maintenance contract Dubai, IT reliability, uptime improvement',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-        title: 'How Projection Improved IT Reliability with Annual Maintenance Contract',
+        title: 'How Projection Improved IT Reliability with an AMC',
         description:
-          'Projection improved uptime and response times with a structured Annual Maintenance Contract and proactive support across UAE.',
+          'Projection повысила аптайм и скорость реакции на инциденты благодаря структурированному контракту AMC и проактивной поддержке по всей территории ОАЭ.',
         type: 'article',
       },
     };
@@ -65,16 +65,16 @@ export async function generateMetadata({
           'x-default': `/case-studies/${slug}`,
         },
       },
-      title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity',
+      title: 'How Solus Insurance Strengthened Cybersecurity',
       description:
-        'Solus Insurance improved threat detection, reduced risk exposure, and strengthened compliance with enterprise cybersecurity services in UAE.',
+        'Solus Insurance улучшила обнаружение угроз, снизила риски и укрепила соответствие требованиям с помощью корпоративных услуг кибербезопасности в ОАЭ.',
       keywords:
         'Solus Insurance case study, enterprise cybersecurity UAE, threat detection, security compliance, zero trust',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-        title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity',
+        title: 'How Solus Insurance Strengthened Cybersecurity',
         description:
-          'Solus Insurance improved threat detection, reduced risk exposure, and strengthened compliance with enterprise cybersecurity services in UAE.',
+          'Solus Insurance улучшила обнаружение угроз, снизила риски и укрепила соответствие требованиям с помощью корпоративных услуг кибербезопасности в ОАЭ.',
         type: 'article',
       },
     };
@@ -90,14 +90,14 @@ export async function generateMetadata({
           'x-default': `/case-studies/${slug}`,
         },
       },
-      title: 'How FH Fundamental Migrated to Cloud with Zero Downtime',
+      title: 'How FH Fundamental Moved to AWS with Zero Downtime',
       description:
-        'FH Fundamental achieved seamless cloud migration to AWS with zero downtime, improved performance, and enhanced scalability for business growth.',
+        'FH Fundamental completed its cloud migration to AWS in the UAE with zero downtime, gaining better performance and room to scale as the business grows.',
       keywords:
         'FH Fundamental case study, cloud migration UAE, AWS migration Dubai, zero downtime migration, cloud transformation',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-        title: 'How FH Fundamental Migrated to Cloud with Zero Downtime',
+        title: 'How FH Fundamental Moved to AWS with Zero Downtime',
         description:
           'FH Fundamental achieved seamless cloud migration to AWS with zero downtime, improved performance, and enhanced scalability.',
         type: 'article',
@@ -115,14 +115,14 @@ export async function generateMetadata({
           'x-default': `/case-studies/${slug}`,
         },
       },
-      title: 'How Scalini Transformed Network Infrastructure Across 5 Locations',
+      title: 'How Scalini Standardized Its Network Across 5 Sites',
       description:
-        'Scalini restaurant group standardized network infrastructure across 5 UAE locations with certified Cat6A cabling, centralized management, and 99.9% uptime.',
+        'Ресторанная группа Scalini стандартизировала сеть в 5 локациях в ОАЭ с сертифицированной СКС Cat6A, централизованным управлением и аптаймом 99,9%.',
       keywords:
         'Scalini case study, network infrastructure UAE, structured cabling Dubai, multi-site network, restaurant IT infrastructure',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-        title: 'How Scalini Transformed Network Infrastructure Across 5 Locations',
+        title: 'How Scalini Standardized Its Network Across 5 Sites',
         description:
           'Scalini restaurant group standardized network infrastructure across 5 UAE locations with certified Cat6A cabling and centralized management.',
         type: 'article',
@@ -140,14 +140,14 @@ export async function generateMetadata({
           'x-default': `/case-studies/${slug}`,
         },
       },
-      title: 'How Global Service Solution Achieved 24/7 IT Support Excellence',
+      title: 'Global Service Solution: 24/7 Flight IT Support',
       description:
-        'Global Service Solution maintains 24/7 IT support for critical flight dispatch operations with 99.8% uptime, 30-minute response time, and zero unscheduled downtime.',
+        'Global Service Solution keeps 24/7 IT support for critical flight dispatch in the UAE, with 99.8% uptime, 30-minute response and zero unscheduled downtime.',
       keywords:
         'Global Service Solution case study, 24/7 IT support UAE, aviation IT support Dubai, flight dispatch IT, mission-critical support',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-        title: 'How Global Service Solution Achieved 24/7 IT Support Excellence',
+        title: 'Global Service Solution: 24/7 Flight IT Support',
         description:
           'Global Service Solution maintains 24/7 IT support for critical flight dispatch operations with 99.8% uptime and 30-minute response time.',
         type: 'article',
@@ -165,14 +165,14 @@ export async function generateMetadata({
           'x-default': `/case-studies/${slug}`,
         },
       },
-      title: 'How TechnoHub Transformed IT Operations with Managed Services',
+      title: 'How TechnoHub Moved to Fully Managed IT Services',
       description:
-        'TechnoHub eliminated IT complexity with fully managed services, achieving 40% cost reduction, predictable budgets, and strategic IT alignment.',
+        'TechnoHub removed IT complexity with fully managed services in the UAE, cutting costs by 40% and gaining predictable budgets and IT that fits its plans.',
       keywords:
         'TechnoHub case study, managed IT services UAE, IT outsourcing Dubai, managed services provider, IT transformation',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-        title: 'How TechnoHub Transformed IT Operations with Managed Services',
+        title: 'How TechnoHub Moved to Fully Managed IT Services',
         description:
           'TechnoHub eliminated IT complexity with fully managed services, achieving 40% cost reduction and predictable budgets.',
         type: 'article',
@@ -217,14 +217,14 @@ export async function generateMetadata({
       },
       title: 'How an M365 Audit Saved a Dubai Firm 40% Annually',
       description:
-        'Discover how our forensic licensing audit eliminated duplicate SaaS tools and recovered $45,000 annually for a Dubai firm.',
+        'Our forensic M365 licensing audit removed duplicate SaaS tools and recovered $45,000 a year for a Dubai firm. Here is how the audit worked, step by step.',
       keywords:
         'Microsoft 365 audit case study, IT consulting UAE, software license optimization, IT cost reduction Dubai, SaaS audit',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How an M365 Audit Saved a Dubai Firm 40% Annually',
         description:
-          'Discover how our forensic licensing audit eliminated duplicate SaaS tools and recovered $45,000 annually for a Dubai firm.',
+          'Our forensic M365 licensing audit removed duplicate SaaS tools and recovered $45,000 a year for a Dubai firm. Here is how the audit worked, step by step.',
         type: 'article',
       },
     };
@@ -240,14 +240,14 @@ export async function generateMetadata({
           'x-default': `/case-studies/${slug}`,
         },
       },
-      title: 'How a Dubai Real Estate Firm Cut IT Costs 35% with Strategic IT Consulting',
+      title: 'How a Dubai Real Estate Firm Cut IT Costs 35%',
       description:
-        'A Dubai real estate developer eliminated Shadow IT, unified vendors, and reduced annual IT spend by 35% after a NOCKO vCIO-led IT strategy audit and roadmap.',
+        'A Dubai real estate developer removed shadow IT, unified vendors and cut annual IT spend by 35% after a NOCKO vCIO-led IT consulting audit and roadmap.',
       keywords:
         'IT consulting Dubai, IT strategy UAE, vCIO services Dubai, IT cost reduction, IT roadmap UAE, real estate IT consulting',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-        title: 'How a Dubai Real Estate Firm Cut IT Costs 35% with Strategic IT Consulting',
+        title: 'How a Dubai Real Estate Firm Cut IT Costs 35%',
         description:
           'A Dubai real estate developer eliminated Shadow IT and reduced annual IT spend by 35% with a NOCKO vCIO-led strategy.',
         type: 'article',
@@ -265,14 +265,14 @@ export async function generateMetadata({
           'x-default': `/case-studies/${slug}`,
         },
       },
-      title: 'How a 300-Seat Enterprise Unified IT Infrastructure Across UAE',
+      title: 'How a 300-Seat Enterprise Unified IT Across the UAE',
       description:
-        'A UAE logistics enterprise with 300 seats across 4 offices unified fragmented IT infrastructure, eliminated 6 separate vendors, and achieved 99.95% uptime with NOCKO Managed IT.',
+        'A UAE logistics enterprise with 300 seats across 4 offices unified its IT, replaced 6 separate vendors and reached 99.95% uptime with NOCKO Managed IT.',
       keywords:
         'enterprise IT UAE, managed IT services Dubai, IT infrastructure consolidation, multi-site IT support UAE, enterprise IT outsourcing',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-        title: 'How a 300-Seat Enterprise Unified IT Infrastructure Across UAE',
+        title: 'How a 300-Seat Enterprise Unified IT Across the UAE',
         description:
           'UAE logistics enterprise unified fragmented IT across 4 offices, eliminated 6 vendors, achieved 99.95% uptime.',
         type: 'article',
@@ -290,14 +290,14 @@ export async function generateMetadata({
           'x-default': `/case-studies/${slug}`,
         },
       },
-      title: 'How a UAE Healthcare Group Passed HAAD Audit with Zero Findings',
+      title: 'How a UAE Healthcare Group Passed Its HAAD Audit',
       description:
-        'A UAE healthcare group serving 3 clinics achieved full HAAD cybersecurity compliance, eliminated 7 critical vulnerabilities, and passed their regulatory audit with zero findings.',
+        'A UAE healthcare group with 3 clinics reached full HAAD cybersecurity compliance, closed 7 critical vulnerabilities and passed its audit with no findings.',
       keywords:
         'healthcare cybersecurity UAE, HAAD compliance, medical data security Dubai, cybersecurity audit UAE, healthcare IT security',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-        title: 'How a UAE Healthcare Group Passed HAAD Audit with Zero Findings',
+        title: 'How a UAE Healthcare Group Passed Its HAAD Audit',
         description:
           'UAE healthcare group achieved full HAAD compliance, eliminated 7 critical vulnerabilities, passed regulatory audit with zero findings.',
         type: 'article',
@@ -315,14 +315,14 @@ export async function generateMetadata({
           'x-default': `/case-studies/${slug}`,
         },
       },
-      title: 'How a Multi-Site Dubai Group Secured Its Network with Segmentation & FortiGate',
+      title: 'How a Dubai Group Secured Its Network with FortiGate',
       description:
-        'A multi-site F&B group in Dubai replaced a flat, undocumented network with a segmented FortiGate + Cisco core architecture — isolating POS, guest and back-office traffic and securing remote access.',
+        'A multi-site food and beverage group in Dubai replaced a flat, undocumented network with a segmented FortiGate and Cisco core that isolates POS traffic.',
       keywords:
         'network segmentation Dubai, FortiGate firewall UAE, VLAN segmentation, network audit Dubai, structured network UAE, IPsec VPN UAE',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-        title: 'How a Multi-Site Dubai Group Secured Its Network with Segmentation & FortiGate',
+        title: 'How a Dubai Group Secured Its Network with FortiGate',
         description:
           'A Dubai group replaced a flat network with a segmented FortiGate + Cisco core, isolating POS/guest/back-office and securing remote access.',
         type: 'article',
@@ -340,14 +340,14 @@ export async function generateMetadata({
           'x-default': `/case-studies/${slug}`,
         },
       },
-      title: 'How a UAE Medical Clinic Automated EMR Backup & Compliance Reporting',
+      title: 'How a UAE Clinic Automated EMR Backup and Reporting',
       description:
-        'A UAE medical clinic protected its EMR, imaging and accounting systems with automated daily backups on Synology Active Backup for Business and a self-generating daily compliance report.',
+        'A UAE medical clinic protected its EMR, imaging and accounting systems with automated daily backups on Synology Active Backup and a daily compliance log.',
       keywords:
         'EMR backup UAE, medical data backup Dubai, healthcare disaster recovery UAE, Synology Active Backup, backup compliance reporting, clinic IT backup',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-        title: 'How a UAE Medical Clinic Automated EMR Backup & Compliance Reporting',
+        title: 'How a UAE Clinic Automated EMR Backup and Reporting',
         description:
           'A UAE clinic protected EMR, imaging and accounting data with automated daily backups and self-generating compliance reports.',
         type: 'article',
@@ -365,16 +365,16 @@ export async function generateMetadata({
           'x-default': `/case-studies/${slug}`,
         },
       },
-      title: 'How a Dubai Hospitality Group Migrated Google Workspace During a Rebrand with Zero Downtime',
+      title: 'How a Dubai Hospitality Group Moved Google Workspace',
       description:
         'During a corporate rebrand, a Dubai hospitality group moved every mailbox to a new Google Workspace domain with zero downtime and no lost email history.',
       keywords:
         'Google Workspace migration Dubai, email migration UAE, domain migration, workspace migration UAE, zero downtime email migration, cloud migration Dubai',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-        title: 'How a Dubai Hospitality Group Migrated Google Workspace During a Rebrand with Zero Downtime',
+        title: 'How a Dubai Hospitality Group Moved Google Workspace',
         description:
-          'A Dubai hospitality group moved every mailbox to a new Google Workspace domain during a rebrand — zero downtime, no lost history.',
+          'A Dubai hospitality group moved every mailbox to a new Google Workspace domain during a rebrand - zero downtime, no lost history.',
         type: 'article',
       },
     };
@@ -437,7 +437,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'solus') {
     caseStudy = {
       attributes: {
-        title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity',
+        title: 'How Solus Insurance Strengthened Cybersecurity',
         client: 'Solus Insurance (DIFC)',
         industry: 'Cybersecurity & Compliance',
         createdAt: '2025-04-10T00:00:00.000Z',
@@ -595,7 +595,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         challenge:
           '<p>A fast-growing investment firm in the DIFC was experiencing uncontrolled "Shadow IT" sprawl. Different departments were independently expensing overlapping SaaS tools like Zoom, Dropbox, and Slack, completely ignoring their existing Microsoft 365 enterprise licenses.</p><p>Furthermore, they were paying for premium Microsoft E5 licenses for all 150 employees, despite 80% of the workforce only requiring basic webmail and Teams access. The CFO required an immediate forensic audit to halt the bleeding.</p>',
         solution:
-          '<p>NOCKO’s vCIO conducted a comprehensive forensic licensing audit. We analyzed active usage telemetry across their entire tenant. We identified that the firm was paying for $45,000 worth of redundant third-party applications that were natively included in their Microsoft subscription.</p><p>We executed a strict consolidation roadmap. We migrated all data from Dropbox to SharePoint, transitioned video conferencing to Teams, and right-sized their Microsoft licensing—downgrading non-essential staff to Business Basic while reserving E5 licenses solely for executives handling highly classified financial models.</p>',
+          '<p>NOCKO’s vCIO conducted a comprehensive forensic licensing audit. We analyzed active usage telemetry across their entire tenant. We identified that the firm was paying for $45,000 worth of redundant third-party applications that were natively included in their Microsoft subscription.</p><p>We executed a strict consolidation roadmap. We migrated all data from Dropbox to SharePoint, transitioned video conferencing to Teams, and right-sized their Microsoft licensing - downgrading non-essential staff to Business Basic while reserving E5 licenses solely for executives handling highly classified financial models.</p>',
         results: {
           savings: 'Recovered $45,000 annually by eliminating duplicate SaaS subscriptions',
           optimization: 'Reduced monthly Microsoft 365 licensing costs by 40%',
@@ -612,13 +612,13 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'it-consulting') {
     caseStudy = {
       attributes: {
-        title: 'How a Dubai Real Estate Firm Cut IT Costs 35% with Strategic IT Consulting',
+        title: 'How a Dubai Real Estate Firm Cut IT Costs 35%',
         client: 'Dubai Real Estate Developer (Business Bay)',
         industry: 'IT Consulting & Strategy',
         createdAt: '2025-11-22T00:00:00.000Z',
         updatedAt: '2025-11-22T00:00:00.000Z',
         challenge:
-          '<p>A mid-sized real estate developer headquartered in Business Bay was experiencing rapid headcount growth from 40 to 120 employees across 3 years. Their IT procurement was decentralized — each department head independently purchased SaaS tools, hardware, and support contracts, resulting in 23 separate vendors with overlapping capabilities and zero centralized governance.</p><p>The CFO escalated concerns after discovering that annual IT spend had doubled with no measurable increase in operational output. They needed an external vCIO to perform a full IT audit, rationalize their vendor landscape, and produce a 24-month technology roadmap aligned to their aggressive expansion into Abu Dhabi.</p>',
+          '<p>A mid-sized real estate developer headquartered in Business Bay was experiencing rapid headcount growth from 40 to 120 employees across 3 years. Their IT procurement was decentralized - each department head independently purchased SaaS tools, hardware, and support contracts, resulting in 23 separate vendors with overlapping capabilities and zero centralized governance.</p><p>The CFO escalated concerns after discovering that annual IT spend had doubled with no measurable increase in operational output. They needed an external vCIO to perform a full IT audit, rationalize their vendor landscape, and produce a 24-month technology roadmap aligned to their aggressive expansion into Abu Dhabi.</p>',
         solution:
           '<p>NOCKO assigned a dedicated vCIO who conducted an 8-week discovery engagement covering asset inventory, software license analysis, vendor contract review, and security posture assessment. The audit revealed AED 280,000 in redundant annual spend across overlapping CRM, storage, and collaboration tools.</p><p>We designed a consolidated vendor framework reducing 23 suppliers to 7 strategic partners, each with negotiated SLAs and clear escalation paths. A 24-month phased IT roadmap was delivered, prioritizing Microsoft 365 consolidation in Q1, on-premise server virtualisation in Q2, and a hybrid cloud strategy for their Abu Dhabi branch in Q3.</p>',
         results: {
@@ -643,7 +643,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         createdAt: '2026-01-08T00:00:00.000Z',
         updatedAt: '2026-01-08T00:00:00.000Z',
         challenge:
-          '<p>A UAE-based logistics and freight company with 300 employees spread across 4 offices in Dubai, Sharjah, Abu Dhabi, and the Jebel Ali Free Zone was struggling with a fragmented IT environment. Each office had been set up independently with different hardware vendors, network topologies, and support contracts — six separate IT suppliers in total, none with visibility into each other\'s work.</p><p>Critical warehouse management software experienced repeated connectivity failures during peak shipping windows, directly impacting SLA delivery to major e-commerce clients. The COO demanded a single accountable IT partner with guaranteed uptime SLAs and a unified infrastructure baseline across all sites.</p>',
+          '<p>A UAE-based logistics and freight company with 300 employees spread across 4 offices in Dubai, Sharjah, Abu Dhabi, and the Jebel Ali Free Zone was struggling with a fragmented IT environment. Each office had been set up independently with different hardware vendors, network topologies, and support contracts - six separate IT suppliers in total, none with visibility into each other\'s work.</p><p>Critical warehouse management software experienced repeated connectivity failures during peak shipping windows, directly impacting SLA delivery to major e-commerce clients. The COO demanded a single accountable IT partner with guaranteed uptime SLAs and a unified infrastructure baseline across all sites.</p>',
         solution:
           '<p>NOCKO executed a phased <a href="/services/managed-it">Managed IT Services</a> takeover across all 4 locations over 60 days. We began with a full infrastructure audit at each site, documenting network topology, active hardware, and software dependencies. All 6 incumbent vendors were systematically transitioned to a single NOCKO-managed support contract.</p><p>We standardized all sites onto a unified Cisco Meraki SD-WAN backbone, enabling centralized network management and real-time failover between office links. A 24/7 NOC was assigned to the account with dedicated escalation engineers for the two highest-priority Jebel Ali and Dubai headquarters sites.</p>',
         results: {
@@ -679,7 +679,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           training: 'All 85 staff completed mandatory cybersecurity awareness training within 60 days',
         },
         testimonial:
-          '"We had 90 days to fix years of accumulated security debt before a regulatory audit. NOCKO delivered every single remediation on time. We passed with zero findings — something we genuinely did not expect to achieve."',
+          '"We had 90 days to fix years of accumulated security debt before a regulatory audit. NOCKO delivered every single remediation on time. We passed with zero findings - something we genuinely did not expect to achieve."',
       },
     } as any;
   }
@@ -693,9 +693,9 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         createdAt: '2026-05-14T00:00:00.000Z',
         updatedAt: '2026-05-14T00:00:00.000Z',
         challenge:
-          '<p>A growing food & beverage group operating multiple venues across Dubai had expanded faster than its network could keep up. The infrastructure had grown organically into a flat, largely undocumented topology — point-of-sale terminals, back-office accounting, CCTV and guest Wi-Fi all shared the same broadcast domain, with no isolation between sensitive systems and public traffic.</p><p>Leadership needed a clear, documented picture of what was actually running on the network, a firewall they could trust at the edge, and proper segmentation so a compromised guest device or POS terminal could never reach financial or management systems.</p>',
+          '<p>A growing food & beverage group operating multiple venues across Dubai had expanded faster than its network could keep up. The infrastructure had grown organically into a flat, largely undocumented topology - point-of-sale terminals, back-office accounting, CCTV and guest Wi-Fi all shared the same broadcast domain, with no isolation between sensitive systems and public traffic.</p><p>Leadership needed a clear, documented picture of what was actually running on the network, a firewall they could trust at the edge, and proper segmentation so a compromised guest device or POS terminal could never reach financial or management systems.</p>',
         solution:
-          '<p>NOCKO began with a full L2/L3 topology audit, mapping every interface, VLAN and data flow into a single as-built diagram. We deployed a FortiGate firewall as the edge gateway handling NAT and secure IPsec VPN access for remote staff, and configured a Cisco Nexus core switch to perform inter-VLAN routing.</p><p>The flat network was re-architected into dedicated VLANs — corporate, point-of-sale, back-office, CCTV and guest — with access-control lists restricting the sensitive segments so that guest and public devices are fully isolated from financial and management systems. The entire design was documented and handed over as a maintainable reference.</p>',
+          '<p>NOCKO began with a full L2/L3 topology audit, mapping every interface, VLAN and data flow into a single as-built diagram. We deployed a FortiGate firewall as the edge gateway handling NAT and secure IPsec VPN access for remote staff, and configured a Cisco Nexus core switch to perform inter-VLAN routing.</p><p>The flat network was re-architected into dedicated VLANs - corporate, point-of-sale, back-office, CCTV and guest - with access-control lists restricting the sensitive segments so that guest and public devices are fully isolated from financial and management systems. The entire design was documented and handed over as a maintainable reference.</p>',
         results: {
           segmentation: 'Re-architected a flat network into segmented VLANs with ACL isolation between sensitive and public traffic',
           firewall: 'Deployed a FortiGate edge firewall with policy-based control and NAT',
@@ -714,22 +714,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       attributes: {
         title: 'How a UAE Medical Clinic Automated EMR Backup and Compliance Reporting',
         client: 'Private Medical Clinic (UAE)',
-        industry: 'Healthcare IT — Backup & Disaster Recovery',
+        industry: 'Healthcare IT - Backup & Disaster Recovery',
         createdAt: '2026-06-23T00:00:00.000Z',
         updatedAt: '2026-06-23T00:00:00.000Z',
         challenge:
-          '<p>A private medical clinic in the UAE ran its Electronic Medical Records (EMR) system, diagnostic imaging (X-ray) workstation and accounting server on a mix of virtual machines and physical PCs. Patient data must be protected and recoverable under UAE healthcare regulations, but the clinic had no automated way to verify that backups were actually running — or to produce evidence of it for an audit.</p><p>The team needed reliable, isolated daily backups of every critical system and, just as importantly, a repeatable way to prove to regulators and management that those backups completed successfully.</p>',
+          '<p>A private medical clinic in the UAE ran its Electronic Medical Records (EMR) system, diagnostic imaging (X-ray) workstation and accounting server on a mix of virtual machines and physical PCs. Patient data must be protected and recoverable under UAE healthcare regulations, but the clinic had no automated way to verify that backups were actually running - or to produce evidence of it for an audit.</p><p>The team needed reliable, isolated daily backups of every critical system and, just as importantly, a repeatable way to prove to regulators and management that those backups completed successfully.</p>',
         solution:
-          '<p>NOCKO consolidated backups onto a Synology NAS running Active Backup for Business, with dedicated jobs for the EMR production server (a Linux virtual machine), the X-ray imaging workstation, the accounting server and the domain controller. Backups run automatically overnight using an incremental-forever schedule with multi-version retention.</p><p>To close the compliance gap, we built an automated reporting script that runs on the NAS itself and emails a daily backup report — backup type, source, location, size, retention, network isolation and full server specifications — pulled directly from the backup database so the evidence is always accurate and never hand-edited.</p>',
+          '<p>NOCKO consolidated backups onto a Synology NAS running Active Backup for Business, with dedicated jobs for the EMR production server (a Linux virtual machine), the X-ray imaging workstation, the accounting server and the domain controller. Backups run automatically overnight using an incremental-forever schedule with multi-version retention.</p><p>To close the compliance gap, we built an automated reporting script that runs on the NAS itself and emails a daily backup report - backup type, source, location, size, retention, network isolation and full server specifications - pulled directly from the backup database so the evidence is always accurate and never hand-edited.</p>',
         results: {
           coverage: 'Automated daily backups of EMR, diagnostic imaging, accounting and domain-controller systems',
           emr: 'EMR production server protected with 1 TB daily incremental backups and multi-version retention',
-          reporting: 'Self-generating daily compliance report emailed automatically — audit-ready evidence with no manual work',
+          reporting: 'Self-generating daily compliance report emailed automatically - audit-ready evidence with no manual work',
           accuracy: 'Report data pulled directly from the backup engine, eliminating manual transcription errors',
           recovery: 'Every critical system now has a verified, recoverable restore point every single day',
         },
         testimonial:
-          '"We used to hope our backups were working. Now we get a clean report in our inbox every morning that proves it — patient records, imaging and accounts, all covered. For a healthcare provider, that peace of mind is everything."',
+          '"We used to hope our backups were working. Now we get a clean report in our inbox every morning that proves it - patient records, imaging and accounts, all covered. For a healthcare provider, that peace of mind is everything."',
       },
     } as any;
   }
@@ -737,24 +737,24 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'workspace-migration') {
     caseStudy = {
       attributes: {
-        title: 'How a Dubai Hospitality Group Migrated Google Workspace During a Rebrand with Zero Downtime',
+        title: 'How a Dubai Hospitality Group Moved Google Workspace',
         client: 'Hospitality Group (Dubai)',
         industry: 'Cloud & Email Migration',
         createdAt: '2026-01-28T00:00:00.000Z',
         updatedAt: '2026-01-28T00:00:00.000Z',
         challenge:
-          '<p>A Dubai hospitality group was going through a full corporate rebrand, which meant moving the entire team from its old email domain to a brand-new Google Workspace domain. Email is the operational backbone of a hospitality business — reservations, supplier orders and management all run through it — so the migration had to happen without losing a single message or interrupting daily operations.</p><p>The group needed every mailbox, along with its full history, moved cleanly to the new domain, with no downtime during service hours and no risk of bounced or lost email during the cutover.</p>',
+          '<p>A Dubai hospitality group was going through a full corporate rebrand, which meant moving the entire team from its old email domain to a brand-new Google Workspace domain. Email is the operational backbone of a hospitality business - reservations, supplier orders and management all run through it - so the migration had to happen without losing a single message or interrupting daily operations.</p><p>The group needed every mailbox, along with its full history, moved cleanly to the new domain, with no downtime during service hours and no risk of bounced or lost email during the cutover.</p>',
         solution:
           '<p>NOCKO planned a staged Google Workspace migration. We built a complete source-to-target mapping of every user account, provisioned the new domain, and used Google\'s data migration tooling to copy all mail and history into the new mailboxes while the old system stayed live and untouched.</p><p>Once every mailbox was verified against the source, we scheduled the DNS and MX cutover for an off-peak window so the switch to the new domain was invisible to staff and guests. Passwords and access were reset on handover to keep the new tenant secure from day one.</p>',
         results: {
           downtime: 'Completed the domain migration with zero downtime during business hours',
-          history: 'Migrated every mailbox with full email history preserved — nothing lost',
+          history: 'Migrated every mailbox with full email history preserved - nothing lost',
           cutover: 'Executed the DNS/MX cutover in an off-peak window, invisible to staff and guests',
           security: 'Reset credentials and secured the new Google Workspace tenant on handover',
           rebrand: 'Delivered a clean email identity aligned to the new brand, on schedule',
         },
         testimonial:
-          '"Rebranding is stressful enough without worrying about email. NOCKO moved everyone to the new domain over a weekend — Monday morning it just worked, with every old message still there. Not one complaint from the team."',
+          '"Rebranding is stressful enough without worrying about email. NOCKO moved everyone to the new domain over a weekend - Monday morning it just worked, with every old message still there. Not one complaint from the team."',
       },
     } as any;
   }

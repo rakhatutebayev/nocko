@@ -9,7 +9,7 @@ import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Access Control and physical Security in UAE',
-  description: 'Structured cabling extends beyond computers. We deploy the Unified Physical Layer for your office, running dedicated PoE (Power over Ethernet) infrastructure for high-resolution CCTV IP cameras, biometric Access Control Systems, and VoIP telephony grids on a single, seamlessly integrated network.',
+  description: 'Structured cabling goes beyond computers. We run dedicated PoE cabling for CCTV IP cameras, biometric access control and VoIP phones on one UAE network.',
   alternates: {
     canonical: '/articles/structured-cabling-physical-security',
     languages: {
@@ -24,13 +24,13 @@ const articleData = {
   hero: {
     title: 'Access Control and physical Security',
     subtitle: 'Structured cabling extends beyond computers.',
-    description: 'Structured cabling extends beyond computers. We deploy the Unified Physical Layer for your office, running dedicated PoE (Power over Ethernet) infrastructure for high-resolution CCTV IP cameras, biometric Access Control Systems, and VoIP telephony grids on a single, seamlessly integrated network.',
+    description: 'Structured cabling goes beyond computers. We run dedicated PoE cabling for CCTV IP cameras, biometric access control and VoIP phones on one UAE network.',
   },
-  intro: 'Structured cabling extends beyond computers. We deploy the Unified Physical Layer for your office, running dedicated PoE (Power over Ethernet) infrastructure for high-resolution CCTV IP cameras, biometric Access Control Systems, and VoIP telephony grids on a single, seamlessly integrated network.',
+  intro: 'Structured cabling goes beyond computers. We run dedicated PoE cabling for CCTV IP cameras, biometric access control and VoIP phones on one UAE network.',
   blocks: [
     {
       title: 'PoE Infrastructure for IP Cameras and Access Control',
-      text: '<p>Modern IP CCTV cameras and biometric door readers are powered entirely over the network cable using PoE (Power over Ethernet). This eliminates separate power runs to every camera location — a significant cost saving in UAE commercial fit-outs where electrical work by licensed contractors carries substantial costs. We specify the correct PoE budget per switch port: standard 802.3af (15.4W) for basic cameras, 802.3at (30W) for PTZ cameras with heaters, and 802.3bt (60W or 90W) for high-resolution thermal cameras used at sensitive sites.</p><p>We design the cabling topology to ensure every camera and access control reader is within the 100-metre Cat6 limit from the nearest PoE switch, placing IDF switches strategically to avoid exceeding the distance limit — a common oversight in large floor plate installations.</p>',
+      text: '<p>Modern IP CCTV cameras and biometric door readers are powered entirely over the network cable using PoE (Power over Ethernet). This eliminates separate power runs to every camera location - a significant cost saving in UAE commercial fit-outs where electrical work by licensed contractors carries substantial costs. We specify the correct PoE budget per switch port: standard 802.3af (15.4W) for basic cameras, 802.3at (30W) for PTZ cameras with heaters, and 802.3bt (60W or 90W) for high-resolution thermal cameras used at sensitive sites.</p><p>We design the cabling topology to ensure every camera and access control reader is within the 100-metre Cat6 limit from the nearest PoE switch, placing IDF switches strategically to avoid exceeding the distance limit - a common oversight in large floor plate installations.</p>',
       list: [
         'PoE-powered IP cameras eliminating separate electrical runs',
         'PoE budget calculation per switch to prevent port overloading',
@@ -41,11 +41,11 @@ const articleData = {
     },
     {
       title: 'Access Control System Integration',
-      text: '<p>Biometric and card-based access control systems require more than a single PoE drop per door — the typical door controller requires a Cat6 run to the card reader, a connection to the magnetic lock or electric strike (which carries 12V DC over separate pairs), and sometimes a connection to a request-to-exit (REX) sensor. We pre-plan all these runs during the structured cabling design phase so they are installed neatly in conduit rather than added as an afterthought with surface-run cables.</p><p>We partner with access control vendors including Suprema, HID, and Honeywell, whose systems are commonly deployed in Dubai free zone offices, DIFC, and hospitality venues. Our cabling installations are compatible with the manufacturer\'s installation specifications, avoiding the most common cause of access control failures — insufficient cable quality or length.</p>',
+      text: '<p>Biometric and card-based access control systems require more than a single PoE drop per door - the typical door controller requires a Cat6 run to the card reader, a connection to the magnetic lock or electric strike (which carries 12V DC over separate pairs), and sometimes a connection to a request-to-exit (REX) sensor. We pre-plan all these runs during the structured cabling design phase so they are installed neatly in conduit rather than added as an afterthought with surface-run cables.</p><p>We partner with access control vendors including Suprema, HID, and Honeywell, whose systems are commonly deployed in Dubai free zone offices, DIFC, and hospitality venues. Our cabling installations are compatible with the manufacturer\'s installation specifications, avoiding the most common cause of access control failures - insufficient cable quality or length.</p>',
     },
     {
       title: 'CCTV Storage and Retention Design',
-      text: '<p>IP cameras generate substantial storage volumes — a single 4MP camera at 15fps with H.265 compression requires approximately 40–60GB per day. For a 20-camera system with 30-day retention, that is 24–36TB of storage. We calculate storage requirements accurately and specify a NVR or server with appropriate RAID redundancy, located in the server room with adequate cooling and connected via the structured cabling backbone.</p>',
+      text: '<p>IP cameras generate substantial storage volumes - a single 4MP camera at 15fps with H.265 compression requires approximately 40–60GB per day. For a 20-camera system with 30-day retention, that is 24–36TB of storage. We calculate storage requirements accurately and specify a NVR or server with appropriate RAID redundancy, located in the server room with adequate cooling and connected via the structured cabling backbone.</p>',
     },
     
   ],
@@ -58,7 +58,7 @@ const faqItems = [
   },
   {
     question: "Do you supply the cameras and access control hardware, or just the cabling?",
-    answer: "We provide both — structured cabling installation plus supply and integration of the IP camera system and access control hardware, giving you a single point of responsibility for the complete physical security layer.",
+    answer: "We provide both - structured cabling installation plus supply and integration of the IP camera system and access control hardware, giving you a single point of responsibility for the complete physical security layer.",
   },
   {
     question: "How many cameras can one PoE switch support?",

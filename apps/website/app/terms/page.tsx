@@ -4,7 +4,7 @@ import Footer from '@/components/layout/Footer';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service',
+  title: 'Terms of Service for IT Services in Dubai and UAE',
   description: 'Terms of Service for NOCKO Information Technology. Governing terms for use of our website and IT services in Dubai and the UAE.',
   alternates: {
     canonical: '/terms',
@@ -30,7 +30,7 @@ export default function TermsPage() {
         data={{
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
-            { '@type': 'ListItem', position: 2, name: 'Terms of Service', item: `${baseUrl}/terms` },
+            { '@type': 'ListItem', position: 2, name: 'Terms of Service for IT Services in Dubai and UAE', item: `${baseUrl}/terms` },
           ],
         }}
       />
@@ -39,13 +39,13 @@ export default function TermsPage() {
         <section className="section section--light" style={{ paddingTop: '6rem' }}>
           <div className="container">
             <div className="section__content" style={{ maxWidth: '800px', margin: '0 auto' }}>
-              <h1 className="section__title">Terms of Service</h1>
+              <h1 className="section__title">Terms of Service for IT Services in Dubai and UAE</h1>
               <p className="section__text" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
                 Last updated: January 2025
               </p>
 
               <h2>1. Acceptance of Terms</h2>
-              <p>By accessing nocko.com or engaging NOCKO Information Technology LLC (&quot;NOCKO&quot;) for IT services, you agree to be bound by these Terms of Service. If you do not agree, please do not use our website or services.</p>
+              <p>By accessing nocko.com or engaging NOCKO Information Technology LLC (&quot;NOCKO&quot;) for IT services, you agree to be bound by these Terms of Service for IT Services in Dubai and UAE. If you do not agree, please do not use our website or services.</p>
 
               <h2>2. Services</h2>
               <p>NOCKO provides professional IT services including IT support, managed IT services, network infrastructure, cloud solutions, cybersecurity, and IT consulting to businesses in the UAE. Specific service terms, scope, and pricing are defined in individual service agreements or statements of work.</p>
@@ -60,7 +60,7 @@ export default function TermsPage() {
               </ul>
 
               <h2>4. Intellectual Property</h2>
-              <p>All content on nocko.com — including text, images, logos, and code — is the property of NOCKO Information Technology LLC or its licensors and is protected by UAE and international copyright law. You may not reproduce or distribute this content without express written permission.</p>
+              <p>All content on nocko.com - including text, images, logos, and code - is the property of NOCKO Information Technology LLC or its licensors and is protected by UAE and international copyright law. You may not reproduce or distribute this content without express written permission.</p>
 
               <h2>5. Service Agreements</h2>
               <p>IT services are provided under separate written agreements that govern scope, pricing, SLAs, liability, and termination. In the event of conflict between these Terms and a signed service agreement, the service agreement prevails.</p>

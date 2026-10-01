@@ -8,8 +8,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Полная удалённая интеграция NOC в ОАЭ',
-  description: 'NOCKO подключает бизнес в ОАЭ к дубайскому Центру управления сетью через лёгкие RMM-агенты — мониторинг CPU, температуры, состояния дисков и сетевых событий в реальном времени с автоматическим устранением типовых проблем до возникновения простоя.',
+  title: 'Полная удалённая интеграция NOC для бизнеса в ОАЭ',
+  description: 'NOCKO подключает бизнес в ОАЭ к Центру управления сетью в Дубае через лёгкие RMM-агенты и устраняет типовые проблемы до того, как они приведут к простою.',
   alternates: {
     canonical: '/ru/articles/managed-it-infrastructure',
     languages: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 const articleData = {
   hero: {
-    title: 'Полная удалённая интеграция NOC',
+    title: 'Полная удалённая интеграция NOC для бизнеса в ОАЭ',
     subtitle: 'Централизованный интеллектуальный центр для всей вашей инфраструктуры',
     description: 'Наш Центр управления сетью в реальном времени мониторит тысячи точек данных вашей инфраструктуры.',
   },

@@ -12,12 +12,12 @@ import StructuredData from '@/components/seo/StructuredData';
 export const metadata: Metadata = {
   title: 'About NOCKO | IT Solutions Provider in Dubai, UAE',
   description:
-    'NOCKO Information Technology — IT solutions provider in Dubai, UAE. 50+ clients served, 10+ years of team experience, 24/7 support across all Emirates.',
+    'NOCKO Information Technology is an IT solutions provider in Dubai, UAE. 50+ clients served, 10+ years of team experience, 24/7 support across all Emirates.',
   keywords: 'about NOCKO, IT company Dubai, IT services UAE, technology solutions Dubai',
   openGraph: {
     title: 'About NOCKO | IT Solutions Provider in Dubai, UAE',
     description:
-      'NOCKO Information Technology — IT solutions provider in Dubai, UAE. 50+ clients served, 10+ years of team experience, 24/7 support across all Emirates.',
+      'NOCKO Information Technology is an IT solutions provider in Dubai, UAE. 50+ clients served, 10+ years of team experience, 24/7 support across all Emirates.',
     type: 'website',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'NOCKO Information Technology' }],
   },
@@ -95,8 +95,8 @@ export default function AboutPage() {
       <main role="main">
         <Hero
           variant="about"
-          title="About NOCKO — IT Company in Dubai, UAE"
-          description="We are present wherever your business operates — in every network, every office, every process. No matter where you are or how fast you grow. We make IT infrastructure predictable and secure. We simplify complex systems, restore order, and create the foundation on which companies can work faster, more stable, and more secure."
+          title="About NOCKO - IT Company in Dubai, UAE"
+          description="We are present wherever your business operates - in every network, every office, every process. No matter where you are or how fast you grow. We make IT infrastructure predictable and secure. We simplify complex systems, restore order, and create the foundation on which companies can work faster, more stable, and more secure."
         />
         <AboutStats />
         <AboutVisionMission />

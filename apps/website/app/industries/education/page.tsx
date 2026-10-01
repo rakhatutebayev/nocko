@@ -7,14 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Education in UAE',
+  title: 'IT Solutions for Education and Schools in the UAE',
   description:
-    'Modern IT solutions for educational institutions in UAE. Smart classrooms, student management systems, campus networks, e-learning platforms, and 24/7 support for schools and universities.',
+    'IT solutions for educational institutions in the UAE. Smart classrooms, student management systems, campus networks, e-learning platforms and 24/7 support.',
   keywords:
     'IT solutions education UAE, school IT services Dubai, university network infrastructure, e-learning platforms UAE, educational technology',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'IT Solutions for Education in UAE',
+    title: 'IT Solutions for Education and Schools in the UAE',
     description:
       'Modern IT solutions for educational institutions in UAE. Smart classrooms, campus networks, e-learning platforms, and 24/7 support.',
     type: 'article',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 const industryData = {
   hero: {
-    title: 'IT Solutions for Education',
+    title: 'IT Solutions for Education and Schools in the UAE',
     subtitle: 'Technology Infrastructure for Schools, Universities, and Training Centers',
     description: '',
   },

@@ -27,11 +27,11 @@ const articleData = {
     subtitle: 'Protect EMR, imaging and patient records the compliant way',
     description: 'Isolated, immutable, audit-ready backups for clinics and hospitals across Dubai and the wider UAE.',
   },
-  intro: 'Healthcare providers in the UAE run on data — electronic medical records, PACS imaging, laboratory results and billing systems that must be both continuously available and provably protected. A single ransomware event or storage failure can halt patient care and trigger regulatory scrutiny. NOCKO designs backup and disaster recovery architectures for clinics and hospitals that keep this data recoverable, isolated from live systems, and aligned with the record-keeping expectations of DHA, HAAD (DoH) and the MOH.',
+  intro: 'Healthcare providers in the UAE run on data - electronic medical records, PACS imaging, laboratory results and billing systems that must be both continuously available and provably protected. A single ransomware event or storage failure can halt patient care and trigger regulatory scrutiny. NOCKO designs backup and disaster recovery architectures for clinics and hospitals that keep this data recoverable, isolated from live systems, and aligned with the record-keeping expectations of DHA, HAAD (DoH) and the MOH.',
   blocks: [
     {
       title: 'Why UAE Healthcare Providers Need Isolated Backups',
-      text: '<p>Regulators across the UAE — the Dubai Health Authority (DHA), the Department of Health Abu Dhabi (formerly HAAD) and the Ministry of Health and Prevention (MOH) — expect licensed facilities to retain patient records for defined periods and to demonstrate that those records are secure and recoverable. Patient data protection is no longer an IT preference; it is a licensing and reputational requirement.</p><p>Standard file copies and single-location NAS devices do not meet this bar. If backups sit on the same network as production and share the same credentials, a ransomware infection or a rogue admin action can encrypt or delete both copies at once. Isolated backups — logically separated, immutable, and independently governed — are what make recovery possible when the primary environment is compromised.</p>',
+      text: '<p>Regulators across the UAE - the Dubai Health Authority (DHA), the Department of Health Abu Dhabi (formerly HAAD) and the Ministry of Health and Prevention (MOH) - expect licensed facilities to retain patient records for defined periods and to demonstrate that those records are secure and recoverable. Patient data protection is no longer an IT preference; it is a licensing and reputational requirement.</p><p>Standard file copies and single-location NAS devices do not meet this bar. If backups sit on the same network as production and share the same credentials, a ransomware infection or a rogue admin action can encrypt or delete both copies at once. Isolated backups - logically separated, immutable, and independently governed - are what make recovery possible when the primary environment is compromised.</p>',
       list: [
         'Retention aligned to DHA, DoH (HAAD) and MOH record-keeping expectations',
         'Backups logically isolated from production credentials and networks',
@@ -41,7 +41,7 @@ const articleData = {
     },
     {
       title: 'The 3-2-1 Approach for EMR and Imaging',
-      text: '<p>We build every healthcare backup on the proven 3-2-1 principle: three copies of the data, on two different media types, with at least one copy kept off-site. For a typical UAE clinic this means the live EMR and PACS data, a local backup appliance for fast restores, and an encrypted off-site copy held in a UAE data centre region so data residency is respected.</p><p>Immutable, write-once retention is applied to the protected copies so that even an attacker with administrative access cannot shorten retention or overwrite history. Backup jobs are scheduled around clinic hours to avoid competing with imaging transfers, and every job is verified — a backup that has never been test-restored is only a hope, not a safeguard.</p>',
+      text: '<p>We build every healthcare backup on the proven 3-2-1 principle: three copies of the data, on two different media types, with at least one copy kept off-site. For a typical UAE clinic this means the live EMR and PACS data, a local backup appliance for fast restores, and an encrypted off-site copy held in a UAE data centre region so data residency is respected.</p><p>Immutable, write-once retention is applied to the protected copies so that even an attacker with administrative access cannot shorten retention or overwrite history. Backup jobs are scheduled around clinic hours to avoid competing with imaging transfers, and every job is verified - a backup that has never been test-restored is only a hope, not a safeguard.</p>',
       list: [
         'Three copies across two media types, one held off-site in-country',
         'Immutable, write-once retention on protected copies',
@@ -51,7 +51,7 @@ const articleData = {
     },
     {
       title: 'Disaster Recovery and Audit-Ready Reporting',
-      text: '<p>Backups only matter if the facility can come back online within a clinically acceptable window. We define recovery time and recovery point objectives (RTO/RPO) with each provider, then engineer disaster recovery so critical systems — EMR access, appointment scheduling, billing — are prioritised for the fastest restore. Recovery procedures are documented and rehearsed, not improvised during an incident.</p><p>Just as important is proof. Our managed backup service produces audit-ready reporting: success and failure logs, retention status, restore-test results and immutability confirmation. When an inspector or insurer asks how patient data is protected, the facility has evidence on hand rather than assurances. This work is delivered as part of our <a href="/services/managed-it">managed IT services</a>, and our <a href="/case-studies/emr-backup">EMR backup case study</a> shows the approach applied end to end.</p>',
+      text: '<p>Backups only matter if the facility can come back online within a clinically acceptable window. We define recovery time and recovery point objectives (RTO/RPO) with each provider, then engineer disaster recovery so critical systems - EMR access, appointment scheduling, billing - are prioritised for the fastest restore. Recovery procedures are documented and rehearsed, not improvised during an incident.</p><p>Just as important is proof. Our managed backup service produces audit-ready reporting: success and failure logs, retention status, restore-test results and immutability confirmation. When an inspector or insurer asks how patient data is protected, the facility has evidence on hand rather than assurances. This work is delivered as part of our <a href="/services/managed-it">managed IT services</a>, and our <a href="/case-studies/emr-backup">EMR backup case study</a> shows the approach applied end to end.</p>',
       list: [
         'Defined RTO/RPO agreed per system and clinical priority',
         'Documented, rehearsed recovery runbooks for critical applications',
@@ -65,7 +65,7 @@ const articleData = {
 const faqItems = [
   {
     question: "How long do UAE healthcare providers need to retain patient records?",
-    answer: "Retention periods are set by the relevant regulator — DHA, DoH (formerly HAAD) or MOH — and vary by record type and facility. We configure backup retention to match the requirements applicable to your licence and specialty, and document it for audits.",
+    answer: "Retention periods are set by the relevant regulator - DHA, DoH (formerly HAAD) or MOH - and vary by record type and facility. We configure backup retention to match the requirements applicable to your licence and specialty, and document it for audits.",
   },
   {
     question: "What does an immutable backup actually protect against?",

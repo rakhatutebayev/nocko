@@ -9,7 +9,7 @@ import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapSer
 export const metadata: Metadata = {
   title: 'IT AMC Dubai | IT Annual Maintenance Contract UAE',
   description:
-    'Leading IT AMC provider in Dubai and UAE. Comprehensive IT Annual Maintenance Contract covering servers, networks, workstations, and 24/7 priority support. Fixed-cost IT AMC services for DIFC, DMCC, JLT, Business Bay businesses. Free AMC assessment.',
+    'IT AMC provider in Dubai and the UAE. A fixed-cost annual maintenance contract covering servers, networks and workstations, with 24/7 priority support.',
   keywords:
     'IT AMC Dubai, IT AMC services, IT AMC services in Dubai, annual maintenance contract Dubai, it annual maintenance contract in dubai, AMC services Dubai, IT support contract Dubai, IT maintenance contract UAE, AMC company Dubai, it amc uae',
   openGraph: {
@@ -35,14 +35,14 @@ export const revalidate = 3600;
 const fallback: MappedServiceContent = {
   hero: {
     title: 'IT AMC Services in Dubai & UAE',
-    subtitle: 'IT Annual Maintenance Contract — Fixed Costs, Priority Support, Guaranteed SLAs',
+    subtitle: 'IT Annual Maintenance Contract - Fixed Costs, Priority Support, Guaranteed SLAs',
     description:
-      'NOCKO is a trusted IT AMC provider in Dubai, offering comprehensive Annual Maintenance Contracts for businesses across UAE free zones — DIFC, DMCC, JLT, Business Bay, DAFZA, JAFZA, and Abu Dhabi. Our IT AMC covers servers, networks, workstations, and all IT infrastructure for a predictable annual fee — no surprise bills, no reactive panic.',
+      'NOCKO is a trusted IT AMC provider in Dubai, offering comprehensive Annual Maintenance Contracts for businesses across UAE free zones - DIFC, DMCC, JLT, Business Bay, DAFZA, JAFZA, and Abu Dhabi. Our IT AMC covers servers, networks, workstations, and all IT infrastructure for a predictable annual fee - no surprise bills, no reactive panic.',
   },
   firstSection: [
     {
       title: 'Comprehensive IT Infrastructure Maintenance',
-      text: 'Our AMC covers your entire IT infrastructure — servers, network equipment, workstations, and peripherals. Regular preventive maintenance visits ensure optimal performance and identify potential issues before they cause costly downtime.',
+      text: 'Our AMC covers your entire IT infrastructure - servers, network equipment, workstations, and peripherals. Regular preventive maintenance visits ensure optimal performance and identify potential issues before they cause costly downtime.',
       link: '/articles/it-amc-guide',
       linkText: 'AMC coverage details',
       image: '/images/services/amc-maintenance.png',
@@ -55,7 +55,7 @@ const fallback: MappedServiceContent = {
       linkText: 'SLA guarantees',
     },
     {
-      title: 'Hardware Lifecycle Management',
+      title: 'Hardware Lifecycle Management in Your IT AMC',
       text: 'We track your entire hardware inventory, monitor warranty expiration, and proactively recommend replacements before failures occur. Our procurement team ensures you get the best pricing on hardware upgrades.',
       link: '/articles/it-amc-hardware-lifecycle',
       linkText: 'Hardware management',
@@ -71,7 +71,7 @@ const fallback: MappedServiceContent = {
   secondSection: [
     {
       title: 'Predictable IT Budgeting',
-      text: 'Replace unpredictable IT costs with a fixed annual fee. Our AMC pricing covers all routine maintenance, emergency support calls, and remote assistance — giving your finance team complete cost visibility throughout the year.',
+      text: 'Replace unpredictable IT costs with a fixed annual fee. Our AMC pricing covers all routine maintenance, emergency support calls, and remote assistance - giving your finance team complete cost visibility throughout the year.',
       link: '/articles/it-amc-guide',
       linkText: 'AMC pricing structure',
       image: '/images/services/it-amc-costs.png',
@@ -112,15 +112,15 @@ const fallback: MappedServiceContent = {
   faq: [
     {
       question: 'What is an IT AMC and what does it cover in Dubai?',
-      answer: 'An IT Annual Maintenance Contract (IT AMC) is a fixed-cost annual service agreement that covers preventive maintenance, emergency repairs, and ongoing support for your entire IT infrastructure. For Dubai businesses, a typical NOCKO IT AMC covers: servers (physical and virtual), network switches and routers, workstations and laptops, printers and peripherals, software patch management, and 24/7 priority helpdesk. You pay one fixed annual fee — no surprise invoices when something breaks.',
+      answer: 'An IT Annual Maintenance Contract (IT AMC) is a fixed-cost annual service agreement that covers preventive maintenance, emergency repairs, and ongoing support for your entire IT infrastructure. For Dubai businesses, a typical NOCKO IT AMC covers: servers (physical and virtual), network switches and routers, workstations and laptops, printers and peripherals, software patch management, and 24/7 priority helpdesk. You pay one fixed annual fee - no surprise invoices when something breaks.',
     },
     {
       question: 'How much does an IT AMC cost in Dubai?',
-      answer: 'IT AMC pricing in Dubai depends on the number of devices, complexity of infrastructure, and SLA tier. For a 20–50 user business, IT AMC contracts typically range from AED 18,000–45,000 per year — equivalent to AED 1,500–3,750 per month. This includes scheduled maintenance visits, emergency callouts, remote support, and parts-replacement coordination. NOCKO provides free infrastructure assessments before quoting.',
+      answer: 'IT AMC pricing in Dubai depends on the number of devices, complexity of infrastructure, and SLA tier. For a 20–50 user business, IT AMC contracts typically range from AED 18,000–45,000 per year - equivalent to AED 1,500–3,750 per month. This includes scheduled maintenance visits, emergency callouts, remote support, and parts-replacement coordination. NOCKO provides free infrastructure assessments before quoting.',
     },
     {
       question: 'What is the difference between IT AMC and managed IT services?',
-      answer: 'An IT AMC (Annual Maintenance Contract) focuses on maintenance, break-fix support, and hardware management — it is reactive when issues occur, with scheduled preventive visits. Managed IT services are fully proactive: 24/7 monitoring, automated remediation, and continuous infrastructure management. If you have a small IT footprint with stable infrastructure, an AMC is cost-effective. If you need continuous monitoring and strategic IT management, a managed services agreement is the better fit.',
+      answer: 'An IT AMC (Annual Maintenance Contract) focuses on maintenance, break-fix support, and hardware management - it is reactive when issues occur, with scheduled preventive visits. Managed IT services are fully proactive: 24/7 monitoring, automated remediation, and continuous infrastructure management. If you have a small IT footprint with stable infrastructure, an AMC is cost-effective. If you need continuous monitoring and strategic IT management, a managed services agreement is the better fit.',
     },
     {
       question: 'How many on-site maintenance visits are included in the AMC?',
@@ -128,7 +128,7 @@ const fallback: MappedServiceContent = {
     },
     {
       question: 'Is emergency IT support included in the AMC?',
-      answer: 'Yes. All NOCKO IT AMC contracts include emergency support with guaranteed SLA response times. Critical incidents (server down, network failure, data loss) receive a 1-hour remote response and 2-hour on-site response for Dubai mainland locations. AMC clients are prioritized ahead of ad-hoc customers in our helpdesk queue. Emergency callouts during business hours are included in the AMC fee — after-hours emergency callouts are included in Premium and Enterprise tiers.',
+      answer: 'Yes. All NOCKO IT AMC contracts include emergency support with guaranteed SLA response times. Critical incidents (server down, network failure, data loss) receive a 1-hour remote response and 2-hour on-site response for Dubai mainland locations. AMC clients are prioritized ahead of ad-hoc customers in our helpdesk queue. Emergency callouts during business hours are included in the AMC fee - after-hours emergency callouts are included in Premium and Enterprise tiers.',
     },
     {
       question: 'Which UAE locations do you cover for IT AMC services?',
@@ -136,7 +136,7 @@ const fallback: MappedServiceContent = {
     },
     {
       question: 'Does the IT AMC cover hardware replacement costs?',
-      answer: 'The IT AMC covers labour, diagnosis, and coordination for hardware repairs. Physical hardware replacement parts are typically excluded from the AMC fee and billed at cost — however, NOCKO\'s purchasing team negotiates vendor pricing that is typically 15–25% below retail. For clients who want full hardware coverage including parts, we offer our Enterprise AMC with parts-inclusive options for servers and networking equipment.',
+      answer: 'The IT AMC covers labour, diagnosis, and coordination for hardware repairs. Physical hardware replacement parts are typically excluded from the AMC fee and billed at cost - however, NOCKO\'s purchasing team negotiates vendor pricing that is typically 15–25% below retail. For clients who want full hardware coverage including parts, we offer our Enterprise AMC with parts-inclusive options for servers and networking equipment.',
     },
     {
       question: 'Can you take over an existing AMC from another IT company?',
@@ -147,7 +147,7 @@ const fallback: MappedServiceContent = {
       answer: 'Included in all NOCKO IT AMC tiers: preventive maintenance visits, emergency remote support, patch management (Windows, Office, critical security patches), hardware inventory tracking, and monthly infrastructure health reports. Excluded from standard AMC (available as add-ons): 24/7 NOC monitoring, cloud infrastructure management, cybersecurity operations (SOC/SIEM), physical hardware replacement parts, and new infrastructure projects. Ask us for a full scope table when requesting a quote.',
     },
   ],
-  faqTitle: 'IT AMC Dubai — Frequently Asked Questions',
+  faqTitle: 'IT AMC Dubai - Frequently Asked Questions',
 };
 
 export default async function ItAmcPage() {

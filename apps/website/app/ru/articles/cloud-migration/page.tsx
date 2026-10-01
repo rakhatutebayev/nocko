@@ -8,9 +8,9 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Облачная миграция для бизнеса в ОАЭ: стратегия, фазы, ошибки',
+  title: 'Облачная миграция для бизнеса в ОАЭ, стратегия, фазы',
   description:
-    'Облачная миграция без простоев для бизнеса в ОАЭ: выбор между одним облаком, мультиоблаком и гибридом, фазы миграции, репликация, откат и типичные ошибки.',
+    'Облачная миграция без простоев для бизнеса в ОАЭ. Выбор между одним облаком, мультиоблаком и гибридом, фазы переезда, репликация, откат и типичные ошибки.',
   alternates: {
     canonical: '/ru/articles/cloud-migration',
     languages: {

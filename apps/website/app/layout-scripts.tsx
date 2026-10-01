@@ -40,7 +40,7 @@ const graph = {
         { '@type': 'City', name: 'Sharjah' },
         { '@type': 'Country', name: 'United Arab Emirates' },
       ],
-      // Офис: Пн–Пт 9–18; поддержка и NOC — круглосуточно
+      // Офис: Пн–Пт 9–18; поддержка и NOC - круглосуточно
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
@@ -66,7 +66,7 @@ const graph = {
       ],
       sameAs: [
         'https://www.linkedin.com/company/it-nocko/',
-        // TODO: Google Business Profile, YouTube, Clutch — добавить после создания профилей
+        // TODO: Google Business Profile, YouTube, Clutch - добавить после создания профилей
       ],
     },
     {

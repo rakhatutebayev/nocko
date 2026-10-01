@@ -8,8 +8,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Data Backup Services Dubai | Cloud Backup & Disaster Recovery UAE',
-  description: 'Professional data backup services in Dubai. Managed cloud backup, immutable offsite storage, and disaster recovery for UAE businesses. Veeam, Azure Backup, AWS Backup — with NESA-compliant retention and quarterly tested restores. Free backup assessment.',
+  title: 'Data Backup Services Dubai | Disaster Recovery UAE',
+  description: 'Data backup services in Dubai. Managed cloud backup, immutable offsite storage and disaster recovery for UAE businesses, with quarterly tested restores.',
   alternates: {
     canonical: '/articles/data-backup-services-dubai',
     languages: {
@@ -26,9 +26,9 @@ const articleData = {
   hero: {
     title: 'Data Backup Services in Dubai',
     subtitle: 'Managed Cloud Backup & Disaster Recovery for UAE Businesses',
-    description: 'Complete data backup services operated from Dubai. Immutable offsite backups, automated monitoring, and tested disaster recovery — so ransomware, hardware failure, or accidental deletion never becomes permanent data loss for your business.',
+    description: 'Complete data backup services operated from Dubai. Immutable offsite backups, automated monitoring, and tested disaster recovery - so ransomware, hardware failure, or accidental deletion never becomes permanent data loss for your business.',
   },
-  intro: 'Most Dubai businesses believe they have a backup. Very few have actually tested whether those backups can be restored — and when they find out, it is usually during a crisis. A 2024 study found that 58% of SMBs in the Middle East that experienced a ransomware attack could not fully recover their data, even when backups existed, because backup integrity had never been verified. NOCKO designs, implements, and monitors data backup services for UAE businesses from end to end — configuring immutable offsite storage, running automated integrity checks, and performing quarterly tested restores so you know your recovery will work before you need it.',
+  intro: 'Most Dubai businesses believe they have a backup. Very few have actually tested whether those backups can be restored - and when they find out, it is usually during a crisis. A 2024 study found that 58% of SMBs in the Middle East that experienced a ransomware attack could not fully recover their data, even when backups existed, because backup integrity had never been verified. NOCKO designs, implements, and monitors data backup services for UAE businesses from end to end - configuring immutable offsite storage, running automated integrity checks, and performing quarterly tested restores so you know your recovery will work before you need it.',
   blocks: [
     {
       title: '1. What Data Backup Services Cover for Dubai Businesses',
@@ -44,11 +44,11 @@ const articleData = {
       ],
     },
     {
-      title: '2. Immutable Backup Storage — Protection Against Ransomware',
-      text: '<p>Standard cloud storage can be deleted by ransomware if the attacker gains access to backup credentials. Immutable backup storage solves this by enforcing a write-once, read-many (WORM) policy at the storage infrastructure level — the cloud provider itself prevents deletion or modification for the defined retention period, regardless of what credentials are used.</p><p>We configure immutable vaults using AWS S3 Object Lock (compliance mode) or Azure Blob Storage immutability policies with a minimum 30-day retention lock. For regulated businesses in DIFC, ADGM, or those subject to NESA requirements, we extend retention to 12 months hot storage and 3 years cold archive, matching regulatory evidence preservation requirements.</p>',
+      title: '2. Immutable Backup Storage - Protection Against Ransomware',
+      text: '<p>Standard cloud storage can be deleted by ransomware if the attacker gains access to backup credentials. Immutable backup storage solves this by enforcing a write-once, read-many (WORM) policy at the storage infrastructure level - the cloud provider itself prevents deletion or modification for the defined retention period, regardless of what credentials are used.</p><p>We configure immutable vaults using AWS S3 Object Lock (compliance mode) or Azure Blob Storage immutability policies with a minimum 30-day retention lock. For regulated businesses in DIFC, ADGM, or those subject to NESA requirements, we extend retention to 12 months hot storage and 3 years cold archive, matching regulatory evidence preservation requirements.</p>',
       list: [
-        'AWS S3 Object Lock (compliance mode) — cannot be overridden by any API call',
-        'Azure immutable blob storage — storage-level enforcement, not application-level',
+        'AWS S3 Object Lock (compliance mode) - cannot be overridden by any API call',
+        'Azure immutable blob storage - storage-level enforcement, not application-level',
         'Separate backup credentials with no access to primary infrastructure',
         'Air-gapped backup account: backup destination account has no access to source environment',
         'AES-256 encryption at rest and in transit for all backup data',
@@ -56,8 +56,8 @@ const articleData = {
       ],
     },
     {
-      title: '3. Recovery Time & Recovery Point Objectives — RTO and RPO',
-      text: '<p>RTO (Recovery Time Objective) is how long your business can survive without a system. RPO (Recovery Point Objective) is the maximum amount of data you can afford to lose — measured in time between your last backup and the incident. These targets drive the entire backup architecture and cost model.</p><p>For a Dubai trading company in DIFC, a 1-hour RTO and 15-minute RPO may be essential — requiring continuous replication and local instant recovery. For a professional services firm in Business Bay, a 4-hour RTO and 24-hour RPO may be acceptable, achievable with nightly cloud backups at a fraction of the cost. NOCKO works with your management team to define these targets, documents them in your backup policy, and then engineers an architecture that hits them within budget.</p>',
+      title: '3. Recovery Time & Recovery Point Objectives - RTO and RPO',
+      text: '<p>RTO (Recovery Time Objective) is how long your business can survive without a system. RPO (Recovery Point Objective) is the maximum amount of data you can afford to lose - measured in time between your last backup and the incident. These targets drive the entire backup architecture and cost model.</p><p>For a Dubai trading company in DIFC, a 1-hour RTO and 15-minute RPO may be essential - requiring continuous replication and local instant recovery. For a professional services firm in Business Bay, a 4-hour RTO and 24-hour RPO may be acceptable, achievable with nightly cloud backups at a fraction of the cost. NOCKO works with your management team to define these targets, documents them in your backup policy, and then engineers an architecture that hits them within budget.</p>',
       list: [
         'Business impact analysis: map RTO and RPO per system tier',
         'Tier 1 (critical): continuous replication, <1 hour RTO, <15 min RPO',
@@ -68,30 +68,30 @@ const articleData = {
       ],
     },
     {
-      title: '4. Backup Monitoring and Alerting — 24/7 NOC Oversight',
-      text: '<p>Unmonitored backups fail silently. The most common data loss scenario we see when taking over IT management from other providers is not ransomware — it is a backup that has been failing for 3 months with nobody noticing. A storage drive filled up. A credential expired. A VM was moved and the backup job was not updated. The backup software showed green because the job completed — but it completed with zero data transferred.</p><p>Our 24/7 NOC monitors every backup job daily. We verify not just that the job completed, but that the data volume transferred matches expected baselines. Anomalies — a backup completing in 30 seconds when it normally takes 45 minutes — trigger immediate investigation. Monthly backup health reports show job success rates, data volumes, and storage consumption trends.</p>',
+      title: '4. Backup Monitoring and Alerting - 24/7 NOC Oversight',
+      text: '<p>Unmonitored backups fail silently. The most common data loss scenario we see when taking over IT management from other providers is not ransomware - it is a backup that has been failing for 3 months with nobody noticing. A storage drive filled up. A credential expired. A VM was moved and the backup job was not updated. The backup software showed green because the job completed - but it completed with zero data transferred.</p><p>Our 24/7 NOC monitors every backup job daily. We verify not just that the job completed, but that the data volume transferred matches expected baselines. Anomalies - a backup completing in 30 seconds when it normally takes 45 minutes - trigger immediate investigation. Monthly backup health reports show job success rates, data volumes, and storage consumption trends.</p>',
       list: [
-        '24/7 NOC monitoring of all backup jobs — not just completion status, but data volume validation',
+        '24/7 NOC monitoring of all backup jobs - not just completion status, but data volume validation',
         'Immediate alert for any backup job failure, regardless of time',
-        'Credential and agent health monitoring — catch expired tokens before they cause failures',
+        'Credential and agent health monitoring - catch expired tokens before they cause failures',
         'Monthly backup health report: success rate, data volumes, storage trends',
-        'Storage capacity forecasting — 90-day runway alert before storage fills',
+        'Storage capacity forecasting - 90-day runway alert before storage fills',
       ],
     },
     {
-      title: '5. Tested Disaster Recovery — Quarterly Restore Exercises',
-      text: '<p>A backup that has never been tested is not a backup — it is a hope. We conduct quarterly restore exercises, actually recovering systems from backup to a test environment and verifying that applications start, databases are intact, and data matches the expected state. These exercises are documented with timestamps, screenshots, and sign-off from your designated IT contact.</p><p>For businesses in regulated UAE free zones (DIFC, ADGM), tested disaster recovery documentation is increasingly expected as part of technology risk management reviews. Our quarterly test reports provide audit-ready evidence that your recovery capability is real and functioning.</p>',
+      title: '5. Tested Disaster Recovery - Quarterly Restore Exercises',
+      text: '<p>A backup that has never been tested is not a backup - it is a hope. We conduct quarterly restore exercises, actually recovering systems from backup to a test environment and verifying that applications start, databases are intact, and data matches the expected state. These exercises are documented with timestamps, screenshots, and sign-off from your designated IT contact.</p><p>For businesses in regulated UAE free zones (DIFC, ADGM), tested disaster recovery documentation is increasingly expected as part of technology risk management reviews. Our quarterly test reports provide audit-ready evidence that your recovery capability is real and functioning.</p>',
       list: [
         'Quarterly full VM restore to isolated test environment',
         'Application-layer verification: database starts, application loads, sample data confirmed',
-        'Documented restore time vs RTO target — know your actual recovery speed',
+        'Documented restore time vs RTO target - know your actual recovery speed',
         'Annual full DR simulation: complete infrastructure failover test',
         'DFSA and NESA audit-ready documentation package',
       ],
     },
     {
-      title: '6. Microsoft 365 Backup — What Microsoft Does NOT Protect',
-      text: '<p>A widespread misconception among Dubai businesses is that Microsoft 365 automatically backs up your data. Microsoft provides high-availability (multiple datacenters) but not backup in the traditional sense. Deleted emails remain recoverable for 30–93 days depending on your configuration, after which they are permanently gone. Ransomware that encrypts your OneDrive files syncs the encrypted versions to the cloud — Microsoft does not prevent this.</p><p>We deploy Veeam Backup for Microsoft 365, capturing daily snapshots of Exchange Online mailboxes, SharePoint sites, OneDrive files, and Teams messages to separate immutable storage. This provides true point-in-time recovery — restore any email, file, or SharePoint list to any point in the last 12 months — independent of Microsoft\'s retention policies.</p>',
+      title: '6. Microsoft 365 Backup - What Microsoft Does NOT Protect',
+      text: '<p>A widespread misconception among Dubai businesses is that Microsoft 365 automatically backs up your data. Microsoft provides high-availability (multiple datacenters) but not backup in the traditional sense. Deleted emails remain recoverable for 30–93 days depending on your configuration, after which they are permanently gone. Ransomware that encrypts your OneDrive files syncs the encrypted versions to the cloud - Microsoft does not prevent this.</p><p>We deploy Veeam Backup for Microsoft 365, capturing daily snapshots of Exchange Online mailboxes, SharePoint sites, OneDrive files, and Teams messages to separate immutable storage. This provides true point-in-time recovery - restore any email, file, or SharePoint list to any point in the last 12 months - independent of Microsoft\'s retention policies.</p>',
       list: [
         'Exchange Online mailbox backup: recover any email to any point in time',
         'SharePoint and OneDrive backup: file versioning beyond Microsoft\'s native limits',
@@ -106,15 +106,15 @@ const articleData = {
 const faqItems = [
   {
     question: "How much do data backup services cost in Dubai?",
-    answer: "Managed backup services for a 20–50 user business in Dubai typically range from AED 800–2,500 per month, depending on data volume and RTO/RPO requirements. This includes backup software licensing, cloud storage costs, 24/7 monitoring, and quarterly restore testing. The cost of recovering from an unprotected data loss event — lost contracts, regulatory fines, operational downtime — is orders of magnitude higher.",
+    answer: "Managed backup services for a 20–50 user business in Dubai typically range from AED 800–2,500 per month, depending on data volume and RTO/RPO requirements. This includes backup software licensing, cloud storage costs, 24/7 monitoring, and quarterly restore testing. The cost of recovering from an unprotected data loss event - lost contracts, regulatory fines, operational downtime - is orders of magnitude higher.",
   },
   {
-    question: "Where is our backup data stored — is it in the UAE?",
+    question: "Where is our backup data stored - is it in the UAE?",
     answer: "Yes. We store backup data in UAE-resident cloud regions: Azure UAE Central (Abu Dhabi) or AWS Middle East (UAE) Region. Data does not leave the UAE, satisfying TRA data residency requirements and NESA cybersecurity standards for data localisation.",
   },
   {
     question: "Can ransomware delete our cloud backups?",
-    answer: "Not if configured correctly with immutable storage. AWS S3 Object Lock and Azure immutable blob storage enforce retention at the infrastructure level — the cloud provider itself prevents deletion during the locked period, even if an attacker gains admin credentials. This is why immutable vaults are mandatory in our backup design.",
+    answer: "Not if configured correctly with immutable storage. AWS S3 Object Lock and Azure immutable blob storage enforce retention at the infrastructure level - the cloud provider itself prevents deletion during the locked period, even if an attacker gains admin credentials. This is why immutable vaults are mandatory in our backup design.",
   },
   {
     question: "How long does it take to restore a server from backup?",
@@ -122,15 +122,15 @@ const faqItems = [
   },
   {
     question: "Does Microsoft 365 need separate backup?",
-    answer: "Yes. Microsoft provides availability (your data is accessible) but not backup in the traditional sense. Deleted items are recoverable for 30–93 days; after that, data is permanently gone. Ransomware that encrypts OneDrive files syncs the encrypted versions to the cloud — Microsoft does not prevent this. We back up Exchange Online, SharePoint, OneDrive, and Teams with 12-month retention and granular point-in-time recovery.",
+    answer: "Yes. Microsoft provides availability (your data is accessible) but not backup in the traditional sense. Deleted items are recoverable for 30–93 days; after that, data is permanently gone. Ransomware that encrypts OneDrive files syncs the encrypted versions to the cloud - Microsoft does not prevent this. We back up Exchange Online, SharePoint, OneDrive, and Teams with 12-month retention and granular point-in-time recovery.",
   },
   {
     question: "How often should we test our backups?",
-    answer: "We recommend quarterly restore tests as a minimum. Annual full DR simulations for critical systems. Backup job success monitoring should be daily — our NOC reviews backup job logs every morning and investigates any anomalies before they become multi-day failures.",
+    answer: "We recommend quarterly restore tests as a minimum. Annual full DR simulations for critical systems. Backup job success monitoring should be daily - our NOC reviews backup job logs every morning and investigates any anomalies before they become multi-day failures.",
   },
   {
     question: "We already have a NAS device with RAID. Do we still need offsite backup?",
-    answer: "RAID protects against drive failure — it is not backup. RAID does not protect against ransomware (which encrypts all files on the NAS), accidental deletion, fire, flood, or theft. You need at least one offsite copy, ideally immutable cloud storage, in addition to your local NAS.",
+    answer: "RAID protects against drive failure - it is not backup. RAID does not protect against ransomware (which encrypts all files on the NAS), accidental deletion, fire, flood, or theft. You need at least one offsite copy, ideally immutable cloud storage, in addition to your local NAS.",
   },
   {
     question: "Can you take over our existing backup setup?",
@@ -157,7 +157,7 @@ export default function DataBackupServicesDubaiPage() {
           </div>
         </div>
         <FAQAccordion
-          title="Frequently Asked Questions — Data Backup Services Dubai"
+          title="Frequently Asked Questions - Data Backup Services Dubai"
           items={faqItems}
         />
       </main>

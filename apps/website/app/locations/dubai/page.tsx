@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/seo/Breadcrumbs';
 export const metadata: Metadata = {
   title: 'IT Support & Managed IT Services in Dubai',
   description:
-    'NOCKO provides IT support, network infrastructure, cloud solutions, and cybersecurity for businesses in Dubai — DIFC, Business Bay, DMCC, JAFZA, and across the UAE.',
+    'NOCKO provides IT support, network infrastructure, cloud and cybersecurity for businesses in Dubai, from DIFC and Business Bay to DMCC and JAFZA.',
   keywords: [
     'IT support Dubai',
     'managed IT services Dubai',
@@ -45,15 +45,15 @@ const dubaiContent = {
     title: 'IT Support & Managed Services in Dubai',
     subtitle: 'Reliable IT for Finance, Logistics, Real Estate & Hospitality',
     description:
-      'NOCKO delivers professional IT support, network infrastructure, cloud solutions, and cybersecurity for businesses operating across Dubai — from DIFC and Business Bay to JAFZA and Expo City.',
+      'NOCKO delivers professional IT support, network infrastructure, cloud solutions, and cybersecurity for businesses operating across Dubai - from DIFC and Business Bay to JAFZA and Expo City.',
   },
   intro: {
     title: 'Professional IT Services Built for Dubai\'s Business Environment',
-    text: 'Dubai operates at a pace where IT downtime is not a minor inconvenience — it is a revenue event. Financial firms in DIFC face regulatory obligations that require auditable, always-on systems. Logistics operators in JAFZA and Jebel Ali run 24-hour warehousing that cannot pause for a server failure. Hospitality groups across JBR and Downtown depend on property management software, payment systems, and guest Wi-Fi that must work without exception. NOCKO was built to serve exactly these environments: businesses where professional, accountable IT management is a functional requirement, not a luxury.',
+    text: 'Dubai operates at a pace where IT downtime is not a minor inconvenience - it is a revenue event. Financial firms in DIFC face regulatory obligations that require auditable, always-on systems. Logistics operators in JAFZA and Jebel Ali run 24-hour warehousing that cannot pause for a server failure. Hospitality groups across JBR and Downtown depend on property management software, payment systems, and guest Wi-Fi that must work without exception. NOCKO was built to serve exactly these environments: businesses where professional, accountable IT management is a functional requirement, not a luxury.',
   },
   services: {
     title: 'IT Services for Dubai Businesses',
-    text: 'We cover the full spectrum of business IT — from initial infrastructure design through to ongoing day-to-day management. Whether you are setting up a new office in Business Bay or consolidating IT across multiple locations in the UAE, our team handles the technical complexity so your people can stay focused on operations.',
+    text: 'We cover the full spectrum of business IT - from initial infrastructure design through to ongoing day-to-day management. Whether you are setting up a new office in Business Bay or consolidating IT across multiple locations in the UAE, our team handles the technical complexity so your people can stay focused on operations.',
     items: [
       {
         title: 'IT Support & Helpdesk',
@@ -70,7 +70,7 @@ const dubaiContent = {
       {
         title: 'Cloud Solutions',
         description:
-          'Microsoft 365, Azure, and AWS deployments managed end-to-end. We handle migration planning, data residency compliance under UAE PDPL, and ongoing licence management — ensuring you only pay for what you actually use.',
+          'Microsoft 365, Azure, and AWS deployments managed end-to-end. We handle migration planning, data residency compliance under UAE PDPL, and ongoing licence management - ensuring you only pay for what you actually use.',
         link: '/services/cloud',
       },
       {
@@ -82,7 +82,7 @@ const dubaiContent = {
       {
         title: 'Managed IT Services',
         description:
-          'A fixed monthly AMC that covers proactive monitoring, patch management, hardware support, and helpdesk access. Predictable costs and a defined scope — no surprise invoices when something breaks.',
+          'A fixed monthly AMC that covers proactive monitoring, patch management, hardware support, and helpdesk access. Predictable costs and a defined scope - no surprise invoices when something breaks.',
         link: '/services/managed-it',
       },
       {
@@ -109,7 +109,7 @@ const dubaiContent = {
       {
         title: 'Experienced Engineers',
         description:
-          'Each engineer on our team brings over a decade of enterprise IT experience. We work with Microsoft, Cisco, Fortinet, and leading cloud platforms — no generalists handed a toolkit.',
+          'Each engineer on our team brings over a decade of enterprise IT experience. We work with Microsoft, Cisco, Fortinet, and leading cloud platforms - no generalists handed a toolkit.',
       },
       {
         title: '50+ Active Clients in the UAE',

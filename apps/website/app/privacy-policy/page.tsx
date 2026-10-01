@@ -4,7 +4,7 @@ import Footer from '@/components/layout/Footer';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
+  title: 'Privacy Policy | How We Handle Your Data in the UAE',
   description: 'Privacy Policy for NOCKO Information Technology. Learn how we collect, use, and protect your personal data in accordance with UAE data protection laws.',
   alternates: {
     canonical: '/privacy-policy',
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
         data={{
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
-            { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: `${baseUrl}/privacy-policy` },
+            { '@type': 'ListItem', position: 2, name: 'Privacy Policy | How We Handle Your Data in the UAE', item: `${baseUrl}/privacy-policy` },
           ],
         }}
       />
@@ -39,13 +39,13 @@ export default function PrivacyPolicyPage() {
         <section className="section section--light" style={{ paddingTop: '6rem' }}>
           <div className="container">
             <div className="section__content" style={{ maxWidth: '800px', margin: '0 auto' }}>
-              <h1 className="section__title">Privacy Policy</h1>
+              <h1 className="section__title">Privacy Policy | How We Handle Your Data in the UAE</h1>
               <p className="section__text" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
                 Last updated: January 2025
               </p>
 
               <h2>1. Introduction</h2>
-              <p>NOCKO Information Technology LLC (&quot;NOCKO&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard information when you use our website at nocko.com or engage our IT services.</p>
+              <p>NOCKO Information Technology LLC (&quot;NOCKO&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is committed to protecting your personal data. This Privacy Policy | How We Handle Your Data in the UAE explains how we collect, use, and safeguard information when you use our website at nocko.com or engage our IT services.</p>
 
               <h2>2. Data We Collect</h2>
               <p>We may collect the following categories of personal data:</p>
@@ -106,7 +106,7 @@ export default function PrivacyPolicyPage() {
               </address>
 
               <h2>11. Changes to This Policy</h2>
-              <p>We may update this Privacy Policy from time to time. The &quot;Last updated&quot; date at the top of this page indicates when the policy was last revised. Continued use of our website after changes constitutes acceptance of the updated policy.</p>
+              <p>We may update this Privacy Policy | How We Handle Your Data in the UAE from time to time. The &quot;Last updated&quot; date at the top of this page indicates when the policy was last revised. Continued use of our website after changes constitutes acceptance of the updated policy.</p>
             </div>
           </div>
         </section>

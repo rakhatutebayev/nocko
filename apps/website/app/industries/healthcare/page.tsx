@@ -7,14 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Healthcare in UAE',
+  title: 'IT Solutions for Healthcare Providers in the UAE',
   description:
-    'Secure IT solutions for healthcare providers in UAE. EMR/EHR systems, medical network infrastructure, HIPAA compliance, data security, and 24/7 support for clinics and hospitals.',
+    'Secure IT solutions for healthcare providers in the UAE. EMR and EHR systems, medical network infrastructure, HIPAA compliance and 24/7 support.',
   keywords:
     'IT solutions healthcare UAE, medical IT services Dubai, healthcare network infrastructure, EMR EHR systems UAE, healthcare cybersecurity',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'IT Solutions for Healthcare in UAE',
+    title: 'IT Solutions for Healthcare Providers in the UAE',
     description:
       'Secure IT solutions for healthcare providers in UAE. EMR/EHR systems, network infrastructure, compliance, and 24/7 support.',
     type: 'article',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 const industryData = {
   hero: {
-    title: 'IT Solutions for Healthcare',
+    title: 'IT Solutions for Healthcare Providers in the UAE',
     subtitle: 'Secure, Compliant, and Reliable Technology for Medical Facilities',
     description: '',
   },

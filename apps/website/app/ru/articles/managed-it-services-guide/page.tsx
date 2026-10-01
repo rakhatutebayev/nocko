@@ -9,7 +9,7 @@ import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Управляемые ИТ-услуги в ОАЭ: полное руководство',
-  description: 'Что входит в управляемые ИТ-услуги: цены в дирхамах за пользователя и устройство, масштабирование, безопасность и как выбрать MSP-провайдера в Дубае и ОАЭ.',
+  description: 'Что входит в управляемые ИТ-услуги в ОАЭ. Цены в дирхамах за пользователя и устройство, масштабирование, безопасность и как выбрать MSP-провайдера в Дубае.',
   alternates: {
     canonical: '/ru/articles/managed-it-services-guide',
     languages: {

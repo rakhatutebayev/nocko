@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Defending Your Cloud with Zero Trust in UAE',
-  description: 'Understand the shared responsibility model and why IAM security is critical for your Azure deployment. Do not leave your cloud endpoints exposed.',
+  description: 'Understand the shared responsibility model and why IAM security is critical for your Azure deployment in the UAE. Do not leave cloud endpoints exposed.',
   alternates: {
     canonical: '/articles/cloud-zero-trust',
     languages: {
@@ -24,7 +24,7 @@ const articleData = {
   hero: {
     title: 'Defending Your Cloud with Zero Trust',
     subtitle: 'Understand the shared responsibility model',
-    description: 'Understand the shared responsibility model and why IAM security is critical for your Azure deployment. Do not leave your cloud endpoints exposed.',
+    description: 'Understand the shared responsibility model and why IAM security is critical for your Azure deployment in the UAE. Do not leave cloud endpoints exposed.',
   },
   intro: `Migrating your corporate infrastructure to the AWS Middle East Region or Azure UAE Central does not automatically make your data secure. One of the most dangerous and costly misconceptions among UAE business leaders is that public clouds are inherently immune to ransomware and data breaches. In reality, cloud security strictly follows the <strong>Shared Responsibility Model</strong>. Assuming your cloud provider handles everything is a rapid path to a catastrophic compliance failure.`,
   blocks: [

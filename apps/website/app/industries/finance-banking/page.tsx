@@ -7,14 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Finance & Banking in UAE',
+  title: 'IT Solutions for Finance & Banking in the UAE',
   description:
-    'Secure IT solutions for financial institutions in UAE. Network infrastructure, cybersecurity, compliance, data protection, and 24/7 support for banks and financial services.',
+    'Secure IT solutions for financial institutions in the UAE. Network infrastructure, cybersecurity, compliance, data protection and 24/7 support for banks.',
   keywords:
     'IT solutions finance UAE, banking IT services Dubai, financial cybersecurity, banking network infrastructure, financial compliance IT',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'IT Solutions for Finance & Banking in UAE',
+    title: 'IT Solutions for Finance & Banking in the UAE',
     description:
       'Secure IT solutions for financial institutions in UAE. Network infrastructure, cybersecurity, compliance, and 24/7 support.',
     type: 'article',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 const industryData = {
   hero: {
-    title: 'IT Solutions for Finance & Banking',
+    title: 'IT Solutions for Finance & Banking in the UAE',
     subtitle: 'Secure, Compliant, and Reliable Technology for Financial Institutions',
     description: '',
   },

@@ -10,9 +10,9 @@ import FeaturedArticles from '@/components/sections/FeaturedArticles';
 import StructuredData from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'IT Company in Dubai — 24/7 IT Support & Managed Services',
+  title: 'IT Company in Dubai | 24/7 IT Support & Managed IT',
   description:
-    'NOCKO delivers 24/7 IT support, network setup, cloud & cybersecurity for Dubai businesses. UAE-wide coverage. Fast response. Get a free consultation.',
+    'NOCKO is an IT company in Dubai providing 24/7 IT support, network setup, cloud and cybersecurity for businesses across the UAE. Book a free consultation.',
   keywords: [
     'it company in dubai',
     'IT company Dubai',

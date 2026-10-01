@@ -9,7 +9,7 @@ import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Cloud Services for Banks in the UAE',
-  description: 'How UAE banks and financial institutions adopt cloud securely: in-country data residency, CBUAE-aligned compliance, encryption, high availability, and a controlled migration approach.',
+  description: 'How UAE banks and financial institutions adopt cloud securely, with in-country data residency, CBUAE-aligned compliance, encryption and careful migration.',
   alternates: {
     canonical: '/articles/cloud-banking-uae',
     languages: {
@@ -27,11 +27,11 @@ const articleData = {
     subtitle: 'Regulated cloud adoption without compromising compliance',
     description: 'We help UAE banks and financial firms move to the cloud with data residency, CBUAE-aligned governance, and bank-grade security controls.',
   },
-  intro: 'Cloud adoption in the UAE financial sector is no longer a question of "if" but "how" — safely, and within the boundaries set by the Central Bank of the UAE (CBUAE) and other regulators. Banks, insurers, payment providers, and fintechs need the elasticity and resilience of cloud without losing control over where data lives, who can access it, and how outages are handled. NOCKO designs and delivers regulated cloud environments that keep sensitive workloads inside the UAE, enforce strong encryption and access controls, and remain fully auditable for supervisory review.',
+  intro: 'Cloud adoption in the UAE financial sector is no longer a question of "if" but "how" - safely, and within the boundaries set by the Central Bank of the UAE (CBUAE) and other regulators. Banks, insurers, payment providers, and fintechs need the elasticity and resilience of cloud without losing control over where data lives, who can access it, and how outages are handled. NOCKO designs and delivers regulated cloud environments that keep sensitive workloads inside the UAE, enforce strong encryption and access controls, and remain fully auditable for supervisory review.',
   blocks: [
     {
       title: 'Data Residency and Regulatory Compliance',
-      text: '<p>For UAE financial institutions, data residency is the first design constraint, not an afterthought. Customer records, transaction data, and other regulated information are kept within in-country cloud regions so that primary storage and processing remain inside the UAE. We architect workloads on AWS Middle East (UAE) and Microsoft Azure UAE regions, mapping each data classification to an approved location and documenting the flow end to end.</p><p>Beyond residency, regulated cloud adoption requires alignment with CBUAE expectations around outsourcing, third-party risk, and material technology arrangements. Our <a href="/services/cloud">cloud services</a> team builds the control evidence supervisors expect — data-flow diagrams, access registers, exit plans, and clear allocation of responsibility between the institution and the cloud provider.</p>',
+      text: '<p>For UAE financial institutions, data residency is the first design constraint, not an afterthought. Customer records, transaction data, and other regulated information are kept within in-country cloud regions so that primary storage and processing remain inside the UAE. We architect workloads on AWS Middle East (UAE) and Microsoft Azure UAE regions, mapping each data classification to an approved location and documenting the flow end to end.</p><p>Beyond residency, regulated cloud adoption requires alignment with CBUAE expectations around outsourcing, third-party risk, and material technology arrangements. Our <a href="/services/cloud">cloud services</a> team builds the control evidence supervisors expect - data-flow diagrams, access registers, exit plans, and clear allocation of responsibility between the institution and the cloud provider.</p>',
       list: [
         'Primary storage and processing kept within UAE cloud regions',
         'Data classification mapped to approved locations before deployment',
@@ -51,7 +51,7 @@ const articleData = {
     },
     {
       title: 'High Availability and Resilience',
-      text: '<p>Banking services carry availability and recovery expectations that ordinary business applications do not. We design multi-availability-zone deployments with automated failover, so a single data centre fault does not interrupt customer-facing services. Backups are encrypted, immutable, and regularly restore-tested, and disaster recovery runbooks define clear recovery time and recovery point objectives aligned to the criticality of each workload.</p><p>Resilience is validated, not assumed. We rehearse failover and recovery scenarios so that when an incident occurs, the response is a practised procedure rather than an improvisation — a discipline reflected in our <a href="/case-studies/workspace-migration">workspace migration case study</a>, where continuity of access was maintained throughout the transition.</p>',
+      text: '<p>Banking services carry availability and recovery expectations that ordinary business applications do not. We design multi-availability-zone deployments with automated failover, so a single data centre fault does not interrupt customer-facing services. Backups are encrypted, immutable, and regularly restore-tested, and disaster recovery runbooks define clear recovery time and recovery point objectives aligned to the criticality of each workload.</p><p>Resilience is validated, not assumed. We rehearse failover and recovery scenarios so that when an incident occurs, the response is a practised procedure rather than an improvisation - a discipline reflected in our <a href="/case-studies/workspace-migration">workspace migration case study</a>, where continuity of access was maintained throughout the transition.</p>',
       list: [
         'Multi-availability-zone architecture with automated failover',
         'Encrypted, immutable backups with regular restore testing',
@@ -81,7 +81,7 @@ const faqItems = [
   },
   {
     question: "How do you keep migration low-risk for a financial institution?",
-    answer: "We use a phased approach — discovery and risk assessment first, then lower-risk workloads before core-adjacent systems — with security and compliance gates at each stage and rollback options retained until the new environment is confirmed stable.",
+    answer: "We use a phased approach - discovery and risk assessment first, then lower-risk workloads before core-adjacent systems - with security and compliance gates at each stage and rollback options retained until the new environment is confirmed stable.",
   },
 ];
 

@@ -7,8 +7,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Непрерывность бизнеса и аварийное восстановление в ОАЭ',
-  description: 'Проектирование облачных систем аварийного восстановления (DRaaS) для обеспечения нулевой потери данных и соответствия требованиям страховщиков в ОАЭ.',
+  title: 'Непрерывность бизнеса и восстановление в ОАЭ',
+  description: 'Проектируем облачные системы аварийного восстановления (DRaaS) для бизнеса в ОАЭ, чтобы исключить потерю данных и выполнить требования страховщиков.',
   alternates: {
     canonical: '/ru/articles/it-consulting-digital-transformation',
     languages: {

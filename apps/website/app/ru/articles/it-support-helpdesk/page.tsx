@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'ITIL-тикеты и SLA-процессы | ИТ-хелпдеск в Дубае',
-  description: 'NOCKO развёртывает ITIL-совместимые системы тикетов на ServiceNow или Jira Service Management для компаний Дубая — с уровнями SLA P1–P4, отслеживанием FCR и ежемесячными управленческими отчётами.',
+  description: 'NOCKO внедряет ITIL-совместимые системы тикетов на ServiceNow или Jira Service Management для компаний Дубая с уровнями SLA P1-P4 и ежемесячными отчётами.',
   alternates: {
     canonical: '/ru/articles/it-support-helpdesk',
     languages: {

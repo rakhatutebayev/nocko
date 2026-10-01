@@ -8,8 +8,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Complete NOC Remote Integration in UAE',
-  description: 'NOCKO connects UAE businesses to a Dubai-based Network Operations Center via lightweight RMM agents — monitoring CPU, temperature, disk health, and network events in real time, with automated remediation for known issue patterns before they cause downtime.',
+  title: 'Complete NOC Remote Integration for UAE Business',
+  description: 'NOCKO connects UAE businesses to a Dubai-based NOC through lightweight RMM agents that watch CPU, disk health and network events and fix known issues.',
   alternates: {
     canonical: '/articles/managed-it-infrastructure',
     languages: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 const articleData = {
   hero: {
-    title: 'Complete NOC Remote Integration',
+    title: 'Complete NOC Remote Integration for UAE Business',
     subtitle: 'A centralized intelligence hub for your entire fleet',
     description: 'Our Network Operations Center monitors thousands of your data points live.',
   },
@@ -31,7 +31,7 @@ const articleData = {
   blocks: [
     {
       title: 'RMM Agent Deployment and Monitoring Scope',
-      text: '<p>We deploy NinjaRMM or ConnectWise Automate agents across all Windows and macOS endpoints, servers, and network devices within the managed environment. Each agent transmits telemetry every 60 seconds: CPU utilisation, memory usage, disk I/O, disk health (SMART data), temperature sensors, running services, and event log error counts. This creates a continuous health baseline — when CPU spikes to 95% at 3 AM on a fileserver, our NOC receives an alert and investigates before staff arrive in the morning.</p><p>Network device monitoring via SNMP covers your Cisco switches, FortiGate firewalls, and Ubiquiti or Aruba access points — tracking interface utilisation, error rates, and availability. A switch port flapping or a firewall CPU running hot triggers an alert before it causes packet loss or a security policy failure.</p>',
+      text: '<p>We deploy NinjaRMM or ConnectWise Automate agents across all Windows and macOS endpoints, servers, and network devices within the managed environment. Each agent transmits telemetry every 60 seconds: CPU utilisation, memory usage, disk I/O, disk health (SMART data), temperature sensors, running services, and event log error counts. This creates a continuous health baseline - when CPU spikes to 95% at 3 AM on a fileserver, our NOC receives an alert and investigates before staff arrive in the morning.</p><p>Network device monitoring via SNMP covers your Cisco switches, FortiGate firewalls, and Ubiquiti or Aruba access points - tracking interface utilisation, error rates, and availability. A switch port flapping or a firewall CPU running hot triggers an alert before it causes packet loss or a security policy failure.</p>',
       list: [
         'Per-device health telemetry: CPU, memory, disk, temperature, services',
         'SMART disk health monitoring with pre-failure alerts before drive replacement',
@@ -42,11 +42,11 @@ const articleData = {
     },
     {
       title: 'Network Operations Center and Alert Response',
-      text: '<p>Our Dubai NOC operates 24 hours a day with engineers assigned to alert queues. When the monitoring platform raises an alert, it is triaged using automated runbooks — common alerts like a backup job failure or a service stopping trigger an automated remediation script first before engaging an engineer. This resolves 40–60% of alerts without human intervention, reserving engineer time for issues that actually need investigation.</p><p>All alert activity is logged with timestamps, engineer notes, and resolution steps. Monthly NOC reports show the number of alerts by category, how many were auto-resolved versus engineer-resolved, and the average time to resolution — giving you visibility into the operational health of your infrastructure.</p>',
+      text: '<p>Our Dubai NOC operates 24 hours a day with engineers assigned to alert queues. When the monitoring platform raises an alert, it is triaged using automated runbooks - common alerts like a backup job failure or a service stopping trigger an automated remediation script first before engaging an engineer. This resolves 40–60% of alerts without human intervention, reserving engineer time for issues that actually need investigation.</p><p>All alert activity is logged with timestamps, engineer notes, and resolution steps. Monthly NOC reports show the number of alerts by category, how many were auto-resolved versus engineer-resolved, and the average time to resolution - giving you visibility into the operational health of your infrastructure.</p>',
     },
     {
       title: 'Remote Access and Remediation',
-      text: '<p>When an engineer needs to remediate an issue on a remote machine, they connect via the encrypted RMM remote desktop session — never using unmonitored third-party tools like AnyDesk or TeamViewer outside of the managed platform. All remote sessions are logged, recorded, and auditable. For regulated clients, this session recording satisfies NESA and DFSA requirements for privileged access monitoring.</p>',
+      text: '<p>When an engineer needs to remediate an issue on a remote machine, they connect via the encrypted RMM remote desktop session - never using unmonitored third-party tools like AnyDesk or TeamViewer outside of the managed platform. All remote sessions are logged, recorded, and auditable. For regulated clients, this session recording satisfies NESA and DFSA requirements for privileged access monitoring.</p>',
     },
     
   ],
@@ -55,11 +55,11 @@ const articleData = {
 const faqItems = [
   {
     question: "What is an RMM agent and is it safe to install?",
-    answer: "RMM (Remote Monitoring and Management) agents are small background services that report system health telemetry to the management platform. They operate with no user-visible interface and are deployed via Group Policy or Intune — the same channels used for any enterprise software.",
+    answer: "RMM (Remote Monitoring and Management) agents are small background services that report system health telemetry to the management platform. They operate with no user-visible interface and are deployed via Group Policy or Intune - the same channels used for any enterprise software.",
   },
   {
     question: "Can we see what the NOC is doing on our systems at any time?",
-    answer: "Yes — we provide a client portal showing all open tickets, recent alerts, and a log of all remote sessions conducted on your devices. Nothing happens on your systems without a corresponding audit record.",
+    answer: "Yes - we provide a client portal showing all open tickets, recent alerts, and a log of all remote sessions conducted on your devices. Nothing happens on your systems without a corresponding audit record.",
   },
   {
     question: "Does the RMM agent affect system performance?",

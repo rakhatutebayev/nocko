@@ -7,8 +7,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Surviving a Ransomware Strike in UAE',
-  description: 'Understand exactly what RTO and RPO mean, and how to architect a Disaster Recovery plan that actually works under the pressure of a real-world breach.',
+  title: 'Ransomware Recovery in UAE: RTO, RPO and DR Plans',
+  description: 'Understand exactly what RTO and RPO mean, and how to build a disaster recovery plan for your UAE business that works under the pressure of a real breach.',
   alternates: {
     canonical: '/articles/it-consulting-ransomware-survival',
     languages: {
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
 
 const articleData = {
   hero: {
-    title: 'Surviving a Ransomware Strike',
+    title: 'Surviving a Ransomware Strike: RTO, RPO and DR Plans',
     subtitle: 'Architect a Disaster Recovery plan that actually works',
-    description: 'Understand exactly what RTO and RPO mean, and how to architect a Disaster Recovery plan that actually works under the pressure of a real-world breach.',
+    description: 'Understand exactly what RTO and RPO mean, and how to build a disaster recovery plan for your UAE business that works under the pressure of a real breach.',
   },
-  intro: `Hope is not a security strategy. When advanced ransomware inevitably bypasses the perimeter defenses and begins maliciously encrypting your local file shares and SQL databases, the actions taken in the first 60 minutes determine whether your business survives or faces catastrophic public failure. Most companies in the UAE believe they are protected because they perform "daily backups"—until they realize during a crisis that the ransomware encrypted the backup drives too.`,
+  intro: `Hope is not a security strategy. When advanced ransomware inevitably bypasses the perimeter defenses and begins maliciously encrypting your local file shares and SQL databases, the actions taken in the first 60 minutes determine whether your business survives or faces catastrophic public failure. Most companies in the UAE believe they are protected because they perform "daily backups" - until they realize during a crisis that the ransomware encrypted the backup drives too.`,
   blocks: [
     {
       title: `The Fallacy of Standard Backups`,
@@ -34,7 +34,7 @@ const articleData = {
     },
     {
       title: `Air-Gapped and Immutable Storage`,
-      text: `<p>To survive a targeted strike, you must deploy <strong>Immutable Storage</strong>. Immutability means that once data is written to the backup repository, it cannot be altered, encrypted, or deleted for a mathematically defined retention period (e.g., 30 days)—even by someone holding the master Administrator password. Combined with strict off-site air-gaps (such as routing backups to an isolated AWS S3 bucket with Object Lock enabled), this guarantees that a pristine copy of your data always survives the blast radius.</p>`,
+      text: `<p>To survive a targeted strike, you must deploy <strong>Immutable Storage</strong>. Immutability means that once data is written to the backup repository, it cannot be altered, encrypted, or deleted for a mathematically defined retention period (e.g., 30 days) - even by someone holding the master Administrator password. Combined with strict off-site air-gaps (such as routing backups to an isolated AWS S3 bucket with Object Lock enabled), this guarantees that a pristine copy of your data always survives the blast radius.</p>`,
     },
     {
       title: `Defining RTO and RPO for Your Business`,

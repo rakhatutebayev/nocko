@@ -9,7 +9,7 @@ import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Google Workspace или Microsoft 365 в ОАЭ',
-  description: 'Практичное и объективное сравнение Google Workspace и Microsoft 365 для бизнеса в ОАЭ: стоимость, совместная работа, почта, безопасность, администрирование и что выбрать.',
+  description: 'Практичное сравнение Google Workspace и Microsoft 365 для бизнеса в ОАЭ. Стоимость, совместная работа, почта, безопасность, администрирование, выбор.',
   alternates: {
     canonical: '/ru/articles/google-workspace-vs-microsoft-365',
     languages: {

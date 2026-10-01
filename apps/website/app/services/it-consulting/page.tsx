@@ -7,14 +7,14 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'IT Consulting Services in Dubai | Technology Strategy & IT Consulting UAE',
+  title: 'IT Consulting Services Dubai | IT Strategy UAE',
   description:
-    'Strategic IT consulting services in Dubai and UAE. Technology assessment, digital transformation, and infrastructure planning for businesses. Expert IT advisors for DIFC, JLT and Business Bay.',
+    'IT consulting services in Dubai and the UAE. Technology assessment, digital transformation and infrastructure planning from advisors who know DIFC firms.',
   keywords:
     'IT consulting Dubai, IT strategy UAE, technology consulting Dubai, IT planning UAE, digital transformation Dubai, IT assessment UAE, best IT consulting Dubai',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'IT Consulting Services in Dubai | Technology Strategy & IT Consulting UAE',
+    title: 'IT Consulting Services Dubai | IT Strategy UAE',
     description: 'Expert IT strategy and technology consulting for businesses in Dubai and across the UAE.',
     type: 'website',
     locale: 'en_AE',
@@ -42,7 +42,7 @@ const fallback: MappedServiceContent = {
   firstSection: [
     {
       title: 'IT Infrastructure Assessment',
-      text: 'Begin with a comprehensive assessment of your current IT environment. Our consultants evaluate your infrastructure, identify inefficiencies, security gaps, and opportunities for optimization — delivering a detailed report with actionable recommendations.',
+      text: 'Begin with a comprehensive assessment of your current IT environment. Our consultants evaluate your infrastructure, identify inefficiencies, security gaps, and opportunities for optimization - delivering a detailed report with actionable recommendations.',
       link: '/articles/it-consulting-strategy',
       linkText: 'Assessment methodology',
       image: '/images/services/it-consulting-strategy-v2.png',
@@ -50,7 +50,7 @@ const fallback: MappedServiceContent = {
     },
     {
       title: 'Technology Roadmap Development',
-      text: 'We create detailed 12-36 month technology roadmaps aligned with your business goals. Our roadmaps prioritize investments by ROI, risk reduction, and strategic impact — giving your leadership team a clear path forward.',
+      text: 'We create detailed 12-36 month technology roadmaps aligned with your business goals. Our roadmaps prioritize investments by ROI, risk reduction, and strategic impact - giving your leadership team a clear path forward.',
       link: '/articles/it-consulting-strategy',
       linkText: 'Roadmap approach',
     },

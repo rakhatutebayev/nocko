@@ -47,7 +47,7 @@ export const defaultCaseStudies: CaseStudy[] = [
   },
   {
     id: 'solus',
-    title: 'How Solus Insurance Enhanced Security with Enterprise Cybersecurity',
+    title: 'How Solus Insurance Strengthened Cybersecurity',
     type: 'Cybersecurity',
     image: '/images/cases/cybersecurity.svg',
     alt: 'Cybersecurity case study',
@@ -110,7 +110,7 @@ export const defaultCaseStudies: CaseStudy[] = [
   },
   {
     id: 'it-consulting',
-    title: 'How a Dubai Real Estate Firm Cut IT Costs 35% with Strategic IT Consulting',
+    title: 'How a Dubai Real Estate Firm Cut IT Costs 35%',
     type: 'IT Consulting & Strategy',
     image: '/images/cases/amc.svg',
     alt: 'IT consulting case study',

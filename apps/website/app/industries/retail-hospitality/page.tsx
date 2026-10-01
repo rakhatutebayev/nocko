@@ -7,14 +7,14 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Retail & Hospitality in UAE',
+  title: 'IT Solutions for Retail & Hospitality in the UAE',
   description:
-    'Reliable IT solutions for retail and hospitality businesses in UAE. POS systems, guest Wi-Fi, network infrastructure, digital signage, and 24/7 support for stores, restaurants, and hotels.',
+    'Reliable IT solutions for retail and hospitality businesses in the UAE. POS systems, guest Wi-Fi, network infrastructure, digital signage and 24/7 support.',
   keywords:
     'IT solutions retail UAE, hospitality IT services Dubai, POS systems UAE, restaurant IT infrastructure, hotel network infrastructure',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'IT Solutions for Retail & Hospitality in UAE',
+    title: 'IT Solutions for Retail & Hospitality in the UAE',
     description:
       'Reliable IT solutions for retail and hospitality businesses in UAE. POS systems, guest Wi-Fi, and 24/7 support.',
     type: 'article',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 const industryData = {
   hero: {
-    title: 'IT Solutions for Retail & Hospitality',
+    title: 'IT Solutions for Retail & Hospitality in the UAE',
     subtitle: 'Reliable Technology for Stores, Restaurants, Hotels, and Entertainment Venues',
     description: '',
   },

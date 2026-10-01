@@ -7,8 +7,8 @@ import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Co-Managed IT: лучшее из двух миров в ОАЭ',
-  description: 'Руководство для ИТ-директоров: как эффективно передать рутинные задачи NOC на аутсорсинг, сохранив контроль над корпоративной стратегией. Мы интегрируемся напрямую с вашей внутренней командой.',
+  title: 'Co-Managed IT в ОАЭ, лучшее из двух миров',
+  description: 'Руководство для ИТ-директоров в ОАЭ. Как передать рутинные задачи NOC на аутсорсинг, сохранив контроль над стратегией и работу с внутренней командой.',
   alternates: {
     canonical: '/ru/articles/managed-it-co-managed',
     languages: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 const articleData = {
   hero: {
-    title: 'Co-Managed IT: лучшее из двух миров',
+    title: 'Co-Managed IT в ОАЭ, лучшее из двух миров',
     subtitle: 'Передайте рутину NOC на аутсорсинг, сохраняя контроль над стратегией',
     description: 'Руководство для ИТ-директоров: как эффективно аутсорсировать рутинные задачи NOC, не теряя контроля над корпоративной стратегией. Мы интегрируемся напрямую с вашей командой.',
   },
