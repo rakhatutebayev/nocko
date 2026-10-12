@@ -43,6 +43,17 @@ robots.txt, meta robots, canonical, hreflang (есть в HTML — Next пише
 - Request indexing, день 1: 9 из 10 приняты. `/articles/cloud-banking-uae` **проиндексирована через час** (lastCrawl 09:16 UTC) — метод работает.
 - `/articles/it-consulting-roi`: live-тест в GSC упал. Страница в норме (200, index/follow, JSON-LD валиден, TTFB 0,2 с), разовый медленный ответ 1,6 с после деплоя. Повторить запрос позже.
 
+## Второй деплой (12.10, 13:40 GST) — коммит 129cb21, запушен
+- EN-фолбэки кейсов Projection/Solus/Scalini: русские description → английские.
+- RU-футер: ссылки на /ru/locations/abu-dhabi и /ru/locations/sharjah (были сиротами).
+- lastmod пересчитан. Проверено на проде.
+
+## Точка возврата
+- Код: всё закоммичено и на проде (main = 129cb21). Незакоммиченных изменений нет.
+- Неотслеживаемые файлы в docs/ (ключи Google, отчёты Semrush) — не мои, не коммитить ключи.
+- Скрипты проверки лежали в scratchpad сессии (gsc-all.js, crawl.js, gsa.js) — при повторе пересоздать: JWT сервисного аккаунта → URL Inspection API по всем URL из sitemap, группировка по coverageState.
+- Состояние задач — claude-mem work_state, список `seo-indexing-2026-10`.
+
 ## Дальше
 1. ~~Деплой~~ ✅
 2. ~~Пересабмит sitemap~~ ✅
