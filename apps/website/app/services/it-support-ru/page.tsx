@@ -57,7 +57,7 @@ const itSupportRuContent = {
     {
       title: 'Сисадмин на связи в Telegram и WhatsApp',
       text: 'Ваш русскоязычный системный администратор доступен в привычных мессенджерах, по телефону и по почте. При этом каждое обращение попадает в тикет-систему по ITIL (ServiceNow или Jira Service Management): фиксируется время, приоритет и исполнитель. Вы общаетесь так, как удобно, а мы следим, чтобы ничего не потерялось и чтобы сроки по SLA соблюдались. Helpdesk работает 24/7, в том числе ночью и в выходные.',
-      link: '/articles/centralized-helpdesk-ru',
+      link: '/ru/articles/centralized-helpdesk-ru',
       linkText: 'Как устроен наш helpdesk',
     },
     {

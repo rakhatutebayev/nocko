@@ -108,8 +108,10 @@ export default function ITConsultingGuidePage() {
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT Consulting', href: '/services/it-consulting' }, { label: 'Complete Guide' }]} />
           <div className="article">
             <ArticleContent intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq}  relatedArticles={[
-    { href: '/articles/it-consulting-strategy', title: 'IT Assessment', description: 'Starting point for any IT consulting engagement.' },
-    { href: '/articles/it-consulting-strategy', title: 'IT Strategy Consulting', description: 'Business-aligned IT roadmaps for UAE organisations.' },
+    { href: '/articles/it-consulting-strategy', title: 'IT Strategy, Assessment and Roadmap', description: 'Starting point for any IT consulting engagement in the UAE.' },
+    { href: '/articles/it-consulting-roi', title: 'Microsoft 365 Licensing and ROI', description: 'Cut licence waste and prove the return on your M365 estate.' },
+    { href: '/articles/it-consulting-digital-transformation', title: 'Business Continuity and DR', description: 'Continuity planning and disaster recovery for UAE organisations.' },
+    { href: '/articles/it-consulting-infrastructure-design', title: 'M&A Technology Integration', description: 'Merging networks, identities and systems after an acquisition.' },
     { href: '/services/it-consulting', title: 'IT Consulting Services', description: 'Advisory and architecture consulting for UAE organisations.' }
   ]}/>
           </div>

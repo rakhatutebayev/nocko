@@ -24,10 +24,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/ru/articles/centralized-helpdesk-ru',
+    // RU-only article: the EN URL 301s here, so hreflang must not point at it.
     languages: {
-      'en-AE': '/articles/centralized-helpdesk-ru',
       'ru-RU': '/ru/articles/centralized-helpdesk-ru',
-      'x-default': '/articles/centralized-helpdesk-ru',
+      'x-default': '/ru/articles/centralized-helpdesk-ru',
     },
   },
 };

@@ -134,7 +134,12 @@ export default function ItAmcGuidePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'IT AMC', href: '/services/it-amc' }, { label: 'IT AMC Guide' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+              { href: '/articles/it-amc-hardware-lifecycle', title: 'Hardware Lifecycle in Your AMC', description: 'Refresh cycles, warranty tracking and end-of-life planning.' },
+              { href: '/articles/it-amc-vs-msp', title: 'AMC vs MSP Decision Guide', description: 'Which contract model fits your size, budget and risk profile.' },
+              { href: '/articles/it-support-onsite', title: 'On-Site IT Support in Dubai', description: 'Field engineer dispatch and what an on-site SLA should promise.' },
+              { href: '/services/it-amc', title: 'IT AMC Services', description: 'Annual maintenance contracts for Dubai and UAE businesses.' }
+            ]} />
           </div>
         </div>
 

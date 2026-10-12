@@ -145,7 +145,13 @@ export default function ManagedITGuidePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'Управляемые ИТ', href: '/ru/services/managed-it' }, { label: 'Управляемые ИТ-услуги в ОАЭ: полное руководство' }]} />
           <div className="article">
-            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+              { href: '/ru/articles/managed-it-co-managed', title: 'Co-Managed IT в ОАЭ', description: 'Сохраните внутреннюю команду и закройте пробелы силами MSP.' },
+              { href: '/ru/articles/managed-it-infrastructure', title: 'Удалённая интеграция NOC', description: 'Как круглосуточный NOC встраивается в существующую инфраструктуру.' },
+              { href: '/ru/articles/it-outsourcing-dubai-cost', title: 'Стоимость ИТ-аутсорсинга в Дубае', description: 'Сравнение моделей оплаты: за пользователя, за устройство, гибрид.' },
+              { href: '/ru/articles/data-backup-services-dubai', title: 'Резервное копирование в Дубае', description: 'Уровни бэкапа, цели RPO/RTO и что входит в управляемый план.' },
+              { href: '/ru/services/managed-it', title: 'Управляемые ИТ-услуги', description: 'Полное ИТ-обслуживание для бизнеса в Дубае и ОАЭ.' }
+            ]} />
           </div>
         </div>
 

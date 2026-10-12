@@ -136,7 +136,12 @@ export default function ItAmcGuidePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'IT AMC', href: '/ru/services/it-amc' }, { label: 'Руководство по IT AMC' }]} />
           <div className="article">
-            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+              { href: '/ru/articles/it-amc-hardware-lifecycle', title: 'Жизненный цикл оборудования в AMC', description: 'Циклы обновления, учёт гарантий и планирование вывода из эксплуатации.' },
+              { href: '/ru/articles/it-amc-vs-msp', title: 'AMC или MSP: как выбрать', description: 'Какая модель контракта подходит по размеру, бюджету и рискам.' },
+              { href: '/ru/articles/it-support-onsite', title: 'Выездная ИТ-поддержка в Дубае', description: 'Выезд инженера и что должен гарантировать SLA на месте.' },
+              { href: '/ru/services/it-amc', title: 'Услуги IT AMC', description: 'Годовые контракты на обслуживание для бизнеса в Дубае и ОАЭ.' }
+            ]} />
           </div>
         </div>
 

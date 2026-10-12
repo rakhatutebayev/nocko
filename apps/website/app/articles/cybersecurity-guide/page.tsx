@@ -137,7 +137,13 @@ export default function CybersecurityGuidePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Cybersecurity', href: '/services/cybersecurity' }, { label: 'Complete Guide' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+              { href: '/articles/cloud-zero-trust', title: 'Zero Trust for Cloud Workloads', description: 'Identity-first access control for Azure and AWS environments.' },
+              { href: '/articles/it-consulting-ransomware-survival', title: 'Ransomware Recovery in UAE', description: 'RTO, RPO and the DR plan that gets you back online.' },
+              { href: '/articles/it-support-monitoring', title: '24/7 Monitoring: NOC, SOC and RMM', description: 'What round-the-clock detection and response looks like.' },
+              { href: '/articles/cybersecurity-antivirus-dead', title: 'Why Standard Antivirus Is Dead', description: 'Why EDR and managed detection replaced signature-based tools.' },
+              { href: '/services/cybersecurity', title: 'Cybersecurity Services', description: 'Managed security for Dubai and UAE businesses.' }
+            ]} />
           </div>
         </div>
 

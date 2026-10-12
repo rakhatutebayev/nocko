@@ -141,7 +141,13 @@ export default function CybersecurityGuidePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'Кибербезопасность', href: '/ru/services/cybersecurity' }, { label: 'Полное руководство' }]} />
           <div className="article">
-            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+              { href: '/ru/articles/cloud-zero-trust', title: 'Zero Trust для облака', description: 'Контроль доступа на основе идентичности в Azure и AWS.' },
+              { href: '/ru/articles/it-consulting-ransomware-survival', title: 'Восстановление после ransomware', description: 'RTO, RPO и план DR, который возвращает бизнес в строй.' },
+              { href: '/ru/articles/it-support-monitoring', title: 'Мониторинг 24/7: NOC, SOC и RMM', description: 'Как устроены круглосуточное обнаружение и реагирование.' },
+              { href: '/ru/articles/cybersecurity-antivirus-dead', title: 'Почему обычный антивирус устарел', description: 'Почему EDR и управляемое обнаружение заменили сигнатурные инструменты.' },
+              { href: '/ru/services/cybersecurity', title: 'Услуги кибербезопасности', description: 'Управляемая защита для бизнеса в Дубае и ОАЭ.' }
+            ]} />
           </div>
         </div>
 

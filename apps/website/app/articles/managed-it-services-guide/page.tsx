@@ -141,7 +141,13 @@ export default function ManagedITGuidePage() {
         <div className="container">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Managed IT', href: '/services/managed-it' }, { label: 'Managed IT Services in UAE: Complete Guide' }]} />
           <div className="article">
-            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} />
+            <ArticleContent intro={articleData.intro} blocks={articleData.blocks} relatedArticles={[
+              { href: '/articles/managed-it-co-managed', title: 'Co-Managed IT in UAE', description: 'Keep your in-house team and add MSP coverage where it is thin.' },
+              { href: '/articles/managed-it-infrastructure', title: 'NOC Remote Integration', description: 'How a 24/7 NOC plugs into your existing infrastructure.' },
+              { href: '/articles/it-outsourcing-dubai-cost', title: 'IT Outsourcing Costs in Dubai', description: 'Per-user, per-device and hybrid pricing models compared.' },
+              { href: '/articles/data-backup-services-dubai', title: 'Data Backup and DR in Dubai', description: 'Backup tiers, RPO/RTO targets and what a managed plan covers.' },
+              { href: '/services/managed-it', title: 'Managed IT Services', description: 'Fully managed IT for Dubai and UAE businesses.' }
+            ]} />
           </div>
         </div>
 

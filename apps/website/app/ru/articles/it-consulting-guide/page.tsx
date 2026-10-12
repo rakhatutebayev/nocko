@@ -112,8 +112,10 @@ export default function ITConsultingGuidePage() {
           <Breadcrumbs items={[{ label: 'Главная', href: '/ru' }, { label: 'Услуги', href: '/ru/services' }, { label: 'ИТ Консалтинг', href: '/ru/services/it-consulting' }, { label: 'Полное руководство' }]} />
           <div className="article">
             <ArticleContent locale="ru" intro={articleData.intro} blocks={articleData.blocks} faq={articleData.faq} relatedArticles={[
-    { href: '/ru/articles/it-consulting-strategy', title: 'IT-оценка', description: 'Отправная точка для любого IT-консалтингового проекта.' },
-    { href: '/ru/articles/it-consulting-strategy', title: 'IT-стратегический консалтинг', description: 'IT-дорожные карты для организаций ОАЭ, согласованные с бизнесом.' },
+    { href: '/ru/articles/it-consulting-strategy', title: 'IT-стратегия, оценка и дорожная карта', description: 'Отправная точка для любого IT-консалтингового проекта в ОАЭ.' },
+    { href: '/ru/articles/it-consulting-roi', title: 'Лицензирование Microsoft 365 и ROI', description: 'Сократите лишние лицензии и докажите отдачу от M365.' },
+    { href: '/ru/articles/it-consulting-digital-transformation', title: 'Непрерывность бизнеса и DR', description: 'Планирование непрерывности и аварийного восстановления для компаний ОАЭ.' },
+    { href: '/ru/articles/it-consulting-infrastructure-design', title: 'IT-интеграция при M&A', description: 'Объединение сетей, учётных записей и систем после сделки.' },
     { href: '/ru/services/it-consulting', title: 'Услуги IT-консалтинга', description: 'Консультационный и архитектурный консалтинг для организаций ОАЭ.' }
   ]}/>
           </div>
