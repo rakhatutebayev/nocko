@@ -439,6 +439,13 @@ export const UI = {
   saved: t('Saved', 'Сохранено'),
   help: t('Explain', 'Пояснение'),
   contacts: t('Questions? WhatsApp +971 54 244 8888', 'Вопросы? WhatsApp +971 54 244 8888'),
+  eyebrow: t('NOCKO · IT Annual Maintenance Contract', 'NOCKO · Годовое IT-обслуживание'),
+  chipTime: t('~10 minutes', '~10 минут'),
+  chipSave: t('Autosaved', 'Автосохранение'),
+  chipSurvey: t('Free site survey', 'Бесплатный аудит'),
+  sections: t('Sections', 'Разделы'),
+  reviewStep: t('Review & send', 'Проверка и отправка'),
+  complete: t('complete', 'готово'),
 };
 
 export function visibleFields(step: Step, a: Answers): Field[] {
