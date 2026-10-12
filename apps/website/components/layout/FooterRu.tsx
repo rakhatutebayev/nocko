@@ -78,6 +78,12 @@ export default function FooterRu() {
                 <Link href="/ru/locations/dubai">ИТ Компания в Дубае</Link>
               </li>
               <li>
+                <Link href="/ru/locations/abu-dhabi">ИТ Компания в Абу-Даби</Link>
+              </li>
+              <li>
+                <Link href="/ru/locations/sharjah">ИТ Компания в Шардже</Link>
+              </li>
+              <li>
                 <a href="#clients">Наши Клиенты</a>
               </li>
               <li>

@@ -42,14 +42,14 @@ export async function generateMetadata({
       },
       title: 'How Projection Improved IT Reliability with an AMC',
       description:
-        'Projection повысила аптайм и скорость реакции на инциденты благодаря структурированному контракту AMC и проактивной поддержке по всей территории ОАЭ.',
+        'Projection improved uptime and incident response times with a structured IT AMC contract and proactive support across the UAE.',
       keywords:
         'Projection case study, IT AMC UAE, annual maintenance contract Dubai, IT reliability, uptime improvement',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How Projection Improved IT Reliability with an AMC',
         description:
-          'Projection повысила аптайм и скорость реакции на инциденты благодаря структурированному контракту AMC и проактивной поддержке по всей территории ОАЭ.',
+          'Projection improved uptime and incident response times with a structured IT AMC contract and proactive support across the UAE.',
         type: 'article',
       },
     };
@@ -67,14 +67,14 @@ export async function generateMetadata({
       },
       title: 'How Solus Insurance Strengthened Cybersecurity',
       description:
-        'Solus Insurance улучшила обнаружение угроз, снизила риски и укрепила соответствие требованиям с помощью корпоративных услуг кибербезопасности в ОАЭ.',
+        'Solus Insurance improved threat detection, reduced risk and strengthened regulatory compliance with enterprise cybersecurity services in the UAE.',
       keywords:
         'Solus Insurance case study, enterprise cybersecurity UAE, threat detection, security compliance, zero trust',
       openGraph: {
         images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
         title: 'How Solus Insurance Strengthened Cybersecurity',
         description:
-          'Solus Insurance улучшила обнаружение угроз, снизила риски и укрепила соответствие требованиям с помощью корпоративных услуг кибербезопасности в ОАЭ.',
+          'Solus Insurance improved threat detection, reduced risk and strengthened regulatory compliance with enterprise cybersecurity services in the UAE.',
         type: 'article',
       },
     };
@@ -117,7 +117,7 @@ export async function generateMetadata({
       },
       title: 'How Scalini Standardized Its Network Across 5 Sites',
       description:
-        'Ресторанная группа Scalini стандартизировала сеть в 5 локациях в ОАЭ с сертифицированной СКС Cat6A, централизованным управлением и аптаймом 99,9%.',
+        'Scalini restaurant group standardized its network across 5 UAE locations with certified Cat6A structured cabling, centralized management and 99.9% uptime.',
       keywords:
         'Scalini case study, network infrastructure UAE, structured cabling Dubai, multi-site network, restaurant IT infrastructure',
       openGraph: {
