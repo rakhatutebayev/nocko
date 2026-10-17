@@ -112,7 +112,14 @@ const fallback: MappedServiceContent = {
       description: "Цены 2026 в USD и AED, хранилище, безопасность, Copilot и Gemini, хранение данных в ОАЭ и короткий вердикт по типу компании.",
       url: "/ru/articles/google-workspace-vs-microsoft-365",
       ctaText: "Читать сравнение",
-    }
+    },
+    {
+      type: "Статья",
+      title: "Резервное копирование в здравоохранении ОАЭ",
+      description: "Как клиники ОАЭ защищают EMR, снимки и админ-данные изолированными неизменяемыми бэкапами по требованиям DHA, DoH и MOH.",
+      url: "/ru/articles/healthcare-it-backup-uae",
+      ctaText: "Читать статью",
+    },
   ],
   faq: [
     { question: 'Соответствуют ли AWS/Azure законам ОАЭ о локализации данных?', answer: 'Да. Как AWS, так и Microsoft Azure теперь имеют выделенные локальные регионы в ОАЭ (AWS Middle East Region, Azure UAE Central).' },

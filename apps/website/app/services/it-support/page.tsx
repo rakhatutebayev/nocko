@@ -7,14 +7,14 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'IT Support Dubai | IT Support Companies in Dubai',
+  title: 'IT Support in Dubai: 24/7 Helpdesk & On-Site',
   description:
     'IT support company in Dubai with a 24/7 helpdesk, 2-hour on-site response and proactive monitoring for businesses in DIFC, DMCC and Business Bay.',
   keywords:
     'IT support Dubai, IT support companies in Dubai, IT support services Dubai, IT support company Dubai, IT services Dubai, managed IT support UAE, 24/7 IT support Dubai, helpdesk Dubai, IT services company Dubai, IT solutions provider Dubai',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'IT Support Dubai | IT Support Companies in Dubai',
+    title: 'IT Support in Dubai: 24/7 Helpdesk & On-Site',
     description: 'Dubai-based IT support company. 24/7 helpdesk, 2-hour on-site response, and proactive monitoring for UAE businesses.',
     type: 'website',
     locale: 'en_AE',
@@ -115,7 +115,7 @@ const fallback: MappedServiceContent = {
   ],
   faq: [
     {
-      question: 'What IT support response times do you guarantee in Dubai?',
+      question: 'What response times do you guarantee in Dubai?',
       answer: 'Our SLA tiers: Critical (server down, network failure) - 15-minute remote response, 2-hour on-site in Dubai. High priority (single system failure, security incident) - 1-hour remote, 4-hour on-site. Standard requests - 4-hour remote, next business day on-site. All SLAs are contractually guaranteed. Abu Dhabi and Sharjah on-site response is typically same-day for critical issues.',
     },
     {
@@ -123,11 +123,11 @@ const fallback: MappedServiceContent = {
       answer: 'IT support pricing in Dubai varies by model. Per-incident (break-fix) support typically costs AED 300–600 per hour for on-site engineers. Monthly retainer IT support for a 20–50 user company ranges from AED 3,000–8,000 per month, covering unlimited remote helpdesk tickets and a defined number of on-site visits. Our managed IT support packages include proactive monitoring, which reduces incidents by 60–70% compared to pure break-fix support.',
     },
     {
-      question: 'What is the difference between IT support companies in Dubai?',
+      question: 'How do I compare providers in Dubai?',
       answer: 'The key differentiators among Dubai IT support companies are: response time guarantees (are SLAs contractual or verbal?), engineer qualifications (certified Microsoft/Cisco vs. generalists), local presence (Dubai-based engineers vs. remote-only), language capability (English, Arabic, Russian), and monitoring capability (proactive NOC vs. pure break-fix). NOCKO employs certified engineers based in Dubai, with contractual SLAs and 24/7 monitoring included in all support contracts.',
     },
     {
-      question: 'Do you provide IT support outside business hours?',
+      question: 'Do you work outside business hours?',
       answer: 'Yes. Our helpdesk operates 24/7/365. After-hours remote support is included in all NOCKO support contracts. After-hours on-site emergency response for Dubai mainland is available within a 2-hour window under our Premium and Enterprise contracts. Standard contracts include after-hours remote support with on-site the next business day.',
     },
     {
@@ -135,7 +135,7 @@ const fallback: MappedServiceContent = {
       answer: 'Yes. We support distributed teams through secure remote access management, Microsoft 365 and Google Workspace administration, VPN setup and troubleshooting, and endpoint monitoring for devices regardless of location. For free zone businesses with employees working across multiple Dubai locations or from home in areas like JVC, Marina, or Business Bay, our remote-first support model resolves 85% of issues without requiring an on-site visit.',
     },
     {
-      question: 'Which industries do you provide IT support for in Dubai?',
+      question: 'Which industries do you work with in Dubai?',
       answer: 'We provide IT support for businesses across all major sectors in the UAE: financial services (DIFC, ADGM regulated entities), real estate agencies, professional services (law firms, consulting), hospitality, healthcare clinics, logistics companies, and retail. Our team understands sector-specific compliance requirements - including DFSA technology risk guidelines for DIFC firms and NESA standards for government-adjacent entities.',
     },
     {
@@ -143,11 +143,11 @@ const fallback: MappedServiceContent = {
       answer: 'A typical NOCKO monthly IT support contract covers: unlimited remote helpdesk tickets (business hours + after-hours), a defined number of scheduled on-site visits, endpoint monitoring and alerting, patch management (Windows and critical software), Microsoft 365 / Google Workspace administration, and monthly IT health reports. Cloud infrastructure support, cybersecurity operations, and large project work are available as extensions.',
     },
     {
-      question: 'How quickly can you start providing IT support for our business?',
+      question: 'How quickly can you start with our business?',
       answer: 'For remote helpdesk support, we can begin within 24–48 hours after contract signing. Full onboarding - including installing RMM monitoring agents, documenting your infrastructure, configuring access, and integrating your team into our ticketing system - typically takes 3–5 business days for companies with 20–100 users.',
     },
   ],
-  faqTitle: 'IT Support Dubai - Frequently Asked Questions',
+  faqTitle: 'Frequently Asked Questions',
 };
 
 export default async function ItSupportPage() {

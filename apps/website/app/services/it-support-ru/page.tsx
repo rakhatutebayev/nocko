@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
-import HeaderWrapper from '@/components/layout/HeaderWrapper';
-import Footer from '@/components/layout/Footer';
+import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
+import Footer from '@/components/layout/FooterRu';
+import StructuredData from '@/components/seo/StructuredData';
 import Hero from '@/components/sections/Hero';
 import ServiceContentEnhanced from '@/components/services/ServiceContentEnhanced';
 import ServiceFeatures from '@/components/services/ServiceFeatures';
@@ -190,12 +191,22 @@ const itSupportRuContent = {
 export default function ITSupportRuPage() {
   return (
     <>
+      <StructuredData
+        type="Service"
+        data={{
+          '@id': 'https://nocko.com/services/it-support-ru#service',
+          url: 'https://nocko.com/services/it-support-ru',
+          serviceType: 'IT Support',
+          name: 'ИТ поддержка и ИТ-аутсорсинг на русском языке в Дубае',
+          description: 'Русскоязычный системный администратор 24/7, helpdesk в Telegram и WhatsApp, выезд инженера за 2 часа по Дубаю, договор и отчёты на русском и английском.',
+        }}
+      />
       <HeaderWrapper />
       <main className="main" role="main">
         <Breadcrumbs
           hidden={true}
           items={[
-            { name: 'Услуги', url: '/services' },
+            { name: 'Услуги', url: '/ru/services' },
             { name: 'ИТ поддержка на русском' },
           ]}
         />

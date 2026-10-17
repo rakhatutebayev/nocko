@@ -97,7 +97,15 @@ const fallback: MappedServiceContent = {
     { icon: '/images/benefits/pricing.webp', text: 'ROI-focused engagements' },
     { icon: '/images/benefits/communication.webp', text: 'Executive-ready deliverables' },
   ],
-  resources: [],
+  resources: [
+    {
+      type: "Case Study",
+      title: "M365 Audit Saves 40% Annually",
+      description: "A forensic Microsoft 365 licensing audit removed duplicate SaaS tools for a Dubai firm.",
+      url: "/case-studies/m365-audit",
+      ctaText: "Read the case study",
+    },
+  ],
   cta: {
     title: 'Ready to Align Your IT with Business Goals?',
     text: 'Schedule a free consultation with our senior IT consultants to discuss your technology challenges.',

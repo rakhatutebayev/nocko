@@ -89,6 +89,7 @@ const nextConfig: NextConfig = {
       { source: '/services/network-infrastructure', destination: '/services/structured-cabling', permanent: true },
       // Russian-language article lives at /ru/ — redirect EN path to canonical RU path
       { source: '/articles/centralized-helpdesk-ru', destination: '/ru/articles/centralized-helpdesk-ru', permanent: true },
+      { source: '/feed.xml', destination: '/rss.xml', permanent: true },
       // .html duplicates — top-level pages
       { source: '/case-studies.html', destination: '/case-studies', permanent: true },
       { source: '/services.html', destination: '/services', permanent: true },

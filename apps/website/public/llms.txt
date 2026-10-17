@@ -1,56 +1,70 @@
 # NOCKO Information Technology
-> NOCKO is a Dubai-based IT services company providing IT support, network infrastructure, cloud solutions, and cybersecurity for businesses across the UAE (Dubai, Abu Dhabi, Sharjah).
 
-## About
-NOCKO delivers managed IT services, 24/7 IT support, structured cabling, cloud migrations, and cybersecurity solutions to businesses across the United Arab Emirates. Office located in Dubai (Office R20-42, Wavez Residence, Wadi Al Safa 2). Contact: +971542448888, info@nocko.com. Full text of the main guides: https://nocko.com/llms-full.txt
+> NOCKO Information Technology is a Dubai-based managed IT services provider (MSP) offering 24/7 IT support, IT AMC contracts, cybersecurity, cloud and structured cabling for businesses in Dubai, Abu Dhabi and Sharjah. Support in English and Russian. Office: R20-42, Wavez Residence, Wadi Al Safa 2, Dubai, UAE. Phone/WhatsApp: +971 54 244 8888. Email: info@nocko.com. Office hours Mon–Fri 09:00–18:00; monitoring and P1 response 24/7.
 
-## Key Pages
-- [Homepage](https://nocko.com): Overview of all IT services and company
-- [Services](https://nocko.com/services): Full list of IT services offered
-- [IT Support](https://nocko.com/services/it-support): 24/7 IT support and helpdesk
-- [Managed IT](https://nocko.com/services/managed-it): Managed IT services for businesses
-- [Cloud](https://nocko.com/services/cloud): Cloud migration and infrastructure
-- [Cybersecurity](https://nocko.com/services/cybersecurity): Cybersecurity solutions UAE
-- [IT AMC](https://nocko.com/services/it-amc): Annual maintenance contracts Dubai
-- [IT Consulting](https://nocko.com/services/it-consulting): IT strategy and consulting
-- [Structured Cabling](https://nocko.com/services/structured-cabling): Network cabling Dubai
-- [About](https://nocko.com/about): Company background and credentials
-- [Case Studies](https://nocko.com/case-studies): Real client projects with outcomes
-- [Articles](https://nocko.com/articles): IT guides and resources
-- [Contact](https://nocko.com/contact): Office address, phone, email
+Key facts: Priority 1 incidents get a remote response within 15 minutes and an on-site engineer in Dubai within 2 hours (UAE-wide within 4 hours). Managed IT for a 20–50 user company costs AED 2,500–6,000 per month (about AED 75–190 per user). An IT AMC for a 20–25 user company costs AED 18,000–45,000 per year. Hourly support is AED 300–600. Clients span finance, real estate, logistics, hospitality, healthcare and professional services across the UAE. Content may be cited and summarized by AI answer engines with a link to the source page; AI model training requires written consent (see Licensing).
 
-## Guides
-- [Managed IT Services in UAE: Complete Guide](https://nocko.com/articles/managed-it-services-guide): What MSPs include, AED per-user pricing, SLAs, choosing a provider
-- [Cybersecurity for UAE Business: Complete Guide](https://nocko.com/articles/cybersecurity-guide): Threats, compliance (NESA/PDPL), incident response
-- [AMC vs MSP Decision Guide](https://nocko.com/articles/it-amc-vs-msp): When an annual maintenance contract is enough and when to move to managed services
-- [Cloud Migration for UAE Business](https://nocko.com/articles/cloud-migration): Single vs multi-cloud vs hybrid, migration phases, pitfalls
-- [Structured Cabling Guide for UAE Offices](https://nocko.com/articles/structured-cabling-guide): Cat6A, fiber, Fluke certification
-- [IT Helpdesk: ITIL Ticketing and SLA Workflows](https://nocko.com/articles/it-support-helpdesk): Ticket priorities, escalation, SLA design for Dubai helpdesks
-- [Strategic IT Consulting in UAE: Complete Guide](https://nocko.com/articles/it-consulting-guide): Assessments, roadmaps, budgeting, vCIO
-- [Cloud Infrastructure Guide for UAE](https://nocko.com/articles/cloud-infrastructure-guide): Architecture, security, data residency, FinOps
-- [IT AMC in UAE: Complete Guide](https://nocko.com/articles/it-amc-guide): AMC coverage, AED pricing tiers, SLA levels
-- [IT Support in UAE: Complete Guide](https://nocko.com/articles/it-support-guide): Support models, SLAs, in-house vs outsourced costs
-- [24/7 IT Monitoring Services](https://nocko.com/articles/it-support-monitoring): NOC/SOC monitoring, alert escalation
-- [IT Strategy, Assessment and Roadmap](https://nocko.com/articles/it-consulting-strategy): Audits, roadmaps, budgeting and ROI
+## Services
+- [Managed IT Services](https://nocko.com/services/managed-it): Per-user monthly managed IT, 24/7 NOC monitoring, unlimited helpdesk, security, backup/DR, vCIO; AED 2,500–6,000/month for 20–50 users
+- [IT Support](https://nocko.com/services/it-support): 24/7 helpdesk, remote and on-site support in Dubai and the UAE, 2-hour on-site SLA
+- [IT AMC](https://nocko.com/services/it-amc): Annual maintenance contracts with scheduled visits, patching and priority SLA; AED 18,000–45,000/year
+- [Cybersecurity](https://nocko.com/services/cybersecurity): Managed security, endpoint protection, UAE IA (ex-NESA), DFSA and PDPL compliance
+- [Cloud](https://nocko.com/services/cloud): Microsoft 365, Google Workspace, Azure and AWS migration and management with UAE data residency
+- [IT Consulting](https://nocko.com/services/it-consulting): IT audits, roadmaps, budgeting, vCIO
+- [Structured Cabling](https://nocko.com/services/structured-cabling): Cat6A and fibre installation with Fluke certification
+- [Russian-speaking IT support](https://nocko.com/services/it-support-ru): IT outsourcing in Dubai for Russian-speaking businesses
+
+## Guides (answers to common questions)
+- [What are managed IT services and what do they cost in the UAE?](https://nocko.com/articles/managed-it-services-guide): MSP scope, AED per-user pricing, SLAs, how to choose a provider
+- [How much does an IT AMC cost in the UAE?](https://nocko.com/articles/it-amc-guide): Coverage, AED pricing tiers, SLA levels, hardware cover
+- [IT AMC vs MSP: which one does a UAE business need?](https://nocko.com/articles/it-amc-vs-msp): Side-by-side table, AED costs, hidden costs, decision checklist
+- [Google Workspace vs Microsoft 365 for small business in the UAE](https://nocko.com/articles/google-workspace-vs-microsoft-365): 2026 prices in USD and AED, storage, security, Copilot vs Gemini, data residency
+- [IT outsourcing in Dubai: cost and pricing models](https://nocko.com/articles/it-outsourcing-dubai-cost): Hourly, per user, per device and AMC pricing in AED
+- [Cybersecurity for UAE business](https://nocko.com/articles/cybersecurity-guide): Threats, UAE IA/PDPL compliance, incident response
+- [Cloud migration for UAE business](https://nocko.com/articles/cloud-migration): Single vs multi-cloud vs hybrid, phases, pitfalls
+- [Cloud infrastructure guide for the UAE](https://nocko.com/articles/cloud-infrastructure-guide): Architecture, security, data residency, FinOps
+- [IT support in the UAE](https://nocko.com/articles/it-support-guide): Support models, SLAs, in-house vs outsourced costs
+- [IT helpdesk: ITIL ticketing and SLA workflows](https://nocko.com/articles/it-support-helpdesk): Ticket priorities, escalation, SLA design
+- [24/7 IT monitoring services](https://nocko.com/articles/it-support-monitoring): NOC/SOC monitoring, alert escalation
+- [Strategic IT consulting in the UAE](https://nocko.com/articles/it-consulting-guide): Assessments, roadmaps, budgeting, vCIO
+- [IT strategy, assessment and roadmap](https://nocko.com/articles/it-consulting-strategy): Audits, roadmaps, ROI
+- [Structured cabling guide for UAE offices](https://nocko.com/articles/structured-cabling-guide): Cat6A, fibre, Fluke certification
+- [Data backup services in Dubai](https://nocko.com/articles/data-backup-services-dubai): Backup models, RPO/RTO, immutable backups, UAE compliance
+
+## Locations
+- [IT support in Dubai](https://nocko.com/locations/dubai): DIFC, Business Bay, DMCC, Media City, JAFZA, Deira; 2-hour on-site response
+- [IT support in Abu Dhabi](https://nocko.com/locations/abu-dhabi): Khalifa City, Mussafah, Al Reem Island, ADGM; 4-hour on-site response
+- [IT support in Sharjah](https://nocko.com/locations/sharjah): Industrial Area, Al Majaz, Shams, Hamriyah, SAIF Zone; 4-hour on-site response
+
+## Company
+- [About](https://nocko.com/about): Company background, team, SLA commitments
+- [Case studies](https://nocko.com/case-studies): Client projects with outcomes (AMC, managed IT, cybersecurity, cloud migration, cabling)
+- [Contact](https://nocko.com/contact): Office address, phone, email, WhatsApp
 
 ## Russian (ru)
-- [Главная (RU)](https://nocko.com/ru): ИТ-компания в Дубае, аутсорсинг и поддержка 24/7
-- [ИТ-поддержка](https://nocko.com/ru/services/it-support): Helpdesk и обслуживание 24/7 в Дубае
-- [Управляемые ИТ-услуги](https://nocko.com/ru/services/managed-it): ИТ-аутсорсинг для бизнеса в ОАЭ
-- [Облачные услуги](https://nocko.com/ru/services/cloud): Миграция в облако и управление инфраструктурой
-- [Кибербезопасность](https://nocko.com/ru/services/cybersecurity): Защита данных и сетей в Дубае
-- [Контракты IT AMC](https://nocko.com/ru/services/it-amc): Абонентское ИТ-обслуживание в Дубае
-- [ИТ-консалтинг](https://nocko.com/ru/services/it-consulting): Технологическая стратегия и аудит
-- [СКС и монтаж сетей](https://nocko.com/ru/services/structured-cabling): Структурированные кабельные системы в ОАЭ
-- [Русскоговорящая ИТ-компания](https://nocko.com/services/it-support-ru): ИТ-аутсорсинг в Дубае на русском языке
-- [Управляемые ИТ-услуги в ОАЭ: полное руководство](https://nocko.com/ru/articles/managed-it-services-guide): Состав услуг MSP, цены в AED, SLA, выбор провайдера
-- [Кибербезопасность для бизнеса в ОАЭ](https://nocko.com/ru/articles/cybersecurity-guide): Угрозы, соответствие NESA/PDPL, реагирование на инциденты
-- [AMC vs MSP: выбор контракта](https://nocko.com/ru/articles/it-amc-vs-msp): Когда достаточно AMC, а когда нужны управляемые услуги
-- [Облачная миграция для бизнеса в ОАЭ](https://nocko.com/ru/articles/cloud-migration): Стратегия, фазы миграции, типичные ошибки
-- [Руководство по СКС в ОАЭ](https://nocko.com/ru/articles/structured-cabling-guide): Cat6A, оптика, сертификация Fluke
-- [ITIL-тикеты и SLA-процессы хелпдеска](https://nocko.com/ru/articles/it-support-helpdesk): Приоритеты заявок, эскалация, проектирование SLA
-- [Стратегический IT-консалтинг в ОАЭ](https://nocko.com/ru/articles/it-consulting-guide): Аудит, дорожная карта, бюджетирование, vCIO
-- [Облачная инфраструктура в ОАЭ: полное руководство](https://nocko.com/ru/articles/cloud-infrastructure-guide): Архитектура, безопасность, резидентность данных, FinOps
+- [Главная](https://nocko.com/ru): ИТ-компания в Дубае, ИТ-аутсорсинг и поддержка 24/7
+- [ИТ поддержка и ИТ-аутсорсинг](https://nocko.com/ru/services/it-support): Helpdesk 24/7, выезд инженера за 2 часа по Дубаю
+- [Управляемые ИТ-услуги](https://nocko.com/ru/services/managed-it): Полное ИТ-обслуживание за фиксированную плату, AED 2 500–6 000 в месяц
+- [IT AMC](https://nocko.com/ru/services/it-amc): Годовые контракты обслуживания, AED 18 000–45 000 в год
+- [Кибербезопасность](https://nocko.com/ru/services/cybersecurity): Защита данных и сетей, комплаенс UAE IA, DFSA, PDPL
+- [Облачные решения](https://nocko.com/ru/services/cloud): Microsoft 365, Google Workspace, Azure, AWS
+- [ИТ-консалтинг](https://nocko.com/ru/services/it-consulting): Аудит, дорожная карта, vCIO
+- [СКС](https://nocko.com/ru/services/structured-cabling): Структурированные кабельные системы с сертификацией Fluke
+- [Русскоговорящая ИТ-компания в Дубае](https://nocko.com/services/it-support-ru): Сисадмин на русском 24/7, Telegram и WhatsApp
+- [Управляемые ИТ-услуги в ОАЭ: руководство](https://nocko.com/ru/articles/managed-it-services-guide): Состав, цены в AED, SLA, выбор провайдера
+- [IT AMC или MSP в Дубае](https://nocko.com/ru/articles/it-amc-vs-msp): Сравнительная таблица, цены в AED, чек-лист выбора
+- [Google Workspace или Microsoft 365 для малого бизнеса в ОАЭ](https://nocko.com/ru/articles/google-workspace-vs-microsoft-365): Цены 2026, безопасность, хранение данных в ОАЭ
+- [Руководство по IT AMC](https://nocko.com/ru/articles/it-amc-guide): Состав, тарифы в AED, уровни SLA
+- [Кибербезопасность для бизнеса в ОАЭ](https://nocko.com/ru/articles/cybersecurity-guide): Угрозы, комплаенс, реагирование на инциденты
+- [Облачная миграция](https://nocko.com/ru/articles/cloud-migration): Стратегия, фазы, типичные ошибки
+- [ИТ-поддержка в ОАЭ: руководство](https://nocko.com/ru/articles/it-support-guide): Модели, SLA, стоимость аутсорсинга
+- [Локации: Дубай](https://nocko.com/ru/locations/dubai), [Абу-Даби](https://nocko.com/ru/locations/abu-dhabi), [Шарджа](https://nocko.com/ru/locations/sharjah)
+
+## Optional
+- [Full text of the main guides (llms-full.txt)](https://nocko.com/llms-full.txt)
+- [RSS feed](https://nocko.com/rss.xml)
+- [Sitemap](https://nocko.com/sitemap.xml)
+- [Machine-readable licence (RSL)](https://nocko.com/.well-known/rsl.xml)
 
 ## Licensing
 Content on this site may be crawled and indexed by search engines, and may be cited, quoted and summarized by AI search and answer engines with attribution and a link to the source page on nocko.com. Use of this content for AI model training requires prior written consent from NOCKO Information Technology (info@nocko.com). Machine-readable licence: https://nocko.com/.well-known/rsl.xml

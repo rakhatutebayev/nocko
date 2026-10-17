@@ -5,6 +5,7 @@ import Hero from '@/components/sections/Hero';
 import StructuredData from '@/components/seo/StructuredData';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import ServiceFAQ from '@/components/services/ServiceFAQ';
 
 export const metadata: Metadata = {
   title: 'ИТ Поддержка в Дубае, управляемые ИТ услуги',
@@ -215,7 +216,7 @@ export default function DubaiRuPage() {
                     <h3 className="service-card__title">{service.title}</h3>
                     <p className="service-card__description">{service.description}</p>
                     <a href={service.link} className="btn btn--primary btn--sm">
-                      Подробнее
+                      {`Подробнее: ${service.title}`}
                     </a>
                   </div>
                 ))}
@@ -253,6 +254,15 @@ export default function DubaiRuPage() {
           text="Поговорите с инженером."
           ctaText="Получить консультацию"
           ctaUrl="#contact"
+        />
+        <ServiceFAQ
+          title="ИТ поддержка в Дубае: частые вопросы"
+          items={[
+            { question: "Как быстро инженер приедет в наш офис в Дубае?", answer: "По инцидентам приоритета 1 удалённая реакция — 15 минут, выезд инженера по Дубаю — 2 часа. Стандартные запросы решаются удалённо в тот же рабочий день; инженеры находятся в Дубае и ежедневно работают в DIFC, Business Bay, DMCC, Media City, JAFZA и Дейре." },
+            { question: "Какие районы Дубая вы обслуживаете?", answer: "Весь Дубай, включая свободные зоны: DIFC, DMCC, JAFZA, Dubai Internet City, Media City, Dubai South, Dubai Silicon Oasis и Expo City, а также Дейру, Бур-Дубай и Аль-Куоз. Тот же договор покрывает Шарджу и Абу-Даби с выездом по ОАЭ в течение 4 часов." },
+            { question: "Сколько стоит ИТ поддержка для компании в Дубае?", answer: "Управляемые ИТ-услуги для компании на 20–50 человек обычно стоят AED 2 500–6 000 в месяц; годовой контракт обслуживания (AMC) — AED 18 000–45 000 в год в зависимости от серверов, рабочих станций и уровня SLA. Почасовая поддержка — AED 300–600. Расчёт делаем по вашему реальному списку оборудования." },
+            { question: "Работаете ли вы с русскоязычными компаниями?", answer: "Да. Системный администратор, хелпдеск в Telegram и WhatsApp, договор и отчёты — на русском и английском. Подробнее на странице ИТ поддержки на русском языке." },
+          ]}
         />
       </main>
       <Footer />

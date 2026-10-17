@@ -7,14 +7,14 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'IT AMC Dubai | IT Annual Maintenance Contract UAE',
+  title: 'IT AMC in Dubai: Annual Maintenance with SLA',
   description:
     'IT AMC provider in Dubai and the UAE. A fixed-cost annual maintenance contract covering servers, networks and workstations, with 24/7 priority support.',
   keywords:
     'IT AMC Dubai, IT AMC services, IT AMC services in Dubai, annual maintenance contract Dubai, it annual maintenance contract in dubai, AMC services Dubai, IT support contract Dubai, IT maintenance contract UAE, AMC company Dubai, it amc uae',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'IT AMC Dubai | IT Annual Maintenance Contract UAE',
+    title: 'IT AMC in Dubai: Annual Maintenance with SLA',
     description: 'Fixed-cost IT Annual Maintenance Contract for Dubai businesses. Priority support, scheduled visits, hardware lifecycle management.',
     type: 'website',
     locale: 'en_AE',
@@ -55,7 +55,7 @@ const fallback: MappedServiceContent = {
       linkText: 'SLA guarantees',
     },
     {
-      title: 'Hardware Lifecycle Management in Your IT AMC',
+      title: 'Hardware Lifecycle Management Within the Contract',
       text: 'We track your entire hardware inventory, monitor warranty expiration, and proactively recommend replacements before failures occur. Our procurement team ensures you get the best pricing on hardware upgrades.',
       link: '/articles/it-amc-hardware-lifecycle',
       linkText: 'Hardware management',
@@ -104,7 +104,14 @@ const fallback: MappedServiceContent = {
       description: "Side-by-side comparison of annual maintenance contracts and managed IT: scope, SLA, AED pricing, hidden costs and a decision checklist.",
       url: "/articles/it-amc-vs-msp",
       ctaText: "Read the comparison",
-    }
+    },
+    {
+      type: "Case Study",
+      title: "How Projection Improved IT Reliability with a Dedicated AMC",
+      description: "A Dubai and Abu Dhabi company moved from ad-hoc call-outs to a scheduled AMC with a priority SLA.",
+      url: "/case-studies/projection",
+      ctaText: "Read the case study",
+    },
   ],
   cta: {
     title: 'Get a Tailored IT AMC Proposal',
@@ -139,11 +146,11 @@ const fallback: MappedServiceContent = {
       answer: 'Yes. All NOCKO IT AMC contracts include emergency support with guaranteed SLA response times. Critical incidents (server down, network failure, data loss) receive a 1-hour remote response and 2-hour on-site response for Dubai mainland locations. AMC clients are prioritized ahead of ad-hoc customers in our helpdesk queue. Emergency callouts during business hours are included in the AMC fee - after-hours emergency callouts are included in Premium and Enterprise tiers.',
     },
     {
-      question: 'Which UAE locations do you cover for IT AMC services?',
+      question: 'Which UAE locations do you cover?',
       answer: 'We provide IT AMC services across all major UAE business locations: Dubai mainland, DIFC, DMCC, JLT, Business Bay, Downtown Dubai, DAFZA, JAFZA, Dubai Internet City, Dubai Media City, and Abu Dhabi (including ADGM and Masdar City). Our engineers are Dubai-based with same-day on-site capability across the emirate. For Abu Dhabi and Sharjah clients, on-site visits are scheduled within 24 hours for standard requests.',
     },
     {
-      question: 'Does the IT AMC cover hardware replacement costs?',
+      question: 'Does the contract cover hardware replacement costs?',
       answer: 'The IT AMC covers labour, diagnosis, and coordination for hardware repairs. Physical hardware replacement parts are typically excluded from the AMC fee and billed at cost - however, NOCKO\'s purchasing team negotiates vendor pricing that is typically 15–25% below retail. For clients who want full hardware coverage including parts, we offer our Enterprise AMC with parts-inclusive options for servers and networking equipment.',
     },
     {
@@ -151,11 +158,11 @@ const fallback: MappedServiceContent = {
       answer: 'Yes. IT AMC transitions are straightforward. Our process: (1) infrastructure discovery and documentation audit during a 2-week parallel period, (2) handover of monitoring tools and access credentials, (3) review of open issues and warranty status, (4) AMC contract activation. Most transitions complete within 2–3 weeks with no service disruption. We frequently take over contracts from companies that have outgrown their previous IT provider.',
     },
     {
-      question: 'What is included in the NOCKO IT AMC vs. what is excluded?',
+      question: 'What is included in the NOCKO contract and what is excluded?',
       answer: 'Included in all NOCKO IT AMC tiers: preventive maintenance visits, emergency remote support, patch management (Windows, Office, critical security patches), hardware inventory tracking, and monthly infrastructure health reports. Excluded from standard AMC (available as add-ons): 24/7 NOC monitoring, cloud infrastructure management, cybersecurity operations (SOC/SIEM), physical hardware replacement parts, and new infrastructure projects. Ask us for a full scope table when requesting a quote.',
     },
   ],
-  faqTitle: 'IT AMC Dubai - Frequently Asked Questions',
+  faqTitle: 'Frequently Asked Questions',
 };
 
 export default async function ItAmcPage() {

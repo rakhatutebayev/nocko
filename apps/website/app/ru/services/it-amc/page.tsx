@@ -105,7 +105,14 @@ const fallback: MappedServiceContent = {
       description: "Сравнение годового контракта обслуживания и управляемых ИТ-услуг: состав, SLA, цены в AED, скрытые расходы и чек-лист выбора.",
       url: "/ru/articles/it-amc-vs-msp",
       ctaText: "Читать сравнение",
-    }
+    },
+    {
+      type: "Кейс",
+      title: "Как Projection повысила надёжность ИТ благодаря выделенному AMC",
+      description: "Компания в Дубае и Абу-Даби перешла от разовых вызовов к плановому AMC с SLA по приоритетам.",
+      url: "/ru/case-studies/projection",
+      ctaText: "Читать кейс",
+    },
   ],
   cta: {
     title: 'Перестаньте платить за простои.',

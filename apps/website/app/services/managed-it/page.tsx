@@ -7,14 +7,14 @@ import { getService } from '@/lib/api/strapi';
 import { mapServiceData, type MappedServiceContent } from '@/lib/services/mapServiceData';
 
 export const metadata: Metadata = {
-  title: 'Managed IT Services Dubai | Managed Services UAE',
+  title: 'Managed IT Services in Dubai: 24/7 NOC & vCIO',
   description:
     'Managed IT services in Dubai and the UAE. 24/7 NOC monitoring, infrastructure management, managed security and helpdesk from AED 2,500 a month.',
   keywords:
     'managed IT services Dubai, managed IT services UAE, managed service provider Dubai, managed services providers UAE, IT managed services Dubai, managed IT services in Dubai, managed service providers in Dubai, IT outsourcing Dubai, managed IT infrastructure UAE',
   openGraph: {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
-    title: 'Managed IT Services Dubai | Managed Services UAE',
+    title: 'Managed IT Services in Dubai: 24/7 NOC & vCIO',
     description: 'Dubai-based managed IT services provider. 24/7 NOC, complete infrastructure management, managed security for UAE businesses.',
     type: 'website',
     locale: 'en_AE',
@@ -118,7 +118,14 @@ const fallback: MappedServiceContent = {
       description: "Side-by-side comparison of annual maintenance contracts and managed IT: scope, SLA, AED pricing, hidden costs and a decision checklist.",
       url: "/articles/it-amc-vs-msp",
       ctaText: "Read the comparison",
-    }
+    },
+    {
+      type: "Case Study",
+      title: "How a 300-Seat UAE Logistics Enterprise Unified IT Across 4 Offices",
+      description: "One managed agreement, one helpdesk and one monitoring stack for four sites.",
+      url: "/case-studies/enterprise",
+      ctaText: "Read the case study",
+    },
   ],
   cta: {
     title: 'Ready to Outsource Your IT?',
@@ -145,15 +152,15 @@ const fallback: MappedServiceContent = {
       answer: 'Managed IT services pricing in Dubai depends on company size and scope. For a 20–50 user business, managed IT services typically start from AED 2,500–6,000 per month - covering 24/7 monitoring, helpdesk, patch management, and security. This is substantially less than the AED 12,000–18,000/month cost of a single in-house IT engineer in Dubai, and includes a full team with specialist expertise.',
     },
     {
-      question: 'Which UAE free zones do you serve as a managed IT provider?',
+      question: 'Which UAE free zones do you serve?',
       answer: 'We serve businesses across all major UAE free zones and business districts: DIFC, DMCC, DAFZA, JAFZA, Dubai Internet City, Dubai Media City, Business Bay, Downtown Dubai, and Abu Dhabi (ADGM, Masdar City, Khalifa Industrial Zone). Our engineers are Dubai-based with same-day on-site response capability across the emirate.',
     },
     {
-      question: 'How quickly can you transition us to managed IT services?',
+      question: 'How quickly can you transition us from our current provider?',
       answer: 'Our standard onboarding takes 2–4 weeks. We start with a full infrastructure discovery and documentation audit, then install RMM agents, configure monitoring dashboards, establish SLA baselines, and integrate your team into our helpdesk system. For businesses with urgent requirements, we can begin remote monitoring within 48 hours.',
     },
     {
-      question: 'What is included in a managed IT services agreement?',
+      question: 'What is included in the agreement?',
       answer: 'A typical NOCKO managed IT services agreement covers: 24/7 NOC monitoring, helpdesk support (remote and on-site), patch management for Windows and third-party software, endpoint security management, backup monitoring, monthly performance reports, and a dedicated account manager. Cloud infrastructure management (AWS, Azure) and cybersecurity operations (SOC/SIEM) can be added as extensions.',
     },
     {
@@ -161,15 +168,15 @@ const fallback: MappedServiceContent = {
       answer: 'Yes. We manage hybrid environments as a single unified service - on-premise servers, cloud workloads (AWS, Azure, Google Cloud), SaaS platforms (Microsoft 365, Google Workspace), and network infrastructure. Your account manager has visibility across all environments through a single dashboard.',
     },
     {
-      question: 'Do you offer co-managed IT for companies that have an internal IT team?',
+      question: 'Do you offer a co-managed model for companies with an internal IT team?',
       answer: 'Yes. Co-managed IT is ideal for companies with 1–3 internal IT staff who need additional coverage, specialist expertise, or after-hours support. We work alongside your team, handling overflow tickets, complex projects, and 24/7 monitoring - without replacing your existing staff.',
     },
     {
-      question: 'What SLAs do you offer for managed IT services in UAE?',
+      question: 'What SLAs do you offer in the UAE?',
       answer: 'Our SLAs are tiered by severity. Critical incidents (network down, server failure) receive a 15-minute remote response and 2-hour on-site response for Dubai mainland locations. High severity incidents (single system failure, security alert) receive a 1-hour remote response. Standard requests are handled within 4 business hours. All SLAs are contractually guaranteed with financial penalties for non-compliance.',
     },
   ],
-  faqTitle: 'Managed IT Services Dubai - Frequently Asked Questions',
+  faqTitle: 'Frequently Asked Questions',
 };
 
 export default async function ManagedItPage() {

@@ -119,6 +119,13 @@ const fallback: MappedServiceContent = {
       url: '/articles/cybersecurity-guide',
       ctaText: 'Read the guide',
     },
+    {
+      type: "Case Study",
+      title: "How Solus Insurance Strengthened Cybersecurity",
+      description: "Enterprise threat detection and compliance controls for a UAE insurer under DFSA and UAE IA requirements.",
+      url: "/case-studies/solus",
+      ctaText: "Read the case study",
+    },
   ],
   cta: {
     title: 'Ready to Secure Your Business?',

@@ -98,7 +98,15 @@ const fallback: MappedServiceContent = {
     { icon: '/images/benefits/pricing.webp', text: 'Мгновенный ROI за счет сокращения лицензий' },
     { icon: '/images/benefits/communication.webp', text: 'Прямое общение на уровне руководства' },
   ],
-  resources: [],
+  resources: [
+    {
+      type: "Кейс",
+      title: "Аудит M365: экономия 40% в год",
+      description: "Форензик-аудит лицензий Microsoft 365 устранил дублирующие SaaS-инструменты для компании из Дубая.",
+      url: "/ru/case-studies/m365-audit",
+      ctaText: "Читать кейс",
+    },
+  ],
   cta: {
     title: 'Хватит тратить ИТ-бюджет впустую.',
     text: 'Запишитесь на ознакомительный звонок с главным архитектором NOCKO для обсуждения вашей дорожной карты цифровой трансформации.',

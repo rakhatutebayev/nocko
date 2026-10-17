@@ -111,7 +111,14 @@ const fallback: MappedServiceContent = {
       description: "2026 prices in USD and AED, storage, security, Copilot vs Gemini, UAE data residency and a quick verdict by company type.",
       url: "/articles/google-workspace-vs-microsoft-365",
       ctaText: "Read the comparison",
-    }
+    },
+    {
+      type: "ARTICLE",
+      title: "Healthcare Data Backup & Compliance UAE",
+      description: "How UAE clinics protect EMR, imaging and admin data with isolated, immutable backups aligned to DHA, DoH and MOH rules.",
+      url: "/articles/healthcare-it-backup-uae",
+      ctaText: "Read the article",
+    },
   ],
   cta: {
     title: 'Ready to Evacuate Your Server Room?',

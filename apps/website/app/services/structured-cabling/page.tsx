@@ -130,6 +130,13 @@ const fallback: MappedServiceContent = {
       url: '/articles/structured-cabling-fiber-vs-cat6a',
       ctaText: 'Read Article',
     },
+    {
+      type: "ARTICLE",
+      title: "Why Fluke Testing is Non-Negotiable in UAE",
+      description: "How RF interference and building materials affect UAE offices and why Fluke certification is mandatory.",
+      url: "/articles/structured-cabling-fluke-importance",
+      ctaText: "Read the article",
+    },
   ],
   cta: {
     title: 'Ready to Upgrade Your Network Infrastructure?',

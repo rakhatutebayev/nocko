@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
 
           <div className="footer__nav">
-            <h4 className="footer__nav-title">Quick Links</h4>
+            <h3 className="footer__nav-title">Quick Links</h3>
             <ul className="footer__menu">
               <li>
                 <a href="#features">Why Choose Us</a>
@@ -90,7 +90,7 @@ export default function Footer() {
           </div>
 
           <div className="footer__nav">
-            <h4 className="footer__nav-title">IT Services</h4>
+            <h3 className="footer__nav-title">IT Services</h3>
             <ul className="footer__menu">
               <li>
                 <Link href="/services/it-support">IT Support & Maintenance</Link>
@@ -111,7 +111,7 @@ export default function Footer() {
           </div>
 
           <div className="footer__nav">
-            <h4 className="footer__nav-title">Languages</h4>
+            <h3 className="footer__nav-title">Languages</h3>
             <ul className="footer__menu">
               <li>
                 <Link href="/ru" className="footer__lang-link">

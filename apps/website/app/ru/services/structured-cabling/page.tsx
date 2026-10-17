@@ -106,6 +106,20 @@ const fallback: MappedServiceContent = {
       url: '/ru/case-studies/network-segmentation',
       ctaText: 'Читать кейс',
     },
+    {
+      type: "Статья",
+      title: "Почему тестирование Fluke обязательно в ОАЭ",
+      description: "Как радиопомехи и стройматериалы в ОАЭ влияют на сеть офиса и почему сертификация Fluke обязательна.",
+      url: "/ru/articles/structured-cabling-fluke-importance",
+      ctaText: "Читать статью",
+    },
+    {
+      type: "Статья",
+      title: "Cat6A против оптоволокна: полное руководство в ОАЭ",
+      description: "Cat6 и Cat6A, сертификация Fluke и управление физическим уровнем сети в современных офисах.",
+      url: "/ru/articles/structured-cabling-fiber-vs-cat6a",
+      ctaText: "Читать статью",
+    },
   ],
   cta: {
     title: 'Готовы обновить сетевую инфраструктуру?',

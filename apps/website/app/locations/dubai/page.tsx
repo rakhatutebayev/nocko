@@ -5,6 +5,7 @@ import Hero from '@/components/sections/Hero';
 import StructuredData from '@/components/seo/StructuredData';
 import ServiceCTA from '@/components/services/ServiceCTA';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import ServiceFAQ from '@/components/services/ServiceFAQ';
 
 export const metadata: Metadata = {
   title: 'IT Support & Managed IT Services in Dubai',
@@ -219,7 +220,7 @@ export default function DubaiPage() {
                     <h3 className="service-card__title">{service.title}</h3>
                     <p className="service-card__description">{service.description}</p>
                     <a href={service.link} className="btn btn--primary btn--sm">
-                      Learn More
+                      {`Explore ${service.title}`}
                     </a>
                   </div>
                 ))}
@@ -257,6 +258,15 @@ export default function DubaiPage() {
           text="Talk to an engineer."
           ctaText="Request a Free Consultation"
           ctaUrl="#contact"
+        />
+        <ServiceFAQ
+          title="IT support in Dubai: frequently asked questions"
+          items={[
+            { question: "How fast can an engineer reach our office in Dubai?", answer: "Priority 1 incidents get a remote response within 15 minutes and an engineer on-site in Dubai within 2 hours. Standard requests are handled remotely the same business day; our engineers are based in Dubai and cover DIFC, Business Bay, DMCC, Media City, JAFZA and Deira daily." },
+            { question: "Which areas of Dubai do you cover?", answer: "All of Dubai, including the free zones: DIFC, DMCC, JAFZA, Dubai Internet City, Media City, Dubai South, Dubai Silicon Oasis and Expo City, plus Deira, Bur Dubai and Al Quoz. The same contract also covers Sharjah and Abu Dhabi with UAE-wide on-site response within 4 hours." },
+            { question: "How much does IT support cost for a Dubai business?", answer: "Managed IT for a 20–50 user company typically costs AED 2,500–6,000 per month; an annual maintenance contract (AMC) runs AED 18,000–45,000 per year depending on servers, workstations and SLA tier. Hourly support is AED 300–600. We quote against your actual asset list." },
+            { question: "Do you support businesses in Dubai free zones with compliance requirements?", answer: "Yes. We work with DIFC, DMCC and ADGM-regulated companies and align controls to DFSA, UAE IA (formerly NESA) and PDPL requirements, including data residency in UAE cloud regions, audit-ready logging and documented incident response." },
+          ]}
         />
       </main>
       <Footer />

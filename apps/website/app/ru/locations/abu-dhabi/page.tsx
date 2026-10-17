@@ -4,6 +4,7 @@ import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import ServiceFAQ from '@/components/services/ServiceFAQ';
 
 export const metadata: Metadata = {
   title: 'ИТ Компания в Абу-Даби, ИТ поддержка и решения',
@@ -167,7 +168,7 @@ export default function AbuDhabiRuPage() {
                     <h3 className="service-card__title">{service.title}</h3>
                     <p className="service-card__description">{service.description}</p>
                     <a href={service.link} className="btn btn--primary btn--sm">
-                      Подробнее
+                      {`Подробнее: ${service.title}`}
                     </a>
                   </div>
                 ))}
@@ -203,6 +204,15 @@ export default function AbuDhabiRuPage() {
             </div>
           </div>
         </section>
+        <ServiceFAQ
+          title="ИТ поддержка в Абу-Даби: частые вопросы"
+          items={[
+            { question: "Выезжаете ли вы в офисы в Абу-Даби?", answer: "Да. По инцидентам приоритета 1 удалённая реакция — 15 минут, выезд инженера в Абу-Даби — до 4 часов. Плановые визиты для клиентов AMC проводятся ежемесячно или ежеквартально; Аль-Айн обслуживается удалённо с запланированными выездами." },
+            { question: "Какие районы Абу-Даби вы обслуживаете?", answer: "Khalifa City, промышленный район Mussafah, Al Reem Island, центр Абу-Даби, ADGM и Masdar City, а также удалённая поддержка и плановые выезды в Аль-Айн. Один договор может покрывать офисы в Абу-Даби, Дубае и Шардже." },
+            { question: "Помогаете ли вы с требованиями ADGM, DoH и государственных заказчиков?", answer: "Да. Мы выстраиваем ИТ-контроли по технологическим правилам ADGM и FSRA, требованиям Департамента здравоохранения (DoH) для клиник и стандартам UAE IA (ранее NESA) для компаний, работающих с госсектором, включая хранение данных в ОАЭ и журналирование для аудита." },
+            { question: "Сколько стоит ИТ поддержка в Абу-Даби?", answer: "Как и в Дубае: управляемые ИТ для компании на 20–50 человек — обычно AED 2 500–6 000 в месяц, AMC — AED 18 000–45 000 в год, почасовая поддержка — AED 300–600. Выезды в рамках SLA включены." },
+          ]}
+        />
       </main>
       <Footer />
     </>

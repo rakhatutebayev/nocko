@@ -4,6 +4,7 @@ import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import ServiceFAQ from '@/components/services/ServiceFAQ';
 
 export const metadata: Metadata = {
   title: 'ИТ Компания в Шардже, ИТ поддержка и решения',
@@ -167,7 +168,7 @@ export default function SharjahRuPage() {
                     <h3 className="service-card__title">{service.title}</h3>
                     <p className="service-card__description">{service.description}</p>
                     <a href={service.link} className="btn btn--primary btn--sm">
-                      Подробнее
+                      {`Подробнее: ${service.title}`}
                     </a>
                   </div>
                 ))}
@@ -203,6 +204,15 @@ export default function SharjahRuPage() {
             </div>
           </div>
         </section>
+        <ServiceFAQ
+          title="ИТ поддержка в Шардже: частые вопросы"
+          items={[
+            { question: "Есть ли у вас инженеры в Шардже?", answer: "Инженеры находятся в Дубае и ежедневно выезжают в Шарджу. По инцидентам приоритета 1 удалённая реакция — 15 минут, выезд в Шарджу — до 4 часов; большинство проблем решается удалённо значительно раньше." },
+            { question: "Какие районы Шарджи вы обслуживаете?", answer: "Промышленный район Шарджи, Al Majaz, Al Nahda, Sharjah Media City (Shams), Hamriyah Free Zone, SAIF Zone и University City. Компании с офисами в Шардже и Дубае получают один договор и один номер хелпдеска." },
+            { question: "Сколько стоит ИТ поддержка в Шардже?", answer: "Цены те же, что в Дубае: управляемые ИТ для компании на 20–50 человек — обычно AED 2 500–6 000 в месяц, AMC — AED 18 000–45 000 в год, почасовая поддержка — AED 300–600. Выезды в рамках SLA включены в договор." },
+            { question: "Обслуживаете ли вы оборудование на промышленных и складских объектах в Шардже?", answer: "Да. Мы ведём AMC-контракты для промышленных объектов: серверы, коммутаторы, межсетевые экраны, UPS, видеонаблюдение и СКС, с плановыми профилактическими визитами и окнами обслуживания в нерабочее время для круглосуточных операций." },
+          ]}
+        />
       </main>
       <Footer />
     </>

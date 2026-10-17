@@ -66,7 +66,7 @@ export default function FooterRu() {
           </div>
 
           <div className="footer__nav">
-            <h4 className="footer__nav-title">Быстрые ссылки</h4>
+            <h3 className="footer__nav-title">Быстрые ссылки</h3>
             <ul className="footer__menu">
               <li>
                 <a href="#features">Почему мы</a>
@@ -93,7 +93,7 @@ export default function FooterRu() {
           </div>
 
           <div className="footer__nav">
-            <h4 className="footer__nav-title">ИТ Услуги</h4>
+            <h3 className="footer__nav-title">ИТ Услуги</h3>
             <ul className="footer__menu">
               <li>
                 <Link href="/ru/services/it-support">ИТ Поддержка и Обслуживание</Link>
@@ -117,7 +117,7 @@ export default function FooterRu() {
           </div>
 
           <div className="footer__nav">
-            <h4 className="footer__nav-title">Язык</h4>
+            <h3 className="footer__nav-title">Язык</h3>
             <ul className="footer__menu">
               <li>
                 <Link href="/ru" className="footer__lang-link active">

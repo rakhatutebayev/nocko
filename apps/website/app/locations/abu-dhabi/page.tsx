@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import ServiceFAQ from '@/components/services/ServiceFAQ';
 
 export const metadata: Metadata = {
   title: 'IT Company in Abu Dhabi | IT Support Services',
@@ -167,7 +168,7 @@ export default function AbuDhabiPage() {
                     <h3 className="service-card__title">{service.title}</h3>
                     <p className="service-card__description">{service.description}</p>
                     <a href={service.link} className="btn btn--primary btn--sm">
-                      Learn More
+                      {`Explore ${service.title}`}
                     </a>
                   </div>
                 ))}
@@ -203,6 +204,15 @@ export default function AbuDhabiPage() {
             </div>
           </div>
         </section>
+        <ServiceFAQ
+          title="IT support in Abu Dhabi: frequently asked questions"
+          items={[
+            { question: "Do you provide on-site IT support in Abu Dhabi?", answer: "Yes. Priority 1 incidents get a remote response within 15 minutes and an on-site engineer in Abu Dhabi within 4 hours. Scheduled maintenance visits for AMC clients are planned monthly or quarterly; Al Ain is served remotely with scheduled on-site visits." },
+            { question: "Which areas of Abu Dhabi do you cover?", answer: "Khalifa City, Mussafah Industrial Area, Al Reem Island, Abu Dhabi City Centre, ADGM and Masdar City, plus remote support and planned visits for Al Ain. One contract can cover offices in Abu Dhabi, Dubai and Sharjah." },
+            { question: "Can you help with ADGM, DoH or government compliance requirements?", answer: "Yes. We align IT controls to ADGM and FSRA technology rules, Department of Health (DoH) data-protection requirements for clinics and UAE IA (formerly NESA) standards for government-adjacent businesses, including UAE data residency and audit-ready logging." },
+            { question: "What does IT support cost in Abu Dhabi?", answer: "The same as in Dubai: managed IT for a 20–50 user company is typically AED 2,500–6,000 per month, an AMC AED 18,000–45,000 per year, and hourly support AED 300–600. On-site visits within the SLA are included." },
+          ]}
+        />
       </main>
       <Footer />
     </>

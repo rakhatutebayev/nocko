@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import StructuredData from '@/components/seo/StructuredData';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import ServiceFAQ from '@/components/services/ServiceFAQ';
 
 export const metadata: Metadata = {
   title: 'IT Company in Sharjah | IT Support Services',
@@ -167,7 +168,7 @@ export default function SharjahPage() {
                     <h3 className="service-card__title">{service.title}</h3>
                     <p className="service-card__description">{service.description}</p>
                     <a href={service.link} className="btn btn--primary btn--sm">
-                      Learn More
+                      {`Explore ${service.title}`}
                     </a>
                   </div>
                 ))}
@@ -203,6 +204,15 @@ export default function SharjahPage() {
             </div>
           </div>
         </section>
+        <ServiceFAQ
+          title="IT support in Sharjah: frequently asked questions"
+          items={[
+            { question: "Do you have engineers in Sharjah?", answer: "Our engineers are based in Dubai and travel to Sharjah daily. Priority 1 incidents get a remote response within 15 minutes and an on-site engineer in Sharjah within 4 hours; most issues are resolved remotely well before that." },
+            { question: "Which areas of Sharjah do you cover?", answer: "Sharjah Industrial Area, Al Majaz, Al Nahda, Sharjah Media City (Shams), Hamriyah Free Zone, SAIF Zone and University City. Multi-site companies with offices in Sharjah and Dubai get one contract and one helpdesk number." },
+            { question: "What does IT support cost in Sharjah?", answer: "Pricing is the same as in Dubai: managed IT for a 20–50 user company is typically AED 2,500–6,000 per month, an AMC AED 18,000–45,000 per year, and hourly support AED 300–600. On-site visits within the SLA are included in the contract." },
+            { question: "Can you maintain hardware in Sharjah industrial and warehouse sites?", answer: "Yes. We run AMC contracts for industrial sites covering servers, switches, firewalls, UPS, CCTV and structured cabling, with scheduled preventive visits and after-hours maintenance windows for 24/7 operations." },
+          ]}
+        />
       </main>
       <Footer />
     </>
