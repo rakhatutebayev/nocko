@@ -436,7 +436,7 @@ main:has(.hero--about) > .breadcrumbs {
     gap: 6px;
     font-size: 16px;
     font-weight: 600;
-    color: #3474ff;
+    color: #2b5fd9;
     text-decoration: none;
     margin-top: auto;
     transition: color 0.3s ease;
@@ -447,14 +447,14 @@ main:has(.hero--about) > .breadcrumbs {
       display: inline-block;
       width: 6px;
       height: 6px;
-      border-top: 2px solid #3474ff;
-      border-right: 2px solid #3474ff;
+      border-top: 2px solid #2b5fd9;
+      border-right: 2px solid #2b5fd9;
       transform: rotate(45deg);
       transition: margin-left 0.3s ease, border-top-color 0.3s ease, border-right-color 0.3s ease;
     }
     
     &:hover {
-      color: #3474ff;
+      color: #2b5fd9;
       text-decoration: none;
       
       &::after {

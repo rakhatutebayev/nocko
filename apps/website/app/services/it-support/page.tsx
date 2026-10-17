@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/services/it-support',
-    languages: { 'en-AE': '/services/it-support', 'ru-RU': '/ru/services/it-support' },
+    languages: { 'en-AE': '/services/it-support', 'ru-RU': '/ru/services/it-support', 'x-default': '/services/it-support' },
   },
 };
 

@@ -4,6 +4,10 @@ import HeaderWrapper from '@/components/layout/HeaderWrapper';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import StructuredData from '@/components/seo/StructuredData';
+
+// Фиксированная дата для кейсов без createdAt: иначе datePublished в JSON-LD
+// менялся при каждом рендере ("сегодня"), что Google читает как подделку даты.
+const CASE_STUDY_FALLBACK_DATE = '2026-07-04T00:00:00.000Z';
 import { getCaseStudy, getCaseStudies } from '@/lib/api/strapi';
 
 export const revalidate = 3600; // ISR: revalidate every hour
@@ -836,8 +840,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         data={{
           headline: caseStudy.attributes.title,
           description: caseStudy.attributes.testimonial || caseStudy.attributes.challenge?.substring(0, 150),
-          datePublished: caseStudy.attributes.createdAt || new Date().toISOString(),
-          dateModified: caseStudy.attributes.updatedAt || caseStudy.attributes.createdAt || new Date().toISOString(),
+          datePublished: caseStudy.attributes.createdAt || CASE_STUDY_FALLBACK_DATE,
+          dateModified: caseStudy.attributes.updatedAt || caseStudy.attributes.createdAt || CASE_STUDY_FALLBACK_DATE,
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

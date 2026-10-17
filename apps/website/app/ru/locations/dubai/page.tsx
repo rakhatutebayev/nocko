@@ -158,7 +158,7 @@ export default function DubaiRuPage() {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 25.2048,
+      latitude: 25.0785,
       longitude: 55.2708,
     },
     areaServed: {

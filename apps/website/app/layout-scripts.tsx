@@ -55,7 +55,7 @@ const graph = {
           telephone: '+971542448888',
           contactType: 'customer support',
           areaServed: 'AE',
-          availableLanguage: ['en', 'ru', 'ar'],
+          availableLanguage: ['en', 'ru'],
           hoursAvailable: {
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],

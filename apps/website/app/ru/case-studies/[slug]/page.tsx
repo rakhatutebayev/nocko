@@ -4,6 +4,10 @@ import HeaderWrapper from '@/components/layout/HeaderWrapperRu';
 import Footer from '@/components/layout/FooterRu';
 import Hero from '@/components/sections/Hero';
 import StructuredData from '@/components/seo/StructuredData';
+
+// Фиксированная дата для кейсов без createdAt: иначе datePublished в JSON-LD
+// менялся при каждом рендере ("сегодня"), что Google читает как подделку даты.
+const CASE_STUDY_FALLBACK_DATE = '2026-07-04T00:00:00.000Z';
 import { getCaseStudy, getCaseStudies } from '@/lib/api/strapi';
 
 export const revalidate = 3600; // ISR: revalidate every hour
@@ -427,6 +431,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'projection') {
     caseStudy = {
       attributes: {
+        createdAt: '2025-03-15T00:00:00.000Z',
+        updatedAt: '2025-03-15T00:00:00.000Z',
         title: 'Как Projection повысила надёжность ИТ благодаря выделенному AMC',
         client: 'Projection (Дубай и Абу-Даби)',
         industry: 'ИТ AMC и техническое обслуживание',
@@ -450,6 +456,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'solus') {
     caseStudy = {
       attributes: {
+        createdAt: '2025-04-10T00:00:00.000Z',
+        updatedAt: '2025-04-10T00:00:00.000Z',
         title: 'Как Solus Insurance усилила защиту с помощью корпоративной кибербезопасности',
         client: 'Solus Insurance (DIFC)',
         industry: 'Кибербезопасность и комплаенс',
@@ -473,6 +481,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'fh') {
     caseStudy = {
       attributes: {
+        createdAt: '2025-05-20T00:00:00.000Z',
+        updatedAt: '2025-05-20T00:00:00.000Z',
         title: 'Как FH Fundamental мигрировала в AWS UAE без простоев',
         client: 'FH Fundamental',
         industry: 'Облачные сервисы и данные',
@@ -496,6 +506,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'scalini') {
     caseStudy = {
       attributes: {
+        createdAt: '2025-06-05T00:00:00.000Z',
+        updatedAt: '2025-06-05T00:00:00.000Z',
         title: 'Как Scalini стандартизировала сетевую инфраструктуру в 5 ресторанах',
         client: 'Scalini Restaurant Group',
         industry: 'Структурированные кабельные системы',
@@ -519,6 +531,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'gss') {
     caseStudy = {
       attributes: {
+        createdAt: '2025-07-12T00:00:00.000Z',
+        updatedAt: '2025-07-12T00:00:00.000Z',
         title: 'Как Global Service Solution обеспечила ИТ-поддержку полётов 24/7',
         client: 'Global Service Solution (авиационный хаб)',
         industry: 'ИТ-поддержка и Helpdesk',
@@ -542,6 +556,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'technohub') {
     caseStudy = {
       attributes: {
+        createdAt: '2025-08-18T00:00:00.000Z',
+        updatedAt: '2025-08-18T00:00:00.000Z',
         title: 'Как TechnoHub перестроила ИТ-операции с полным Managed IT (MSP)',
         client: 'TechnoHub',
         industry: 'Управляемые ИТ-услуги (MSP)',
@@ -565,6 +581,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'ransomware-recovery') {
     caseStudy = {
       attributes: {
+        createdAt: '2025-09-03T00:00:00.000Z',
+        updatedAt: '2025-09-03T00:00:00.000Z',
         title: 'Победа над ransomware: восстановление за 4 часа',
         client: 'Международная логистическая компания (Дубай)',
         industry: 'Реагирование на киберинциденты',
@@ -588,6 +606,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy && slug === 'm365-audit') {
     caseStudy = {
       attributes: {
+        createdAt: '2025-10-14T00:00:00.000Z',
+        updatedAt: '2025-10-14T00:00:00.000Z',
         title: 'Аудит M365: экономия 40% в год',
         client: 'Региональная инвестиционная компания (DIFC)',
         industry: 'Стратегический ИТ-консалтинг',
@@ -771,8 +791,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         data={{
           headline: caseStudy.attributes.title,
           description: caseStudy.attributes.testimonial || caseStudy.attributes.challenge?.substring(0, 150),
-          datePublished: caseStudy.attributes.createdAt || new Date().toISOString(),
-          dateModified: caseStudy.attributes.updatedAt || caseStudy.attributes.createdAt || new Date().toISOString(),
+          datePublished: caseStudy.attributes.createdAt || CASE_STUDY_FALLBACK_DATE,
+          dateModified: caseStudy.attributes.updatedAt || caseStudy.attributes.createdAt || CASE_STUDY_FALLBACK_DATE,
           author: {
             '@type': 'Organization',
             name: 'NOCKO Information Technology',

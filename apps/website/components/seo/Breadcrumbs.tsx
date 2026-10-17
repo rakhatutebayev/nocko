@@ -21,11 +21,13 @@ export default function Breadcrumbs({
 }: BreadcrumbsProps) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nocko.com';
   
-  // Всегда начинаем с Home
+  // Всегда начинаем с Home. Промежуточные крошки без url (например «Locations»,
+  // у которой нет своей страницы) выбрасываем: Google требует `item` у всех
+  // элементов, кроме последнего.
   const allItems = [
     { name: 'Home', url: '/' },
     ...items,
-  ];
+  ].filter((item, index, arr) => item.url || index === arr.length - 1);
 
   // Schema.org allows omitting `item` on the final breadcrumb; window.location is
   // unavailable during SSR, so items without a url must not fall back to it.

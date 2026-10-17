@@ -115,35 +115,19 @@ export default function SharjahPage() {
 
   return (
     <>
+      {/* Офис NOCKO только в Дубае, поэтому здесь Service с areaServed, а не LocalBusiness
+          с чужим адресом: Google считал адрес Дубая на странице Sharjah ошибкой. */}
       <StructuredData
-        type="LocalBusiness"
+        type="Service"
         data={{
-          '@id': `${baseUrl}/locations/sharjah#localbusiness`,
-          name: 'NOCKO Information Technology',
-          image: `${baseUrl}/og-image.jpg`,
-          description: 'IT services company providing IT support, network infrastructure, cloud, and cybersecurity in Sharjah, UAE.',
+          '@id': `${baseUrl}/locations/sharjah#service`,
           url: `${baseUrl}/locations/sharjah`,
-          telephone: '+971542448888',
-          email: 'info@nocko.com',
-          streetAddress: 'Office R20-42, Wavez Residence, Wadi Al Safa 2',
-          addressLocality: 'Dubai',
-          addressRegion: 'Dubai',
-          addressCountry: 'AE',
-          latitude: '25.07850',
-          longitude: '55.27080',
+          serviceType: 'IT Support & Managed IT Services',
+          name: 'IT Support & Managed IT Services in Sharjah',
+          description: 'IT support, managed IT services, network infrastructure, cloud and cybersecurity for businesses in Sharjah, delivered by NOCKO from its Dubai office with on-site response across the emirate.',
           areaServed: [
             { '@type': 'City', name: 'Sharjah' },
-            { '@type': 'City', name: 'Dubai' },
-            { '@type': 'City', name: 'Abu Dhabi' },
-          ],
-          priceRange: '$$',
-          openingHoursSpecification: [
-            {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-              opens: '09:00',
-              closes: '18:00',
-            },
+            { '@type': 'Country', name: 'United Arab Emirates' },
           ],
         }}
       />

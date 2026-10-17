@@ -54,14 +54,15 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           url: data.url || 'https://nocko.com',
           telephone: data.telephone || '+971542448888',
           email: data.email || 'info@nocko.com',
-          address: {
+          // Страницы передают либо готовые объекты address/geo, либо плоские поля
+          address: data.address || {
             '@type': 'PostalAddress',
-            streetAddress: data.streetAddress || '',
+            streetAddress: data.streetAddress || 'Office R20-42, Wavez Residence, Wadi Al Safa 2',
             addressLocality: data.addressLocality || 'Dubai',
             addressRegion: data.addressRegion || 'Dubai',
             addressCountry: data.addressCountry || 'AE',
           },
-          geo: {
+          geo: data.geo || {
             '@type': 'GeoCoordinates',
             latitude: Number(data.latitude) || 25.0785,
             longitude: Number(data.longitude) || 55.2708,

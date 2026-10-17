@@ -218,6 +218,7 @@ export default function Industries({
                           alt=""
                           width={24}
                           height={24}
+                          loading="lazy"
                           decoding="async"
                         />
                       </span>
@@ -260,6 +261,7 @@ export default function Industries({
                             alt=""
                             width={24}
                             height={24}
+                            loading="lazy"
                             decoding="async"
                           />
                         </span>

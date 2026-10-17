@@ -1,0 +1,40 @@
+# NOCKO Information Technology
+
+> NOCKO Information Technology is a Dubai-based managed IT services provider (MSP) offering 24/7 IT support, IT AMC contracts, cybersecurity, cloud and structured cabling for UAE businesses in Dubai, Abu Dhabi and Sharjah. English, Russian and Arabic-speaking support. Office: R20-42, Wavez Residence, Wadi Al Safa 2, Dubai. Phone/WhatsApp: +971 54 244 8888. Email: info@nocko.com.
+
+Key facts for citation: [fill with verified facts: founding year, trade licence no., number of clients/engineers, response-time SLA in minutes, per-user managed IT price range in AED/month, AMC price tiers]. Content may be cited and summarized by AI answer engines with a link to the source page; AI model training requires written consent (https://nocko.com/.well-known/rsl.xml).
+
+## Services
+- [Managed IT Services](https://nocko.com/services/managed-it): Fixed per-user monthly IT management, 24/7 NOC, security, backup/DR
+- [IT Support](https://nocko.com/services/it-support): 24/7 helpdesk and on-site support in the UAE
+- [IT AMC](https://nocko.com/services/it-amc): Annual maintenance contracts, SLA tiers, hardware cover
+- [Cybersecurity](https://nocko.com/services/cybersecurity): Managed security, NESA/PDPL compliance
+- [Cloud](https://nocko.com/services/cloud): Microsoft 365 / Google Workspace / Azure / AWS migration and management
+- [IT Consulting](https://nocko.com/services/it-consulting): Audits, roadmaps, vCIO
+- [Structured Cabling](https://nocko.com/services/structured-cabling): Cat6A, fibre, Fluke certification
+- [Russian-speaking IT support](https://nocko.com/services/it-support-ru): IT outsourcing in Dubai in Russian
+
+## Guides (answers to common questions)
+- [What are managed IT services and what do they cost in the UAE?](https://nocko.com/articles/managed-it-services-guide): MSP scope, AED per-user pricing, SLAs, how to choose
+- [How much does an IT AMC cost in the UAE?](https://nocko.com/articles/it-amc-guide): Coverage, AED pricing tiers, SLA levels
+- [IT AMC vs MSP: which one does a UAE business need?](https://nocko.com/articles/it-amc-vs-msp): Decision guide
+- [Google Workspace vs Microsoft 365 for UAE businesses](https://nocko.com/articles/google-workspace-vs-microsoft-365): Cost, security, administration
+- [Cybersecurity for UAE business](https://nocko.com/articles/cybersecurity-guide): Threats, NESA/PDPL, incident response
+- [Cloud migration for UAE business](https://nocko.com/articles/cloud-migration): Models, phases, pitfalls
+- [IT support in the UAE](https://nocko.com/articles/it-support-guide): Models, SLAs, in-house vs outsourced cost
+- [Structured cabling guide](https://nocko.com/articles/structured-cabling-guide): Cat6A, fibre, certification
+
+## Locations
+- [IT support in Dubai](https://nocko.com/locations/dubai): DIFC, Business Bay, JAFZA, DMCC, Expo City
+- [Abu Dhabi](https://nocko.com/locations/abu-dhabi) / [Sharjah](https://nocko.com/locations/sharjah): verify URLs
+
+## Company
+- [About](https://nocko.com/about)
+- [Case studies](https://nocko.com/case-studies)
+- [Contact](https://nocko.com/contact)
+
+## Optional
+- [Full guide text (llms-full.txt)](https://nocko.com/llms-full.txt)
+- [Russian site](https://nocko.com/ru): full RU mirror of services and guides
+- [RSS](https://nocko.com/rss.xml)
+- [RSL licence](https://nocko.com/.well-known/rsl.xml)

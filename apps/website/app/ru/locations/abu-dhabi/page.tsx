@@ -115,35 +115,19 @@ export default function AbuDhabiRuPage() {
 
   return (
     <>
+      {/* Офис NOCKO только в Дубае, поэтому здесь Service с areaServed, а не LocalBusiness
+          с чужим адресом: Google считал адрес Дубая на странице Abu Dhabi ошибкой. */}
       <StructuredData
-        type="LocalBusiness"
+        type="Service"
         data={{
-          '@id': `${baseUrl}/ru/locations/abu-dhabi#localbusiness`,
-          name: 'NOCKO Information Technology',
-          image: `${baseUrl}/og-image.jpg`,
-          description: 'ИТ компания, предоставляющая ИТ поддержку, сетевую инфраструктуру, облако и кибербезопасность в Абу-Даби, ОАЭ.',
+          '@id': `${baseUrl}/ru/locations/abu-dhabi#service`,
           url: `${baseUrl}/ru/locations/abu-dhabi`,
-          telephone: '+971542448888',
-          email: 'info@nocko.com',
-          streetAddress: 'Office R20-42, Wavez Residence, Wadi Al Safa 2',
-          addressLocality: 'Dubai',
-          addressRegion: 'Dubai',
-          addressCountry: 'AE',
-          latitude: '25.07850',
-          longitude: '55.27080',
+          serviceType: 'IT Support & Managed IT Services',
+          name: 'ИТ поддержка и управляемые ИТ услуги в Абу-Даби',
+          description: 'ИТ поддержка, управляемые ИТ услуги, сетевая инфраструктура, облако и кибербезопасность для бизнеса в Абу-Даби. Обслуживание из офиса NOCKO в Дубае с выездом по всему эмирату.',
           areaServed: [
             { '@type': 'City', name: 'Abu Dhabi' },
-            { '@type': 'City', name: 'Dubai' },
-            { '@type': 'City', name: 'Sharjah' },
-          ],
-          priceRange: '$$',
-          openingHoursSpecification: [
-            {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-              opens: '09:00',
-              closes: '18:00',
-            },
+            { '@type': 'Country', name: 'United Arab Emirates' },
           ],
         }}
       />
