@@ -193,13 +193,65 @@ main:has(.hero--service-enhanced) > .breadcrumbs {
     
     p {
       margin-bottom: $spacing-md;
-      
+
       &:last-child {
         margin-bottom: 0;
       }
     }
+
+    // TL;DR / короткий ответ под заголовком - для featured snippet и AI-цитирования
+    .article__tldr {
+      padding: $spacing-sm $spacing-md;
+      margin-bottom: $spacing-md;
+      border-left: 4px solid $color-primary;
+      background: $color-light;
+      border-radius: 0 8px 8px 0;
+      font-size: 17px;
+      line-height: 27px;
+    }
+
+    // Таблицы сравнения (AMC vs MSP, тарифы)
+    .article__table-wrap {
+      overflow-x: auto;
+      margin: $spacing-md 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: collapse;
+      font-size: 15px;
+      line-height: 22px;
+
+      th,
+      td {
+        padding: 10px 12px;
+        border: 1px solid $color-border;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background: $color-light;
+        font-weight: 600;
+        color: $color-dark;
+      }
+
+      tbody tr:nth-child(even) td {
+        background: #fafafa;
+      }
+
+      caption {
+        caption-side: bottom;
+        padding-top: $spacing-xs;
+        font-size: 13px;
+        color: $color-text-secondary;
+        text-align: left;
+      }
+    }
   }
-  
+
   &__block-figure {
     margin: $spacing-lg 0;
     border-radius: 8px;

@@ -100,7 +100,15 @@ const fallback: MappedServiceContent = {
     { icon: '/images/benefits/pricing.webp', text: 'Понятная цена за пользователя' },
     { icon: '/images/benefits/communication.webp', text: 'Ежемесячные отчеты по SLA' },
   ],
-  resources: [],
+  resources: [
+    {
+      type: "Статья",
+      title: "Google Workspace или Microsoft 365 для малого бизнеса в ОАЭ",
+      description: "Цены 2026 в USD и AED, хранилище, безопасность, Copilot и Gemini, хранение данных в ОАЭ и короткий вердикт по типу компании.",
+      url: "/ru/articles/google-workspace-vs-microsoft-365",
+      ctaText: "Читать сравнение",
+    }
+  ],
   faq: [
     {
       question: 'Какое время реакции вы гарантируете по ИТ поддержке в Дубае?',

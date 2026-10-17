@@ -93,7 +93,15 @@ const fallback: MappedServiceContent = {
     { icon: '/images/benefits/pricing.webp', text: 'Transparent per-ticket pricing' },
     { icon: '/images/benefits/communication.webp', text: 'Monthly SLA reports' },
   ],
-  resources: [],
+  resources: [
+    {
+      type: "ARTICLE",
+      title: "Google Workspace vs Microsoft 365 for Small Business in the UAE",
+      description: "2026 prices in USD and AED, storage, security, Copilot vs Gemini, UAE data residency and a quick verdict by company type.",
+      url: "/articles/google-workspace-vs-microsoft-365",
+      ctaText: "Read the comparison",
+    }
+  ],
   cta: {
     title: 'Ready for Reliable IT Support?',
     text: 'Get a free IT support assessment and discover how we can reduce your downtime and IT costs.',

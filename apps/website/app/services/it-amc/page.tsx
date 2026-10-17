@@ -97,7 +97,15 @@ const fallback: MappedServiceContent = {
     { icon: '/images/benefits/pricing.webp', text: 'Fixed annual IT costs' },
     { icon: '/images/benefits/communication.webp', text: 'Monthly health reports' },
   ],
-  resources: [],
+  resources: [
+    {
+      type: "ARTICLE",
+      title: "IT AMC vs MSP in Dubai: Differences, Cost & Which to Choose",
+      description: "Side-by-side comparison of annual maintenance contracts and managed IT: scope, SLA, AED pricing, hidden costs and a decision checklist.",
+      url: "/articles/it-amc-vs-msp",
+      ctaText: "Read the comparison",
+    }
+  ],
   cta: {
     title: 'Get a Tailored IT AMC Proposal',
     text: 'Contact us for a free IT infrastructure assessment and customized AMC pricing for your business.',

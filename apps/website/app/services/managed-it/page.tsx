@@ -112,6 +112,13 @@ const fallback: MappedServiceContent = {
       url: '/articles/it-outsourcing-dubai-cost',
       ctaText: 'Read the article',
     },
+    {
+      type: "ARTICLE",
+      title: "IT AMC vs MSP in Dubai: Differences, Cost & Which to Choose",
+      description: "Side-by-side comparison of annual maintenance contracts and managed IT: scope, SLA, AED pricing, hidden costs and a decision checklist.",
+      url: "/articles/it-amc-vs-msp",
+      ctaText: "Read the comparison",
+    }
   ],
   cta: {
     title: 'Ready to Outsource Your IT?',

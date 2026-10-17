@@ -113,6 +113,13 @@ const fallback: MappedServiceContent = {
       url: '/ru/articles/it-outsourcing-dubai-cost',
       ctaText: 'Читать статью',
     },
+    {
+      type: "Статья",
+      title: "IT AMC или MSP в Дубае: разница, стоимость и что выбрать",
+      description: "Сравнение годового контракта обслуживания и управляемых ИТ-услуг: состав, SLA, цены в AED, скрытые расходы и чек-лист выбора.",
+      url: "/ru/articles/it-amc-vs-msp",
+      ctaText: "Читать сравнение",
+    }
   ],
   cta: {
     title: 'Готовы перестать беспокоиться об ИТ?',

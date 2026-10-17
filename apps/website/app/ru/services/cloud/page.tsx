@@ -106,6 +106,13 @@ const fallback: MappedServiceContent = {
       url: '/ru/case-studies/workspace-migration',
       ctaText: 'Читать кейс',
     },
+    {
+      type: "Статья",
+      title: "Google Workspace или Microsoft 365 для малого бизнеса в ОАЭ",
+      description: "Цены 2026 в USD и AED, хранилище, безопасность, Copilot и Gemini, хранение данных в ОАЭ и короткий вердикт по типу компании.",
+      url: "/ru/articles/google-workspace-vs-microsoft-365",
+      ctaText: "Читать сравнение",
+    }
   ],
   faq: [
     { question: 'Соответствуют ли AWS/Azure законам ОАЭ о локализации данных?', answer: 'Да. Как AWS, так и Microsoft Azure теперь имеют выделенные локальные регионы в ОАЭ (AWS Middle East Region, Azure UAE Central).' },
