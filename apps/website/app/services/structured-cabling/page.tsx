@@ -108,8 +108,8 @@ const fallback: MappedServiceContent = {
     },
     {
       type: 'CASE STUDY',
-      title: 'How Scalini Standardized Its Network Across 5 Sites',
-      description: 'Learn how Scalini restaurant chain upgraded their network infrastructure across 5 Dubai locations, reducing downtime by 95%.',
+      title: 'How a Dubai Restaurant Chain Standardized Its Network Across 5 Sites',
+      description: 'Learn how a Dubai restaurant chain upgraded its network infrastructure across 5 Dubai locations, reducing downtime by 95%.',
       image: '/images/services/cards/book.png',
       url: '/case-studies/scalini',
       ctaText: 'Read Case Study',

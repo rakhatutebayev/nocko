@@ -153,8 +153,8 @@ const structuredCablingContent = {
   resources: [
     {
       type: 'CASE STUDY',
-      title: 'How Scalini Standardized Its Network Across 5 Sites',
-      description: 'Learn how Scalini restaurant chain upgraded their network infrastructure across 5 locations in Dubai, reducing downtime by 95% and improving customer experience.',
+      title: 'How a Dubai Restaurant Chain Standardized Its Network Across 5 Sites',
+      description: 'Learn how a Dubai restaurant chain upgraded its network infrastructure across 5 locations in Dubai, reducing downtime by 95% and improving customer experience.',
       image: '/images/services/cards/book.png',
       url: '/case-studies/scalini',
       ctaText: 'Read Case Study',

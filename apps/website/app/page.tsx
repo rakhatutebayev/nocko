@@ -4,7 +4,8 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import Features from '@/components/sections/Features';
 import Services from '@/components/sections/Services';
-import Clients from '@/components/sections/Clients';
+// Client logos hidden for now (prospects shouldn't see current clients)
+// import Clients from '@/components/sections/Clients';
 import IndustriesDynamic from '@/components/sections/IndustriesDynamic';
 import FeaturedArticles from '@/components/sections/FeaturedArticles';
 import StructuredData from '@/components/seo/StructuredData';
@@ -55,7 +56,7 @@ export default function HomePage() {
         <Hero />
         <Features />
         <Services />
-        <Clients />
+        {/* <Clients /> */}
         <FeaturedArticles />
         <IndustriesDynamic />
       </main>

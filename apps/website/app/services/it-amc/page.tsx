@@ -107,7 +107,7 @@ const fallback: MappedServiceContent = {
     },
     {
       type: "Case Study",
-      title: "How Projection Improved IT Reliability with a Dedicated AMC",
+      title: "How a UAE Company Improved IT Reliability with a Dedicated AMC",
       description: "A Dubai and Abu Dhabi company moved from ad-hoc call-outs to a scheduled AMC with a priority SLA.",
       url: "/case-studies/projection",
       ctaText: "Read the case study",

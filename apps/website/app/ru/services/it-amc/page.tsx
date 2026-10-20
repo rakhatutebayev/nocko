@@ -108,7 +108,7 @@ const fallback: MappedServiceContent = {
     },
     {
       type: "Кейс",
-      title: "Как Projection повысила надёжность ИТ благодаря выделенному AMC",
+      title: "Как компания в ОАЭ повысила надёжность ИТ благодаря выделенному AMC",
       description: "Компания в Дубае и Абу-Даби перешла от разовых вызовов к плановому AMC с SLA по приоритетам.",
       url: "/ru/case-studies/projection",
       ctaText: "Читать кейс",
